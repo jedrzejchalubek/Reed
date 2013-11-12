@@ -1,0 +1,6 @@
+# Turn on the rewrite engine
+Options +FollowSymlinks
+RewriteEngine on
+ 
+# Route all requests to index
+RewriteRule ^(.*)$ index.php?uri=$1 [nc,qsa]
