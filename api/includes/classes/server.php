@@ -3,9 +3,10 @@
 /**
 * Server class
 */
+
 class Server
 {
-	
+
 	public static function get()
 	{
 		return $_GET;

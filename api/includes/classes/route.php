@@ -7,6 +7,7 @@
  | This is general class for creating
  | single routes.
 */
+
 class Route
 {
 	/**

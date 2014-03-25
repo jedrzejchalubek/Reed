@@ -4,12 +4,11 @@
  | ------------------------------------------
  | Base Controller Class
  | ------------------------------------------
- | This is general class for creating 
+ | This is general class for creating
  | application controllers.
 */
-abstract class Controller {
 
-	protected $model;
+abstract class Controller {
 
 	/**
 	 * Base get method
@@ -17,7 +16,7 @@ abstract class Controller {
 	 */
 	public function get()
 	{
-		Http::error();
+		Response::failed();
 	}
 
 	/**
@@ -26,7 +25,7 @@ abstract class Controller {
 	 */
 	public function post()
 	{
-		Http::error();
+		Response::failed();
 	}
 
 	/**
@@ -35,7 +34,7 @@ abstract class Controller {
 	 */
 	public function put()
 	{
-		Http::error();
+		Response::failed();
 	}
 
 	/**
@@ -44,14 +43,14 @@ abstract class Controller {
 	 */
 	public function delete()
 	{
-		Http::error();
+		Response::failed();
 	}
 
 	/**
 	 * Construct base controller
 	 * Excract models
 	 * Get id
-	 * Get parameters
+	 * Get query
 	 * Call child class method
 	 */
 	function __construct($models)
@@ -63,24 +62,24 @@ abstract class Controller {
 		foreach($models as $key => $model){
 			$this->{$key} = $model;
 		}
-		
+
 		/**
 		 * Get ids passed to URI
 		 * @var Array
 		 */
-		preg_match_all("/([\d-]+)/", Server::uri(), $id);
+		preg_match_all("/[a-z0-9]{32}/i", Server::uri(), $id);
 
 		/**
-		 * Get parameters passed to URI
+		 * Get query passed to URI
 		 * @var Array
 		 */
-		$parameters = Server::get();
+		$query = Server::get();
 
 		/**
-		 * Call controller method 
+		 * Call controller method
 		 * based on request type
 		 */
-		call_user_func( array($this, Server::method()), array_shift($id), $parameters );
+		call_user_func( array($this, Server::method()), array_shift($id), $query );
 
 	}
 }

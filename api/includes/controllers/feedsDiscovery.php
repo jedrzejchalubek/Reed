@@ -6,23 +6,15 @@
  | ------------------------------------------
 */
 
-class Feeds extends Controller
+class FeedsDiscovery extends Controller
 {
 
 	/**
-	 * Get
+	 * Get popular feeds
 	 */
 	public function get($id, $query)
 	{
-		Response::json( $this->feed->fetch() );
-	}
-
-	/**
-	 * Post
-	 */
-	public function post($id, $query)
-	{
-		echo "POST";
+		Response::json( $this->feed->getPopular() );
 	}
 
 	/**

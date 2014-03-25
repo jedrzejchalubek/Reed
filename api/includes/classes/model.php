@@ -4,12 +4,15 @@
  | ------------------------------------------
  | Base Model Class
  | ------------------------------------------
- | This is general class for creating 
+ | This is general class for creating
  | application models.
 */
-class Model extends Database
+
+namespace Reed\Models;
+
+abstract class Model extends Database
 {
-	
+
 	/**
 	 * Database connection
 	 * @var [type]
@@ -17,24 +20,22 @@ class Model extends Database
 	protected $db;
 
 	/**
-	 * Database table name
-	 * @var String
-	 */
-	protected $table;
-
-	/**
-	 * Database table columns
-	 * @var String
-	 */
-	protected $columns;
-
-	/**
 	 * Fetch rows from database
 	 * @return Array
 	 */
-	public function fetch()
+	public function fetch($limit = 10, $offset = 0)
 	{
-		return $this->db ->fetch($this->table);
+		return $this->db->fetch($this->table, $limit, $offset);
+	}
+
+	/**
+	 * Make query to database
+	 * @param  String $query
+	 * @return Array
+	 */
+	public function request($query)
+	{
+		return $this->db->request($query);
 	}
 
 	/**
@@ -44,16 +45,16 @@ class Model extends Database
 	 */
 	public function get($id)
 	{
-		return $this->db ->get($this->table, $id);
+		return $this->db->get($this->table, $id);
 	}
 
 	/**
 	 * Remove row from database
-	 * @param  String $id 
+	 * @param  String $id
 	 */
 	public function delete($id)
 	{
-		$this->db ->delete($this->table, $id);
+		$this->db->delete($this->table, $id);
 	}
 
 	/**
@@ -62,10 +63,10 @@ class Model extends Database
 	 */
 	public function add($data)
 	{
-		$this->db ->add(
+		$this->db->add(
 			$this->table,
 			$this->columns,
-			$this->valuesToAdd(), 
+			$this->valuesToAdd(),
 			$data
 		);
 	}
@@ -76,7 +77,7 @@ class Model extends Database
 	 */
 	public function update($data)
 	{
-		$this->db ->update(
+		$this->db->update(
 			$this->table,
 			$this->valuesToUpdate(),
 			$data
@@ -90,8 +91,8 @@ class Model extends Database
 	 */
 	public function next($row)
 	{
-		$rows = $this->db ->query("SELECT * FROM $this->table WHERE date > :date ORDER BY date ASC LIMIT 0,1", array(
-				'date' => $row['date']
+		$rows = $this->db->query("SELECT * FROM $this->table WHERE created > :created ORDER BY created ASC LIMIT 0,1", array(
+				'created' => $row['created']
 		));
 
 		$nextRow = $rows->fetchAll();
@@ -106,8 +107,8 @@ class Model extends Database
 	 */
 	public function prev($row)
 	{
-		$rows = $this->db ->query("SELECT * FROM $this->table WHERE date < :date ORDER BY date ASC LIMIT 0,1", array(
-				'date' => $row['date']
+		$rows = $this->db->query("SELECT * FROM $this->table WHERE created < :created ORDER BY created ASC LIMIT 0,1", array(
+				'created' => $row['created']
 		));
 
 		$prevRow = $rows->fetchAll();
@@ -121,7 +122,7 @@ class Model extends Database
 	 */
 	public function first()
 	{
-		$row = $this->db ->query("SELECT * FROM $this->table ORDER BY date ASC LIMIT 0,1");
+		$row = $this->db->query("SELECT * FROM $this->table ORDER BY created ASC LIMIT 0,1");
 		$row = $row->fetchAll();
 
 		return $row[0];
@@ -133,9 +134,9 @@ class Model extends Database
 	 */
 	public function last()
 	{
-		$row = $this->db ->query("SELECT * FROM $this->table ORDER BY date DESC LIMIT 0,1");
+		$row = $this->db->query("SELECT * FROM $this->table ORDER BY created DESC LIMIT 0,1");
 		$row = $row->fetchAll();
-		
+
 		return $row[0];
 	}
 

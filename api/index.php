@@ -1,6 +1,70 @@
-<?php 
+<?php
 
 require_once 'bootstrap/head.php';
+
+
+/*
+ | ---------------------------------------------------
+ | Home route
+ | ---------------------------------------------------
+ | Generate, store and send back authorization tokens.
+ | Each client before be able to access api
+ | Should accept requests:
+ | GET => list discovery feeds collection
+ | POST => throw error
+ | PUT => throw error
+ | DELETE => throw error
+ |
+*/
+$router->map('/', 'Home', array(
+	'user' => $user
+));
+
+
+
+
+
+/*
+ | ---------------------------------------------------
+ | Discovery Feeds route
+ | ---------------------------------------------------
+ | Discovery feeds collection. Should accept requests:
+ | GET => list discovery feeds collection
+ | POST => throw error
+ | PUT => throw error
+ | DELETE => throw error
+ |
+ | Optional reqest parameters:
+ | ?limit={int}
+ | ?offset={int}
+*/
+$router->map('/discovery/feeds', 'FeedsDiscovery', array(
+	'feed' => $feed
+));
+
+
+
+
+/*
+ | ---------------------------------------------------
+ | Discovery Articles route
+ | ---------------------------------------------------
+ | Discovery articles collection. Should accept requests:
+ | GET => list of discovered articles
+ | POST => throw error
+ | PUT => throw error
+ | DELETE => throw error
+ |
+ | Optional reqest parameters:
+ | ?limit={int}
+ | ?offset={int}
+*/
+$router->map('/discovery/articles', 'ArticlesDiscovery', array(
+	'article' => $article
+));
+
+
+
 
 /*
  | ---------------------------------------------------
@@ -8,10 +72,10 @@ require_once 'bootstrap/head.php';
  | ---------------------------------------------------
  | Feeds collection. Should accept requests:
  | GET => list feeds collection
- | POST => add new feed to feeds collection
+ | POST => throw error
  | PUT => throw error
- | DELETE => throw error/delete feeds collection
- | 
+ | DELETE => throw error
+ |
  | Optional reqest parameters:
  | ?limit={int}
  | ?offset={int}
@@ -28,47 +92,14 @@ $router->map('/feeds', 'Feeds', array(
  | Feed route
  | ---------------------------------------------------
  | Single feed. Should accept requests:
- | GET => feed details
+ | GET => single feed details
  | POST => throw error
- | PUT => (exist) ? update feed details : throw error
- | DELETE => delete feed
-*/
-$router->map('/feeds/:id', function(){});
-
-
-
-
-/*
- | ---------------------------------------------------
- | Popular Feeds route
- | ---------------------------------------------------
- | Popular feeds collection. Should accept requests:
- | GET => list popular feeds collection
- | POST => add new feed to popular feeds collection
  | PUT => throw error
- | DELETE => throw error/delete popular feeds collection
- | 
- | Optional reqest parameters:
- | ?limit={int}
- | ?offset={int}
+ | DELETE => throw error
 */
-$router->map('/feeds/popular', function(){});
-
-
-
-
-/*
- | ---------------------------------------------------
- | Popular feed route
- | ---------------------------------------------------
- | Single popular feed. Should accept requests:
- | GET => feed details
- | POST => throw error
- | PUT => (exist) ? update feed details : throw error
- | DELETE => delete feed
-*/
-$router->map('/feeds/popular/:id/', function(){});
-
+$router->map('/feeds/:id', 'Feed', array(
+	'feed' => $feed
+));
 
 
 
@@ -78,65 +109,34 @@ $router->map('/feeds/popular/:id/', function(){});
  | ---------------------------------------------------
  | Articles collection. Should accept requests:
  | GET => list articles collection
- | POST => add new article to collection
- | PUT => throw error
- | DELETE => throw error/delete articles collection
- | 
- | Optional reqest parameters:
- | ?limit={int}
- | ?offset={int}
-*/
-$router->map('/articles', 'Articles', function(){});
-
-
-
-
-/*
- | ---------------------------------------------------
- | Feed route
- | ---------------------------------------------------
- | Single feed. Should accept requests:
- | GET => feed details
  | POST => throw error
- | PUT => (exist) ? update feed detils : throw error
- | DELETE => delete feed
-*/
-$router->map('/articles/:id', function(){});
-
-
-
-
-/*
- | ---------------------------------------------------
- | Popular Articles route
- | ---------------------------------------------------
- | Popular articles collection. Should accept requests:
- | GET => list popular articles collection
- | POST => add new article to popular articles collection
  | PUT => throw error
- | DELETE => throw error/delete popular articles collection
- | 
+ | DELETE => throw error
+ |
  | Optional reqest parameters:
  | ?limit={int}
  | ?offset={int}
 */
-$router->map('/articles/popular', function(){});
+$router->map('/articles', 'Articles', array(
+	'article' => $article
+));
 
 
 
 
 /*
  | ---------------------------------------------------
- | Popular article route
+ | Article route
  | ---------------------------------------------------
- | Single popular article. Should accept requests:
+ | Single article. Should accept requests:
  | GET => article details
  | POST => throw error
- | PUT => (exist) ? update article details : throw error
- | DELETE => delete article
+ | PUT => throw error
+ | DELETE => throw error
 */
-$router->map('/articles/popular/:id', function(){});
-
+$router->map('/articles/:id', 'Article', array(
+	'article' => $article
+));
 
 
 
@@ -149,8 +149,9 @@ $router->map('/articles/popular/:id', function(){});
  | GET => users collection
  | POST => add new user to users collection
  | PUT => throw error
- | DELETE => throw error/delete users collection
+ | DELETE => throw error
 */
+
 $router->map('/users', function(){});
 
 
@@ -180,8 +181,8 @@ $router->map('/users/:id', function(){});
  | GET => list user feeds collection
  | POST => add new feed to user feeds collection
  | PUT => throw error
- | DELETE => delete user feeds collection
- | 
+ | DELETE => throw error
+ |
  | Optional reqest parameters:
  | ?limit={int}
  | ?offset={int}
@@ -214,8 +215,8 @@ $router->map('/users/:id/feeds/:id', function(){});
  | GET => list user articles collection
  | POST => add new article to user articles collection
  | PUT => throw error
- | DELETE => delete user articles collection
- | 
+ | DELETE => throw error
+ |
  | Optional reqest parameters:
  | ?limit={int}
  | ?offset={int}
@@ -257,4 +258,4 @@ $router->execute();
  | ---------------------------------------------------
 */
 // echo "<pre>";
-// print_r($router->getRoutes());
+// print_r($router);

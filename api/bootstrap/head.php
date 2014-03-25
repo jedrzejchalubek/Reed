@@ -9,6 +9,14 @@
 require_once 'bootstrap/config.php';
 
 
+/*
+ | ------------------------------------------
+ | Require Facebook SDK
+ | ------------------------------------------
+ | To making Facebook API calls
+*/
+require_once 'includes/classes/facebook.php';
+
 
 /*
  | ------------------------------------------
@@ -52,14 +60,20 @@ foreach(glob('includes/models/*.php') as $model){
  | ------------------------------------------
  | Initialize application classes and models
 */
-$router = new Router();
 
-$database = new Database(
-	$DBconfig['host'],
-	$DBconfig['name'],
-	$DBconfig['user'],
-	$DBconfig['pass']
+$database = new Reed\Models\Database(
+	$DbConfig['host'],
+	$DbConfig['name'],
+	$DbConfig['user'],
+	$DbConfig['pass']
 );
 
-$feed = new Feed($database);
-$article = new Article($database);
+$facebook = new Facebook($FacebookConfig);
+
+$user = new Reed\Models\User($facebook);
+$feed = new Reed\Models\Feed($database);
+$article = new Reed\Models\Article($database);
+
+$router = new Router($user);
+
+

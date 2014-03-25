@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Reed</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	</head>
+	<body>
+
+		<div class="container">
+			<a class="facebookLoginButton" href="#">Login with facebook</a>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+		<script>
+
+
+			window.fbAsyncInit = function() {
+
+				FB.init({
+					appId: '676983059011847',
+					status: true,
+					cookie: true
+				});
+
+
+				/**
+				 * Jesli zalogowany do facebooka zgłoś sie po tokena
+				 * @param  {[type]} response [description]
+				 * @return {[type]}          [description]
+				 */
+				FB.Event.subscribe('auth.authResponseChange', function(response) {
+					if (response.status === 'connected') {
+						console.log('cnn');
+						/**
+						 * Zgłaszanie po token do api
+						 * @type {[type]}
+						 */
+						var jqxhr = $.ajax({
+							type: "GET",
+							url: 'http://localhost/reed/api/'
+						});
+
+						/**
+						 * Odbieranie tokena z headera
+						 * @param  {[type]} resp [description]
+						 * @return {[type]}      [description]
+						 */
+						jqxhr.always(function(resp) {
+							var authToken = resp.getResponseHeader('Authorization');
+							console.log(authToken);
+						});
+
+						// Tutaj inicjowac appke ktora z kazdym zapytaniem do api przekazuje otrzymany wyzej token
+					}
+				});
+
+				$('.facebookLoginButton').on('click', function (event) {
+
+					event.preventDefault();
+
+					FB.login(function(response) {
+						if (response.authResponse) {
+							console.log('Good');
+						} else {
+							console.log('User cancelled login or did not fully authorize.');
+						}
+					});
+				});
+
+			};
+
+			// Load the SDK asynchronously
+			(function(d){
+				var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement('script'); js.id = id; js.async = true;
+				js.src = "//connect.facebook.net/en_US/all.js";
+				ref.parentNode.insertBefore(js, ref);
+			}(document));
+
+		</script>
+
+
+	</body>
+</html>

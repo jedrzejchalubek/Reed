@@ -6,7 +6,7 @@
  | ------------------------------------------
 */
 
-class Feeds extends Controller
+class Feed extends Controller
 {
 
 	/**
@@ -14,15 +14,7 @@ class Feeds extends Controller
 	 */
 	public function get($id, $query)
 	{
-		Response::json( $this->feed->fetch() );
-	}
-
-	/**
-	 * Post
-	 */
-	public function post($id, $query)
-	{
-		echo "POST";
+		Response::json( $this->feed->get($id[0]) );
 	}
 
 	/**

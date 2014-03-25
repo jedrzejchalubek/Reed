@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
  | ------------------------------------------
@@ -7,6 +7,7 @@
  | This is general class for mapping
  | and executing application routes.
 */
+
 class Router
 {
 	/**
@@ -16,8 +17,14 @@ class Router
 	private $routes = array();
 
 	/**
+	 * User
+	 * @var Object
+	 */
+	private $user;
+
+	/**
 	 * Map route
-	 * Adding new route to routes collection 
+	 * Adding new route to routes collection
 	 * @param  String $pattern Route uri pattern
 	 * @param  Mixed  $method Route method
 	 * @param  Array  $model Route models
@@ -33,39 +40,46 @@ class Router
 	 */
 	public function execute()
 	{
-		
-		$uri = Server::uri();
 
-		/**
-		 * Each route in routes collection
-		 * @var Array
-		 */
-		foreach ($this->routes as $item => $route) 
-		{
-			
-			/**
-			 * Replace URI "id" parameter with route ":id" attribute
-			 * This allows for later URI and route comparison
-			 * @var String
-			 */
-			$preparedUri = preg_replace("/([\d-]+)/", ":id", isset($uri) ? $uri : '/');
+		if ( $this->user->isAuth() ) {
+
+			$uri = Server::uri();
 
 			/**
-			 * Compare current uri with route 
-			 * from routes collection
+			 * Each route in routes collection
+			 * @var Array
 			 */
-			if ($route->match( trim($preparedUri,'/') )) {
+			foreach ($this->routes as $item => $route)
+			{
 
-				// On match get route method and models
-				$Method = $route->getMethod();
-				$Models = $route->getModel();
-				
 				/**
-				 * While method is string, call controller
-				 * Otherwise call passed to route anonymous function 
+				 * Replace URI "id" parameter with route ":id" attribute
+				 * This allows for later URI and route comparison
+				 * @var String
 				 */
-				if (is_string($Method)) new $Method($Models);
-				else call_user_func($Method);
+				$preparedUri = preg_replace("/[a-z0-9]{32}/i", ":id", isset($uri) ? $uri : '/');
+
+				/**
+				 * Compare current uri with route
+				 * from routes collection
+				 */
+				if ($route->match( trim($preparedUri,'/') )) {
+
+					// On match get route method and models
+					$Method = $route->getMethod();
+					$Models = $route->getModel();
+
+					// Add user object to route models
+					$Models['user'] = $this->user;
+
+					/**
+					 * While method is string, call controller
+					 * Otherwise call passed to route anonymous function
+					 */
+					if (is_string($Method)) new $Method($Models);
+					else call_user_func($Method);
+
+				}
 
 			}
 
@@ -73,13 +87,9 @@ class Router
 
 	}
 
-	/**
-	 * Return maped routes
-	 * @return Array
-	 */
-	public function getRoutes()
+	public function __construct($user)
 	{
-		return $this->routes;
+		$this->user = $user;
 	}
 
 }

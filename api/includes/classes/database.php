@@ -4,9 +4,13 @@
  | ------------------------------------------
  | Database class
  | ------------------------------------------
- | This class is responsible for handling 
+ | This class is responsible for handling
  | database operations
 */
+
+namespace Reed\Models;
+use PDO;
+
 class Database
 {
 
@@ -19,15 +23,15 @@ class Database
 	/**
 	 * Get specifed row by id
 	 * @param  String $table
-	 * @param  String $id
+	 * @param  String $md5
 	 * @return Array $row
 	 */
-	public function get($table, $id)
-	{        
-		$row = $this->query("SELECT * FROM $table WHERE id = :id LIMIT 1", array(
-			'id' => $id
+	public function get($table, $md5)
+	{
+		$row = $this->query("SELECT * FROM $table WHERE md5 = :md5 LIMIT 1", array(
+			'md5' => $md5
 		));
-		$row = ( $row->rowCount() > 0 ) ? $row->fetchAll() : false;
+		$row = ( $row->rowCount() > 0 ) ? $row->fetchAll(PDO::FETCH_ASSOC) : false;
 
 		return $row[0];
 	}
@@ -37,10 +41,10 @@ class Database
 	 * @param  String $table
 	 * @return Array
 	 */
-	public function fetch($table, $limit = 10)
+	public function fetch($table, $limit = 10, $offset = 0)
 	{
-		$rows = $this->conn ->query("SELECT * FROM $table ORDER BY date DESC LIMIT $limit");
-		return ( $rows->rowCount() > 0 ) ? $rows->fetchAll() : false;
+		$rows = $this->query("SELECT * FROM $table ORDER BY created DESC LIMIT $limit OFFSET $offset");
+		return ( $rows->rowCount() > 0 ) ? $rows->fetchAll(PDO::FETCH_ASSOC) : false;
 	}
 
 	/**
@@ -63,26 +67,37 @@ class Database
 	 */
 	public function update($table, $columns, $data)
 	{
-		$this->query("UPDATE $table SET $columns WHERE id = :id", $data);
+		$this->query("UPDATE $table SET $columns WHERE md5 = :md5", $data);
 	}
 
 	/**
 	 * Remove row from database
-	 * @param  String $table 
-	 * @param  String $slug  
+	 * @param  String $table
+	 * @param  String $slug
 	 */
-	public function delete($table, $id)
+	public function delete($table, $md5)
 	{
-		$this->query("DELETE FROM $table WHERE id = :id", array(
-			'id' => $id
+		$this->query("DELETE FROM $table WHERE md5 = :md5", array(
+			'md5' => $md5
 		));
+	}
+
+	/**
+	 * Make query
+	 * @param  String $query
+	 * @return Array
+	 */
+	public function request($query)
+	{
+		$rows = $this->query($query);
+		return ( $rows->rowCount() > 0 ) ? $rows->fetchAll(PDO::FETCH_ASSOC) : false;
 	}
 
 	/**
 	 * Execute specifet SQL query
 	 * @param  String $query
 	 * @param  Array $bindings
-	 * @return Array     
+	 * @return Array
 	 */
 	public function query($query, $bindings = null)
 	{
@@ -96,6 +111,7 @@ class Database
 	 */
 	private function connect()
 	{
+
 		try {
 			$this->conn = new PDO(
 				"mysql:host=" . $this->host . ";dbname=" . $this->name,
@@ -107,6 +123,7 @@ class Database
 		} catch(PDOException $e) {
 			echo "Error: " . $e->getMessage();
 		}
+
 	}
 
 	/**
