@@ -45,6 +45,17 @@ class User extends Model
 		return $this->facebook->api('/me/friends');
 	}
 
+	public function getAccessToken()
+	{
+		return $this->facebook->getAccessToken();
+	}
+
+	public function setAccessToken($token)
+	{
+		return $this->facebook->setAccessToken($token);
+	}
+
+
 	/**
 	 * Is user authorized
 	 * Return error when user id not exsist
@@ -53,19 +64,28 @@ class User extends Model
 	 */
 	public function isAuth()
 	{
-		//
+
+		// !!!!!!!!!!!!!!!
+		// For development
+		// !!!!!!!!!!!!!!!
 		return true;
 
-		// if ($this->getProfile()) {
-		// 	try {
-		// 		return true;
-		// 	} catch (FacebookApiException $e) {
-		// 		// Access Token expired
-		// 		error_log($e);
-		// 	}
-		// } else {
-		// 	// Not authorized
-		// }
+		// User logedin to facebook
+		if ( $this->getProfile() ) {
+			try {
+				// ==TODO== Application Access Token valid
+				if ( $token ) {
+					// User authorized
+					return true;
+				}
+			} catch (FacebookApiException $e) {
+				// Facebook Access Token expired
+				error_log($e);
+			}
+		} else {
+			// Not authorized no facebook session
+		}
+
 	}
 
 	public function __construct($facebook)

@@ -2,7 +2,7 @@
 
 /*
  | ------------------------------------------
- | Article Controller Class
+ | Home Controller Class
  | ------------------------------------------
 */
 
@@ -10,13 +10,24 @@ class Home extends Controller
 {
 
 	/**
-	 * Get
+	 * Post
 	 */
-	public function get($id, $query)
+	public function post($id, $query)
 	{
-		if ( $this->user->getProfile() ) {
+		// var_dump( Server::get()['access_token'] );
+
+		$access_token = Server::get()['access_token'];
+
+		// $appsecret_proof = hash_hmac('sha256', $access_token, 'e30a10b27c33467aae28ea0763e5f56e');
+		//
+		$gg = Request::make("https://graph.facebook.com/me?access_token={$access_token}");
+		$tt = json_decode( $gg );
+
+		if ( $tt->verified ) {
+
 			// generuje unikalny token
-			$token = sha1( uniqid(rand(), true) );
+			$token = sha1( uniqid(microtime(true), true) );
+
 			// zapisuje usera ktory zglosil sie po token
 			$userId = $this->user->getId();
 
@@ -27,6 +38,7 @@ class Home extends Controller
 			Response::auth($token);
 
 		}
+
 	}
 
 	/**

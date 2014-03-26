@@ -8,7 +8,7 @@
 class Response
 {
 
-	public function auth($token)
+	public static function auth($token)
 	{
 		Http::header(array(
 			"Authorization: {$token}"

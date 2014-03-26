@@ -37,13 +37,15 @@
 				FB.Event.subscribe('auth.authResponseChange', function(response) {
 					if (response.status === 'connected') {
 						console.log('cnn');
+
 						/**
 						 * Zgłaszanie po token do api
 						 * @type {[type]}
 						 */
+						var access_token = FB.getAuthResponse()['accessToken'];
 						var jqxhr = $.ajax({
-							type: "GET",
-							url: 'http://localhost/reed/api/'
+							type: "POST",
+							url: 'http://localhost/reed/api/?access_token=' + access_token
 						});
 
 						/**

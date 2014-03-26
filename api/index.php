@@ -8,13 +8,13 @@ require_once 'bootstrap/head.php';
  | Home route
  | ---------------------------------------------------
  | Generate, store and send back authorization tokens.
- | Each client before be able to access api
+ | Each client before be able to access api should submit
+ | for token and include it in every api request.
  | Should accept requests:
- | GET => list discovery feeds collection
- | POST => throw error
+ | GET => throw error
+ | POST => generate, store and send back authorization token
  | PUT => throw error
  | DELETE => throw error
- |
 */
 $router->map('/', 'Home', array(
 	'user' => $user
