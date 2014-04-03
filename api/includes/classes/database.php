@@ -23,13 +23,13 @@ class Database
 	/**
 	 * Get specifed row by id
 	 * @param  String $table
-	 * @param  String $md5
+	 * @param  String $id
 	 * @return Array $row
 	 */
-	public function get($table, $md5)
+	public function get($table, $id)
 	{
-		$row = $this->query("SELECT * FROM $table WHERE md5 = :md5 LIMIT 1", array(
-			'md5' => $md5
+		$row = $this->query("SELECT * FROM $table WHERE id = :id LIMIT 1", array(
+			'id' => $id
 		));
 		$row = ( $row->rowCount() > 0 ) ? $row->fetchAll(PDO::FETCH_ASSOC) : false;
 
@@ -67,7 +67,7 @@ class Database
 	 */
 	public function update($table, $columns, $data)
 	{
-		$this->query("UPDATE $table SET $columns WHERE md5 = :md5", $data);
+		$this->query("UPDATE $table SET $columns WHERE id = :id", $data);
 	}
 
 	/**
@@ -75,10 +75,10 @@ class Database
 	 * @param  String $table
 	 * @param  String $slug
 	 */
-	public function delete($table, $md5)
+	public function delete($table, $id)
 	{
-		$this->query("DELETE FROM $table WHERE md5 = :md5", array(
-			'md5' => $md5
+		$this->query("DELETE FROM $table WHERE id = :id", array(
+			'id' => $id
 		));
 	}
 

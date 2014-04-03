@@ -17,7 +17,8 @@ require_once 'bootstrap/head.php';
  | DELETE => throw error
 */
 $router->map('/', 'Home', array(
-	'user' => $user
+	'user' => $user,
+	'token' => $token
 ));
 
 

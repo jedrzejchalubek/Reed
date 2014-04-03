@@ -7,9 +7,10 @@
 class Server
 {
 
-	public static function get()
+	public static function get($query = null)
 	{
-		return $_GET;
+		if ( isset($query) ) return $_GET[$query];
+		else return $_GET;
 	}
 
 	public static function uri()

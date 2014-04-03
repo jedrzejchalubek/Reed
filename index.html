@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="reed">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,81 +11,90 @@
 	</head>
 	<body>
 
-		<div class="container">
-			<a class="facebookLoginButton" href="#">Login with facebook</a>
+		<div class="container" ng-controller="Login">
+			<button class="btn btn-primary" ng-click="login()">Connect with Facebook</button>
+			&nbsp;
+			<button class="btn btn-danger" ng-click="logout()">Logout</button>
 		</div>
+
+		<div ng-controller="Feeds">
+			<ul ng-repeat="feed in feeds">
+				{{feed.title}}
+			</ul>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+		<script src="http://code.angularjs.org/1.2.15/angular-resource.min.js"></script>
+		<script src="http://pc035860.github.io/angular-easyfb/angular-easyfb.min.js"></script>
+		<script src="js/ngStorage.min.js"></script>
 
 		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 		<script>
 
+			angular.module('reed', ['ngResource', 'ngStorage', 'ezfb'])
+			.config(function (ezfbProvider) {
 
-			window.fbAsyncInit = function() {
-
-				FB.init({
+				ezfbProvider.setInitParams({
 					appId: '676983059011847',
 					status: true,
 					cookie: true
 				});
 
+			})
+			.factory('Api', ['$resource', '$sessionStorage', function ($resource, $sessionStorage) {
 
-				/**
-				 * Jesli zalogowany do facebooka zgłoś sie po tokena
-				 * @param  {[type]} response [description]
-				 * @return {[type]}          [description]
-				 */
-				FB.Event.subscribe('auth.authResponseChange', function(response) {
-					if (response.status === 'connected') {
-						console.log('cnn');
+				return {
 
-						/**
-						 * Zgłaszanie po token do api
-						 * @type {[type]}
-						 */
-						var access_token = FB.getAuthResponse()['accessToken'];
-						var jqxhr = $.ajax({
-							type: "POST",
-							url: 'http://localhost/reed/api/?access_token=' + access_token
-						});
-
-						/**
-						 * Odbieranie tokena z headera
-						 * @param  {[type]} resp [description]
-						 * @return {[type]}      [description]
-						 */
-						jqxhr.always(function(resp) {
-							var authToken = resp.getResponseHeader('Authorization');
-							console.log(authToken);
-						});
-
-						// Tutaj inicjowac appke ktora z kazdym zapytaniem do api przekazuje otrzymany wyzej token
-					}
-				});
-
-				$('.facebookLoginButton').on('click', function (event) {
-
-					event.preventDefault();
-
-					FB.login(function(response) {
-						if (response.authResponse) {
-							console.log('Good');
-						} else {
-							console.log('User cancelled login or did not fully authorize.');
+					Feeds: $resource('api/feeds', {}, {
+						query: {
+							method: 'GET',
+							isArray: true,
+							headers: {
+								'Authorization': $sessionStorage.auth.token
+							}
 						}
+					}),
+
+				};
+
+			}])
+			.controller('Login', function ($scope, $resource, $sessionStorage, ezfb) {
+
+				$scope.login = function () {
+
+					ezfb.login(function (res) {
+
+						var AuthToken = $resource('api', {}, {
+							get: {
+								method: 'GET',
+								headers: {
+									'Authorization': res.authResponse.accessToken
+								}
+							}
+						});
+
+						$sessionStorage.auth = AuthToken.get();
+
 					});
-				});
 
-			};
+				};
 
-			// Load the SDK asynchronously
-			(function(d){
-				var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-				if (d.getElementById(id)) {return;}
-				js = d.createElement('script'); js.id = id; js.async = true;
-				js.src = "//connect.facebook.net/en_US/all.js";
-				ref.parentNode.insertBefore(js, ref);
-			}(document));
+				$scope.logout = function () {
+
+					ezfb.logout(function () {
+						console.log('Logout');
+					});
+
+				};
+
+			})
+			.controller('Feeds', function ($scope, Api) {
+
+				$scope.feeds = Api.Feeds.query();
+
+			});
 
 		</script>
 

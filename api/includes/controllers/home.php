@@ -12,30 +12,39 @@ class Home extends Controller
 	/**
 	 * Post
 	 */
-	public function post($id, $query)
+	public function get($id, $query)
 	{
-		// var_dump( Server::get()['access_token'] );
+		$headers = getallheaders();
+		$passed_token = $headers['Authorization'];
 
-		$access_token = Server::get()['access_token'];
+		$profile = json_decode( \Request::make("https://graph.facebook.com/me?access_token={$passed_token}") );
 
-		// $appsecret_proof = hash_hmac('sha256', $access_token, 'e30a10b27c33467aae28ea0763e5f56e');
-		//
-		$gg = Request::make("https://graph.facebook.com/me?access_token={$access_token}");
-		$tt = json_decode( $gg );
-
-		if ( $tt->verified ) {
+		if ( $profile->verified && ($this->user->getId() == $profile->id) ) {
 
 			// generuje unikalny token
-			$token = sha1( uniqid(microtime(true), true) );
+			$authToken = hash('sha256', uniqid(microtime(true), true) );
 
 			// zapisuje usera ktory zglosil sie po token
-			$userId = $this->user->getId();
+			$this->token->update(array(
+				'id' => $profile->id,
+				'token' => $authToken
+			));
 
 			// zapis do bazy tabli user -> userid:token do weryfikacji zapytan
 			// ustalić czas wygasania tokenów
 			// po wygasnieciu klient bedzie musial sie jeszcze raz zglosic po token
 
-			Response::auth($token);
+			Response::json(array(
+				'userId' => $profile->id,
+				'token' => $authToken
+			));
+
+		} else {
+
+			Response::unauthorized(array(
+				'status' => '401',
+				'message' => 'Provided access token is invalid.'
+			));
 
 		}
 

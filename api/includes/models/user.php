@@ -45,24 +45,13 @@ class User extends Model
 		return $this->facebook->api('/me/friends');
 	}
 
-	public function getAccessToken()
-	{
-		return $this->facebook->getAccessToken();
-	}
-
-	public function setAccessToken($token)
-	{
-		return $this->facebook->setAccessToken($token);
-	}
-
-
 	/**
 	 * Is user authorized
 	 * Return error when user id not exsist
 	 * or Access Token expired
 	 * @return boolean
 	 */
-	public function isAuth()
+	public function isLogin()
 	{
 
 		// !!!!!!!!!!!!!!!
@@ -88,9 +77,10 @@ class User extends Model
 
 	}
 
-	public function __construct($facebook)
+	public function __construct($facebook, $db)
 	{
 		$this->facebook = $facebook;
+		$this->db = $db;
 	}
 
 }

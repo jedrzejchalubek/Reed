@@ -41,7 +41,7 @@ class Router
 	public function execute()
 	{
 
-		if ( $this->user->isAuth() ) {
+		if ( ($this->user->isLogin() && $this->token->isValid()) ) {
 
 			$uri = Server::uri();
 
@@ -87,9 +87,10 @@ class Router
 
 	}
 
-	public function __construct($user)
+	public function __construct($user, $token)
 	{
 		$this->user = $user;
+		$this->token = $token;
 	}
 
 }

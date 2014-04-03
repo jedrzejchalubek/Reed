@@ -8,13 +8,6 @@
 class Response
 {
 
-	public static function auth($token)
-	{
-		Http::header(array(
-			"Authorization: {$token}"
-		));
-	}
-
 	public static function json($data)
 	{
 		Http::header();
