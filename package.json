@@ -1,0 +1,19 @@
+{
+	"name": "Reed",
+	"version": "0.1.0",
+	"homepage": "reed.com",
+	"description": "Reed - rss reader",
+	"author": "Jędrzej Chałubek <jedrzej.chalubek@gmail.com>",
+	"private": true,
+	"devDependencies": {
+		"grunt": "~0.4.2",
+		"grunt-contrib-jade": "~0.8.0",
+        "grunt-twig-render": "*",
+		"grunt-contrib-less": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-concat": "~0.3.0",
+		"grunt-contrib-watch": "*",
+		"matchdep": "*"
+	},
+	"main": "Gruntfile.js"
+}
