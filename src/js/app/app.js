@@ -1,17 +1,20 @@
-angular.module('Reed', [
+var Reed = angular.module('Reed', [
 	'ngResource',
 	'ngCookies',
 	'ngRoute',
 	'ezfb',
 	'auth',
-	'login'
+	'api'
 ])
 
 	.config([
 		'$locationProvider',
 		'$routeProvider',
+		'$httpProvider',
 		'ezfbProvider',
-		function ($locationProvider, $routeProvider, ezfbProvider) {
+		function ($locationProvider, $routeProvider, $httpProvider, ezfbProvider) {
+
+		$httpProvider.interceptors.push('httpResponseInterceptorHandler');
 
 		ezfbProvider.setInitParams({
 			appId: '676983059011847',
@@ -38,37 +41,26 @@ angular.module('Reed', [
 
 	}])
 
-	.run(['$rootScope', '$route', 'AuthService', '$location', function ($rootScope, $route, AuthService, $location) {
+	.run([
+		'$rootScope',
+		'$route',
+		'$location',
+		'AuthService',
+		function ($rootScope, $route, $location, AuthService) {
 
 		// Everytime the route in our app changes check auth status
 		$rootScope.$on("$routeChangeStart", function(event, next, current) {
 			// if you're logged out send to login page.
 			if (next.requireLogin && !AuthService.getUserAuthenticated()) {
+				event.preventDefault();
 				$location.path('/login').replace();
-        		event.preventDefault();
 			}
 		});
 
-	}])
+		$rootScope.$on('$routeChangeError', function(arg1, arg2, arg3, arg4){
+			if(arg4.status == 404) {
+				console.log('33');
+			}
+		});
 
-	.service('Api', ['$resource', '$cookieStore', function ($resource, $cookieStore) {
-
-		return {
-
-			Feeds: $resource('api/feeds', {}, {
-				query: {
-					method: 'GET',
-					isArray: true,
-					headers: {
-						'Authorization': $cookieStore.get('token')
-					}
-				}
-			}),
-
-		};
-
-	}])
-
-	.controller('Discovery', function ($scope, Api) {
-		$scope.feeds = Api.Feeds.query();
-	});
+	}]);
