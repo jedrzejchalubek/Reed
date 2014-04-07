@@ -1,4 +1,31 @@
 
-<div class="col-xs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel dignissim massa. Proin mattis congue augue at scelerisque. Maecenas nec odio placerat, elementum sapien nec, dignissim odio. Proin ac ligula quam. Etiam facilisis convallis massa, eget feugiat enim feugiat et. Donec non iaculis lectus. Etiam nec leo vitae eros iaculis viverra. Mauris scelerisque semper metus, id viverra arcu laoreet id. Maecenas feugiat nibh viverra diam commodo, in ornare elit laoreet. Vivamus sed malesuada lorem. Donec ac congue ligula, nec tincidunt arcu. Nunc congue ligula sit amet magna porta venenatis. Integer sapien ligula, condimentum nec justo a, volutpat viverra nibh. Aenean vulputate sodales gravida.
+<nav id="nav" class="nav">
+  <div class="nav__wrapper">
+    <div class="nav__section"><a href="" ng-click="isCollapsed = !isCollapsed" class="nav__collapse"><i class="fa fa-bars"></i></a></div>
+    <div class="nav__section"><a href="#" class="nav__profile"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="nav__profile-img"/>
+        <div class="nav__profile-name">Hello, Jędrzej!</div></a></div>
+    <div class="nav__section nav__section--noborder">
+      <ul class="nav__menu">
+        <li class="nav__menu-item"><a href="#"><span class="nav__menu-badge badge">32</span><span class="nav__menu-icon iconmonstr iconmonstr-network"></span>Discovery</a></li>
+        <li class="nav__menu-item"><a href="#"><span class="nav__menu-badge badge">2</span><span class="nav__menu-icon iconmonstr iconmonstr-wireless"></span>Feeds</a></li>
+        <li class="nav__menu-item"><a href="#"><span class="nav__menu-badge badge">155</span><span class="nav__menu-icon iconmonstr iconmonstr-menu"></span>Articles</a></li>
+        <li class="nav__menu-item"><a href="#"><span class="nav__menu-badge badge">1234</span><span class="nav__menu-icon iconmonstr iconmonstr-time"></span>Read later</a></li>
+        <li class="nav__menu-item"><a href="#"><span class="nav__menu-badge badge">12</span><span class="nav__menu-icon iconmonstr iconmonstr-bookmark"></span>Favourites</a></li>
+      </ul>
+    </div><a href="#" class="nav__add"><span class="fa fa-plus-circle"></span></a>
+  </div>
+</nav>
+<div class="wrapper container-fluid fill">
+  <div class="row fill">
+    <div id="list" ng-class="{'isCollapsed': isCollapsed, 'isntCollapsed': !isCollapsed}" class="list col-xs-4 fill">
+      <section ng-controller="Discovery">
+        <ul ng-repeat="feed in feeds">
+          <li>{{feed.title}}</li>
+        </ul>
+      </section>
+    </div>
+    <div id="single" ng-class="{'col-xs-12 isWide': isCollapsed, 'col-xs-8 isntWide': !isCollapsed}" class="single fill">
+      <section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel dignissim massa. Proin mattis congue augue at scelerisque. Maecenas nec odio placerat, elementum sapien nec, dignissim odio. Proin ac ligula quam. Etiam facilisis convallis massa, eget feugiat enim feugiat et. Donec non iaculis lectus. Etiam nec leo vitae eros iaculis viverra. Mauris scelerisque semper metus, id viverra arcu laoreet id. Maecenas feugiat nibh viverra diam commodo, in ornare elit laoreet. Vivamus sed malesuada lorem. Donec ac congue ligula, nec tincidunt arcu. Nunc congue ligula sit amet magna porta venenatis. Integer sapien ligula, condimentum nec justo a, volutpat viverra nibh. Aenean vulputate sodales gravida.</section>
+    </div>
+  </div>
 </div>
-<div class="col-xs-7 clearfix">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel dignissim massa. Proin mattis congue augue at scelerisque. Maecenas nec odio placerat, elementum sapien nec, dignissim odio. Proin ac ligula quam. Etiam facilisis convallis massa, eget feugiat enim feugiat et. Donec non iaculis lectus. Etiam nec leo vitae eros iaculis viverra. Mauris scelerisque semper metus, id viverra arcu laoreet id. Maecenas feugiat nibh viverra diam commodo, in ornare elit laoreet. Vivamus sed malesuada lorem. Donec ac congue ligula, nec tincidunt arcu. Nunc congue ligula sit amet magna porta venenatis. Integer sapien ligula, condimentum nec justo a, volutpat viverra nibh. Aenean vulputate sodales gravida.</div>

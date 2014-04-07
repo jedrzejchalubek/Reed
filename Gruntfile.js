@@ -29,7 +29,7 @@ module.exports = function(grunt){
 			dist: {
 				files: [{
 					expand: true,
-					src: "**/*.jade",
+					src: ["**/*.jade", "!views/modules/*.jade"],
 					dest: "<%= paths.dist %>/",
 					cwd: "<%= paths.src %>/",
 					ext: '.html'

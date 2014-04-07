@@ -1,10 +1,13 @@
+include modules/nav
 
-.col-xs-4
-	//- section(ng-controller="Discovery")
-	//- 	ul(ng-repeat="feed in feeds")
-	//- 		li {{feed.title}}
+.wrapper.container-fluid.fill
+	.row.fill
 
-	| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel dignissim massa. Proin mattis congue augue at scelerisque. Maecenas nec odio placerat, elementum sapien nec, dignissim odio. Proin ac ligula quam. Etiam facilisis convallis massa, eget feugiat enim feugiat et. Donec non iaculis lectus. Etiam nec leo vitae eros iaculis viverra. Mauris scelerisque semper metus, id viverra arcu laoreet id. Maecenas feugiat nibh viverra diam commodo, in ornare elit laoreet. Vivamus sed malesuada lorem. Donec ac congue ligula, nec tincidunt arcu. Nunc congue ligula sit amet magna porta venenatis. Integer sapien ligula, condimentum nec justo a, volutpat viverra nibh. Aenean vulputate sodales gravida.
+		#list.list.col-xs-4.fill(ng-class="{'isCollapsed': isCollapsed, 'isntCollapsed': !isCollapsed}")
+			section(ng-controller="Discovery")
+				ul(ng-repeat="feed in feeds")
+					li {{feed.title}}
 
-.col-xs-7.clearfix
-	| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel dignissim massa. Proin mattis congue augue at scelerisque. Maecenas nec odio placerat, elementum sapien nec, dignissim odio. Proin ac ligula quam. Etiam facilisis convallis massa, eget feugiat enim feugiat et. Donec non iaculis lectus. Etiam nec leo vitae eros iaculis viverra. Mauris scelerisque semper metus, id viverra arcu laoreet id. Maecenas feugiat nibh viverra diam commodo, in ornare elit laoreet. Vivamus sed malesuada lorem. Donec ac congue ligula, nec tincidunt arcu. Nunc congue ligula sit amet magna porta venenatis. Integer sapien ligula, condimentum nec justo a, volutpat viverra nibh. Aenean vulputate sodales gravida.
+		#single.single.fill(ng-class="{'col-xs-12 isWide': isCollapsed, 'col-xs-8 isntWide': !isCollapsed}")
+			section
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel dignissim massa. Proin mattis congue augue at scelerisque. Maecenas nec odio placerat, elementum sapien nec, dignissim odio. Proin ac ligula quam. Etiam facilisis convallis massa, eget feugiat enim feugiat et. Donec non iaculis lectus. Etiam nec leo vitae eros iaculis viverra. Mauris scelerisque semper metus, id viverra arcu laoreet id. Maecenas feugiat nibh viverra diam commodo, in ornare elit laoreet. Vivamus sed malesuada lorem. Donec ac congue ligula, nec tincidunt arcu. Nunc congue ligula sit amet magna porta venenatis. Integer sapien ligula, condimentum nec justo a, volutpat viverra nibh. Aenean vulputate sodales gravida.

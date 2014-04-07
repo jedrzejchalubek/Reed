@@ -1,0 +1,36 @@
+.list {
+
+	.transition(all 250ms ease-in-out);
+	background: @gray-dark;
+	color: @white;
+
+	&.isCollapsed {
+
+		width: 0;
+
+		section {
+			.transition(all 5ms ease-in-out);
+			.opacity(0);
+		}
+
+	}
+
+	&.isntCollapsed {
+
+		section {
+			.opacity(1);
+			.transition(all 150ms ease-in-out 250ms);
+		}
+
+	}
+
+	@media (max-width: @screen-sm-max) {
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 1000;
+		width: 100%;
+		padding-left: 75px;
+	}
+
+}
+
