@@ -17,8 +17,7 @@ var Reed = angular.module('Reed', [
 
 		ezfbProvider.setInitParams({
 			appId: '676983059011847',
-			status: true,
-			cookie: true
+			status: true
 		});
 
 		$routeProvider

@@ -33,6 +33,8 @@ class AuthService extends Controller
 
 		if ( $profile->verified && ($this->user->getId() == $profile->id) ) {
 
+			$this->facebook->setAccessToken($passed_token);
+
 			// generuje unikalny token
 			$authToken = hash('sha256', uniqid(microtime(true), true) );
 

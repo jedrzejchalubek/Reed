@@ -29,5 +29,5 @@ $DbConfig = array(
 */
 $FacebookConfig = array(
 	'appId' => '676983059011847',
-	'secret' => 'e30a10b27c33467aae28ea0763e5f56e',
+	'secret' => 'e30a10b27c33467aae28ea0763e5f56e'
 );

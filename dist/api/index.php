@@ -18,7 +18,8 @@ require_once 'bootstrap/head.php';
 */
 $router->map('/auth', 'AuthService', array(
 	'user' => $user,
-	'token' => $token
+	'token' => $token,
+	'facebook' => $facebook
 ));
 
 

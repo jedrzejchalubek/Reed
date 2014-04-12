@@ -24,7 +24,8 @@ class User extends Model
 	 */
 	public function getProfile()
 	{
-		return $this->facebook->api('/me', 'GET');
+		$token = $this->facebook->getAccessToken();
+		return \Request::make("https://graph.facebook.com/me?access_token={$token}");
 	}
 
 	/**
