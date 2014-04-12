@@ -1,0 +1,36 @@
+.side {
+
+	.transition(width 250ms ease-in-out);
+	background: @gray-dark url(../images/list-bg.gif);
+	color: @white;
+
+	&.isCollapsed {
+
+		width: 0;
+
+		section {
+			.transition(opacity 5ms ease-in-out);
+			.opacity(0);
+		}
+
+	}
+
+	&.isntCollapsed {
+
+		section {
+			.opacity(1);
+			.transition(opacity 150ms ease-in-out 250ms);
+		}
+
+	}
+
+	@media (max-width: @screen-xs-max) {
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 500;
+		width: 100%;
+		padding-left: 75px;
+	}
+
+}
+

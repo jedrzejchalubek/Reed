@@ -1,0 +1,120 @@
+.tabs {
+
+	& > ul {
+
+		border-bottom: 2px solid;
+
+		& > li {
+
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			border-right: 2px solid;
+
+			&:last-child { border-right: 0; }
+
+			& > a {
+
+				margin-right: 0;
+				border-radius: 0;
+				cursor: pointer;
+				color: @gray-light;
+				border-bottom: 0;
+
+				&:hover,
+				&:focus {
+					background: @transparent;
+					color: @brand-primary;
+				}
+
+			}
+
+
+			&.active > a {
+
+				&,
+				&:hover,
+				&:focus {
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&--dark {
+
+		& > ul {
+
+			border-color: @gray;
+
+			& > li {
+
+				border-color: @gray;
+
+				& > a {
+
+					&:hover,
+					&:focus {
+
+					}
+
+				}
+
+				&.active > a {
+
+					&,
+					&:hover,
+					&:focus {
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&--light {
+
+		& > ul {
+
+			border-color: @gray-lighter;
+
+			& > li {
+
+				border-color: @gray-lighter;
+
+				& > a {
+
+					color: @gray-light;
+
+					&:hover,
+					&:focus {
+						color: @brand-info;
+					}
+
+				}
+
+				&.active > a {
+
+					&,
+					&:hover,
+					&:focus {
+						color: @gray-darker;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

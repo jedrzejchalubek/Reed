@@ -1,0 +1,10 @@
+
+<section id="listArticles" class="listArticles">
+  <div class="row">
+    <tabset>
+      <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" class="col-xs-4">
+        <div ng-repeat="feed in tab.content"><a href="#articles">{{feed.title}}</a></div>
+      </tab>
+    </tabset>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+nav#menu.menu
+	.menu__wrapper
+
+		.menu__section
+			a.menu__collapse(href="", ng-click="isCollapsed = !isCollapsed")
+				i.fa.fa-bars
+
+		.menu__section
+			a.menu__profile(href="#profile")
+				img.menu__profile-img(src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg")
+				.menu__profile-name Hello, {{name}}!
+
+		.menu__section.menu__section--noborder
+			ul.menu__nav
+				li.menu__nav-item
+					a(href="#discovery")
+						span.menu__nav-badge.badge 32
+						span.menu__nav-icon.iconmonstr.iconmonstr-network
+						| Discovery
+				li.menu__nav-item
+					a(href="#feeds")
+						span.menu__nav-badge.badge {{unread.feeds}}
+						span.menu__nav-icon.iconmonstr.iconmonstr-wireless
+						| Feeds
+				li.menu__nav-item
+					a(href="#articles")
+						span.menu__nav-badge.badge 155
+						span.menu__nav-icon.iconmonstr.iconmonstr-menu
+						| Articles
+				li.menu__nav-item
+					a(href="#readlater")
+						span.menu__nav-badge.badge 1234
+						span.menu__nav-icon.iconmonstr.iconmonstr-time
+						| Read later
+				li.menu__nav-item
+					a(href="#favourites")
+						span.menu__nav-badge.badge 12
+						span.menu__nav-icon.iconmonstr.iconmonstr-bookmark
+						| Favourites
+
+		a.menu__add(href="")
+			span.fa.fa-plus-circle

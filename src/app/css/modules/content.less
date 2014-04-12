@@ -1,0 +1,18 @@
+.content {
+
+	background: @white;
+	.transition(all 250ms ease-in-out);
+
+	&.isWide {}
+	&.isntWide {}
+
+	@media (max-width: @screen-xs-max) {
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 450;
+		width: 100%;
+		padding-left: 75px;
+	}
+
+}
+

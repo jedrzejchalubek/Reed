@@ -54,19 +54,10 @@ class User extends Model
 	public function isLogin()
 	{
 
-		// !!!!!!!!!!!!!!!
-		// For development
-		// !!!!!!!!!!!!!!!
-		return true;
-
 		// User logedin to facebook
 		if ( $this->getProfile() ) {
 			try {
-				// ==TODO== Application Access Token valid
-				if ( $token ) {
-					// User authorized
-					return true;
-				}
+				return true;
 			} catch (FacebookApiException $e) {
 				// Facebook Access Token expired
 				error_log($e);
@@ -74,6 +65,7 @@ class User extends Model
 		} else {
 			// Not authorized no facebook session
 		}
+
 
 	}
 

@@ -29,7 +29,7 @@ module.exports = function(grunt){
 			dist: {
 				files: [{
 					expand: true,
-					src: ["**/*.jade", "!views/modules/*.jade"],
+					src: ["**/*.jade"],
 					dest: "<%= paths.dist %>/",
 					cwd: "<%= paths.src %>/",
 					ext: '.html'
@@ -54,7 +54,7 @@ module.exports = function(grunt){
 			},
 			normal: {
 				files: {
-					"<%= paths.dist %>/css/styles.css": ['<%= paths.src %>/css/*.less']
+					"<%= paths.dist %>/app/css/styles.css": ['<%= paths.src %>/app/css/*.less']
 				}
 			},
 			min: {
@@ -63,7 +63,7 @@ module.exports = function(grunt){
 					report: 'min'
 				},
 				files: {
-					"<%= paths.dist %>/css/styles.min.css": ['<%= paths.src %>/css/*.less']
+					"<%= paths.dist %>/app/css/styles.min.css": ['<%= paths.src %>/app/css/*.less']
 				}
 			}
 		},
@@ -77,7 +77,7 @@ module.exports = function(grunt){
 			},
 			dist: {
 				files: {
-					'<%= paths.dist %>/js/app.js': ['<%= paths.src %>/js/**/*.js']
+					'<%= paths.dist %>/app/app.js': ['<%= paths.src %>/app/**/*.js']
 				}
 			}
 		},
@@ -94,11 +94,11 @@ module.exports = function(grunt){
 				tasks: ['build-html']
 			},
 			css: {
-				files: ['<%= paths.src %>/css/**/*.less'],
+				files: ['<%= paths.src %>/app/css/**/*.less'],
 				tasks: ['build-css']
 			},
 			js: {
-				files: ['<%= paths.src %>/js/**/*.js'],
+				files: ['<%= paths.src %>/app/**/*.js'],
 				tasks: ['build-js']
 			}
 		}
