@@ -14,9 +14,10 @@ class AuthService extends Controller
 	 */
 	public function get($id, $query)
 	{
-		$fbtoken = Http::getHeader('Authorization');
 
-		$profile = json_decode( \Request::make("https://graph.facebook.com/me?access_token={$fbtoken}") );
+		$this->facebook->setAccessToken( Http::getHeader('Authorization') );
+
+		$profile = json_decode( json_encode( $this->facebook->api('/me', 'GET') ), false);
 
 		if ( $profile->verified ) {
 
