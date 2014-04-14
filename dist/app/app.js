@@ -108,7 +108,7 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 ;Reed.service('AuthService', function ($cookieStore){
 
 	this.getUserAuthenticated = function() {
-		return ($cookieStore.get('token')) ? true : false;
+		return ($cookieStore.get('reed_authtoken')) ? true : false;
 	};
 
 	return this;
@@ -199,7 +199,8 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 					});
 
 					var user = AuthToken.get({}, function () {
-						$cookieStore.put('token', user.token);
+						$cookieStore.put('reed_userid', user.userid);
+						$cookieStore.put('reed_authtoken', user.authtoken);
 						$location.path('/discovery').replace();
 					});
 

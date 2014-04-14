@@ -7,7 +7,7 @@
 abstract class Http
 {
 
-	public static function header($headers = array())
+	public static function setHeaders($headers = array())
 	{
 
 		header('Content-type: application/json; charset=UTF-8');
@@ -16,6 +16,12 @@ abstract class Http
 			header($value);
 		}
 
+	}
+
+	public static function getHeader($header)
+	{
+		$headers = getallheaders();
+		return $headers[$header];
 	}
 
 }

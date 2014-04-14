@@ -19,31 +19,34 @@ class User extends Model
 	protected $facebook;
 
 	/**
+	 * Token model
+	 * @var Object
+	 */
+	protected $token;
+
+	public function getId()
+	{
+		return $_COOKIE['reed_userid'];
+	}
+
+	/**
 	 * Get user pprofile
 	 * @return Array
 	 */
-	public function getProfile()
+	public function getFacebookProfile()
 	{
-		$token = $this->facebook->getAccessToken();
+		$token = $this->getFbToken();
 		return \Request::make("https://graph.facebook.com/me?access_token={$token}");
 	}
 
-	/**
-	 * Get user id
-	 * @return Int
-	 */
-	public function getId()
+	public function getAuthToken()
 	{
-		return $this->facebook->getUser();
+		return $this->token->get($this->getId())['authtoken'];
 	}
 
-	/**
-	 * Get user friends
-	 * @return Array
-	 */
-	public function getFriends()
+	public function getFbToken()
 	{
-		return $this->facebook->api('/me/friends');
+		return $this->token->get($this->getId())['fbtoken'];
 	}
 
 	/**
@@ -55,8 +58,10 @@ class User extends Model
 	public function isLogin()
 	{
 
+		if ($_SERVER["REQUEST_URI"] == "/reed/dist/api/auth") return true;
+
 		// User logedin to facebook
-		if ( $this->getProfile() ) {
+		if ( $this->getFacebookProfile() ) {
 			try {
 				return true;
 			} catch (FacebookApiException $e) {
@@ -70,9 +75,10 @@ class User extends Model
 
 	}
 
-	public function __construct($facebook, $db)
+	public function __construct($facebook, $token, $db)
 	{
 		$this->facebook = $facebook;
+		$this->token = $token;
 		$this->db = $db;
 	}
 

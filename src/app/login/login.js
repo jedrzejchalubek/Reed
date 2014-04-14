@@ -21,7 +21,8 @@ Reed.controller('Login', [
 					});
 
 					var user = AuthToken.get({}, function () {
-						$cookieStore.put('token', user.token);
+						$cookieStore.put('reed_userid', user.userid);
+						$cookieStore.put('reed_authtoken', user.authtoken);
 						$location.path('/discovery').replace();
 					});
 

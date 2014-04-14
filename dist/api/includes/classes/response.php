@@ -10,14 +10,14 @@ class Response
 
 	public static function json($data)
 	{
-		Http::header();
+		Http::setHeaders();
 
 		echo json_encode($data);
 	}
 
 	public static function failed($data = null)
 	{
-		Http::header(array(
+		Http::setHeaders(array(
 			'HTTP/1.0 400 Bad Request'
 		));
 
@@ -28,7 +28,7 @@ class Response
 
 	public static function added($data = null)
 	{
-		Http::header(array(
+		Http::setHeaders(array(
 			'HTTP/1.0 201 Created'
 		));
 
@@ -37,7 +37,7 @@ class Response
 
 	public static function updated($data = null)
 	{
-		Http::header(array(
+		Http::setHeaders(array(
 			'HTTP/1.0 201 Created'
 		));
 
@@ -46,7 +46,7 @@ class Response
 
 	public static function unauthorized($data = null)
 	{
-		Http::header(array(
+		Http::setHeaders(array(
 			'HTTP/1.0 401 Unauthorized'
 		));
 
