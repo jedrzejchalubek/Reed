@@ -41,12 +41,14 @@ class User extends Model
 
 	public function getAuthToken()
 	{
-		return $this->token->get($this->getId())['authtoken'];
+		$tokens = $this->token->get($this->getId());
+		return $tokens['authtoken'];
 	}
 
 	public function getFbToken()
 	{
-		return $this->token->get($this->getId())['fbtoken'];
+		$tokens = $this->token->get($this->getId());
+		return $tokens['fbtoken'];
 	}
 
 	/**
