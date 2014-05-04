@@ -1,6 +1,0 @@
-section#friends.friends
-	.row
-		tabset.tabs.tabs--dark
-			tab.col-xs-4(ng-repeat="tab in tabs.list", heading="{{tab.title}}", active="tab.active")
-				div(ng-repeat="feed in tab.content")
-					a(href="#articles") {{feed.title}}

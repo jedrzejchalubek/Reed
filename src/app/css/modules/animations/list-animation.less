@@ -1,0 +1,34 @@
+.list-animation {
+
+	&.ng-enter,
+	&.ng-leave {
+		position: absolute;
+		top: 0; left: 0;
+		.transition(all 300ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
+	}
+
+	&.ng-enter {
+
+		.scale(0.75);
+		.opacity(0.5);
+
+		&.ng-enter-active {
+			.scale(1);
+			.opacity(1);
+		}
+
+	}
+
+	&.ng-leave {
+
+		.scale(1);
+		.opacity(1);
+
+		&.ng-leave-active {
+			.scale(0.75);
+			.opacity(0.5);
+		}
+
+	}
+
+}

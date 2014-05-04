@@ -1,0 +1,42 @@
+.articles {
+
+	background: @white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	&__wrapper {
+
+		padding: 0 36px;
+
+	}
+
+	&__thumb {
+
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 36px;
+
+		&-wrapper {
+			color: @gray;
+			display: block;
+
+			&:hover {
+				color: @gray-darker;
+			}
+		}
+
+		&-img {
+			width: 100%;
+		}
+
+		&-heading {
+			margin-top: 9px;
+		}
+
+		&-desc {
+			color: @gray-dark;
+		}
+
+	}
+
+}

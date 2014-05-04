@@ -1,0 +1,17 @@
+
+<nav id="menu" class="menu">
+  <div class="menu__wrapper">
+    <div class="menu__section"><a href="" ng-click="toggle()" class="menu__collapse"><i class="fa fa-bars"></i></a></div>
+    <div class="menu__section"><a href="#profile" class="menu__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="menu__profile-img"/>
+        <div class="menu__profile-name">Hello, {{name}}!</div></a></div>
+    <div class="menu__section menu__section--noborder">
+      <ul class="menu__nav">
+        <li class="menu__nav-item"><a href="#discovery"><span class="menu__nav-badge badge">32</span><span class="menu__nav-icon iconmonstr iconmonstr-network"></span>Discovery</a></li>
+        <li class="menu__nav-item"><a href="#feeds"><span class="menu__nav-badge badge">{{unread.feeds}}</span><span class="menu__nav-icon iconmonstr iconmonstr-wireless"></span>Feeds</a></li>
+        <li class="menu__nav-item"><a href="#articles"><span class="menu__nav-badge badge">155</span><span class="menu__nav-icon iconmonstr iconmonstr-menu"></span>Articles</a></li>
+        <li class="menu__nav-item"><a href="#readlater"><span class="menu__nav-badge badge">1234</span><span class="menu__nav-icon iconmonstr iconmonstr-time"></span>Read later</a></li>
+        <li class="menu__nav-item"><a href="#favourites"><span class="menu__nav-badge badge">12</span><span class="menu__nav-icon iconmonstr iconmonstr-bookmark"></span>Favourites</a></li>
+      </ul>
+    </div><a href="" class="menu__add"><span class="fa fa-plus-circle"></span></a>
+  </div>
+</nav>

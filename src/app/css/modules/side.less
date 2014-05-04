@@ -1,8 +1,12 @@
 .side {
 
-	.transition(width 250ms ease-in-out);
 	background: @gray-dark url(../images/list-bg.gif);
 	color: @white;
+	position: relative;
+	padding-top: 54px;
+	float: left;
+	clear: none;
+	.transition(width 250ms ease-in-out);
 
 	&.isCollapsed {
 
@@ -26,10 +30,8 @@
 
 	@media (max-width: @screen-xs-max) {
 		position: absolute;
-		top: 0; left: 0;
 		z-index: 500;
-		width: 100%;
-		padding-left: 75px;
+		width: auto;
 	}
 
 }

@@ -55,6 +55,13 @@ class Route
 		return preg_match("#^{$this->route}$#", $uri);
 	}
 
+	public static function is($name)
+	{
+		if ( end((explode('/', rtrim($_SERVER["REQUEST_URI"], '/')))) === $name ) return true;
+		else
+			return false;
+	}
+
 	/**
 	 * Route constructor
 	 * @param String $route  Route uri pattern

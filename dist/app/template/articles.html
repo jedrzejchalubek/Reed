@@ -1,0 +1,12 @@
+
+<section id="articles" class="articles offset-top fill">
+  <div class="row">
+    <div class="articles__wrapper">
+      <div ng-repeat="article in articles">
+        <article id="{{article.id}}" class="articles__thumb col-sm-6 col-lg-4"><a ng-click="view(article)" class="articles__thumb-wrapper"><img ng-src="{{article.image}}" class="articles__thumb-img"/>
+            <h3 class="articles__thumb-heading">{{article.title}}</h3>
+            <p class="articles__thumb-desc">{{article.description}}</p></a></article>
+      </div>
+    </div>
+  </div>
+</section>

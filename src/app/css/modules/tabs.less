@@ -3,6 +3,10 @@
 	& > ul {
 
 		border-bottom: 2px solid;
+		position: absolute;
+		top: 0; left: 0;
+		z-index: 1050;
+		width: 100%;
 
 		& > li {
 
@@ -49,6 +53,7 @@
 
 		& > ul {
 
+			background: @gray-dark url(../images/list-bg.gif);
 			border-color: @gray;
 
 			& > li {
@@ -59,7 +64,7 @@
 
 					&:hover,
 					&:focus {
-
+						color: @white;
 					}
 
 				}
@@ -69,7 +74,7 @@
 					&,
 					&:hover,
 					&:focus {
-
+						color: @brand-primary;
 					}
 
 				}
@@ -84,6 +89,7 @@
 
 		& > ul {
 
+			background: @white;
 			border-color: @gray-lighter;
 
 			& > li {
@@ -106,7 +112,7 @@
 					&,
 					&:hover,
 					&:focus {
-						color: @gray-darker;
+						color: @brand-info;
 					}
 
 				}

@@ -29,7 +29,10 @@ module.exports = function(grunt){
 			dist: {
 				files: [{
 					expand: true,
-					src: ["**/*.jade"],
+					src: [
+						"**/*.jade",
+						'!**/mixins/**'
+					],
 					dest: "<%= paths.dist %>/",
 					cwd: "<%= paths.src %>/",
 					ext: '.html'
@@ -94,11 +97,11 @@ module.exports = function(grunt){
 				tasks: ['build-html']
 			},
 			css: {
-				files: ['<%= paths.src %>/app/css/**/*.less'],
+				files: ['<%= paths.src %>/app/css/**/**/*.less'],
 				tasks: ['build-css']
 			},
 			js: {
-				files: ['<%= paths.src %>/app/**/*.js'],
+				files: ['<%= paths.src %>/app/**/**/*.js'],
 				tasks: ['build-js']
 			}
 		}

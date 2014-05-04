@@ -67,6 +67,7 @@ abstract class Model extends Database
 			$this->table,
 			$this->columns,
 			$this->valuesToAdd(),
+			$this->valuesToUpdate(),
 			$data
 		);
 	}

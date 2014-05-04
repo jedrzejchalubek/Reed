@@ -1,0 +1,59 @@
+.activity {
+
+	font-size: @font-size-small;
+	color: @gray-light;
+
+	&__wrapper {
+
+		& > div {
+			padding: 18px;
+
+			& > div {
+				background: url(../images/activity-line.png) 25px repeat-y;
+			}
+
+		}
+
+	}
+
+	&__item {
+		position: relative;
+		margin-bottom: 18px;
+		padding: 0 0 0 60px;
+	}
+
+	&__avatar {
+
+		width: 50px;
+		position: absolute;
+		top: 0; left: 0;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+
+	}
+
+	&__status {
+		display: block;
+		height: 100%;
+
+		&-type {
+			color: @gray-light;
+		}
+
+		&-title {
+			color: @white;
+
+			&:hover,
+			&:focus {
+				color: @brand-primary;
+			}
+
+		}
+
+	}
+
+
+
+
+}

@@ -18,31 +18,63 @@ class Token extends Model
 	 */
 	protected $table = 'userToken';
 
-	public function generate()
-	{
-		return hash('sha256', uniqid(microtime(true), true) );
-	}
-
-	public function getUserToken()
-	{
-		$user = $this->get( \String::removeQuotes($_COOKIE['reed_userid']) );
-		return $user['authtoken'];
-	}
-
 	/**
 	 * Database table columns
 	 * @var String
 	 */
 	protected $columns = 'id, authtoken, fbtoken';
 
+
+	/**
+	 * Generate unique token
+	 * @return String token
+	 */
+	public function generate()
+	{
+		return hash('sha256', uniqid(microtime(true), true) );
+	}
+
+
+	/**
+	 * Get user token stored inside cookie
+	 * @return String token
+	 */
+	public function getUserToken()
+	{
+		$user = $this->get( \String::removeQuotes($_COOKIE['reed_userid']) );
+		return $user['authtoken'];
+	}
+
+
+	/**
+	 * Get user token timestamp
+	 * @return String token
+	 */
+	public function expiced()
+	{
+		$token = $this->get( \String::removeQuotes($_COOKIE['reed_userid']) );
+		$timestamp = $token['timestamp'];
+
+		if (strtotime($timestamp) <= time() - (60*60*24*3))
+			return true;
+		else
+			return false;
+
+	}
+
+
+	/**
+	 * Check if stored token inside cookie
+	 * is same as ind database
+	 * or the route to AuthService
+	 * @return boolean
+	 */
 	public function isValid()
 	{
 
-		if ($_SERVER["REQUEST_URI"] == "/reed/dist/api/auth") return true;
+		if ( \String::removeQuotes($_COOKIE['reed_authtoken']) === $this->getUserToken() || \Route::is('auth') ) {
 
-		if ( \String::removeQuotes($_COOKIE['reed_authtoken']) === $this->getUserToken() ) {
-
-			return true;
+				return true;
 
 		} else {
 

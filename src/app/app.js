@@ -2,6 +2,8 @@ var Reed = angular.module('Reed', [
 	'ngResource',
 	'ngCookies',
 	'ngRoute',
+	'ngSanitize',
+	'ngAnimate',
 	'ezfb',
 	'ui.bootstrap'
 ])
@@ -22,18 +24,19 @@ var Reed = angular.module('Reed', [
 
 		$routeProvider
 			.when('/login', {
-				templateUrl: 'app/login/login.html',
+				templateUrl: 'app/template/login.html',
 				controller: 'Login',
 				requireLogin: false
 			})
 			.when('/discovery', {
-				templateUrl: 'app/discovery/discovery.html',
+				templateUrl: 'app/template/discovery.html',
 				controller: 'Discovery',
-				resolve: {
-					feeds: function(Api) {
-						return Api.getFeeds();
-					}
-				},
+				requireLogin: true,
+				reloadOnSearch: false
+			})
+			.when('/discovery?:id', {
+				templateUrl: 'app/template/discovery.html',
+				controller: 'Discovery',
 				requireLogin: true
 			});
 

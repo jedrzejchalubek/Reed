@@ -106,6 +106,12 @@
 }
 
 // Transformations
+.transform(@transforms) {
+  -webkit-transform: @transforms;
+      -ms-transform: @transforms; // IE9 only
+       -o-transform: @transforms;
+          transform: @transforms;
+}
 .scale(@ratio) {
   -webkit-transform: scale(@ratio);
       -ms-transform: scale(@ratio); // IE9 only

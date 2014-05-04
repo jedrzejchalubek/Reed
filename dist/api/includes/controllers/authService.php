@@ -15,26 +15,33 @@ class AuthService extends Controller
 	public function get($id, $query)
 	{
 
-		$this->facebook->setAccessToken( Http::getHeader('Authorization') );
+		// Get passed Facebook access token
+		$fbtoken = Http::getHeader('Authorization');
+		// Tell facebook sdk to use that token
+		$this->facebook->setAccessToken( $fbtoken );
 
+		// Fetch facebook profile
 		$profile = json_decode( json_encode( $this->facebook->api('/me', 'GET') ), false);
 
+		// If facebook profile are verifed authorize user
 		if ( $profile->verified ) {
 
-			// generuje unikalny token
+			// Generate unique token
 			$authtoken = $this->token->generate();
 
-			// zapisuje usera ktory zglosil sie po token
-			$this->token->update(array(
+			// Store user
+			$this->user->add(array(
+				'id' => $profile->id
+			));
+
+			// Store user tokens
+			$this->token->add(array(
 				'id' => $profile->id,
 				'authtoken' => $authtoken,
 				'fbtoken' => $fbtoken
 			));
 
-			// zapis do bazy tabli user -> userid:token do weryfikacji zapytan
-			// ustalić czas wygasania tokenów
-			// po wygasnieciu klient bedzie musial sie jeszcze raz zglosic po token
-
+			// Response to client with user id and authorize token
 			Response::json(array(
 				'userid' => $profile->id,
 				'authtoken' => $authtoken

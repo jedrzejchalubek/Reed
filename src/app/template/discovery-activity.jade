@@ -1,0 +1,9 @@
+section#activity.activity
+	.row
+		tabset.activity__wrapper.tabs.tabs--dark
+			tab.col-xs-4(ng-repeat="tab in tabs.side", heading="{{tab.title}}", active="tab.active")
+				.activity__item(ng-repeat="activity in tab.content")
+					img.activity__avatar(ng-src="{{activity.user.avatar}}")
+					a.activity__status(href="#articles")
+						.activity__status-type {{activity.user.name}} {{activity.type}}
+						.activity__status-title {{activity.title}}

@@ -54,9 +54,9 @@ class Database
 	 * @param String $values
 	 * @param Array $data
 	 */
-	public function add($table, $columns, $values, $data)
+	public function add($table, $columns, $values, $update, $data)
 	{
-		$this->query("INSERT INTO {$table}({$columns}) VALUES({$values})", $data);
+		$this->query("INSERT INTO {$table}({$columns}) VALUES({$values}) ON DUPLICATE KEY UPDATE {$update}", $data);
 	}
 
 	/**

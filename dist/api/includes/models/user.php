@@ -13,6 +13,18 @@ class User extends Model
 {
 
 	/**
+	 * Database table name
+	 * @var String
+	 */
+	protected $table = 'user';
+
+	/**
+	 * Database table columns
+	 * @var String
+	 */
+	protected $columns = 'id';
+
+	/**
 	 * Facebook API
 	 * @var Object
 	 */
