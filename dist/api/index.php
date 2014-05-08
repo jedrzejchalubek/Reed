@@ -169,7 +169,9 @@ $router->map('/users', function(){});
  | PUT => (exist) ? update user details : throw error
  | DELETE => delete user
 */
-$router->map('/users/:id', function(){});
+$router->map('/users/:id', 'User', array(
+	'user' => $user
+));
 
 
 

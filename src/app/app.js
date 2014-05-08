@@ -28,11 +28,15 @@ var Reed = angular.module('Reed', [
 				controller: 'Login',
 				requireLogin: false
 			})
+			.when('/add', {
+				templateUrl: 'app/template/add.html',
+				controller: 'Add',
+				requireLogin: false
+			})
 			.when('/discovery', {
 				templateUrl: 'app/template/discovery.html',
 				controller: 'Discovery',
 				requireLogin: true,
-				reloadOnSearch: false
 			})
 			.when('/discovery?:id', {
 				templateUrl: 'app/template/discovery.html',

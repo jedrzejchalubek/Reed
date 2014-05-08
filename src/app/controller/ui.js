@@ -1,4 +1,4 @@
-Reed.controller('Ui', ['$scope', '$cookieStore', function ($scope, $cookieStore) {
+Reed.controller('Ui', function ($scope, $cookieStore, Api, State) {
 
 	$scope.isCollapsed =
 		($cookieStore.get('reed_menustatus'))
@@ -10,4 +10,17 @@ Reed.controller('Ui', ['$scope', '$cookieStore', function ($scope, $cookieStore)
 		$cookieStore.put('reed_menustatus', $scope.isCollapsed);
 	}
 
-}]);
+	$scope.articles = Api.discoveryArticles.get(function(res) {
+
+		State.status = {
+			unread: {
+				articles: res.length
+			}
+		};
+
+		$scope.state = State.status;
+
+	});
+
+
+});

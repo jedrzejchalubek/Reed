@@ -1,6 +1,4 @@
-Reed.controller('Discovery', function ($scope, Api) {
-
-	$scope.articles = Api.discoveryArticles.get();
+Reed.controller('Discovery', function ($scope, Api, State) {
 
 	$scope.view = function (el) {
 		$scope.show = {
@@ -9,11 +7,6 @@ Reed.controller('Discovery', function ($scope, Api) {
 			scrollPosition: $('#articles').scrollTop()
 		};
 	}
-
-	// $scope.back = function (el) {
-	// 	$scope.section = 'list';
-	// 	// $scope.id = el.id;
-	// }
 
 	$scope.tabs = {
 

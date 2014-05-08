@@ -44,6 +44,13 @@ Reed.factory('Api', function ($http, $resource) {
 				}
 			}),
 
+			User: $resource('api/users/:id', { id: '@id' }, {
+				get: {
+					method: 'GET',
+					isArray: false
+				}
+			}),
+
 		};
 
 }).service('feedsProvider', function () {});

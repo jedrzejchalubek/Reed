@@ -1,0 +1,19 @@
+
+<div ng-controller="Ui" class="wrapper container-fluid fill">
+  <div class="row fill">
+    <div ng-include="'app/template/menu.html'"></div>
+    <div id="side" ng-class="{'isCollapsed': isCollapsed, 'isntCollapsed': !isCollapsed}" class="side col-sm-4 col-lg-3 fill">
+      <div ng-include="'app/template/discovery-activity.html'" class="fill"></div>
+    </div>
+    <div id="content" ng-class="{'col-xs-12 isWide': isCollapsed, 'col-sm-8 col-lg-9 isntWide': !isCollapsed}" class="content fill">
+      <div ng-switch="show.section" class="bg-animation fill">
+        <div ng-switch-default="list" class="list-animation fill">
+          <div ng-include="'app/template/articles.html'" class="fill"></div>
+        </div>
+        <div ng-switch-when="single" class="single-animation fill">
+          <div ng-include="'app/template/article.html'" class="fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
