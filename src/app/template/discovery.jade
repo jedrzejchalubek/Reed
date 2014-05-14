@@ -10,8 +10,8 @@ include mixins/mixins
 	+content
 		div.bg-animation.fill(ng-switch="show.section")
 			div.list-animation.fill(ng-switch-default="list")
-				div.fill(ng-include="'app/template/articles.html'")
+				.fill(ng-include="'app/template/articles.html'")
 			div.single-animation.fill(ng-switch-when="single")
-				div.fill(ng-include="'app/template/article.html'")
+				.fill(ng-include="'app/template/article.html'")
 
 

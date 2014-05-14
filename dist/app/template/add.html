@@ -6,13 +6,40 @@
       <div ng-include="'app/template/discovery-activity.html'" class="fill"></div>
     </div>
     <div id="content" ng-class="{'col-xs-12 isWide': isCollapsed, 'col-sm-8 col-lg-9 isntWide': !isCollapsed}" class="content fill">
-      <div ng-switch="show.section" class="bg-animation fill">
-        <div ng-switch-default="list" class="list-animation fill">
-          <div ng-include="'app/template/articles.html'" class="fill"></div>
-        </div>
-        <div ng-switch-when="single" class="single-animation fill">
-          <div ng-include="'app/template/article.html'" class="fill"></div>
-        </div>
+      <div class="add__wrapper">
+        <section class="add text-center">
+          <h1>Subskrybuj jeszcze więcej.</h1>
+          <p class="lead">Podaj tylko adres RSS strony, którą chcesz śledzić.<br/>My zajmiemy się resztą.</p>
+          <form role="form" name="addForm" ng-submit="submit(addForm.$valid)" novalidate="novalidate">
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-6 col-md-offset-2">
+                  <input id="addFeed" type="text" placeholder="Wpisz adres RSS strony" ng-model="form.rssUrl" required="required" ng-required="true" class="input-lg form-control"/>
+                </div>
+                <div class="add__button col-md-2">
+                  <button type="submit" class="btn btn-lg btn-block btn-info"><span class="glyphicon glyphicon-plus"></span> Subskrybuj</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+        <section class="feeds__wrapper">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <ul class="feeds list-group">
+                <li ng-repeat="feed in feeds | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
+                  <div class="row">
+                    <div class="col-xs-10"><img ng-src="{{feed.image}}" class="feeds__image"/>
+                      <div class="feeds__title lead">{{feed.title}}</div>
+                      <p class="feeds__desc"><span class="glyphicon glyphicon-user"></span> {{feed.subscribers}}</p>
+                    </div>
+                    <div class="col-xs-1 col-xs-offset-1"><a href="#" class="feeds__button btn-lg"><span class="glyphicon glyphicon-plus-sign"></span></a></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>

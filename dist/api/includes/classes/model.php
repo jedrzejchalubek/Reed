@@ -17,7 +17,7 @@ abstract class Model extends Database
 	 * Database connection
 	 * @var [type]
 	 */
-	protected $db;
+	public $db;
 
 	/**
 	 * Fetch rows from database

@@ -70,10 +70,9 @@ $database = new Reed\Models\Database(
 
 $facebook = new Facebook($FacebookConfig);
 $token = new Reed\Models\Token($database);
-$user = new Reed\Models\User($facebook, $token, $database);
-
 $feed = new Reed\Models\Feed($database);
 $article = new Reed\Models\Article($database);
+$userFeed = new Reed\Models\UserFeed($database);
 
-$router = new Router($user, $token);
-
+$user = new Reed\Models\User($facebook, $token, $database);
+$router = new Router($user, $token, $database);

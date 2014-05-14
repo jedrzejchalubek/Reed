@@ -10,17 +10,15 @@ Reed.controller('Ui', function ($scope, $cookieStore, Api, State) {
 		$cookieStore.put('reed_menustatus', $scope.isCollapsed);
 	}
 
-	$scope.articles = Api.discoveryArticles.get(function(res) {
+	$scope.articles = Api.discoveryArticles.get();
+	$scope.feeds = Api.discoveryFeeds.get();
 
-		State.status = {
-			unread: {
-				articles: res.length
-			}
-		};
 
-		$scope.state = State.status;
+	// $scope.articles = Api.discoveryArticles.get(function(res) {
 
-	});
+	// 	State.status.unread.articles = res.length
+	// 	$scope.state = State.status;
 
+	// });
 
 });

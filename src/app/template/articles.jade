@@ -1,6 +1,9 @@
 section#articles.articles.offset-top.fill
 	.row
 		.articles__wrapper
+			.text-center
+				h1 Discovery, read, grow.
+				p.lead lorem
 			div(ng-repeat="article in articles")
 				article.articles__thumb.col-sm-6.col-lg-4(id="{{article.id}}")
 					a.articles__thumb-wrapper(ng-click="view(article)")

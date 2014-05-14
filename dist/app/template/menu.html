@@ -1,9 +1,9 @@
 
 <nav id="menu" ng-controller="Menu" class="menu">
   <div class="menu__wrapper">
-    <div class="menu__section"><a href="" ng-click="toggle(); state.unread.feeds = state.unread.feeds + 1;" class="menu__collapse"><i class="fa fa-bars"></i></a></div>
-    <div class="menu__section"><a href="#profile" class="menu__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/{{state.unread.feeds}}8.jpg" class="menu__profile-img"/>
-        <div class="menu__profile-name">Hello, {{name}}!</div></a></div>
+    <div class="menu__section"><a href="" ng-click="toggle()" class="menu__collapse"><i class="fa fa-bars"></i></a></div>
+    <div class="menu__section"><a href="#profile" class="menu__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="menu__profile-img"/>
+        <div class="menu__profile-name">Hello, {{user.name}}!</div></a></div>
     <div class="menu__section menu__section--noborder">
       <ul class="menu__nav">
         <li class="menu__nav-item"><a href="#discovery"><span class="menu__nav-badge badge">{{state.unread.discovery}}</span><span class="menu__nav-icon iconmonstr iconmonstr-network"></span>Discovery</a></li>

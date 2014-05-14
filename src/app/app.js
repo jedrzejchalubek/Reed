@@ -5,6 +5,7 @@ var Reed = angular.module('Reed', [
 	'ngSanitize',
 	'ngAnimate',
 	'ezfb',
+	'angular-md5',
 	'ui.bootstrap'
 ])
 

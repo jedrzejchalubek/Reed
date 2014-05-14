@@ -5,6 +5,7 @@ var Reed = angular.module('Reed', [
 	'ngSanitize',
 	'ngAnimate',
 	'ezfb',
+	'angular-md5',
 	'ui.bootstrap'
 ])
 
@@ -74,6 +75,205 @@ build date: 2014-03-29
 author: Robin Fan
 https://github.com/pc035860/angular-easyfb.git */
 !function(a){function b(b,c){var d="ezfb-social-plugin-wrap",e="display: inline-block; width: 0; height: 0; overflow: hidden;",f=function(a){var b='<span class="'+d+'" style="'+e+'">';return a.wrap(b).parent()},g=function(a){return a.parent().hasClass(d)},h=function(a){var b=a.parent();return b.after(a).remove(),a};a.directive(c,["ezfb",function(a){return{restrict:"EC",require:"?^ezfbXfbml",link:function(c,d,e,i){function j(a){return function(){var b;k&&a===l&&(b=e.onrender,b&&c.$eval(b),k=!1,h(d))}}if(!i){var k=!1,l=0;c.$watch(function(){var a=[];return angular.forEach(b,function(b){a.push(e[b])}),a},function(){l++,k?a.XFBML.parse(d.parent()[0],j(l)):(k=!0,a.XFBML.parse(f(d)[0],j(l)))},!0),d.bind("$destroy",function(){g(d)&&h(d)})}}}}])}a.provider("ezfb",function(){function a(a,b){return angular.isObject(b)?void angular.extend(a,b):angular.copy(a)}function b(a,b,c){return function(){return a.apply(b,c)}}var c=-1,d={api:[1,2,3],ui:1,getAuthResponse:c,getLoginStatus:0,login:0,logout:0,"Event.subscribe":1,"Event.unsubscribe":1,"XFBML.parse":1,"Canvas.Prefetcher.addStaticResource":c,"Canvas.Prefetcher.setCollectionMode":c,"Canvas.hideFlashElement":c,"Canvas.scrollTo":c,"Canvas.setAutoGrow":c,"Canvas.setDoneLoading":0,"Canvas.setSize":c,"Canvas.setUrlHandler":0,"Canvas.showFlashElement":c,"Canvas.startTimer":c,"Canvas.stopTimer":0},e="en_US",f={status:!0,cookie:!0,xfbml:!0},g=["$window","$document","ezfbAsyncInit","ezfbLocale",function(a,b,c,d){!function(a){var b,c="facebook-jssdk",e=a.getElementsByTagName("script")[0];a.getElementById(c)||(b=a.createElement("script"),b.id=c,b.async=!0,b.src="//connect.facebook.net/"+d+"/all.js",e.parentNode.insertBefore(b,e))}(b[0]),a.fbAsyncInit=c}],h=g,i=["$window","ezfbInitParams",function(a,b){a.FB.init(b)}],j=i;return{setInitParams:function(b){a(f,b)},getInitParams:function(){return a(f)},setLocale:function(a){e=a},getLocale:function(){return e},setLoadSDKFunction:function(a){if(!angular.isArray(a)&&!angular.isFunction(a))throw new Error("Init function type error.");h=a},getLoadSDKFunction:function(){return h},setInitFunction:function(a){if(!angular.isArray(a)&&!angular.isFunction(a))throw new Error("Init function type error.");j=a},getInitFunction:function(){return j},$get:["$window","$q","$document","$parse","$rootScope","$injector",function(g,k,l,m,n,o){var p,q,r,s,t;return r={},s=k.defer(),(f.appId||j!==i)&&s.resolve(),p=k.defer(),l[0].getElementById("fb-root")||l.find("body").append('<div id="fb-root"></div>'),t=function(){s.promise.then(function(){o.invoke(j,null,{ezfbInitParams:f}),q.$$ready=!0,p.resolve()})},o.invoke(h,null,{ezfbAsyncInit:t,ezfbLocale:e}),q={$$ready:!1,init:function(b){a(f,b),s.resolve()}},angular.forEach(d,function(a,d){var e=m(d),f=e.assign;f(q,function(){var f=b(function(b){var f,h;if(f=k.defer(),h=function(a){var c,e;for(c=angular.isFunction(b[a])?b[a]:angular.noop,e=function(){var a=Array.prototype.slice.call(arguments);n.$$phase?(c.apply(null,a),f.resolve.apply(f,a)):n.$apply(function(){c.apply(null,a),f.resolve.apply(f,a)})};b.length<=a;)b.push(null);var g;if("Event.subscribe"===d)g=b[0],angular.isUndefined(r[g])&&(r[g]=[]),r[g].push({original:c,wrapped:e});else if("Event.unsubscribe"===d&&(g=b[0],angular.isArray(r[g]))){var h,i,j=r[g].length;for(h=0;j>h;h++)if(i=r[g][h],i.original===c){e=i.wrapped,r[g].splice(h,1);break}}b[a]=e},a!==c)if(angular.isNumber(a))h(a);else if(angular.isArray(a)){var i,j;for(i=0;i<a.length;i++)if(j=a[i],b.length==j||b.length==j+1&&angular.isFunction(b[j])){h(j);break}}var l=e(g.FB);if(!l)throw new Error("Facebook API `FB."+d+"` doesn't exist.");return l.apply(g.FB,b),f.promise},null,[Array.prototype.slice.call(arguments)]);if("getAuthResponse"===d){if(angular.isUndefined(g.FB))throw new Error("`FB` is not ready.");return g.FB.getAuthResponse()}return a!==c?p.promise.then(f):void p.promise.then(f)})}),q}]}}).directive("ezfbXfbml",["ezfb","$parse","$compile","$timeout",function(a,b,c,d){return{restrict:"EAC",controller:function(){},compile:function(e){var f=e.html();return function(e,g,h){var i=!0,j=h.onrender,k=function(){i&&(j&&e.$eval(j),i=!1)};a.XFBML.parse(g[0],k);var l=b(h.ezfbXfbml).assign;e.$watch(h.ezfbXfbml,function(b){b&&(i=!0,g.html(f),c(g.contents())(e),d(function(){a.XFBML.parse(g[0],k)}),(l||angular.noop)(e,!1))},!0)}}}}]);var c={fbLike:["action","colorscheme","href","kidDirectedSite","layout","ref","share","showFaces","width"],fbShareButton:["href","layout","width"],fbSend:["colorscheme","href","kidDirectedSite","ref"],fbPost:["href","width"],fbFollow:["colorscheme","href","kidDirectedSite","layout","showFaces","width"],fbComments:["colorscheme","href","mobile","numPosts","orderBy","width"],fbActivity:["action","appId","colorscheme","filter","header","height","linktarget","maxAge","recommendations","ref","site","width"],fbRecommendations:["action","appId","colorscheme","header","height","linktarget","maxAge","ref","site","width"],fbRecommendationsBar:["action","href","maxAge","numRecommendations","readTime","ref","side","site","trigger"],fbLikeBox:["colorscheme","forceWall","header","height","href","showBorder","showFaces","stream","width"],fbFacepile:["action","appId","colorscheme","href","maxRows","size","width"]};angular.forEach(c,b)}(angular.module("ezfb",[]));;/*
+  angular-md5 - v0.1.7 
+  2014-01-20
+*/
+(function(window, angular, undefined) {
+  angular.module("angular-md5", [ "gdi2290.md5" ]);
+  angular.module("ngMd5", [ "gdi2290.md5" ]);
+  angular.module("gdi2290.md5", [ "gdi2290.gravatar-filter", "gdi2290.md5-service", "gdi2290.md5-filter" ]);
+  "use strict";
+  angular.module("gdi2290.gravatar-filter", []).filter("gravatar", [ "md5", function(md5) {
+    var cache = {};
+    return function(text, defaultText) {
+      if (!cache[text]) {
+        defaultText = defaultText ? md5.createHash(defaultText.toString().toLowerCase()) : "";
+        cache[text] = text ? md5.createHash(text.toString().toLowerCase()) : defaultText;
+      }
+      return cache[text];
+    };
+  } ]);
+  "use strict";
+  angular.module("gdi2290.md5-filter", []).filter("md5", [ "md5", function(md5) {
+    return function(text) {
+      return text ? md5.createHash(text.toString().toLowerCase()) : text;
+    };
+  } ]);
+  "use strict";
+  angular.module("gdi2290.md5-service", []).factory("md5", [ function() {
+    var md5 = {
+      createHash: function(str) {
+        var xl;
+        var rotateLeft = function(lValue, iShiftBits) {
+          return lValue << iShiftBits | lValue >>> 32 - iShiftBits;
+        };
+        var addUnsigned = function(lX, lY) {
+          var lX4, lY4, lX8, lY8, lResult;
+          lX8 = lX & 2147483648;
+          lY8 = lY & 2147483648;
+          lX4 = lX & 1073741824;
+          lY4 = lY & 1073741824;
+          lResult = (lX & 1073741823) + (lY & 1073741823);
+          if (lX4 & lY4) {
+            return lResult ^ 2147483648 ^ lX8 ^ lY8;
+          }
+          if (lX4 | lY4) {
+            if (lResult & 1073741824) {
+              return lResult ^ 3221225472 ^ lX8 ^ lY8;
+            } else {
+              return lResult ^ 1073741824 ^ lX8 ^ lY8;
+            }
+          } else {
+            return lResult ^ lX8 ^ lY8;
+          }
+        };
+        var _F = function(x, y, z) {
+          return x & y | ~x & z;
+        };
+        var _G = function(x, y, z) {
+          return x & z | y & ~z;
+        };
+        var _H = function(x, y, z) {
+          return x ^ y ^ z;
+        };
+        var _I = function(x, y, z) {
+          return y ^ (x | ~z);
+        };
+        var _FF = function(a, b, c, d, x, s, ac) {
+          a = addUnsigned(a, addUnsigned(addUnsigned(_F(b, c, d), x), ac));
+          return addUnsigned(rotateLeft(a, s), b);
+        };
+        var _GG = function(a, b, c, d, x, s, ac) {
+          a = addUnsigned(a, addUnsigned(addUnsigned(_G(b, c, d), x), ac));
+          return addUnsigned(rotateLeft(a, s), b);
+        };
+        var _HH = function(a, b, c, d, x, s, ac) {
+          a = addUnsigned(a, addUnsigned(addUnsigned(_H(b, c, d), x), ac));
+          return addUnsigned(rotateLeft(a, s), b);
+        };
+        var _II = function(a, b, c, d, x, s, ac) {
+          a = addUnsigned(a, addUnsigned(addUnsigned(_I(b, c, d), x), ac));
+          return addUnsigned(rotateLeft(a, s), b);
+        };
+        var convertToWordArray = function(str) {
+          var lWordCount;
+          var lMessageLength = str.length;
+          var lNumberOfWords_temp1 = lMessageLength + 8;
+          var lNumberOfWords_temp2 = (lNumberOfWords_temp1 - lNumberOfWords_temp1 % 64) / 64;
+          var lNumberOfWords = (lNumberOfWords_temp2 + 1) * 16;
+          var lWordArray = new Array(lNumberOfWords - 1);
+          var lBytePosition = 0;
+          var lByteCount = 0;
+          while (lByteCount < lMessageLength) {
+            lWordCount = (lByteCount - lByteCount % 4) / 4;
+            lBytePosition = lByteCount % 4 * 8;
+            lWordArray[lWordCount] = lWordArray[lWordCount] | str.charCodeAt(lByteCount) << lBytePosition;
+            lByteCount++;
+          }
+          lWordCount = (lByteCount - lByteCount % 4) / 4;
+          lBytePosition = lByteCount % 4 * 8;
+          lWordArray[lWordCount] = lWordArray[lWordCount] | 128 << lBytePosition;
+          lWordArray[lNumberOfWords - 2] = lMessageLength << 3;
+          lWordArray[lNumberOfWords - 1] = lMessageLength >>> 29;
+          return lWordArray;
+        };
+        var wordToHex = function(lValue) {
+          var wordToHexValue = "", wordToHexValue_temp = "", lByte, lCount;
+          for (lCount = 0; lCount <= 3; lCount++) {
+            lByte = lValue >>> lCount * 8 & 255;
+            wordToHexValue_temp = "0" + lByte.toString(16);
+            wordToHexValue = wordToHexValue + wordToHexValue_temp.substr(wordToHexValue_temp.length - 2, 2);
+          }
+          return wordToHexValue;
+        };
+        var x = [], k, AA, BB, CC, DD, a, b, c, d, S11 = 7, S12 = 12, S13 = 17, S14 = 22, S21 = 5, S22 = 9, S23 = 14, S24 = 20, S31 = 4, S32 = 11, S33 = 16, S34 = 23, S41 = 6, S42 = 10, S43 = 15, S44 = 21;
+        x = convertToWordArray(str);
+        a = 1732584193;
+        b = 4023233417;
+        c = 2562383102;
+        d = 271733878;
+        xl = x.length;
+        for (k = 0; k < xl; k += 16) {
+          AA = a;
+          BB = b;
+          CC = c;
+          DD = d;
+          a = _FF(a, b, c, d, x[k + 0], S11, 3614090360);
+          d = _FF(d, a, b, c, x[k + 1], S12, 3905402710);
+          c = _FF(c, d, a, b, x[k + 2], S13, 606105819);
+          b = _FF(b, c, d, a, x[k + 3], S14, 3250441966);
+          a = _FF(a, b, c, d, x[k + 4], S11, 4118548399);
+          d = _FF(d, a, b, c, x[k + 5], S12, 1200080426);
+          c = _FF(c, d, a, b, x[k + 6], S13, 2821735955);
+          b = _FF(b, c, d, a, x[k + 7], S14, 4249261313);
+          a = _FF(a, b, c, d, x[k + 8], S11, 1770035416);
+          d = _FF(d, a, b, c, x[k + 9], S12, 2336552879);
+          c = _FF(c, d, a, b, x[k + 10], S13, 4294925233);
+          b = _FF(b, c, d, a, x[k + 11], S14, 2304563134);
+          a = _FF(a, b, c, d, x[k + 12], S11, 1804603682);
+          d = _FF(d, a, b, c, x[k + 13], S12, 4254626195);
+          c = _FF(c, d, a, b, x[k + 14], S13, 2792965006);
+          b = _FF(b, c, d, a, x[k + 15], S14, 1236535329);
+          a = _GG(a, b, c, d, x[k + 1], S21, 4129170786);
+          d = _GG(d, a, b, c, x[k + 6], S22, 3225465664);
+          c = _GG(c, d, a, b, x[k + 11], S23, 643717713);
+          b = _GG(b, c, d, a, x[k + 0], S24, 3921069994);
+          a = _GG(a, b, c, d, x[k + 5], S21, 3593408605);
+          d = _GG(d, a, b, c, x[k + 10], S22, 38016083);
+          c = _GG(c, d, a, b, x[k + 15], S23, 3634488961);
+          b = _GG(b, c, d, a, x[k + 4], S24, 3889429448);
+          a = _GG(a, b, c, d, x[k + 9], S21, 568446438);
+          d = _GG(d, a, b, c, x[k + 14], S22, 3275163606);
+          c = _GG(c, d, a, b, x[k + 3], S23, 4107603335);
+          b = _GG(b, c, d, a, x[k + 8], S24, 1163531501);
+          a = _GG(a, b, c, d, x[k + 13], S21, 2850285829);
+          d = _GG(d, a, b, c, x[k + 2], S22, 4243563512);
+          c = _GG(c, d, a, b, x[k + 7], S23, 1735328473);
+          b = _GG(b, c, d, a, x[k + 12], S24, 2368359562);
+          a = _HH(a, b, c, d, x[k + 5], S31, 4294588738);
+          d = _HH(d, a, b, c, x[k + 8], S32, 2272392833);
+          c = _HH(c, d, a, b, x[k + 11], S33, 1839030562);
+          b = _HH(b, c, d, a, x[k + 14], S34, 4259657740);
+          a = _HH(a, b, c, d, x[k + 1], S31, 2763975236);
+          d = _HH(d, a, b, c, x[k + 4], S32, 1272893353);
+          c = _HH(c, d, a, b, x[k + 7], S33, 4139469664);
+          b = _HH(b, c, d, a, x[k + 10], S34, 3200236656);
+          a = _HH(a, b, c, d, x[k + 13], S31, 681279174);
+          d = _HH(d, a, b, c, x[k + 0], S32, 3936430074);
+          c = _HH(c, d, a, b, x[k + 3], S33, 3572445317);
+          b = _HH(b, c, d, a, x[k + 6], S34, 76029189);
+          a = _HH(a, b, c, d, x[k + 9], S31, 3654602809);
+          d = _HH(d, a, b, c, x[k + 12], S32, 3873151461);
+          c = _HH(c, d, a, b, x[k + 15], S33, 530742520);
+          b = _HH(b, c, d, a, x[k + 2], S34, 3299628645);
+          a = _II(a, b, c, d, x[k + 0], S41, 4096336452);
+          d = _II(d, a, b, c, x[k + 7], S42, 1126891415);
+          c = _II(c, d, a, b, x[k + 14], S43, 2878612391);
+          b = _II(b, c, d, a, x[k + 5], S44, 4237533241);
+          a = _II(a, b, c, d, x[k + 12], S41, 1700485571);
+          d = _II(d, a, b, c, x[k + 3], S42, 2399980690);
+          c = _II(c, d, a, b, x[k + 10], S43, 4293915773);
+          b = _II(b, c, d, a, x[k + 1], S44, 2240044497);
+          a = _II(a, b, c, d, x[k + 8], S41, 1873313359);
+          d = _II(d, a, b, c, x[k + 15], S42, 4264355552);
+          c = _II(c, d, a, b, x[k + 6], S43, 2734768916);
+          b = _II(b, c, d, a, x[k + 13], S44, 1309151649);
+          a = _II(a, b, c, d, x[k + 4], S41, 4149444226);
+          d = _II(d, a, b, c, x[k + 11], S42, 3174756917);
+          c = _II(c, d, a, b, x[k + 2], S43, 718787259);
+          b = _II(b, c, d, a, x[k + 9], S44, 3951481745);
+          a = addUnsigned(a, AA);
+          b = addUnsigned(b, BB);
+          c = addUnsigned(c, CC);
+          d = addUnsigned(d, DD);
+        }
+        var temp = wordToHex(a) + wordToHex(b) + wordToHex(c) + wordToHex(d);
+        return temp.toLowerCase();
+      }
+    };
+    return md5;
+  } ]);
+})(this, this.angular, void 0);;/*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
 
@@ -84,6 +284,15 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 },a.enter=function(b){a.readonly||(a.val=b),a.onHover({value:b})},a.reset=function(){a.val=angular.copy(a.value),a.onLeave()},a.$watch("value",function(b){a.val=b}),a.readonly=!1,b.readonly&&a.$parent.$watch(c(b.readonly),function(b){a.readonly=!!b})}]).directive("rating",function(){return{restrict:"EA",scope:{value:"=",onHover:"&",onLeave:"&"},controller:"RatingController",templateUrl:"template/rating/rating.html",replace:!0}}),angular.module("ui.bootstrap.tabs",[]).controller("TabsetController",["$scope",function(a){var b=this,c=b.tabs=a.tabs=[];b.select=function(a){angular.forEach(c,function(a){a.active=!1}),a.active=!0},b.addTab=function(a){c.push(a),(1===c.length||a.active)&&b.select(a)},b.removeTab=function(a){var d=c.indexOf(a);if(a.active&&c.length>1){var e=d==c.length-1?d-1:d+1;b.select(c[e])}c.splice(d,1)}}]).directive("tabset",function(){return{restrict:"EA",transclude:!0,replace:!0,scope:{},controller:"TabsetController",templateUrl:"template/tabs/tabset.html",link:function(a,b,c){a.vertical=angular.isDefined(c.vertical)?a.$parent.$eval(c.vertical):!1,a.justified=angular.isDefined(c.justified)?a.$parent.$eval(c.justified):!1,a.type=angular.isDefined(c.type)?a.$parent.$eval(c.type):"tabs"}}}).directive("tab",["$parse",function(a){return{require:"^tabset",restrict:"EA",replace:!0,templateUrl:"template/tabs/tab.html",transclude:!0,scope:{heading:"@",onSelect:"&select",onDeselect:"&deselect"},controller:function(){},compile:function(b,c,d){return function(b,c,e,f){var g,h;e.active?(g=a(e.active),h=g.assign,b.$parent.$watch(g,function(a,c){a!==c&&(b.active=!!a)}),b.active=g(b.$parent)):h=g=angular.noop,b.$watch("active",function(a){h(b.$parent,a),a?(f.select(b),b.onSelect()):b.onDeselect()}),b.disabled=!1,e.disabled&&b.$parent.$watch(a(e.disabled),function(a){b.disabled=!!a}),b.select=function(){b.disabled||(b.active=!0)},f.addTab(b),b.$on("$destroy",function(){f.removeTab(b)}),b.$transcludeFn=d}}}}]).directive("tabHeadingTransclude",[function(){return{restrict:"A",require:"^tab",link:function(a,b){a.$watch("headingElement",function(a){a&&(b.html(""),b.append(a))})}}}]).directive("tabContentTransclude",function(){function a(a){return a.tagName&&(a.hasAttribute("tab-heading")||a.hasAttribute("data-tab-heading")||"tab-heading"===a.tagName.toLowerCase()||"data-tab-heading"===a.tagName.toLowerCase())}return{restrict:"A",require:"^tabset",link:function(b,c,d){var e=b.$eval(d.tabContentTransclude);e.$transcludeFn(e.$parent,function(b){angular.forEach(b,function(b){a(b)?e.headingElement=b:c.append(b)})})}}}),angular.module("ui.bootstrap.timepicker",[]).constant("timepickerConfig",{hourStep:1,minuteStep:1,showMeridian:!0,meridians:null,readonlyInput:!1,mousewheel:!0}).directive("timepicker",["$parse","$log","timepickerConfig","$locale",function(a,b,c,d){return{restrict:"EA",require:"?^ngModel",replace:!0,scope:{},templateUrl:"template/timepicker/timepicker.html",link:function(e,f,g,h){function i(){var a=parseInt(e.hours,10),b=e.showMeridian?a>0&&13>a:a>=0&&24>a;return b?(e.showMeridian&&(12===a&&(a=0),e.meridian===q[1]&&(a+=12)),a):void 0}function j(){var a=parseInt(e.minutes,10);return a>=0&&60>a?a:void 0}function k(a){return angular.isDefined(a)&&a.toString().length<2?"0"+a:a}function l(a){m(),h.$setViewValue(new Date(p)),n(a)}function m(){h.$setValidity("time",!0),e.invalidHours=!1,e.invalidMinutes=!1}function n(a){var b=p.getHours(),c=p.getMinutes();e.showMeridian&&(b=0===b||12===b?12:b%12),e.hours="h"===a?b:k(b),e.minutes="m"===a?c:k(c),e.meridian=p.getHours()<12?q[0]:q[1]}function o(a){var b=new Date(p.getTime()+6e4*a);p.setHours(b.getHours(),b.getMinutes()),l()}if(h){var p=new Date,q=angular.isDefined(g.meridians)?e.$parent.$eval(g.meridians):c.meridians||d.DATETIME_FORMATS.AMPMS,r=c.hourStep;g.hourStep&&e.$parent.$watch(a(g.hourStep),function(a){r=parseInt(a,10)});var s=c.minuteStep;g.minuteStep&&e.$parent.$watch(a(g.minuteStep),function(a){s=parseInt(a,10)}),e.showMeridian=c.showMeridian,g.showMeridian&&e.$parent.$watch(a(g.showMeridian),function(a){if(e.showMeridian=!!a,h.$error.time){var b=i(),c=j();angular.isDefined(b)&&angular.isDefined(c)&&(p.setHours(b),l())}else n()});var t=f.find("input"),u=t.eq(0),v=t.eq(1),w=angular.isDefined(g.mousewheel)?e.$eval(g.mousewheel):c.mousewheel;if(w){var x=function(a){a.originalEvent&&(a=a.originalEvent);var b=a.wheelDelta?a.wheelDelta:-a.deltaY;return a.detail||b>0};u.bind("mousewheel wheel",function(a){e.$apply(x(a)?e.incrementHours():e.decrementHours()),a.preventDefault()}),v.bind("mousewheel wheel",function(a){e.$apply(x(a)?e.incrementMinutes():e.decrementMinutes()),a.preventDefault()})}if(e.readonlyInput=angular.isDefined(g.readonlyInput)?e.$eval(g.readonlyInput):c.readonlyInput,e.readonlyInput)e.updateHours=angular.noop,e.updateMinutes=angular.noop;else{var y=function(a,b){h.$setViewValue(null),h.$setValidity("time",!1),angular.isDefined(a)&&(e.invalidHours=a),angular.isDefined(b)&&(e.invalidMinutes=b)};e.updateHours=function(){var a=i();angular.isDefined(a)?(p.setHours(a),l("h")):y(!0)},u.bind("blur",function(){!e.validHours&&e.hours<10&&e.$apply(function(){e.hours=k(e.hours)})}),e.updateMinutes=function(){var a=j();angular.isDefined(a)?(p.setMinutes(a),l("m")):y(void 0,!0)},v.bind("blur",function(){!e.invalidMinutes&&e.minutes<10&&e.$apply(function(){e.minutes=k(e.minutes)})})}h.$render=function(){var a=h.$modelValue?new Date(h.$modelValue):null;isNaN(a)?(h.$setValidity("time",!1),b.error('Timepicker directive: "ng-model" value must be a Date object, a number of milliseconds since 01.01.1970 or a string representing an RFC2822 or ISO 8601 date.')):(a&&(p=a),m(),n())},e.incrementHours=function(){o(60*r)},e.decrementHours=function(){o(60*-r)},e.incrementMinutes=function(){o(s)},e.decrementMinutes=function(){o(-s)},e.toggleMeridian=function(){o(720*(p.getHours()<12?1:-1))}}}}}]),angular.module("ui.bootstrap.typeahead",["ui.bootstrap.position","ui.bootstrap.bindHtml"]).factory("typeaheadParser",["$parse",function(a){var b=/^\s*(.*?)(?:\s+as\s+(.*?))?\s+for\s+(?:([\$\w][\$\w\d]*))\s+in\s+(.*)$/;return{parse:function(c){var d=c.match(b);if(!d)throw new Error("Expected typeahead specification in form of '_modelValue_ (as _label_)? for _item_ in _collection_' but got '"+c+"'.");return{itemName:d[3],source:a(d[4]),viewMapper:a(d[2]||d[1]),modelMapper:a(d[1])}}}}]).directive("typeahead",["$compile","$parse","$q","$timeout","$document","$position","typeaheadParser",function(a,b,c,d,e,f,g){var h=[9,13,27,38,40];return{require:"ngModel",link:function(i,j,k,l){var m,n=i.$eval(k.typeaheadMinLength)||1,o=i.$eval(k.typeaheadWaitMs)||0,p=i.$eval(k.typeaheadEditable)!==!1,q=b(k.typeaheadLoading).assign||angular.noop,r=b(k.typeaheadOnSelect),s=k.typeaheadInputFormatter?b(k.typeaheadInputFormatter):void 0,t=k.typeaheadAppendToBody?b(k.typeaheadAppendToBody):!1,u=b(k.ngModel).assign,v=g.parse(k.typeahead),w=angular.element("<div typeahead-popup></div>");w.attr({matches:"matches",active:"activeIdx",select:"select(activeIdx)",query:"query",position:"position"}),angular.isDefined(k.typeaheadTemplateUrl)&&w.attr("template-url",k.typeaheadTemplateUrl);var x=i.$new();i.$on("$destroy",function(){x.$destroy()});var y=function(){x.matches=[],x.activeIdx=-1},z=function(a){var b={$viewValue:a};q(i,!0),c.when(v.source(i,b)).then(function(c){if(a===l.$viewValue&&m){if(c.length>0){x.activeIdx=0,x.matches.length=0;for(var d=0;d<c.length;d++)b[v.itemName]=c[d],x.matches.push({label:v.viewMapper(x,b),model:c[d]});x.query=a,x.position=t?f.offset(j):f.position(j),x.position.top=x.position.top+j.prop("offsetHeight")}else y();q(i,!1)}},function(){y(),q(i,!1)})};y(),x.query=void 0;var A;l.$parsers.unshift(function(a){return m=!0,a&&a.length>=n?o>0?(A&&d.cancel(A),A=d(function(){z(a)},o)):z(a):(q(i,!1),y()),p?a:a?(l.$setValidity("editable",!1),void 0):(l.$setValidity("editable",!0),a)}),l.$formatters.push(function(a){var b,c,d={};return s?(d.$model=a,s(i,d)):(d[v.itemName]=a,b=v.viewMapper(i,d),d[v.itemName]=void 0,c=v.viewMapper(i,d),b!==c?b:a)}),x.select=function(a){var b,c,d={};d[v.itemName]=c=x.matches[a].model,b=v.modelMapper(i,d),u(i,b),l.$setValidity("editable",!0),r(i,{$item:c,$model:b,$label:v.viewMapper(i,d)}),y(),j[0].focus()},j.bind("keydown",function(a){0!==x.matches.length&&-1!==h.indexOf(a.which)&&(a.preventDefault(),40===a.which?(x.activeIdx=(x.activeIdx+1)%x.matches.length,x.$digest()):38===a.which?(x.activeIdx=(x.activeIdx?x.activeIdx:x.matches.length)-1,x.$digest()):13===a.which||9===a.which?x.$apply(function(){x.select(x.activeIdx)}):27===a.which&&(a.stopPropagation(),y(),x.$digest()))}),j.bind("blur",function(){m=!1});var B=function(a){j[0]!==a.target&&(y(),x.$digest())};e.bind("click",B),i.$on("$destroy",function(){e.unbind("click",B)});var C=a(w)(x);t?e.find("body").append(C):j.after(C)}}}]).directive("typeaheadPopup",function(){return{restrict:"EA",scope:{matches:"=",query:"=",active:"=",position:"=",select:"&"},replace:!0,templateUrl:"template/typeahead/typeahead-popup.html",link:function(a,b,c){a.templateUrl=c.templateUrl,a.isOpen=function(){return a.matches.length>0},a.isActive=function(b){return a.active==b},a.selectActive=function(b){a.active=b},a.selectMatch=function(b){a.select({activeIdx:b})}}}}).directive("typeaheadMatch",["$http","$templateCache","$compile","$parse",function(a,b,c,d){return{restrict:"EA",scope:{index:"=",match:"=",query:"="},link:function(e,f,g){var h=d(g.templateUrl)(e.$parent)||"template/typeahead/typeahead-match.html";a.get(h,{cache:b}).success(function(a){f.replaceWith(c(a.trim())(e))})}}}]).filter("typeaheadHighlight",function(){function a(a){return a.replace(/([.?*+^$[\]\\(){}|-])/g,"\\$1")}return function(b,c){return c?b.replace(new RegExp(a(c),"gi"),"<strong>$&</strong>"):b}}),angular.module("template/accordion/accordion-group.html",[]).run(["$templateCache",function(a){a.put("template/accordion/accordion-group.html",'<div class="panel panel-default">\n  <div class="panel-heading">\n    <h4 class="panel-title">\n      <a class="accordion-toggle" ng-click="isOpen = !isOpen" accordion-transclude="heading">{{heading}}</a>\n    </h4>\n  </div>\n  <div class="panel-collapse" collapse="!isOpen">\n	  <div class="panel-body" ng-transclude></div>\n  </div>\n</div>')}]),angular.module("template/accordion/accordion.html",[]).run(["$templateCache",function(a){a.put("template/accordion/accordion.html",'<div class="panel-group" ng-transclude></div>')}]),angular.module("template/alert/alert.html",[]).run(["$templateCache",function(a){a.put("template/alert/alert.html","<div class='alert' ng-class='\"alert-\" + (type || \"warning\")'>\n    <button ng-show='closeable' type='button' class='close' ng-click='close()'>&times;</button>\n    <div ng-transclude></div>\n</div>\n")}]),angular.module("template/carousel/carousel.html",[]).run(["$templateCache",function(a){a.put("template/carousel/carousel.html",'<div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel">\n    <ol class="carousel-indicators" ng-show="slides().length > 1">\n        <li ng-repeat="slide in slides()" ng-class="{active: isActive(slide)}" ng-click="select(slide)"></li>\n    </ol>\n    <div class="carousel-inner" ng-transclude></div>\n    <a class="left carousel-control" ng-click="prev()" ng-show="slides().length > 1"><span class="icon-prev"></span></a>\n    <a class="right carousel-control" ng-click="next()" ng-show="slides().length > 1"><span class="icon-next"></span></a>\n</div>\n')}]),angular.module("template/carousel/slide.html",[]).run(["$templateCache",function(a){a.put("template/carousel/slide.html","<div ng-class=\"{\n    'active': leaving || (active && !entering),\n    'prev': (next || active) && direction=='prev',\n    'next': (next || active) && direction=='next',\n    'right': direction=='prev',\n    'left': direction=='next'\n  }\" class=\"item text-center\" ng-transclude></div>\n")}]),angular.module("template/datepicker/datepicker.html",[]).run(["$templateCache",function(a){a.put("template/datepicker/datepicker.html",'<table>\n  <thead>\n    <tr>\n      <th><button type="button" class="btn btn-default btn-sm pull-left" ng-click="move(-1)"><i class="glyphicon glyphicon-chevron-left"></i></button></th>\n      <th colspan="{{rows[0].length - 2 + showWeekNumbers}}"><button type="button" class="btn btn-default btn-sm btn-block" ng-click="toggleMode()"><strong>{{title}}</strong></button></th>\n      <th><button type="button" class="btn btn-default btn-sm pull-right" ng-click="move(1)"><i class="glyphicon glyphicon-chevron-right"></i></button></th>\n    </tr>\n    <tr ng-show="labels.length > 0" class="h6">\n      <th ng-show="showWeekNumbers" class="text-center">#</th>\n      <th ng-repeat="label in labels" class="text-center">{{label}}</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr ng-repeat="row in rows">\n      <td ng-show="showWeekNumbers" class="text-center"><em>{{ getWeekNumber(row) }}</em></td>\n      <td ng-repeat="dt in row" class="text-center">\n        <button type="button" style="width:100%;" class="btn btn-default btn-sm" ng-class="{\'btn-info\': dt.selected}" ng-click="select(dt.date)" ng-disabled="dt.disabled"><span ng-class="{\'text-muted\': dt.secondary}">{{dt.label}}</span></button>\n      </td>\n    </tr>\n  </tbody>\n</table>\n')}]),angular.module("template/datepicker/popup.html",[]).run(["$templateCache",function(a){a.put("template/datepicker/popup.html","<ul class=\"dropdown-menu\" ng-style=\"{display: (isOpen && 'block') || 'none', top: position.top+'px', left: position.left+'px'}\">\n	<li ng-transclude></li>\n"+'	<li ng-show="showButtonBar" style="padding:10px 9px 2px">\n		<span class="btn-group">\n			<button type="button" class="btn btn-sm btn-info" ng-click="today()">{{currentText}}</button>\n			<button type="button" class="btn btn-sm btn-default" ng-click="showWeeks = ! showWeeks" ng-class="{active: showWeeks}">{{toggleWeeksText}}</button>\n			<button type="button" class="btn btn-sm btn-danger" ng-click="clear()">{{clearText}}</button>\n		</span>\n		<button type="button" class="btn btn-sm btn-success pull-right" ng-click="isOpen = false">{{closeText}}</button>\n	</li>\n</ul>\n')}]),angular.module("template/modal/backdrop.html",[]).run(["$templateCache",function(a){a.put("template/modal/backdrop.html",'<div class="modal-backdrop fade" ng-class="{in: animate}" ng-style="{\'z-index\': 1040 + index*10}"></div>')}]),angular.module("template/modal/window.html",[]).run(["$templateCache",function(a){a.put("template/modal/window.html",'<div tabindex="-1" class="modal fade {{ windowClass }}" ng-class="{in: animate}" ng-style="{\'z-index\': 1050 + index*10, display: \'block\'}" ng-click="close($event)">\n    <div class="modal-dialog"><div class="modal-content" ng-transclude></div></div>\n</div>')}]),angular.module("template/pagination/pager.html",[]).run(["$templateCache",function(a){a.put("template/pagination/pager.html",'<ul class="pager">\n  <li ng-repeat="page in pages" ng-class="{disabled: page.disabled, previous: page.previous, next: page.next}"><a ng-click="selectPage(page.number)">{{page.text}}</a></li>\n</ul>')}]),angular.module("template/pagination/pagination.html",[]).run(["$templateCache",function(a){a.put("template/pagination/pagination.html",'<ul class="pagination">\n  <li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}"><a ng-click="selectPage(page.number)">{{page.text}}</a></li>\n</ul>')}]),angular.module("template/tooltip/tooltip-html-unsafe-popup.html",[]).run(["$templateCache",function(a){a.put("template/tooltip/tooltip-html-unsafe-popup.html",'<div class="tooltip {{placement}}" ng-class="{ in: isOpen(), fade: animation() }">\n  <div class="tooltip-arrow"></div>\n  <div class="tooltip-inner" bind-html-unsafe="content"></div>\n</div>\n')}]),angular.module("template/tooltip/tooltip-popup.html",[]).run(["$templateCache",function(a){a.put("template/tooltip/tooltip-popup.html",'<div class="tooltip {{placement}}" ng-class="{ in: isOpen(), fade: animation() }">\n  <div class="tooltip-arrow"></div>\n  <div class="tooltip-inner" ng-bind="content"></div>\n</div>\n')}]),angular.module("template/popover/popover.html",[]).run(["$templateCache",function(a){a.put("template/popover/popover.html",'<div class="popover {{placement}}" ng-class="{ in: isOpen(), fade: animation() }">\n  <div class="arrow"></div>\n\n  <div class="popover-inner">\n      <h3 class="popover-title" ng-bind="title" ng-show="title"></h3>\n      <div class="popover-content" ng-bind="content"></div>\n  </div>\n</div>\n')}]),angular.module("template/progressbar/bar.html",[]).run(["$templateCache",function(a){a.put("template/progressbar/bar.html",'<div class="progress-bar" ng-class="type && \'progress-bar-\' + type" ng-transclude></div>')}]),angular.module("template/progressbar/progress.html",[]).run(["$templateCache",function(a){a.put("template/progressbar/progress.html",'<div class="progress" ng-transclude></div>')}]),angular.module("template/progressbar/progressbar.html",[]).run(["$templateCache",function(a){a.put("template/progressbar/progressbar.html",'<div class="progress"><div class="progress-bar" ng-class="type && \'progress-bar-\' + type" ng-transclude></div></div>')}]),angular.module("template/rating/rating.html",[]).run(["$templateCache",function(a){a.put("template/rating/rating.html",'<span ng-mouseleave="reset()">\n    <i ng-repeat="r in range" ng-mouseenter="enter($index + 1)" ng-click="rate($index + 1)" class="glyphicon" ng-class="$index < val && (r.stateOn || \'glyphicon-star\') || (r.stateOff || \'glyphicon-star-empty\')"></i>\n</span>')}]),angular.module("template/tabs/tab.html",[]).run(["$templateCache",function(a){a.put("template/tabs/tab.html",'<li ng-class="{active: active, disabled: disabled}">\n  <a ng-click="select()" tab-heading-transclude>{{heading}}</a>\n</li>\n')}]),angular.module("template/tabs/tabset-titles.html",[]).run(["$templateCache",function(a){a.put("template/tabs/tabset-titles.html","<ul class=\"nav {{type && 'nav-' + type}}\" ng-class=\"{'nav-stacked': vertical}\">\n</ul>\n")}]),angular.module("template/tabs/tabset.html",[]).run(["$templateCache",function(a){a.put("template/tabs/tabset.html",'\n<div class="tabbable">\n  <ul class="nav {{type && \'nav-\' + type}}" ng-class="{\'nav-stacked\': vertical, \'nav-justified\': justified}" ng-transclude></ul>\n  <div class="tab-content">\n    <div class="tab-pane" \n         ng-repeat="tab in tabs" \n         ng-class="{active: tab.active}"\n         tab-content-transclude="tab">\n    </div>\n  </div>\n</div>\n')}]),angular.module("template/timepicker/timepicker.html",[]).run(["$templateCache",function(a){a.put("template/timepicker/timepicker.html",'<table>\n	<tbody>\n		<tr class="text-center">\n			<td><a ng-click="incrementHours()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-up"></span></a></td>\n			<td>&nbsp;</td>\n			<td><a ng-click="incrementMinutes()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-up"></span></a></td>\n			<td ng-show="showMeridian"></td>\n		</tr>\n		<tr>\n			<td style="width:50px;" class="form-group" ng-class="{\'has-error\': invalidHours}">\n				<input type="text" ng-model="hours" ng-change="updateHours()" class="form-control text-center" ng-mousewheel="incrementHours()" ng-readonly="readonlyInput" maxlength="2">\n			</td>\n			<td>:</td>\n			<td style="width:50px;" class="form-group" ng-class="{\'has-error\': invalidMinutes}">\n				<input type="text" ng-model="minutes" ng-change="updateMinutes()" class="form-control text-center" ng-readonly="readonlyInput" maxlength="2">\n			</td>\n			<td ng-show="showMeridian"><button type="button" class="btn btn-default text-center" ng-click="toggleMeridian()">{{meridian}}</button></td>\n		</tr>\n		<tr class="text-center">\n			<td><a ng-click="decrementHours()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-down"></span></a></td>\n			<td>&nbsp;</td>\n			<td><a ng-click="decrementMinutes()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-down"></span></a></td>\n			<td ng-show="showMeridian"></td>\n		</tr>\n	</tbody>\n</table>\n')}]),angular.module("template/typeahead/typeahead-match.html",[]).run(["$templateCache",function(a){a.put("template/typeahead/typeahead-match.html",'<a tabindex="-1" bind-html-unsafe="match.label | typeaheadHighlight:query"></a>')}]),angular.module("template/typeahead/typeahead-popup.html",[]).run(["$templateCache",function(a){a.put("template/typeahead/typeahead-popup.html","<ul class=\"dropdown-menu\" ng-style=\"{display: isOpen()&&'block' || 'none', top: position.top+'px', left: position.left+'px'}\">\n"+'    <li ng-repeat="match in matches" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)">\n        <div typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>\n    </li>\n</ul>')}]);;Reed.controller('Add', function ($scope, Api, State) {
 
 	$scope.state = State.status;
+	$scope.form = {};
+
+	$scope.submit = function(isValid) {
+
+		if (isValid) {
+			Api.UserFeeds.post({}, $scope.form);
+		}
+
+	};
 
 });
 ;Reed.controller('Discovery', function ($scope, Api, State) {
@@ -133,14 +342,7 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 	}
 
 });
-;Reed.controller('Login', [
-		'$scope',
-		'$resource',
-		'$location',
-		'$cookieStore',
-		'ezfb',
-		'AuthService',
-		function ($scope, $resource, $location, $cookieStore, ezfb, AuthService) {
+;Reed.controller('Login', function ($scope, $resource, $location, $cookieStore, ezfb, md5, AuthService) {
 
 			$scope.login = function () {
 
@@ -194,7 +396,7 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 
 		}
 
-	]);
+);
 ;Reed.controller('Menu', function ($scope, $cookieStore, Api, State) {
 
 	$scope.State = State;
@@ -220,18 +422,16 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 		$cookieStore.put('reed_menustatus', $scope.isCollapsed);
 	}
 
-	$scope.articles = Api.discoveryArticles.get(function(res) {
+	$scope.articles = Api.discoveryArticles.get();
+	$scope.feeds = Api.discoveryFeeds.get();
 
-		State.status = {
-			unread: {
-				articles: res.length
-			}
-		};
 
-		$scope.state = State.status;
+	// $scope.articles = Api.discoveryArticles.get(function(res) {
 
-	});
+	// 	State.status.unread.articles = res.length
+	// 	$scope.state = State.status;
 
+	// });
 
 });
 ;Reed.directive('backToList', function() {
@@ -251,30 +451,9 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 	};
 
 });
-;Reed.factory('Api', function ($http, $resource) {
+;Reed.factory('Api', function ($http, $cookieStore, $resource, md5) {
 
 		return {
-
-			// getDiscoveryFeeds: function() {
-			// 	var promise = $http({
-			// 		method: 'GET',
-			// 		url: 'api/discovery/feeds',
-			// 	}).success(function(data, status, headers, config) {
-			// 		return data;
-			// 	});
-			// 	return promise;
-			// },
-
-			// getDiscoveryArticles: function() {
-			// 	var promise = $http({
-			// 		method: 'GET',
-			// 		url: 'api/discovery/articles',
-			// 	}).success(function(data, status, headers, config) {
-			// 		return data;
-			// 	});
-			// 	return promise;
-			// },
-			//
 
 			discoveryFeeds: $resource('api/discovery/feeds', {}, {
 				get: {
@@ -290,18 +469,21 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 				}
 			}),
 
-			Article: $resource('api/articles/:id', { id: '@id' }, {
+			User: $resource('api/users/:id', { id: '@id' }, {
 				get: {
 					method: 'GET',
 					isArray: false
 				}
 			}),
 
-			User: $resource('api/users/:id', { id: '@id' }, {
+			UserFeeds: $resource('api/users/:id/feeds', { id: $cookieStore.get('reed_userid') }, {
 				get: {
 					method: 'GET',
 					isArray: false
-				}
+				},
+				post: {
+					method: 'Post',
+				},
 			}),
 
 		};
@@ -312,10 +494,8 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 	this.getUserAuthenticated = function() {
 
 		var token = $cookieStore.get('reed_authtoken');
-
-		if(token === 'undefined') $cookieStore.remove('token');
-
 		return ($cookieStore.get('reed_authtoken')) ? true : false;
+
 	};
 
 	return this;
@@ -346,7 +526,9 @@ angular.module("ui.bootstrap",["ui.bootstrap.tpls","ui.bootstrap.transition","ui
 }]);
 ;Reed.factory('State', function () {
 
-	var status = {};
+	var status = {
+		unread: {}
+	};
 
     return {
 		status: status

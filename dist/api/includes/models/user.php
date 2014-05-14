@@ -22,7 +22,7 @@ class User extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'id';
+	protected $columns = 'id, fbId';
 
 	/**
 	 * Facebook API
@@ -42,7 +42,7 @@ class User extends Model
 	}
 
 	/**
-	 * Get user pprofile
+	 * Get user profile
 	 * @return Array
 	 */
 	public function getFacebookProfile()

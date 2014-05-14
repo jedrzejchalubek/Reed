@@ -1,27 +1,6 @@
-Reed.factory('Api', function ($http, $resource) {
+Reed.factory('Api', function ($http, $cookieStore, $resource, md5) {
 
 		return {
-
-			// getDiscoveryFeeds: function() {
-			// 	var promise = $http({
-			// 		method: 'GET',
-			// 		url: 'api/discovery/feeds',
-			// 	}).success(function(data, status, headers, config) {
-			// 		return data;
-			// 	});
-			// 	return promise;
-			// },
-
-			// getDiscoveryArticles: function() {
-			// 	var promise = $http({
-			// 		method: 'GET',
-			// 		url: 'api/discovery/articles',
-			// 	}).success(function(data, status, headers, config) {
-			// 		return data;
-			// 	});
-			// 	return promise;
-			// },
-			//
 
 			discoveryFeeds: $resource('api/discovery/feeds', {}, {
 				get: {
@@ -37,18 +16,21 @@ Reed.factory('Api', function ($http, $resource) {
 				}
 			}),
 
-			Article: $resource('api/articles/:id', { id: '@id' }, {
+			User: $resource('api/users/:id', { id: '@id' }, {
 				get: {
 					method: 'GET',
 					isArray: false
 				}
 			}),
 
-			User: $resource('api/users/:id', { id: '@id' }, {
+			UserFeeds: $resource('api/users/:id/feeds', { id: $cookieStore.get('reed_userid') }, {
 				get: {
 					method: 'GET',
 					isArray: false
-				}
+				},
+				post: {
+					method: 'Post',
+				},
 			}),
 
 		};

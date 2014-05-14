@@ -72,12 +72,26 @@ class Router
 					// Add user object to route models
 					$Models['user'] = $this->user;
 
-					/**
-					 * While method is string, call controller
-					 * Otherwise call passed to route anonymous function
-					 */
-					if (is_string($Method)) new $Method($Models);
-					else call_user_func($Method);
+
+					try {
+
+						$this->database->beginTransaction();
+						/**
+						 * While method is string, call controller
+						 * Otherwise call passed to route anonymous function
+						 */
+						if (is_string($Method)) new $Method($Models);
+						else call_user_func($Method);
+
+						$this->database->commitTransaction();
+
+					} catch (Exception $e) {
+
+					    // An exception has been thrown
+					    // We must rollback the transaction
+					    $this->database->rollbackTransaction();
+
+					}
 
 				}
 
@@ -87,10 +101,11 @@ class Router
 
 	}
 
-	public function __construct($user, $token)
+	public function __construct($user, $token, $database)
 	{
 		$this->user = $user;
 		$this->token = $token;
+		$this->database = $database;
 	}
 
 }

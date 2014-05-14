@@ -14,11 +14,11 @@ use PDO;
 class Database
 {
 
-	private $host;
-	private $name;
-	private $user;
-	private $pass;
-	private $conn;
+	public $host;
+	public $name;
+	public $user;
+	public $pass;
+	public $conn;
 
 	/**
 	 * Get specifed row by id
@@ -104,6 +104,21 @@ class Database
 		$stack = $this->conn ->prepare($query);
 		$stack->execute($bindings);
 		return $stack;
+	}
+
+	public function beginTransaction()
+	{
+		return $this->conn->beginTransaction();
+	}
+
+	public function commitTransaction()
+	{
+		return $this->conn->commit();
+	}
+
+	public function rollbackTransaction()
+	{
+		return $this->conn->rollback();
 	}
 
 	/**

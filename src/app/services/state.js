@@ -1,6 +1,8 @@
 Reed.factory('State', function () {
 
-	var status = {};
+	var status = {
+		unread: {}
+	};
 
     return {
 		status: status

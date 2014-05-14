@@ -191,7 +191,11 @@ $router->map('/users/:id', 'User', array(
  | ?limit={int}
  | ?offset={int}
 */
-$router->map('/users/:id/feeds', function(){});
+$router->map('/users/:id/feeds', 'UserFeeds', array(
+	'user' => $user,
+	'feed' => $feed,
+	'userFeed' => $userFeed
+));
 
 
 

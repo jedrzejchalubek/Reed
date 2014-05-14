@@ -29,21 +29,22 @@ class AuthService extends Controller
 			// Generate unique token
 			$authtoken = $this->token->generate();
 
-			// Store user
-			$this->user->add(array(
-				'id' => $profile->id
-			));
-
 			// Store user tokens
 			$this->token->add(array(
-				'id' => $profile->id,
+				'id' => hash('md5', $profile->id),
 				'authtoken' => $authtoken,
 				'fbtoken' => $fbtoken
 			));
 
+			// Store user
+			$this->user->add(array(
+				'id' => hash('md5', $profile->id),
+				'fbId' => $profile->id
+			));
+
 			// Response to client with user id and authorize token
 			Response::json(array(
-				'userid' => $profile->id,
+				'userid' => hash('md5', $profile->id),
 				'authtoken' => $authtoken
 			));
 

@@ -23,4 +23,10 @@ class Request
 	    return rtrim($out, 1);
 	}
 
+	public static function getData()
+	{
+		return json_decode(file_get_contents('php://input'));
+	}
+
+
 }

@@ -6,7 +6,7 @@
  | ------------------------------------------
 */
 
-class User extends Controller
+class UserFeeds extends Controller
 {
 
 	/**
@@ -14,7 +14,27 @@ class User extends Controller
 	 */
 	public function get($id, $query)
 	{
-		Response::json( $this->user->get($id[0]) );
+		Response::json( $id[0] );
+	}
+
+
+	/**
+	 * Post
+	 */
+	public function post($id, $query)
+	{
+
+		$data = Request::getData();
+
+		$this->userFeed->add(array(
+			'userId' => $id[0],
+			'feedId' => String::normalizeUrl($data->rssUrl)
+		));
+
+		Response::json(array(
+			'status' => 'ok'
+		));
+
 	}
 
 	/**
