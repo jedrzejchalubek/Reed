@@ -30,23 +30,24 @@ class AuthService extends Controller
 			$authtoken = $this->token->generate();
 
 			// Store user tokens
-			$this->token->add(array(
-				'id' => hash('md5', $profile->id),
+			$this->token->addOverwrite(array(
+				'id' => String::md5($profile->id),
 				'authtoken' => $authtoken,
 				'fbtoken' => $fbtoken
 			));
 
 			// Store user
-			$this->user->add(array(
-				'id' => hash('md5', $profile->id),
+			$this->user->addOverwrite(array(
+				'id' => String::md5($profile->id),
 				'fbId' => $profile->id
 			));
 
 			// Response to client with user id and authorize token
 			Response::json(array(
-				'userid' => hash('md5', $profile->id),
+				'userid' => String::md5($profile->id),
 				'authtoken' => $authtoken
 			));
+
 
 		} else {
 

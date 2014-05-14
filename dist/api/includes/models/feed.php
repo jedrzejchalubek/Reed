@@ -22,17 +22,22 @@ class Feed extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'created, modified, url, title, description, img, subscribers, status';
+	protected $columns = 'id, created, modifed, url, title, description, image, subscribers, status';
 
 	/**
-	 * Get popularity rank
+	 * Get feeds ordered by popularity rank
+	 * Cut off the feeds that the user is already subscribed
 	 * Hacker News popularity ranking algorithm (p - 1) / (t + 2) ^ g,
 	 * where p = points(number of subscribers), t = time, g = gravity
 	 * @return Array Feeds ordered by rank
 	 */
-	public function getPopular()
+	public function getPopular($userId)
 	{
-		return $this->request("SELECT *, (({$this->table}.subscribers - 1) / power((unix_timestamp(NOW()) - unix_timestamp({$this->table}.created) + 2), 0.25)) AS rank FROM {$this->table} ORDER BY rank DESC");
+
+		$id = \String::removeQuotes($userId);
+
+		return $this->request("SELECT {$this->columns}, ((A.subscribers - 1) / power((unix_timestamp(NOW()) - unix_timestamp(A.created) + 2), 0.25)) AS rank FROM {$this->table} A LEFT JOIN userFeed B ON (A.id = B.feedId AND B.userId = '{$id}') WHERE B.userId IS NULL");
+
 	}
 
 	/**

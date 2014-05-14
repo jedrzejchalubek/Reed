@@ -20,7 +20,7 @@ class Route
 	 * Action
 	 * @var Mixed
 	 */
-	private $method;
+	private $controller;
 
 	/**
 	 * Route models
@@ -29,7 +29,7 @@ class Route
 	private $model;
 
 	/**
-	 * Get route method
+	 * Get route model
 	 * @return Mixed Contoller or anonymous function
 	 */
 	public function getModel()
@@ -38,12 +38,12 @@ class Route
 	}
 
 	/**
-	 * Get route method
+	 * Get route controller
 	 * @return Mixed Contoller or anonymous function
 	 */
-	public function getMethod()
+	public function getController()
 	{
-		return $this->method;
+		return $this->controller;
 	}
 
 	/**
@@ -65,13 +65,13 @@ class Route
 	/**
 	 * Route constructor
 	 * @param String $route  Route uri pattern
-	 * @param Mixed  $method Controller or method used by route
+	 * @param Mixed  $controller Controller or controller used by route
 	 * @param Array  $model  Models used by route
 	 */
-	function __construct($route, $method, $model)
+	function __construct($route, $controller, $model)
 	{
 		$this->route = $route;
-		$this->method = $method;
+		$this->controller = $controller;
 		$this->model = $model;
 	}
 }

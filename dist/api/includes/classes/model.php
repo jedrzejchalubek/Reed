@@ -67,6 +67,21 @@ abstract class Model extends Database
 			$this->table,
 			$this->columns,
 			$this->valuesToAdd(),
+			$data
+		);
+	}
+
+	/**
+	 * Insert row to database
+	 * on duplicate key overwrite
+	 * @param Array $data
+	 */
+	public function addOverwrite($data)
+	{
+		$this->db->addOverwrite(
+			$this->table,
+			$this->columns,
+			$this->valuesToAdd(),
 			$this->valuesToUpdate(),
 			$data
 		);

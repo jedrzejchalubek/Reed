@@ -41,7 +41,8 @@ $router->map('/auth', 'AuthService', array(
  | ?offset={int}
 */
 $router->map('/discovery/feeds', 'FeedsDiscovery', array(
-	'feed' => $feed
+	'feed' => $feed,
+	'user' => $user
 ));
 
 

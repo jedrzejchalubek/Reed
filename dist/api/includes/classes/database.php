@@ -54,7 +54,20 @@ class Database
 	 * @param String $values
 	 * @param Array $data
 	 */
-	public function add($table, $columns, $values, $update, $data)
+	public function add($table, $columns, $values, $data)
+	{
+		$this->query("INSERT INTO {$table}({$columns}) VALUES({$values})", $data);
+	}
+
+	/**
+	 * Insert row to database
+	 * on duplicate key overwrite
+	 * @param String $table
+	 * @param String $columns
+	 * @param String $values
+	 * @param Array $data
+	 */
+	public function addOverwrite($table, $columns, $values, $update, $data)
 	{
 		$this->query("INSERT INTO {$table}({$columns}) VALUES({$values}) ON DUPLICATE KEY UPDATE {$update}", $data);
 	}
@@ -106,16 +119,28 @@ class Database
 		return $stack;
 	}
 
+	/**
+	 * Begin database atomic transaction
+	 * @return Bool TRUE on success or FALSE on failure.
+	 */
 	public function beginTransaction()
 	{
 		return $this->conn->beginTransaction();
 	}
 
+	/**
+	 * Commit transaction to database
+	 * @return Bool TRUE on success or FALSE on failure.
+	 */
 	public function commitTransaction()
 	{
 		return $this->conn->commit();
 	}
 
+	/**
+	 * Rollback transaction from database
+	 * @return Bool TRUE on success or FALSE on failure.
+	 */
 	public function rollbackTransaction()
 	{
 		return $this->conn->rollback();

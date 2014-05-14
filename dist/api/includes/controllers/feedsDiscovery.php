@@ -14,7 +14,7 @@ class FeedsDiscovery extends Controller
 	 */
 	public function get($id, $query)
 	{
-		Response::json( $this->feed->getPopular() );
+		Response::json( $this->feed->getPopular($this->user->getId()) );
 	}
 
 	/**

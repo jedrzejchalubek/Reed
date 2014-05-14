@@ -6,8 +6,8 @@
       <div ng-include="'app/template/discovery-activity.html'" class="fill"></div>
     </div>
     <div id="content" ng-class="{'col-xs-12 isWide': isCollapsed, 'col-sm-8 col-lg-9 isntWide': !isCollapsed}" class="content fill">
-      <div class="add__wrapper">
-        <section class="add text-center">
+      <div class="add fill">
+        <section class="add__wrapper text-center">
           <h1>Subskrybuj jeszcze więcej.</h1>
           <p class="lead">Podaj tylko adres RSS strony, którą chcesz śledzić.<br/>My zajmiemy się resztą.</p>
           <form role="form" name="addForm" ng-submit="submit(addForm.$valid)" novalidate="novalidate">
@@ -23,23 +23,27 @@
             </div>
           </form>
         </section>
-        <section class="feeds__wrapper">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <ul class="feeds list-group">
-                <li ng-repeat="feed in feeds | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
-                  <div class="row">
-                    <div class="col-xs-10"><img ng-src="{{feed.image}}" class="feeds__image"/>
-                      <div class="feeds__title lead">{{feed.title}}</div>
-                      <p class="feeds__desc"><span class="glyphicon glyphicon-user"></span> {{feed.subscribers}}</p>
+        <div class="feeds">
+          <section class="feeds__wrapper">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <ul class="feeds list-group">
+                  <li ng-repeat="feed in feeds | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
+                    <div class="row">
+                      <div class="col-xs-10"><img ng-src="{{feed.image}}" class="feeds__image"/>
+                        <div class="feeds__desc">
+                          <div class="feeds__title lead">{{feed.title}}</div>
+                          <div class="hidden-xs"><span class="glyphicon glyphicon-user"></span> {{feed.subscribers}}</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-1 col-xs-offset-1"><a ng-click="add(feed, feeds, $index)" class="feeds__button btn-lg"><span ng-show="!feed.proccessing" class="glyphicon glyphicon-plus-sign"></span><span ng-show="feed.proccessing.under" class="fa fa-spinner fa-spin"></span><span ng-show="feed.proccessing.done" class="glyphicon glyphicon-ok"></span></a></div>
                     </div>
-                    <div class="col-xs-1 col-xs-offset-1"><a href="#" class="feeds__button btn-lg"><span class="glyphicon glyphicon-plus-sign"></span></a></div>
-                  </div>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </div>
   </div>

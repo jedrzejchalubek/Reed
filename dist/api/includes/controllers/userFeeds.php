@@ -26,14 +26,12 @@ class UserFeeds extends Controller
 
 		$data = Request::getData();
 
-		$this->userFeed->add(array(
-			'userId' => $id[0],
-			'feedId' => String::normalizeUrl($data->rssUrl)
+		$this->userFeed->addOverwrite(array(
+			'feedId' => String::md5(String::normalizeUrl($data->rssUrl)),
+			'userId' => $id[0]
 		));
 
-		Response::json(array(
-			'status' => 'ok'
-		));
+		Response::added();
 
 	}
 

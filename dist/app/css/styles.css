@@ -6054,7 +6054,7 @@ button.close {
     display: none !important;
   }
 }
-/*!
+/*
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
@@ -7872,8 +7872,11 @@ body a {
 .articles__thumb-desc {
   color: #484d4f;
 }
+.add {
+  overflow-y: scroll;
+}
 @media (min-width: 992px) {
-  .add {
+  .add__wrapper {
     margin-top: 72px;
     margin-bottom: 54px;
   }
@@ -7902,32 +7905,44 @@ body a {
   overflow: hidden;
   position: relative;
   padding: 9px;
+  min-height: 77px;
 }
 .feeds__image {
-  float: left;
-  clear: none;
-  margin-right: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .feeds__title {
+  color: #272b2e;
   margin-top: 4px;
   margin-bottom: 0;
 }
 .feeds__desc {
   color: #999999;
   margin: 0;
+  padding-left: 70px;
 }
 .feeds__button {
   position: absolute;
-  top: 3px;
-  right: 0;
+  top: 9px;
+  right: 9px;
+  padding: 5px 9px 0 9px;
   color: #5cb85c;
-  font-size: 24px;
+  font-size: 22px;
   text-align: right;
 }
 .feeds__button:hover {
-  color: #449d44;
-  width: 100px;
-  background: #000;
+  width: 86px;
+  height: 38px;
+  color: #ffffff;
+  background: #5cb85c;
+}
+.feeds__button:hover:before {
+  content: "Dodaj";
+  font-size: 14px;
+  position: absolute;
+  top: 9px;
+  right: 36px;
 }
 .bg-animation {
   background: #272b2e;

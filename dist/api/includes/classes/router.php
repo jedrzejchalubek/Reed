@@ -66,7 +66,7 @@ class Router
 				if ($route->match( trim($preparedUri,'/') )) {
 
 					// On match get route method and models
-					$Method = $route->getMethod();
+					$Controller = $route->getController();
 					$Models = $route->getModel();
 
 					// Add user object to route models
@@ -80,8 +80,8 @@ class Router
 						 * While method is string, call controller
 						 * Otherwise call passed to route anonymous function
 						 */
-						if (is_string($Method)) new $Method($Models);
-						else call_user_func($Method);
+						if (is_string($Controller)) new $Controller($Models);
+						else call_user_func($Controller);
 
 						$this->database->commitTransaction();
 
@@ -90,6 +90,10 @@ class Router
 					    // An exception has been thrown
 					    // We must rollback the transaction
 					    $this->database->rollbackTransaction();
+
+					    Response::failed(array(
+					    	'message' => $e
+					    ));
 
 					}
 

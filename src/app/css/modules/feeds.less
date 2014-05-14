@@ -6,15 +6,16 @@
 		overflow: hidden;
 		position: relative;
 		padding: 9px;
+		min-height: 77px;
 	}
 
 	&__image {
-		float: left;
-		clear: none;
-		margin-right: 14px;
+		position: absolute;
+		top: 0; left: 0;
 	}
 
 	&__title {
+		color: @gray-darker;
 		margin-top: 4px;
 		margin-bottom: 0;
 	}
@@ -22,19 +23,30 @@
 	&__desc {
 		color: @gray-light;
 		margin: 0;
+		padding-left: 70px;
 	}
 
 	&__button {
 		position: absolute;
-		top: 3px; right: 0;
+		top: 9px; right: 9px;
+		padding: 5px 9px 0 9px;
 		color: @brand-success;
-		font-size: 24px;
+		font-size: 22px;
 		text-align: right;
 
 		&:hover {
-			color: darken(@brand-success, 10%);
-			width: 100px;
-			background: #000;
+			width: 86px;
+			height: 38px;
+			color: @white;
+			background: @brand-success;
+
+			&:before {
+				content: "Dodaj";
+				font-size: 14px;
+				position: absolute;
+				top: 9px; right: 36px;
+			}
+
 		}
 	}
 

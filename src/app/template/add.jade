@@ -8,8 +8,8 @@ include mixins/mixins
 		div.fill(ng-include="'app/template/discovery-activity.html'")
 
 	+content
-		div.add__wrapper
-			section.add.text-center
+		div.add.fill
+			section.add__wrapper.text-center
 				h1 Subskrybuj jeszcze więcej.
 				p.lead
 					| Podaj tylko adres RSS strony, którą chcesz śledzić.
@@ -24,20 +24,22 @@ include mixins/mixins
 								button.btn.btn-lg.btn-block.btn-info(type="submit")
 									span.glyphicon.glyphicon-plus
 									|  Subskrybuj
-
-			section.feeds__wrapper
-				.row
-					.col-md-8.col-md-offset-2
-						ul.feeds.list-group
-							li.feeds__thumb.list-group-item.feed-animation(ng-repeat="feed in feeds | filter: form.rssUrl")
-								.row
-									.col-xs-10
-										img.feeds__image(ng-src="{{feed.image}}")
-										.feeds__title.lead {{feed.title}}
-										p.feeds__desc
-											span.glyphicon.glyphicon-user
-											|  {{feed.subscribers}}
-									.col-xs-1.col-xs-offset-1
-										a.feeds__button.btn-lg(href="#")
-											span.glyphicon.glyphicon-plus-sign
-
+			div.feeds
+				section.feeds__wrapper
+					.row
+						.col-md-10.col-md-offset-1
+							ul.feeds.list-group
+								li.feeds__thumb.list-group-item.feed-animation(ng-repeat="feed in feeds | filter: form.rssUrl")
+									.row
+										.col-xs-10
+											img.feeds__image(ng-src="{{feed.image}}")
+											div.feeds__desc
+												.feeds__title.lead {{feed.title}}
+												.hidden-xs
+													span.glyphicon.glyphicon-user
+													|  {{feed.subscribers}}
+										.col-xs-1.col-xs-offset-1
+											a.feeds__button.btn-lg(ng-click="add(feed, feeds, $index)")
+												span.glyphicon.glyphicon-plus-sign(ng-show="!feed.proccessing")
+												span.fa.fa-spinner.fa-spin(ng-show="feed.proccessing.under")
+												span.glyphicon.glyphicon-ok(ng-show="feed.proccessing.done")

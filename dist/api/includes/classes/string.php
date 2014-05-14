@@ -11,7 +11,7 @@ class String
 		return str_replace('"', '', $string);
 	}
 
-	public function normalizeUrl($url) {
+	public static function normalizeUrl($url) {
 
 		if (!preg_match("~^(?:f|ht)tps?://~i", $url)) $url = "http://" . $url;
 
@@ -19,6 +19,11 @@ class String
 
 		return $url;
 
+	}
+
+	public static function md5($string)
+	{
+		return hash('md5', $string);
 	}
 
 }
