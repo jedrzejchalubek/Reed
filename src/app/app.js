@@ -29,11 +29,6 @@ var Reed = angular.module('Reed', [
 				controller: 'Login',
 				requireLogin: false
 			})
-			.when('/add', {
-				templateUrl: 'app/template/add.html',
-				controller: 'Add',
-				requireLogin: false
-			})
 			.when('/discovery', {
 				templateUrl: 'app/template/discovery.html',
 				controller: 'Discovery',
@@ -43,6 +38,16 @@ var Reed = angular.module('Reed', [
 				templateUrl: 'app/template/discovery.html',
 				controller: 'Discovery',
 				requireLogin: true
+			})
+			.when('/articles', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'Articles',
+				requireLogin: true
+			})
+			.when('/add', {
+				templateUrl: 'app/template/add.html',
+				controller: 'Add',
+				requireLogin: false
 			});
 
 		// If the url is unrecognized go to login

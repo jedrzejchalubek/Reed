@@ -1,4 +1,4 @@
-Reed.controller('Login', function ($scope, $resource, $location, $cookieStore, ezfb, md5, AuthService) {
+Reed.controller('Login', function ($scope, $resource, $location, $cookieStore, ezfb, AuthService) {
 
 			$scope.login = function () {
 

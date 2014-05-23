@@ -30,7 +30,7 @@ class Route
 
 	/**
 	 * Get route model
-	 * @return Mixed Contoller or anonymous function
+	 * @return Array Models passed to route
 	 */
 	public function getModel()
 	{
@@ -39,7 +39,7 @@ class Route
 
 	/**
 	 * Get route controller
-	 * @return Mixed Contoller or anonymous function
+	 * @return Mixed Contoller name or anonymous function
 	 */
 	public function getController()
 	{
@@ -65,7 +65,7 @@ class Route
 	/**
 	 * Route constructor
 	 * @param String $route  Route uri pattern
-	 * @param Mixed  $controller Controller or controller used by route
+	 * @param Mixed  $controller Controller used by route
 	 * @param Array  $model  Models used by route
 	 */
 	function __construct($route, $controller, $model)

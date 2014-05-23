@@ -17,6 +17,13 @@ require_once 'bootstrap/config.php';
 */
 require_once 'includes/classes/facebook.php';
 
+/*
+ | ------------------------------------------
+ | Require Facebook SDK
+ | ------------------------------------------
+ | To making Facebook API calls
+*/
+require_once 'includes/classes/autoloader.php';
 
 /*
  | ------------------------------------------
@@ -53,7 +60,6 @@ foreach(glob('includes/models/*.php') as $model){
 }
 
 
-
 /*
  | ------------------------------------------
  | Init
@@ -73,6 +79,7 @@ $token = new Reed\Models\Token($database);
 $feed = new Reed\Models\Feed($database);
 $article = new Reed\Models\Article($database);
 $userFeed = new Reed\Models\UserFeed($database);
+$userArticle = new Reed\Models\UserArticle($database);
 
 $user = new Reed\Models\User($facebook, $token, $database);
 $router = new Router($user, $token, $database);

@@ -1,17 +1,11 @@
-Reed.controller('Ui', function ($scope, $cookieStore, Api, State) {
+Reed.controller('Ui', function ($scope, Api, State) {
 
-	$scope.isCollapsed =
-		($cookieStore.get('reed_menustatus'))
-			? $cookieStore.get('reed_menustatus')
-			: $cookieStore.put('reed_menustatus', false);
+	// $scope.user = Api.User.get();
+	$scope.discoveryArticles = Api.discoveryArticles.get();
+	$scope.discoveryFeeds = Api.discoveryFeeds.get();
 
-	$scope.toggle = function () {
-		$scope.isCollapsed = ($scope.isCollapsed) ? false : true;
-		$cookieStore.put('reed_menustatus', $scope.isCollapsed);
-	}
-
-	$scope.articles = Api.discoveryArticles.get();
-	$scope.feeds = Api.discoveryFeeds.get();
+	$scope.articles = Api.UserArticles.get();
+	// $scope.feeds = Api.UserFeeds.get();
 
 
 	// $scope.articles = Api.discoveryArticles.get(function(res) {

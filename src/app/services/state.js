@@ -1,11 +1,16 @@
-Reed.factory('State', function () {
+Reed.factory('State', function ($cookieStore) {
 
 	var status = {
-		unread: {}
+		unread: {},
 	};
 
-    return {
-		status: status
+	var user = {
+		id: $cookieStore.get('reed_userid'),
+	};
+
+	return {
+		status: status,
+		user: user
 	};
 
 });

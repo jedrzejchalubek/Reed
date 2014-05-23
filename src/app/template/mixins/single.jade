@@ -1,0 +1,49 @@
+mixin single(repeat)
+	section(ng-controller="Navbar")
+		div.article__wrapper.fill(ng-repeat=repeat)
+			article.article.fill.article-animation(ng-show="show.id === article.id")
+				.row
+					.article__nav.clearfix
+						.col-xs-3.text-left
+							.article__nav-left
+								back-to-list
+						.col-xs-9.text-right
+							.article__nav-right
+								a(ng-click="saveForLater(article)")
+									span.iconmonstr.iconmonstr-time
+									|  Save for later
+								a(ng-click="markAsFav(article)")
+									span.iconmonstr.iconmonstr-bookmark
+									|  Add to favourites
+								a.hidden-xs(href="#")
+									span.fa.fa-share
+									|  Share
+
+					.article__header
+						.col-xs-12.col-md-10.col-md-offset-1
+							.article__meta
+								.article__data
+									.row
+										.col-xs-6.text-left {{article.source}}
+										.col-xs-6.text-right
+											span.fa.fa-book
+											|  3 min read
+								h1.article__title(ng-bind-html="article.title")
+								p.article__desc(ng-bind-html="article.description")
+						.article__image.clearfix(style="background-image: url({{article.image}})")
+
+					.article__content.clearfix
+						.col-xs-12.col-md-10.col-md-offset-1
+							.article__text(ng-bind-html="article.content")
+
+							.article__text
+								a.article__button.btn.btn-neutral.btn-block.btn-lg(href="{{article.url}}", target="_blank") Read orginal article
+
+
+				a(ng-click="view(discoveryArticles[$index + 1])", ng-show="discoveryArticles[$index + 1] != undefined").article__next.row
+					.col-xs-12.col-md-10.col-md-offset-1
+						.article__data
+							.row
+								.col-xs-6.text-left Next to read
+						h1.article__title(ng-bind-html="discoveryArticles[$index + 1].title")
+						p(ng-bind-html="discoveryArticles[$index + 1].description")

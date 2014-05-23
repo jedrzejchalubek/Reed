@@ -1,12 +1,22 @@
-Reed.controller('Add', function ($scope, $timeout, Api, State) {
+Reed.controller('Add', function ($scope, $timeout, Api, State, Overlay) {
 
 	$scope.state = State.status;
 	$scope.form = {};
 
 	$scope.submit = function(isValid) {
 
+		var overlay = Overlay.init('Loading');
+
 		if (isValid) {
-			Api.UserFeeds.post({}, $scope.form);
+
+			Api.UserFeeds.post({}, $scope.form, function(data) {
+				Overlay.update(data.status, data.message);
+			}, function(data) {
+				Overlay.update(data.status, 'Bad url');
+			});
+
+		} else {
+			Overlay.update('fail', 'Error');
 		}
 
 	};
@@ -17,7 +27,7 @@ Reed.controller('Add', function ($scope, $timeout, Api, State) {
 			under: true
 		};
 
-		Api.UserFeeds.post({}, {
+		Api.UserFeeds.post({
 			'rssUrl': feed.url
 		}, function() {
 

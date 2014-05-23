@@ -12,17 +12,23 @@
 
 	&__thumb {
 
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 18px;
+		padding-right: 18px;
 		margin-bottom: 36px;
 
 		&-wrapper {
 			color: @gray;
 			display: block;
+			border: 1px solid @gray-lighter;
+			.box-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 
 			&:hover {
 				color: @gray-darker;
 			}
+		}
+
+		&-meta {
+			padding: 9px 22px;
 		}
 
 		&-img {

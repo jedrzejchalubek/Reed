@@ -2,10 +2,10 @@
 <div ng-controller="Ui" class="wrapper container-fluid fill">
   <div class="row fill">
     <div ng-include="'app/template/menu.html'"></div>
-    <div id="side" ng-class="{'isCollapsed': isCollapsed, 'isntCollapsed': !isCollapsed}" class="side col-sm-4 col-lg-3 fill">
-      <div ng-include="'app/template/discovery-activity.html'" class="fill"></div>
+    <div id="side" class="fill side col-sm-3">
+      <div ng-include="'app/template/activity.html'" class="fill"></div>
     </div>
-    <div id="content" ng-class="{'col-xs-12 isWide': isCollapsed, 'col-sm-8 col-lg-9 isntWide': !isCollapsed}" class="content fill">
+    <div id="content" class="content fill col-sm-9">
       <div class="add fill">
         <section class="add__wrapper text-center">
           <h1>Subskrybuj jeszcze więcej.</h1>
@@ -13,10 +13,10 @@
           <form role="form" name="addForm" ng-submit="submit(addForm.$valid)" novalidate="novalidate">
             <div class="row">
               <div class="form-group">
-                <div class="col-md-6 col-md-offset-2">
+                <div class="col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-2">
                   <input id="addFeed" type="text" placeholder="Wpisz adres RSS strony" ng-model="form.rssUrl" required="required" ng-required="true" class="input-lg form-control"/>
                 </div>
-                <div class="add__button col-md-2">
+                <div class="add__button col-md-3 col-lg-2">
                   <button type="submit" class="btn btn-lg btn-block btn-info"><span class="glyphicon glyphicon-plus"></span> Subskrybuj</button>
                 </div>
               </div>
@@ -28,7 +28,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <ul class="feeds list-group">
-                  <li ng-repeat="feed in feeds | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
+                  <li ng-repeat="feed in discoveryFeeds | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
                     <div class="row">
                       <div class="col-xs-10"><img ng-src="{{feed.image}}" class="feeds__image"/>
                         <div class="feeds__desc">
@@ -36,7 +36,7 @@
                           <div class="hidden-xs"><span class="glyphicon glyphicon-user"></span> {{feed.subscribers}}</div>
                         </div>
                       </div>
-                      <div class="col-xs-1 col-xs-offset-1"><a ng-click="add(feed, feeds, $index)" class="feeds__button btn-lg"><span ng-show="!feed.proccessing" class="glyphicon glyphicon-plus-sign"></span><span ng-show="feed.proccessing.under" class="fa fa-spinner fa-spin"></span><span ng-show="feed.proccessing.done" class="glyphicon glyphicon-ok"></span></a></div>
+                      <div class="col-xs-1 col-xs-offset-1"><a ng-click="add(feed, discoveryFeeds, $index)" class="feeds__button btn-lg"><span ng-show="!feed.proccessing" class="glyphicon glyphicon-plus-sign"></span><span ng-show="feed.proccessing.under" class="fa fa-spinner fa-spin"></span><span ng-show="feed.proccessing.done" class="glyphicon glyphicon-ok"></span></a></div>
                     </div>
                   </li>
                 </ul>

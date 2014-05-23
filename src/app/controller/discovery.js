@@ -6,7 +6,7 @@ Reed.controller('Discovery', function ($scope, Api, State) {
 			id: el.id,
 			scrollPosition: $('#articles').scrollTop()
 		};
-	}
+	};
 
 	$scope.tabs = {
 
@@ -42,6 +42,6 @@ Reed.controller('Discovery', function ($scope, Api, State) {
 			}
 		],
 
-	}
+	};
 
 });

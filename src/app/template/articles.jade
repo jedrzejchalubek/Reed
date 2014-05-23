@@ -1,12 +1,17 @@
-section#articles.articles.offset-top.fill
-	.row
-		.articles__wrapper
-			.text-center
-				h1 Discovery, read, grow.
-				p.lead lorem
-			div(ng-repeat="article in articles")
-				article.articles__thumb.col-sm-6.col-lg-4(id="{{article.id}}")
-					a.articles__thumb-wrapper(ng-click="view(article)")
-						img.articles__thumb-img(ng-src="{{article.image}}")
-						h3.articles__thumb-heading {{article.title}}
-						p.articles__thumb-desc {{article.description}}
+include mixins/mixins
+
++wrapper
+
+	div(ng-include="'app/template/menu.html'")
+
+	+side
+		div.fill(ng-include="'app/template/activity.html'")
+
+	+content
+		.bg-animation.fill(ng-switch="show.section")
+			.list-animation.fill(ng-switch-default="list")
+				+list("article in articles")
+					h1 Articles
+					p.lead lorem
+			.single-animation.fill(ng-switch-when="single")
+				+single("article in articles")

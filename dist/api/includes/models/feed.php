@@ -22,7 +22,7 @@ class Feed extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'id, created, modifed, url, title, description, image, subscribers, status';
+	protected $columns = 'id, created, modifed, updated, url, link, title, description, image, subscribers, status';
 
 	/**
 	 * Get feeds ordered by popularity rank
@@ -35,8 +35,13 @@ class Feed extends Model
 	{
 
 		$id = \String::removeQuotes($userId);
+		$columns = str_replace(
+			array('id', 'created'),
+			array('F.id', 'F.created'),
+			$this->columns
+		);
 
-		return $this->request("SELECT {$this->columns}, ((A.subscribers - 1) / power((unix_timestamp(NOW()) - unix_timestamp(A.created) + 2), 0.25)) AS rank FROM {$this->table} A LEFT JOIN userFeed B ON (A.id = B.feedId AND B.userId = '{$id}') WHERE B.userId IS NULL");
+		return $this->request("SELECT {$columns}, ((F.subscribers - 1) / power((unix_timestamp(NOW()) - unix_timestamp(F.created) + 2), 0.25)) AS rank FROM {$this->table} F LEFT JOIN userFeed UF ON (F.id = UF.feedid AND UF.id = '{$id}') WHERE UF.id IS NULL");
 
 	}
 

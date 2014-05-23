@@ -22,7 +22,7 @@ class UserFeed extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'userId, feedId';
+	protected $columns = 'id, feedid';
 
 
 	/**

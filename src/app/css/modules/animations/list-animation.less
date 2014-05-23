@@ -4,13 +4,14 @@
 	&.ng-leave {
 		position: absolute;
 		top: 0; left: 0;
-		.transition(all 300ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
+		width: 100%;
 	}
 
 	&.ng-enter {
 
-		.scale(0.75);
-		.opacity(0.5);
+		.transition(all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
+		.scale(.85);
+		.opacity(.25);
 
 		&.ng-enter-active {
 			.scale(1);
@@ -21,12 +22,13 @@
 
 	&.ng-leave {
 
+		.transition(all 300ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
 		.scale(1);
 		.opacity(1);
 
 		&.ng-leave-active {
-			.scale(0.75);
-			.opacity(0.5);
+			.scale(.85);
+			.opacity(.25);
 		}
 
 	}

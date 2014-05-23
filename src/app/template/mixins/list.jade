@@ -1,0 +1,14 @@
+mixin list(repeat)
+	section#articles.articles.offset-top.fill
+		.row
+			.articles__wrapper
+				.text-center
+					block
+				section(masonry)
+					div(ng-repeat=repeat)
+						article.articles__thumb.col-sm-6.col-lg-4(id="{{article.id}}")
+							a.articles__thumb-wrapper(ng-click="view(article)")
+								img.articles__thumb-img(ng-src="{{article.image}}")
+								.articles__thumb-meta
+									h3.articles__thumb-heading(ng-bind-html="article.title")
+									p.articles__thumb-desc(ng-bind-html="article.description")

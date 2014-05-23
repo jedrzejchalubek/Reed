@@ -5,7 +5,7 @@ include mixins/mixins
 	div(ng-include="'app/template/menu.html'")
 
 	+side
-		div.fill(ng-include="'app/template/discovery-activity.html'")
+		div.fill(ng-include="'app/template/activity.html'")
 
 	+content
 		div.add.fill
@@ -18,9 +18,9 @@ include mixins/mixins
 				form(role="form", name="addForm", ng-submit="submit(addForm.$valid)", novalidate)
 					.row
 						.form-group
-							.col-md-6.col-md-offset-2
+							.col-md-5.col-md-offset-2.col-lg-6.col-lg-offset-2
 								input#addFeed.input-lg.form-control(type="text", placeholder="Wpisz adres RSS strony", ng-model="form.rssUrl", required, ng-required="true")
-							.add__button.col-md-2
+							.add__button.col-md-3.col-lg-2
 								button.btn.btn-lg.btn-block.btn-info(type="submit")
 									span.glyphicon.glyphicon-plus
 									|  Subskrybuj
@@ -29,7 +29,7 @@ include mixins/mixins
 					.row
 						.col-md-10.col-md-offset-1
 							ul.feeds.list-group
-								li.feeds__thumb.list-group-item.feed-animation(ng-repeat="feed in feeds | filter: form.rssUrl")
+								li.feeds__thumb.list-group-item.feed-animation(ng-repeat="feed in discoveryFeeds | filter: form.rssUrl")
 									.row
 										.col-xs-10
 											img.feeds__image(ng-src="{{feed.image}}")
@@ -39,7 +39,7 @@ include mixins/mixins
 													span.glyphicon.glyphicon-user
 													|  {{feed.subscribers}}
 										.col-xs-1.col-xs-offset-1
-											a.feeds__button.btn-lg(ng-click="add(feed, feeds, $index)")
+											a.feeds__button.btn-lg(ng-click="add(feed, discoveryFeeds, $index)")
 												span.glyphicon.glyphicon-plus-sign(ng-show="!feed.proccessing")
 												span.fa.fa-spinner.fa-spin(ng-show="feed.proccessing.under")
 												span.glyphicon.glyphicon-ok(ng-show="feed.proccessing.done")

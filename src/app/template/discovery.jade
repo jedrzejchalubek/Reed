@@ -5,13 +5,15 @@ include mixins/mixins
 	div(ng-include="'app/template/menu.html'")
 
 	+side
-		div.fill(ng-include="'app/template/discovery-activity.html'")
+		div.fill(ng-include="'app/template/activity.html'")
 
 	+content
-		div.bg-animation.fill(ng-switch="show.section")
-			div.list-animation.fill(ng-switch-default="list")
-				.fill(ng-include="'app/template/articles.html'")
-			div.single-animation.fill(ng-switch-when="single")
-				.fill(ng-include="'app/template/article.html'")
+		.bg-animation.fill(ng-switch="show.section")
+			.list-animation.fill(ng-switch-default="list")
+				+list("article in discoveryArticles")
+					h1 Discovery, read, grow.
+					p.lead lorem
+			.single-animation.fill(ng-switch-when="single")
+				+single("article in discoveryArticles")
 
 

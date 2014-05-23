@@ -1,0 +1,109 @@
+.ui-ios-overlay {
+  z-index: 99999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+  background: rgba(0,0,0,0.75);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.ui-ios-overlay .title {
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  font-size: 26px;
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  width: 100%;
+}
+.ui-ios-overlay i {
+  width: 100%;
+  margin-top: 18px;
+  color: @white;
+  font-size: 72px;
+  text-align: center;
+}
+.ui-ios-overlay .spinner {
+  left: 50% !important;
+  top: 40% !important;
+}
+
+.ios-overlay-show {
+  -webkit-animation-name: ios-overlay-show;
+  -webkit-animation-duration: 250ms;
+  -moz-animation-name: ios-overlay-show;
+  -moz-animation-duration: 250ms;
+  -ms-animation-name: ios-overlay-show;
+  -ms-animation-duration: 250ms;
+  -o-animation-name: ios-overlay-show;
+  -o-animation-duration: 250ms;
+  animation-name: ios-overlay-show;
+  animation-duration: 250ms;
+}
+
+@-webkit-keyframes ios-overlay-show {
+  0% { .opacity(0); .scale(0.75); }
+  100% { .opacity(1); .scale(1); }
+}
+@-moz-keyframes ios-overlay-show {
+  0% { .opacity(0); .scale(0.75); }
+  100% { .opacity(1); .scale(1); }
+}
+@-ms-keyframes ios-overlay-show {
+  0% { .opacity(0); .scale(0.75); }
+  100% { .opacity(1); .scale(1); }
+}
+@-o-keyframes ios-overlay-show {
+  0% { .opacity(0); .scale(0.75); }
+  100% { .opacity(1); .scale(1); }
+}
+@keyframes ios-overlay-show {
+  0% { .opacity(0); .scale(0.75); }
+  100% { .opacity(1); .scale(1); }
+}
+
+.ios-overlay-hide {
+  -webkit-animation-name: ios-overlay-hide;
+  -webkit-animation-duration: 250ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: ios-overlay-hide;
+  -moz-animation-duration: 250ms;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-name: ios-overlay-hide;
+  -ms-animation-duration: 250ms;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-name: ios-overlay-hide;
+  -o-animation-duration: 250ms;
+  -o-animation-fill-mode: forwards;
+  animation-name: ios-overlay-hide;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes ios-overlay-hide {
+  0% { .opacity(1); .scale(1); }
+  100% { .opacity(0); .scale(0.75); }
+}
+@-moz-keyframes ios-overlay-hide {
+  0% { .opacity(1); .scale(1); }
+  100% { .opacity(0); .scale(0.75); }
+}
+@-ms-keyframes ios-overlay-hide {
+  0% { .opacity(1); .scale(1); }
+  100% { .opacity(0); .scale(0.75); }
+}
+@-o-keyframes ios-overlay-hide {
+  0% { .opacity(1); .scale(1); }
+  100% { .opacity(0); .scale(0.75); }
+}
+@keyframes ios-overlay-hide {
+  0% { .opacity(1); .scale(1); }
+  100% { .opacity(0); .scale(0.75); }
+}

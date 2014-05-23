@@ -14,7 +14,7 @@ class ArticlesDiscovery extends Controller
 	 */
 	public function get($id, $query)
 	{
-		Response::json( $this->article->getPopular() );
+		Response::json( $this->article->getPopular($this->user->getId()) );
 	}
 
 	/**

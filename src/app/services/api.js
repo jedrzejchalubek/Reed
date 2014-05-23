@@ -1,4 +1,4 @@
-Reed.factory('Api', function ($http, $cookieStore, $resource, md5) {
+Reed.factory('Api', function ($http, $resource, State) {
 
 		return {
 
@@ -16,21 +16,36 @@ Reed.factory('Api', function ($http, $cookieStore, $resource, md5) {
 				}
 			}),
 
-			User: $resource('api/users/:id', { id: '@id' }, {
+			User: $resource('api/users/:id', { id: State.user.id }, {
 				get: {
 					method: 'GET',
 					isArray: false
 				}
 			}),
 
-			UserFeeds: $resource('api/users/:id/feeds', { id: $cookieStore.get('reed_userid') }, {
+			UserFeeds: $resource('api/users/:id/feeds', { id: State.user.id }, {
 				get: {
 					method: 'GET',
-					isArray: false
+					isArray: true
 				},
 				post: {
-					method: 'Post',
+					method: 'POST',
+					isArray: false
+				}
+			}),
+
+			UserArticles: $resource('api/users/:id/articles', { id: State.user.id }, {
+				get: {
+					method: 'GET',
+					isArray: true
 				},
+			}),
+
+			UserArticle: $resource('api/users/:id/articles/:articleid', { id: State.user.id }, {
+				update: {
+					method: 'PUT',
+					isArray: false
+				}
 			}),
 
 		};

@@ -193,9 +193,10 @@ $router->map('/users/:id', 'User', array(
  | ?offset={int}
 */
 $router->map('/users/:id/feeds', 'UserFeeds', array(
-	'user' => $user,
 	'feed' => $feed,
-	'userFeed' => $userFeed
+	'userFeed' => $userFeed,
+	'article' => $article,
+	'userArticle' => $userArticle
 ));
 
 
@@ -230,7 +231,9 @@ $router->map('/users/:id/feeds/:id', function(){});
  | ?limit={int}
  | ?offset={int}
 */
-$router->map('/users/:id/articles', function(){});
+$router->map('/users/:id/articles', 'UserArticles', array(
+	'userArticle' => $userArticle
+));
 
 
 
@@ -245,7 +248,9 @@ $router->map('/users/:id/articles', function(){});
  | PUT => (exist) ? update article details : throw error
  | DELETE => delete user article
 */
-$router->map('/users/:id/articles/:id', function(){});
+$router->map('/users/:id/articles/:id', 'UserArticle', array(
+	'userArticle' => $userArticle
+));
 
 
 
