@@ -1,37 +1,42 @@
 
-<div ng-controller="Ui" class="wrapper container-fluid fill">
+<div ng-init="init()" class="wrapper container-fluid fill">
   <div class="row fill">
-    <div ng-include="'app/template/menu.html'"></div>
-    <div id="side" class="fill side col-sm-3">
-      <div ng-include="'app/template/activity.html'" class="fill"></div>
+    <div ng-include="'app/template/partials/menu.html'"></div>
+    <div id="side" ng-show="view.panel" class="side side-animation">
+      <div ng-include="'app/template/partials/activity.html'"></div>
     </div>
-    <div id="content" class="content fill col-sm-9">
-      <div ng-switch="show.section" class="bg-animation fill">
-        <div ng-switch-default="list" class="list-animation fill">
-          <section id="articles" class="articles offset-top fill">
+    <div id="content" class="content fill col-md-12">
+      <div ng-switch="view.section" class="bg-animation fill">
+        <div ng-switch-default="list" class="thumbs-animation fill">
+          <section id="thumbs" class="thumbs offset-top fill">
             <div class="row">
-              <div class="articles__wrapper">
+              <div class="thumbs__wrapper">
                 <div class="text-center">
                   <h1>Discovery, read, grow.</h1>
                   <p class="lead">lorem</p>
                 </div>
-                <section masonry="masonry">
-                  <div ng-repeat="article in discoveryArticles">
-                    <article id="{{article.id}}" class="articles__thumb col-sm-6 col-lg-4"><a ng-click="view(article)" class="articles__thumb-wrapper"><img ng-src="{{article.image}}" class="articles__thumb-img"/>
-                        <div class="articles__thumb-meta">
-                          <h3 ng-bind-html="article.title" class="articles__thumb-heading"></h3>
-                          <p ng-bind-html="article.description" class="articles__thumb-desc"></p>
-                        </div></a></article>
-                  </div>
+                <section masonry="{ transitionDuration: '400ms' }" class="thumbs__cols">
+                  <article ng-repeat="item in view.content track by item.id" id="{{item.id}}" class="thumbs__item masonry-brick col-sm-6 col-md-4 col-lg-3">
+                    <div ng-class="{isRead: item.unread==0}" class="thumbs__content"><a ng-click="showArticle(item)"><img ng-src="{{item.image}}" class="thumbs__img"/>
+                        <div class="thumbs__meta">
+                          <h3 ng-bind-html="item.title" class="thumbs__heading"></h3>
+                          <p ng-bind-html="item.description" class="thumbs__desc"></p>
+                        </div></a>
+                      <div ng-controller="Navbar" class="thumbs__nav"><a ng-click="markAsFav(item)" class="pull-right">
+                          <div ng-class="{isFav: item.favourite == 1}" class="thumbs__fav"><span class="fa fa-heart"></span></div></a><a ng-click="saveForLater(item)" class="pull-right">
+                          <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a>
+                      </div>
+                    </div>
+                  </article>
                 </section>
               </div>
             </div>
           </section>
         </div>
         <div ng-switch-when="single" class="single-animation fill">
-          <section ng-controller="Navbar">
-            <div ng-repeat="article in discoveryArticles" class="article__wrapper fill">
-              <article ng-show="show.id === article.id" class="article fill article-animation">
+          <section>
+            <div ng-repeat="item in view.content track by item.id" class="article__wrapper fill">
+              <article ng-show="view.id === item.id" class="article fill article-animation">
                 <div class="row">
                   <div class="article__nav clearfix">
                     <div class="col-xs-3 text-left">
@@ -40,39 +45,39 @@
                       </div>
                     </div>
                     <div class="col-xs-9 text-right">
-                      <div class="article__nav-right"><a ng-click="saveForLater(article)"><span class="iconmonstr iconmonstr-time"></span> Save for later</a><a ng-click="markAsFav(article)"><span class="iconmonstr iconmonstr-bookmark"></span> Add to favourites</a><a href="#" class="hidden-xs"><span class="fa fa-share"></span> Share</a></div>
+                      <div ng-controller="Navbar" class="article__nav-right"><a ng-click="saveForLater(item)"><span class="iconmonstr iconmonstr-time"></span> Save for later</a><a ng-click="markAsFav(item)"><span class="fa fa-heart"></span> Add to favourites</a><a href="#" class="hidden-xs"><span class="fa fa-share"></span> Share</a></div>
                     </div>
                   </div>
                   <div class="article__header">
-                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
                       <div class="article__meta">
                         <div class="article__data">
                           <div class="row">
-                            <div class="col-xs-6 text-left">{{article.source}}</div>
+                            <div class="col-xs-6 text-left">{{item.source}}</div>
                             <div class="col-xs-6 text-right"><span class="fa fa-book"></span> 3 min read</div>
                           </div>
                         </div>
-                        <h1 ng-bind-html="article.title" class="article__title"></h1>
-                        <p ng-bind-html="article.description" class="article__desc"></p>
+                        <h1 ng-bind-html="item.title" class="article__title"></h1>
+                        <p ng-bind-html="item.description" class="article__desc"></p>
                       </div>
                     </div>
-                    <div style="background-image: url({{article.image}})" class="article__image clearfix"></div>
+                    <div style="background-image: url({{item.image}})" class="article__image clearfix"></div>
                   </div>
                   <div class="article__content clearfix">
-                    <div class="col-xs-12 col-md-10 col-md-offset-1">
-                      <div ng-bind-html="article.content" class="article__text"></div>
-                      <div class="article__text"><a href="{{article.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
+                    <div class="col-xs-12 col-md-8 col-md-offset-2">
+                      <div ng-bind-html="item.content" class="article__text"></div>
+                      <div class="article__text"><a href="{{item.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
                     </div>
                   </div>
-                </div><a ng-click="view(discoveryArticles[$index + 1])" ng-show="discoveryArticles[$index + 1] != undefined" class="article__next row">
-                  <div class="col-xs-12 col-md-10 col-md-offset-1">
+                </div><a ng-click="nextArticle(view.content[$index + 1])" ng-show="view.content[$index + 1] != undefined" class="article__next row">
+                  <div class="col-xs-12 col-md-8 col-md-offset-2">
                     <div class="article__data">
                       <div class="row">
                         <div class="col-xs-6 text-left">Next to read</div>
                       </div>
                     </div>
-                    <h1 ng-bind-html="discoveryArticles[$index + 1].title" class="article__title"></h1>
-                    <p ng-bind-html="discoveryArticles[$index + 1].description"></p>
+                    <h1 ng-bind-html="view.content[$index + 1].title" class="article__title"></h1>
+                    <p ng-bind-html="view.content[$index + 1].description"></p>
                   </div></a>
               </article>
             </div>

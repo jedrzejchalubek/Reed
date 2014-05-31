@@ -16,7 +16,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
   
   
   
-";s:7:"attribs";a:1:{s:36:"http://www.w3.org/XML/1998/namespace";a:1:{s:4:"lang";s:5:"en-US";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:38:"tag:tutorials.tutsplus.com,2005:/posts";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:2:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:29:"http://tutorials.tutsplus.com";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}i:1;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:40:"http://tutorials.tutsplus.com/posts.atom";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:9:"Tuts+ All";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:20:"2014-05-23T19:00:08Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"entry";a:12:{i:0;a:6:{s:4:"data";s:38:"
+";s:7:"attribs";a:1:{s:36:"http://www.w3.org/XML/1998/namespace";a:1:{s:4:"lang";s:5:"en-US";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:38:"tag:tutorials.tutsplus.com,2005:/posts";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:2:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:29:"http://tutorials.tutsplus.com";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}i:1;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:40:"http://tutorials.tutsplus.com/posts.atom";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:9:"Tuts+ All";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:20:"2014-05-28T17:25:11Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"entry";a:12:{i:0;a:6:{s:4:"data";s:38:"
     
     
     
@@ -24,446 +24,22 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21213";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:99:"http://code.tutsplus.com/tutorials/refactoring-legacy-code-part-5-games-testable-methods--cms-21213";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:57:"Refactoring Legacy Code: Part 5 - Game's Testable Methods";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:21648:"<p>Old code. Ugly code. Complicated code. Spaghetti code. Gibberish nonsense. In two words, <em>Legacy Code</em>. This is a series that will help you work and deal with it.<br></p>
-
-<p>In our previous tutorial, we tested our Runner functions. In this lesson, it is time to continue where we left off by testing our <code>Game</code> class. Now, when you start with such a big chunk of code like we have here, it is tempting to start to test in a top-down manner, method by method. This is, most of the time, impossible. It is much better to start testing it by its short, testable methods. This is what we'll do in this lesson: find and test those methods.</p>
-
-<h2>Creating a Game</h2>
-
-<p>In order to test a class we need to initialize an object of that specific type. We can consider that our first test is to create such a new object. You will be surprised how many secrets constructors can hide.</p>
-
-<pre class="brush: php">require_once __DIR__ . '/../trivia/php/Game.php';
-
-class GameTest extends PHPUnit_Framework_TestCase {
-
-	function testWeCanCreateAGame() {
-		$game = new Game();
-	}
-
-}</pre>
-
-<p>To our surprise, <code>Game</code> can actually be created quite easily. No problems while running just <code>new Game()</code>. Nothing breaks. This is a very good start, especially considering that <code>Game</code>'s constructor is quite large and it does a lot of things.</p>
-
-<h2>Finding the First Testable Method</h2>
-
-<p>It is tempting to simplify the constructor right now. But we have only the golden master to make sure we do not break anything. Before we go to the constructor, we need to test most of the rest of the class. So, where should we start?</p>
-
-<p>Look for the first method that returns a value and ask yourself, "Can I call and control the return value of this method?". If the answer is yes, it is a good candidate for our test.</p>
-
-<pre class="brush: php">function isPlayable() {
-	$minimumNumberOfPlayers = 2;
-	return ($this-&gt;howManyPlayers() &gt;= $minimumNumberOfPlayers);
-}</pre>
-
-<p>What about this method? It seems like a good candidate. Only two lines and it returns a boolean value. But wait, it calls another method, <code>howManyPlayers()</code>.</p>
-
-<pre class="brush: php">function howManyPlayers() {
-	return count($this-&gt;players);
-}</pre>
-
-<p>This is basically just a method that counts the elements in the class' <code>players</code> array. OK, so if we do not add any players, it should be zero. <code>isPlayable()</code> should return false. Let's see if our assumption is correct.</p>
-
-<pre class="brush: php">function testAJustCreatedNewGameIsNotPlayable() {
-	$game = new Game();
-	$this-&gt;assertFalse($game-&gt;isPlayable());
-}</pre>
-
-<p>We renamed our previous test method to reflect what we really want to test. Then we just asserted the game is not playable. The test passes. But false positives are common in many cases. So for piece of mind, we can assert true and make sure the test fails.</p>
-
-<pre class="brush: php">$this-&gt;assertTrue($game-&gt;isPlayable());</pre>
-
-<p>And it does!</p>
-
-<pre class="brush: bash">PHPUnit_Framework_ExpectationFailedException :
-Failed asserting that false is true.</pre>
-
-<p>So far, pretty promising. We managed to test the method's initial return value, the value represented by the initial <em>state</em> of the <code>Game</code> class. Please note the emphasized word: "state". We need to find a way to control the state of the game. We need to change it, so it will have the minimum number of players.</p>
-
-<p>If we analyze <code>Game</code>'s <code>add()</code> method, we will see that it adds elements to our array.</p>
-
-<pre class="brush: php">array_push($this-&gt;players, $playerName);</pre>
-
-<p>Our assumption is enforced by the way the <code>add()</code> method is used in <code>RunnerFunctions.php</code>.</p>
-
-<pre class="brush: php">function run() {
-
-	$aGame = new Game();
-	$aGame-&gt;add("Chet");
-	$aGame-&gt;add("Pat");
-	$aGame-&gt;add("Sue");
-
-	// ... //
-}</pre>
-
-<p>Based on these observations, we can conclude that by using <code>add()</code> twice, we should be able to bring our <code>Game</code> into a state with two players.</p>
-
-<pre class="brush: php">function testAfterAddingTwoPlayersToANewGameItIsPlayable() {
-	$game = new Game();
-	$game-&gt;add('First Player');
-	$game-&gt;add('Second Player');
-	$this-&gt;assertTrue($game-&gt;isPlayable());
-}</pre>
-
-<p>By adding this second test method, we can ensure <code>isPlayable()</code> returns true, if conditions are met.</p>
-
-<p>But you may think this is not quite a unit test. We use the <code>add()</code> method! We exercise more than the bare minimum of code. We could instead just add the elements to the <code>$players</code> array and not rely on the <code>add()</code> method at all.</p>
-
-<p>Well, the answer is yes and no. We could do that, from a technical point of view. It will have the advantage of direct control over the array. However, it will have the disadvantage of code duplication between code and tests. So, pick one of the bad options that you think you can live with and use that one. I personally prefer to reuse methods like <code>add()</code>.</p>
-
-<h3>Refactoring Tests</h3>
-
-<p>We are on green, we refactor. Can we make our tests better? Well yes, we can. We could transform our first test to verify all conditions of not enough players.</p>
-
-<pre class="brush: php">function testAGameWithNotEnoughPlayersIsNotPlayable() {
-	$game = new Game();
-	$this-&gt;assertFalse($game-&gt;isPlayable());
-	$game-&gt;add('A player');
-	$this-&gt;assertFalse($game-&gt;isPlayable());
-}</pre>
-
-<p>You may have heard about the concept of, "One assertion per test". I mostly agree with it, but if you have a test that verifies a single concept and requires multiple assertions to do its verification, I think it is acceptable to use more than one assertion. This view is also strongly promoted by Robert C. Martin in his teachings.</p>
-
-<p>But what about our second test method? Is that good enough? I say no.</p>
-
-<pre class="brush: php">$game-&gt;add('First Player');
-$game-&gt;add('Second Player');</pre>
-
-<p>These two calls bother me a little. They are a detailed implementation without an explicit explanation in our method. Why not extract them into a private method?</p>
-
-<pre class="brush: php">function testAfterAddingEnoughPlayersToANewGameItIsPlayable() {
-	$game = new Game();
-	$this-&gt;addEnoughPlayers($game);
-	$this-&gt;assertTrue($game-&gt;isPlayable());
-}
-
-private function addEnoughPlayers($game) {
-	$game-&gt;add('First Player');
-	$game-&gt;add('Second Player');
-}</pre>
-
-<p>This is much better and it also leads us to another concept that we missed. In both tests, we expressed in one way or another the concept of "enough players". But how much is enough? Is it two? Yes, for now it is. But do we want our test to fail if the <code>Game</code>'s logic will require at least three players? We do not want this to happen. We can introduce a public static class field for it.</p>
-
-<pre class="brush: php">class Game {
-	static $minimumNumberOfPlayers = 2;
-
-	// ... //
-
-	function  __construct() {
-		// ... //
-	}
-
-	function isPlayable() {
-		return ($this-&gt;howManyPlayers() &gt;= self::$minimumNumberOfPlayers);
-	}
-
-	// ... //
-}</pre>
-
-<p>This will allow us to use it in our tests.</p>
-
-<pre class="brush: php">private function addEnoughPlayers($game) {
-	for($i = 0; $i &lt; Game::$minimumNumberOfPlayers; $i++) {
-		$game-&gt;add('A Player');
-	}
-}</pre>
-
-<p>Our little helper method will just add players until enough is added. We can even create another such method for our first test, so we add almost enough players.</p>
-
-<pre class="brush: php">function testAGameWithNotEnoughPlayersIsNotPlayable() {
-	$game = new Game();
-	$this-&gt;assertFalse($game-&gt;isPlayable());
-	$this-&gt;addJustNothEnoughPlayers($game);
-	$this-&gt;assertFalse($game-&gt;isPlayable());
-}
-
-private function addJustNothEnoughPlayers($game) {
-	for($i = 0; $i &lt; Game::$minimumNumberOfPlayers - 1; $i++) {
-		$game-&gt;add('A player');
-	}
-}</pre>
-
-<p>But this introduced some duplication. Our two helper methods are fairly similar. Can't we extract a third one from them?</p>
-
-<pre class="brush: php">private function addEnoughPlayers($game) {
-	$this-&gt;addManyPlayers($game, Game::$minimumNumberOfPlayers);
-}
-
-private function addJustNothEnoughPlayers($game) {
-	$this-&gt;addManyPlayers($game, Game::$minimumNumberOfPlayers - 1);
-}
-
-private function addManyPlayers($game, $numberOfPlayers) {
-	for ($i = 0; $i &lt; $numberOfPlayers; $i++) {
-		$game-&gt;add('A Player');
-	}
-}</pre>
-
-<p>That is better, but it introduces a different problem. We reduced duplication in these methods, but our <code>$game</code> object is now passed down three levels. It is getting difficult to manage. It's time to initialize it in the test's <code>setUp()</code> method and reuse it.</p>
-
-<pre class="brush: php">class GameTest extends PHPUnit_Framework_TestCase {
-
-	private $game;
-
-	function setUp() {
-		$this-&gt;game = new Game;
-	}
-
-	function testAGameWithNotEnoughPlayersIsNotPlayable() {
-		$this-&gt;assertFalse($this-&gt;game-&gt;isPlayable());
-		$this-&gt;addJustNothEnoughPlayers();
-		$this-&gt;assertFalse($this-&gt;game-&gt;isPlayable());
-	}
-
-	function testAfterAddingEnoughPlayersToANewGameItIsPlayable() {
-		$this-&gt;addEnoughPlayers($this-&gt;game);
-		$this-&gt;assertTrue($this-&gt;game-&gt;isPlayable());
-	}
-
-	private function addEnoughPlayers() {
-		$this-&gt;addManyPlayers(Game::$minimumNumberOfPlayers);
-	}
-
-	private function addJustNothEnoughPlayers() {
-		$this-&gt;addManyPlayers(Game::$minimumNumberOfPlayers - 1);
-	}
-
-	private function addManyPlayers($numberOfPlayers) {
-		for ($i = 0; $i &lt; $numberOfPlayers; $i++) {
-			$this-&gt;game-&gt;add('A Player');
-		}
-	}
-
-}</pre>
-
-<p>Much better. All irrelevant code is in private methods, <code>$game</code> is initialized in <code>setUp()</code> and a lot of pollution was removed from the test methods. However, we did have to make a compromise here. In our first test, we start with an assertion. This presumes that <code>setUp()</code> will always create an empty game. This is OK for now. But at the end of the day, you must realize there is no such thing as perfect code. There is just code with compromises that you are willing to live with.</p>
-
-<h2>The Second Testable Method</h2>
-
-<p>If we are scanning our <code>Game</code> class from the top towards the bottom, the next method on our list is <code>add()</code>. Yes, the same method we used in our tests in the previous paragraph. But can we test it?</p>
-
-<pre class="brush: php">function testItCanAddANewPlayer() {
-	$this-&gt;game-&gt;add('A player');
-	$this-&gt;assertEquals(1, count($this-&gt;game-&gt;players));
-}</pre>
-
-<p>Now this is a different way of testing objects. We call our method and then we verify the object's state. As <code>add()</code> always returns <code>true</code>, there is no way we can test its output. But we can start with an empty <code>Game</code> object and then check if there is a single user after we add one. But is that enough verification?</p>
-
-<pre class="brush: php">function testItCanAddANewPlayer() {
-	$this-&gt;assertEquals(0, count($this-&gt;game-&gt;players));
-	$this-&gt;game-&gt;add('A player');
-	$this-&gt;assertEquals(1, count($this-&gt;game-&gt;players));
-}</pre>
-
-<p>Wouldn't it be better to also verify if there are no players before we call <code>add()</code>? Well, it may be a little bit too much here, but as you can see in the code above, we could do it. And whenever you are not sure of the initial state, you should do an assertion on it. This also protects you from future code changes that may change your object's initial state.</p>
-
-<p>But are we testing all of the things the <code>add()</code> method does? I say no. Besides adding a user, it also sets a lot of settings for it. We should also check for those.</p>
-
-<pre class="brush: php">function testItCanAddANewPlayer() {
-	$this-&gt;assertEquals(0, count($this-&gt;game-&gt;players));
-	$this-&gt;game-&gt;add('A player');
-	$this-&gt;assertEquals(1, count($this-&gt;game-&gt;players));
-	$this-&gt;assertEquals(0, $this-&gt;game-&gt;places[1]);
-	$this-&gt;assertEquals(0, $this-&gt;game-&gt;purses[1]);
-	$this-&gt;assertFalse($this-&gt;game-&gt;inPenaltyBox[1]);
-}</pre>
-
-<p>This is better. We verify each action that the <code>add()</code> method does. This time, I preferred to directly test the <code>$players</code> array. Why? We could have used the <code>howManyPlayers()</code> method which basically does the same thing, right? Well, in this case we considered that it is more important to describe our assertions by the effects that the <code>add()</code> method has on the state of the object. If we need to change <code>add()</code>, we would expect that the test which is testing its strict behavior, will fail. I've had endless debates with my colleagues at Syneto about this. Especially because this type of testing introduces a strong coupling between the test and how the <code>add()</code> method is actually implemented. So, if you prefer to test it the other way around, that does not mean your ideas are wrong.</p>
-
-<p> We can safely ignore the testing of the output, the <code>echoln()</code> lines. They are just outputting content on the screen. We don't want to touch these methods, yet. Our golden master totally relies on this output.</p>
-
-<h3>Refactoring Tests (Bis)</h3>
-
-<p>We have another tested method with a brand new passing test. It's time to refactor both of them, just a little bit. Let's start with our tests. Aren't the last three assertions a little bit confusing? They don't seem to be related strictly to adding a player. Let's change it:</p>
-
-<pre class="brush: php">function testItCanAddANewPlayer() {
-	$this-&gt;assertEquals(0, count($this-&gt;game-&gt;players));
-	$this-&gt;game-&gt;add('A player');
-	$this-&gt;assertEquals(1, count($this-&gt;game-&gt;players));
-	$this-&gt;assertDefaultPlayerParametersAreSetFor(1);
-}</pre>
-
-<p>That's better. The method is now more abstract, reusable, expressively named and hides all of the unimportant details.</p>
-
-<h3>Refactoring the <code>add()</code> Method</h3>
-
-<p>We can do something similar with our production code.</p>
-
-<pre class="brush: php">function add($playerName) {
-	array_push($this-&gt;players, $playerName);
-	$this-&gt;setDefaultPlayerParametersFor($this-&gt;howManyPlayers());
-
-	echoln($playerName . " was added");
-	echoln("They are player number " . count($this-&gt;players));
-	return true;
-}</pre>
-
-<p>We extracted the unimportant details into <code>setDefaultPlayerParametersFor()</code>.</p>
-
-<pre class="brush: php">private function setDefaultPlayerParametersFor($playerId) {
-	$this-&gt;places[$playerId] = 0;
-	$this-&gt;purses[$playerId] = 0;
-	$this-&gt;inPenaltyBox[$playerId] = false;
-}</pre>
-
-<p>Actually this idea came to me after I wrote the test. This is another nice example of how tests force us to think about our code from a different point of view. This different angle on the problem, is what we must exploit and let our tests guide our design of the production code.</p>
-
-<h2>The Third Testable Method</h2>
-
-<p>Let's find our third candidate for testing. <code>howManyPlayers()</code> is too simple and indirectly already tested. <code>roll()</code> is too complex to be tested directly. Plus it returns <code>null</code>. <code>askQuestions()</code> seems to be interesting at first sight, but it is all presentation, no return value.</p>
-
-<p><code>currentCategory()</code> is testable, but it is pretty <em>difficult</em> to test. It is a huge selector with ten conditions. We need a ten lines long test and then we need to seriously refactor this method and most certainly the tests as well. We should take note of this method and come back to it after we are finished with the easier ones. For us, this will be in our next tutorial.</p>
-
-<p><code>wasCorrectlyAnswered()</code> is to complicated again. We will need to extract from it, small pieces of code that are testable. However, <code>wrongAnswer()</code> seems promising. It outputs stuff on the screen, but it also changes the state of our object. Let's see if we can control it and test it.</p>
-
-<pre class="brush: php">function testWhenAPlayerEntersAWrongAnswerItIsSentToThePenaltyBox() {
-	$this-&gt;game-&gt;add('A player');
-	$this-&gt;game-&gt;currentPlayer = 0;
-	$this-&gt;game-&gt;wrongAnswer();
-	$this-&gt;assertTrue($this-&gt;game-&gt;inPenaltyBox[0]);
-}</pre>
-
-<p>Grrr... It was quite hard to write this test method. <code>wrongAnswer()</code> relies on <code>$this-&gt;currentPlayer</code> for its behavioral logic, but it also uses <code>$this-&gt;players</code> in its presentation part. One ugly example of why you should not mix logic and presentation. We will deal with this in a future tutorial. For now, we tested that the user enters the penalty box. We must also observe that there is an <code>if()</code> statement in the method. This is a condition that we do not yet test, as we only have a single player and thus we are not satisfying the condition. We could test for the final value of <code>$currentPlayer</code> though. But adding this line of code to the test will make it fail.</p>
-
-<pre class="brush: php">$this-&gt;assertEquals(1, $this-&gt;game-&gt;currentPlayer);</pre>
-
-<p>A closer look at the private method <code>shouldResetCurrentPlayer()</code> reveals the problem. If the index of the current player equals with the number of players, it will be reset to zero. Aaaahhh! We actually enter the <code>if()</code>!</p>
-
-<pre class="brush: php">function testWhenAPlayerEntersAWrongAnswerItIsSentToThePenaltyBox() {
-	$this-&gt;game-&gt;add('A player');
-	$this-&gt;game-&gt;currentPlayer = 0;
-	$this-&gt;game-&gt;wrongAnswer();
-	$this-&gt;assertTrue($this-&gt;game-&gt;inPenaltyBox[0]);
-	$this-&gt;assertEquals(0, $this-&gt;game-&gt;currentPlayer);
-}
-
-function testCurrentPlayerIsNotResetAfterWrongAnswerIfOtherPlayersDidNotYetPlay() {
-	$this-&gt;addManyPlayers(2);
-	$this-&gt;game-&gt;currentPlayer = 0;
-	$this-&gt;game-&gt;wrongAnswer();
-	$this-&gt;assertEquals(1, $this-&gt;game-&gt;currentPlayer);
-}</pre>
-
-<p>Good. We created a second test, to test the specific case when there are still players who did not play. We don't care about the <code>inPenaltyBox</code> state for the second test. We are only interested in the index of the current player.</p>
-
-<h2>The Final Testable Method</h2>
-
-<p>The last method we can test and then refactor is <code>didPlayerWin()</code>.</p>
-
-<pre class="brush: php">function didPlayerWin() {
-	$numberOfCoinsToWin = 6;
-	return !($this-&gt;purses[$this-&gt;currentPlayer] == $numberOfCoinsToWin);
-}</pre>
-
-<p>We can immediately observe that its code structure is very similar to <code>isPlayable()</code>, the method we tested first. Our solution should be something similar as well. When your code is so short, only two to three lines, doing more than one tiny step is not that big of a risk. In worst case scenarios, you revert three lines of code. So let's do this in a single step.</p>
-
-<pre class="brush: php">function testTestPlayerWinsWithTheCorrectNumberOfCoins() {
-	$this-&gt;game-&gt;currentPlayer = 0;
-	$this-&gt;game-&gt;purses[0] = Game::$numberOfCoinsToWin;
-	$this-&gt;assertTrue($this-&gt;game-&gt;didPlayerWin());
-}</pre>
-
-<p>But wait! That fails. How is that possible? Shouldn't it pass? We provided the correct number of coins. If we study our method, we'll discover a little misleading fact.</p>
-
-<pre class="brush: php">return !($this-&gt;purses[$this-&gt;currentPlayer] == $numberOfCoinsToWin);</pre>
-
-<p>The return value is actually negated. So the method is not telling us if a player won, it tells us if a player did not win the game. We could go in and find the places where this method is used and negate its value there. Then change its behavior here, to not falsely negate the answer. But it is used in <code>wasCorrectlyAnswered()</code>, a method we can not yet unit test. Maybe for the time being, a simple renaming to highlight the correct functionality will be enough.</p>
-
-<pre class="brush: php">function didPlayerNotWin() {
-	return !($this-&gt;purses[$this-&gt;currentPlayer] == self::$numberOfCoinsToWin);
-}</pre>
-
-<h2>Thoughts &amp; Conclusion</h2>
-
-<p>So this about wraps up the tutorial. While we do not like the negation in the name, this is a compromise we can make at this point. This name will surely change when we start refactoring other parts of the code. Additionally, if you take a look at our tests, they look odd now:</p>
-
-<pre class="brush: php">function testTestPlayerWinsWithTheCorrectNumberOfCoins() {
-	$this-&gt;game-&gt;currentPlayer = 0;
-	$this-&gt;game-&gt;purses[0] = Game::$numberOfCoinsToWin;
-	$this-&gt;assertFalse($this-&gt;game-&gt;didPlayerNotWin());
-}</pre>
-
-<p>By testing false on a negated method, exercised with a value that suggests a true result, we introduced quite a lot of confusion to our codes readability. But this is good for now, as we do need to stop at some point, right?</p>
-
-<p>In our next tutorial, we will start working on some of the more difficult methods within the <code>Game</code> class. Thank you for reading.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21213/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21213/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21213/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21213/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T19:00:08.451Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T19:00:08.451Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
-      
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Patkos Csaba";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:1;a:6:{s:4:"data";s:38:"
-    
-    
-    
-    
-    
-    
-    
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21196";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:91:"http://code.tutsplus.com/tutorials/ios-fundamentals-frames-bounds-and-cggeometry--cms-21196";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:48:"iOS Fundamentals: Frames, Bounds, and CGGeometry";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:12447:"<p>Working with <code class="inline">CGPoint</code>, <code class="inline">CGSize</code>, and <code class="inline">CGRect</code>&nbsp;structures isn't difficult if you're used to a language that supports the dot syntax. However, programmatically positioning views or writing drawing code is verbose and can become difficult to read.</p><p>In this tutorial, I'd like to clear out a few misconceptions about frames and bounds, and introduce you to <b>CGGeometry</b>, a collection of structures, constants, and functions that make working with <code class="inline">CGPoint</code>, <code class="inline">CGSize</code>, and <code class="inline">CGRect</code>&nbsp;that much easier.<br></p><h2><span class="sectionnum">1.</span> Data Types</h2><p>If you're new to iOS or OS X development, you may be wondering what <code class="inline">CGPoint</code>, <code class="inline">CGSize</code>, and <code class="inline">CGRect</code> structures are. The CGGeometry Reference defines a number of geometric primitives or structures and the ones we are interested in are <code class="inline">CGPoint</code>, <code class="inline">CGSize</code>, and <code class="inline">CGRect</code>.</p><p>As most of you probably know,&nbsp;<code class="inline">CGPoint</code> is a C structure that defines a point in a coordinate system. The origin of this coordinate system is at the top left on iOS and at the bottom left on OS X. In other words, the orientation of its vertical axis differs on iOS and OS X.<br></p><p><code class="inline">CGSize</code> is another simple C structure that defines a width and a height value, and <code class="inline">CGRect</code> has an <code class="inline">origin</code> field, a <code class="inline">CGPoint</code>, and a <code class="inline">size</code> field, a <code class="inline">CGSize</code>. Together the <code class="inline">origin</code> and <code class="inline">size</code> fields define the position and size of a rectangle.</p><p>The CGGeometry Reference also defines other types, such as <code class="inline">CGFloat</code> and <code class="inline">CGVector</code>. <code class="inline">CGFloat</code> is nothing more than a <code class="inline">typedef</code> for <code class="inline">float</code>&nbsp;or <code class="inline">double</code>, depending on the architecture the application runs on, 32-bit or 64-bit.</p><h2><span class="sectionnum">2.</span>&nbsp;Frames and Bounds</h2><p>The first thing I want to clarify is the difference between a view's <code class="inline">frame</code> and its <code class="inline">bounds</code>, because this is something that trips up a lot of beginning iOS developers. The difference isn't difficult though.</p><p>On iOS and OS X, an application has multiple coordinate systems. On iOS, for example, the application's window is positioned in the screen's coordinate system and every subview of the window is positioned in the window's coordinate system. In other words, the subviews of a view are always positioned in the view's coordinate system.</p><h3>Frame<br></h3><p>As the documentation clarifies, the <code class="inline">frame</code> of a view is a structure, a <code class="inline">CGRect</code>, that defines the size of the view and its position in the view's superview, the superview's coordinate system. Take a look at the following diagram for clarification.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/41/posts/21196/image/figure-1.jpg"></figure><h3>Bounds<br></h3><p>The <code class="inline">bounds</code>&nbsp;property of a view defines the size of the view and its position in the view's own coordinate system. This means that in most cases the origin of the bounds of a view are set to <code class="inline">{0,0}</code>&nbsp;as shown in the following diagram. The view's <code class="inline">bounds</code> is important for drawing the view.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/41/posts/21196/image/figure-2.jpg"></figure><p>When the <code class="inline">frame</code>&nbsp;property of a view is modified, the view's <code class="inline">center</code>&nbsp;and/or&nbsp;<code class="inline">bounds</code>&nbsp;are also modified.</p><h2><span class="sectionnum">3.</span> CGGeometry Reference</h2><h3>Convenient Getters</h3><p>As I mentioned earlier, the CGGeometry Reference is a collection of structures, constants, and functions that make it easier to work with coordinates and rectangles. You may have run into code snippets similar to this:</p><pre class="brush: objc">CGPoint point = CGPointMake(self.view.frame.origin.x + self.view.frame.size.width, self.view.frame.origin.y + self.view.frame.size.height);</pre><p>Not only is this snippet hard to read, it's also quite verbose. We can rewrite this code snippet using two convenient functions defined in the CGGeometry Reference.</p><pre class="brush: objc">CGRect frame = self.view.frame;
-CGPoint point = CGPointMake(CGRectGetMaxX(frame), CGRectGetMaxY(frame));</pre><p>To simplify the above code snippet, we store the view's <code class="inline">frame</code> in a variable named <code class="inline">frame</code> and use <code class="inline">CGRectGetMaxX</code> and <code class="inline">CGRectGetMaxY</code>. The names of the functions are self-explanatory.</p><p>The CGGeometry Reference defines functions to return the smallest and largest values for the x- and y-coordinates of a rectangle as well as the x- and y-coordinates that lie at the rectangle's center. Two other convenient getter functions are <code class="inline">CGRectGetWidth</code> and&nbsp;<code class="inline">CGRectGetHeight</code>.<br></p><h3>Creating Structures</h3><p>When it comes to creating <code class="inline">CGPoint</code>, <code class="inline">CGSize</code>, and <code class="inline">CGRect</code> structures, most of us use&nbsp;<code class="inline">CGPointMake</code> and its cousins. These functions are also defined in the CGGeometry Reference. Even though their implementation is surprisingly easy, they are incredibly useful and make you write less code. For example, this is how <code class="inline">CGRectMake</code> is actually implemented:</p><pre class="brush: c">CGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21052";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:96:"http://gamedevelopment.tutsplus.com/articles/what-is-data-oriented-game-engine-design--cms-21052";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:41:"What is Data-Oriented Game Engine Design?";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:19082:"<p>You may have heard of data-oriented game engine design, a relatively new concept that proposes a different mindset to the more traditional object-oriented design. In this article, I'll explain what DOD is all about, and why some game engine developers feel it could be the ticket for spectacular performance gains.<br></p><h2>A Bit of History</h2><p>In the early years of game development, games and their engines were written in old-school languages, such as C. They were a niche product, and squeezing every last clock cycle out of slow hardware was, at the time, the utmost priority. In most cases, there was only a modest number of people hacking at the code of a single title, and they knew the entire codebase by heart. The tools they were using had been serving them well, and C was providing the performance benefits that enabled them to push the most out of the CPU—and as these games were still by large bound by the CPU, drawing to its own frame buffers, this was a very important point.<br></p><p>With the advent of GPUs that do the number-crunching work on the triangles, texels, pixels, and so on, we've come to depend less on the CPU. At the same time, the gaming industry has seen steady growth: more and more people want to play more and more games, and this in turn has led to more and more teams coming together to develop them.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/22/posts/21052/image/Moore.png"><figcaption><a href="http://en.wikipedia.org/wiki/Moore's_law" target="_self">Moore's law</a> shows that hardware growth is exponential, not linear in respect to time: this means that every couple of years, the number of transistors we can fit on a single board doesn't change by a constant amount—it doubles!</figcaption></figure><p>Bigger teams needed better cooperation. Before long, the game engines, with their complex level, AI, culling, and rendering logic required the coders to be more disciplined, and their weapon of choice was <i>object-oriented design</i>.</p><p>As <a href="http://paulgraham.com/noop.html" target="_self">Paul Graham once said</a>:&nbsp;</p><blockquote>At big companies,
+software tends to be written by large (and frequently changing) teams of mediocre programmers.  Object-oriented programming imposes a discipline on these programmers that prevents any one of them from doing too much damage.</blockquote><p><span class="wysiwyg-font-size-small">Whether we like it or not, this has to be true to some degree—bigger companies started to deploy bigger and better games, and as the standardization of tools emerged, the hackers working on games became parts that could be swapped out way more easily. The virtue of a particular hacker became less and less important.</span></p><h3>Problems With Object-Oriented Design</h3><p><span class="wysiwyg-font-size-small">While object-oriented design is a nice concept that helps developers on big projects, such as games, create several layers of abstraction and have everyone work on their target layer, without having to care about the implementation details of the ones underneath, it's bound to give us <i>some</i> headaches.</span></p><p><span class="wysiwyg-font-size-small">We see an explosion of parallel programming—coders harvesting all the processor cores available to deliver blazing computation speeds—but at the same time, game scenery becomes more and more complex, and if we want to keep up with that trend and still deliver the frames-per-second our players expect, we need to do it, too. By using all speed we have at hand, we can open doors for entirely new possibilities: using the CPU time to reduce the number of data sent to the GPU altogether, for example.</span></p><p><span class="wysiwyg-font-size-small">In object-oriented programming, you keep state within an object, which requires you to introduce concepts like <a href="http://stackoverflow.com/questions/8017507/definition-of-synchronization-primitive" target="_self">synchronization primitives</a> if you want to work on it from multiple threads. You have one new level of indirection for every virtual function call you make. And the memory access patterns generated by code written in an object-oriented manner <i>can </i>be </span><span class="wysiwyg-font-size-small">awful—in fact, Mike Acton (Insomniac Games, ex-Rockstar Games) has a <a href="http://macton.smugmug.com/gallery/8936708_T6zQX#!i=593428032&amp;k=DGbc4gm" target="_self">great set of slides casually explaining one example</a>.&nbsp;</span></p><p><span class="wysiwyg-font-size-small">Similarly, Robert Harper, a professor at Carnegie Mellon University, <a href="http://existentialtype.wordpress.com/2011/03/15/teaching-fp-to-freshmen/" target="_self">put it this way</a>:&nbsp;</span></p><blockquote>Object-oriented programming is [...] both anti-modular and anti-parallel by its 
+very nature, and hence unsuitable for a modern CS curriculum.</blockquote><p>Talking about OOP like this is tricky, because OOP encompasses a huge spectrum of properties, and not everyone agrees what OOP means. In this sense, I'm mostly talking about OOP as implemented by C++, because that's currently the language that vastly dominates the game engine world.</p><p>So, we know that games need to become parallel because <i>there is always more work that the CPU can (but doesn't have to) do</i>, and spending cycles waiting for the GPU to finish processing is just wasteful. We also know that common OO design approaches require us to introduce expensive lock contention, and at the same time, can violate cache locality or cause unnecessary branching (which can be costly!) in the most unexpected circumstances.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/22/posts/21052/image/utilization.png"><figcaption>If we don't take advantage of multiple cores, we keep using the same amount of CPU resources even if the hardware gets arbitrarily better (has more cores). At the same time, we can push GPU to its limits because it is, by design, parallel, and able to take on any amount of work simultaneously. This can interfere with our mission to provide players the best experience on their hardware, as we are clearly not using it to full potential.</figcaption></figure><p>This raises the question: should we rethink our paradigms altogether?<br></p><h2>Enter: Data-Oriented Design</h2><p>Some proponents of this methodology have <i>called</i> it data-oriented design, but the truth is that the general concept has been known for much longer. Its basic premise is simple: <i>construct your code around the data structures, and describe what you want to achieve in terms of manipulations of these structures</i>.&nbsp;</p><p>We've heard this kind of talk before: Linus Torvalds, the creator of Linux and Git, said in a <a href="http://lwn.net/Articles/193245/" target="_self">Git mailing list post</a> that he is a huge proponent of "designing the code around the data, not the other way around", and credits this as one of the reasons for Git's success. He goes on even to claim that the difference between a good programmer and a bad one is whether she worries about data structures, or the code itself.</p><p>The task may seem counterintuitive at first, because it requires you to turn your mental model upside-down. But think of it this way: a game, while running, captures all the user's input, and all performance-heavy pieces of it (the ones where it would make sense to ditch the standard <i>everything is an object </i>philosophy) do not rely on outside factors, such as network or IPC. For all you know, a game consumes user events (mouse moved, joystick button pressed, and so on) and the current game state, and churns these up into a new set of data—for example, batches that are sent to the GPU, PCM samples that are sent to the audio card, and a new game state.</p><p>This "data churning" can be broken down into a lot more sub-processes. An animation system takes the next keyframe data and the current state and produces a new state. A particle system takes its current state (particle positions, velocities, and so on) and a time advancement and produces a new state. A culling algorithm takes a set of candidate renderables and produces a smaller set of renderables. Almost everything in a game engine can be thought of as manipulating a chunk of data to produce another chunk of data.</p><p>Processors love locality of reference and utilization of cache. So, in data-oriented design, we tend to, wherever possible, organize everything in big, homogenous arrays, and, also wherever possible, run good, cache-coherent brute-force algorithms in place of a potentially fancier one (which has a better Big O cost, but fails to embrace the architecture limitations of hardware it works on).&nbsp;</p><p>When performed per-frame (or multiple times per frame), this potentially gives huge performance rewards. For example, the folks at Scalyr report <a href="http://blog.scalyr.com/2014/05/06/searching-20-gbsec-systems-engineering-before-algorithms/?updated=true" target="_self">searching log files at 20GB/sec</a> using a carefully-crafted but a naive sounding brute-force linear scan.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/22/posts/21052/image/objects.png"><figcaption>When we process objects, we have to think of them as "black boxes" and call their methods, which in turn access the data and get us what we want (or make changes that we want). This is great for working for maintainability, but not knowing how our data is laid out can be detrimental to performance.</figcaption></figure><h2>Examples</h2><p>Data-oriented design has us thinking all about data, so let's do something also a bit different from what we usually do.&nbsp;Consider this piece of code:</p><pre class="brush: cpp">void MyEngine::queueRenderables()
 {
-  CGRect rect;
-  rect.origin.x = x; rect.origin.y = y;
-  rect.size.width = width; rect.size.height = height;
-  return rect;
-}</pre><h3>Modifying Rectangles</h3><p>The functions we've covered so far are pretty well known among iOS developers and help us write less code that is more readable. However, the CGGeometry Reference also defines a number of other functions that are less known. For example, the CGGeometry Reference defines half a dozen functions for modifying <code class="inline">CGRect</code> structures. Let's take a look at a few of these functions.</p><h4><code class="inline">CGRectUnion</code></h4><p><code class="inline">CGRectUnion</code> accepts two <code class="inline">CGRect</code> structures and returns the smallest possible rectangle that contains both rectangles. This may sound trivial and I'm sure you can easily accomplish the same task with a few lines of code, but CGGeometry is all about providing you with a few dozen functions that make your code cleaner and more readable.</p><p>If you add the following code snippet to a view controller's <code class="inline">viewDidLoad</code> method, you should get the following result in the iOS Simulator. The gray rectangle is the result of using&nbsp;<code class="inline">CGRectUnion</code>.</p><pre class="brush: objc">// CGRectUnion
-CGRect frame1 = CGRectMake(80.0, 100.0, 150.0, 240.0);
-CGRect frame2 = CGRectMake(140.0, 240.0, 120.0, 120.0);
-CGRect frame3 = CGRectUnion(frame1, frame2);
-
-UIView *view1 = [[UIView alloc] initWithFrame:frame1];
-[view1 setBackgroundColor:[UIColor redColor]];
-
-UIView *view2 = [[UIView alloc] initWithFrame:frame2];
-[view2 setBackgroundColor:[UIColor orangeColor]];
-
-UIView *view3 = [[UIView alloc] initWithFrame:frame3];
-[view3 setBackgroundColor:[UIColor grayColor]];
-
-[self.view addSubview:view3];
-[self.view addSubview:view2];
-[self.view addSubview:view1];</pre><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/41/posts/21196/image/figure-3.jpg"></figure><h4><code class="inline">CGRectDivide</code></h4><p>Another useful function is <code class="inline">CGRectDivide</code>, which lets you divide a given rectangle into two rectangles. Take a look at the following code snippet and screenshot to see how it's used.</p><pre class="brush: objc">// CGRectDivide
-CGRect frame = CGRectMake(10.0, 50.0, 300.0, 300.0);
-CGRect part1;
-CGRect part2;
-CGRectDivide(frame, &amp;part1, &amp;part2, 100.0, CGRectMaxYEdge);
-
-UIView *view1 = [[UIView alloc] initWithFrame:frame];
-[view1 setBackgroundColor:[UIColor grayColor]];
-
-UIView *view2 = [[UIView alloc] initWithFrame:part1];
-[view2 setBackgroundColor:[UIColor orangeColor]];
-
-UIView *view3 = [[UIView alloc] initWithFrame:part2];
-[view3 setBackgroundColor:[UIColor redColor]];
-
-[self.view addSubview:view1];
-[self.view addSubview:view2];
-[self.view addSubview:view3];</pre><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/41/posts/21196/image/figure-4.jpg"></figure><p>If you were to calculate the red and orange rectangle without using <code class="inline">CGRectDivide</code>, you'd end up with a few dozen lines of code. Give it a try if you don't believe me.</p><h3>Comparison and Containment</h3><p>Comparing geometric structure and checking for membership is very easy with the following six functions:</p><ul><li><code class="inline">CGPointEqualToPoint</code></li><li><code class="inline">CGSizeEqualToSize</code></li><li><code class="inline">CGRectEqualToRect</code></li><li><code class="inline">CGRectIntersectsRect</code></li><li><code class="inline">CGRectContainsPoint</code></li><li><code class="inline">CGRectContainsRect</code></li></ul><p>The CGGeometry Reference has a few other gems, such as&nbsp;<code class="inline">CGPointCreateDictionaryRepresentation</code> for converting a CGPoint structure to a&nbsp;<code class="inline">CFDictionaryRef</code>, and&nbsp;<code class="inline">CGRectIsEmpty</code>&nbsp;to check if a rectangle's width and height are equal to <code class="inline">0.0</code>. Read the <a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGGeometry/Reference/reference.html" target="_self">documentation of the CGGeometry Reference</a> to find out more.</p><h2><span class="sectionnum">4.</span> Bonus: Logging</h2><p>Logging structures to Xcode's console is cumbersome without a few helper functions. Luckily, the UIKit framework defines a handful of functions that make this very easy to do. I use them all the time. Take a look at the following code snippet to see how they work. It's no rocket science.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<pre class="brush: objc">CGPoint point = CGPointMake(10.0, 25.0);
-CGSize size = CGSizeMake(103.0, 223.0);
-CGRect frame = CGRectMake(point.x, point.y, size.width, size.height);
-NSLog(@"\n%@\n%@\n%@", NSStringFromCGPoint(point), NSStringFromCGSize(size), NSStringFromCGRect(frame));</pre><p>There are also convenience functions for logging affine transforms (<code class="inline">NSStringFromCGAffineTransform</code>), edge insets structs (<code class="inline">NSStringFromUIEdgeInsets</code>), and offset structs (<code class="inline">NSStringFromUIOffset</code>).</p><h2>Conclusion</h2><p>The iOS SDK contains a lot of gems many developers don't know about. I hope I've convinced you of the usefulness of the <a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/reference/CGGeometry/Reference/reference.html" target="_self">CGGeometry Reference</a>. Once you start using its collection of functions, you'll start wondering how you used to manage without it.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21196/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21196/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21196/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21196/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T18:45:13.627Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T18:45:13.627Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  for (auto it = mRenderables.begin(); it != mRenderables.end(); ++it) {
+    if ((*it)-&gt;isVisible()) {
+       queueRenderable(*it);
+  }
+}</pre><p>Although simplified a lot, this common pattern is what is often seen in object-oriented game engines. But wait—if a lot of renderables aren't actually visible, we run into a lot of branch mispredictions which cause the processor to trash some instructions that it had executed in hope a particular branch was taken.&nbsp;</p><p>For small scenes, this obviously isn't an issue.  But how many times do you do this particular thing, not just when queuing renderables, but when iterating through scene lights, shadow map splits, zones, or the like? How about AI or animation updates? Multiply all that you do throughout the scene, see how many clock cycles you expel, compute how much time your processor has available to deliver all the GPU batches for a steady 120FPS rhythm, and you see that these things <i>can </i>scale to a considerable amount.&nbsp;</p><p>It would be funny if, for instance, a hacker working on a web app even considered such miniscule micro-optimizations, but we know that games are real-time systems where resource constraints are incredibly tight, so this consideration is not misplaced for us.<br></p><p>To avoid this from happening, let's think about it in another way: what if we kept the list of visible renderables in the engine? Sure, we would sacrifice the neat syntax of <code class="inline">myRenerable-&gt;hide()</code> and violate quite a few OOP principles, but we could then do this:</p><pre class="brush: cpp">void MyEngine::queueRenderables()
+{
+  for (auto it = mVisibleRenderables.begin(); it != mVisibleRenderables.end(); ++it) {
+    queueRenderable(*it);
+  }
+}</pre><p>Hooray! No branch mispredictions, and assuming <code class="inline">mVisibleRenderables</code> is a nice <code class="inline">std::vector</code> (which is a contiguous array), we could have as well rewritten this as a fast <code class="inline">memcpy</code> call (with a few extra updates to our data structures, probably).</p><p>Now, you may call me out on the sheer cheesiness of these code samples and you will be quite right: this is simplified <i>a lot. </i>But to be honest, I haven't even scratched the surface yet. Thinking about data structures and their relationships opens us to a whole lot of possibilities we haven't thought about before. Let's look at some of them next.</p><h3>Parallelization and Vectorization</h3><p>If we have simple, well-defined functions that operate on large data chunks as base building blocks for our processing, it's easy to spawn four, or eight, or 16 worker threads and give each of them a piece of data to keep all the CPU cores busy. No mutexes, atomics or lock contention, and once you need the data, you need only to join on all the threads and wait for them to finish. If you need to sort data in parallel (a very frequent task when preparing stuff to be sent to the GPU), you have to think about this from a different perspective—<a href="http://macton.smugmug.com/gallery/9114809_C9awM#!i=607513208&amp;k=xqWYf" target="_self">these slides might help</a>.<br></p><p>As an added bonus, inside one thread you can use SIMD vector instructions (such as SSE/SSE2/SSE3) to achieve an additional speed boost. Sometimes, you can accomplish this only by laying your data in a different way, such as placing vector arrays in a structure-of-arrays (SoA) manner (like <code class="inline">XXX...YYY...ZZZ...</code>) rather than the conventional array-of-structures (AoS; that would be <code class="inline">XYZXYZXYZ...</code>). I'm barely scratching the surface here; you can find more information in the <b>Further Reading</b> section below.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/22/posts/21052/image/parallel.png"><figcaption>When our algorithms deal with the data directly, it becomes trivial to parallelize them, and we can also avoid some speed drawbacks.</figcaption></figure><h3>Unit Testing You Didn't Know Was Possible</h3><p>Having simple functions with no external effects makes them easy to unit-test. This can be especially good in a form of regression testing for algorithms you'd like to swap in and out easily.&nbsp;</p><p>For example, you can build a test suite for a culling algorithm's behavior, set up an orchestrated environment, and measure exactly how it performs. When you devise a new culling algorithm, you run the same test again with no changes. You measure performance and correctness, so you can have assessment at your fingertips.&nbsp;</p><p>As you get more into the data-oriented design approaches, you'll find it easier and easier to test aspects of your game engine.</p><h3>Combining Classes and Objects With Monolithic Data</h3><p>Data-oriented design is by no means opposed to object-oriented programming, just some of its ideas. As a result, you can quite neatly use <i>ideas</i> from data-oriented design and still get most of the abstractions and mental models you're used to.&nbsp;</p><p>Take a look, for example, at the <a href="http://www.ogre3d.org/forums/viewforum.php?f=25" target="_self">work on OGRE version 2.0</a>: Matias Goldberg, the mastermind behind that endeavor, chose to store data in big, homogenous arrays, and have functions that iterate over whole arrays as opposed to working on only one datum, in order to speed up Ogre. According to <a href="http://yosoygames.com.ar/wp/2013/07/ogre-2-0-is-up-to-3x-faster/" target="_self">a benchmark</a> (which he admits is very unfair, but the performance advantage measured cannot be <i>only</i> because of that) it works now three times faster. Not only that—he retained a lot of the old, familiar class abstractions, so the API was far from a complete rewrite.</p><h2>Is It Practical?</h2><p>There is a lot of evidence that game engines in this manner can and will be developed.</p><p><a href="http://molecularmusings.wordpress.com" target="_self">The development blog of Molecule Engine</a> has a series named <i>Adventures in Data-Oriented Design</i>,<i>&nbsp;</i>and contains a lot of useful advice regarding where DOD was put to use with great results.</p><p><a href="http://dice.se/publications/culling-the-battlefield-data-oriented-design-in-practice/" target="_self">DICE seems to be interested in data-oriented design</a>, as they have employed it in Frostbite Engine's culling system (and got significant, speed-ups, too!). Some other slides from them also include <a href="http://www.slideshare.net/DICEStudio/a-step-towards-data-orientation" target="_self">employing data-oriented design in the AI subsystem</a>—worth looking at, too.<br></p><p>Besides that, developers like the aforementioned&nbsp;<a href="http://macton.flavors.me/" target="_self">Mike Acton</a>&nbsp;seem to be embracing the concept. There are a few benchmarks which prove that it does gain a lot in performance, but I haven't seen a lot of activity on the data-oriented design front in quite some time. It could, of course, be just a fad, but its main premises seem very logical. There sure is a lot of inertia in this business (and any other software development business, for that matter) so this may be hindering large-scale adoption of such a philosophy. Or maybe it's not such a great idea as it seems to be. What do you think? Comments are very welcome!<br></p><h2>Further Reading</h2><ol><li><a href="http://macton.smugmug.com/gallery/9114809_C9awM#!i=607513208&amp;k=xqWYf"></a><a href="http://gamesfromwithin.com/data-oriented-design" target="_self">Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)</a> <br></li><li><a href="http://dice.se/publications/introduction-to-data-oriented-design/" target="_self">Introduction to Data Oriented Design [DICE]</a>&nbsp;</li><li><a href="http://stackoverflow.com/questions/1641580/what-is-data-oriented-design" target="_self">A rather nice discussion on Stack Overflow</a>&nbsp;</li><li><a href="http://www.dataorienteddesign.com/dodmain/dodmain.html" target="_self">An online book by Richard Fabian explaining a lot of the concepts</a>&nbsp;</li><li><a href="http://rcl-rs-vvg.blogspot.com/2011/04/measuring-benefits-of-data-oriented.html" target="_self">A benchmark showing other side of the story, a seemingly counter-intuitive result</a>&nbsp;</li><li><a href="http://www.bounceapp.com/116414" target="_self">Mike Acton's review of OgreNode.cpp, revealing some common OOP game engine development pitfalls</a>&nbsp;</li></ol><br><br><br><br><br><br><br><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21052/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21052/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21052/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21052/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T17:25:11.714Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T17:25:11.714Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:11:"Bart Jacobs";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:2;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:16:"David Davidović";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:1;a:6:{s:4:"data";s:38:"
     
     
     
@@ -471,251 +47,421 @@ NSLog(@"\n%@\n%@\n%@", NSStringFromCGPoint(point), NSStringFromCGSize(size), NSS
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20861";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:123:"http://gamedevelopment.tutsplus.com/tutorials/build-arkanoid-with-unity-block-mechanics-prefabs-and-level-design--cms-20861";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:69:"Build Arkanoid With Unity: Block Mechanics, Prefabs, and Level Design";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:16728:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/final_image/FinalProduct.jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure><p>In this tutorial series, we'll show you how to recreate the classic Arkanoid (or Breakout) game in Unity, using Unity's native 2D tools. In each post, we'll focus on a specific part of the game; in this post, we'll handle the block mechanics and the creation of Prefabs.<br></p><h2>Where We Left Off	</h2><p>In the previous tutorials, you <a href="https://gamedevelopment.tutsplus.com/tutorials/build-arkanoid-with-unity-project-setup--cms-20767" target="_self">set up the project</a> and <a href="https://gamedevelopment.tutsplus.com/tutorials/build-arkanoid-with-unity-player-and-ball-mechanics--cms-20860" target="_self">coded the behaviors of the paddle and ball</a>. If you haven't completed the previous tutorials yet, we strongly recommend you do so before continuing.</p><h2>Final Preview</h2><p>Take a look at this demo to see what we're aiming for across the whole series:<br></p><figure><iframe src="https://tutsplus.github.io/build-arkanoid-with-unity/Part4/playable_web_demo/ArkanoidTutorialPart4.html" width="600" height="400" frameborder="0" scrolling="no"></iframe></figure><p>And here's what we'll have at the end of this post:</p><figure><iframe src="https://tutsplus.github.io/build-arkanoid-with-unity/Part3/playable_web_demo/ArkanoidTutorialPart3.html" width="600" height="400" frameborder="0" scrolling="no"></iframe></figure><h2>Creating the Block Script<br></h2><p>Right now, almost all of the base mechanics are ready. The missing part is related to the block object. Since blocks are an important and active part of the game, we need to create a custom script for it.&nbsp;<br></p><p>The block script must contain information regarding:<br></p><ul><li>Total hits that it can handle.</li><li>Points to award upon breaking.</li></ul><p>(Note that the number of hits and points can change according to the block color.)&nbsp;Based on this, let's give the block three variables:<br></p><ul><li>A variable to store the number of hits the block can take.</li><li>A variable to store the score value of the block.</li><li>A variable to store the number of times the block has <i>already</i> been hit.</li></ul><p>The first two will be <code class="inline">public</code>, since you may want to modify their values in the editor. The third will be <code class="inline">private</code>, since it is for internal use only.&nbsp;</p><p>Thus, create a new script called&nbsp;<code class="inline">BlockScript</code>. Define those variables and&nbsp;initialise&nbsp;the number of hits to <code class="inline">0</code>:</p><pre class="brush: csharp">public class BlockScript : MonoBehaviour {
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20700";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:84:"http://code.tutsplus.com/tutorials/google-play-game-services-leaderboards--cms-20700";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:39:"Google Play Game Services: Leaderboards";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:30800:"<p>Google Play Game Services provide the opportunity to add social features to your games through users' Google+ accounts. In this tutorial, we will demonstrate how you can add leaderboards to an Android app, submitting user scores, and presenting the current leaderboard standings within the game.</p><p>Using leaderboards involves preparing your IDE, configuring the leaderboard in the Google Play Developer Console, and adding functionality to your app.</p><p>If you completed the <a href="https://code.tutsplus.com/tutorials/google-play-game-services-achievements--cms-20591" target="_self">recent tutorial on adding achievements</a> to Android apps, you will be able to skip some of the steps in this one. The attached source code includes the same app we used for the achievements tutorial, with both achievements and leaderboards functionality added.</p><h2><span class="sectionnum">1.</span> Prepare Your IDE</h2><h3>Step 1</h3><p>To use Google Play Services, you need certain utilities installed in your development environment. In addition, since we are using Game Services, we will install the <b>BaseGameUtils</b> library, which reduces&nbsp;the amount of coding we need to implement features such as Google+ sign-in.</p><p>To get started, create a new app or use an existing one. If you followed the achievements tutorial, you can use the app you built for that tutorial. If you are creating your own game, decide what you want to use leaderboards for and&nbsp;when you plan on submitting a user&nbsp;score. Each leaderboard score will be a number. You can configure the leaderboard to regard lower or higher number values as better in terms of position in the leaderboard, but naturally this will depend on the purpose of your game.</p><p>The code in the download folder includes a simple game in which the user guesses a number. We will use the number of guesses required to get the correct answer as the leaderboard score. In this case, fewer guesses are better, so the leaderboard will present the lowest scores first. For simplicity, we will limit the number of guesses a user can take. This is a trivial example to demonstrate the leaderboard concept and functionality. Your own games will likely involve more complexity.</p><h3>Step 2</h3><p>Let's get Eclipse ready for developing with Google Play Game Services. Open the <b>Android&nbsp;SDK Manager</b> and scroll to the <b>Extras</b> folder. Expand the folder and select <b>Google Play Services</b> plus the <b>Google Repository</b>. Install the <b>Google APIs Platform</b> from one of the recent Android versions as well if you want to test on the emulator. Install the chosen packages.</p><h3>Step 3</h3><p>Eclipse will also need to reference some additional resources in the workspace. On your computer, navigate to the location of the <b>Google Play Services Library</b>, which should be in the Android SDK folder, at <b>extras/google/google_play_services/libproject/google-play-services_lib/</b>. Copy and paste the library somewhere else on your computer.</p><p>We now&nbsp;need a reference to this copy in Eclipse. Choose&nbsp;<b>Import &gt;</b>&nbsp;<b>Android &gt;</b>&nbsp;<b>Import Existing Android Code into Workspace</b> from the&nbsp;<b>File&nbsp;</b>menu. Select the location of the copy you made. The imported library should now show up as a new project in Eclipse. Right-click it and choose <b>Properties</b>. In the <b>Android</b> section, choose a Google APIs build target and check the <b>Is Library</b>&nbsp;checkbox.</p><h3>Step 4</h3><p>Importing the <b>BaseGameUtils</b> resource is slightly different. The library is hosted on GitHub. You can find it in the&nbsp;<a href="https://developers.google.com/games/services/downloads/" target="_self">Downloads</a>&nbsp;section, under Sample Games. Download the library&nbsp;and save it to your computer.</p><p>As you did for the Google Play Services library, choose&nbsp;<b>Import &gt; Android &gt;&nbsp;Import Existing Android Code into </b><b>Workspace</b> from the&nbsp;<b>File</b> menu&nbsp;to bring the BaseGameUtils library into Eclipse. Right-click&nbsp;to navigate to the new project properties and make sure the project is marked as a library by checking&nbsp;<b>Is Library</b>.</p><h3>Step 5</h3><p>We can now&nbsp;make the app refer to these two resources within the workspace. Right-click your app in the Package Explorer and choose <b>Properties</b>. Navigate to the <b>Android</b> section and select <b>Add</b>&nbsp;in the <b>Library</b> section. Choose both the <b>Google Play Services</b> library and <b>BaseGameUtils</b>, and add them to your app.</p><h2><span class="sectionnum">2.</span>&nbsp;Prepare Your Game in the Developer Console</h2><h3>Step 1<br></h3><p>Before you can create a leaderboard, the app needs to be&nbsp;listed in the <b>Google Play&nbsp;Developer Console</b>. Log in and click the <b>Game Services</b> button to the left. If you already did this for your app in the <a href="https://code.tutsplus.com/tutorials/google-play-game-services-achievements--cms-20591" target="_self">achievements tutorial</a>, you do not need to do it again. You can jump to section 3 on creating a leaderboard.</p><p>Click <b>Set up Google Play game services</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20591/image/google-play-game-achievements-setup.png"></figure><p>Click to add a new game,&nbsp;select&nbsp;<b>I don't use any Google APIs in my game yet</b>, and choose&nbsp;a name and category for your game. Click&nbsp;<b>Continue</b><b>&nbsp;</b>to go to the next step.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20591/image/google-play-game-achievements-details.png"></figure><p>Add your game's title. You can add other details later.</p><h3>Step 2</h3><p>Let's now&nbsp;link the app so that we can refer to this Developer Console&nbsp;listing in the app itself. Click the <b>Linked Apps</b> entry in the list on the left and choose <b>Android</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20591/image/google-play-game-achievements-linked.png"></figure><p>Enter your app info including the package name, making sure it's the same as the one you are using in your project.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20591/image/google-play-game-achievements-link-details.png"></figure><p>Save and click <b>Authorize your app now</b>. For the moment, you can just add the app name, but you can enter more details later. Choose <b>Installed Application</b> in the Client ID area, with <b>Android</b> as the type and&nbsp;enter your package name. You now&nbsp;need to use the keytool utility&nbsp;to generate a signing certificate. You can use the following command in a terminal or command prompt in combination with the&nbsp;debug certificate:</p><pre class="brush: bash">keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore -list -v</pre><p>The terminal or command prompt&nbsp;will write out the fingerprint for the certificate. Copy what you see after <b>SHA1</b> and paste it into the Developer Console in the&nbsp;<b>Signing Certificate Fingerprint </b>text area.</p><p>Select <b>Create Client</b> and copy the ID for the application, which is&nbsp;listed next to the app name in the Developer Console. You will be adding the ID to your app along with the ID for the leaderboard we are about to create.</p><h2><span class="sectionnum">3.</span> Create a Leaderboard</h2><h3>Step 1</h3><p>Still in the Developer Console, let's now create a new leaderboard. Select the <b>Leaderboards</b> section in your app listing and click <b>Add leaderboard</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20700/image/google-play-game-leaderboards-new.png"></figure><p>Make sure you understand the concept of Leaderboards on Android—and in Google Play Game Services generally. You can read an overview on the&nbsp;<a href="https://developers.google.com/games/services/common/concepts/leaderboards" target="_self">Google Play Game Services</a>&nbsp;website. You can actually do a lot of different things with leaderboards, so consider what we do in this tutorial just a starting point.</p><p>Enter the details for your new leaderboard. For our sample code, we use the name <b>Least Guesses</b>&nbsp;and select <b>Smaller is Better&nbsp;</b>in the&nbsp;<b>Ordering&nbsp;</b>section.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20700/image/google-play-game-leaderboards-new-details.png"></figure><p>Add an icon if you like. If you don't&nbsp;a standard image will be used. Save your new leaderboard and copy its ID.</p><h3>Step 2</h3><p>In the <b>Testing</b> section for your app in the Developer Console, you can add accounts that will be granted access to test the game. By default,&nbsp;you will see your own Google account email listed there, so you should be able to use it for testing your app.</p><h2><span class="sectionnum">4.</span>&nbsp;Prepare Your Game&nbsp;for Accessing Games Services</h2><h3>Step 1</h3><p>It's time to&nbsp;get the app ready for leaderboard access in Eclipse. If you completed the <a href="https://code.tutsplus.com/tutorials/google-play-game-services-achievements--cms-20591" target="_self">achievements tutorial</a> you can skip some of this section. Let's first add the IDs for the app and the leaderboard. Open or create a <b>res/values/ids.xml</b>&nbsp;resource file. Use the following syntax to enter the IDs you copied for the app and the new leaderboard when you created them in the Developer Console:</p><pre class="brush: xml">&lt;string name="app_id"&gt;1234567890&lt;/string&gt;
+&lt;string name="number_guesses_leaderboard"&gt;abcdefg1234567&lt;/string&gt;</pre><p>Save the file and open the project's&nbsp;<b>Manifest</b>. Add the following inside the&nbsp;<code class="inline">application</code> element:</p><pre class="brush: xml">&lt;meta-data
+ android:name="com.google.android.gms.games.APP_ID"
+ android:value="@string/app_id" /&gt;
+&lt;meta-data
+ android:name="com.google.android.gms.version"
+ android:value="@integer/google_play_services_version" /&gt;</pre><p>The app is now&nbsp;set up to link to the listings we added in the Developer Console.</p><h3>Step 2</h3><p>When you utilize Google Services in your Android apps, you need your users to sign into their Google accounts. You can take a number of approaches to implement this, but&nbsp;we are going to automate parts of this process&nbsp;by using the <code class="inline">BaseGameActivity</code> class together with standard buttons for signing in and out. Additionally, when the activity starts, the app will attempt to log the user in straight away.</p><p>Open your app's main layout file and add buttons for sign in/out:</p><pre class="brush: xml">&lt;!-- sign-in button --&gt;
 
-    public int hitsToKill:
-	public int points;
-	private int numberOfHits;
+&lt;com.google.android.gms.common.SignInButton
+ android:id="@+id/sign_in_button"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content" /&gt;
 
-	// Use this for initialization
-	void Start () {
-		numberOfHits = 0;
+&lt;!-- sign-out button --&gt;
+
+&lt;Button
+ android:id="@+id/sign_out_button"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:text="Sign Out"
+ android:visibility="gone" /&gt;</pre><h3>Step 3</h3><p>Add these imports to your main <code class="inline">Activity</code> class:</p><pre class="brush: java">import com.google.android.gms.games.Games;
+import com.google.example.games.basegameutils.BaseGameActivity;</pre><p>Make the <code class="inline">Activity</code>&nbsp;class extend the&nbsp;<code class="inline">BaseGameActivity</code>&nbsp;class and listen for clicks:</p><pre class="brush: java">public class MainActivity extends BaseGameActivity implements View.OnClickListener</pre><p>Prepare to respond to clicks on the sign in/out buttons in <code class="inline">onCreate</code>:</p><pre class="brush: java">findViewById(R.id.sign_in_button).setOnClickListener(this);
+findViewById(R.id.sign_out_button).setOnClickListener(this); </pre><p>Now add the following standard methods to an <code class="inline">onClick</code> method in the class:</p><pre class="brush: java">@Override
+public void onClick(View view) {
+    if (view.getId() == R.id.sign_in_button) {
+		beginUserInitiatedSignIn();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	else if (view.getId() == R.id.sign_out_button) {
+		signOut();
+		findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
+		findViewById(R.id.sign_out_button).setVisibility(View.GONE);
 	}
-}</pre><p>The next step is to detect when the balls hit a block. When this collision occurs, we check whether the block has been hit enough times to be destroyed, or whether it's still intact. For that, we can use a specific method called <code class="inline">OnCollisionEnter2D</code>, which is called every time that a collision occurs to your object.</p><p>To check whether this collision is between the ball and the block, we must <i>tag</i> the ball object. In the editor, select the ball from the <b>Hierarchy</b> tab and then the <b>Inspector</b>. On the top of the <b>Inspector</b>, just under the game object name, there is a field called <b>Tag</b> that is currently defined as <code class="inline">Untagged</code>.&nbsp;Click the button, and a drop-down menu will pop up with the different tag possibilities:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/02.png"></figure><p>We want a specific tag for the ball, so hit <b>Add Tag</b> to create a new tag. Once you press the option a new interface appears:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/03.png"></figure><p>For this tutorial, we will only focus on the <b>Element 0</b> property. This defines the name of the tag, so type the name <code class="inline">Ball</code>&nbsp;into it.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/04.png"></figure><p>Now that you have the new <code class="inline">Ball</code> tag, change the ball object's tag to <code class="inline">Ball</code>.</p><p><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/05.png"><br></p><p>Open the <code class="inline">BlockScript</code> file so we can code the <code class="inline">OnCollisionEnter2D</code>&nbsp;method. To identify the ball game object, check whether the game object tag is <code class="inline">Ball</code>; if so, then the collision was between the block and the ball. Add the following code to your script.</p><pre class="brush: csharp">    void OnCollisionEnter2D(Collision2D collision){
-
-		if (collision.gameObject.tag == "Ball"){
-
-        }
-	}</pre><p>Now you can detect collisions with the ball. Upon every collision, we want to increase the record of the number of times the block got hit and, if the number the times the block got hit is the same as the maximum number of hits the block can take, destroy the block. For the latter, we can use the <a href="https://docs.unity3d.com/Documentation/ScriptReference/Object.Destroy.html" target="_self">Destroy</a> method.</p><p>&nbsp;The updated <code class="inline">OnCollisionEnter2D</code> to do this looks like the following:</p><pre class="brush: csharp">    void OnCollisionEnter2D(Collision2D collision){
-
-		if (collision.gameObject.tag == "Ball"){
-			numberOfHits++;
-
-			if (numberOfHits == hitsToKill){
-				// destroy the object
-				Destroy(this.gameObject);
-			}
-		}
-	}</pre><p>Now add the <code class="inline">BlockScript</code> to the <b>Ball</b> object (<b>Hierarchy &gt; Inspector &gt; Add Component</b>):</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/06.png"></figure><p>It is now time to check that everything is fine. Change the <b>Hits To Kill</b>&nbsp;value in the editor to <code class="inline">1</code> and <b>Play</b> the game. When the ball hit the block, the block should disappear.</p><h2>	Creating a Prefab</h2><p>Now that the block mechanics are ready, we will populate the level. Since you will use several blocks for this, this is a good time to introduce Unity's <i>Prefabs</i>.&nbsp;</p><p>A Prefab is a reusable game object that can be inserted several times in the same scene. Basically, this means that if you want, for example, to change the value of points of the blue blocks, you don't have to do it to every single blue block on the scene: if you have a Prefab of a blue block, you just adjust the Prefab value and all the blocks on the scene will be updated.</p><p>To create a Prefab for the blue blocks, start by renaming the <b>Block</b> object to <b>Blue Block</b>. Next, create a new folder in the <b>Assets</b> folder called <b>Prefabs</b>. Now, drag the <b>Blue Blocks</b> object inside the new folder.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/07.png"></figure><p>As you may have noticed, the cube icon on the top of the <b>Inspector</b> is now blue. Also, the name of the game object in the scene <b>Hierarchy</b> is also blue. This means that the block is now a Prefab. Quite simple, isn't it? From now on, selecting the Prefab and changing its values will apply every change you make to the parameters of all our blue blocks.</p><p>To test the Prefab, drag it from the folder to our <b>Hierarchy</b> tab. As you can see, now we have two blue blocks, but they share the same position, which was defined by the Prefab.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/08.png"></figure><p>To have the two blocks in different positions, just select one of them from the <b>Hierarchy</b> tab and move it around the scene. This way, you change the values of that specific copy of the block and not all of the blocks.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/09.jpg"></figure><p>You can <b>Play</b> the game and test the Prefabs.</p><h2>	Recreating Prefabs</h2><p>Now you will create the remaining Prefabs for the other blocks (green, yellow, and red). The main steps for each one are:</p><ol><li>Create a new Sprite.</li><li>Add the corresponding image.</li><li>Add a Box Collider 2D.</li><li>Add the BlockScript.</li><li>Name it accordingly.</li><li>Create a Prefab.</li></ol><p>In the end you should have four different Prefabs (one for each type of block):</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/10.png"></figure><p>In order to make the gameplay more interesting, change the <b>Hits To Kill</b> for each type of block like so:</p><ul><li>Blue: <code class="inline">1</code> hit.</li><li>Green: <code class="inline">2</code> hits.</li><li>Yellow: <code class="inline">3</code> hits.</li><li>Red: <code class="inline">4</code> hits.</li></ul><p>Add some blocks and <b>Play</b> the game; check that everything is running as expected.</p><h2>	Level Design</h2><p>It is now time to create your first level. Using the Prefabs, populate the game area with several blocks. If you have been placing as many blocks as we did, your <b>Hierarchy</b> tab is probably overpopulated with block game objects! In order to keep your project well&nbsp;organised, let's create empty game objects for the four types of blocks, and then group the blocks by color:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/11.png"></figure><p>At this point, your game is almost ready, your basic mechanics are implemented, and it should look similar to the next figure:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/12.jpg"></figure><h2>	Score and Lives System</h2><p>The score and life system is one way to test the players and introduce new dynamics into games. At this point, your game don't have any way for players to progress or lose. Let's change that now.&nbsp;</p><p>Open the <code class="inline">PlayerScript</code> and add two variables: one for score, and one for the number of lives the player has. We'll let the player start the game with three lives and no points:</p><pre class="brush: csharp">private int playerLives;
-    private int playerPoints;
-
-	// Use this for initialization
-	void Start () {
-		// get the initial position of the game object
-		playerPosition = gameObject.transform.position;
-
-		playerLives = 3;
-		playerPoints = 0;
-
-	}</pre><p>We need a method that increases the number of points the player has every time they destroy a block. Create a new method called <code class="inline">addPoints</code>&nbsp;to do this:</p><pre class="brush: csharp">void addPoints(int points){
-    playerPoints += points;
-}</pre><p>Now we have the new method that is expecting a value—but how it will receive it? There are too many blocks to make references to the player's paddle object in each...&nbsp;</p><p>The best way to solve this is to send a message from the block object to the paddle object.&nbsp;How we do that? Well, first you need to tag the paddle (<b>Hierarchy &gt; Inspector &gt; Tag</b>) with the <b>Player</b> tag.</p><p><br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/13.png"></figure><p>With the paddle tagged, it's time to move to the block script, where we will change the method <code class="inline">OnCollisionEnter2D</code> to send the points to the player object: before the block is destroyed, we'll search for a game object with the <code class="inline">Player</code> tag using the <code class="inline">FindGameObjectsWithTag</code> method; this will return an array of matching object, ans since there's only one object with that tag, we know that the object in position 0 of the returned array is the player's paddle object.</p><p>Now that you have your player reference, you can send it a message using the <code class="inline">SendMessage</code> method. With this, you can call a specific method of the player object—in this case, the <code class="inline">addPoints</code> method.&nbsp;</p><p>The next snippet shows you how all this works:</p><pre class="brush: csharp">void OnCollisionEnter2D(Collision2D collision){
-
-    if (collision.gameObject.tag == "Ball"){
-		numberOfHits++;
-
-		if (numberOfHits == hitsToKill){
-			// get reference of player object
-			GameObject player = GameObject.FindGameObjectsWithTag("Player")[0];
-
-			// send message
-			player.SendMessage("addPoints", points);
-
-			// destroy the object
-			Destroy(this.gameObject);
-		}
-	}
-}</pre><p>The next thing we need to do is edit the Prefabs and give specific point values to each block type. You can use the following values:</p><ul><li>Blue: <code class="inline">10</code> points;</li><li>Green: <code class="inline">20</code> points;</li><li>Yellow: <code class="inline">35</code> points;</li><li>Red: <code class="inline">50</code> points;</li></ul><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/262/posts/20861/image/14.png"></figure><p>Now, let's show these points and lives in the game interface. In the player script, create a method called <code class="inline">OnGUI</code>. This method will present the GUI of your game; it is one of the basic methods to present information in the gaming area. (Note the case-sensitive characters).</p><p>To present the points and lives, we need to create a <code class="inline">Label</code> with the desired text. In the <code class="inline">PlayerScript</code>, add the <code class="inline">OnGUI</code> method, and create this label&nbsp;in it:</p><pre class="brush: csharp">void OnGUI(){
-    GUI.Label (new Rect(5.0f,3.0f,200.0f,200.0f),"Live's: " + playerLives + "  Score: " + playerPoints);
-}</pre><p>You can now <b>Play</b> the game and the label will be presented in the top left part of the screen. However, you have not yet programmed the lives and points display to update accordingly!&nbsp;</p><p>Using the same <code class="inline">PlayerScript</code>, add the following <code class="inline">TakeLife</code>&nbsp;method. The method will only subtract one life from the player pool each time it is called:</p><pre class="brush: csharp">void TakeLife(){
-    playerLives--;
-}</pre><p>Finally, move to the <code class="inline">BallScript</code>, and, in the section where you check if the ball has fallen off the screen, send a message to the player object with the <code class="inline">TakeLife</code> method. The complete snippet is presented below:</p><pre class="brush: csharp">// Check if ball falls
-    if (ballIsActive &amp;&amp; transform.position.y &lt; -6) {
-		ballIsActive = !ballIsActive;
-		ballPosition.x = playerObject.transform.position.x;
-		ballPosition.y = -4.2f;
-		transform.position = ballPosition;
-				
-		rigidbody2D.isKinematic = true;
-
-		// New code - Send Message
-		playerObject.SendMessage("TakeLife");
-	}</pre><p>Play your game and verify that the score and lives system works as expected.<br></p><h2>Next Time</h2><p>This concludes the third post in the series. The basic game mechanics are all in place, so next time we'll add audio and new levels, and deploy the finished game.</p><p>If you have any questions or feedback on what we've covered so far, feel free to leave a comment below.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20861/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20861/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20861/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20861/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T17:00:11.535Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T17:00:11.535Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
-      
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:33:"Orlando Pereira and Pedro Pereira";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:3;a:6:{s:4:"data";s:38:"
-    
-    
-    
-    
-    
-    
-    
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20340";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:87:"http://code.tutsplus.com/tutorials/taxonomy-archives-list-posts-by-post-type--cms-20340";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:42:"Taxonomy Archives: List Posts by Post Type";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:11517:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/227/posts/20340/final_image/creating-taxonomy-archive-to-list-by-post-type-final-archive.jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure><p>In an <a href="https://webdesign.tutsplus.com/tutorials/create-a-post-type-archive-to-list-posts-by-taxonomy-terms--cms-20045" target="_self">earlier tutorial</a>, I demonstrated how to create a taxonomy archive which lists posts by taxonomy term.</p><p>This tutorial is similar in that it shows you how to separate out posts in your archives, but it uses a different structure and a different template file. What I'll show you how to do here is to create an archive template for a taxonomy which lists posts by post type.</p><p>This might be useful if you have registered a post type which you want to keep separate from normal posts or from another post type, but have a taxonomy which applies to both. For example, if you're listing books and articles as different post types, but will have common topics as your taxonomy (e.g. WordPress!).</p><p>In the example I'll use here, I'll work with the 'animals' post type as I did in the previous tutorial, but this time I'll also be working with normal posts. I'll list animals with the queried term first and then I'll list blog posts with that term.</p><h2>1. Getting Started: Creating the Theme<br></h2><p>I'll create a theme which is a child theme of twentyfourteen, so if you're using the source files for this tutorial you'll also need that theme installed in your site. In my theme's stylesheet, I add the following:</p><pre class="brush: css">/*
-Theme Name:     WPTutsPlus Creating a Taxonomy Archive to List Posts by Post Type
-Theme URI:      http://rachelmccollin.co.uk/wptutsplus-tax-archive-by-post-type/
-Description:    Theme to support WPTutsPlus tutorial on creating a custom taxonomy archive. Child theme for the Twenty Fourteen theme.
-Author:         Rachel McCollin
-Author URI:     http://rachelmccollin.co.uk/
-Template:       twentyfourteen
-Version:        1.0
-*/
-
-@import url("../twentyfourteen/style.css");</pre><p>That's all I need to add to create my child theme. If you're using your own theme, you can skip this step.</p><h2>2. Registering the Post Type and Taxonomy<br></h2><p><i>Note: If you followed my other tutorial about creating a custom post type archive template, you can use the theme you created for that as it uses the same post types and taxonomy. You'll just need to make one tweak which I'll highlight in this section, and add a new template file for the taxonomy archive.</i></p><p>The next step is to register the 'animal' post type and a 'animal family' taxonomy. Create a <code class="inline">functions.php</code> file for your theme and firstly add the function to register the post type:</p><pre class="brush: php">// register a custom post type called 'animals'
-function wptp_create_post_type() {
-    $labels = array( 
-		'name' =&gt; __( 'Animals' ),
-		'singular_name' =&gt; __( 'animal' ),
-		'add_new' =&gt; __( 'New animal' ),
-		'add_new_item' =&gt; __( 'Add New animal' ),
-		'edit_item' =&gt; __( 'Edit animal' ),
-		'new_item' =&gt; __( 'New animal' ),
-		'view_item' =&gt; __( 'View animal' ),
-		'search_items' =&gt; __( 'Search animals' ),
-		'not_found' =&gt;  __( 'No animals Found' ),
-		'not_found_in_trash' =&gt; __( 'No animals found in Trash' ),
-	);
-	$args = array(
-		'labels' =&gt; $labels,
-		'has_archive' =&gt; true,
-		'public' =&gt; true,
-		'hierarchical' =&gt; false,
-		'supports' =&gt; array(
-			'title', 
-			'editor', 
-			'excerpt', 
-			'custom-fields', 
-			'thumbnail',
-			'page-attributes'
-		),
-		'taxonomies' =&gt; array( 'post_tag', 'category'), 
-	);
-	register_post_type( 'animal', $args );
-} 
-add_action( 'init', 'wptp_create_post_type' );</pre><p>Next below that step, register the aminal family taxonomy.</p><p><i>If you're working with the theme created in the earlier tutorial, you'll need to add <code class="inline">array('animal,'post')</code> to your arguments for the function, intend of just <code class="inline">'animal'</code>.</i></p><pre class="brush: php">// register a taxonomy called 'Animal Family'
-function wptp_register_taxonomy() {
-    register_taxonomy( 'animal_cat', array( 'animal', 'post' ),
-		array(
-			'labels' =&gt; array(
-				'name'              =&gt; 'Animal Families',
-				'singular_name'     =&gt; 'Animal Family',
-				'search_items'      =&gt; 'Search Animal Families',
-				'all_items'         =&gt; 'All Animal Families',
-				'edit_item'         =&gt; 'Edit Animal Families',
-				'update_item'       =&gt; 'Update Animal Family',
-				'add_new_item'      =&gt; 'Add New Animal Family',
-				'new_item_name'     =&gt; 'New Animal Family Name',
-				'menu_name'         =&gt; 'Animal Family',
-			),
-			'hierarchical' =&gt; true,
-			'sort' =&gt; true,
-			'args' =&gt; array( 'orderby' =&gt; 'term_order' ),
-			'rewrite' =&gt; array( 'slug' =&gt; 'animal-family' ),
-			'show_admin_column' =&gt; true
-		)
-	);
+}</pre><p>The methods we call here are provided by the <code class="inline">BaseGameActivity</code>&nbsp;class our <code class="inline">Activity</code> class is&nbsp;inheriting from, so we don't need to handle the details manually. Finally, we add a couple of standard callbacks:</p><pre class="brush: java">public void onSignInSucceeded() {
+    findViewById(R.id.sign_in_button).setVisibility(View.GONE);
+	findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
 }
-add_action( 'init', 'wptp_register_taxonomy' );</pre><p>Save your functions file and you'll find your new post type and taxonomy appear in your site admin.</p><p>Now add some data - I've added some animals and posts to the 'Canines' family.</p><h2>3. Creating the Archive Template<br></h2><p>Now create a file called <code class="inline">taxonomy-animal_cat.php</code>. This will be the archive template for the new taxonomy.</p><p>Copy the wrapper code from your theme to this file so it has elements and classes in common with the rest of your theme. I'm copying from twentyfourteen - if you're using your own theme, copy from that. Copy everything except the heading and the loop, and add some comments at the top to remind you what this file is for:</p><pre class="brush: php">&lt;?php
-/*
-WpTutsPlus tutorial for creating archive to display posts by taxonomy term
-Archive template for animal_cat taxonomy
-*/
-?&gt;
 
-&lt;?php get_header(); ?&gt;
+@Override
+public void onSignInFailed() {
+	findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
+	findViewById(R.id.sign_out_button).setVisibility(View.GONE);
+}</pre><p>When we call on the leaderboard functionality, we will first check that the app has a connection to Google Services. You could alternatively add code to these methods to manage your app's awareness of whether or not Play Services can be called on.</p><h2><span class="sectionnum">5.</span> Implement Your&nbsp;Leaderboard</h2><h3>Step 1</h3><p>Now we can let the app use the leaderboard. The code in the sample app uses the following layout. I&nbsp;won't go into detail explaining the layout&nbsp;as your own apps will have a different layout.</p><pre class="brush: xml">&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="@dimen/activity_vertical_margin"
+	android:paddingLeft="@dimen/activity_horizontal_margin"
+	android:paddingRight="@dimen/activity_horizontal_margin"
+	android:paddingTop="@dimen/activity_vertical_margin"
+	tools:context="com.example.fungame.MainActivity" &gt;
 
-&lt;div id="main-content" class="main-content"&gt;
+	&lt;LinearLayout
+		android:id="@+id/sign_in_buttons"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:orientation="horizontal" &gt;
 
-    &lt;div id="primary" class="content-area"&gt;
-		&lt;div id="content" class="site-content" role="main"&gt;
+		&lt;!-- sign-in button --&gt;
 
-			
-			
-		&lt;/div&gt;&lt;!-- #content --&gt;
-	&lt;/div&gt;&lt;!-- #primary --&gt;
-	&lt;?php get_sidebar( 'content' ); ?&gt;
-&lt;/div&gt;&lt;!-- #main-content --&gt;
+		&lt;com.google.android.gms.common.SignInButton
+			android:id="@+id/sign_in_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" /&gt;
 
-&lt;?php
-get_sidebar();
-get_footer();</pre><h2>4. Identifying the Queried Object<br></h2><p>So that you can display the name of the term being queried and define your queries in the two loops you'll be creating, you need to identify the queried object and save it as a variable.</p><p>Add the following somewhere near the top of your archive template (I'm adding it below the <code class="inline">get_header()</code> call):</p><pre class="brush: php">&lt;?php
-// get the currently queried taxonomy term, for use later in the template file
-$term = get_queried_object();
-?&gt;</pre><p>You'll be using that in the next&nbsp;step.</p><h2>5. Outputting the Archive Heading<br></h2><p>Before adding your loops, you need to output a heading for your archive page. Inside the opening of the <code class="inline">#content</code> div, add the code below:</p><pre class="brush: php">&lt;header class="archive-header"&gt;
-    &lt;h1 class="archive-title"&gt;
-		&lt;?php echo $term-&gt;name; ?&gt;
-		&lt;?php //post_type_archive_title(); ?&gt;
-	&lt;/h1&gt;
-&lt;/header&gt;&lt;!-- .archive-header --&gt;</pre><h2>6. The First Loop<br></h2><p>Below the heading, you need to add your first loop, using <code class="inline">WP_Query</code> as you'll need to define the arguments.&nbsp;</p><p>First define the query:</p><pre class="brush: php">// Define the query
-$args = array(
-    'post_type' =&gt; 'animal',
-	'animal_cat' =&gt; $term-&gt;slug
-);
-$query = new WP_Query( $args );</pre><p>Note that this uses the<code class="inline">$term</code> variable you've already defined.</p><p>And then add the loop, outputting a link to each animal in an unordered list:</p><pre class="brush: php">if ($query-&gt;have_posts()) {
-    	
-	// output the term name in a heading tag				
-	echo'&lt;h2&gt;Animals in the ' . $term-&gt;name . ' Family&lt;/h2&gt;';
-	
-	// output the post titles in a list
-	echo '&lt;ul&gt;';
-	
-		// Start the Loop
-		while ( $query-&gt;have_posts() ) : $query-&gt;the_post(); ?&gt;
+		&lt;!-- sign-out button --&gt;
 
-		&lt;li class="animal-listing" id="post-&lt;?php the_ID(); ?&gt;"&gt;
-			&lt;a href="&lt;?php the_permalink(); ?&gt;"&gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;
-		&lt;/li&gt;
-		
-		&lt;?php endwhile;
-		
-		echo '&lt;/ul&gt;';
-		
-} // end of check for query having posts
-	
-// use reset postdata to restore orginal query
-wp_reset_postdata();
+		&lt;Button
+			android:id="@+id/sign_out_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Sign Out"
+			android:visibility="gone" /&gt;
+	&lt;/LinearLayout&gt;
 
-?&gt;</pre><p>It's important to include two things here:</p><ul><li>A check that the query has posts - you don't want to output a heading with no list beneath it.</li><li><code class="inline">wp_reset_postdata()</code> to reset the query - you must always use this with <code class="inline">WP_Query</code>.</li></ul><h2>7. The Second Loop<br></h2><p>The second loop is almost identical to the first loop except for the query arguments:</p><pre class="brush: php">&lt;?php //second query - posts
+	&lt;RelativeLayout
+		android:id="@+id/gameArea"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/sign_in_buttons" &gt;
 
-// Define the query
-$args = array(
-    'post_type' =&gt; 'post',
-	'animal_cat' =&gt; $term-&gt;slug
-);
-$query = new WP_Query( $args );
+		&lt;TextView
+			android:id="@+id/guess_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:text="Guess the number!"
+			android:textSize="30sp"
+			android:textStyle="bold" /&gt;
 
-if ($query-&gt;have_posts()) {
+		&lt;LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/guess_text"
+			android:orientation="vertical" &gt;
 
-		
-	// output the term name in a heading tag				
-	echo'&lt;h2&gt;Blog Posts About the ' . $term-&gt;name . ' Family&lt;/h2&gt;';
-	
-	// output the post titles in a list
-	echo '&lt;ul&gt;';
-	
-		// Start the Loop
-		while ( $query-&gt;have_posts() ) : $query-&gt;the_post(); ?&gt;
+			&lt;LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" &gt;
 
-		&lt;li class="animal-listing" id="post-&lt;?php the_ID(); ?&gt;"&gt;
-			&lt;a href="&lt;?php the_permalink(); ?&gt;"&gt;&lt;?php the_title(); ?&gt;&lt;/a&gt;
-		&lt;/li&gt;
-		
-		&lt;?php endwhile;
-		
-		echo '&lt;/ul&gt;';
-		
-} // end of check for query having posts
-	
-// use reset postdata to restore orginal query
-wp_reset_postdata();
+				&lt;Button
+					android:id="@+id/btn7"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="7"
+					android:text="7"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
 
-?&gt;</pre><p>Now save your template file and preview the archive. You should see two lists, one of animals and the other of posts:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/227/posts/20340/image/creating-taxonomy-archive-to-list-by-post-type-final-archive.jpg"></figure><h2>Summary</h2><p>That's how you create a taxonomy archive to list posts by post type. You could extend this technique to make your archive&nbsp;pages more interesting:</p><ul><li>Varying the loops so that different content is output for each one, for example outputting a featured image or excerpt for some post types.</li><li>Adding different styling for each post type.</li><li>Changing the layout so the archives are side by side or in a grid. You can see and example of a site where I did this at&nbsp;<a href="http://type-academy.co.uk/temperament-intro/">http://type-academy.co.uk/temperament-intro/</a></li><li>Adapting this technique to category or tag archives by altering your query arguments.</li></ul><p>I'm sure you can think of more possibilities!</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20340/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20340/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20340/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20340/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T15:00:08.624Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T15:00:08.624Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+				&lt;Button
+					android:id="@+id/btn8"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="8"
+					android:text="8"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+
+				&lt;Button
+					android:id="@+id/btn9"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="9"
+					android:text="9"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+			&lt;/LinearLayout&gt;
+
+			&lt;LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="horizontal" &gt;
+
+				&lt;Button
+					android:id="@+id/btn4"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="4"
+					android:text="4"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+
+				&lt;Button
+					android:id="@+id/btn5"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="5"
+					android:text="5"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+
+				&lt;Button
+					android:id="@+id/btn6"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="6"
+					android:text="6"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+			&lt;/LinearLayout&gt;
+
+			&lt;LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="horizontal" &gt;
+
+				&lt;Button
+					android:id="@+id/btn1"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="1"
+					android:text="1"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+
+				&lt;Button
+					android:id="@+id/btn2"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="2"
+					android:text="2"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+
+				&lt;Button
+					android:id="@+id/btn3"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="3"
+					android:text="3"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+			&lt;/LinearLayout&gt;
+
+			&lt;LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="horizontal" &gt;
+
+				&lt;Button
+					android:id="@+id/btn0"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ff000033"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="0"
+					android:text="0"
+					android:textColor="#ffffffff"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+
+				&lt;Button
+					android:id="@+id/btnAgain"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#ffffff00"
+					android:enabled="false"
+					android:gravity="center"
+					android:onClick="btnPressed"
+					android:padding="5dp"
+					android:tag="-1"
+					android:text="Again"
+					android:textColor="#ffffff00"
+					android:textSize="30sp"
+					android:textStyle="bold" /&gt;
+			&lt;/LinearLayout&gt;
+		&lt;/LinearLayout&gt;
+	&lt;/RelativeLayout&gt;
+
+	&lt;LinearLayout
+		android:id="@+id/play_buttons"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/gameArea"
+		android:gravity="center"
+		android:orientation="horizontal" &gt;
+
+		&lt;!-- show achievements --&gt;
+
+		&lt;Button
+			android:id="@+id/show_achievements"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Achievements" /&gt;
+
+		&lt;!-- show leaderboards --&gt;
+
+		&lt;Button
+			android:id="@+id/show_leaderboard"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Leaderboard" /&gt;
+	&lt;/LinearLayout&gt;
+
+&lt;/RelativeLayout&gt;</pre><p>We add buttons to access both achievements and leaderboards for the app. If you haven't completed&nbsp;the <a href="https://code.tutsplus.com/tutorials/google-play-game-services-achievements--cms-20591" target="_self">achievements tutorial</a>, then you can&nbsp;remove the achievements button.</p><p>Back in your application's <code class="inline">Activity</code>&nbsp;class,&nbsp;we will be using these instance variables:</p><pre class="brush: java">private Button button0, button1, button2, button3, button4, button5,
+    button6, button7, button8, button9, buttonAgain;
+private int number;
+private Random rand;
+private TextView info;
+private int numGuesses=0;</pre><p>If you completed the achievements tutorial you may notice an additional variable, <code class="inline">numGuesses</code>, to keep track of&nbsp;the number of user guesses each time they play the game.</p><p>You will need the following additional code in the&nbsp;<code class="inline">onCreate</code> method of the <code class="inline">Activity</code> class.&nbsp;If you're not using the achievements button, then&nbsp;remove the line that references it.</p><pre class="brush: java">findViewById(R.id.show_achievements).setOnClickListener(this);
+findViewById(R.id.show_leaderboard).setOnClickListener(this);
+
+button0=(Button)findViewById(R.id.btn0);
+button1=(Button)findViewById(R.id.btn1);
+button2=(Button)findViewById(R.id.btn2);
+button3=(Button)findViewById(R.id.btn3);
+button4=(Button)findViewById(R.id.btn4);
+button5=(Button)findViewById(R.id.btn5);
+button6=(Button)findViewById(R.id.btn6);
+button7=(Button)findViewById(R.id.btn7);
+button8=(Button)findViewById(R.id.btn8);
+button9=(Button)findViewById(R.id.btn9);
+buttonAgain=(Button)findViewById(R.id.btnAgain);
+
+info=(TextView)findViewById(R.id.guess_text);
+
+rand=new Random();
+number=rand.nextInt(10);</pre><p>We also use the following methods for disabling and enabling the buttons during gameplay:</p><pre class="brush: java">private void disableNumbers(){
+    button0.setEnabled(false); button0.setTextColor(Color.parseColor("#ff000033"));
+	button1.setEnabled(false); button1.setTextColor(Color.parseColor("#ff000033"));
+	button2.setEnabled(false); button2.setTextColor(Color.parseColor("#ff000033"));
+	button3.setEnabled(false); button3.setTextColor(Color.parseColor("#ff000033"));
+	button4.setEnabled(false); button4.setTextColor(Color.parseColor("#ff000033"));
+	button5.setEnabled(false); button5.setTextColor(Color.parseColor("#ff000033"));
+	button6.setEnabled(false); button6.setTextColor(Color.parseColor("#ff000033"));
+	button7.setEnabled(false); button7.setTextColor(Color.parseColor("#ff000033"));
+	button8.setEnabled(false); button8.setTextColor(Color.parseColor("#ff000033"));
+	button9.setEnabled(false); button9.setTextColor(Color.parseColor("#ff000033"));
+	buttonAgain.setEnabled(true); buttonAgain.setTextColor(Color.parseColor("#ff000033"));
+}
+private void enableNumbers(){
+	button0.setEnabled(true); button0.setTextColor(Color.WHITE);
+	button1.setEnabled(true); button1.setTextColor(Color.WHITE);
+	button2.setEnabled(true); button2.setTextColor(Color.WHITE);
+	button3.setEnabled(true); button3.setTextColor(Color.WHITE);
+	button4.setEnabled(true); button4.setTextColor(Color.WHITE);
+	button5.setEnabled(true); button5.setTextColor(Color.WHITE);
+	button6.setEnabled(true); button6.setTextColor(Color.WHITE);
+	button7.setEnabled(true); button7.setTextColor(Color.WHITE);
+	button8.setEnabled(true); button8.setTextColor(Color.WHITE);
+	button9.setEnabled(true); button9.setTextColor(Color.WHITE);
+	buttonAgain.setEnabled(false); buttonAgain.setTextColor(Color.parseColor("#ffffff00"));
+}</pre><p>We also need the following method we specified as <code class="inline">onClick</code> attribute for the number buttons in the layout. The player taps&nbsp;one of these to make a guess:</p><pre class="brush: java">public void btnPressed(View v){
+    int btn = Integer.parseInt(v.getTag().toString());
+	if(btn&lt;0){
+		//again btn
+		numGuesses=0;
+		number=rand.nextInt(10);
+		enableNumbers();
+		info.setText("Set the number!");
+	}
+	else{
+		//number button
+		numGuesses++;
+		if(btn==number){
+			info.setText("Yes! It was "+number);
+			if(getApiClient().isConnected()){
+				Games.Achievements.unlock(getApiClient(), 
+						getString(R.string.correct_guess_achievement));
+				Games.Leaderboards.submitScore(getApiClient(), 
+						getString(R.string.number_guesses_leaderboard), 
+						numGuesses);
+			}
+			disableNumbers();
+		}
+		else if(numGuesses==5){
+			info.setText("No! It was "+number);
+			disableNumbers();
+		}
+		else
+			info.setText("Try again!");
+	}
+}</pre><p>Take a moment to look over the code. Even&nbsp;if you completed the app in the achievements tutorial, there are some changes to the logic in addition to the extra leaderboard code. If the player taps&nbsp;the <b>Again</b> button, we reset the <code class="inline">numGuesses</code>&nbsp;variable to <code class="inline">0</code>. If the user taps a number button, we increment <code class="inline">numGuesses</code>. If you aren't using achievements, you can remove any code that references achievements.</p><p>We submit the score to the leaderboard when the user guessed correctly. The user can make up to five guesses.</p><p>The key line here is <code class="inline">submitScore</code>. We pass the number of guesses the player took to get the correct number. If the number of guesses is lower than any existing entry for the user in the leaderboard, their entry will be replaced with this new value. Notice that we use the string resource value we defined for the leaderboard.&nbsp;</p><h3>Step 2</h3><p>Before we finish, let's allow the user to view the game leaderboard by tapping the <b>Leaderboard</b> button we added. We used the following code in <code class="inline">onClick</code> for the achievements:</p><pre class="brush: java">else if (view.getId() == R.id.show_achievements){
+    startActivityForResult(Games.Achievements.getAchievementsIntent(
+		getApiClient()), 1);
+}</pre><p>Presenting the leaderboard is similar:</p><pre class="brush: java">else if(view.getId() == R.id.show_leaderboard){
+    startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
+		getApiClient(), getString(R.string.number_guesses_leaderboard)), 
+		2);
+}</pre><p>This will let the user see the current standings within the leaderboard. The integer parameter is arbitrary.</p><p>When you run the app, it will attempt to log the user in, checking for permissions, and confirming login if successful:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20700/image/google-play-game-leaderboards-welcome.png"></figure><p>The user is free to choose to sign out and back in whenever they like, but if they leave the app, it will attempt to automatically log them back in when they open it again. When the user guesses correctly, their score will be submitted to the leaderboard. Pressing the <b>Leaderboard</b> button will present the current standings:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/140/posts/20700/image/google-play-game-leaderboards-overview.png"></figure><p>From here, the user can access social features of Google Services via their Google account. You can set your apps up to use public and social leaderboards. Social leaderboards present listings of people in the user's circles, which can be managed for the game itself. For a public leaderboard, the user must have opted to share their scores publicly.</p><h2>Conclusion</h2><p>In this tutorial, we have implemented basic leaderboard functionality with Google Play Game Services. Note that&nbsp;you can do much more with leaderboards in your apps. For example, you can request leaderboard data for particular time-scales such as daily, weekly, and all-time. If a leaderboard contains a lot of scores, it is possible for&nbsp;your app to only fetch&nbsp;the top scores or the scores closest to the current player. Try experimenting with some of these enhancements in your own apps.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20700/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20700/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20700/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20700/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T17:20:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T17:20:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:15:"Rachel McCollin";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:4;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:9:"Sue Smith";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:2;a:6:{s:4:"data";s:38:"
     
     
     
@@ -723,13 +469,125 @@ wp_reset_postdata();
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20577";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:102:"http://design.tutsplus.com/tutorials/create-a-retro-phone-illustration-in-adobe-illustrator--cms-20577";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:54:"Create a Retro Phone Illustration in Adobe Illustrator";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:12656:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/final_image/princessphone.jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure><p>I'd like to share with you today a quick tutorial on creating a retro phone illustration in Adobe Illustrator. This is a get taster of my new Tuts+ course, <a href="http://courses.tutsplus.com/courses/mastering-sketch-design-in-illustrator" rel="external" target="_blank">Mastering Sketch Design in Illustrator</a>.</p><p>In that course, you’ll dive right in and create a still life entirely in Illustrator. You’ll learn to sketch it all out with various drawing tools, and render your objects with layered gradients, transparent shapes, and various Blending Modes. By the end of the course, you’ll know how to freely sketch, draw, and paint complete designs in Illustrator without using any additional applications.</p><figure data-video-embed="true" data-original-url="http://www.youtube.com/embed/2Jk1F07rzy0" class="embedded-video">
-  <iframe src="//www.youtube.com/embed/2Jk1F07rzy0?rel=0" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
-</figure>
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21264";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:79:"http://code.tutsplus.com/tutorials/sharing-polymer-components-part-1--cms-21264";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:34:"Sharing Polymer Components: Part 1";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:11255:"<p>In my <a href="http://code.tutsplus.com/tutorials/using-polymer-to-create-web-components--cms-20475">last tutorial about the Polymer library</a>, I explained how to take advantage of this great new tool to create reusable web components. The key point of the tutorial and of using components, is to help our development by:</p>
 
-<h2><span class="sectionnum">1.</span> Create the Phone</h2><h3>Step 1</h3><p>Start with a simple, quick sketch of an object. You can use a stock photo for reference, set up a still-life, or a photo of your own. I used the&nbsp;<b>Paintbrush Tool (B)</b> and the default&nbsp;<b>Calligraphic Brush</b> in quickly sketching out this Princess telephone.&nbsp;<b>Group (Control-G)</b> together your stroked lines and reduce the group's&nbsp;<b>Opacity</b> to&nbsp;<b>40%</b> in the&nbsp;<b>Transparency</b> panel.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_001.jpg"></figure><h3>Step 2</h3><p>Using the&nbsp;<b>Pen Tool (P)</b>, I traced each section of the phone. In order to keep each plane separate for when I create the line art, I changed colors frequently.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_002.jpg"></figure><h3>Step 3</h3><p>Continue tracing each section of the object until you have the entire thing drawn out. It's up to you how detailed you choose to make your drawing. Hide the sketch group in the&nbsp;<b>Layers</b> panel. We'll handle the phone's cord later.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_003.jpg"></figure><h2><span class="sectionnum">2.</span> Creating the Line Art</h2><h3>Step 1</h3><p>In order to create the line art, I found it easiest to use the&nbsp;<b>Shape Builder Tool (Shift-M)</b> in order to separate overlapping portions of objects so each shape ends where the next begins.</p><ol><li>Select two overlapping shapes.&nbsp;</li><li>With the&nbsp;<b>Shape Builder Tool</b> in use, select the intersecting portion of the two shapes.</li><li><b>Deselect</b> the bottom shape and combine the top two into a single shape.</li></ol><p>Repeat this technique throughout your object and&nbsp;<b>Group</b> everything together.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_004.jpg"></figure><h3>Step 2</h3><p><b>Copy (Control-C)</b> and&nbsp;<b>Paste (Control-V)</b> the object group and change the fill color to null and the stroke color to a dark purple, blue, or black. In the&nbsp;<b>Stroke</b> panel, set the caps and corners to&nbsp;<b>Rounded</b> and the <b>Stroke Weight</b> to&nbsp;<b>3pts</b>. In the&nbsp;<b>Transparency</b> panel set the&nbsp;<b>Blend Mode</b> to&nbsp;<b>Overlay</b>.&nbsp;<b></b><b>Paste</b> another line art group and set the <b>Blend Mode</b> to&nbsp;<b>Normal</b>, <b>Opacity</b> to <b>60%</b>,&nbsp;<b></b>and the <b>Stroke Weight</b> to <b>0.5pt</b>.&nbsp;<b>Align</b> both line art groups with the main object group.&nbsp;<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_005.jpg"></figure><h2><span class="sectionnum">3.</span> Drawing the Phone Cord</h2><h3>Step 1</h3><p>Using the&nbsp;<b>Pencil Tool (N)</b>, set the <b>Stroke Weight</b> to <b>10pts</b> and start drawing a spiraled line. In order to keep the line from being deformed, I set the <b>Fidelity</b> to <b>Smooth</b> in the <b>Pencil Tool's Options</b>. You'll find that the line can only be drawn for so long, so make you you can&nbsp;<b>Edit Selected Paths</b> (again in the tool's options) and pick up where you left off in order to have the phone cord be one complete path.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_006.jpg"></figure><h3>Step 2</h3><p><b>Copy</b> and&nbsp;<b>Paste</b> the cord. <b>Hide </b>or set<b>&nbsp;</b>the copy aside.&nbsp;<b>Expand</b> your cord under&nbsp;<b>Object</b>. Set the fill color to whatever your phone will be (in this case a blue).&nbsp;<b>Copy</b> and&nbsp;<b>Paste</b> the expanded cord line twice and use the same settings for the cord's line art as was used for the phone in the previous section. <b>Unhide</b> the stroked cord line, set the <b>Stroke Weight</b> to <b>2-4pts</b>, the color to something lighter than your cord base color, and the Blend Mode to Overlay. <b>Group</b> together all cord objects and place behind the phone group.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_007.jpg"></figure><h2><span class="sectionnum">4.</span> Render the Phone</h2><h3>Step 1</h3><p>Choose a color for your phone to be. I chose a pastel blue, as seen in the phone cord in the previous section. Typically, Princess phones come in assorted pastels.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_008.jpg"></figure><h3>Step 2</h3><p>Start with shadows: cast, form, core, and middle tone areas. I drew gradient shapes with the&nbsp;<b>Pencil Tool</b> and layered them on top of each other. The gradient is dark purple at <b>100% Opacity</b> to <b>0% Opacity</b>. The <b>Blending Modes</b> vary from <b>Hard Light</b> to <b>Normal</b>, each shape's overall opacity varies from <b>40%-100%</b>, and I altered the angles of the gradients with the&nbsp;<b>Gradient Tool (G)</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_009.jpg"></figure><h3>Step 3</h3><p>In the case of this phone there's three main sections that will be rendered: the handset, the top of the housing (where the dial is), and the front of the housing (facing the viewer).&nbsp;<b>Copy</b> and&nbsp;<b>Paste</b> the phone base group and&nbsp;<b>Unite</b> the shapes in each of these sections in the&nbsp;<b>Pathfinder</b> panel. You should have three phone pieces. These will be used to&nbsp;<b>Make Clipping Masks (Control-7)</b>.</p><ol><li><b>Group</b> together your shadow gradient shapes you worked on throughout the previous step.</li><li><b>Select</b> the newly united handset shape. Make sure it aligns with the rest of the phone illustration and is above the shadow gradient group in the&nbsp;<b>Layers</b> panel.&nbsp;<b>Make a Clipping Mask</b> either by hitting&nbsp;<b>Control-7</b> or going to&nbsp;<b>Object &gt; Clipping Mask &gt; Make</b>.<br></li><li>Continue creating shadow and highlight gradients. For the highlights, I used a&nbsp;<b>Radial Gradient</b> of light yellow (similar to what's used for the background) at&nbsp;<b>100% to 0% Opacity</b>. The&nbsp;<b>Blend Mode</b> was set to&nbsp;<b>Overlay</b> and I reduced the overall&nbsp;<b>Opacity</b> of each shape to&nbsp;<b>60%</b> in the&nbsp;<b>Transparency&nbsp;</b>panel.</li></ol><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_010.jpg"></figure><h3>Step 4</h3><ol><li>Continue working on each section of the phone. Consider how the handset is casting shadows onto the housing.</li><li>When you've finished rendering the phone,&nbsp;<b>Group</b> everything<b>&nbsp;</b>together and create cast shadows on the background below the phone. In this case, it'll be carpeting, so no highlighting (for a shiny table or floor) will be needed.</li><li>Some of the shadows are large shapes drawn with the&nbsp;<b>Ellipse Tool (L)</b> with a&nbsp;<b>Radial Gradient</b> version of the shadow gradients used previously. Three of them are layered beneath the phone group which keeps some of the shadows harsh and dark, and others diffused. When finished,&nbsp;<b>Group</b> together all of your shadow layers.</li></ol><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_011.jpg"></figure><h2><span class="sectionnum">5.</span> Background and Final Touches</h2><p>Use the&nbsp;<b>Rectangle Tool (M)</b> to draw two large rectangles to create your background. The floor has been created from three separate layers: a flat gray color, a gradient layer using the same shadow gradient from earlier in this tutorial, and an additional gray layer with the&nbsp;<b>Note Paper&nbsp;</b>effect applied in the&nbsp;<b>Appearance</b> panel with the settings seen below. The&nbsp;<b>Note Paper</b> layer is, finally, set to&nbsp;<b>Multiply</b>, and all three are&nbsp;<b>Grouped</b> together.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_012.jpg"></figure><h3>Step 2</h3><p>For the polka dots in the background, draw four small circles with the&nbsp;<b>Ellipse Tool</b>, making each one a different color.&nbsp;<b>Copy</b> and&nbsp;<b>Paste</b> all four so you have two staggered lines of circles.&nbsp;<b>Select</b> all eight circles and create a new pattern in the&nbsp;<b>Pattern Options</b> panel. Use this for a layer above the yellow background and set it to&nbsp;<b>Multiply</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_013.jpg"></figure><h3>Step 3</h3><p>Finally, let's add some sparkles as a finishing touch. Draw a small white circle with the&nbsp;<b>Ellipse Tool</b> and apply the effect under&nbsp;<b>Effects &gt; Distort &amp; Transform &gt; Pucker &amp; Bloat</b>. &nbsp;Set the&nbsp;<b>Pucker</b> percentage to&nbsp;<b>103</b> and&nbsp;<b>Expand</b> the shape under&nbsp;<b>Object</b>.&nbsp;<b></b>Either&nbsp;<b>Copy</b> and&nbsp;<b>Paste</b> the sparkle around your composition, or create a&nbsp;<b>Scatter Brush</b>. Go to the&nbsp;<b>Brushes</b> panel,&nbsp;<b></b>select&nbsp;<b>New Brush</b><b></b> and choose&nbsp;<b>Scatter Brush</b>. Choose from the options below in creating your brush, hit&nbsp;<b>OK</b>, and use the&nbsp;<b>Paintbrush Tool</b> to scatter sparkles around your illustration.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/phone_014.jpg"></figure><h2>Great Job, You're Done!</h2><p>Now that you've completed this teaser tutorial, check out the full course, <b><a href="http://courses.tutsplus.com/courses/mastering-sketch-design-in-illustrator" target="_self">Mastering Sketch Design in Illustrator</a></b>. In it you'll sketch out your composition with a series of thumbnails, utilize 2-point perspective in order to create an 80's inspired still life, create perfect line art, render each object, and create a fun patterned background to bring it all together.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/117/posts/20577/image/princessphone.jpg"></figure><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20577/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20577/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20577/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20577/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T14:13:07.438Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T14:13:07.438Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+<ul>
+<li>Encapsulating much of the complex code and structure</li>
+<li>Allowing developers to use a simple-to-use tag style naming convention</li>
+<li>Providing a suite of predefined UI elements to leverage and extend</li>
+</ul>
+
+<p>I'm still smitten with it and wanted to explore this a little more by checking out a new template the Polymer team released to make deployment and reuse substantially easier.</p>
+
+<h2>The Canonical Path</h2>
+
+<p>One of the quirks of the Polymer development process which I didn't touch on, was the disconnect between developing a component and actually making it available for reuse by others. Let's take a look at a snippet from my previous tutorial:</p>
+
+<pre class="brush: html">&lt;link rel="import" href="../bower_components/polymer/polymer.html"&gt;</pre>
+
+<p>This purpose of this code is to include Polymer core, the main API that allows you to define the custom elements. For local development and testing, this actually works perfectly but unfortunately the path specified will actually prevent you from sharing this component.  The reason for this is because if another user tries to install your element with <a href="http://bower.io/">Bower</a> (which is the preferred installation method), it's going to end up as a sibling of Polymer in their <code>bower_components</code> folder.&nbsp;</p><p>The problem with that, is that the component is going to be looking for <code>../bower_components/polymer/polymer.html</code> which will be an invalid path.  Components must always assume that their dependencies are siblings, so it should actually be looking for <code>../polymer/polymer.html</code>. This the "canonical path." </p>
+
+<p>In chatting with the awesome <a href="https://twitter.com/rob_dodson">Rob Dodson</a> of the Polymer team, he said that the only way around this was to develop using the method I originally outlined and once I was ready to share my component, convert all of my paths that look for <code>bower_components</code> over to <code>../</code> when I'm ready to publish my element. </p>
+
+<p>This is obviously not ideal and I probably could've created some type of Grunt task to parse through my component files to make these updates. Thankfully, the Polymer team has been noodling on this and has come up with a creative solution that they call the <code>untitled-element</code>.</p>
+
+<h2>The <code>untitled-element</code> Template</h2>
+
+<p>When I mention <code><a href="https://github.com/PolymerLabs/untitled-element">untitled-element</a></code>, I'm referring to a new boilerplate that's available to make creating reusable and deployable components substantially easier, by giving you a base foundation to work with. It helps to eliminate the issues I mentioned above by:</p>
+
+<ul>
+<li>Providing guidance on proper directory structure</li>
+<li>Incorporating an additional component that serves to document your API</li>
+<li>Allowing you to easily demo your component during development <em>and</em> when sharing</li>
+</ul>
+
+<p>The big win for this, is being able to develop your component without having to go through the trouble of making substantial path changes that are not only cumbersome, but could break your element if you miss something.</p>
+
+<p>Currently, the project is a part of <a href="https://github.com/PolymerLabs/">PolymerLabs</a> as it gets put through its paces, but it's certainly looking pretty solid:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21264/image/github.png"></figure>
+
+<p>Now the first thing you're going to want to do is create a development directory that will house your new component, as well as all of the Bower components you'll install. I called mine <code>polymerdev</code>. From there, you'll need to go to the <code><a href="https://github.com/PolymerLabs/untitled-element">untitled-element</a></code> Github repo and download it into your new development folder. This is an important step because you <em>need</em> to extract the contents into that folder, to avoid the sibling directory issues that I mentioned previously. </p>
+
+<p>Extracting the <code>.zip</code> file will create a new folder called <code>untitled-element-master</code> which contains the boilerplate files you'll need to create your new component. You'll need to rename a couple of things based on the name of your component. This includes:</p>
+
+<ul>
+<li>The <code>untitled-element-master</code> folder</li>
+<li><code>untitled-element.html</code></li>
+<li><code>untitled-element.css</code></li>
+</ul>
+
+<p>I'm going to recreate the Reddit element that I created in my last tutorial, so this is what the changes would look like:</p>
+
+<ul>
+<li><code>untitled-element-master</code> -&gt; <code>reddit-element</code></li>
+<li><code>untitled-element.html</code> -&gt; <code>reddit-element.html</code></li>
+<li><code>untitled-element.css</code> -&gt; <code>reddit-element.css</code></li>
+</ul>
+
+<p>Here's what the directory looked like before:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21264/image/directory.png"></figure>
+
+<p>And here's what it looks like after the updates:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21264/image/directory-new.png"></figure>
+
+<p>The key thing to understand, is that you'll be working inside of the <code>reddit-element</code> folder when creating your component and in later steps, when we use Bower to install the Polymer components, that directory will be a direct sibling to the newly installed directories. I know I'm really harping on this point but it's an important thing to understand, since it affects your ability to share your component.</p>
+
+<p>To finish this off, you're going to want to update the references to your component name, inside of the following files:</p>
+
+<ul>
+<li><code>bower.json</code></li>
+<li><code>demo.html</code></li>
+<li><code>reddit-element.html</code></li>
+</ul>
+
+<p>Each of these files contains references to <code>untitled-element</code> within the code and need to be updated. Remember that any references to <code>untitled-element</code> should be changed to <code>reddit-element</code>. If you want to be absolutely sure, do a global search-and-replace using your editor.</p>
+
+<h2>Getting Setup for Bower</h2>
+
+<p>Since Bower is the preferred method for installing Polymer and sharing components, let's go through a few steps to ensure that we setup the Reddit component's Bower configuration properly.</p>
+
+<p>By default, the boilerplate includes a <code>bower.json</code> file. This file is used to list several things, including the name of the component and any dependencies that need to be installed to use it. Here's what it looks like:</p>
+
+<pre class="brush: javascript">{
+  "name": "reddit-element",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#master"
+  }
+}
+</pre>
+
+<p>First, I'll remove the <code>private</code> property since it'll prevent the component from being listed in the Bower registry. Since it's supposed to be shareable, I want it to be listed. Also, the Reddit component needs to make an Ajax call, so I'm including a dependency on the Polymer <code><a href="https://github.com/Polymer/core-elements">core-elements</a></code> set of components which includes the Ajax functionality that I need. Lastly, I'll add a version number to track this going forward. Here's the end result:</p>
+
+<pre class="brush: javascript">{
+  "name": "reddit-element",
+  "version": "0.0.1",
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.3",
+    "core-elements": "Polymer/core-elements#~0.2.3",
+  }
+}</pre>
+
+<p>The last bit of Bower configuration that needs to be done, is to create a file called <code><a href="http://bower.io/#custom-install-directory">.bowerrc</a></code> in the <code>reddit-element</code> folder which defines a custom install location for the dependencies of our component. This is defined as simple JSON data like this:</p>
+
+<pre class="brush: javascript">{
+   "directory": "../"
+}</pre>
+
+<p>What this essentially does is tells Bower to install any dependencies one level up, so that they're siblings of the <code>reddit-element</code> folder. The reason this is important is because when someone installs our component with Bower, it'll be placed into the <code>bower_components</code> folder as siblings to everything else in there (including Polymer). Structuring things this way, ensures that we're developing in the same way that we'll eventually be sharing. It also allows us to use the canonical path I mentioned above, ensuring a consistent way of referencing other components in our code. </p>
+
+<p>Let's review the differences. If I didn't create the <code>.bowerrc</code> file and ran the <code>bower install</code> command, my directory structure would look like this:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21264/image/bower-norc.png"></figure>
+
+<p>This installs the <code>bower_components</code> folder directly into the component's directory, which is not what I want. I want the <code>reddit-element</code> folder to be a sibling to all of the dependencies that it needs:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21264/image/bower-rc.png"></figure>
+
+<p>This method ensures that when a user installs this component using Bower, the component and the dependencies will be installed properly into the <code>bower_components</code> folder.</p>
+
+<p>With the <code>.bowerrc</code> file added to your component's folder and the <code>bower.json</code> setup with the proper dependencies, the next step is to run <code>bower install</code>, to have Bower pull down the appropriate components and add them to the project.</p>
+
+<h2>Coming Up Next</h2>
+
+<p>In this tutorial, I wanted to make sure I laid a solid foundation for how to use the new Polymer boilerplate and some of the rationale behind the design choices that the team has made. </p>
+
+<p>In the next part of this series, I'm going to go over the new documentation component that's included in the boilerplate and how it will make sharing and demoing your component substantially easier. I'll also show you how to setup your component to be shared via the Bower registry.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21264/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21264/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21264/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21264/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T16:59:41.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T16:59:41.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Mary Winkler";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:5;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:9:"Rey Bango";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:3;a:6:{s:4:"data";s:38:"
     
     
     
@@ -737,16 +595,514 @@ wp_reset_postdata();
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20652";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:110:"http://design.tutsplus.com/tutorials/get-yourself-noticed-create-a-simple-business-card-in-indesign--cms-20652";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:63:"Get Yourself Noticed! Create a Simple Business Card in InDesign";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:26793:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/final_image/Final-Product_600.jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure><p>Though we may be increasingly digital in the way we network and seek new business, a print business card is still one of the most important self-promotional tools you can have to hand. You never know when a new networking opportunity might arise!</p><p>In this tutorial we’ll explore how to create high-impact, audience-appropriate business cards for your own promotional purposes. You can look at how I put together inspiring examples for a fictional Graphic Designer, Illustrator and Photographer using InDesign, and lay down the Golden Rules of creating striking and unforgettable cards: minimal design, legible text, and appropriate audience! With these rules in mind, you can experiment to your heart’s content with text styles, color and even graphics.</p><p>During this tutorial I will hop over to Illustrator and Photoshop to create some of the artwork, but this is optional for your own designs. After all, simple designs which emphasize typography and white space really can look the business!</p><p>Firstly, let’s put together a basic template for your business card, which you can use to experiment with your own card designs.</p><h2><b></b><span class="sectionnum">1.</span>&nbsp;Set Up the Template for Your Business Card</h2>
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20589";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:81:"http://code.tutsplus.com/tutorials/trim-the-bloat-optimize-your-assets--cms-20589";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:36:"Trim the Bloat: Optimize Your Assets";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:9092:"<p>In <a href="http://code.tutsplus.com/tutorials/trim-the-bloat-an-introduction-to-keeping-wordpress-healthy--wp-34934#disqus_thread" rel="external" target="_blank">the first post</a> in this series, we took a look at a few things that we can do in order to keep our WordPress installation healthy. But that's not all we can do.</p><p>In this post, we're going to cover what to do with your assets like stylesheets, JavaScript files, images and more.&nbsp;</p><p>Less is more. That's pretty much the message I'm trying to put forward with this entire series. To that end, I've talked about what to with over-done HTML&nbsp;in the,&nbsp;referenced a couple of resources that will help you get started with writing clean theme code, as well as finding the right plugins.</p><p>Now it's time to focus on our assets: Stylesheets, JavaScripts and images.</p><h2>Styles Go Where They Belong</h2><p>We're all accustomed to writing CSS, right? Even the beginners among us have touched a line of CSS here or there. Ever used a <code class="inline">display:none</code> somewhere? There you go, you applied a style rule.&nbsp;</p><p>In its crudest form, I'm sure we've all used them.&nbsp;The more experienced people will know that it's a good idea to keep your styles where they belong: In your stylesheets. This is primarily a matter of maintainability. If you have inline styles all over your templates you'll get lost trying to find the right place to adjust something, and when you adjust that one thing, you still have to find that five other places that have the same inline style applied to them.</p><p>Putting styles in stylesheet files has another benefit: You can write less to do the same, using generic style rules instead of focused ones, but you could even take it a step further and use a pre-processor.</p><p><a href="http://learnboost.github.io/stylus/" target="_self">Stylus</a>,&nbsp;<a href="http://lesscss.org/" target="_self">LESS</a> and <a href="http://sass-lang.com/" target="_self">Sass</a>&nbsp;are all CSS pre-processors. You can use them to write less code and end up with a cleaner end result. Read that as: Less work, less code, easier to maintain!&nbsp;</p><p>While Stylus is the exception here, both LESS and Sass have WordPress plugins available. If you can avoid using them, do so. There are ways to generate a stylesheet from a <code class="inline">.less</code> and <code class="inline">.sass</code> file just once, without using those plugins.</p><p>Without getting too specific, these pre-processors will allow you to write a lot less code to end up with the same end result. In many cases they will even combine styles together, making your stylesheets cleaner and easier to maintain. A <a href="http://code.tutsplus.com/tutorials/using-css-preprocessors-with-wordpress-less-structures--wp-31533" target="_self">quick tutorial on LESS</a> and <a href="http://code.tutsplus.com/articles/cross-platform-sass-and-compass-in-wordpress--wp-30611" target="_self">one on Sass</a>&nbsp;have existing tutorials right here on Tuts+.&nbsp;</p><p>As to which is better, this is very much based on personal preference. All three of the processors are growing and finding their way. You can find a comparison on the three available processors <a href="http://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320" target="_self">here</a> that will elaborate more extensively on what each of their strengths are.</p><h2>Scripts! All of Them!</h2><p>JavaScript has become an accepted part of web development. A few years ago, we still accepted that it was normal for our visitors to have JavaScript disabled, but that's now the exception, not the rule.</p><p>Personally, I still prefer to build my sites without it and then add the scripts as an enhancement. This has the benefit of letting me keep the scripts down to their bare minimum because the site already works right out-of-the-box without it.</p><p>The only real option to write less JavaScript is to do exactly that. Write less; however, a good tip here is to utilize the jQuery library that comes packaged with WordPress as it is designed specifically to let you write less to achieve the same result but still remain fast and easy to use.</p><h2>Images (They Will Forever Be Too Big)</h2><p>Remember the first post in this series? I mentioned that in the past three years, websites had an absurd increase of 235% in size. Crazy, isn't it? Here's another fact: a large part of that increase comes in the form of images. I doubt anyone is surprised by this as using large images has become somewhat of a design trend, but even so, we should strive to do better.&nbsp;</p><p>But how?</p><p>Make sure that if you're using WordPress to set the right image sizes for your images. No sense in loading a 500x500 image if you're only using a 100x100 version in your design. The next option is to use a service like <a href="http://smush.it" target="_self">smush.it</a>&nbsp;or&nbsp;<a href="http://kraken.io" target="_self">kraken.io</a>. Both have WordPress plugins available and both do roughly the same: They rip out the stuff in the images that you don't need or want, optimize them and return the smallest possible file they can make from your image without losing any quality. Smush.it is a free service, where Kraken has a free solution as well as a paid solution that will optimize your images on the fly.</p><h2>Optimization Is King</h2><p>By now, you can see that I'm all for less. Less code, less images, less everything. End of the road though: Fast as my minimalist systems may be, I still want that extra mile of awesome. I'll make sure my code is as maintainable as it can be, my stylesheets as small as possible, and my scripts short. All that, however, is primarily preparation. After all, I'll still have the end results minified. Using the pre-processor for my stylesheets I'm already able to turn out a minified edition. For scripts there are similar solutions available.</p><p>Here, it's important to make sure your scripts and stylesheets are output using the&nbsp;<code class="inline">wp_enqueue_script</code> and&nbsp;<code class="inline">wp_enqueue_style</code> functions. Don't just throw them in the <code class="inline">head</code> of your template, but use <code class="inline">function.php</code> to enqueue them and let the <code class="inline">wp_head</code> function do the actual output.&nbsp;</p><p>Why is this important? Because if you properly enqueue your scripts and stylesheets the different caching and minifying plugins that are available can properly combine them into one single stylesheet and script.</p><p>Caching? Yes, caching. Next to merging stylesheets and scripts these plugins provide a system to cache the output from the database or even the entire page that gets output. Both will dramatically decrease the amount of time a site will need to load. It's beyond the scope of this series to elaborate extensively on the available caching plugins and their features, <a href="http://hub.tutsplus.com/authors/adam-burucs" target="_self">Adam Burucs</a> wrote <a href="http://code.tutsplus.com/tutorials/wordpress-caching-plugins--wp-26445" target="_self">an article comparing the two biggest caching plugins</a> that's a good place to start if you are looking for some information on the two.</p><h2>External Resources</h2><p>External resources are a bit of an interesting part of it all. On one hand, using an external provider will offload the traffic from your own server. Usually, it will be faster because of browser limitations on the amount of requests that can be sent to one server. But there's a downside. You can't control what comes down from your external host and you need to both trust that the data will remain the same as well as that the host remains available. In some cases it might be a better idea to keep your resources on your own site.<br></p><h2>Wrapping It Up</h2><p>To summarize: keep it lean, make sure your stylesheets and scripts are as small as you can get them, then minify them even further. Upload images at the size you need them and pull them through an optimizer like <a href="http://smush.it" rel="external" target="_blank">smush.it</a> or <a href="http://kraken.io" rel="external" target="_blank">kraken.io</a>. Use a caching plugin as a final endpoint for your output after you've minimized all the elements before introducing any caching.</p><p>There's one more installment left in this series in which we will cover additional references on the topics we've discussed and hopefully provide some additional useful insights.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20589/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20589/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20589/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20589/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T15:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T15:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+      
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:9:"Rian Orie";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:4;a:6:{s:4:"data";s:38:"
+    
+    
+    
+    
+    
+    
+    
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21224";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:92:"http://computers.tutsplus.com/tutorials/the-leap-motion-controller-and-mac-part-2--cms-21224";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:42:"The Leap Motion Controller and Mac: Part 2";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:9313:"<p>In an earlier&nbsp;tutorial I introduced you to the&nbsp;<a href="http://computers.tutsplus.com/tutorials/the-leap-motion-controller-and-mac-part-1--cms-20927">Leap Motion controller</a>, showed how to set it up and start using apps that support it. I use one of my favourite apps, <i>BetterTouchTool</i>, to <a href="http://computers.tutsplus.com/tutorials/speeding-up-your-workflow-with-custom-trackpad-gestures--mac-60046">create custom trackpad gestures</a>. With this you can also create custom gestures for the Leap Motion Controller.<br></p>
+
+<p>In this tutorial I'll show you how to do this and use BetterTouchTool to integrate Leap Motion Controller gestures into workflows.</p>
+
+<h2>BetterTouchTool</h2>
+
+<p><a href="http://www.boastr.net/">BetterTouchTool</a>&nbsp;is a free, utility app&nbsp;that lets you use custom gestures–on <i>Magic Mouse</i>, <i>Magic Trackpad</i> and now, the <i>Leap Motion Controller</i>–to trigger keyboard shortcuts and system actions. You can assign the same gestures different functions in different applications.</p>
+
+<p>In the tutorial about&nbsp;<a href="http://computers.tutsplus.com/tutorials/speeding-up-your-workflow-with-custom-trackpad-gestures--mac-60046">custom trackpad gestures</a> I explained how to set up BetterTouchTool, import gestures that other people have created and create new gestures. You may find it useful to&nbsp;refer back that tutorial whilst reading this one.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/80/posts/21224/image/leap_btt.jpg"><figcaption>My BetterTouchTool gestures.</figcaption></figure>
+
+<h2>The Gestures</h2>
+
+<p>BetterTouchTool mainly supports gestures in the X-Y plane above the Leap Motion Controller. You can use single finger, two finger, three finger and five finger gestures.&nbsp;</p><p>For example, you can assign different actions to moving your hand with all five fingers extended to the left over the Leap Motion Controller, to the right over it, up away from it or down towards it. </p>
+
+<p>As well as the sixteen simple X-Y gestures, BetterTouchTool offers a number of extra gestures: you can also move one, two, three or five fingers forwards towards your screen and then straight backwards as if you are tapping it, rotate one, two or three fingers clockwise and counter clockwise or clap your hands together.</p>
+
+<p>The best way to have your gestures detected is:</p>
+
+<ul>
+<li>Hold your hand in a clenched fist over the device.</li>
+<li>Extend the number of fingers required for the gesture you want to perform.</li>
+<li>Pause for half a second.</li>
+<li>Move your hand in the direction of the gesture.</li>
+<li>Re-clench your hand into a fist.</li>
+<li>Bring it back to the centre.</li>
+<li>Repeat for the next gesture you want to do.</li>
+</ul>
+
+<p>If you don’t clench your hand before moving it back to the centre, BetterTouchTool may detect the inverse of the gesture you just performed as you move your hand.</p>
+
+<p>The Leap Motion Controller seems to have the hardest time discerning between one and two finger gestures. If you don’t hold your two fingers sufficiently wide apart when you gesture, it will register them as a single finger; because of this, I prefer to avoid using two finger gestures, or to assign them to the same shortcut as the single finger gestures.</p>
+
+<p>For three finger gestures extending your index finger, middle finger and thumb works best.</p>
+
+<p>The Leap Motion Controller is slightly better at detecting gestures on the X-axis than the Y-axis. If you have a choice, I recommend you assign your most used actions to X-axis gestures.</p>
+
+<h2>Learning the Gestures</h2>
+
+<p>BetterTouchTool has a useful option to show a HUD, or <i>head-up display</i>, notification of what gesture it detects.</p><p>I have created a preset for you to download that has all the gestures set up to show the notification with no assigned shortcuts. Use this preset to practice the gestures and experiment to see how different movements are detected and interpreted.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/80/posts/21224/image/leap_btt_hud.jpg"><figcaption>BetterTouchTool's HUD notifications.</figcaption></figure>
+
+<h2>Incorporating Gestures&nbsp;Into a Workflow</h2>
+
+<p>Compared to keyboard shortcuts or trackpad gestures, it can be a bit harder to work out where Leap Motion gestures fit into your workflow.&nbsp;</p><p>I believe that almost everyone can benefit from learning keyboard shortcuts and creating custom trackpad gestures. The amount of people who’ll benefit hugely from custom Leap Motion gestures is smaller–but I think most power users will certainly have a few uses. </p>
+
+<p>Actions that you want to do quickly, and that your hands might not be on the trackpad or keyboard when you want to do them, work best. For example, the save gesture I use for <a href="http://bywordapp.com" target="_self">Byword</a> lets me save my work as I walk away from the Mac.</p>
+
+<h2>My Gestures</h2>
+
+<p>In addition to being a writer, I am a photographer and designer. I spend a lot of time browsing the web, writing and using Adobe’s Creative Cloud applications–particularly Adobe Photoshop Lightroom. My custom Leap Motion gestures reflect this. </p>
+
+<p>My gestures are available as a preset which you can download and tweak as you desire. You should take my ideas as suggestions rather than something set in stone.</p>
+
+<h3>Web Browsing</h3>
+
+<p>In the previous tutorial with BetterTouchTool, I used three finger trackpad gestures to move between tabs, open new tabs, close tabs and reopen recently closed tabs.&nbsp;</p><p>For my Leap Motion gestures, I used the same gestures to keep everything consistent. Moving three fingers up opens a new tab (and reopens the last closed tab if the shift key is held), moving them down closes one. Moving three fingers to the left or right moves over a tab. </p>
+
+<p>I use <a href="http://computers.tutsplus.com/tutorials/an-in-depth-look-at-1password-4--mac-53259">password manager 1Password</a> to create really secure passwords for all my online accounts. 1Password uses the keyboard shortcut <b>Command-_</b> to automatically fill in your login details. I mapped this shortcut to the clap gesture.</p>
+
+<h3>Byword</h3>
+
+<p>I use Byword to&nbsp;<a href="http://computers.tutsplus.com/tutorials/introducing-markdown-on-os-x--cms-20764">write tutorials in Markdown</a>. There are two features of Byword I have mapped to Leap Motion gestures:&nbsp;</p><ul><li>a three finger gesture right triggers the keyboard shortcut <strong>Command-S</strong> which saves the document, and&nbsp;</li><li>a three finger gesture left triggers <strong>Command-Option-P</strong> which activates Byword’s Markdown previewer.</li></ul>
+
+<h3>Lightroom</h3>
+
+<p>In Lightroom I use the three fingers right and left gestures to quickly pick or reject imported photos. It is extremely satisfying to sit back, put the new photos on fullscreen and, with a casual gesture, determine their fate!</p>
+
+<h3>Quicktime and VLC</h3>
+
+<p>One of the things I’ve found the Leap Motion Controller most useful for is controlling media playback on my Mac. You can relax and control the movie you are watching just by waving your hands.&nbsp;</p><p>I use a three finger gesture right to play or pause the movie with the <strong>Spacebar</strong> key. A single finger rotating clockwise increases the volume and a single finger rotating counter clockwise lowers it.</p>
+
+<h3>Global</h3>
+
+<p>I use a grid of virtual desktops created with <a href="http://totalspaces.binaryage.com" target="_self">TotalSpaces2</a>. I showed <a href="http://computers.tutsplus.com/tutorials/improve-productivity-with-virtual-desktops-from-totalspaces2--mac-59731">how to create this set up in a previous tutorial</a>. I set up the keyboard shortcut <strong>Control-Option-Shift</strong> and the <strong>Arrow Keys</strong> to navigate around the grid.&nbsp;</p><p>I mapped these shortcuts to a five finger gesture in the opposite direction of the <b>Space</b> I want to move to. In an almost <i>Minority Report</i> like manner, I can reach out with five fingers and, as if I’m touching the screen, gesture to move to a different <b>Space</b>.</p>
+
+<h2>Conclusion</h2>
+
+<p>In this tutorial I’ve shown you how to integrate a Leap Motion Controller and BetterTouchTool into your workflows.&nbsp;</p><p>With the two sets of BetterTouchTool presets I have included, the practice preset and my custom gestures preset, I have given you a base to work from when developing your own custom Leap Motion gestures.</p>
+
+<p>If you have any suggestions for great Leap Motion gestures please let me know in the comments. I’m always keen to hear other people’s ideas.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21224/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21224/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21224/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21224/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T14:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T14:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+      
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:14:"Harry Guinness";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:5;a:6:{s:4:"data";s:38:"
+    
+    
+    
+    
+    
+    
+    
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20292";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:114:"http://design.tutsplus.com/tutorials/how-to-create-a-stylish-black-and-gold-3d-text-effect-in-photoshop--cms-20292";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:66:"How to Create a Stylish Black and Gold 3D Text Effect in Photoshop";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:21715:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/final_image/Stay Cool Text Effect - Final.jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure><p>Adobe Photoshop's vector and 3D capabilities are a powerful combination, and can be used to create some fun and amazing 3D effects. In this tutorial, I will show you how to create a stylish black and gold 3D text effect using vector shapes, 3D meshes and materials. Let's get started!</p><h2>Tutorial Assets</h2><p>The following assets were used during the production of this tutorial.</p><ul>
+	<li><a href="http://www.fontsner.com/font/SansSerifExbFLF-70877.html">Sans Serif Exb FLF</a>&nbsp;font.</li>
+	<li><a href="http://webtreatsetc.deviantart.com/art/Malleable-Metal-Patterns-144759801">Malleable Metal Patterns</a>&nbsp;by WebTreatsETC.</li>
+</ul>
+
+
+<h2><span class="sectionnum">1.</span> Create the Background and Text Shape</h2>
+
 <h3>Step 1</h3>
-<p><b>Open InDesign</b> and select <b>File &gt; New Document</b>. In the <b>New Document</b> window set the <b>Intent</b> to <b>Print</b> and set the <b>No. of Pages</b> to <b>2</b>. <b>Deselect Facing Pages</b>.&nbsp;</p><p>Under <b>Page Size</b> select <b>Custom...</b> from the drop-down menu to open the <b>Custom Page Size</b> window. Under name type ‘<i>Business Card</i>’ and set the <b>Width</b> to <b>84 mm </b>and <b>Height </b>to <b>55 mm</b>. This is a standard card size for some popular online card printers and is generous enough to give your design some space. Click <b>Add</b>, and then <b>OK</b>.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/1_Step1_1.png"></figure>
-<p>Set the <b>Margins</b> on all sides to <b>10 mm</b> for now, though we can change this later depending on the design. Set the <b>Bleed </b>all round to a generous <b>4 mm</b>. Click <b>OK</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/1_Step1_2.png"></figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/1_Step1_3.png"></figure>
-<h2><span class="sectionnum">2.</span> If You’re a <i>Graphic Designer</i>...</h2>
-<p>...your clients will come to you for potentially all sorts of things: print work, websites, exhibition materials etc. It’s likely that at least some of your clients are commercial businesses, and they want to hire a designer for their professionalism as well as their talent for typography.</p>
-<p>Because your business is multi-faceted, and can include all sorts of different projects, it would be unwise to feature just one, or even a couple of, project images on your card to risk being pigeon-holed as being only capable of doing book covers, for example.&nbsp;</p>
-<p>You also don’t want to crowd your tiny card with images, which leads to the first <i>Golden Rule</i> of business card design: if in doubt a <i>Minimal Design</i> always has the most impact. So, for this example of a card that might suit a graphic designer, I’ve given <i>emphasis to the typography</i>, <i>stripped out any images</i> and stuck to a <i>limited color palette</i>.</p><h3>Step 1</h3><p>Return to your InDesign template that we set up in <b>Section 1 (above)</b>.&nbsp;</p><p>With the first page brought up on screen, go to the <b>Pages Tool (Shift-P)</b> in the <b>Tools</b> panel. Go to <b>Layout &gt; Margins and Columns...</b> and set the <b>Margins</b> to <b>5 mm</b>. Repeat for <b>Page 2</b>.&nbsp;</p><p>Return to <b>Page 1</b> of the document and use the <b>Rectangle Tool (M)</b> to create a frame that extends across the whole card up to the edges of the bleed. Set the <b>Fill</b> to <b>[Paper]</b>. With the frame selected, <b>Edit &gt; Copy</b> and click on the <b>Page 2 </b>icon in the <b>Pages</b> panel (<b>Window &gt; Pages</b>) to bring up <b>Page 2</b> on screen. Click <b>Edit &gt; Paste in Place</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/2_Step1.png"></figure><h3>Step 2</h3><p>Open the <b>Swatches</b> panel if not already open by going to <b>Window &gt; Color &gt; Swatches</b>. Click the <b>New Swatch</b> icon at the bottom of the <b>Swatches</b> panel to open a new window.</p><p>With the <b>CMYK</b> mode selected, set the <b>Cyan</b> slider to <b>9</b>, <b>Magenta</b> to <b>7</b>, <b>Yellow</b> to <b>9</b>, and <b>Black</b> to <b>89</b>. Rename this swatch ‘<i>Light Black</i>’. A pure black can be harsh; this will soften the appearance of the card.</p><p>Set the <b>Fill</b> of the pasted frame on <b>Page 2</b> to ‘<i>Light Black</i>’.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/2_Step2.png"></figure><h3>Step 3</h3><p>Return to <b>Page 1</b> of the document, or the <b>FRONT</b> of the business card. This should be the right place for a logo, if you have one, or simply your name and job title.&nbsp;</p><p>Use the <b>Type Tool (T)</b> to create a text frame <b>84 mm</b> in <b>Width</b> and <b>10 mm</b> in <b>Height</b>. Type ‘<i>your or your business’ name</i>’; in this example ‘<i>jon tate creative</i>’. Set the text to <b>Align Center</b> from the <b>Character Formatting Controls</b> panel at the top of the screen.</p><p>Now you can select a font that is either your brand type, or find something that you feel reflects your design aesthetic and looks cutting-edge and contemporary. I went for a playful Sans Serif font, <b><a href="http://www.dafont.com/poetsen-one.font" rel="external" target="_blank">Poetsen One</a></b>.</p><p>Set the <b>Font Size</b> to <b>28 pt</b>, <b>Tracking</b> to <b>50</b> and the <b>Color </b>to ‘<i>Light Black</i>’, as before.</p><p>Drag a horizontal <b>guideline</b> down from the top ruler to the center point of the card (<b>27.5 mm</b>) and use this to position the text frame on the horizontal center of the front of your card.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/2_Step3_1.png"></figure><p>For a color ‘pop’ create a <b>New Swatch</b> in the <b>Swatches</b> panel, and set the values to <b>C=100, M=13, Y=10, K=0</b>. you can rename this ‘<i>Graphic Design Blue</i>’. Note: if you use a brand color that you’d like to also use on your cards, it may be best to use a <b>Spot Pantone</b> color to produce the correct printed result.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/2_Step3_2.png"></figure><p>As tempting as it may be to add more ‘stuff’ to the front of your card, practice restraint and keep it minimal. You can now add your contact details on the reverse of your card.</p><h3>Step 4</h3><p>Bring up <b>Page 2</b> of your document on screen. This will be the <b>REVERSE</b> of your business card.&nbsp;</p><p>Introduce a new text frame using the <b>Type Tool (T) 74 mm</b> in <b>Width</b> and <b>19 mm</b> in <b>Height</b>. <b>Center</b> the frame on the card between the margins, resting the bottom edge against the lower margin.&nbsp;</p><p>Type ‘<i>Name</i> (paragraph break) <i>Job Title</i> (paragraph break) <i>Optional Description of Services</i> (paragraph break x2) <i>Telephone Number(s), Email Address and/or Website</i>’.</p><p>Choose a different font to use here to the front of your card; it’s really important you use something that’s going to be <i>clear</i> and <i>legible</i>, even at a reduced size. I’ve gone for an all-caps Sans Serif, <b><a href="https://www.behance.net/gallery/Mojave-Typeface/8668939" rel="external" target="_blank">Mohave</a>,</b>&nbsp;which is a great choice for making your contact details stand-out while maintaining a graphic, contemporary look.</p><p>Set the <b>Font </b>of all the text to <b>Mohave Regular</b>, <b>Size</b> to <b>10 pt</b>, <b>Leading</b> to <b>14 pt</b> and <b>Tracking</b> to <b>20</b>. Highlight ‘<i>Name</i>’ alone and set the <b>Size</b> to <b>12 pt</b> and the <b>Color</b> to <b>[Paper]</b>. Highlight the remaining text and set the <b>Color</b> to ‘<i>Graphic Design Blue</i>’. Highlight your website or email address and set the<b> Weight</b> to <b>Bold </b>to make it really stand-out. This is how most clients will initially search for you or contact you.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/2_Step4_1.png"></figure><p>You can also introduce a <b>solid 1 pt </b>stroke in <b>[Paper]</b> between the telephone number and website address using the <b>Line Tool (\)</b> to visually separate the information.</p><p><b>Great work</b> - you have a minimal yet striking card design that will attract new clients! Skip to the bottom of the tutorial to read how to export your card for print.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/2_Step4_2.png"></figure><h2><span class="sectionnum">3.</span> If You’re an <i>Illustrator</i>...</h2><p>...you want to attract clients who are looking to commission creative, unique work from a talented, artistic individual with a head for business. Phew, that’s quite a big impression to give using just a tiny piece of card!</p><p>You will have your own illustrative style, and this should be brought out in the design of your card. You shouldn’t try to cram your card with images of your work, but a small graphic can look great and be uniquely tailored to your business venture.</p><p>In the example detailed below, I’ve used my own sketched graphics to give you an idea of how you can maintain a minimal design while including pieces of your illustration work. You may even want to custom-produce an illustration for your business card.</p><h3>Step 1</h3><p>Return to your InDesign template that we set up in <b>Section 1 (Above)</b>.&nbsp;</p><p>Flip the page’s dimensions by going to <b>File &gt; Document Setup...</b> to open the <b>Document Setup</b> panel and clicking on <b>Portrait Orientation</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step1_1.png"></figure><p>Go to <b>Page 1</b> of the document and use the <b>Rectangle Tool (M)</b> to create a frame that extends across the whole card up to the edges of the bleed. Set the <b>Fill</b> to<b> [Paper]</b>. With the frame selected, <b>Edit &gt; Copy</b> and click on the <b>Page 2</b> icon in the <b>Pages</b> panel (<b>Window &gt; Pages</b>) to bring up <b>Page 2</b> on screen. Click <b>Edit &gt; Paste in Place</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step1_2.png"></figure><h3>Step 2</h3><p>So now we have an unusual layout for this card - it’s a great tip to switch the orientation of your card to a portrait format; it provides interest and more vertical length for any tall graphics.</p><p>Return to <b>Page 1</b> of your document and use the <b>Type Tool (T)</b> to create a new text frame <b>55 mm</b> in <b>Width</b> and <b>17 mm</b> in <b>Height</b>. Position this at the top of your card, close to the top margin. Type ‘<i>Name</i> (paragraph break) <i>Job Title</i>’ or ‘<i>Business Name </i>(paragraph break) <i>Your Name</i>’; or in this fictional example ‘<i>Katy Foal</i> (paragraph break) <i>Illustration</i>’.</p><p>Because this card is tailored for an Illustrator, we might want to use a font that reflects what you do for a living - which is at its most traditional, drawing with pencil and paper. So I’ve gone for a scrawly, handwritten font which is still lovely and legible, <b><a href="http://www.urbanfonts.com/fonts/Bon_Iver.htm" rel="external" target="_blank">Bon Iver</a></b>. There are lots of handwritten fonts out there, some are great and some are...well...less great, so choose wisely!&nbsp;</p><p>Highlight all the text and set the <b>Font </b>to <b>Bon Iver Regular;</b> select <b>Align Center</b> from the <b>Character Formatting Controls</b> panel at the top of your screen.&nbsp;</p><p>Highlight ‘<i>Name</i>’ and set the <b>Size</b> to <b>27 pt</b>. Set the <b>Color</b> to a <b>Tint</b> of <b>85% [Black]</b>. Highlight ‘<i>Job Title</i>’ and set the <b>Size</b> to <b>24 pt</b> (unless your name is longer than your job title) and <b>Color</b> to a <b>Tint</b> of <b>65% [Black]</b>. The text should fit within the margins, leaving a good <b>10 mm</b> space between the text frame and the printable edge of the card.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step2.png"></figure><h3>Step 3</h3><p>This is a great place to add a little illustration to your card. I put together a couple of balloon sketches which I then post-edited in <b>Photoshop</b> to remove any background discoloration and improve <b>Contrast</b>.</p><p>Use the <b>Rectangle Frame Tool (F)</b> and <b>File &gt; Place</b> to insert a suitable image and <b>Click Open</b>. Use the <b>Fill Frame Proportionally</b> option from the top control panel to adjust the image scale until you are happy with the result. To directly adjust the scale of the image <b>Double-click</b> within the image frame and hold down <b>Shift</b> as you resize.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step3.png"></figure><h3>Step 4</h3><p><b>Double-click</b> the <b>Page 2 icon</b> in the <b>Pages </b>panel (<b>Window &gt; Pages</b>) to bring the page up on screen. This will be the <b>REVERSE</b> of your card.</p><p>Use the <b>Type Tool (T) </b>to create a new frame <b>55 mm</b> in <b>Width</b> and <b>5 mm</b> in <b>Height</b>. Place this just above the horizontal halfway point of the reverse of your card. Type ‘<i>your website</i>’ and set the <b>Font </b>to <b>Bon Iver Regular</b>, <b>Size 14 pt </b>and <b>Align Center</b>. Set the <b>Color </b>of the central website name to a <b>Tint</b> of <b>85% [Black] </b>and the ‘<i>www.</i>’ and ‘<i>.com</i>’ to a <b>Tint</b> of <b>65% [Black]</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step4.png"></figure><h3>Step 5</h3><p>Use the <b>Rectangle Frame Tool (F)</b> to create a new image frame and <b>File &gt; Place</b>. Select a related, but slightly different image, to the one on the front of your card, and <b>Click Open</b>. Adjust the scale, as before, until you are happy with the result.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step5.png"></figure><h3>Step 6</h3><p>You can list your contact details at the top of the card, but here presents an opportunity to stress my second <i>Golden Rule</i> of business card design: <i>Always </i><i>choose </i><i>legibility of text over style!</i></p><p>The handwritten font we’ve used so far has been great for creating an eye-catching headline, and a large-scale website address; but it won’t be suitable at smaller-scale as it may become difficult to read. So I’ve chosen a second font in this example, a classic and clear Serif, <b><a href="http://www.calendasplus.com/index.html" rel="external" target="_blank">Calendas Plus</a></b>.&nbsp;</p><p>Create a new text frame using the <b>Type Tool (T)</b> and type ‘<i>telephone number </i>(paragraph break) <i>email address</i>’. Set the <b>Font </b>to <b>Calendas Plus Regular</b>, <b>Size 7 pt</b>, <b>Leading 10 pt</b> and set the <b>Color to [Black]</b>, <b>Tint 65%</b>. Pull out any more important words or details in a <b>Tint</b> of <b>85%</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step6.png"></figure><p>Awesome work - you now have a beautiful business card design for attracting some potential commissions! Skip to the bottom of the tutorial to read how to export your card for print.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/3_Step6_2.png"></figure><h2><span class="sectionnum">4.</span> If You’re a <i>Photographer</i>...</h2><p>...you may have a specialism within your field, such as Events, Travel or Portraiture. You may have several different specialisms, and in this case one business card design might not be enough to reach a variety of different clients who are looking for different things. Many printers now offer the technology to print several different designs on the reverse of your cards for little or no extra cost - for photographers this is a great way of showing a potential client your range of work, or targeting a client with a particular photo or design you feel will have greater appeal for them.</p><p>In the example below, I put together a card with a photo reverse - you can interchange this with a number of different options of your own work. Because a photographer’s trade is heavily visual, you should use your business card as an opportunity to showcase your best work (or, even better, your most commercially appealing work).&nbsp;</p><p>This leads to the last <i>Golden Rule</i> of business card design: <i>design a card that is audience-appropriate!</i> Research your target market - what would they want from a photographer? You might want to show off shots from your most creative shoot on your cards, but a client might prioritise the relevance of content and a professional attitude over your artistic ability.&nbsp;</p><h3>Step 1</h3><p>Return to your InDesign template that we set up in <b>Section 1 (Above)</b>.&nbsp;</p><p>With <b>Page 2</b> of the document brought up on screen, go to the <b>Pages Tool (Shift + P)</b> in the <b>Tools </b>panel. Go to <b>Layout &gt; Margins and Columns...</b> and set the <b>Margins</b> to <b>0.5 mm</b>.&nbsp;</p><p>Return to <b>Page 1</b> of the document and use the <b>Rectangle Tool (M) </b>to create a frame that extends across the whole card up to the edges of the bleed. Set the <b>Fill </b>to <b>[Paper]</b>. With the frame selected, <b>Edit &gt; Copy</b> and click on the <b>Page 2</b> icon in the <b>Pages</b> panel (<b>Window &gt; Pages</b>) to bring up <b>Page 2</b> on screen. Click <b>Edit &gt; Paste in Place</b>.</p><p>With the frame selected, open the <b>Swatches</b> panel (<b>Window &gt; Swatches</b>) and click the <b>New Swatch</b> icon at the bottom of the panel. Set the values to <b>Cyan=74, Magenta=13, Yellow=77</b> and <b>Black=4</b>. Rename this swatch ‘<i>Business Card Green</i>’. Ensure the <b>Fill </b>of the frame on <b>Page 2</b> is set to ‘<i>Business Card Green</i>’.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step1.png"></figure><h3>Step 2</h3><p>Return to <b>Page 1</b> and drag a horizontal <b>guideline</b> down from the top ruler (go to <b>View &gt; Show Rulers</b>, if not already visible) to the center point of the card, at <b>27.5 mm</b>. Introduce a new text frame using the <b>Type Tool (T) 31 mm</b> in <b>Width </b>and <b>9 mm</b> in <b>Height</b> and position this on the left of the card, resting against the left margin and centered on the guideline.</p><p>Type ‘<i>Name</i> (paragraph break) <i>Job Title</i>’ and set the <b>Font </b>to a classic Serif font. I’ve gone for <b><i>Adobe Garamond Pro</i></b>. Highlight the ‘<i>Name</i>’ alone, and set the <b>Font</b> to <b>Regular, Size 12 pt,</b> and <b>Leading 15 pt</b>.&nbsp;</p><p>Highlight ‘<i>Job Title</i>’ alone and set the <b>Weight</b> to <b>Semibold, Size 11 pt</b>, and <b>Leading</b> to <b>15 pt</b> (unless your name is longer than the job title, in which case reverse the sizing).</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step2.png"></figure><h3>Step 3</h3><p>Remaining on <b>Page 1</b>, introduce a second <b>text frame</b> <b>26 mm</b> in <b>Width</b> and <b>17 mm</b> in <b>Height</b> and position this on the right-hand side of the card, centered on the guideline, with the right-hand edge of the frame resting against the right-hand margin.&nbsp;</p><p>Type ‘<i>Website Address</i> (paragraph break) <i>Telephone Number </i>(paragraph break) <i>Email Address</i>’ and set the <b>Font</b> to <b>Adobe Garamond Pro Regular</b>, <b>Size</b> to <b>9 pt</b> and <b>Leading </b>to <b>20 pt</b>. You can pull out key words or details in <b>Bold</b>, and give less important letters and glyphs a <b>Color </b>of ‘<i>Business Card Green</i>’.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step3.png"></figure><h3>Step 4</h3><p>Use the <b>Line Tool (\) </b>from the <b>Tools</b> panel to create a vertical stroke (hold down <b>Shift </b>to keep it straight) <b>18.5 mm</b> in <b>Length</b>. Open the <b>Stroke </b>panel by going to <b>Window &gt; Stroke</b>. Set the <b>Weight</b> to <b>1 mm</b>, and the <b>Type</b> to <b>Thick-Thick</b>.&nbsp;</p><p>Position this between the two text frames on <b>Page 1</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step4.png"></figure><h3>Step 5</h3><p>You can introduce a background vector graphic on the front of your business card to sit behind the text and give the card some context. As this is a Travel Photographer’s card, I’ve introduced an <b>Illustrator</b> graphic of palm fronds (set with a <b>Black Fill,</b> with an <b>Opacity</b> of <b>20%</b> in Illustrator) in two image frames using the <b>Rectangle Frame Tool (F)</b>.&nbsp;</p><p>The first image frame is copied and pasted (<b>Edit &gt; Copy &gt; Paste</b>) and flipped (<b>Ctrl-Click (Mac) </b>or <b>right-Click (PC) </b>and<b> Transform &gt; Flip Vertical</b>, and <b>Repeat, </b>selecting<b>&nbsp;Flip Horizontal</b>) and each frame positioned in the opposite corners of the card.</p><p>I drag to select both frames and <b>Object &gt; Effects &gt; Transparency...</b> and set the <b>Opacity</b> to <b>40%</b>. Click <b>OK</b>.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step5_1.png"></figure><p>With the two image frames and the background White frame selected, <b>Right-Click</b>&nbsp;and <b>Arrange &gt; Send to Back</b>.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step5_2.png"></figure><h3>Step 6</h3><p>Go to <b>Page 2 </b>of the document and use the <b>Rectangle Frame Tool (F)</b> to create a frame that extends to the edges of the margins (not all the way to the edges of the card). Go to <b>File &gt; Place</b>, select a suitable photo (here I used&nbsp;<a href="http://photodune.net/item/ta-prohm-temple-angkor-cambodia/4022152?ref=VectorPremium" rel="external" target="_blank">Photodune_AngkorTempleCambodia</a>), and <b>Open</b>. Use the <b>Fill Frame Proportionally</b> option in the top control panel to scale the image.&nbsp;</p><p>You can drag the <b>Page 2</b> page icon in the <b>Pages</b> panel down to the <b>Create New Page</b> icon to copy this reverse page of the card, and introduce a variety of photo options.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step6_1.png"></figure><p>Great work - you have a gorgeous card design that showcases your work and will engage potential new clients! Read on to learn how to export your card for print.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/4_Step6_2.png"></figure><h2><span class="sectionnum">5.</span> Export Your Card Ready For Print</h2><h3>Step 1</h3><p>With your chosen card design open in InDesign, go to <b>File &gt; Export...</b> to open the <b>Export</b> window. Select <b>Adobe PDF (Print)</b> from the <b>Format</b> drop-down menu. Name the file and click <b>Save</b>.</p><p>In the <b>Export Adobe PDF </b>window select <b>Press Quality</b> from the <b>Adobe PDF Preset</b> drop-down menu, and keep <b>Pages</b> selected.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/5_Step1.png"></figure><p>Under the <b>Marks and Bleeds</b> section, click to select <b>All Printer’s Marks</b> under the <b>Marks</b> menu and click to select <b>Use Document Bleed Settings</b> under the <b>Bleed and Slug</b> menu. Click <b>Export</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/5_Step2.png"></figure><h2>Happy Networking!</h2><p>You now have your business card ready to be sent to the printers. Specify a minimum paper weight of 350 gsm (maximum weight of 600 gsm) for a beautiful printed result.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/114/posts/20652/image/5_Final-Image.png"></figure><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20652/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20652/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20652/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20652/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T14:12:07.429Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T14:12:07.429Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+
+<p>Create a new <strong>1500 </strong>by<strong> 1250 px</strong> document, and fill the <strong>Background</strong> with the color <code>#DBDBDB</code>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_01_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Create the text in all caps using the color <code>#6d6d6d</code>, the font <strong>Sans Serif Exb FLF</strong>, and the font <strong>Size</strong>&nbsp;set to <b>370 pt</b>. Set the <strong>Leading</strong> value to <b>200</b>, the <strong>Kerning</strong> to <b>Optical</b>, and the <strong>Tracking</strong> to <b>50</b>. </p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_01_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Go to <strong>Type &gt; Convert to Shape</strong>, to convert the text layer into a shape layer.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_01_3.jpg"></figure>
+
+
+
+
+<h2><span class="sectionnum">2.</span> Adjust the Letters</h2>
+
+<h3>Step 1</h3>
+
+<p>Pick the <strong>Path Selection Tool</strong>, then click each letter to select it, and drag it to move it around, or use the arrow<strong> </strong>keys to do so.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_02_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Follow the same steps to place all the letters as you like in the document.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_02_2.jpg"></figure>
+
+
+
+<h2><span class="sectionnum">3.</span> Create the Outer Stroke</h2>
+
+<h3>Step 1</h3>
+
+<p>Duplicate the text shape layer, and rename the copy to <strong>Stroke</strong>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_03_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>With the <strong>Path Selection Tool</strong> still selected, in the <strong>Options</strong> bar, change the <strong>Fill</strong> to <b>None</b>, and the <strong>Stroke Width</strong> to <b>5 pt</b>. Then, click the <strong>Set shape stroke type</strong> icon, change the <strong>Align</strong> to <b>Outside</b>, and click the <strong>More Options</strong> button.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_03_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Change the rest of the options as shown below:</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_03_3.jpg"></figure>
+
+
+
+<h2><span class="sectionnum">4.</span> Create the Glass Shelves</h2>
+
+<h3>Step 1</h3>
+
+<p>Pick the <strong>Rounded Rectangle Tool</strong>, make sure that the <strong>Shape</strong> option is active in the <strong>Options</strong> bar, then set the <strong>Radius</strong> to <b>1</b>, and click the <strong>Geometry Options</strong> icon. Choose the <strong>Fixed Size</strong> option, and type in <b>90</b> for the <strong>Width</strong> and <b>10</b> for the <strong>Height</strong>.</p>
+
+<p>Create a new layer on top of the <strong>Stroke</strong> layer, call it <strong>Glass</strong>, then click and drag to place a rounded rectangle right below the first letter's stroke.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_04_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Use a darker color for the rounded rectangle shape, and select the <strong>Combine Shapes</strong> icon in the <strong>Options</strong> bar.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_04_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Start adding rounded rectangles for the rest of the letters.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_04_3.jpg"></figure>
+
+<h3>Step 4</h3>
+
+<p>Once you're done, duplicate the original text shape's layer, and rename the copy to <b>Stay Cool&nbsp;Back</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_04_4.jpg"></figure>
+
+
+
+
+
+<h2><span class="sectionnum">5.</span> Create the 3D Shapes</h2>
+
+<h3>Step 1</h3>
+
+<p>For each shape layer you have, select it, then go to <strong>3D &gt; New 3D Extrusion from Selected Path</strong>. This will convert the shape layers into 3D ones.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_05_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Duplicate the <strong>Background</strong> layer twice, drag the copy layers to the top of the <strong>Layers</strong> panel, and rename them to <strong>Wall</strong> and <strong>Ground</strong>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_05_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>For each of the two layers, select it then go to <strong>3D &gt; New Mesh from Layer &gt; Postcard</strong>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_05_3.jpg"></figure>
+
+
+
+
+<h2><span class="sectionnum">6.</span> Manipulate the 3D Scene</h2>
+
+<h3>Step 1</h3>
+
+<p>To access the 3D mesh settings and properties, you'll need to open two panels: The <strong>3D</strong> panel, and the <strong>Properties</strong> panel (both found under the <strong>Window</strong> menu). The <strong>3D</strong> panel has all the components of the 3D scene, and when you click the name of any of those, you’ll be able to access its settings in the <strong>Properties</strong> panel. So make sure to always select the name of the element you want to modify in the 3D panel before you change its settings in the <b>Properties</b> panel.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_06_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>For the <strong>Ground</strong> layer, select its mesh name in the <strong>3D</strong> panel, then, in the <strong>Properties</strong> panel, click the <strong>Coordinates</strong> icon at the top, and change the <strong>X-Rotation</strong> value to <b>90</b>. This will rotate the plane <b>90°</b> so that it is perpendicular to the <b>Wall</b> plane.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_06_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Select all the 3D layers you have, then go to <strong>3D &gt; Merge 3D Layers</strong>. This will place all the 3D meshes in one scene.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_06_3.jpg"></figure>
+
+<h3>Step 4</h3>
+
+<p>Select the <strong>Move Tool</strong> and check its <strong>Options</strong> bar. You'll find a set of <strong>3D Modes</strong> for the tool to the right of the bar. When you choose one of those, you can then click and drag to perform any changes (on the selected element in the 3D panel). So with the <strong>Current View</strong> tab in the <strong>3D</strong> panel selected, you can click and drag to change the <strong>Camera View</strong> you have.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_06_4.jpg"></figure>
+
+
+
+<h2><span class="sectionnum">7.</span> Modify the Meshes</h2>
+
+<h3>Step 1</h3>
+
+<p>Select both the original text and the back mesh names in the <strong>3D</strong> panel, then change their <strong>Extrusion Depth</strong> value to <b>20</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Select the original text mesh name, click the <strong>Cap</strong> icon in the <strong>Properties</strong> panel, choose the Front side from the <strong>Sides</strong> drop down menu, then change the <strong>Bevel Width</strong> to <b>10</b>, the <strong>Contour</strong> to <b>Rolling Slope - Descending</b>, and the <strong>Inflate Angle</strong> to <b>-45</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>For the Back mesh, choose the Back side from the <strong>Sides</strong> drop down menu, change the <strong>Bevel Width</strong> to <b>10</b>, the <strong>Contour</strong> to <b>Rolling Slope - Descending</b>, and the <strong>Inflate Angle</strong> to <b>45</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_3.jpg"></figure>
+
+<h3>Step 4</h3>
+
+<p>Change the Stroke mesh <strong>Extrusion Depth</strong> to <b>150</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_4.jpg"></figure>
+
+<h3>Step 5</h3>
+
+<p>Then change its <strong>Bevel Width</strong> to <b>10</b>, and the <strong>Contour</strong> to <b>Half Round</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_5.jpg"></figure>
+
+<h3>Step 6</h3>
+
+<p>For the Glass mesh, leave the <strong>Extrusion Depth</strong> at <b>481</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_6.jpg"></figure>
+
+<h3>Step 7</h3>
+
+<p>And just change the <strong>Bevel Width</strong> to <b>10</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_7.jpg"></figure>
+
+<h3>Step 8</h3>
+
+<p>Finally, for both plane layers, un-check the <strong>Cast Shadows</strong> box.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_07_8.jpg"></figure>
+
+
+
+
+<h2><span class="sectionnum">8.</span> Create the Materials</h2>
+
+<h3>Step 1</h3>
+
+<p>Select the <strong>Front Inflation Material</strong> tab for the original text mesh, and the <strong>Back Inflation Material</strong> tab for the Back text mesh. Then, click the <strong>Diffuse</strong> texture icon, and choose <strong>Remove Texture</strong>. <em>You'll need to do that for all the other materials as well</em> when you modify them.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Change the rest of the <strong>Settings</strong> as shown below:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#575757</code></li>
+<li><strong>Specular:</strong> <code>#606060</code></li>
+<li><strong>Illumination:</strong> <code>#000000</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Select the <strong>Font Bevel</strong>, <strong>Extrusion</strong>, and <strong>Back Bevel</strong> material tabs for both the original and Back text meshes as well, and change their <strong>Settings</strong> as shown below:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#d4d4d4</code></li>
+<li><strong>Specular:</strong> <code>#67666b</code></li>
+<li><strong>Illumination:</strong> <code>#080808</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_3.jpg"></figure>
+
+<h3>Step 4</h3>
+
+<p>Select the <strong>Back Inflation Material</strong> tab for the original text mesh, and the <strong>Front Inflation Material</strong> tab for the Back text mesh, and change the <strong>Settings</strong> as shown below:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#b4b4b4</code></li>
+<li><strong>Specular:</strong> <code>#65666a</code></li>
+<li><strong>Illumination:</strong> <code>#080808</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_4.jpg"></figure>
+
+<h3>Step 5</h3>
+
+<p>Select all the <strong>Stroke</strong> material tabs to change their <strong>Settings</strong>:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#a3671f</code></li>
+<li><strong>Specular:</strong> <code>#cab171</code></li>
+<li><strong>Illumination:</strong> <code>#080808</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_5.jpg"></figure>
+
+<h3>Step 6</h3>
+
+<p>Select all the <strong>Glass</strong> material tabs to change their <strong>Settings</strong>:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#ffffff</code></li>
+<li><strong>Specular:</strong> <code>#c2c2c2</code></li>
+<li><strong>Illumination:</strong> <code>#080808</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_6.jpg"></figure>
+
+<h3>Step 7</h3>
+
+<p>The <strong>Wall</strong> material <strong>Settings</strong>:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#DBDBDB</code></li>
+<li><strong>Specular:</strong> <code>#a3a3a3</code></li>
+<li><strong>Illumination:</strong> <code>#080808</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_7.jpg"></figure>
+
+<h3>Step 8</h3>
+
+<p>The <strong>Ground</strong> material <strong>Settings</strong>:</p>
+
+<ul>
+<li><strong>Diffuse:</strong> <code>#d4d4d4</code></li>
+<li><strong>Specular:</strong> <code>#67666b</code></li>
+<li><strong>Illumination:</strong> <code>#080808</code></li>
+<li><strong>Ambient:</strong> <code>#000000</code></li>
+</ul>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_8.jpg"></figure>
+
+<h3>Step 9</h3>
+
+<p>Pick the <strong>Move Tool</strong>, and use the <strong>3D Axis</strong> to move the meshes and place them as you like in the Scene. The arrows at the ends of the 3D Axis move the mesh, the part below them is used for rotation, and the cubes are used for scaling. The cube in the center is used to scale the object uniformly. All you need to do is click and drag the part you need to perform the changes on.</p>
+
+<p>You can also change the <b>Camera View</b> if needed to see how the meshes look from different angles.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_08_9.jpg"></figure>
+
+<h2><span class="sectionnum">9.</span> Modify the Lights</h2>
+
+<h3>Step 1</h3>
+
+<p>Select the <strong>Infinite Light 1</strong> tab, then change its color to <code>#bfb7ac</code>, its <strong>Intensity</strong> to <b>30%</b>, and its <strong>Shadow Softness</strong> to <b>20%</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>You can then use the <strong>Move Tool</strong> to move the light around in the scene as you like, or use the <strong>Coordinates</strong> values shown below.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Click the <strong>Add new light to Scene</strong> icon down the <strong>3D</strong> panel, and choose <strong>New Point Light</strong>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_3.jpg"></figure>
+
+<h3>Step 4</h3>
+
+<p>Change the Point Light's <strong>Intensity</strong> to <b>20%</b>, and un-check its <strong>Shadow</strong> box.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_4.jpg"></figure>
+
+<h3>Step 5</h3>
+
+<p>Place the <strong>Point Light</strong> behind the text, slightly to the top. You can use the <strong>Coordinates</strong> values used in this tutorial as well.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_5.jpg"></figure>
+
+<h3>Step 6</h3>
+
+<p>Click the <strong>Environment</strong> tab in the <strong>3D</strong> panel, then click the <strong>IBL</strong> texture icon in the <strong>Properties</strong> panel, and choose <strong>Replace Texture</strong>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_6.jpg"></figure>
+
+<h3>Step 7</h3>
+
+<p>Open the <strong>_aaalplplllpplpw2p1lpmlaqmmmklsi.jpg</strong> image from the <strong>Malleable Metal Patterns</strong> pack, then change the <strong>Intensity</strong> value to <b>50%</b>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_09_7.jpg"></figure>
+
+
+
+
+<h2><span class="sectionnum">10.</span> Adjust the Meshes and Render</h2>
+
+<h3>Step 1</h3>
+
+<p>Click the Back mesh name, then move it to the back so that it shows from behind the golden bars.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_10_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>You can then select a mesh or a couple of meshes and move them around in the scene, as well as change the camera view until you like the result you get.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_10_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Make sure that the Ground mesh is not below the scene's original <strong>Ground Plane</strong>, then go to <strong>3D &gt; Render</strong>. The rendering might take some time, but you can stop it anytime be pressing the <strong>Esc</strong> key.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_10_3.jpg"></figure>
+
+
+
+
+
+<h2><span class="sectionnum">11.</span> Adjust the Colors</h2>
+
+<h3>Step 1</h3>
+
+<p>Once the rendering is done, make sure to save the file.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_11_1.jpg"></figure>
+
+<h3>Step 2</h3>
+
+<p>Go to <strong>Select &gt; All</strong>, then <strong>Edit &gt; Copy</strong>, and <strong>Edit &gt; Paste</strong>.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_11_2.jpg"></figure>
+
+<h3>Step 3</h3>
+
+<p>Change the pasted Layer's <strong>Blend Mode</strong> to <b>Soft Light</b>, and its <strong>Opacity</strong> to <b>35%</b>. This will make the final result look more vivid and vibrant.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/image/Step_11_3.jpg"></figure>
+
+
+
+<h2>Congratulations! You're done.</h2>
+<p>In this tutorial, I showed you how to create a text layer, convert it into a shape layer, and then how to re-position the letters on your canvas. After that, I showed you how to duplicate those letters to create an outer stoke. A few rectangles were added to create the shelves for the letters.</p><p>Once that was done, I then showed you how to convert those shapes into 3D objects, apply materials to them, and finally how to light and render the scene. I hope that you found this tutorial helpful and can use the techniques that you learned in a project of your own.&nbsp;Please feel free to share your results in the comments below.</p>
+
+<figure><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/166/posts/20292/final_image/Stay%20Cool%20Text%20Effect%20-%20Final.jpg"></figure><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20292/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20292/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20292/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20292/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T12:45:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T12:45:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:13:"Grace Fussell";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:6;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:4:"Rose";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:6;a:6:{s:4:"data";s:38:"
     
     
     
@@ -754,9 +1110,139 @@ wp_reset_postdata();
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21212";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:92:"http://computers.tutsplus.com/tutorials/how-to-silence-the-startup-chime-on-a-mac--cms-21212";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:41:"How To Silence the Startup Chime on a Mac";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:8135:"<p>Each time you start a Mac, you'll hear a familiar start-up chime. You may have noticed that sometimes it seems louder, or perhaps quieter, than usual. Or perhaps there is no chime at all. &nbsp;In this tutorial I'll show you how to change the volume of the Mac start up chime, or mute it completely.<br></p><p>There may be good reasons as to why you want to mute the start up chime on a Mac. Or change the volume.<br></p><h2>The Start Up Chime</h2><p>If you are unfamiliar with the Mac start up chime–perhaps your has been muted all along–click on the audio snippet, below, to listen:</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/audio/MacStartUpChime.mp3" controls="controls"></audio><h2>Chime Volume Explained<br></h2><p>Whilst it might seem that the volume of the chime is somewhat random, the reason for its volume is surprisingly simple and easy to control. How to adjust it will depend upon whether you have any external speakers, or headphones, plugged into the Mac or whether the start up chime comes from the internal speakers.<br></p><p>Either way, the volume of the chime, or whether it is muted, is all controlled by the system volume through the <b>Sound</b>&nbsp;preference pane within <b>System Preferences</b>.<br></p><h2>Adjust Chime Volume on Next Start Up</h2><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/image/syspref.png"><figcaption>Sound preference pane in <b>Apple &gt; System Preferences</b></figcaption></figure><p>Deceptively simple to adjust, you might well wonder why you didn't know how to do this before now. &nbsp;Adjusting the start up chime volume is dependent upon a couple of factors:<br></p><ol><li>Whether you have any headphones or external speakers plugged in, and</li><li>The current volume in <b>System Preferences &gt; Sound</b><br></li></ol><h3>Adjust Chime Volume for Built-in Speakers</h3><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/image/internal-speakers.png"><figcaption>Adjusting internal speaker volume in the Sound preferences</figcaption></figure><ol><li>Ensure that any headphones or external speakers are disconnected and that there is nothing plugged into the audio-out socket on the Mac</li><li>Navigate from the <b>Apple icon</b>, on the menubar, to <b>System Preferences &gt; Sound</b><br></li><li>Select<b> Internal Speakers - Built In<br></b></li><li>Using the <b>Output Volume</b> slider, at the bottom of the window, adjust the volume. &nbsp;Note, if you move the control to the extreme left, the volume will be muted. &nbsp;Alternatively, tick or untick the <b>Mute</b> tickbox as desired<b><br></b></li></ol><p>The next time that the Mac is shut down and restarted, the volume of the start up chime from the internal speakers will be determined by the setting that you chose in&nbsp;<b>System Preferences &gt; Sound</b><b><br></b></p><h3><b></b>Adjust Chime Volume for Display Audio, Headphones or External Speakers</h3><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/image/display-audio.png"><figcaption>Adjusting Display Audio volume in Sound preferences, same principle for headphones</figcaption></figure><ol><li>Ensure that any headphones or external speakers are disconnected and that there is nothing plugged into the audio-out socket on the Mac</li><li>Navigate from the&nbsp;<b>Apple icon</b>, on the menubar, to&nbsp;<b>System Preferences &gt; Sound</b></li><li>Select <b>Headphones - Headphone port</b></li><li>Using the&nbsp;<b>Output Volume</b>&nbsp;slider, at the bottom of the window, adjust the volume. &nbsp;Note, if you move the control to the extreme left, the volume will be muted. &nbsp;Alternatively, tick or untick the&nbsp;<b>Mute</b>&nbsp;tickbox as desired</li></ol><p>The next time that the Mac is shut down and restarted, the volume of the start up chime from the headphones will be determined by the setting that you chose in&nbsp;<b>System Preferences &gt; Sound</b><br></p><p>The same principle is used for any external speakers that have been attached to the Mac via the audio-out port, whether that is Thunderbolt Display speakers or a set of powered external speakers.<b><br></b></p><h2>A Quicker Way to Change Start Up Chime Volume</h2><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/image/media-keys.png"><figcaption>The media keys on a modern Apple keyboard</figcaption></figure><p>Having to go to <b>System Preferences &gt; Sound</b>, each time, to change the start up chime volume is a bit of a hassle. &nbsp;An even quicker way to adjust the volume is to use the <b>F10</b>, <b>F11</b> and <b>F12</b> media keys on a Mac keyboard.<br></p><p>The <b>F10</b>, <b>F11</b> and <b>F12</b> media keys toggle mute on or off, decrease volume and increase volume respectively.<br></p><p>For example, if you prefer no start up chime when you next restart the Mac, just press <b>F10</b> on the Mac keyboard before shutting down the Mac.<br></p><p>Note, if you have changed the default behaviour of the media keys, you will need to hold down the <b>Fn</b>&nbsp;key in conjunction with the <b>F10</b>, <b>F11</b> and <b>F12</b> media keys.<br></p><p>Bear in mind that using the mute key on the keyboard will not mute the internal speakers, on next start up, if there is anything plugged into the audio-out port.<br></p><h2>Using Terminal<br></h2><p>With the method, from the command line, it is possible to completely disable the start up chime. &nbsp;Even on subsequent reboots, the chime will remain muted.<br></p><p>To permanently mute the chime–or at least until such time that you wish to unmute it–navigate to <b>Terminal</b>. &nbsp;A quick way is to press the <b>Command-Space</b> keys, to open <b>Spotlight</b>, and type the word <b>Terminal</b>, select the <b>Terminal</b> app and press <b>Enter</b>. &nbsp;It's quicker to do it than it is to tell you how to do it!<br></p><h2><b></b>Permanently Mute the Chime</h2><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/image/chime-mute.png"><figcaption>Entering a command to permanently mute the start up chime</figcaption></figure><p><b></b>Once in Terminal, enter the following command on the command line:</p><pre class="brush: bash">sudo nvram SystemAudioVolume=%80</pre><p>Enter the administrator password when prompted. &nbsp;The start up chime is now permanently disabled.</p><h2>Re-enable the Chime</h2><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/31/posts/21212/image/chime-unmute.png"><figcaption>Entering a command to permanently unmute the start up chime</figcaption></figure><p>If, at a point in the future, you decide that it is best to have the start up chime afterall, open the Terminal application and enter the following command:</p><pre class="brush: bash">sudo nvram -d SystemAudioVolume</pre><p>This will restore the start up chime.</p><h2>Conclusion<br></h2><p>The start up chime is actually there for a reason: to indicate that the Mac has performed initial diagnostics tests and there are no fundamental hardware or software problems.<br></p><p>Having the start up chime is useful; press the Option key, immediately after the chime, to access available start-up volumes, for instance. &nbsp;That said, there are sometimes circumstances where controlling the chime volume is preferable.<br></p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21212/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21212/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21212/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21212/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T12:00:04.400Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T12:00:04.400Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20952";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:105:"http://design.tutsplus.com/tutorials/create-a-gentle-flat-oriental-pattern-in-adobe-illustator--cms-20952";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:57:"Create a Gentle Flat Oriental Pattern in Adobe Illustator";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:17479:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/final_image/oriental_pattern_tuts.jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure><p>In this
+tutorial we will make a simple yet beautiful oriental pattern in Adobe
+Illustrator. Various objects of Asian culture will be created with basic shapes
+and then combined into a neat composition, forming a seamless pattern, that
+will fit perfectly as a background for your blog, an ornamental wrapping paper
+for your gift or a festive piece of fabric for clothing. Interested? Let’s get
+started then!</p><h2><span class="sectionnum">1.</span> Create Traditional Paper Lanterns</h2><h3>Step 1</h3><p>We’ll start
+by forming the first element of our texture – a red paper lantern. Firstly,
+make a rectangle using the <strong>Rectangle
+Tool (M)</strong> and fill it with pure red color. Secondly, go to <strong>Effect &gt; Stylize &gt; Round</strong> corners
+and set the<strong> Radius</strong> to approximately<strong> 30 px,</strong> to give our shape a lantern
+look.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/1-oriental-pattern-lantern.jpg"></figure><h3>Step 2</h3><p>Add a small
+rectangle on top of the basic lantern shape and press the <strong>Enter</strong>. Set the <strong>Vertical</strong>
+value in the pop-up <strong>Move</strong> window to <strong>-3 px</strong> in order to separate the
+rectangle from the lantern and to maintain our simple style.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/2-oriental-pattern-lantern.jpg"></figure><h3>Step 3</h3><p>Add a thin
+white stripe using the <strong>Rectangle Tool
+(M)</strong> again, hold the <strong>Alt</strong> key and <strong>drag</strong> the stripe down a bit, so that we
+get the copy of our first stripe. Hit the <strong>Control-D</strong>
+combination a few times to repeat your last action, creating more copies. Use
+the <strong>Shape Builder Tool (Shift-M)</strong> to
+cut off those parts you don’t need.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/3-oriental-pattern-lantern.jpg"></figure><p><br></p><h3>Step 4</h3><p>Let’s add a
+white shape using the <strong>Ellipse Tool (L)</strong>
+and put it into the center&nbsp; with the help
+of the <strong>Align </strong>panel.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/4-oriental-pattern-lantern.jpg"></figure><h3>Step 5</h3><p>Further, we
+need to add a tiny handle on top of our lantern. Make an oval shape with the <strong>Ellipse tool (L).</strong> Set the stroke to <strong>2px</strong> and switch it to red color. We
+need only the upper arc of the ellipse, so we’ll use the <strong>Scissors Tool (S)</strong> to <strong>click</strong>
+on side anchor points of the ellipse and break it apart. Then just delete
+the unneeded part (blue on the screenshot). Check the <strong>Stroke</strong> options window to set the <strong>Cap</strong> and <strong>Corner </strong>to middle
+positions<strong>&nbsp;(Round).</strong></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/5-oriental-pattern-lantern.jpg"></figure><h3>Step 6</h3><p>Add a few
+simple details to make our lantern more eye-catching. Add several stripes and
+edit them using the <strong>Shape Builder Tool
+(Shift-M).</strong> Put a red spot in the center of our lantern, so that it reminds
+a Japanese banner.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/6-oriental-pattern-lantern.jpg"></figure><h3>Step 7</h3><p>Let’s form
+a second lantern, but of the other shape. Make an ellipse and place a handle
+from the red lantern. Add a thin white line using the <strong>Line Segment Tool (\)</strong> and go to <strong>Effect &gt; Warp &gt; Arc.</strong>&nbsp; Set the <b>Bend</b> slider to -<b>68%.</b> The
+line will become arched, following the form of our lantern and making it more
+dimensional. Make the line dashed using the <strong>Stroke</strong> panel and add the finishing touch by drawing a fringe in the bottom of our lantern.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/21-oriental-pattern-yellowlantern.jpg"></figure><h3>Step 8</h3><p>Vary the
+length of the fringe elements and add a festive lace to the bottom of our
+lantern.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/22-oriental-pattern-yellowlantern.jpg"></figure><h2><span class="sectionnum">2.</span>&nbsp;Render
+a Bamboo Fence</h2><h3>Step 1</h3><p>An essential part of Asian
+pattern is a bamboo. Let’s make one! Draw a shape using the <strong>Rectangle Tool (M)</strong> and transform it by
+selecting the side anchor points with <strong>Direct
+Selection Tool (A)</strong> and moving them closer to the center. Make several
+copies of the bamboo and put the segments one above another. Duplicate the
+column and form a fence by varying the height of separate segments.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/7-oriental-pattern-bamboo.jpg"></figure><h3>Step 2</h3><p>Move on and
+make a simple brush for the leaves. Draw an oval with the <strong>Ellipse Tool (L)</strong> and convert the upper and lower anchor points to
+corner, making them sharp. Drag and drop the leaf to the <strong>Brushes </strong>panel and create the <strong>Art
+Brush,</strong> leaving the settings as default.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/8-oriental-pattern-bamboo.jpg"></figure><h3>Step 3</h3><p>Grab the <strong>Paintbrush Tool (B)</strong> and draw a few
+leaves around our fence.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/9-oriental-pattern-bamboo.jpg"></figure><h2><span class="sectionnum">3.</span> Form a
+Gentle Sakura Blossom</h2><h3>Step 1</h3><p>Beautiful
+eastern culture always reminds me of soft cherry petals. In order to make one, start
+by forming a shape with the <strong>Ellipse Tool
+(L)</strong>. Cut off a segment from the ellipse by adding a triangle above the
+shape and modifying it with the <strong>Shape
+Builder Tool (Shift-M). </strong>Now we have something like a hoof-print. Convert
+the lower anchor point to corner by clicking it with the <strong>Convert Anchor Point Tool (Shift-C). </strong>Finally, select both side
+anchor points and move them up a bit, to make the upper part of the petal
+wider.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/10-oriental-pattern-sakura.jpg"></figure><h3>Step 2</h3><p>Now we can
+shape our petals into a nice cherry blossom. Add a small circle under the
+petal. Take the <strong>Rotate Tool (R)</strong>,
+hold the <strong>Alt</strong> key and click into the
+center of the circle. This will be our pivot point, over which we’ll be
+rotating the copies of the petal. Release the mouse button, set the <strong>Rotate Angle</strong> to <strong>70 degrees</strong> in the pop-up options window and hit the <strong>Copy</strong> button. Press <strong>Control-D</strong> several times to repeat the last action, thus forming a
+flower.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/11-oriental-pattern-sakura.jpg"></figure><h3>Step 3</h3><p>Add simple
+details to make the flower more fancy. Draw several lines with <strong>Line Segment Tool (\)</strong> and decorate them
+with circles.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/12-oriental-pattern-sakura.jpg"></figure><h3>Step 4</h3><p>Group the
+created decorative elements and use the same trick with the <strong>Rotate Tool (R)</strong> to add them to every
+petal. </p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/13-oriental-pattern-sakura.jpg"></figure><h2><span class="sectionnum">4.</span>&nbsp;Render an Ornate Red Fan</h2><h3>Step 1</h3><p>Start by
+drawing a rectangle and transform it by moving its lower anchor points closer
+to the center. Go to <strong>Effect &gt; Stylize
+&gt; Round Corners</strong> and set the <strong>Radius</strong>
+to <strong>3 px</strong> to make the shape more
+smooth. Add a thin stick with the <strong>Rectangle
+Tool (M), Sent </strong>it <strong>to Back (Shift-Control-[)
+</strong>and <strong>Align to Key Object</strong>, thus
+putting the stick in the center of the red shape.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/14-oriental-pattern-fan.jpg"></figure><h3>Step 2</h3><p>Now we need
+to form a fan. Use the <strong>Rotate Tool (R) </strong>by
+holding the<strong> Alt</strong> key and clicking at
+the bottom of the stick. Set the <strong>Rotate
+Angle</strong> to <strong>15 degrees</strong> and hit the <strong>Copy</strong> button. Press <strong>Control-D,</strong> forming the left part of our fan. Use the <strong>Reflect Tool (O)</strong> to reflect the created
+group of objects over the vertical axis.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/15-oriental-pattern-fan.jpg"></figure><h3>Step 3</h3><p>Let’s make
+our fan more whimsy and ornate. Draw a squashed ellipse and convert its side
+anchor points to corners. Go to <strong>Effect
+&gt; Warp &gt; Flag</strong> and set the <strong>Bend</strong>
+value to maximum. <strong>Object &gt; Expand
+Appearance</strong> of our shape and decorate the fan with newly created wavy lines.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/16-oriental-pattern-fan.jpg"></figure><h3>Step 5</h3><p>Create a <strong>10-sides Polygon</strong> and go to <strong>Effect &gt; Distort &amp; Transform &gt;
+Pucker &amp; Bloat</strong> to make a simple flower by moving the slider to the <strong>Bloat</strong> side.&nbsp;Don't forget to apply <b>Object &gt; Expand Appearance</b> to your flower.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/17-oriental-pattern-fan.jpg"></figure><h3>Step 6</h3><p>Decorate
+our fan with flowers, varying the size of each element. Select all the red
+shapes, <strong>Copy</strong> and <strong>Paste in Front</strong>. <strong>Unite</strong> the shapes in <strong>Pathfinder</strong>
+and use the <strong>Shape Builder Tool (Shift-M)</strong>
+to delete the unneeded parts, which left outside of the fan.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/18-oriental-pattern-fan.jpg"></figure><p>Make the
+ornament fill a bit darker, add a small circle handle in the bottom and –
+voila! – our fan is completed.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/19-oriental-pattern-fan.jpg"></figure><h2><span class="sectionnum">5.</span> Add Some
+Zen Garden Stones</h2><h3>Step 1 </h3><p>Let’s add
+harmony to our composition by drawing a few smooth stones. Shape the first stone
+out of the ellipse by moving its anchor handles with <strong>Direct Selection Tool (A)</strong> and making the right part of the object
+narrower. Add another ellipse above the first one and reshape it to fit the composition. Add a small stone on top and use the leaf brush that we've made for the bamboo fence to add some cute leaves on both sides of the stones.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/20-oriental-pattern-stones.jpg"></figure><h2><span class="sectionnum">6.</span> Render
+a Japanese Gate</h2><h3>Step 1</h3><p>The only
+tool we need to create the stylized Japanese Gate is the <strong>Rectangle Tool (M).</strong> Create two rectangles, one above the other,
+making the lower rectangle slightly smaller. Add the pillars by
+placing another rectangle at one side of the gate and rotating it a bit. <strong>Reflect</strong> the pillar over the vertical
+axis and place its copy on the other side of the gate. Add some minor details,
+making the gate more fancy.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/23-oriental-pattern-gates.jpg"></figure><h3>Step 2<br></h3><p>Change the
+fill color of the elements to bright red and orange that we’ve used in our
+palette. Select the upper part of the gate and go to <strong>Effect &gt; Warp &gt; Arc,</strong> setting the <strong>Bend</strong> value to approximately -<strong>7%.</strong>
+Add some dark stripes in the bottom of the pillars. Use the <strong>Eraser Tool (Shift-E)</strong>&nbsp;with <b>1 pt</b> size to separate the
+parts of the gate from each other by holding the <strong>Shift</strong> key to move the tool straight horizontally.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/24-oriental-pattern-gates.jpg"></figure><h2><span class="sectionnum">7.</span> Compose
+a Neat Oriental Pattern</h2><p>All the
+elements of our composition are ready! You can change the colors to your liking. Here I've made them a little more pale.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/25-oriental-pattern-gates.jpg"></figure><h3>Step 1</h3><p>Now the fun
+part! Select all the elements and go to <strong>Object
+&gt; Pattern &gt; Make,</strong>&nbsp;entering into the <strong>Pattern</strong> mode. You can play with the settings in the <b>Pattern Options</b>
+window, however the only thing I change here it the <strong>Width and Height (600x600 px).</strong> We make the tile square, so that our pattern remains seamless
+and we can use it not only for filling the shapes that we’re creating in AI, but we’re be able to export out pattern and use it for any purpose – print, set as
+a background, etc. </p><p>Spread the
+elements around the canvas and you’ll see how your pattern will look like with
+the help of semi-transparent copies of our objects.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/26-oriental-pattern-pattern.jpg"></figure><h3>Step 2</h3><p>Copy the
+blossoms and recolor them according to the overall color palette. Add more
+copies of the blossoms behind all other objects, making them
+more transparent by lowering the <strong>Opacity</strong>
+in the <strong>Transparency </strong>panel.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/27-oriental-pattern-pattern.jpg"></figure><h3>Step 3</h3><p>Continue
+adding more elements in order to get rid of blank spaces. Add the
+semi-transparent copies of the bamboo fence and spread the circles and simple
+flowers all over the canvas.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/28-oriental-pattern-pattern.jpg"></figure><h3>Step 4</h3><p>Exit the <strong>Pattern Mode</strong> by pressing&nbsp;<strong>Done</strong>&nbsp;in the control panel
+above or just clicking twice on the empty space outside the Artboard. Now you
+can find your pattern in the <strong>Swatches</strong>
+panel and edit it anytime by clicking the <strong>Swatch
+Options</strong> button.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/29-oriental-pattern-pattern.jpg"></figure><h2>Congratulations!
+Our Gentle Oriental Pattern is finished!</h2><p>Now you
+have a nice seamless pattern that can be used anywhere you like. Hope you’ve
+enjoyed the tutorial and discovered some useful things! Good luck in making new
+patterns!</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/20952/image/oriental_pattern_tuts.jpg"></figure><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20952/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20952/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20952/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20952/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T12:12:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T12:12:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:13:"Johnny Winter";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:7;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:14:"Yulia Sokolova";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:7;a:6:{s:4:"data";s:38:"
     
     
     
@@ -764,146 +1250,21 @@ wp_reset_postdata();
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21165";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:85:"http://music.tutsplus.com/tutorials/mixing-within-the-soundstage-part-1-eq--cms-21165";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:39:"Mixing Within the Soundstage Part 1: EQ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:14918:"<p>Mixing
-any track to a professional standard is a craft that takes time and experience to
-master, as well as a good monitoring environment. A great mix will have energy,
-excitement, and the potential to make an immediate impact. But at a deeper level, it will feature details and a sonic richness that captivates the listener.&nbsp;</p><p>When
-you listen up close, nothing in particular sounds out of place—the arrangement
-suits the musical style. Yet somehow the end result is so much more than the sum
-of the parts—there’s a distinctive flair that sets it apart.&nbsp;</p><p>Here’s an example
-in an R&amp;B music style from the recent 2014 pop charts:</p><figure data-video-embed="true" data-original-url="https://www.youtube.com/watch?v=fZswz64dFlw&amp;list=PLG-6sLnL75vYuJx7WS3SFlmK5urM2LQRf" class="embedded-video">
-  <iframe src="//www.youtube.com/embed/fZswz64dFlw?rel=0" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
-</figure><p>Of
-course, all pop/rock music is a fashion statement of sorts. Opinions about
-artistes and their output are often highly subjective and widely diverse!&nbsp;But, focussing
-purely on the music and trying to be objective from the mix engineers point of
-view, I would suggest that when the main track groove arrives, it seems to
-deliver all that’s expected; everything ‘fits’ given the style it sets out to
-be.&nbsp;</p><p>When mixing, every instrument has its own place within the sonic spectrum, and needs to be treated as such. So how is this achieved?&nbsp;</p><p>Developing a good
-comprehension of the natural frequency range of each instrument (and vocals) and
-learning how they might dovetail together to make a perfect, natural fit is
-certainly going to be an invaluable help to us when the time comes to mix that
-track!</p><h2>The Aural Soundstage</h2><p>Let’s begin by introducing the ‘soundstage’ concept – a three dimensional aural
-space that we are going to work within as our track mix comes together.&nbsp;The mix
-‘soundstage’ is like the aural equivalent of a theatre stage; it has width—from low frequencies to very high—but also depth, which can be thought of as
-volume or level, and positional focus.&nbsp;</p><p>For example, in a typical professional rock
-mix designed to be listened to within a stereo context, bass drum and snare,
-bass guitar and lead vocal will tend to sit in a central position. The rest of
-the kit, guitars and keyboards, and any percussion will tend to be offset
-against this to some degree; adding width to the track.&nbsp;</p><p>The lead vocal, in
-particular, will command the track, because the energy and urgency of a great
-song performance is obviously crucial. Many mix engineers will spend a great
-deal of time and focus right here, getting this exactly right.<br></p><h2>The Art of Equalisation: Understanding Frequency Ranges</h2><p>How can our understanding of EQ transform our ability to mix a track? Every
-instrument has a natural frequency range it tends to function within. In
-addition to this natural frequency range, there will be associated harmonics
-which are usually somewhat less pronounced but these help define the natural
-tone or character of the instrument.&nbsp;</p><p>The chart below illustrates this:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/image/Frequency chart.jpg"><figcaption>EQ Frequency Chart courtesy The Independent Recording Network. <a href="http://www.independentrecording.net/irn/resources/freqchart/main_display.htm" target="_self">Click here for their interactive version</a>.</figcaption></figure><p>You’ll see at the bottom of the chart there are
-various descriptive words sound engineers and musicians alike commonly use. Though
-these are somewhat vague and certainly not technical terms, they can be helpful
-in working out how to EQ more effectively.&nbsp;</p><p>For example, a male vocal tends to
-work in the 100kHz–1K range. Its area of particular warmth might be around
-200 kHz. A female vocal will usually have its area of warmth a little higher
-than this—maybe around 400 kHz, depending on the singers range and tone.&nbsp;</p><p>Note
-that the yellow bar extensions indicate that the upper harmonics of both male
-and female vocals range much higher than 1.5kHz. These higher harmonics are
-critical in giving character to the voice. Higher still above 8kHz is where
-the crispness of the vocal will be heard. The clarity of the diction and the
-sibilant sounds ‘s’ and ‘c’ tend to happen here.&nbsp;</p><p>Every track poses different
-challenges, and only your own ears can be the judge of how to space everything
-perfectly across the sonic spectrum. But learning how to EQ the ‘muddiness’ out of that power electric guitar part, or EQ in a little more high end clarity to
-that vocal—all of this is key to setting up a great mix.<br></p><h2>Track Laying and Mixing: What's the Difference?</h2><p>Track
-recording and mixing are totally different disciplines. When recording, your
-focus will likely be on getting a solid performance at a decent level but without
-risking any distortion or overload. Whether you are merely printing a midi
-programmed part or capturing a live performance, your aim will likely be to
-capture the natural warmth and fullness of the part.&nbsp;</p><p>The result may be a rather
-fuller and bigger sound than you will actually need when you come to mix later
-on, but at this stage this isn’t generally a concern. It fact it’s often better
-to have a slightly fuller sound; you can always EQ it a little more tightly by
-‘sculpting’ out a little in frequency areas you don’t need later on.&nbsp;</p><p>To
-illustrate the mix EQ process, here’s a recording of a piano part I made. A tiny bit of compression and EQ was applied on the way in, but mainly just to
-ensure the sound was as complete as possible:</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/audio/Piano no eq.mp3" controls="controls"></audio><p><i>Piano Part: no EQ</i><br></p><p>When
-mixing, however, the focus shifts entirely. Now the piano part has to be fitted
-into an overall sonic picture within the soundstage.&nbsp;</p><p>In this classical-sounding
-instrumental track, the piano is actually a lead feature, so I decided it needed
-a touch more low end at around 100kHz to add some commanding ‘weight’. I also added
-a strong lift at 5.8kHz—mainly because I really wanted the high thirds in the
-arrangement to sparkle and cut through a touch more.&nbsp;</p><p>Here’s a screenshot of the
-actual EQ I used at the time using a Waves Renaissance EQ plug-in:<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/image/REQ piano.jpg"></figure><p>Now
-listen to the mixed version of the piano, using the above EQ settings:</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/audio/Piano with eq.mp3" controls="controls"></audio><p><i>Piano Part: EQ now added</i><br></p><p>The
-differences are quite subtle, but clearly audible. In fact, the raw recorded
-piano version probably sounds better when heard on its own! But that’s not
-untypical—the mixed version has to sit within the context of a busy
-arrangement.&nbsp;</p><p>Have a listen to <a href="http://audiojungle.net/item/elegant-piano-rhapsody/6620354" target="_self">the final mix</a>, and judge the end result for
-yourself.</p><h2>Strings: Cutting Weight and Adding Presence</h2><p>Let’s
-look at another example; string parts within a mix. Typically, violins don’t
-offer anything below 200kHz, and they are always rich in harmonic overtones so
-to capture that classy ‘sizzle’ will likely mean cutting out some of the weight
-of the part lower down the frequency range—and maybe finding that sweet spot
-higher up to just give them enough of an ‘edge’ or a bit more ‘air’ if they
-need it.&nbsp;</p><p>Here’s a short excerpt of programmed strings in four parts written for a
-cinematic instrumental piece, recorded in the raw:</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/audio/Strings no eq.mp3" controls="controls"></audio><p><i>Strings: no EQ</i><br></p><p>Now here’s the same part with the Waves
-EQ screenshot below. Some low end has been added at 140Hz mainly to draw out
-the depth of the low cello fifths, but to compensate there is quite a strong cut
-at 500Hz with a fairly wide ‘Q’ setting, to get rid of a lot of low-mid
-weight.&nbsp; Presence and ‘air’ have been
-added higher up:</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/audio/Strings with eq.mp3" controls="controls"></audio><p><i>Strings: EQ added</i><br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/image/REQ strings.jpg"></figure><p>Have a listen to the final mix <a href="http://audiojungle.net/item/mystic-fever/6875557" target="_self">here</a>. The strings enter at 0:45".</p><h2>A Word about 'Q'</h2><p>With a parametric EQ, apart from setting a
-frequency and boosting or cutting gain, you can set the width of the frequency
-band over which your equalization changes apply. This is called the ‘Q’
-setting.&nbsp;</p><p>A single octave change is a ‘Q’ value of 1; so anything below 0.7 or
-so will be a broad, general equalization change, whereas a ‘Q’ setting of 5 or 6
-would be a very narrow, precise notch of frequency cut (or gain). You might use
-this to deal with a specific noise issue for example.&nbsp;</p><p>In the above REQ plug-in,
-the lowest row is where the ‘Q’ setting is applied.<br></p><h2>Pads Are Great: But Don't Lose the Energy!</h2><p>I’m
-a keen user of all kinds of pads within a track; soft, airy, evolving, or
-ethereal. They can certainly add drama to a ballad and give a sense of depth to
-any mix, but they also come with a risk factor to my mind. If they are too full
-sounding or just too loud, they can often seem to drain the energy out of the
-track.&nbsp;</p><p>To my mind, many manufacturers seem to design pads very rich and full
-sounding, maybe just to impress the listener into buying them in the first
-place! But the risk is they will just dominate and take over all your available
-soundstage space.&nbsp;</p><p>So I think the lesson here is: Be brutal when you need to be.
-Don’t be afraid to sculpt the EQ weight out of that pad so it doesn’t interfere
-with the rhythm section of your track. Some pads have natural ‘air’ which you
-might want to emphasise a little, but for me it often seems to be mostly about cutting
-away what you don’t need—and keeping the levels well under control.&nbsp;</p><p>Do the AB
-test. Is the track energy still there? And does the pad add just a little
-something indefinable to your track? Maybe that’s all it needs to do.<br></p><h2>Plug-Ins: A Complete Signal Processing Chain?</h2><p>Plug-ins
-that sit within your DAW now exist in abundance, and have been commonly used for
-a long time now to process sound. There are many examples that are capable of
-being highly forensic and do a great job. A few are designed to actually
-emulate the whole mix process that top sound engineers go through to obtain a
-finished professional sound on certain instruments.&nbsp;</p><p>For example, the Waves <a href="http://www.waves.com/bundles/tony-maserati-signature-series" target="_self">Maserati</a> plug-ins have settings that emulate closely a chain of processors the
-top professional engineer Tony Maserati might commonly use on guitars. They are
-very effective, but additionally they also demonstrate how a top mix engineer
-might want to sculpt a sound to achieve a professional mix result.&nbsp;</p><p>Have a
-listen to this pick guitar part with and without the plug-in enhancements. The
-delay part was also put through the same process and is included in these MP3
-examples:</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/audio/Pick gtr no maserati.mp3" controls="controls"></audio><p><i>Pick Guitar Part: no processing</i></p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/audio/Pick gtr with maserati.mp3" controls="controls"></audio><p><i>Pick Guitar Part: Maserati Plug-In added</i><br></p><p>What’s
-the difference? A little less weight, it seems to me, and a presence emphasis to
-ensure the pick rhythm cuts through.&nbsp;Of course, the guitarist had already
-provided plenty of compression—and perhaps a little EQ—to the ‘raw’ recorded
-sound through his own amp and pedalboard, so here the mix processing just takes
-the same logic a little further.&nbsp;</p><p>Here’s the plug-in screenshot. Unfortunately
-this plug-in doesn’t say very much about the actual signal chain used, but I
-guess the sonic end result is what matters.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/340/posts/21165/image/Maserati pick gtr.jpg"></figure><h2>A Rough Guide to Instrument Equalisation</h2><p>Where
-to cut and when to boost? Only time and experience can really help you as so
-much depends on musical context and style, plus your own ears working within a
-familiar monitoring environment.&nbsp;</p><p>But here’s a useful guide that might be of
-help, if the world of frequency numbers leaves you a touch mystified at times:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/29/posts/21165/image/Frequency-Guide.jpg"></figure><p>In the comments column, I’ve put a
-few personal observations that tend to be things I am typically on the lookout
-for when mixing, when it comes to that particular instrument.<br></p><h2>Conclusion</h2><p>
-
-
-
-In this tutorial, I’ve only been able to touch on
-a few aspects of what is a highly complex craft. Equalisation is a key aspect
-of track mixing, but in practice it is used interactively together with
-compression, reverb, delay, and quite possibly various other processes.&nbsp;</p><p>In the
-next article, I’ll be looking at a couple of other key aspects when it comes to
-mixing within the soundstage; reverb and delay.<br></p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21165/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21165/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21165/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21165/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T08:19:33.757Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T08:19:33.757Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20549";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:73:"http://design.tutsplus.com/articles/color-fundamentals-shading--cms-20549";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:27:"Color Fundamentals: Shading";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:33486:"<p>We tend to see color as an attribute of every material thing, and light as a factor that can change it. Tomato is red, grass is green, and light can only add a tint or shade to it, right...? Wrong.&nbsp;</p><p>Color doesn't exist universally - it's the effect of our vision mechanism, fueled by light. No light, no color, and you can notice this easily when it's dark. It's not that darkness "covers" the colors - it's light what creates them! If it sounds revolutionary to you, keep on reading - there's no more important thing to understand for an artist. Also, make sure to read <a href="http://design.tutsplus.com/articles/improve-your-artwork-by-learning-to-see-light-and-shadow--cms-20282" target="_self">the first article of the series</a> before trying this one - it's a great introduction to shading.<br></p><h2>What is Color?</h2><p>Let's take a little physics revision. Don't worry, I'll make it as simple as possible! Some objects are able to emit radiation, what that means is they throw a bunch of particles (or waves) in various directions. Light is a kind of radiation, and every light source emits <b>photons</b>.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-1.png"></figure><p>Photons are waves combined of various <b>wavelengths</b> (here x, y, x).<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-2.png"></figure><p>We're going to call the way the photons fly between the light source and a particular direction a <b>ray</b>.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-3.png"></figure><p>Those were a couple of facts. But what happens when a human factor comes in? There's a lot of radiation everywhere around us, but our eyes are specialized to react to only a particular range of wavelengths. For example, we don't see heat until its wavelength comes into that range (red-hot metal suddenly becomes a light source). This part of electromagnetic radiation we can <i>see</i> is called <b>visible light</b>, and is commonly known as just light.<br></p><p>We've discussed it shortly in the first article of this series, but let's add a bit of detail now. There are two kinds of photoreceptor cells in our eyes: <b>cones</b> and <b>rods</b>. When a ray hits them, they react and transfer some information to the brain.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-4.png"></figure><p>Rods are very light-sensitive and are responsible for night vision, seeing movement and forms. Cones, on the other hand, are much more interesting for us. They are able to separate the wave into particular wavelengths, that the brain interprets (roughly) as <b>red</b> (long), <b>green</b> (medium) and <b>blue</b> (short). Depending on what wavelengths the ray consists of, we perceive a color mixed of these three.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-5.png"></figure><p>But where do various wavelengths come from, if they are all brought by the same light source? Most of rays hit some object on their way, and then they're being reflected somewhere else (for example, to your eye). Usually the object they hit doesn't reflect them perfectly like a mirror. Some of the wavelengths are being <b>absorbed</b> by the object and they never reach your eye. As a result, we receive only a part of the original ray from that object. These remains of the ray are then interpreted by your brain as the <b>color of the object</b>. Different colors come from different absorbing and reflecting properties of materials.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-6.png"></figure><p>You probably wonder what it all has to do with color in painting. After all, we only paint with colors, we don't create them physically! I'm sure everything will become clear in a second.</p><h2>Hue, Saturation, Brightness</h2><p>Is there something more confusing than this? Our intuition tells us what hue, saturation and brightness is, but when it comes to painting, it's hard to guess how to use it. Hue is, well, color, right? Saturation is a level of vividness... and brightness tells us if something is dark or bright. But it only makes sense as long as you talk about a finished painting, and it's much harder to guess where to put it all when you do it yourself. However, all we need is to understand where all these values actually come from!<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-7.png"></figure><h3>The Definition of Hue</h3><p>Hue is a "type" of color. Red, purple, olive, crimson are all hues. They're based on the mechanism we've just talked over - the reflected wavelengths, mixed in various proportions, create a final color interpreted by brain. Therefore, putting it simply, <b>hue is based on "the color of the object"</b>. An interesting fact: silver, gold or brown aren't hues. Silver is shiny gray, gold is shiny yellow, and brown is dark or unsaturated orange.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-8.png"></figure><p>No matter how many names we invent for the hues, all of them base on red, green and blue. The further on the color wheel you are from any of them, the more "original" color you'll get. For example, 50% red + 50% green gives yellow, but change this proportion just a little bit and you'll see a greenish or reddish tint.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-9.png"></figure><p>There's no greater or lesser hue, being put on a wheel they're all equal. Hence we describe them by degrees instead of a percent value.</p><h3>The Definition of Saturation<br></h3><p>Hue doesn't mean color (at least not formally). All the circles below have the same hue, the same exact position on the color wheel (the same brightness too!). So why do we perceive them as different colors?<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-10.png"></figure><p>The common definition of saturation is how much white there is in the color. But wait, wasn't that about brightness? You want brighter color, you make it whiter... But that would make darker areas more saturated. It's so confusing, isn't it? That's why we need more explanation. <br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-11.png"></figure><p>Saturation is the <b>dominance of color</b>. The three samples below have the same brightness and hue. The only thing that changes is the proportion between the components. We're not "adding white" - we're reducing the distance between the components, so none of them stands out.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-12.png"></figure><p>As you can guess, when there's no difference between the components, we've got no saturation, which gives us white (we don't include brightness yet).<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-13.png"></figure><h3>The Definition of Brightness</h3><p>For our needs we can treat brightness as synonymous with value from the previous article. It defines <b>the maximum of a value our eyes can perceive</b>. There's no more blue than 100% blue, just like there's nothing brighter than 100% white.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-14.png"></figure><p>The bars can't be filled over the maximum:<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-15.png"></figure><p>And, obviously, black comes from the lack of information.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-16.png"></figure><p>An interesting fact: when it's dark, our cone cells get a little information, what makes us a bit color-blind. At this time rod cells, sensible to any light, will take over. However, since they're the most sensible to green-blue light, they'll make any green-blue object look brighter. It's called the&nbsp;<a href="http://upload.wikimedia.org/wikipedia/commons/7/7d/Red_geranium_photoic_mesopic_scotopic.jpg" target="_self">Purkinje effect</a>.</p><h4>Luminance</h4><p>Despite having a certain, absolute brightness, every color has another property, <b>luminance</b>.
+ While brightness tells us how much of color there is in the color, some
+ of hues appear brighter to us - even when they're all 100% bright. 
+Luminance is about <b>how bright color is relative to white</b>.&nbsp;</p><p>When
+ we turn 100% bright primary colors to grayscale, their brightness 
+suddenly drops. They still make white, but blue turns out to be very, 
+very dark, and green the brightest of them all. It comes from individual
+ sensitiveness of every cone, and that's why we perceive yellow (bright 
+red + very bright green) as the brightest of colors, or why cyan (dark 
+blue + very bright green) is sometimes called light blue. Luminance is important when you start your picture in grayscale - for example, yellow needs a brighter base than other colors of the same absolute brightness.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20679/image/color-shading-advanced-29.png"></figure><h3>HSB Model</h3><p>It's still a bit confusing, though. In reality we don't build the colors carefully, it would take too long! Fortunately, hue, saturation and brightness can be combined into a very useful tool. Take a look at the scheme below - you can notice there's a clear relation between colors. Why not use it?<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-17.png"></figure><p>If you're a digital painter, these should look familiar to you. It's a way of combining hue, saturation and brightness into one, consistent model called HSB. How does it work?<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-18.png"></figure><p>Once you've known what hue, saturation and brightness are, it's easy to locate them on the model. Hue wheel (or a bar, it doesn't matter) is independent and superior to SB square/triangle. Every hue possesses a range of saturation and brightness, and these two values are bound to each other. Together they define "richness" or "colorfulness" of a particular hue.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-19.png"></figure><p>SB model can be divided into areas of different properties. If you learn to optically choose a proper color, you won't need to know anything about certain values of saturation or brightness - it's very helpful for spontaneous, fast painting. <br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-19b.png"></figure><p>While the square is much more intuitive, I personally prefer the triangle. It lets me control "richness" at a whole, not severally saturation and brightness (I've got separate sliders for that!). If you're like me and feel Photoshop could use a nice 
+color wheel being opened all the time, <a href="http://nerdchallenge.com/lenwhite/LenWhite.com/LenWhite.com/Entries/2012/9/16_PW_CS6.html" target="_self">check out this amazing, free plugin by Len White</a>.</p><h2>CMY and RGB<br></h2><p>But what about traditional painters? They don't have a handy color wheel with neat sliders. How can you change a hue, saturation or brightness of a pigment?&nbsp;</p><p>First, let's think what's the difference between digital and traditional painting. They both use colors, right? The problem is digital painting uses colorful light sources, creating most perfect colors possible and shooting them right into our eyes, while in traditional painting we're limited to light reflected from a pigment. It's like using a middleman between what's painted and what you actually see! We can debate what medium is more artistic, but there's no doubt that digital painting does better with our vision mechanism.<br></p><p>So, to paint traditionally we need pigments. They don't emit color themselves, and instead they absorb some of the light hitting them, reflecting the wavelengths compatible with their names. For example, red paint absorb green and blue, reflecting only red.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-20.png"></figure><p>The problem is we're not able to create perfect pigments reflecting the light exactly as it would be emitted, e.g. a pigment stimulating the "blue" cone only. CMY system is a kind of compromise: <b>cyan</b> doesn't reflect red, <b>magenta</b> doesn't reflect green, and <b>yellow</b> doesn't reflect blue. So, if we want to stimulate "blue" cone, we need to mix cyan and magenta - this pigment will reflect as little red and green as possible. "K", black, is added to CMY since the components are not perfect and they don't create pure black when mixed in equal proportions.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-21.png"></figure><p>RGB is <b>additive</b> - the more values you add, the brighter color you get. CMY is <b>subtractive</b> - the <i>less</i> values you add, the brighter the color.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-22.png"></figure><h2>Four Rules of Color Mixing</h2><h3>Rule 1 - Hue Mixing<br></h3><p>By mixing two hues you get a hue from somewhere between them, according to proportion. It works for both additive and subtractive mixing.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-23.png"></figure><h3>Rule 2 - Complementary Hue Mixing</h3><p>You probably heard of complementary colors. They are hues laying in opposite to each other on the wheel. The contrast between them (when they've got the same brightness) is as striking as between black and white. However, when they're mixed, they neutralize each other.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-24.png"></figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-25.png"></figure><p>Mixing complementary hues gives neutrality (gray or grayish). Additive mixing of 100% bright complementary hues will return white, subtractive - black.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-26.png"></figure><p>In subtractive method, adding a bit of complementary hue is the easiest way to precisely reduce saturation. <br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-28.png"></figure><h3>Rule 3 - Saturation Mixing</h3><p>In both methods, proportions between components equalize when mixing, and in result saturation is reduced.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-27.png"></figure><h3>Rule 4 - Brightness Mixing</h3><p>Additive mixing returns brighter color, and subtractive - darker than the lighter one of the components.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-29.png"></figure><h2>Color Temperature</h2><p>The tradition to divide the color wheel into warm and cold halves is very strong. We know that warm colors are active and friendly, while cold colors are passive and formal. Whole books could be written about psychology of color, but the problem is this is <i>not</i> an objective division. What's the warmest color? Red, yellow? Is purple warm or cold? And where <i>exactly</i> should this border line be?<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-33.png"></figure><p>Look at the picture below. These are all reds, theoretically warm all the way. So why some of them appear colder than others? It's about contrast. A color can't be warm or cold, only <i>warmer</i> or <i>colder</i>. The color wheel is so easy to divide visually, because all these colors are put together and easy to compare. Cut red out of it and it's no more warm or cold. It's just red.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-34.png"></figure><p>So, how to create a warmer or colder color? Every hue on the wheel has a neighbor. These neighbors are always colder or warmer than our sample (check their neighbors too, if you're not sure). To create a colder version of the sample, slide into direction of cold neighbors (and vice versa).<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-35.png"></figure><h2>The Basic Rules of Shading</h2><p>About time, huh? Give me a moment and you'll see this lengthy introduction was necessary to understand the whole process. If you memorize the rules only, you limit yourself to particular situations, but once you've understood where they come from, the sky is the limit!</p><h3>The Local Color<br></h3><p>The common base color, said not to be lighted by any light source, is called the local color. We already know an unlighted object can't have any color, so the better definition is a <b>color not affected strongly by the light nor shadow</b>. So a cherry's local color is red, even if it's illuminated with strong orange light on one side and reflected blue on the other. The local color should be the one you're starting your picture with.<br></p><p>What should be the saturation and brightness of the local color? The brightness is defined by imaginary scattered light that you start your scene with. To define the general brightness of the scene (the intensity of the scattered light) put your object on a white sheet. They're both illuminated by the same light, and <b>the object can't be brighter than the white sheet</b> under the same conditions.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-36.png"></figure><p>The explanation is simple - the white sheet reflects 100% light. If the 
+object was brighter than it, it would mean the object reflects more than
+ 100% light (so it's fluorescing or emitting light itself). It's all about contrast, so the darker is your base lighting, the more striking light source you'll be able to add later.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-37.png"></figure><p>What about saturation? While brightness is about intensity of light, saturation comes from proportion between its components. This proportion stays the same when the intensity of light is changing (with a little exception we'll talk about in a second). It's like adding more water with every teaspoon of sugar - the drink is not going to become any sweeter! <br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-38.png"></figure><h3>The Direct Light Source<br></h3><p>Here's a quick reminder about light areas from the first article:<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-value-38.png"></figure><p>Let's start with a simple scene not illuminated by any well defined light. The ground is green, the ball is red, and the sky... doesn't matter at the moment. If the background is very far away, it doesn't affect our object. We chose the brightness and saturation, and for now, without no directional light, it looks flat, 2D. That's why we call it <b>flat colors</b>, and it's the easiest part of painting.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-39.png"></figure><p>When the light source is presented, it floods all the scene. Its intensity - <b>brightness</b> - is the highest where the light has a direct contact with objects (full light, half light) and the lowest where it cannot reach (core shadow, cast shadow). The brighter the light, the darker the shadow. Our local color becomes the terminator.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-39a.png"></figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-40.png"></figure><p>To keep the ball from floating, we need to add <b>crevice shadow</b> - the area where no light can reach. This is the darkest area of the picture.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-40a.png"></figure><p>The problem is the scene still looks... fake. It's colorful, merry, as if it came from a children book. But something's wrong... If you've read the first article carefully, you may notice we used only <b>diffuse reflection</b>. Every single ray hitting the ball was partially absorbed, reflecting only red. Therefore, in the area of maximum brightness we've got 100% red and there's no way of changing it! This is very natural state for <b>matte</b> materials, and decreasing saturation to get a "brighter" red is a mistake.<br></p><p>If it's natural, why does it look fake? It's because fully matte materials are very rare in nature. Almost everything reflects at least a bit of <b>specular reflection</b>, and it doesn't need to be a high gloss - usually it's very soft and subtle. Change your position when looking at some object close to you - if its "colors" move along to your movement (even subtly!), they're the effect of specular reflection. The ones independent to your position come from diffuse reflection.<br></p><p>Specular reflection, as we've learned before, is a reflection of the light source. The stronger it is, the clearer the image of the light source appears on the object. The biggest role here plays the proportion between specular and diffuse properties of the material. High glossy objects usually have a thin layer of transparent, strongly specular material on them, so both kinds of reflection don't mix (third ball).<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-40b.png"></figure><p>To put it straight, when decreasing the saturation of a bright area ("adding white" to it), you're not <i>brightening</i> it - you're <b>adding gloss</b>.</p><p>However, the balls above still look fake! (so many ways to paint fake colors, huh?). This time they look like taken from a 3D modeling exercise. This is because we used neutral white light that doesn't occur in nature either. Sunlight, before it can reach our eyes, needs to break through the layers of atmosphere. The previous article explained what happens here, so let's just add color to this mechanism.</p><p>Short and medium wavelengths are being scattered the most easily. The longer their way through atmosphere, the more of them stray and never reach your eyes (at least, not from initial direction). Therefore, a "white" ray becomes mostly red and green, and even in the highest point it has a bit of blue deficit - <b>sunlight is warm</b>.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-41.png"></figure><p>So why would reflection of a warm light source be neutrally white? To avoid that fake 3D model effect, <b>decrease the saturation and increase the temperature at the same time when adding warm gloss</b> (no matter strong or subtle). As we noticed before, there are cold and warm reds, so it doesn't mean that a red surface becomes orange or yellow instantly!<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-42.png"></figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-42a.png"></figure><p>It's important not to use gloss as a universal way to make the picture more attractive. When you feel you're getting closer to white, it means your object is shiny or wet. Think about it when painting skin!<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-42b.png"></figure><h3>The Indirect Light Sources<br></h3><p>But what happens to all this blueness that gets scattered? It makes the sky blue, of course, but if we can see this bright blueness, it means it reaches our eyes - and not only our eyes. All the objects around get "touched" by this indirect light, and then it can be reflected to us too. It's not as bright as the direct sunlight, but it still makes the surface a bit brighter. Also, if it's not fully matte, the surface loses a bit of saturation and becomes colder (since our indirect light source is cold). Keep in mind that the direct light is always stronger than indirect one, so these two will never mix - <b>indirect reflection can't cross the terminator line</b>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-43.png"></figure><p>The most intense reflections are created by glossy surfaces, but matte ones, like our "ground", affect the objects too.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-44.png"></figure><p>As we noticed in the previous article, contrast decreases with distance. But what about hue, saturation and brightness of the receding object? Well, it's a little bit more problematic. When the object recedes into background, the information from it is mixed with the light reflected from the sky, right? It means that:</p><ul><li> Hue gradually changes temperature in the direction of the sky's hue;</li><li>Brightness gradually grows until it reaches the value of the sky;</li><li>Saturation is mixed with the noise, therefore it decreases. However, if the light source is actually in the background (the foreground is dark), the saturation may increase gradually with coming close to it.<br></li></ul><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-44a.png"></figure><p>The clearer the atmosphere, the less this effect occurs. Respectively, when there's a lot of dust, smoke or humidity around, even close object change their properties drastically. The common trick of artists (and movie creators too!) is to render aerial perspective even in smaller scale, for example drawing one leg of a monster bluer, brighter and less saturated. For our brains it means it's further, and therefore a depth is achieved. However, keep in mind it also thickens the atmosphere - it will not work in clear air.<br></p><h3>Color and Value</h3><p>Proper coloring creates correct values, so to say, involuntarily. Beginners often start their pictures with values only to define them properly, but the truth is with the rules we've just learned you shouldn't have any problems with color painting. How can it be?</p><ul><li>The initial brightness of the local colors sets an uniform brightness for all the scene;</li><li>Diffuse lights and shadows are as saturated as the local color - unsaturated shadows would look brighter as value!</li><li>The more gloss, the more value brightness;</li><li>Indirect lights are never brighter than direct one, so they can't be confused with main light source;</li><li>The local color becomes a terminator, with shadows on one side and lights on the other, what creates a proper contrast.<br></li></ul><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-45.png"></figure><p>How to check if more lights or shadows should be added? It's a matter of contrast and you need to choose yourself which is the best for your picture's atmosphere. Generally, it's good to put your main object on three backgrounds: white, black and 50% gray. If it looks OK on every one of them, you're fine. Converting your picture to grayscale for a test is a good idea too.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-46.png"></figure><h3>Points to Remember</h3><ul><li>Highly saturated, bright colors are rare in nature - reserve them for flowers, birds and magic things;</li><li>Put lights on lights, never lights on shadows! If you want to put a light on a dark area, brighten it gradually;<br></li><li>If the shading looks too colorful, take a break, get some distance. There's a chance your eyes are just too focused on them after hours of work and the colors are actually OK. Rotating the picture or looking at it indirectly, in the mirror can help too;<br></li><li>Save pure white for highlights and 100% black for crevice shadows - overusing them drastically decreases their power. <br></li></ul><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-47.png"></figure><h2>No More Guessing!</h2><p>Once you've realized that color is just a signal, a kind of information, it's so much easier to imitate the real world with your paintings. You don't need to memorize hundreds of rules - once you've understood the fundamentals, you can calculate reality with a great accuracy! Of course, don't treat them as a universal recipe for success - art is art, and sometimes you get the best effects when actually breaking the rules.</p><p> Stay tuned for the last article of the series, where I'll present you more tricks, such us multiple and colorful light sources, transparency, subsurface scattering, light emission and refraction, and show you what's the fuss about textures.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20549/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20549/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20549/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20549/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T12:11:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T12:11:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:13:"Dave Bankhead";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:8;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:17:"Monika Zagrobelna";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:8;a:6:{s:4:"data";s:38:"
     
     
     
@@ -911,11 +1272,41 @@ mixing within the soundstage; reverb and delay.<br></p><div class="mediafed_ad">
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21193";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:89:"http://cgi.tutsplus.com/tutorials/extreme-eye-closeup-with-freeform-pro-part-2--cms-21193";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:45:"Extreme Eye Closeup with FreeForm PRO: Part 2";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:1757:"<figure class="final-product final-product--video"><iframe src="//www.youtube.com/embed/ObPXPkdLELk?rel=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><figcaption>What You'll Be Creating</figcaption></figure><p>In the second part, we'll focus on animating the camera and the 3D shape itself as well as different parts and elements of the depth and color maps. We'll create the sclera with its own depth, color and animated reflection map. And finally add the stars background and DOF.&nbsp;</p><p><i>FreeForm PRO </i>is available <a target="_blank" rel="external" href="http://www.mettle.com/freeform-pro/">here</a>.</p><p><i>FL Depth Of Field </i>is available <a target="_blank" rel="external" href="http://www.frischluft.com/lenscare/index.php">here</a>.</p><h2>Part 2</h2><figure class="embedded-video" data-original-url="https://www.youtube.com/watch?v=UlUI5EDEsZo" data-video-embed="true">
-  <iframe allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" webkitallowfullscreen="webkitallowfullscreen" src="//www.youtube.com/embed/UlUI5EDEsZo?rel=0" frameborder="0"></iframe>
-</figure><h3><a target="_self" href="http://cdn.tutsplus.com/cg/video/AE-Eye-Tutorial-Part-2-Tutorial-Video.rar">Download this Tutorial</a></h3><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21193/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21193/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21193/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21193/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T08:01:52.787Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T08:01:52.787Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21261";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:96:"http://webdesign.tutsplus.com/articles/how-they-did-it-virgin-americas-new-storefront--cms-21261";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:50:"How They Did It: Virgin America’s New Storefront";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:10345:"<p>Virgin America has launched a new booking service, and it's a lot of fun!</p><p>The concept of&nbsp;a flight booking experience being <i>fun</i> sounds nearly impossible. For years, booking a flight online has been a relatively cold undertaking&nbsp;and pointed purely at business objectives.</p><p>Virgin has created <a href="https://beta.virginamerica.com/" target="_self">a different experience</a>. Today, we're going to talk about how they've changed the average booking experience and made it more approachable and delightful.</p><h2>Hello World, the Meta Site</h2><p>One of the first things you might notice is that Virgin introduces their new site with <a href="http://static.virginamerica.com/Web3/newlookvx/vx-redesign-9/7/index.html" target="_self">a Hello World site</a>, furnished with some brilliant SVG animation.&nbsp;This is intended to be a basic overview of the new booking experience, explaining its most prominent features and goals.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/ezgif-save.gif"><figcaption>Virgin's&nbsp;<a href="http://static.virginamerica.com/Web3/newlookvx/vx-redesign-9/7/index.html" target="_self">new site&nbsp;</a>is fly</figcaption></figure><p>This meta-site was created using&nbsp;<a href="https://github.com/peachananr/onepage-scroll">jQuery One Page Scroll by Pete R.</a>, a plugin inspired by Apple's iPhone 5S product feature site. Featuring&nbsp;<a href="https://www.google.com/doubleclick/studio/swiffy/">Swiffy</a>-created animations, a Vine video, as well as a few CSS/JS powered animations, the introduction even points out the new whimsical design elements as a feature of the relaunch.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-vine.jpg"></figure><p>This is a particularly interesting marketing move, as it truly sets the stage for the new booking experience. Beyond simply explaining the functions of the new site, the meta-site gives credibility to the new reveal and builds the positive tension of trying the new experience.</p><p>There's a lot to unpack in this site, so for the sake of completeness, we will be skipping some of the technical details that belong in more specific tutorials. Instead, we will talk about some of the primary aspects of the design strategy, and summarize some of the overarching technical implementation strategy.</p><h2>Booking UX: Full Screen Form Design</h2><p>The booking experience can most accurately be described as a very highly designed form experience. The form steps you through the following process:</p><ol><li>Choose your destination and departure points, as well as trip type (multi-city, etc)</li><li>Choose the occupant details (count and type of occupant)</li><li>Select dates of flights</li><li>Select each flight time and ticket 4a. Select any upgrades you'd like to apply</li><li>Choose your seat</li><li>Finalize details and pay</li></ol><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-choose-destination.jpg"><figcaption>Choose your destination</figcaption></figure><p>Instead of doing this via a traditional form, Virgin has chosen to make this a modal experience that focuses on singular decisions. But instead of just using traditional input methods, Virgin relies primarily on clicking instead of typing. This allows the user to focus on <i>visual decisions</i> rather than <i>logical decisions</i>.</p><p>The primary control is a clickable box outline with text in the center, which is repeated throughout the booking process. Secondary controls include simple&nbsp;<code>+</code>,&nbsp;<code>-</code>, and&nbsp;<code>X</code>&nbsp;buttons, or clickable up/down arrows.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-button.png"><figcaption>Primary and secondary controls</figcaption></figure><p>The full screen form utilizes <a href="https://code.tutsplus.com/tutorials/building-a-web-app-from-scratch-in-angularjs--net-32944" target="_self">Angular</a> to handle the application data binding, and does not appear to utilize any particular UI framework. The CSS file is 16,800+ lines unminified.</p><h3>“Unlocking”&nbsp;Sections</h3><p>One of the decisions made by Virgin is to unlock different sections of the form once they are filled out, and leave them accessible throughout the rest of the booking process. Once you have completed one part of the form, the next part shows and the page automatically scrolls to that section's position.</p><h3>Delightful Language</h3><p>Virgin is known for their light-hearted branding strategies and daring copywriting, and the new booking experience is no exception. For instance, when you choose Portland as your destination, the app reminds you to "pack your plaid," and asks if you are headed to "Hahvahd" (Harvard) if you choose Boston as your destination. This kind of rich language goes in direct opposition to the traditional booking experience.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-chicago.png"><figcaption>Guess where I'm going..</figcaption></figure><h3><code>pushState</code>&nbsp;for Snappiness</h3><p>The app maintains true URL state, and does so using&nbsp;<code>pushState</code>. For instance, choosing the "check in" from the menu updates the URL and view without reloading the page.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-url.png"><figcaption>The URL says it all</figcaption></figure><h3>Goodbye, IE8</h3><p>Virgin has also made the move to stop supporting IE8, using conditional comments to include a modal and classes on the HTML element.</p><div><pre class="brush: html">&lt;!--[if lte IE 8]&gt;
+            &lt;div class="modal__window--ie8"&gt;
+                &lt;div class="modal__bkgd"&gt;&amp;nbsp;&lt;/div&gt;
+                &lt;div class="modal__dialog"&gt;
+                    &lt;div class="modal__header"&gt;
+                        &lt;h1 class="modal__title"&gt;Your browser is not currently supported&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal__content is-generic"&gt;
+                        &lt;p&gt;But there’s an easy fix! The Virgin America site works on a wide range of browsers. Click one of the icons below and follow the instructions. You’ll be flying in no time.&lt;/p&gt;
+
+                        &lt;p&gt;Find the latest versions of our supported browsers below:&lt;/p&gt;
+
+                        &lt;ul class="supported-browsers"&gt;
+                            &lt;li class="supported-browsers__chrome"&gt;
+                                &lt;a href="https://www.google.com/intl/en-US/chrome/browser/‎"&gt;
+                                    &lt;span class="btn btn-normal btn-primary btn-block"&gt;Download Google Chrome&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="supported-browsers__firefox"&gt;
+                                &lt;a href="http://www.mozilla.org/en-US/firefox/new/‎"&gt;
+                                    &lt;span class="btn btn-normal btn-primary btn-block"&gt;Download Firefox&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li class="supported-browsers__ie is-omega"&gt;
+                                &lt;a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"&gt;
+                                    &lt;span class="btn btn-normal btn-primary btn-block"&gt;Download Internet Explorer&lt;/span&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;![endif]--&gt;</pre></div><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-browser.png"></figure><h3>Cart View</h3><p>The cart looks very similar to a boarding pass, but shows a massive <b>Continue</b> button, as well as the price of the currently selected options. You can also change the options from this view.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-checkout.png"></figure><h3>The Final Detail Form</h3><p>The final form provides fantastic validation messages that fit right in line with the rich copy found elsewhere in the site.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-form-validation.png"></figure><p>Virgin has also included a completely unexpected feature, the option to add an avatar to your person.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/30/posts/21261/image/virgin-avatars.png"></figure><p>The rest of the checkout process is relatively simple, albeit very simply designed, aligning to a grid.</p><h2>What Makes This New Booking Process so Effective?</h2><p>Aside from the fact that the site itself is very fast and provides responsive CSS, Virgin has crafted a new format that redefines a notoriously terrible user experience. By reframing the voice to be more approachable and friendly, and focusing on aesthetically pleasing and delightful interaction, what was once a dreaded task has now become a&nbsp;<em>fun</em>&nbsp;task.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21261/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21261/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21261/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21261/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T08:38:33.833Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T08:38:33.833Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:15:"Ran Ben Avraham";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:9;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:16:"Jonathan Cutrell";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:9;a:6:{s:4:"data";s:38:"
     
     
     
@@ -923,9 +1314,11 @@ mixing within the soundstage; reverb and delay.<br></p><div class="mediafed_ad">
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21100";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:93:"http://computers.tutsplus.com/tutorials/the-tuts-guide-to-transcribing-audio-notes--cms-21100";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:43:"The Tuts+ Guide to Transcribing Audio Notes";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:13832:"<p>Even though technology has come so far, completely automated speech-to-text transcription still isn't a reality. If you want to turn audio from interviews, meetings, lectures, personal voice memos, and more into text, you'll still have to spend hours transcribing it. But it doesn't have to be a painful process. Using the right techniques and tools, you can make light work of your transcription tasks.</p><p>In this tutorial, you'll learn everything you need about recording audio quickly on your mobile device, and then how to use the best tools available to transcribe that text easily.</p><h2>Recording Your Audio<br></h2><p>Capturing clear audio is the key to getting a recording that's easy to transcribe. The first thing you'll want to do is choose a quiet environment to record in—if possible—and reducing as much ambient noise as possible. Depending on what you're recording and where, that might mean closing windows to cut out street noise and wind, or moving to a quieter corner of the coffee shop or conference hall you're in.</p><p>Next, you'll want to have your recording equipment reasonably close to audio sources, whether that's on the desk at a meeting, at the front of the class during a lecture or close to your mouth when capturing a personal voice memo. Naturally, the ideal distance depends on the volume of sound you're capturing and the sensitivity of the microphone on your recording device, so be sure to test for optimal quality by recording a short snippet and playing it back before you begin.<br></p><p>When you're recording a meeting, conversation or personal voice memo, try to speak slowly and clearly, and encourage others to do so as well. Similarly, ask participants to take turns speaking one at a time, so that voices don't overlap.This will make it a lot easier to transcribe quotes accurately, and will help you avoid playing back your audio repeatedly to figure out what was said. And of course, always ask for permission before recording conversations, whether in person or over the phone.<br></p><p>Finally, make sure your recording device is ready for the task: free up storage space by backing up old recordings and deleting them from the device memory, use fresh or fully charged batteries and set your device to record in the highest quality format possible for clear audio with minimal noise.<br></p><h3>Recording Devices<br></h3><p>Now it's time to pick the right equipment for the job. If you own a smartphone or tablet, you already have a pretty good recorder in the palm of your hand: all you need is an app that lets you record and export high quality format audio.&nbsp;</p><figure class="post_image"><img alt="Notability for iOS" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21100/image/Notability on iOS records audio and saves your handwriting or text too.jpg"><figcaption>Notability on iOS records audio and saves your handwriting or text too</figcaption></figure><p>On iOS, <a href="https://itunes.apple.com/us/app/notability/id360593530" rel="external" target="_blank">Notability</a> records voice notes and syncs them (along with your accompanying handwritten or typed notes) with your iCloud, Dropbox, Google Drive, Box or DAV cloud storage accounts (<a href="https://soundcloud.com/abe/tutsplus-notability-recording-on-ios" rel="external" target="_blank">here's a sample recording</a><a href="https://soundcloud.com/abe/tutsplus-notability-recording-on-ios)">)</a>. Android users can turn to <a href="https://play.google.com/store/apps/details?id=com.coffeebeanventures.easyvoicerecorder" rel="external" target="_blank">Easy Voice Recorder</a>, which generates high-quality WAV format files when you enable PCM recording.</p><figure class="post_image"><img alt="Easy Voice Recorder for Android" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21100/image/Easy Voice Recorder for Android lets you record and export high quality WAV files.jpg"><figcaption>Easy Voice Recorder for Android lets you record and export high quality WAV files</figcaption></figure><p>It's important to choose an app for your device that supports high-quality formats. <a href="https://soundcloud.com/abe/easy-voice-recorder-pro-amr-vs." rel="external" target="_blank">Here's an audio sample that illustrates the difference</a> between low-quality (compressed) and high-quality recording formats on an Android device (Google Nexus 7).&nbsp;&nbsp;It may not be a big deal if you're just recording a short voice memo by yourself in a quiet room, but if you're transcribing long audio clips, clarity is a must.<br></p><p>If you're interested in a standalone recording device, the Sony ICD-AX412 (<a href="http://www.amazon.com/gp/product/B004M8STL8" rel="external" target="_blank">$75 on Amazon</a>) -and Olympus VN-702PC (<a href="http://www.amazon.com/gp/product/B006ZW4HY2" rel="external" target="_blank">$44 on Amazon</a>)&nbsp;come <a href="http://thewirecutter.com/reviews/the-best-voice-recorder/" rel="external" target="_blank">highly recommended</a>, and offer both on-board and expandable storage.<br></p><p>Once you've got your environment and equipment set up, you're ready to record: just hit the red button on your device or app and you're good to go!<br></p><h3>Transferring your recordings<br></h3><p>When you're finished recording, you can transfer your audio files to your computer so you can use them with apps for easy transcription. </p><p>For Android devices with Easy Voice Recorder installed, connect your device via USB cable to your computer, and access your files via My Computer (Windows) or from the drive icon on &nbsp;your desktop (Mac). Alternatively, install and use AirDroid on your Android device to sync with your computer over Wi-Fi via your web browser. Then,&nbsp;navigate to the EasyVoiceRecorder folder in your device storage and copy the recording files over to your computer.</p><p>For iOS devices with Notability, enable syncing to your cloud account of choice and grab the recordings from the downloadable zip files that the app exports.</p><p>For standalone recorders, connect your device via USB cable to your computer, and access your files via My Computer (Windows) or from the drive icon on &nbsp;your desktop (Mac). Copy the recording files over to your computer.</p><p>You can then use these files with a transcription tool.</p><h2>Transcribing Tools<br></h2><p>Now that we've got our audio files ready to go, we can begin transcribing them. The main issue we face is typing out notes while listening to audio is that sometimes you need to pause the recording to finish typing out a sentence. You might also need to slow down playback to hear a phrase correctly, or fast forward to the next important point. And on top of all this, you've got to deal with switching to your text editor window to type what you hear. Thankfully, there are a couple of great apps that can make the task a whole lot easier.</p><h3>Transcribe</h3><p><a href="http://transcribe.wreally.com" rel="external" target="_blank">Transcribe</a> by Wreally combines a text editor with an audio player that supports keyboard shortcuts. With Transcribe, you can type, pause, slow down or speed up playback without ever moving your hands away from your keyboard or even switching windows. The app costs $20/year to use, but includes a free 7-day trial so you can take it for a spin before you commit.</p><figure class="post_image"><img alt="Using Transcribe" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21100/image/Transcribe combines a text editor and keyboard-controlled audio playback in the same window.jpg"><figcaption>Transcribe combines a text editor and keyboard-controlled audio playback in the same window</figcaption></figure><p>To use <a href="http://transcribe.wreally.com" rel="external" target="_blank">Transcribe</a>, just sign up (no credit card required), log in and on the next screen with a blank document, click Choose File near the top of the window to locate and load your audio file. The app supports MP3, MP4, M4A, AMR, WMA, AAC and WAV files, so recordings from most smartphone apps and recorders will work just fine.<br></p><p>Once you've loaded your file, press your Esc key to play it back and begin typing in the text editor. You can then use the keyboard shortcuts shown in the audio player to control playback without having to use your mouse—press Esc to pause or resume playback, F1 to slow it down, and F2 to speed it up. And where you're done, click the Export button in the text formatting toolbar to export your file as a .doc that you can open with Microsoft Word or Google Docs. Transcribe also saves your transcribed text in the browser cache, so you can even use it offline and you don't have to worry about losing your work. &nbsp;<br></p><h3>Draft</h3><p><a href="http://draftin.com" rel="external" target="_blank">Draft</a> is another web app that helps with transcription. Although it primarily offers a Markdown-based text editor and document manager that you can use with any browser, it also packs a neat transcription tool that lets you load both audio and video files from the web, your local storage or cloud storage accounts. Draft is free and supports Vimeo, YouTube, MP4, and FLV video formats, and audio formats like MP3, M4A and AAC that you can load up just by pointing Draft to the source URL. You can also upload files in these formats from your computer, Dropbox, Google Drive, Evernote, Box or FTP storage.</p><figure class="post_image"><img alt="Draft for audio transcribing" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21100/image/Draft handles both audio and video files, including those hosted online.jpg"><figcaption>Draft handles both audio and video files, including those hosted online</figcaption></figure><p>To use <a href="http://draftin.com" rel="external" target="_blank">Draft</a> for transcription, sign up for a free account, log in, click the arrow next to the New Document button and select New Transcription. Next, upload your file or paste a URL to your audio or video content. When your file has finished loading, indicate a section to loop by entering its start and end points.</p><p>For example, if you'd like to loop the first ten seconds, enter 00:00 and 00:10 in the empty fields, and press <b>Play</b>. You can then skip forward (Ctrl/Cmd+Shift+P) or backward (Ctrl/Cmd+Shift+O) in increments equal to the length of the loop you first set up. The audio or video will loop repeatedly until you pause (Ctrl/Cmd+Spacebar) skip forward or backward, and you can get through your transcription quickly and easily.</p><figure class="post_image"><img alt="move through audio in Draft" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21100/image/Create loops and skip forward or backward in increments in Draft.jpg"><figcaption>Create loops and skip forward or backward in increments in Draft</figcaption></figure><p>When you're done with your transcription, Draft will save your document and allow you to export your file in a variety of formats. To do this, click the Home button at the top left of the screen, then click Export and select your preferred format (Text, Markdown, HTML, PDF, Word or Google Docs document, MOBI, PDF or ePUB) and you're done.<br></p><h3>Transcribing Offline</h3><p>Another way to transcribe files on your computer is to use global hotkeys with a desktop media player app while typing in your favorite text editor. Global hotkeys allow you to control playback in your media player using keyboard shortcuts without having to switch between apps. This works with QuickTime, VLC, and many other audio and video playback apps.</p><p>Of course, the caveat here is that your global hotkeys need to be configured so that they don't conflict with other shortcuts or programs on your computer—otherwise, you'll end up launching apps and ordering functions you don't intend to. Your best option is the play and pause buttons on your keyboard, if you have them, combined with other keyboard shortcuts for extra options like skipping and speeding up audio.<br></p><h2>Conclusion<br></h2><p>Choosing to record and transcribe content is a great way to free yourself from having to take notes while a meeting, conversation, lecture or train of thought is in progress. You can instead focus on listening and engaging with other participants, or in the case of personal voice memos, hear yourself think out loud and trash or build on your own ideas freely. And with the easy-to-use tools available today, you can breeze through your transcription tasks quickly and easily. </p><p>Do you have any tips for recording or transcribing notes? Let us know in the comments!</p><p><b>Resources</b>: <a href="http://thenounproject.com/term/microphone/2313/" target="_self">Microphone</a> icon by <a href="http://thenounproject.com/mr.yunis/" target="_self">Travis Yunis</a> from the <a href="http://thenounproject.com/" target="_self">Noun Project</a>; <a href="http://thenounproject.com/term/paper-shredder/5716/" target="_self">Paper-Shredder</a> icon by&nbsp;<a href="http://thenounproject.com/AchtSieben/" target="_self">Maximilian Becker</a> from&nbsp;the&nbsp;<a href="http://thenounproject.com/" target="_self">Noun Project</a>.<br></p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21100/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21100/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21100/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21100/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T08:00:14.558Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T08:00:14.558Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21225";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:89:"http://cgi.tutsplus.com/tutorials/span-a-texture-across-folding-splines-in-c4d--cms-21225";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:44:"Span a Texture Across Folding Splines in C4D";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:1700:"<figure class="final-product final-product--video"><iframe src="//www.youtube.com/embed/1gX9MJNyk_Y?rel=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><figcaption>What You'll Be Creating</figcaption></figure><p>Applying textures to multiple mograph objects can be a bit tricky in Cinema 4D. In this tutorial, you will learn how to attach a bitmap image that spans across multiple cloned bent objects to create one seamless look. With the help of a free third party plugin, you can apply this technique to other situations to give yourself more flexibility when it comes to texturing.</p><p>Download <a href="http://tcastudios.com/?page_id=6" rel="external" target="_blank">plaMATE</a>&nbsp;<i>(free)</i></p><h2>Tutorial</h2><figure data-video-embed="true" data-original-url="https://www.youtube.com/watch?v=ncDo7lXW848" class="embedded-video">
+  <iframe src="//www.youtube.com/embed/ncDo7lXW848?rel=0" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe>
+</figure><h3><a href="https://cdn.tutsplus.com/cg/video/C4D-Spline-Fold-Tutorial-Video.rar" target="_self">Download this Tutorial</a></h3><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21225/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21225/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21225/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21225/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T08:31:48.415Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T08:31:48.415Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:17:"Abhimanyu Ghoshal";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:10;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Kevin Snyder";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:10;a:6:{s:4:"data";s:38:"
     
     
     
@@ -933,9 +1326,10 @@ mixing within the soundstage; reverb and delay.<br></p><div class="mediafed_ad">
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20653";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:85:"http://crafts.tutsplus.com/tutorials/how-to-make-a-wooden-air-plant-holder--cms-20653";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:37:"How to Make a Wooden Air Plant Holder";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:5014:"<figure class="final-product final-product--image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/final_image/IMG_1531 (600x461).jpg" alt="Final product image" /><figcaption>What You'll Be Creating</figcaption></figure>Not all house plants need lots of care and sun light. This color-blocked wooden air plant holder will allow you to grown lovely greenery with no soil and very minimal care. Anyone can show off their green thumb (and craft skills) with this project!<h2>Supplies</h2><p><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%20supplies.jpg" alt=""><br></p><ul><li>Lumber, 10cm (4in) x 10cm (4in) at least 15cm (6in) long<br></li><li>Pencil</li><li>Miter saw</li><li>3cm (1.2in) Forstner bit <br></li><li>Painter's tape or masking tape</li><li>Sandpaper</li><li>Pattern</li><li>Acrylic paint in color of your choice<br></li><li>Air plant</li><li>Safety glasses</li></ul><h2><span class="sectionnum">1.</span>&nbsp;Make the Wooden&nbsp;Block</h2><h3>Step 1</h3><p>Work out the desired height of your planter and mark with pencil. Cut using a miter saw. You might like to experiment by holding the plant next to the timber and working out what height looks best. <br></p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%20cut.jpg" alt=""></figure><h3>Step 2</h3><p>Now mark the center of the top of the wooden block you just cut&nbsp;with a straight edge. This is the spot where you will drill the hole for the air plant.</p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%201.jpg" alt=""></figure><h3>Step 3</h3><p>Pop on a pair of safety glasses. Using a Forstner bit, carefully drill a hole approximately 2.5cm (1in) to 3.73cm (1.5in) deep.</p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%202.jpg" alt=""></figure><h3>Step 4</h3><p>Next, sand all the edges, faces, and corners of your project. Don't forget to sand around the hole you just drilled.</p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%203.jpg" alt=""></figure><h2><span class="sectionnum">2.</span>&nbsp;Paint the Block</h2><h3>Step 1</h3><p>Decide on where your paint line will be and mark the point lightly with pencil on all four corners of the block. Use a ruler to ensure your measurements line up.<br></p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%204.jpg" alt=""></figure><h3>Step 2</h3><p>Using the lines that you just plotted, tape off all four sides of the block with painter's tape or masking tape. This taped line will help keep your painted line nice and crisp.</p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%205.jpg" alt=""></figure><h3>Step 3</h3><p>Carefully paint the block, including the bottom side below the taped line.&nbsp;Once the paint has completely dried, carefully remove the tape and add your favorite air plant!&nbsp;</p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/air%20plant%20holder%206.jpg" alt=""></figure><h2>Pop In Your Air Plant<br></h2><p>In this tutorial, you learnt all the skills necessary to make a color-blocked wooden air plant holder, including how to mark and cut lumber, drill holes with a Forstner bit, plot drill points, and mask off ares to create blocks of painted color. <br></p><p>Using this skills, you can create a beautiful collection of air plant holders in various heights and colors.</p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/189/posts/20653/image/IMG_1514%20(600x468).jpg" alt=""></figure>Now all you need to do is pop your air plant in the hole your drilled and display your new planter.<br><br>If you enjoyed this tutorial, you might like to look at our other <a target="_blank" rel="external" href="http://crafts.tutsplus.com/categories/woodwork">woodworking tutorials</a>. <br><br>Tell me, how did you go with making your planter? What are you favorite air plants? <br><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20653/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20653/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20653/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20653/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T05:09:22.223Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-23T05:09:22.223Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21135";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:78:"http://music.tutsplus.com/tutorials/how-to-use-voxengos-span-part-2--cms-21135";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:34:"How to Use Voxengo's SPAN: Part 2
+";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:6611:"<p>Last time we took a deep look into the FFT window of Voxengo's SPAN. With adjustable timings, resolution, and the ability to layer multiple sources on top of each other, SPAN's FFT capabilities are awesome. If that were not enough for a free plugin, SPAN also includes amplitude and phase metering as well!</p><h2>Amplitude Metering</h2><p>Many engineers forget that there is more than one way to measure loudness. Different situations call for different standards of measurement. Thankfully, Voxengo's SPAN includes a plethora of options for the loudness-conscious engineer.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/120/posts/21135/image/voxengo_ii_1.jpg"></figure><h3>The Basics</h3><p>Upon loading SPAN, you should have your <b>FFT</b> (fast Fourier transform) window in the center along with the amplitude meter on the right. The meters will default to a peak style setting with the special white line indicating acting as a peak hold so you have time to read the peaks.</p><p>At the bottom of the window you will also see the <b>Statistics</b> window. While nothing fancy, it gives you a solid number read out of your peak RMS and overall peak levels. Knowing how loud you got is always good information to have!</p><p>Also note the portion in statistics dedicated to <b>Max Crest Factor</b>. For those unaware, this handy little readout is the difference between your RMS and your Max RMS. This measurement is very good for seeing just how dynamic your track really is.</p><p>If you do not see the amplitude metering, double check you do not have <b>Hide Meters and Stats</b> clicked! This makes SPAN a strict FFT-only program, but you knew that from the <a href="http://music.tutsplus.com/tutorials/how-to-use-voxengos-span-part-1--cms-20778" rel="external" target="_blank">previous tutorial</a> right?<br></p><h3>Getting a Little Deeper</h3><p>The cool amplitude metering aspects in SPAN are buried away in menus. (Curse you, clean interfaces!) Let's start with <b>Settings</b> directly above the amplitude meter.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/120/posts/21135/image/voxengo_ii_2.jpg"></figure><h4>Settings</h4><p>The unfortunate aspect of this menu is that it includes a lot of controls for how SPAN looks. However if you ignore the clutter, the bottom right corner has options for our amplitude meter.</p><ul><li><b>Integration Ti</b><b>me</b><i><b> -</b></i> This control changes how long of a window the amplitude meter will use for calculating average loudness. The higher the number, the closer you get to an accurate RMS measurement. However, transient loudness will of course be smeared.</li><li><b>Release Time<i> - </i></b>The release time controls how long it will take the meter to fall at least 40dB. By shortening this control you can gain better transient resolution even with a high integration time. However depending on how your controls are set it could become very hard to read.</li><li><b>Peak Hold Time<i> -</i></b> Finally this feature adjusts how long the white lines in the amplitude meter should stay in position. While they can always go up, sometimes getting a good peak reading is tricky. This should help get the timing just right!</li></ul><h4>Measurement Standards</h4><p>Back under the <b>Statistics</b> portion of SPAN we have the nifty ability to change our measurement standards for loudness. By default SPAN will use dBFS (dB Full Scale), since it is a format most engineers see everyday. However there are some other useful features as well.</p><ul><li><b>dBFS<i> -&nbsp;</i></b><i></i>This standard form of measurement most DAWs use to this day. RMS measurements in dbFS can be a little hairy depending on the implementation. However peak readings are always spot on.</li><li><b>K System<i> -&nbsp;</i></b><i></i>Developed by Bob Katz, this modern metering system involves not only the meters, but your monitor gain as well. By switching between the various K-12, K-14, and K-20 options you dial your metering and gain in for different audio material. K-20 is meant for wide dynamic range content, K-14 for medium range, and K-12 for small. The versions with a "C" attached are for calibrating your monitors to the K System.</li></ul><h2>Phase/Correlation Metering</h2><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/120/posts/21135/image/voxengo_ii_3.jpg"></figure><p>The last useful measurement SPAN gives us is the <b>Correlation Meter</b>. In case you have never used this sort of meter before, this is how they work:</p><ul><li>The plugin analyzes both the left and right channels of the audio stream to get an average amplitude. SPAN uses a three second window.</li><li>The correlation meter then compares the channels to see how in phase they are (digital audios range is from -1 to +1).</li><li>It tells you how in phase the content is via a meter from -1 to +1.</li></ul><p>Now, before you go jumping to conclusions about the meter read out, be careful! Digital audio going from -1 to +1 does not have anything to do with the correlation meters -1 to +1.</p><p>If the correlation meter should register from 0 to 1 it is considered in-phase, and the closer to 1 it gets, the more in phase it is. However if the meter should fall between -1 and 0 then it will become more and more out of phase.</p><p>You will also notice a R/L read out in the same section. This tells you the difference in dB between the left and right channels. If the number is positive then the right channel is louder and vise versa for negative values. Easy and handy!</p><h2>Conclusion</h2><p>Voxengo's SPAN is by far one of the most popular freeware plugins for good reason, it just works! From overlaying FFT information to amplitude measurements and phase metering, SPAN is a fully featured audio analysis tool.&nbsp;</p><p>Would it be nice to have ITU standards, a vectorscope, or some other analysis with it? Sure! But it is free so don't bite the hand that feeds you! Thanks for reading.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21135/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21135/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21135/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21135/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T08:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T08:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:14:"Erin Freuchtel";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:11;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Mike Elliott";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:11;a:6:{s:4:"data";s:38:"
     
     
     
@@ -943,207 +1337,72 @@ mixing within the soundstage; reverb and delay.<br></p><div class="mediafed_ad">
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21178";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:114:"http://business.tutsplus.com/articles/get-started-with-cause-and-effect-analysis-using-a-fishbone-chart--cms-21178";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:65:"Get Started With Cause and Effect Analysis Using a Fishbone Chart";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:11674:"<br>
-
-<p>Why did that happen? How can we make that happen? These two questions, both of them critically
-important in business settings, are essentially the same.</p>
-
-<p>How can two such different questions be identical? After all, one involves analyzing a past event while the other involves
-planning for the future. The answer is simple: in both cases you’re asking the
-same basic question—that is: “what chain of events causes a particular
-outcome?” Whether you’re looking forward
-to plan a chain of events, or looking backward to better understand one, you
-can use the same tool: Cause and Effect Analysis.</p>
-
-<h2><b>Cause
-and Effect: Looking Back</b></h2>
-
-<p>Cause and Effect analysis is typically used
-to figure out why something went wrong. Your product is failing, your clients
-are frustrated, and you’re losing money. But why? After all, everything was fine up until three
-months ago. By analyzing the production process, you may be able to pinpoint
-the issues that are to blame. Once you’ve determined where the issues lie, you
-can address them—and institute policies to ensure that those same issues don’t
-arise again.</p>
-
-<p>Cause and Effect analysis can also help you
-to replicate a positive outcome. For example, this month—for the first time
-ever—your team exceeded its sales goals. What went right? It’s easy to say “we got lucky,” but most of
-the time we make or at least encourage our own luck. So what were the elements
-that went into making this month’s sales calls so much more effective than
-before?</p>
-
-<h2><b>Cause
-and Effect: Planning for the Future</b></h2>
-
-<p>While Cause and Effect Analysis is typically
-used to understand what has happened (usually in order to avoid having it
-happen again), it can also be used to help plan for the future. How? Rather than attempting to explain an existing
-outcome, it is possible to set up a hoped-for outcome, and then analyze the
-elements required to bring the outcome about. Once you have a clear idea of
-what’s needed, it’s much easier to create a plan of action that is likely to
-succeed.</p>
-
-<p>Because the process of analysis involves
-breaking down the whole into a set of individual parts, you can also use the
-chart created through Cause and Effect Analysis to determine who should take
-responsibility for which aspects of the project. If you spent a good deal of
-time on the process, you may even have the start of a to-do list for various
-members of the project team.</p>
-
-<h2><b>How to
-Conduct Cause and Effect Analysis </b></h2>
-
-<p>Cause and Effect Analysis, as it’s conducted in business
-today, is one of several Japanese innovations intended to improve quality and
-quality control. The process is conducted using a fishbone chart (so named
-because it looks like a fish skeleton)—otherwise known as an Ishikawa diagram.
-Ishikawa diagrams were designed
-during the 1960’s by Kaoru Ishikawa, who managed quality control of processes
-in the Kawasaki Shipyard.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/23/posts/21178/image/fishbone-diagram-template.png"><figcaption>Fishbone Chart Template: Use this tool to identify causes of a business problem.</figcaption></figure>
-
-<p>The fishbone chart approach to cause and effect analysis
-uses a standard chart to encourage brainstorming and to visually present
-findings. When the chart is complete, it is possible to analyze findings
-together, and to determine the most important factors involved in either
-solving a problem or achieving success. There are four steps involved with
-cause and effect analysis. They include identification of the problem or goal,
-brainstorming, analysis, and development of an action plan.</p>
-
-<h3>Step 1: Identify the Problem or Goal&nbsp;</h3><p>The entire team must
-agree in order for the process to be successful. The goal or problem is then
-written on the “head” of the fish. Let’s say that the team’s goal is to ensure
-that sales reports are completed in a timely manner at the end of each month. Once
-the team agrees to this, the facilitator draws a line with a box or “fish head”
-at the end. The goal is written in the box.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/23/posts/21178/image/1-fishbone-diagram.png"><figcaption>Figure 1: The goal here is to deliver monthly sales reports on time.</figcaption></figure>
-
-<h3>Step 2: Brainstorm</h3><p>What will it take to get your sales team, your
-managers, and your report writer to work together and produce the needed
-reports in a timely manner? Often, it’s
-helpful to start with the six general areas that are most likely to impact
-almost any business project; these become the primary bones of the fish. &nbsp;</p>
-
-<ul><li>Management</li><li>Equipment</li><li>Material</li><li>People</li><li>Process</li><li>Environment</li></ul>
-
-<p>Those six areas, however, are not
-mandatory; <a href="http://quality.enr.state.nc.us/tools/fishbone.htm" target="_self">the State of North Carolina’s website</a> lists other options as
-follows: &nbsp;<a href="http://quality.enr.state.nc.us/tools/fishbone.htm"></a></p>
-
-<ul><li>The 4 M’s:&nbsp;Methods, Machines,
-Materials, Manpower.</li><li>The 4 P’s:&nbsp;Place, Procedure,
-People, Policies.</li><li>The 4 S’s:&nbsp;Surroundings,
-Suppliers, Systems, Skills.</li></ul>
-
-
-
-
-
-<p>Even these, however, are just suggestions. Many organizations
-come up with their own categories, selected to reflect their real-world
-situation.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/23/posts/21178/image/2-fishbone-diagram.png"><figcaption>Figure 2: The unique categories of production, research, distribution, and writing are identified as the categories reflective of this business problem.</figcaption></figure>
-
-<p>Step two continues with additional brainstorming details
-based on general categories. Which people are needed to meet the goal?&nbsp; Each new detail is indicated by a new line
-drawn perpendicular to the bone before it. As details are added through the
-brainstorming process, more “bones” are added to the chart; in some cases the
-chart can wind up looking very complex, because there are so many levels of detail
-to be considered.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/23/posts/21178/image/3-fishbone-diagram.png"><figcaption>Figure 3: Specific problems are added to each category—forming the detail (bones) of the diagram.</figcaption></figure>
-
-
-
-
-
-
-
-
-
-<h3>Step 3:&nbsp;Chart Analysis</h3><p>Spend some time reviewing the
-chart. Do you see the same needs or concerns popping up in different
-places? What are the most critical
-items, without which you are certain to fail?&nbsp;
-</p>
-
-<p>As you and your team look at the chart, it is very likely
-that major themes will begin to emerge. You’ll circle those themes on the
-fishbone chart, and then organize them on a separate page. You might want to
-organize major themes by their importance, or in chronological order. </p>
-
-<h3>Step 4:&nbsp;Develop an Action Plan&nbsp;</h3><p>Based on your
-fish bone chart and your analysis, a clear set of priorities should emerge. These
-priorities will help you to put together a plan that can be implemented immediately.</p>
-
-<h2><b>Does Cause and Effect
-Analysis Work?</b></h2>
-
-<p>Like
-any other business tool, Cause and Effect Analysis is just as effective as the
-people involved in the process. It’s easy to do a poor job of identifying the
-problem and the causes—and if the first part of the process is done
-incorrectly, the outcomes will be less useful. That’s why it’s critical to have
-a leader who is familiar with the process, and why it’s so important
-that the people involved with the analysis fully understand the problem and can
-think realistically about solutions.</p>
-
-
-
-
-
-
-
-
-
-<p>An article in <a href="http://www.nursingtimes.net/Journals/2013/04/12/k/x/z/Using-fishbone-analysis--to-investigate-problems-160413.pdf" target="_self">Nursing Times</a>, describes
-the use of a fish bone chart in Cause and Effect Analysis to determine the
-causes of problems with long waiting lines at a clinic. The process was very
-effective for the group, and resulted in some innovative ideas including “scoping the requirement for a patient
-notes tracking system and considering moving the outpatient clinic to a clinic
-with more space.” Once they’d come up
-with these general ideas, they put together a specific plan of action, complete
-with tasks and deadlines. You can see a simplified version of the chart they
-created:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/23/posts/21178/image/3-fishbone-diagram-waiting-time.png"><figcaption>Figure 4: An example of a patient waiting time problem.</figcaption></figure>
-
-<p>Why did this process
-work so well? The author says, “Having a
-facilitator was key to progressing discussions as it let the group focus on
-the problem at hand, while someone else facilitated the session.” She also describes some tools the group used
-during the brainstorming process, including the Six Sigma tool called the “Five
-Whys,” which involves drilling down from apparent causes to deep-rooted issues.</p>
-
-<h2><b>Is Cause and Effect Analysis Right
-for Our Team?</b></h2>
-
-<p>Cause and
-Effect Analysis may be a good tool for your organization—or it may create
-more troubles than it solves. Bottom line, if your team doesn’t have the time,
-authority, insight, or leadership to undertake meaningful Cause and Effect Analysis,
-you could find yourself wasting time while also creating negative interactions
-and frustration among your team members.</p>
-
-<p>To determine
-whether this tool is likely to be useful to you, go through this checklist; if
-you find that you are answering most of the questions with a “yes,” then Cause
-and Effect Analysis may be a good choice.</p>
-
-<ol><li>Do you have a concrete problem or
-goal upon which your team can agree?</li><li>Can you put together a group of
-people who understand and have the authority to take action on the problem or
-goal you’re considering?</li><li>Does your group have the time
-available (at least a few hours) to take part in a Cause and Effect Analysis?</li><li>Do you have a facilitator (or have
-access to a facilitator) who has experience in leading this type of
-brainstorming process and who also understands your organization’s particular
-needs and parameters?</li><li>Do you have dedicated space to use
-for a Cause and Effect Analysis?</li></ol>
-
-
-
-
-
-
-
-
-
-<p>If you feel
-you’re ready to undertake a Cause and Effect Analysis, congratulations!&nbsp; You’re well on your way to a better process
-for achieving your goals.</p><h2>Resources</h2><p>Graphic Credit: <a href="http://thenounproject.com/term/fish-skeleton/3167/" target="_self">Fish-Skeleton</a>&nbsp;designed by&nbsp;<a href="http://thenounproject.com/gilad1">Gilad Fried</a>&nbsp;from the&nbsp;<a href="http://www.thenounproject.com/">Noun Project</a>.<br></p><br><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21178/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21178/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21178/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21178/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-22T18:14:54.047Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-22T18:14:54.047Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21060";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:94:"http://music.tutsplus.com/tutorials/creating-a-realistic-bass-part-3-strings-things--cms-21060";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:50:"Creating a Realistic Bass Part 3: Strings & Things";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:8349:"<p>Originally I had thought the <a href="http://music.tutsplus.com/tutorials/creating-a-realistic-bass-with-logics-sculpture--audio-15451">Realistic
+Bass</a> tuts were complete, but have since come up with a few more ideas
+that push the envelope a bit further.  The good news is that these
+new concepts don't rely on Logic or Sculpture, so although I will be
+using both, the concepts in this tut are open and accessible to the
+non-Logic users as well.</p><h2>The Concept<br></h2><p>Although we left off with a decent-sounding modeled electric bass, a few key components were not
+addressed—the main one being that of the bass strings themselves. 
+The four strings which make up a standard bass are all of a different
+gauge, and therefore sound different even when playing the same note.&nbsp;</p><p>&nbsp;The low E string played at the fifth fret (a low A) will sound
+remarkably different from that same A being played on the open A
+string.  This is true up and down the board; that the same note will
+sound different depending on what string it is played on due to the
+physical characteristics of the particular string.<br></p><p>This timbre difference between&nbsp;identical&nbsp;note values is an important characteristic of any type of stringed
+instrument, and one that, despite the subtle modulations already in
+use on our bass patch, is not happening.  In order to emulate this we
+are going to have to do a little bit of setup.<br></p><h2>Initial Steps<br></h2><p>The first thing to do is to instantiate
+a separate instance of the bass plugin for each string we are going
+to emulate, and to populate the tracks with a de-mixed MIDI
+performance.  The image below shows Logic's main page after
+completing this step and labeling.&nbsp;&nbsp;Each track is named according to
+the string we want to emulate and each region is labeled according to
+the note value it contains.&nbsp; </p><p>I have taken some license irrespective
+of real-world playing intuition in assigning the notes to the strings
+in order to utilize all four strings. (I.e. the G and G# would probably both
+be played on the E string.) This will allow for a wider range of
+variation later on.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/image/1.png"><figcaption>The initial setup, showing the 'bass strings' on the left and the assigned notes on the right.</figcaption></figure><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/audio/1.mp3" controls="controls"></audio><p><br></p><p>This is where we are at, with no change
+in sound from the previous tutorial.<br></p><h2>Changing Timbres<br></h2><p>To start creating some variation, we
+are going to want to start to play around with some plugin
+parameters.  Two things to think about when doing so are the real
+world sound&nbsp;characteristics&nbsp;of strings of&nbsp;differing&nbsp;thickness and
+the overall&nbsp;cohesion of the final output across all four
+strings.<br></p><p>The lower and wider gauge strings of an
+electric bass tend to have a  more wooly, rounded and sustained tone
+than that of the upper ranged strings.  So, if I am using the tone we
+had previously created (a fairly tight tone) as a starting point, I
+am going to want to play around with some parameters to open things
+up a bit to replicate a wider string.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/image/2-2.png"><figcaption>In Sculpture, the objects (cyan), string (magenta) and envelope (yellow) sections contain the parameters we want to adjust.</figcaption></figure><p>After deciding exactly what parameters
+to alter, it is important to go through and alter those same
+parameters somewhat differently in each instance of your chosen
+plugin to create a open to closed timbre gradient across the strings
+of the virtual bass (tight and clean to loose and wooly, etc.)
+.<br></p><p>When doing this, I started off rather
+technical. I used the open E string tone as my 'open limit', and
+the original tone as my 'closed limit' G string, then fit the other
+two string tones in between.&nbsp;</p><p>I then freed up on the restrictions
+to get something that sounded good with the recorded MIDI.&nbsp;&nbsp;I then went
+ahead and loosened up on the original timbre to get a more cohesive
+sound across all strings.  I finally went into the mixer and balanced
+out the levels.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/image/3.png"><figcaption>The mixer with individual channels and level balance for each 'string'.</figcaption></figure><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/audio/2.mp3" controls="controls"></audio><p><i>The loop. As you can hear, adjusting
+the parameters has uncovered some note-off string clicks on a few
+notes that were mostly dormant.</i><br></p><h2>Amps<br></h2><p>From here, I summed the signal to an
+AUX track, and bussed each string to a guitar amp on a separate AUX track in order to amp the bass in parallel.  I pretty much always amp
+sounds in parallel, as it allows for a greater control over the final
+tonality.&nbsp;</p><p>&nbsp;In this case, I am trying to emphasize some of the higher
+end harmonics, so I simply find an amp setting that accentuates those
+frequencies and then mix them back into the dry signal.  In this way,
+I can piece together a sound with a great deal of precision.<br></p><p><br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/image/amp-1.png"><figcaption>Amp #1- a guitar amp to bring out the upper harmonics.</figcaption></figure><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/audio/3.mp3" controls="controls"><br></audio><p><i>The MIDI bass running in parallel through the first amp.</i><br></p><p>I then went ahead and did the same thing again with a bass amp model to beef up the lows. This type of parallel amping of a bass guitar further emulates real world sound as many recording engineers will mix a direct input bass recording with that of an amped recording.&nbsp;</p><p>In this instance, the dry signal can be considered our direct input and and the distorted signal will (obviously) be considered our amped recording.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/image/amp-2.png"><figcaption>Amp # 2 for the bottom end.</figcaption></figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/image/final-mixer.png"><figcaption>The mixer showing the 'DI' vs. amped routing.</figcaption></figure><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21060/audio/4.mp3" controls="controls"></audio><p><i>The summed bass running in parallel through the second amp; the final product.</i><br></p><h2>Final Thoughts<br></h2><p>Although this tutorial is geared
+towards emulating real-world electric bass conditions, don't think
+the concept is limited to just that.  This basic concept would work
+well for any sound type in need of some subtle and cohesive variation
+and can be used in a not-so-subtle or cohesive way as well.&nbsp;</p><p>We could
+break up a boring synth lead by varying the patch on certain notes or
+push things in a much wilder direction by processing each note with a
+different delay and distortion model, etc.  Or, in the instance of
+the bass above, I can buy some further variation by switching which
+notes get played on each string with each pass of the loop or send a varying amount if signal to each amp.  The
+possibilities are literally limitless.<br></p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21060/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21060/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21060/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21060/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T00:11:09.828Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-05-28T00:11:09.828Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Lisa Jo Rudy";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}}}}}}}}s:4:"type";i:512;s:7:"headers";a:23:{s:6:"server";s:16:"cloudflare-nginx";s:4:"date";s:29:"Fri, 23 May 2014 19:51:17 GMT";s:12:"content-type";s:35:"application/atom+xml; charset=utf-8";s:14:"content-length";s:6:"187643";s:10:"connection";s:10:"keep-alive";s:10:"set-cookie";s:134:"__cfduid=d15a10327c698e59c928fe950cc83ae411400874676690; expires=Mon, 23-Dec-2019 23:50:00 GMT; path=/; domain=.tutsplus.com; HttpOnly";s:13:"accept-ranges";s:5:"bytes";s:3:"age";s:2:"75";s:13:"cache-control";s:8:"no-cache";s:4:"etag";s:34:""0f05370da866a5b4bd2833d33f2eb605"";s:6:"status";s:6:"200 OK";s:4:"vary";s:22:"Accept,Accept-Encoding";s:3:"via";s:11:"1.1 varnish";s:22:"x-content-type-options";s:7:"nosniff";s:15:"x-frame-options";s:43:"ALLOW-FROM https://analytics.webtrends.com/";s:12:"x-powered-by";s:23:"Phusion Passenger 4.0.5";s:12:"x-request-id";s:36:"0bdf9010-29e2-4c36-9454-def74b879c11";s:9:"x-runtime";s:8:"0.052650";s:15:"x-ua-compatible";s:8:"chrome=1";s:9:"x-varnish";s:19:"185494442 185492487";s:15:"x-varnish-cache";s:3:"HIT";s:16:"x-xss-protection";s:13:"1; mode=block";s:6:"cf-ray";s:20:"12f3c9895fcc01b0-FRA";}s:5:"build";s:14:"20121030085402";}
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:11:"Will Walker";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}}}}}}}}s:4:"type";i:512;s:7:"headers";a:23:{s:6:"server";s:16:"cloudflare-nginx";s:4:"date";s:29:"Wed, 28 May 2014 21:57:00 GMT";s:12:"content-type";s:35:"application/atom+xml; charset=utf-8";s:14:"content-length";s:6:"209253";s:10:"connection";s:10:"keep-alive";s:10:"set-cookie";s:134:"__cfduid=d2ad1551acb8c1b3194823a4249b212781401314220140; expires=Mon, 23-Dec-2019 23:50:00 GMT; path=/; domain=.tutsplus.com; HttpOnly";s:13:"accept-ranges";s:5:"bytes";s:3:"age";s:3:"299";s:13:"cache-control";s:8:"no-cache";s:4:"etag";s:34:""997e9fdcfa0aa835997e42dcec811e42"";s:6:"status";s:6:"200 OK";s:4:"vary";s:22:"Accept,Accept-Encoding";s:3:"via";s:11:"1.1 varnish";s:22:"x-content-type-options";s:7:"nosniff";s:15:"x-frame-options";s:43:"ALLOW-FROM https://analytics.webtrends.com/";s:12:"x-powered-by";s:23:"Phusion Passenger 4.0.5";s:12:"x-request-id";s:36:"eb347424-0cb9-41f9-b83c-751d17e9d3b3";s:9:"x-runtime";s:8:"0.063425";s:15:"x-ua-compatible";s:8:"chrome=1";s:9:"x-varnish";s:21:"1375687779 1375680755";s:15:"x-varnish-cache";s:3:"HIT";s:16:"x-xss-protection";s:13:"1; mode=block";s:6:"cf-ray";s:20:"131db493ef2301b0-FRA";}s:5:"build";s:14:"20121030085402";}

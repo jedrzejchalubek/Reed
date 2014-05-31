@@ -1,0 +1,26 @@
+mixin thumbs(items, nav)
+	section#thumbs.thumbs.offset-top.fill
+		.row
+			.thumbs__wrapper
+				.text-center
+					block
+				section.thumbs__cols(masonry="{ transitionDuration: '400ms' }")
+					article.thumbs__item.masonry-brick.col-sm-6.col-md-4.col-lg-3(ng-repeat="item in #{items} track by item.id", id="{{item.id}}")
+						.thumbs__content(ng-class="{isRead: item.unread==0}")
+							a(ng-click="showArticle(item)")
+								img.thumbs__img(ng-src="{{item.image}}")
+								.thumbs__meta
+									h3.thumbs__heading(ng-bind-html="item.title")
+									p.thumbs__desc(ng-bind-html="item.description")
+							.thumbs__nav(ng-controller="Navbar")
+								a.pull-right(ng-click="markAsFav(item)")
+									.thumbs__fav(ng-class="{isFav: item.favourite == 1}")
+										span.fa.fa-heart
+								a.pull-right(ng-click="saveForLater(item)")
+									.thumbs__later(ng-class="{isLater: item.later == 1}")
+										span.fa.fa-clock-o
+								if nav != 'false'
+									a.pull-left(ng-click="unread(item)")
+										.thumbs__status(ng-class="{isRead: item.unread==0}")
+										span(ng-show="item.unread == '0'") Keep unread
+										span(ng-show="item.unread == '1'") Mark as read

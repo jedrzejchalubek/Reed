@@ -1,11 +1,23 @@
 Reed.controller('Discovery', function ($scope, Api, State) {
 
-	$scope.view = function (el) {
-		$scope.show = {
+	$scope.showArticle = function (el) {
+		angular.extend($scope.view, {
 			section: 'single',
 			id: el.id,
 			scrollPosition: $('#articles').scrollTop()
-		};
+		});
+	};
+
+	$scope.nextArticle = function (el) {
+		angular.extend($scope.view, {
+			section: 'single',
+			id: el.id
+		});
+	};
+
+	$scope.view = {
+		section: 'list',
+		content: $scope.discoveryArticles
 	};
 
 	$scope.tabs = {

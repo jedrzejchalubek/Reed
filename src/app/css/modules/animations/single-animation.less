@@ -2,15 +2,12 @@
 
 	&.ng-enter,
 	&.ng-leave {
-		position: absolute;
-		width: 100%;
+		position: relative;
 		.transition(all 600ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
-		.translate3d(0px; 0px; 0px);
 	}
 
 	&.ng-enter {
-
-		.translate3d(0px; 100%; 0px);
+		.translate3d(0px; 100%; -100px);
 
 		&.ng-enter-active {
 			.translate3d(0px; 0px; 0px);
@@ -20,10 +17,11 @@
 
 	&.ng-leave {
 
+		.scale(1);
 		.translate3d(0px; 0px; 0px);
 
 		&.ng-leave-active {
-			.translate3d(0px; 100%; 0px);
+			.translate3d(0px; 100%; -100px);
 		}
 
 	}

@@ -1,14 +1,19 @@
-mixin list(repeat)
-	section#articles.articles.offset-top.fill
-		.row
-			.articles__wrapper
-				.text-center
-					block
-				section(masonry)
-					div(ng-repeat=repeat)
-						article.articles__thumb.col-sm-6.col-lg-4(id="{{article.id}}")
-							a.articles__thumb-wrapper(ng-click="view(article)")
-								img.articles__thumb-img(ng-src="{{article.image}}")
-								.articles__thumb-meta
-									h3.articles__thumb-heading(ng-bind-html="article.title")
-									p.articles__thumb-desc(ng-bind-html="article.description")
+mixin list()
+	section.list
+
+		.list__tabs
+			.list__tab
+				span Sort by:
+			.list__tab
+				a(ng-click="tabUnread()") Unread
+			.list__tab
+				a(ng-click="tabAll()") Date
+			.list__tab
+				a(ng-click="tabFav()") Fav
+
+		article.list-animation(ng-repeat="item in view.side track by item.id")
+			.list__item(ng-class="{isRead: item.unread==0}")
+				a(ng-click="showArticle(item)")
+					h4.list__title(ng-bind-html="item.title")
+				.list__controls(ng-controller="Navbar")
+					a.list__status(ng-click="unread(item)", ng-class="{isRead: item.unread==0}")

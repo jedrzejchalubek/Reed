@@ -22,13 +22,23 @@ class UserArticle extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'id, articleid, later, favourite';
+	protected $columns = 'id, articleid, unread, later, favourite, created';
 
+	/**
+	 * Fetch all user articles
+	 * @param  String $id User id
+	 * @return Array
+	 */
 	public function fetch($id)
 	{
-		return $this->db->request("SELECT * FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}'");
+		return $this->db->request("SELECT *, UA.unread FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}'");
 	}
 
+	/**
+	 * Add or overwrite user articles
+	 * On duplicated overwrite only flags
+	 * @param Array $data
+	 */
 	public function addOverwrite($data)
 	{
 
@@ -36,7 +46,7 @@ class UserArticle extends Model
 			$this->table,
 			$this->columns,
 			$this->valuesToAdd(),
-			'favourite = COALESCE(:favourite, favourite), later = COALESCE(:later, later)',
+			'unread = COALESCE(:unread, unread), favourite = COALESCE(:favourite, favourite), later = COALESCE(:later, later)',
 			$data
 		);
 

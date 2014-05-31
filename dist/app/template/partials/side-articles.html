@@ -1,0 +1,10 @@
+
+<section>
+  <div class="row">
+    <tabset class="tabs tabs--dark">
+      <tab ng-repeat="tab in tabs.side" heading="{{tab.title}}" active="tab.active" class="col-xs-6">
+        <div ng-repeat="article in tab.content"><a ng-click="view(article)"><span>{{article.user.name}} {{article.type}}</span><span>{{article.title}}</span></a></div>
+      </tab>
+    </tabset>
+  </div>
+</section>

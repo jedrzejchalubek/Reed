@@ -11,7 +11,16 @@ class UserArticles extends Controller
 
 	public function get($id, $query)
 	{
-		Response::json($this->userArticle->fetch($id[0]));
+
+		$data = $this->userArticle->fetch($id[0]);
+
+		if ($data) {
+			Response::json($data);
+		} else {
+			echo "[]";
+		}
+
+
 	}
 
 	/**

@@ -5,6 +5,11 @@ Reed.controller('Ui', function ($scope, Api, State) {
 	$scope.discoveryFeeds = Api.discoveryFeeds.get();
 
 	$scope.articles = Api.UserArticles.get();
+
+	// $scope.$watchCollection('articles', function(newNames, oldNames) {
+ //         $scope.articles = newNames;
+ //    });
+
 	// $scope.feeds = Api.UserFeeds.get();
 
 

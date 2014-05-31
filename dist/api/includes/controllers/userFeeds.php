@@ -16,6 +16,7 @@ class UserFeeds extends Controller
 	{
 
 		$request = Request::getData();
+		$articles = [];
 
 		if (String::isUrl($request->rssUrl)) {
 
@@ -69,15 +70,30 @@ class UserFeeds extends Controller
 				$this->userArticle->addOverwrite(array(
 					'id' => $id[0],
 					'articleid' => String::md5(String::normalizeUrl($article->get_link())),
+					'unread' => 1,
 					'later' => 0,
 					'favourite' => 0,
+					'created' => '2014-05-27 20:25:50'
+				));
+
+				array_push($articles, array(
+					'id' => String::md5(String::normalizeUrl($article->get_link())),
+					'created' => '2014-03-07 23:27:26',
+					'modifed' => '2014-03-07 23:27:26',
+					'url' => String::normalizeUrl($article->get_link()),
+					'title' => String::stripAllTags($article->get_title()),
+					'description' => String::stripAllTags(substr($article->get_description(), 0, 255)),
+					'content' => String::stripRiskyTags($article->get_content()),
+					'image' => $imagesrc,
+					'stars' => '222'
 				));
 
 			}
 
 			Response::added(array(
 				'status' => 'success',
-				'message' => 'User feed added'
+				'message' => 'User feed added',
+				'items' => $articles
 			));
 
 		} else {

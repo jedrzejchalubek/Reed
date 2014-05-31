@@ -1,4 +1,4 @@
-Reed.directive('backToList', function() {
+Reed.directive('backToList', function($timeout) {
 
 	return {
 		restrict: 'AE',
@@ -6,10 +6,12 @@ Reed.directive('backToList', function() {
 		templateUrl: 'app/template/partials/back.html',
 		link: function(scope, element, attrs) {
 			element.bind('click', function() {
+
 				scope.$apply(function() {
-					scope.show.section = 'list';
+					scope.view.section = 'list';
 				});
-				$('#articles').scrollTop( scope.show.scrollPosition );
+				$('#thumbs').scrollTop( scope.view.scrollPosition );
+
 			});
 		}
 	};

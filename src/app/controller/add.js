@@ -29,14 +29,23 @@ Reed.controller('Add', function ($scope, $timeout, Api, State, Overlay) {
 
 		Api.UserFeeds.post({
 			'rssUrl': feed.url
-		}, function() {
+		}, function(response) {
 
 			feed.proccessing = {
 				done: true
 			};
 
+
+			response.items.forEach(function (el) {
+				$scope.articles.push(el);
+			});
+
+			console.log($scope.articles);
+
+			// console.log(angular.extend($scope.articles, response.items));
+
 			$timeout(function () {
-				feeds.splice(index, 1);
+				$scope.discoveryFeeds.splice(index, 1);
 			}, 1000);
 
 		});

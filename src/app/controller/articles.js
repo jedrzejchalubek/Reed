@@ -1,47 +1,107 @@
-Reed.controller('Articles', function ($scope, Api, State) {
+Reed.controller('Articles', function ($scope, $timeout, $animate, $filter, Api, State) {
 
-	$scope.view = function (el) {
-		$scope.show = {
+	$scope.showArticle = function (el) {
+
+		el.unread = '0';
+
+		angular.extend($scope.view, {
+			panel: false,
 			section: 'single',
 			id: el.id,
-			scrollPosition: $('#articles').scrollTop()
-		};
-	};
+			scrollPosition: $('#thumbs').scrollTop()
+		});
 
-	$scope.tabs = {
-
-		side: [
-			{
-				title: 'All',
-				content: [
-					{
-						user: {
-							name: 'Zbyszek',
-							avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg'
-						},
-						type: 'stared',
-						title: 'Taming The Unicorn: Easing JavaScript Memory Profiling In Chrome DevTools'
-					},
-					{
-						user: {
-							name: 'Artur',
-							avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg'
-						},
-						type: 'shared',
-						title: 'Taming The Unicorn'
-					}
-				]
-			},
-			{
-				title: 'Stared',
-				content: ''
-			},
-			{
-				title: 'Shared',
-				content: ''
-			}
-		],
+		Api.UserArticle.update({
+			articleid: el.id
+		}, {
+			unread: el.unread,
+			favourite: el.favourite,
+			later: el.later
+		});
 
 	};
+
+	$scope.nextArticle = function (el) {
+
+		el.unread = '0';
+
+		angular.extend($scope.view, {
+			panel: false,
+			section: 'single',
+			id: el.id
+		});
+
+		Api.UserArticle.update({
+			articleid: el.id
+		}, {
+			unread: el.unread,
+			favourite: el.favourite,
+			later: el.later
+		});
+
+	};
+
+	$scope.tabUnread = function () {
+
+		var data = $filter('orderBy')($scope.articles, '[-unread, -created]');
+
+		angular.extend($scope.view, {
+			section: 'list',
+			side: data,
+			content: data,
+		});
+
+	};
+
+	$scope.tabFav = function () {
+
+		var data = $filter('filter')($scope.articles, { favourite: '1' });
+			data = $filter('orderBy')(data, '[-unread, -created]');
+
+		angular.extend($scope.view, {
+			section: 'list',
+			side: data,
+			content: data,
+		});
+
+	};
+
+	$scope.tabAll = function () {
+
+		var data = $filter('orderBy')($scope.articles, '[-created]');
+
+		angular.extend($scope.view, {
+			section: 'list',
+			side: data,
+			content: data
+		});
+
+	};
+
+	$scope.loadMore = function() {
+		console.log('sss');
+		// var last = $scope.images[$scope.images.length - 1];
+		// for(var i = 1; i <= 8; i++) {
+		// 	$scope.images.push(last + i);
+		// }
+	};
+
+	$scope.init = function () {
+
+		$scope.articles.$promise.then(function () {
+
+			var articles = $filter('orderBy')($scope.articles, '[-unread, -created]');
+
+			$scope.view = {
+				section: 'list',
+				content: articles,
+				side: articles
+			};
+
+		});
+
+	}
+
+
 
 });

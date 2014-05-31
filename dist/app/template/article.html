@@ -1,0 +1,49 @@
+
+<section ng-controller="Navbar">
+  <div ng-repeat="article in discoveryArticles" class="article__wrapper fill">
+    <article ng-show="show.id === article.id" class="article fill article-animation">
+      <div class="row">
+        <div class="article__nav clearfix">
+          <div class="col-xs-3 text-left">
+            <div class="article__nav-left">
+              <back-to-list></back-to-list>
+            </div>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="article__nav-right"><a ng-click="saveForLater(article)"><span class="iconmonstr iconmonstr-time"></span> Save for later</a><a ng-click="markAsFav(article)"><span class="iconmonstr iconmonstr-bookmark"></span> Add to favourites</a><a href="#" class="hidden-xs"><span class="fa fa-share"></span> Share</a></div>
+          </div>
+        </div>
+        <div class="article__header">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="article__meta">
+              <div class="article__data">
+                <div class="row">
+                  <div class="col-xs-6 text-left">{{article.source}}</div>
+                  <div class="col-xs-6 text-right"><span class="fa fa-book"></span> 3 min read</div>
+                </div>
+              </div>
+              <h1 ng-bind-html="article.title" class="article__title"></h1>
+              <p ng-bind-html="article.description" class="article__desc"></p>
+            </div>
+          </div>
+          <div style="background-image: url({{article.image}})" class="article__image clearfix"></div>
+        </div>
+        <div class="article__content clearfix">
+          <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <div ng-bind-html="article.content" class="article__text"></div>
+            <div class="article__text"><a href="{{article.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
+          </div>
+        </div>
+      </div><a ng-click="view(discoveryArticles[$index + 1])" ng-show="discoveryArticles[$index + 1] != undefined" class="article__next row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+          <div class="article__data">
+            <div class="row">
+              <div class="col-xs-6 text-left">Next to read</div>
+            </div>
+          </div>
+          <h1 ng-bind-html="discoveryArticles[$index + 1].title" class="article__title"></h1>
+          <p ng-bind-html="discoveryArticles[$index + 1].description"></p>
+        </div></a>
+    </article>
+  </div>
+</section>

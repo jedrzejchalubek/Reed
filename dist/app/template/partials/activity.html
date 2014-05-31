@@ -1,0 +1,12 @@
+
+<section id="activity" class="activity">
+  <div class="row">
+    <tabset class="activity__wrapper tabs tabs--dark">
+      <tab ng-repeat="tab in tabs.side" heading="{{tab.title}}" active="tab.active" class="col-xs-4">
+        <div ng-repeat="activity in tab.content" class="activity__item"><img ng-src="{{activity.user.avatar}}" class="activity__avatar"/><a href="#articles" class="activity__status">
+            <div class="activity__status-type">{{activity.user.name}} {{activity.type}}</div>
+            <div class="activity__status-title">{{activity.title}}</div></a></div>
+      </tab>
+    </tabset>
+  </div>
+</section>

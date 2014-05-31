@@ -1,11 +1,11 @@
 
-<div ng-controller="Ui" class="wrapper container-fluid fill">
+<div ng-init="init()" class="wrapper container-fluid fill">
   <div class="row fill">
-    <div ng-include="'app/template/menu.html'"></div>
-    <div id="side" class="fill side col-sm-3">
-      <div ng-include="'app/template/activity.html'" class="fill"></div>
+    <div ng-include="'app/template/partials/menu.html'"></div>
+    <div id="side" ng-show="view.panel" class="side side-animation">
+      <div ng-include="'app/template/partials/activity.html'" class="fill"></div>
     </div>
-    <div id="content" class="content fill col-sm-9">
+    <div id="content" class="content fill col-md-12">
       <div class="add fill">
         <section class="add__wrapper text-center">
           <h1>Subskrybuj jeszcze więcej.</h1>

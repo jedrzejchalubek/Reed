@@ -1,9 +1,8 @@
 nav#menu.menu(ng-controller="Menu")
 	.menu__wrapper
 
-		.menu__section
-			a.menu__collapse(href="", ng-click="toggle()")
-				i.fa.fa-bars
+		a.menu__collapse(href="", ng-click="toggle()")
+			i.fa.fa-bars
 
 		.menu__section
 			a.menu__profile(href="#profile")
@@ -16,27 +15,27 @@ nav#menu.menu(ng-controller="Menu")
 					a(href="#discovery")
 						span.menu__nav-badge.badge {{state.unread.discovery}}
 						span.menu__nav-icon.iconmonstr.iconmonstr-network
-						| Discovery
+						span.hidden-xs Discovery
 				li.menu__nav-item
 					a(href="#feeds")
 						span.menu__nav-badge.badge {{state.unread.feeds}}
 						span.menu__nav-icon.iconmonstr.iconmonstr-wireless
-						| Feeds
+						span.hidden-xs Feeds
 				li.menu__nav-item
 					a(href="#articles")
 						span.menu__nav-badge.badge {{state.unread.articles}}
 						span.menu__nav-icon.iconmonstr.iconmonstr-menu
-						| Articles
+						span.hidden-xs Articles
 				li.menu__nav-item
 					a(href="#readlater")
 						span.menu__nav-badge.badge {{state.unread.readlater}}
 						span.menu__nav-icon.iconmonstr.iconmonstr-time
-						| Read later
+						span.hidden-xs Read later
 				li.menu__nav-item
 					a(href="#favourites")
 						span.menu__nav-badge.badge {{state.unread.fav}}
 						span.menu__nav-icon.iconmonstr.iconmonstr-bookmark
-						| Favourites
+						span.hidden-xs Favourites
 
 		a.menu__add(href="#add")
 			span.fa.fa-plus-circle

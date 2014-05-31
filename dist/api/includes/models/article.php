@@ -41,7 +41,7 @@ class Article extends Model
 			$this->columns
 		);
 
-		$request = $this->request("SELECT {$columns}, ((A.stars - 1) / power(((unix_timestamp(NOW()) - unix_timestamp(A.created))/60)/60, 1.8)) AS rank FROM {$this->table} AS A LEFT JOIN userArticle AS UA ON (A.id = UA.articleid AND UA.id = '{$id}') WHERE UA.id IS NULL");
+		$request = $this->request("SELECT '1' AS unread, '0' AS favourite, '0' AS later, {$columns}, ((A.stars - 1) / power(((unix_timestamp(NOW()) - unix_timestamp(A.created))/60)/60, 1.8)) AS rank FROM {$this->table} AS A LEFT JOIN userArticle AS UA ON (A.id = UA.articleid AND UA.id = '{$id}') WHERE UA.id IS NULL");
 
 		return ($request) ? $request : \Response::json(array('status' => 'nothing'));
 	}

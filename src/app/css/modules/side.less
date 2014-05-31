@@ -1,39 +1,16 @@
 .side {
 
-	background: @gray-dark url(../images/list-bg.gif);
+	position: fixed;
+	top: 0; right: 0;
+	z-index: @zindex-navbar-fixed;
+	width: 300px;
+	height: 100%;
+	background: @gray-dark;
 	color: @white;
-	position: relative;
-	z-index: @zindex-popover;
-	padding-top: 54px;
-	float: left;
-	clear: none;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	.transition(width 250ms ease-in-out);
-
-	&.isCollapsed {
-
-		width: 0;
-
-		section {
-			.transition(opacity 5ms ease-in-out);
-			.opacity(0);
-		}
-
-	}
-
-	&.isntCollapsed {
-
-		section {
-			.opacity(1);
-			.transition(opacity 150ms ease-in-out 250ms);
-		}
-
-	}
-
-	@media (max-width: @screen-xs-max) {
-		position: absolute;
-		z-index: 500;
-		width: auto;
-	}
+	.box-shadow(0 0px 18px rgba(0, 0, 0, 0.3));
 
 }
 
