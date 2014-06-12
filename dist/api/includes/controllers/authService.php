@@ -39,7 +39,8 @@ class AuthService extends Controller
 			// Store user
 			$this->user->addOverwrite(array(
 				'id' => String::md5($profile->id),
-				'fbId' => $profile->id
+				'fbId' => $profile->id,
+				'name' => $profile->first_name
 			));
 
 			// Response to client with user id and authorize token

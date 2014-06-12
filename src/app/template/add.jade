@@ -1,24 +1,23 @@
 include mixins/mixins
 
-+wrapper
++wrapper()
 
-	div(ng-include="'app/template/partials/menu.html'")
+	+menu()
+		+side
+			+list("view.side")
 
-	+side
-		div.fill(ng-include="'app/template/partials/activity.html'")
-
-	+content
+	+content()
 		div.add.fill
 			section.add__wrapper.text-center
-				h1 Subskrybuj jeszcze więcej.
+				h1 Subscribe even more.
 				p.lead
-					| Podaj tylko adres RSS strony, którą chcesz śledzić.
+					| Enter only the address of the webpage you want to track.
 					br
-					| My zajmiemy się resztą.
+					| We'll do the rest.
 				form(role="form", name="addForm", ng-submit="submit(addForm.$valid)", novalidate)
 					.row
 						.form-group
-							.col-md-5.col-md-offset-2.col-lg-6.col-lg-offset-2
+							.col-md-5.col-md-offset-2.col-lg-4.col-lg-offset-4
 								input#addFeed.input-lg.form-control(type="text", placeholder="Wpisz adres RSS strony", ng-model="form.rssUrl", required, ng-required="true")
 							.add__button.col-md-3.col-lg-2
 								button.btn.btn-lg.btn-block.btn-info(type="submit")
@@ -29,7 +28,7 @@ include mixins/mixins
 					.row
 						.col-md-10.col-md-offset-1
 							ul.feeds.list-group
-								li.feeds__thumb.list-group-item.feed-animation(ng-repeat="feed in discoveryFeeds | filter: form.rssUrl")
+								li.feeds__thumb.list-group-item.feed-animation(ng-repeat="feed in view.content | filter: form.rssUrl")
 									.row
 										.col-xs-10
 											img.feeds__image(ng-src="{{feed.image}}")

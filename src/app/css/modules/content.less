@@ -4,10 +4,12 @@
 	z-index: @zindex-dropdown;
 	overflow: hidden;
 	background: @white;
+	border-top: 2px solid lighten(@gray-lighter, 9%);
 	.transition(all 250ms ease-in-out);
 
-	&.isWide {}
-	&.isntWide {}
+	&__desc {
+		padding: 18px;
+	}
 
 	@media (max-width: @screen-xs-max) {
 		z-index: 450;

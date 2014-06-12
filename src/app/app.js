@@ -5,7 +5,7 @@ var Reed = angular.module('Reed', [
 	'ngSanitize',
 	'ngAnimate',
 	'ezfb',
-	'wu.masonry'
+	'toggle-switch'
 ])
 
 	.config([
@@ -23,7 +23,7 @@ var Reed = angular.module('Reed', [
 		});
 
 		$routeProvider
-			.when('/login', {
+			.when('/', {
 				templateUrl: 'app/template/login.html',
 				controller: 'Login',
 				requireLogin: false
@@ -33,14 +33,24 @@ var Reed = angular.module('Reed', [
 				controller: 'Discovery',
 				requireLogin: true,
 			})
-			.when('/discovery?:id', {
-				templateUrl: 'app/template/discovery.html',
-				controller: 'Discovery',
+			.when('/all', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'All',
 				requireLogin: true
 			})
-			.when('/articles', {
+			.when('/later', {
 				templateUrl: 'app/template/articles.html',
-				controller: 'Articles',
+				controller: 'Later',
+				requireLogin: true
+			})
+			.when('/favourites', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'Favourites',
+				requireLogin: true
+			})
+			.when('/feeds/:id', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'Feeds',
 				requireLogin: true
 			})
 			.when('/add', {
@@ -68,7 +78,7 @@ var Reed = angular.module('Reed', [
 			// if you're logged out send to login page.
 			if (next.requireLogin && !AuthService.getUserAuthenticated()) {
 				event.preventDefault();
-				$location.path('/login').replace();
+				$location.path('/').replace();
 			}
 		});
 

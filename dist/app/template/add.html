@@ -1,19 +1,51 @@
 
-<div ng-init="init()" class="wrapper container-fluid fill">
-  <div class="row fill">
-    <div ng-include="'app/template/partials/menu.html'"></div>
-    <div id="side" ng-show="view.panel" class="side side-animation">
-      <div ng-include="'app/template/partials/activity.html'" class="fill"></div>
-    </div>
+<div class="wrapper container-fluid fill">
+  <div ng-init="init()" class="row fill">
+    <section ng-controller="Menu">
+      <nav id="menu" class="menu">
+        <div class="menu__wrapper">
+          <div ng-show="view.section == 'list'">
+            <div class="menu__logotype"><img ng-src="app/images/logotype.jpg"/></div>
+            <ul ng-show="view.is == 'All' || view.is == 'Feeds'" class="menu__sort">
+              <li>
+                <toggle-switch model="state.user.filter" on-label="Unread" off-label="All"></toggle-switch>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="view.section == 'single'">
+            <back-to-list></back-to-list>
+            <ul ng-controller="Navbar" class="menu__sort">
+              <li><a ng-click="saveForLater(view.single)"><span ng-class="{isLater: view.single.later == 1}" class="menu__later"><span class="fa fa-clock-o"></span></span><span>Later</span></a></li>
+              <li><a ng-click="markAsFav(view.single)"><span ng-class="{isFav: view.single.favourite == 1}" class="menu__fav"><span class="fa fa-heart"></span></span><span>Favourite</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav><a href="" ng-click="toggleSidebar()" class="menu__collapse"><i class="fa fa-bars"></i><span ng-show="state.count.articles != 0" class="menu__collapse-badge badge">{{state.count.articles}}</span></a><a href="#add" class="menu__add"><span class="fa fa-plus-circle"></span></a>
+      <div id="side" ng-show="view.panel" class="side side-animation">
+        <section class="list"><a href="#profile" class="list__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="list__profile-img"/><span class="list__profile-name">Hello, {{collection.user.name}}!</span></a>
+          <section ng-controller="Navigation">
+            <div class="navigation list-group"><a ng-click="view.panel = false" href="#discovery" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-network"></div><span class="navigation__title">Discovery</span></a><a ng-click="view.panel = false" href="#later" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-time"></div><span class="navigation__title">Read later</span><span ng-show="state.count.later != 0" class="navigation__badge badge">{{state.count.later}}</span></a><a ng-click="view.panel = false" href="#favourites" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-bookmark"></div><span class="navigation__title">Favourites</span><span ng-show="state.count.favourite != 0" class="navigation__badge badge">{{state.count.favourite}}</span></a><a ng-click="view.panel = false" href="#all" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-menu"></div><span class="navigation__title">All</span><span ng-show="state.count.articles != 0" class="navigation__badge badge">{{state.count.articles}}</span></a>
+              <ul class="navigation__list">
+                <li ng-repeat="feed in collection.feeds" class="navigation__feed"><a href="#feeds/{{feed.id}}">{{feed.title}}</a><span ng-show="countFeed(feed) != 0" class="navigation__feed-badge badge pull-right">{{ countFeed(feed) }}</span></li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </div>
+    </section>
     <div id="content" class="content fill col-md-12">
       <div class="add fill">
         <section class="add__wrapper text-center">
-          <h1>Subskrybuj jeszcze więcej.</h1>
-          <p class="lead">Podaj tylko adres RSS strony, którą chcesz śledzić.<br/>My zajmiemy się resztą.</p>
+          <h1>Subscribe even more.</h1>
+          <p class="lead">Enter only the address of the webpage you want to track.<br/>We'll do the rest.</p>
           <form role="form" name="addForm" ng-submit="submit(addForm.$valid)" novalidate="novalidate">
             <div class="row">
               <div class="form-group">
-                <div class="col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-2">
+                <div class="col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-4">
                   <input id="addFeed" type="text" placeholder="Wpisz adres RSS strony" ng-model="form.rssUrl" required="required" ng-required="true" class="input-lg form-control"/>
                 </div>
                 <div class="add__button col-md-3 col-lg-2">
@@ -28,7 +60,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <ul class="feeds list-group">
-                  <li ng-repeat="feed in discoveryFeeds | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
+                  <li ng-repeat="feed in view.content | filter: form.rssUrl" class="feeds__thumb list-group-item feed-animation">
                     <div class="row">
                       <div class="col-xs-10"><img ng-src="{{feed.image}}" class="feeds__image"/>
                         <div class="feeds__desc">

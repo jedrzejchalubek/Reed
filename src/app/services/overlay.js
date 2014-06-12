@@ -1,5 +1,9 @@
 Reed.factory('Overlay', function () {
 
+	/**
+	 * Overlay state:icon list
+	 * @type {Object}
+	 */
 	this.icons = {
 		'success': 'check',
 		'fail': 'times',
@@ -7,6 +11,13 @@ Reed.factory('Overlay', function () {
 		'400': 'times',
 	};
 
+
+	/**
+	 * Update displayed overlay
+	 * @param  {String} status Response status
+	 * @param  {String} text   Response message
+	 * @return {Object}
+	 */
 	this.update = function (status, text) {
 
 		this.overlay.update({
@@ -16,6 +27,11 @@ Reed.factory('Overlay', function () {
 
 	};
 
+	/**
+	 * Display overlay
+	 * @param  {String} text Response message
+	 * @return {Object}
+	 */
 	this.init = function (text) {
 
 		this.overlay = iosOverlay({
@@ -25,6 +41,9 @@ Reed.factory('Overlay', function () {
 
 	};
 
+	/**
+	 * Return object
+	 */
 	return this;
 
 });

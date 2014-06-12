@@ -1,5 +1,9 @@
 Reed.service('AuthService', function ($cookieStore){
 
+	/**
+	 * Get user authentication status
+	 * @return {Bool}
+	 */
 	this.getUserAuthenticated = function() {
 
 		var token = $cookieStore.get('reed_authtoken');
@@ -7,6 +11,10 @@ Reed.service('AuthService', function ($cookieStore){
 
 	};
 
+
+	/**
+	 * Return object
+	 */
 	return this;
 
 });

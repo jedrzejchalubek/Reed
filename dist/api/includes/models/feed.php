@@ -41,7 +41,9 @@ class Feed extends Model
 			$this->columns
 		);
 
-		return $this->request("SELECT {$columns}, ((F.subscribers - 1) / power((unix_timestamp(NOW()) - unix_timestamp(F.created) + 2), 0.25)) AS rank FROM {$this->table} F LEFT JOIN userFeed UF ON (F.id = UF.feedid AND UF.id = '{$id}') WHERE UF.id IS NULL");
+		$request = $this->request("SELECT {$columns}, ((F.subscribers - 1) / power((unix_timestamp(NOW()) - unix_timestamp(F.created) + 2), 0.25)) AS rank FROM {$this->table} F LEFT JOIN userFeed UF ON (F.id = UF.feedid AND UF.id = '{$id}') WHERE UF.id IS NULL");
+
+		return ($request) ? $request : \Response::json(array('status' => 'nothing'));
 
 	}
 

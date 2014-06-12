@@ -9,8 +9,9 @@ Reed.service('httpResponseInterceptorHandler', ['$q', '$location', '$cookieStore
 			responseError: function(rejection) {
 
 				if (rejection.status === 401) {
-					$cookieStore.remove('token');
-					$location.path('/login');
+					$cookieStore.remove('reed_authtoken');
+					$cookieStore.remove('reed_userid');
+					$location.path('/');
 
 					return $q.reject(rejection);
 				}

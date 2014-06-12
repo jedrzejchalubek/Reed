@@ -86,6 +86,28 @@ module.exports = function(grunt){
 		},
 
 		/**
+		 * Minify mereged script file
+		 */
+		uglify: {
+			options: {
+				banner: '/*!\n' +
+						' * <%= pkg.name %>\n' +
+						' * Version: <%= pkg.version %>\n' +
+						' * <%= pkg.description %>\n' +
+						' * Author: <%= pkg.author %>\n' +
+						' * Site: http://<%= pkg.homepage %>/\n' +
+						' */\n' +
+						'',
+				report: 'min'
+			},
+			dist: {
+				files: {
+					'<%= paths.dist %>/app/app.min.js': ['<%= paths.dist %>/app/app.js']
+				}
+			}
+		},
+
+		/**
 		 * Set watch observers
 		 */
 		watch: {
@@ -111,9 +133,9 @@ module.exports = function(grunt){
 	/**
 	 * Register grunt tasks
 	 */
-	grunt.registerTask('default', ['jade', 'less', 'concat', 'watch']);
+	grunt.registerTask('default', ['jade', 'less', 'concat', 'uglify', 'watch']);
 	grunt.registerTask('build-html', ['jade']);
 	grunt.registerTask('build-css', ['less']);
-	grunt.registerTask('build-js', ['concat']);
+	grunt.registerTask('build-js', ['concat', 'uglify']);
 
 };

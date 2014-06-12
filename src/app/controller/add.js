@@ -1,7 +1,4 @@
-Reed.controller('Add', function ($scope, $timeout, Api, State, Overlay) {
-
-	$scope.state = State.status;
-	$scope.form = {};
+Reed.controller('Add', function ($scope, $rootScope, $timeout, Api, State, Overlay, Collection) {
 
 	$scope.submit = function(isValid) {
 
@@ -35,21 +32,32 @@ Reed.controller('Add', function ($scope, $timeout, Api, State, Overlay) {
 				done: true
 			};
 
-
 			response.items.forEach(function (el) {
-				$scope.articles.push(el);
+				Collection.add('articles', el);
 			});
 
-			console.log($scope.articles);
+			$rootScope.state = State.update('articles', response.items.length);
 
-			// console.log(angular.extend($scope.articles, response.items));
+			console.log(Collection.articles);
+
+			// State.set({
+			// 	articles: State.count.articles + response.items.length
+			// });
 
 			$timeout(function () {
-				$scope.discoveryFeeds.splice(index, 1);
+				Collection.discovery.feeds.splice(index, 1);
 			}, 1000);
 
 		});
 
 	};
+
+	Collection.ready([Collection.articles.$promise], function () {
+		$scope.form = {};
+		$scope.view = {
+			section: 'list',
+			content: Collection.discovery.feeds
+		};
+	});
 
 });

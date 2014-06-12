@@ -50,4 +50,4 @@ Reed.factory('Api', function ($http, $resource, State) {
 
 		};
 
-}).service('feedsProvider', function () {});
+});

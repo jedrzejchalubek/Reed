@@ -171,7 +171,7 @@ $router->map('/users', function(){});
  | DELETE => delete user
 */
 $router->map('/users/:id', 'User', array(
-	'user' => $user
+	'user' => $user,
 ));
 
 

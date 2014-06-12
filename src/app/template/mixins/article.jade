@@ -1,0 +1,31 @@
+mixin article(items)
+	div.article.fill(ng-repeat="item in #{items} track by item.id", ng-class="{isActive: view.single.id === item.id}")
+		article.article__wrapper.fill.article-animation(ng-if="view.single.id === item.id")
+			.row
+				.article__header
+					.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-3
+						.article__meta
+							.article__data
+								.row
+									.col-xs-6.text-left {{item.source}}
+									.col-xs-6.text-right
+										span.fa.fa-book
+										reading-time(text="{ content: item.content }")
+							h1.article__title(ng-bind-html="item.title")
+							p.article__desc(ng-bind-html="item.description")
+
+				.article__content.clearfix
+					.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-3
+						.article__text(ng-bind-html="item.content")
+
+						.article__text
+							a.article__button.btn.btn-neutral.btn-block.btn-lg(href="{{item.url}}", target="_blank") Read orginal article
+
+			a(ng-click="nextArticle(#{items}[$index + 1])", ng-show="#{items}[$index + 1] != undefined").article__next.row
+				.article__next-meta.col-xs-10.col-xs-offset-1.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-3
+					.article__data
+						.row
+							.col-xs-6.text-left Next to read
+					h1.article__title(ng-bind-html="#{items}[$index + 1].title")
+					p.article__desc(ng-bind-html="#{items}[$index + 1].description")
+				span.article__image.clearfix(style="background-image: url({{#{items}[$index + 1].image}})")

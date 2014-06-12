@@ -39,15 +39,20 @@ class String
 		return hash('md5', $string);
 	}
 
-	public function stripAllTags($string)
+	public static function stripAllTags($string)
 	{
 		return strip_tags($string);
 	}
 
-	public function stripRiskyTags($string)
+	public static function stripRiskyTags($string)
 	{
 		$tags = "<span><a><b><tt><i><big><small><img><h1><h2><h3><h4><h5><h6><hr><ul><ol><li><dl><dt><dd><dir><em><strong><code><abbr><blockquote><sub><sup><p><br><pre><table><caption><thread><tr><th><td>";
 		return strip_tags($string, $tags);
+	}
+
+	public static function cut($string)
+	{
+		return substr($string, 0, 200);
 	}
 
 }

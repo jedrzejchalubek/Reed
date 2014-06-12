@@ -62,6 +62,15 @@ foreach(glob('includes/models/*.php') as $model){
 
 /*
  | ------------------------------------------
+ | Set timezone
+ | ------------------------------------------
+ | Setting default time zone to UTC
+*/
+date_default_timezone_set('UTC');
+
+
+/*
+ | ------------------------------------------
  | Init
  | ------------------------------------------
  | Initialize application classes and models

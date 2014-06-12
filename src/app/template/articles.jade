@@ -1,16 +1,16 @@
 include mixins/mixins
 
-+wrapper
++wrapper()
 
-	div(ng-include="'app/template/partials/menu.html'")
-
-
-	+side
-		+list("view.side")
+	+menu()
+		+side()
+			+list("view.side")
 
 	+content
 		.bg-animation.fill(ng-switch="view.section")
-			.thumbs-animation.fill(ng-switch-default="list")
+			.thumbs-animation.fill(ng-switch-when="list")
 				+thumbs("view.content")
+					section.content__desc
+						h1.content__title {{view.title}}
 			.single-animation.fill(ng-switch-when="single")
-				+single("view.content")
+				+article("view.content")

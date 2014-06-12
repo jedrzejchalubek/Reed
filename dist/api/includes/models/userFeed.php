@@ -24,6 +24,15 @@ class UserFeed extends Model
 	 */
 	protected $columns = 'id, feedid';
 
+	/**
+	 * Fetch all user articles
+	 * @param  String $id User id
+	 * @return Array
+	 */
+	public function fetch($id)
+	{
+		return $this->db->request("SELECT * FROM {$this->table} UF INNER JOIN feed F ON UF.feedid = F.id WHERE UF.id = '{$id}'");
+	}
 
 	/**
 	 * Construct

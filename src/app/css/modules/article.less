@@ -1,14 +1,19 @@
 .article {
 
-	position: relative;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	background: @white;
-	.box-shadow(9px 0px 54px 0px rgba(0, 0, 0, 0.25));
+	position: absolute;
+	top: 0; left: 0;
+	z-index: @zindex-tooltip;
+
+	&.isActive {
+		z-index: 9999;
+	}
 
 	&__wrapper {
-		position: absolute;
-		top: 0; left: 0;
+		position: relative;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		background: @white;
 	}
 
 	&__nav {
@@ -56,8 +61,7 @@
 
 		position: relative;
 		background: @gray-darker;
-		color: @white;
-		text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+		color: @black;
 
 	}
 
@@ -66,22 +70,20 @@
 		z-index: @zBottom;
 		width: 100%;
 		height: 100%;
+		display: block;
 		background-position: center center;
-		background-size: 100%;
-		.opacity(.3);
-		-webkit-filter: blur(6px);
-		-moz-filter: blur(6px);
-		-o-filter: blur(6px);
-		-ms-filter: blur(6px);
-		filter: url(#blur);
-		filter: blur(6px);
-		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='6');
+		background-size: cover;
 	}
 
 	&__meta {
 		position: relative;
 		z-index: @zMiddle;
-		padding: 126px 0 72px 0;
+		padding: 126px 0 92px 0;
+
+		@media (max-width: @screen-xs-max) {
+			padding: 36px 0;
+		}
+
 	}
 
 	&__data {
@@ -96,9 +98,15 @@
 	}
 
 	&__desc {
-
-		font: 24px @font-family-serif;
+		font: 24px @font-family-sans-serif;
 		line-height: 1.5;
+		font-weight: lighter;
+		letter-spacing: 1px;
+
+		@media (max-width: @screen-xs-max) {
+			font-size: 21px;
+		}
+
 	}
 
 
@@ -111,6 +119,12 @@
 			&:hover {
 				color: darken(@brand-info, 10%);
 			}
+		}
+
+		h1, h2, h3, h4, h5 {
+			font-family: @font-family-sans-serif;
+			font-weight: bolder;
+			margin-bottom: 18px;
 		}
 
 		img {
@@ -149,15 +163,36 @@
 	}
 
 	&__next {
-		color: @gray-darker;
-		border-top: 2px solid @gray-lighter;
+		color: @white;
 		display: block;
-		padding: 74px 0;
 
 		&:hover {
-			background: @brand-info;
 			color: @white;
-			border-color: @brand-info;
+
+			span {
+				filter: brightness(18%);
+				-webkit-filter: brightness(18%);
+				-moz-filter: brightness(18%);
+				-o-filter: brightness(18%);
+				-ms-filter: brightness(18%);
+			}
+
+		}
+
+		span {
+			.transition(all 150ms linear);
+			filter: brightness(24%);
+			-webkit-filter: brightness(24%);
+			-moz-filter: brightness(24%);
+			-o-filter: brightness(24%);
+			-ms-filter: brightness(24%);
+
+
+		}
+
+		&-meta {
+			padding: 122px 0 92px 0;
+			z-index: @zMiddle;
 		}
 	}
 

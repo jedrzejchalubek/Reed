@@ -5,7 +5,7 @@ var Reed = angular.module('Reed', [
 	'ngSanitize',
 	'ngAnimate',
 	'ezfb',
-	'wu.masonry'
+	'toggle-switch'
 ])
 
 	.config([
@@ -23,7 +23,7 @@ var Reed = angular.module('Reed', [
 		});
 
 		$routeProvider
-			.when('/login', {
+			.when('/', {
 				templateUrl: 'app/template/login.html',
 				controller: 'Login',
 				requireLogin: false
@@ -33,14 +33,24 @@ var Reed = angular.module('Reed', [
 				controller: 'Discovery',
 				requireLogin: true,
 			})
-			.when('/discovery?:id', {
-				templateUrl: 'app/template/discovery.html',
-				controller: 'Discovery',
+			.when('/all', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'All',
 				requireLogin: true
 			})
-			.when('/articles', {
+			.when('/later', {
 				templateUrl: 'app/template/articles.html',
-				controller: 'Articles',
+				controller: 'Later',
+				requireLogin: true
+			})
+			.when('/favourites', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'Favourites',
+				requireLogin: true
+			})
+			.when('/feeds/:id', {
+				templateUrl: 'app/template/articles.html',
+				controller: 'Feeds',
 				requireLogin: true
 			})
 			.when('/add', {
@@ -68,7 +78,7 @@ var Reed = angular.module('Reed', [
 			// if you're logged out send to login page.
 			if (next.requireLogin && !AuthService.getUserAuthenticated()) {
 				event.preventDefault();
-				$location.path('/login').replace();
+				$location.path('/').replace();
 			}
 		});
 
@@ -79,1053 +89,12 @@ build date: 2014-03-29
 author: Robin Fan
 https://github.com/pc035860/angular-easyfb.git */
 !function(a){function b(b,c){var d="ezfb-social-plugin-wrap",e="display: inline-block; width: 0; height: 0; overflow: hidden;",f=function(a){var b='<span class="'+d+'" style="'+e+'">';return a.wrap(b).parent()},g=function(a){return a.parent().hasClass(d)},h=function(a){var b=a.parent();return b.after(a).remove(),a};a.directive(c,["ezfb",function(a){return{restrict:"EC",require:"?^ezfbXfbml",link:function(c,d,e,i){function j(a){return function(){var b;k&&a===l&&(b=e.onrender,b&&c.$eval(b),k=!1,h(d))}}if(!i){var k=!1,l=0;c.$watch(function(){var a=[];return angular.forEach(b,function(b){a.push(e[b])}),a},function(){l++,k?a.XFBML.parse(d.parent()[0],j(l)):(k=!0,a.XFBML.parse(f(d)[0],j(l)))},!0),d.bind("$destroy",function(){g(d)&&h(d)})}}}}])}a.provider("ezfb",function(){function a(a,b){return angular.isObject(b)?void angular.extend(a,b):angular.copy(a)}function b(a,b,c){return function(){return a.apply(b,c)}}var c=-1,d={api:[1,2,3],ui:1,getAuthResponse:c,getLoginStatus:0,login:0,logout:0,"Event.subscribe":1,"Event.unsubscribe":1,"XFBML.parse":1,"Canvas.Prefetcher.addStaticResource":c,"Canvas.Prefetcher.setCollectionMode":c,"Canvas.hideFlashElement":c,"Canvas.scrollTo":c,"Canvas.setAutoGrow":c,"Canvas.setDoneLoading":0,"Canvas.setSize":c,"Canvas.setUrlHandler":0,"Canvas.showFlashElement":c,"Canvas.startTimer":c,"Canvas.stopTimer":0},e="en_US",f={status:!0,cookie:!0,xfbml:!0},g=["$window","$document","ezfbAsyncInit","ezfbLocale",function(a,b,c,d){!function(a){var b,c="facebook-jssdk",e=a.getElementsByTagName("script")[0];a.getElementById(c)||(b=a.createElement("script"),b.id=c,b.async=!0,b.src="//connect.facebook.net/"+d+"/all.js",e.parentNode.insertBefore(b,e))}(b[0]),a.fbAsyncInit=c}],h=g,i=["$window","ezfbInitParams",function(a,b){a.FB.init(b)}],j=i;return{setInitParams:function(b){a(f,b)},getInitParams:function(){return a(f)},setLocale:function(a){e=a},getLocale:function(){return e},setLoadSDKFunction:function(a){if(!angular.isArray(a)&&!angular.isFunction(a))throw new Error("Init function type error.");h=a},getLoadSDKFunction:function(){return h},setInitFunction:function(a){if(!angular.isArray(a)&&!angular.isFunction(a))throw new Error("Init function type error.");j=a},getInitFunction:function(){return j},$get:["$window","$q","$document","$parse","$rootScope","$injector",function(g,k,l,m,n,o){var p,q,r,s,t;return r={},s=k.defer(),(f.appId||j!==i)&&s.resolve(),p=k.defer(),l[0].getElementById("fb-root")||l.find("body").append('<div id="fb-root"></div>'),t=function(){s.promise.then(function(){o.invoke(j,null,{ezfbInitParams:f}),q.$$ready=!0,p.resolve()})},o.invoke(h,null,{ezfbAsyncInit:t,ezfbLocale:e}),q={$$ready:!1,init:function(b){a(f,b),s.resolve()}},angular.forEach(d,function(a,d){var e=m(d),f=e.assign;f(q,function(){var f=b(function(b){var f,h;if(f=k.defer(),h=function(a){var c,e;for(c=angular.isFunction(b[a])?b[a]:angular.noop,e=function(){var a=Array.prototype.slice.call(arguments);n.$$phase?(c.apply(null,a),f.resolve.apply(f,a)):n.$apply(function(){c.apply(null,a),f.resolve.apply(f,a)})};b.length<=a;)b.push(null);var g;if("Event.subscribe"===d)g=b[0],angular.isUndefined(r[g])&&(r[g]=[]),r[g].push({original:c,wrapped:e});else if("Event.unsubscribe"===d&&(g=b[0],angular.isArray(r[g]))){var h,i,j=r[g].length;for(h=0;j>h;h++)if(i=r[g][h],i.original===c){e=i.wrapped,r[g].splice(h,1);break}}b[a]=e},a!==c)if(angular.isNumber(a))h(a);else if(angular.isArray(a)){var i,j;for(i=0;i<a.length;i++)if(j=a[i],b.length==j||b.length==j+1&&angular.isFunction(b[j])){h(j);break}}var l=e(g.FB);if(!l)throw new Error("Facebook API `FB."+d+"` doesn't exist.");return l.apply(g.FB,b),f.promise},null,[Array.prototype.slice.call(arguments)]);if("getAuthResponse"===d){if(angular.isUndefined(g.FB))throw new Error("`FB` is not ready.");return g.FB.getAuthResponse()}return a!==c?p.promise.then(f):void p.promise.then(f)})}),q}]}}).directive("ezfbXfbml",["ezfb","$parse","$compile","$timeout",function(a,b,c,d){return{restrict:"EAC",controller:function(){},compile:function(e){var f=e.html();return function(e,g,h){var i=!0,j=h.onrender,k=function(){i&&(j&&e.$eval(j),i=!1)};a.XFBML.parse(g[0],k);var l=b(h.ezfbXfbml).assign;e.$watch(h.ezfbXfbml,function(b){b&&(i=!0,g.html(f),c(g.contents())(e),d(function(){a.XFBML.parse(g[0],k)}),(l||angular.noop)(e,!1))},!0)}}}}]);var c={fbLike:["action","colorscheme","href","kidDirectedSite","layout","ref","share","showFaces","width"],fbShareButton:["href","layout","width"],fbSend:["colorscheme","href","kidDirectedSite","ref"],fbPost:["href","width"],fbFollow:["colorscheme","href","kidDirectedSite","layout","showFaces","width"],fbComments:["colorscheme","href","mobile","numPosts","orderBy","width"],fbActivity:["action","appId","colorscheme","filter","header","height","linktarget","maxAge","recommendations","ref","site","width"],fbRecommendations:["action","appId","colorscheme","header","height","linktarget","maxAge","ref","site","width"],fbRecommendationsBar:["action","href","maxAge","numRecommendations","readTime","ref","side","site","trigger"],fbLikeBox:["colorscheme","forceWall","header","height","href","showBorder","showFaces","stream","width"],fbFacepile:["action","appId","colorscheme","href","maxRows","size","width"]};angular.forEach(c,b)}(angular.module("ezfb",[]));;/*!
- * angular-masonry 0.8.1
- * Pascal Hartig, weluse GmbH, http://weluse.de/
- * License: MIT
- */
-(function () {
-	'use strict';
-	angular.module('wu.masonry', []).controller('MasonryCtrl', [
-		'$scope',
-		'$element',
-		'$timeout',
-		function controller($scope, $element, $timeout) {
-			var bricks = {};
-			var schedule = [];
-			var destroyed = false;
-			var self = this;
-			var timeout = null;
-			this.preserveOrder = false;
-			this.loadImages = true;
-			this.scheduleMasonryOnce = function scheduleMasonryOnce() {
-				var args = arguments;
-				var found = schedule.filter(function filterFn(item) {
-						return item[0] === args[0];
-					}).length > 0;
-				if (!found) {
-					this.scheduleMasonry.apply(null, arguments);
-				}
-			};
-			// Make sure it's only executed once within a reasonable time-frame in
-			// case multiple elements are removed or added at once.
-			this.scheduleMasonry = function scheduleMasonry() {
-				if (timeout) {
-					$timeout.cancel(timeout);
-				}
-				schedule.push([].slice.call(arguments));
-				timeout = $timeout(function runMasonry() {
-					if (destroyed) {
-						return;
-					}
-					schedule.forEach(function scheduleForEach(args) {
-						$element.masonry.apply($element, args);
-					});
-					schedule = [];
-				}, 300);
-			};
-			function defaultLoaded($element) {
-				$element.addClass('loaded');
-			}
-			this.appendBrick = function appendBrick(element, id) {
-				if (destroyed) {
-					return;
-				}
-				function _append() {
-					if (Object.keys(bricks).length === 0) {
-						$element.masonry('resize');
-					}
-					if (bricks[id] === undefined) {
-						// Keep track of added elements.
-						bricks[id] = true;
-						defaultLoaded(element);
-						$element.masonry('appended', element, true);
-					}
-				}
-				function _layout() {
-					// I wanted to make this dynamic but ran into huuuge memory leaks
-					// that I couldn't fix. If you know how to dynamically add a
-					// callback so one could say <masonry loaded="callback($element)">
-					// please submit a pull request!
-					self.scheduleMasonryOnce('layout');
-				}
-				if (!self.loadImages) {
-					_append();
-					_layout();
-				} else if (self.preserveOrder) {
-					_append();
-					element.imagesLoaded(_layout);
-				} else {
-					element.imagesLoaded(function imagesLoaded() {
-						_append();
-						_layout();
-					});
-				}
-			};
-			this.removeBrick = function removeBrick(id, element) {
-				if (destroyed) {
-					return;
-				}
-				delete bricks[id];
-				$element.masonry('remove', element);
-				this.scheduleMasonryOnce('layout');
-			};
-			this.destroy = function destroy() {
-				destroyed = true;
-				if ($element.data('masonry')) {
-					// Gently uninitialize if still present
-					$element.masonry('destroy');
-				}
-				$scope.$emit('masonry.destroyed');
-				bricks = [];
-			};
-			this.reload = function reload() {
-				$element.masonry();
-				$scope.$emit('masonry.reloaded');
-			};
-		}
-	]).directive('masonry', function masonryDirective() {
-		return {
-			restrict: 'AE',
-			controller: 'MasonryCtrl',
-			link: {
-				pre: function preLink(scope, element, attrs, ctrl) {
-					var attrOptions = scope.$eval(attrs.masonry || attrs.masonryOptions);
-					var options = angular.extend({
-							itemSelector: attrs.itemSelector || '.masonry-brick',
-							columnWidth: parseInt(attrs.columnWidth, 10) || attrs.columnWidth
-						}, attrOptions || {});
-					element.masonry(options);
-					var loadImages = scope.$eval(attrs.loadImages);
-					ctrl.loadImages = loadImages !== false;
-					var preserveOrder = scope.$eval(attrs.preserveOrder);
-					ctrl.preserveOrder = preserveOrder !== false && attrs.preserveOrder !== undefined;
-					scope.$emit('masonry.created', element);
-					scope.$on('$destroy', ctrl.destroy);
-				}
-			}
-		};
-	}).directive('masonryBrick', function masonryBrickDirective() {
-		return {
-			restrict: 'AC',
-			require: '^masonry',
-			scope: true,
-			link: {
-				pre: function preLink(scope, element, attrs, ctrl) {
-					var id = scope.$id, index;
-					ctrl.appendBrick(element, id);
-					element.on('$destroy', function () {
-						ctrl.removeBrick(id, element);
-					});
-					scope.$on('masonry.reload', function () {
-						ctrl.scheduleMasonryOnce('reloadItems');
-						ctrl.scheduleMasonryOnce('layout');
-					});
-					scope.$watch('$index', function () {
-						if (index !== undefined && index !== scope.$index) {
-							ctrl.scheduleMasonryOnce('reloadItems');
-							ctrl.scheduleMasonryOnce('layout');
-						}
-						index = scope.$index;
-					});
-				}
-			}
-		};
-	});
-}());
-;/*!
- * imagesLoaded PACKAGED v3.1.7
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
+ * Bootstrap v3.1.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-
-/*!
- * EventEmitter v4.2.6 - git.io/ee
- * Oliver Caldwell
- * MIT license
- * @preserve
- */
-
-(function () {
-	
-
-	/**
-	 * Class for managing events.
-	 * Can be extended to provide event functionality in other classes.
-	 *
-	 * @class EventEmitter Manages event registering and emitting.
-	 */
-	function EventEmitter() {}
-
-	// Shortcuts to improve speed and size
-	var proto = EventEmitter.prototype;
-	var exports = this;
-	var originalGlobalValue = exports.EventEmitter;
-
-	/**
-	 * Finds the index of the listener for the event in it's storage array.
-	 *
-	 * @param {Function[]} listeners Array of listeners to search through.
-	 * @param {Function} listener Method to look for.
-	 * @return {Number} Index of the specified listener, -1 if not found
-	 * @api private
-	 */
-	function indexOfListener(listeners, listener) {
-		var i = listeners.length;
-		while (i--) {
-			if (listeners[i].listener === listener) {
-				return i;
-			}
-		}
-
-		return -1;
-	}
-
-	/**
-	 * Alias a method while keeping the context correct, to allow for overwriting of target method.
-	 *
-	 * @param {String} name The name of the target method.
-	 * @return {Function} The aliased method
-	 * @api private
-	 */
-	function alias(name) {
-		return function aliasClosure() {
-			return this[name].apply(this, arguments);
-		};
-	}
-
-	/**
-	 * Returns the listener array for the specified event.
-	 * Will initialise the event object and listener arrays if required.
-	 * Will return an object if you use a regex search. The object contains keys for each matched event. So /ba[rz]/ might return an object containing bar and baz. But only if you have either defined them with defineEvent or added some listeners to them.
-	 * Each property in the object response is an array of listener functions.
-	 *
-	 * @param {String|RegExp} evt Name of the event to return the listeners from.
-	 * @return {Function[]|Object} All listener functions for the event.
-	 */
-	proto.getListeners = function getListeners(evt) {
-		var events = this._getEvents();
-		var response;
-		var key;
-
-		// Return a concatenated array of all matching events if
-		// the selector is a regular expression.
-		if (typeof evt === 'object') {
-			response = {};
-			for (key in events) {
-				if (events.hasOwnProperty(key) && evt.test(key)) {
-					response[key] = events[key];
-				}
-			}
-		}
-		else {
-			response = events[evt] || (events[evt] = []);
-		}
-
-		return response;
-	};
-
-	/**
-	 * Takes a list of listener objects and flattens it into a list of listener functions.
-	 *
-	 * @param {Object[]} listeners Raw listener objects.
-	 * @return {Function[]} Just the listener functions.
-	 */
-	proto.flattenListeners = function flattenListeners(listeners) {
-		var flatListeners = [];
-		var i;
-
-		for (i = 0; i < listeners.length; i += 1) {
-			flatListeners.push(listeners[i].listener);
-		}
-
-		return flatListeners;
-	};
-
-	/**
-	 * Fetches the requested listeners via getListeners but will always return the results inside an object. This is mainly for internal use but others may find it useful.
-	 *
-	 * @param {String|RegExp} evt Name of the event to return the listeners from.
-	 * @return {Object} All listener functions for an event in an object.
-	 */
-	proto.getListenersAsObject = function getListenersAsObject(evt) {
-		var listeners = this.getListeners(evt);
-		var response;
-
-		if (listeners instanceof Array) {
-			response = {};
-			response[evt] = listeners;
-		}
-
-		return response || listeners;
-	};
-
-	/**
-	 * Adds a listener function to the specified event.
-	 * The listener will not be added if it is a duplicate.
-	 * If the listener returns true then it will be removed after it is called.
-	 * If you pass a regular expression as the event name then the listener will be added to all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to attach the listener to.
-	 * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.addListener = function addListener(evt, listener) {
-		var listeners = this.getListenersAsObject(evt);
-		var listenerIsWrapped = typeof listener === 'object';
-		var key;
-
-		for (key in listeners) {
-			if (listeners.hasOwnProperty(key) && indexOfListener(listeners[key], listener) === -1) {
-				listeners[key].push(listenerIsWrapped ? listener : {
-					listener: listener,
-					once: false
-				});
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of addListener
-	 */
-	proto.on = alias('addListener');
-
-	/**
-	 * Semi-alias of addListener. It will add a listener that will be
-	 * automatically removed after it's first execution.
-	 *
-	 * @param {String|RegExp} evt Name of the event to attach the listener to.
-	 * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.addOnceListener = function addOnceListener(evt, listener) {
-		return this.addListener(evt, {
-			listener: listener,
-			once: true
-		});
-	};
-
-	/**
-	 * Alias of addOnceListener.
-	 */
-	proto.once = alias('addOnceListener');
-
-	/**
-	 * Defines an event name. This is required if you want to use a regex to add a listener to multiple events at once. If you don't do this then how do you expect it to know what event to add to? Should it just add to every possible match for a regex? No. That is scary and bad.
-	 * You need to tell it what event names should be matched by a regex.
-	 *
-	 * @param {String} evt Name of the event to create.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.defineEvent = function defineEvent(evt) {
-		this.getListeners(evt);
-		return this;
-	};
-
-	/**
-	 * Uses defineEvent to define multiple events.
-	 *
-	 * @param {String[]} evts An array of event names to define.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.defineEvents = function defineEvents(evts) {
-		for (var i = 0; i < evts.length; i += 1) {
-			this.defineEvent(evts[i]);
-		}
-		return this;
-	};
-
-	/**
-	 * Removes a listener function from the specified event.
-	 * When passed a regular expression as the event name, it will remove the listener from all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to remove the listener from.
-	 * @param {Function} listener Method to remove from the event.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.removeListener = function removeListener(evt, listener) {
-		var listeners = this.getListenersAsObject(evt);
-		var index;
-		var key;
-
-		for (key in listeners) {
-			if (listeners.hasOwnProperty(key)) {
-				index = indexOfListener(listeners[key], listener);
-
-				if (index !== -1) {
-					listeners[key].splice(index, 1);
-				}
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of removeListener
-	 */
-	proto.off = alias('removeListener');
-
-	/**
-	 * Adds listeners in bulk using the manipulateListeners method.
-	 * If you pass an object as the second argument you can add to multiple events at once. The object should contain key value pairs of events and listeners or listener arrays. You can also pass it an event name and an array of listeners to be added.
-	 * You can also pass it a regular expression to add the array of listeners to all events that match it.
-	 * Yeah, this function does quite a bit. That's probably a bad thing.
-	 *
-	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to add to multiple events at once.
-	 * @param {Function[]} [listeners] An optional array of listener functions to add.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.addListeners = function addListeners(evt, listeners) {
-		// Pass through to manipulateListeners
-		return this.manipulateListeners(false, evt, listeners);
-	};
-
-	/**
-	 * Removes listeners in bulk using the manipulateListeners method.
-	 * If you pass an object as the second argument you can remove from multiple events at once. The object should contain key value pairs of events and listeners or listener arrays.
-	 * You can also pass it an event name and an array of listeners to be removed.
-	 * You can also pass it a regular expression to remove the listeners from all events that match it.
-	 *
-	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to remove from multiple events at once.
-	 * @param {Function[]} [listeners] An optional array of listener functions to remove.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.removeListeners = function removeListeners(evt, listeners) {
-		// Pass through to manipulateListeners
-		return this.manipulateListeners(true, evt, listeners);
-	};
-
-	/**
-	 * Edits listeners in bulk. The addListeners and removeListeners methods both use this to do their job. You should really use those instead, this is a little lower level.
-	 * The first argument will determine if the listeners are removed (true) or added (false).
-	 * If you pass an object as the second argument you can add/remove from multiple events at once. The object should contain key value pairs of events and listeners or listener arrays.
-	 * You can also pass it an event name and an array of listeners to be added/removed.
-	 * You can also pass it a regular expression to manipulate the listeners of all events that match it.
-	 *
-	 * @param {Boolean} remove True if you want to remove listeners, false if you want to add.
-	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to add/remove from multiple events at once.
-	 * @param {Function[]} [listeners] An optional array of listener functions to add/remove.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.manipulateListeners = function manipulateListeners(remove, evt, listeners) {
-		var i;
-		var value;
-		var single = remove ? this.removeListener : this.addListener;
-		var multiple = remove ? this.removeListeners : this.addListeners;
-
-		// If evt is an object then pass each of it's properties to this method
-		if (typeof evt === 'object' && !(evt instanceof RegExp)) {
-			for (i in evt) {
-				if (evt.hasOwnProperty(i) && (value = evt[i])) {
-					// Pass the single listener straight through to the singular method
-					if (typeof value === 'function') {
-						single.call(this, i, value);
-					}
-					else {
-						// Otherwise pass back to the multiple function
-						multiple.call(this, i, value);
-					}
-				}
-			}
-		}
-		else {
-			// So evt must be a string
-			// And listeners must be an array of listeners
-			// Loop over it and pass each one to the multiple method
-			i = listeners.length;
-			while (i--) {
-				single.call(this, evt, listeners[i]);
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Removes all listeners from a specified event.
-	 * If you do not specify an event then all listeners will be removed.
-	 * That means every event will be emptied.
-	 * You can also pass a regex to remove all events that match it.
-	 *
-	 * @param {String|RegExp} [evt] Optional name of the event to remove all listeners for. Will remove from every event if not passed.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.removeEvent = function removeEvent(evt) {
-		var type = typeof evt;
-		var events = this._getEvents();
-		var key;
-
-		// Remove different things depending on the state of evt
-		if (type === 'string') {
-			// Remove all listeners for the specified event
-			delete events[evt];
-		}
-		else if (type === 'object') {
-			// Remove all events matching the regex.
-			for (key in events) {
-				if (events.hasOwnProperty(key) && evt.test(key)) {
-					delete events[key];
-				}
-			}
-		}
-		else {
-			// Remove all listeners in all events
-			delete this._events;
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of removeEvent.
-	 *
-	 * Added to mirror the node API.
-	 */
-	proto.removeAllListeners = alias('removeEvent');
-
-	/**
-	 * Emits an event of your choice.
-	 * When emitted, every listener attached to that event will be executed.
-	 * If you pass the optional argument array then those arguments will be passed to every listener upon execution.
-	 * Because it uses `apply`, your array of arguments will be passed as if you wrote them out separately.
-	 * So they will not arrive within the array on the other side, they will be separate.
-	 * You can also pass a regular expression to emit to all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to emit and execute listeners for.
-	 * @param {Array} [args] Optional array of arguments to be passed to each listener.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.emitEvent = function emitEvent(evt, args) {
-		var listeners = this.getListenersAsObject(evt);
-		var listener;
-		var i;
-		var key;
-		var response;
-
-		for (key in listeners) {
-			if (listeners.hasOwnProperty(key)) {
-				i = listeners[key].length;
-
-				while (i--) {
-					// If the listener returns true then it shall be removed from the event
-					// The function is executed either with a basic call or an apply if there is an args array
-					listener = listeners[key][i];
-
-					if (listener.once === true) {
-						this.removeListener(evt, listener.listener);
-					}
-
-					response = listener.listener.apply(this, args || []);
-
-					if (response === this._getOnceReturnValue()) {
-						this.removeListener(evt, listener.listener);
-					}
-				}
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of emitEvent
-	 */
-	proto.trigger = alias('emitEvent');
-
-	/**
-	 * Subtly different from emitEvent in that it will pass its arguments on to the listeners, as opposed to taking a single array of arguments to pass on.
-	 * As with emitEvent, you can pass a regex in place of the event name to emit to all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to emit and execute listeners for.
-	 * @param {...*} Optional additional arguments to be passed to each listener.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.emit = function emit(evt) {
-		var args = Array.prototype.slice.call(arguments, 1);
-		return this.emitEvent(evt, args);
-	};
-
-	/**
-	 * Sets the current value to check against when executing listeners. If a
-	 * listeners return value matches the one set here then it will be removed
-	 * after execution. This value defaults to true.
-	 *
-	 * @param {*} value The new value to check for when executing listeners.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.setOnceReturnValue = function setOnceReturnValue(value) {
-		this._onceReturnValue = value;
-		return this;
-	};
-
-	/**
-	 * Fetches the current value to check against when executing listeners. If
-	 * the listeners return value matches this one then it should be removed
-	 * automatically. It will return true by default.
-	 *
-	 * @return {*|Boolean} The current value to check for or the default, true.
-	 * @api private
-	 */
-	proto._getOnceReturnValue = function _getOnceReturnValue() {
-		if (this.hasOwnProperty('_onceReturnValue')) {
-			return this._onceReturnValue;
-		}
-		else {
-			return true;
-		}
-	};
-
-	/**
-	 * Fetches the events object and creates one if required.
-	 *
-	 * @return {Object} The events storage object.
-	 * @api private
-	 */
-	proto._getEvents = function _getEvents() {
-		return this._events || (this._events = {});
-	};
-
-	/**
-	 * Reverts the global {@link EventEmitter} to its previous value and returns a reference to this version.
-	 *
-	 * @return {Function} Non conflicting EventEmitter class.
-	 */
-	EventEmitter.noConflict = function noConflict() {
-		exports.EventEmitter = originalGlobalValue;
-		return EventEmitter;
-	};
-
-	// Expose the class either via AMD, CommonJS or the global object
-	if (typeof define === 'function' && define.amd) {
-		define('eventEmitter/EventEmitter',[],function () {
-			return EventEmitter;
-		});
-	}
-	else if (typeof module === 'object' && module.exports){
-		module.exports = EventEmitter;
-	}
-	else {
-		this.EventEmitter = EventEmitter;
-	}
-}.call(this));
-
-/*!
- * eventie v1.0.4
- * event binding helper
- *   eventie.bind( elem, 'click', myFn )
- *   eventie.unbind( elem, 'click', myFn )
- */
-
-/*jshint browser: true, undef: true, unused: true */
-/*global define: false */
-
-( function( window ) {
-
-
-
-var docElem = document.documentElement;
-
-var bind = function() {};
-
-function getIEEvent( obj ) {
-  var event = window.event;
-  // add event.target
-  event.target = event.target || event.srcElement || obj;
-  return event;
-}
-
-if ( docElem.addEventListener ) {
-  bind = function( obj, type, fn ) {
-    obj.addEventListener( type, fn, false );
-  };
-} else if ( docElem.attachEvent ) {
-  bind = function( obj, type, fn ) {
-    obj[ type + fn ] = fn.handleEvent ?
-      function() {
-        var event = getIEEvent( obj );
-        fn.handleEvent.call( fn, event );
-      } :
-      function() {
-        var event = getIEEvent( obj );
-        fn.call( obj, event );
-      };
-    obj.attachEvent( "on" + type, obj[ type + fn ] );
-  };
-}
-
-var unbind = function() {};
-
-if ( docElem.removeEventListener ) {
-  unbind = function( obj, type, fn ) {
-    obj.removeEventListener( type, fn, false );
-  };
-} else if ( docElem.detachEvent ) {
-  unbind = function( obj, type, fn ) {
-    obj.detachEvent( "on" + type, obj[ type + fn ] );
-    try {
-      delete obj[ type + fn ];
-    } catch ( err ) {
-      // can't delete window object properties
-      obj[ type + fn ] = undefined;
-    }
-  };
-}
-
-var eventie = {
-  bind: bind,
-  unbind: unbind
-};
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( 'eventie/eventie',eventie );
-} else {
-  // browser global
-  window.eventie = eventie;
-}
-
-})( this );
-
-/*!
- * imagesLoaded v3.1.7
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
-
-( function( window, factory ) { 
-  // universal module definition
-
-  /*global define: false, module: false, require: false */
-
-  if ( typeof define === 'function' && define.amd ) {
-    // AMD
-    define( [
-      'eventEmitter/EventEmitter',
-      'eventie/eventie'
-    ], function( EventEmitter, eventie ) {
-      return factory( window, EventEmitter, eventie );
-    });
-  } else if ( typeof exports === 'object' ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('eventEmitter'),
-      require('eventie')
-    );
-  } else {
-    // browser global
-    window.imagesLoaded = factory(
-      window,
-      window.EventEmitter,
-      window.eventie
-    );
-  }
-
-})( window,
-
-// --------------------------  factory -------------------------- //
-
-function factory( window, EventEmitter, eventie ) {
-
-
-
-var $ = window.jQuery;
-var console = window.console;
-var hasConsole = typeof console !== 'undefined';
-
-// -------------------------- helpers -------------------------- //
-
-// extend objects
-function extend( a, b ) {
-  for ( var prop in b ) {
-    a[ prop ] = b[ prop ];
-  }
-  return a;
-}
-
-var objToString = Object.prototype.toString;
-function isArray( obj ) {
-  return objToString.call( obj ) === '[object Array]';
-}
-
-// turn element or nodeList into an array
-function makeArray( obj ) {
-  var ary = [];
-  if ( isArray( obj ) ) {
-    // use object if already an array
-    ary = obj;
-  } else if ( typeof obj.length === 'number' ) {
-    // convert nodeList to array
-    for ( var i=0, len = obj.length; i < len; i++ ) {
-      ary.push( obj[i] );
-    }
-  } else {
-    // array of single index
-    ary.push( obj );
-  }
-  return ary;
-}
-
-  // -------------------------- imagesLoaded -------------------------- //
-
-  /**
-   * @param {Array, Element, NodeList, String} elem
-   * @param {Object or Function} options - if function, use as callback
-   * @param {Function} onAlways - callback function
-   */
-  function ImagesLoaded( elem, options, onAlways ) {
-    // coerce ImagesLoaded() without new, to be new ImagesLoaded()
-    if ( !( this instanceof ImagesLoaded ) ) {
-      return new ImagesLoaded( elem, options );
-    }
-    // use elem as selector string
-    if ( typeof elem === 'string' ) {
-      elem = document.querySelectorAll( elem );
-    }
-
-    this.elements = makeArray( elem );
-    this.options = extend( {}, this.options );
-
-    if ( typeof options === 'function' ) {
-      onAlways = options;
-    } else {
-      extend( this.options, options );
-    }
-
-    if ( onAlways ) {
-      this.on( 'always', onAlways );
-    }
-
-    this.getImages();
-
-    if ( $ ) {
-      // add jQuery Deferred object
-      this.jqDeferred = new $.Deferred();
-    }
-
-    // HACK check async to allow time to bind listeners
-    var _this = this;
-    setTimeout( function() {
-      _this.check();
-    });
-  }
-
-  ImagesLoaded.prototype = new EventEmitter();
-
-  ImagesLoaded.prototype.options = {};
-
-  ImagesLoaded.prototype.getImages = function() {
-    this.images = [];
-
-    // filter & find items if we have an item selector
-    for ( var i=0, len = this.elements.length; i < len; i++ ) {
-      var elem = this.elements[i];
-      // filter siblings
-      if ( elem.nodeName === 'IMG' ) {
-        this.addImage( elem );
-      }
-      // find children
-      // no non-element nodes, #143
-      var nodeType = elem.nodeType;
-      if ( !nodeType || !( nodeType === 1 || nodeType === 9 || nodeType === 11 ) ) {
-        continue;
-      }
-      var childElems = elem.querySelectorAll('img');
-      // concat childElems to filterFound array
-      for ( var j=0, jLen = childElems.length; j < jLen; j++ ) {
-        var img = childElems[j];
-        this.addImage( img );
-      }
-    }
-  };
-
-  /**
-   * @param {Image} img
-   */
-  ImagesLoaded.prototype.addImage = function( img ) {
-    var loadingImage = new LoadingImage( img );
-    this.images.push( loadingImage );
-  };
-
-  ImagesLoaded.prototype.check = function() {
-    var _this = this;
-    var checkedCount = 0;
-    var length = this.images.length;
-    this.hasAnyBroken = false;
-    // complete if no images
-    if ( !length ) {
-      this.complete();
-      return;
-    }
-
-    function onConfirm( image, message ) {
-      if ( _this.options.debug && hasConsole ) {
-        console.log( 'confirm', image, message );
-      }
-
-      _this.progress( image );
-      checkedCount++;
-      if ( checkedCount === length ) {
-        _this.complete();
-      }
-      return true; // bind once
-    }
-
-    for ( var i=0; i < length; i++ ) {
-      var loadingImage = this.images[i];
-      loadingImage.on( 'confirm', onConfirm );
-      loadingImage.check();
-    }
-  };
-
-  ImagesLoaded.prototype.progress = function( image ) {
-    this.hasAnyBroken = this.hasAnyBroken || !image.isLoaded;
-    // HACK - Chrome triggers event before object properties have changed. #83
-    var _this = this;
-    setTimeout( function() {
-      _this.emit( 'progress', _this, image );
-      if ( _this.jqDeferred && _this.jqDeferred.notify ) {
-        _this.jqDeferred.notify( _this, image );
-      }
-    });
-  };
-
-  ImagesLoaded.prototype.complete = function() {
-    var eventName = this.hasAnyBroken ? 'fail' : 'done';
-    this.isComplete = true;
-    var _this = this;
-    // HACK - another setTimeout so that confirm happens after progress
-    setTimeout( function() {
-      _this.emit( eventName, _this );
-      _this.emit( 'always', _this );
-      if ( _this.jqDeferred ) {
-        var jqMethod = _this.hasAnyBroken ? 'reject' : 'resolve';
-        _this.jqDeferred[ jqMethod ]( _this );
-      }
-    });
-  };
-
-  // -------------------------- jquery -------------------------- //
-
-  if ( $ ) {
-    $.fn.imagesLoaded = function( options, callback ) {
-      var instance = new ImagesLoaded( this, options, callback );
-      return instance.jqDeferred.promise( $(this) );
-    };
-  }
-
-
-  // --------------------------  -------------------------- //
-
-  function LoadingImage( img ) {
-    this.img = img;
-  }
-
-  LoadingImage.prototype = new EventEmitter();
-
-  LoadingImage.prototype.check = function() {
-    // first check cached any previous images that have same src
-    var resource = cache[ this.img.src ] || new Resource( this.img.src );
-    if ( resource.isConfirmed ) {
-      this.confirm( resource.isLoaded, 'cached was confirmed' );
-      return;
-    }
-
-    // If complete is true and browser supports natural sizes,
-    // try to check for image status manually.
-    if ( this.img.complete && this.img.naturalWidth !== undefined ) {
-      // report based on naturalWidth
-      this.confirm( this.img.naturalWidth !== 0, 'naturalWidth' );
-      return;
-    }
-
-    // If none of the checks above matched, simulate loading on detached element.
-    var _this = this;
-    resource.on( 'confirm', function( resrc, message ) {
-      _this.confirm( resrc.isLoaded, message );
-      return true;
-    });
-
-    resource.check();
-  };
-
-  LoadingImage.prototype.confirm = function( isLoaded, message ) {
-    this.isLoaded = isLoaded;
-    this.emit( 'confirm', this, message );
-  };
-
-  // -------------------------- Resource -------------------------- //
-
-  // Resource checks each src, only once
-  // separate class from LoadingImage to prevent memory leaks. See #115
-
-  var cache = {};
-
-  function Resource( src ) {
-    this.src = src;
-    // add to cache
-    cache[ src ] = this;
-  }
-
-  Resource.prototype = new EventEmitter();
-
-  Resource.prototype.check = function() {
-    // only trigger checking once
-    if ( this.isChecked ) {
-      return;
-    }
-    // simulate loading on detached element
-    var proxyImage = new Image();
-    eventie.bind( proxyImage, 'load', this );
-    eventie.bind( proxyImage, 'error', this );
-    proxyImage.src = this.src;
-    // set flag
-    this.isChecked = true;
-  };
-
-  // ----- events ----- //
-
-  // trigger specified handler for event type
-  Resource.prototype.handleEvent = function( event ) {
-    var method = 'on' + event.type;
-    if ( this[ method ] ) {
-      this[ method ]( event );
-    }
-  };
-
-  Resource.prototype.onload = function( event ) {
-    this.confirm( true, 'onload' );
-    this.unbindProxyEvents( event );
-  };
-
-  Resource.prototype.onerror = function( event ) {
-    this.confirm( false, 'onerror' );
-    this.unbindProxyEvents( event );
-  };
-
-  // ----- confirm ----- //
-
-  Resource.prototype.confirm = function( isLoaded, message ) {
-    this.isConfirmed = true;
-    this.isLoaded = isLoaded;
-    this.emit( 'confirm', this, message );
-  };
-
-  Resource.prototype.unbindProxyEvents = function( event ) {
-    eventie.unbind( event.target, 'load', this );
-    eventie.unbind( event.target, 'error', this );
-  };
-
-  // -----  ----- //
-
-  return ImagesLoaded;
-
-});
-;/*global $*/
++function(a){"use strict";var b='[data-dismiss="alert"]',c=function(c){a(c).on("click",b,this.close)};c.prototype.close=function(b){function f(){e.trigger("closed.bs.alert").remove()}var c=a(this),d=c.attr("data-target");d||(d=c.attr("href"),d=d&&d.replace(/.*(?=#[^\s]*$)/,""));var e=a(d);b&&b.preventDefault(),e.length||(e=c.hasClass("alert")?c:c.parent()),e.trigger(b=a.Event("close.bs.alert"));if(b.isDefaultPrevented())return;e.removeClass("in"),a.support.transition&&e.hasClass("fade")?e.one(a.support.transition.end,f).emulateTransitionEnd(150):f()};var d=a.fn.alert;a.fn.alert=function(b){return this.each(function(){var d=a(this),e=d.data("bs.alert");e||d.data("bs.alert",e=new c(this)),typeof b=="string"&&e[b].call(d)})},a.fn.alert.Constructor=c,a.fn.alert.noConflict=function(){return a.fn.alert=d,this},a(document).on("click.bs.alert.data-api",b,c.prototype.close)}(jQuery),+function(a){"use strict";var b=function(c,d){this.$element=a(c),this.options=a.extend({},b.DEFAULTS,d),this.isLoading=!1};b.DEFAULTS={loadingText:"loading..."},b.prototype.setState=function(b){var c="disabled",d=this.$element,e=d.is("input")?"val":"html",f=d.data();b+="Text",f.resetText||d.data("resetText",d[e]()),d[e](f[b]||this.options[b]),setTimeout(a.proxy(function(){b=="loadingText"?(this.isLoading=!0,d.addClass(c).attr(c,c)):this.isLoading&&(this.isLoading=!1,d.removeClass(c).removeAttr(c))},this),0)},b.prototype.toggle=function(){var a=!0,b=this.$element.closest('[data-toggle="buttons"]');if(b.length){var c=this.$element.find("input");c.prop("type")=="radio"&&(c.prop("checked")&&this.$element.hasClass("active")?a=!1:b.find(".active").removeClass("active")),a&&c.prop("checked",!this.$element.hasClass("active")).trigger("change")}a&&this.$element.toggleClass("active")};var c=a.fn.button;a.fn.button=function(c){return this.each(function(){var d=a(this),e=d.data("bs.button"),f=typeof c=="object"&&c;e||d.data("bs.button",e=new b(this,f)),c=="toggle"?e.toggle():c&&e.setState(c)})},a.fn.button.Constructor=b,a.fn.button.noConflict=function(){return a.fn.button=c,this},a(document).on("click.bs.button.data-api","[data-toggle^=button]",function(b){var c=a(b.target);c.hasClass("btn")||(c=c.closest(".btn")),c.button("toggle"),b.preventDefault()})}(jQuery),+function(a){"use strict";var b=function(b,c){this.$element=a(b),this.$indicators=this.$element.find(".carousel-indicators"),this.options=c,this.paused=this.sliding=this.interval=this.$active=this.$items=null,this.options.pause=="hover"&&this.$element.on("mouseenter",a.proxy(this.pause,this)).on("mouseleave",a.proxy(this.cycle,this))};b.DEFAULTS={interval:5e3,pause:"hover",wrap:!0},b.prototype.cycle=function(b){return b||(this.paused=!1),this.interval&&clearInterval(this.interval),this.options.interval&&!this.paused&&(this.interval=setInterval(a.proxy(this.next,this),this.options.interval)),this},b.prototype.getActiveIndex=function(){return this.$active=this.$element.find(".item.active"),this.$items=this.$active.parent().children(),this.$items.index(this.$active)},b.prototype.to=function(b){var c=this,d=this.getActiveIndex();if(b>this.$items.length-1||b<0)return;return this.sliding?this.$element.one("slid.bs.carousel",function(){c.to(b)}):d==b?this.pause().cycle():this.slide(b>d?"next":"prev",a(this.$items[b]))},b.prototype.pause=function(b){return b||(this.paused=!0),this.$element.find(".next, .prev").length&&a.support.transition&&(this.$element.trigger(a.support.transition.end),this.cycle(!0)),this.interval=clearInterval(this.interval),this},b.prototype.next=function(){if(this.sliding)return;return this.slide("next")},b.prototype.prev=function(){if(this.sliding)return;return this.slide("prev")},b.prototype.slide=function(b,c){var d=this.$element.find(".item.active"),e=c||d[b](),f=this.interval,g=b=="next"?"left":"right",h=b=="next"?"first":"last",i=this;if(!e.length){if(!this.options.wrap)return;e=this.$element.find(".item")[h]()}if(e.hasClass("active"))return this.sliding=!1;var j=a.Event("slide.bs.carousel",{relatedTarget:e[0],direction:g});this.$element.trigger(j);if(j.isDefaultPrevented())return;return this.sliding=!0,f&&this.pause(),this.$indicators.length&&(this.$indicators.find(".active").removeClass("active"),this.$element.one("slid.bs.carousel",function(){var b=a(i.$indicators.children()[i.getActiveIndex()]);b&&b.addClass("active")})),a.support.transition&&this.$element.hasClass("slide")?(e.addClass(b),e[0].offsetWidth,d.addClass(g),e.addClass(g),d.one(a.support.transition.end,function(){e.removeClass([b,g].join(" ")).addClass("active"),d.removeClass(["active",g].join(" ")),i.sliding=!1,setTimeout(function(){i.$element.trigger("slid.bs.carousel")},0)}).emulateTransitionEnd(d.css("transition-duration").slice(0,-1)*1e3)):(d.removeClass("active"),e.addClass("active"),this.sliding=!1,this.$element.trigger("slid.bs.carousel")),f&&this.cycle(),this};var c=a.fn.carousel;a.fn.carousel=function(c){return this.each(function(){var d=a(this),e=d.data("bs.carousel"),f=a.extend({},b.DEFAULTS,d.data(),typeof c=="object"&&c),g=typeof c=="string"?c:f.slide;e||d.data("bs.carousel",e=new b(this,f)),typeof c=="number"?e.to(c):g?e[g]():f.interval&&e.pause().cycle()})},a.fn.carousel.Constructor=b,a.fn.carousel.noConflict=function(){return a.fn.carousel=c,this},a(document).on("click.bs.carousel.data-api","[data-slide], [data-slide-to]",function(b){var c=a(this),d,e=a(c.attr("data-target")||(d=c.attr("href"))&&d.replace(/.*(?=#[^\s]+$)/,"")),f=a.extend({},e.data(),c.data()),g=c.attr("data-slide-to");g&&(f.interval=!1),e.carousel(f),(g=c.attr("data-slide-to"))&&e.data("bs.carousel").to(g),b.preventDefault()}),a(window).on("load",function(){a('[data-ride="carousel"]').each(function(){var b=a(this);b.carousel(b.data())})})}(jQuery),+function(a){function e(d){a(b).remove(),a(c).each(function(){var b=f(a(this)),c={relatedTarget:this};if(!b.hasClass("open"))return;b.trigger(d=a.Event("hide.bs.dropdown",c));if(d.isDefaultPrevented())return;b.removeClass("open").trigger("hidden.bs.dropdown",c)})}function f(b){var c=b.attr("data-target");c||(c=b.attr("href"),c=c&&/#[A-Za-z]/.test(c)&&c.replace(/.*(?=#[^\s]*$)/,""));var d=c&&a(c);return d&&d.length?d:b.parent()}"use strict";var b=".dropdown-backdrop",c="[data-toggle=dropdown]",d=function(b){a(b).on("click.bs.dropdown",this.toggle)};d.prototype.toggle=function(b){var c=a(this);if(c.is(".disabled, :disabled"))return;var d=f(c),g=d.hasClass("open");e();if(!g){"ontouchstart"in document.documentElement&&!d.closest(".navbar-nav").length&&a('<div class="dropdown-backdrop"/>').insertAfter(a(this)).on("click",e);var h={relatedTarget:this};d.trigger(b=a.Event("show.bs.dropdown",h));if(b.isDefaultPrevented())return;d.toggleClass("open").trigger("shown.bs.dropdown",h),c.focus()}return!1},d.prototype.keydown=function(b){if(!/(38|40|27)/.test(b.keyCode))return;var d=a(this);b.preventDefault(),b.stopPropagation();if(d.is(".disabled, :disabled"))return;var e=f(d),g=e.hasClass("open");if(!g||g&&b.keyCode==27)return b.which==27&&e.find(c).focus(),d.click();var h=" li:not(.divider):visible a",i=e.find("[role=menu]"+h+", [role=listbox]"+h);if(!i.length)return;var j=i.index(i.filter(":focus"));b.keyCode==38&&j>0&&j--,b.keyCode==40&&j<i.length-1&&j++,~j||(j=0),i.eq(j).focus()};var g=a.fn.dropdown;a.fn.dropdown=function(b){return this.each(function(){var c=a(this),e=c.data("bs.dropdown");e||c.data("bs.dropdown",e=new d(this)),typeof b=="string"&&e[b].call(c)})},a.fn.dropdown.Constructor=d,a.fn.dropdown.noConflict=function(){return a.fn.dropdown=g,this},a(document).on("click.bs.dropdown.data-api",e).on("click.bs.dropdown.data-api",".dropdown form",function(a){a.stopPropagation()}).on("click.bs.dropdown.data-api",c,d.prototype.toggle).on("keydown.bs.dropdown.data-api",c+", [role=menu], [role=listbox]",d.prototype.keydown)}(jQuery),+function(a){"use strict";var b=function(b,c){this.options=c,this.$element=a(b),this.$backdrop=this.isShown=null,this.options.remote&&this.$element.find(".modal-content").load(this.options.remote,a.proxy(function(){this.$element.trigger("loaded.bs.modal")},this))};b.DEFAULTS={backdrop:!0,keyboard:!0,show:!0},b.prototype.toggle=function(a){return this[this.isShown?"hide":"show"](a)},b.prototype.show=function(b){var c=this,d=a.Event("show.bs.modal",{relatedTarget:b});this.$element.trigger(d);if(this.isShown||d.isDefaultPrevented())return;this.isShown=!0,this.escape(),this.$element.on("click.dismiss.bs.modal",'[data-dismiss="modal"]',a.proxy(this.hide,this)),this.backdrop(function(){var d=a.support.transition&&c.$element.hasClass("fade");c.$element.parent().length||c.$element.appendTo(document.body),c.$element.show().scrollTop(0),d&&c.$element[0].offsetWidth,c.$element.addClass("in").attr("aria-hidden",!1),c.enforceFocus();var e=a.Event("shown.bs.modal",{relatedTarget:b});d?c.$element.find(".modal-dialog").one(a.support.transition.end,function(){c.$element.focus().trigger(e)}).emulateTransitionEnd(300):c.$element.focus().trigger(e)})},b.prototype.hide=function(b){b&&b.preventDefault(),b=a.Event("hide.bs.modal"),this.$element.trigger(b);if(!this.isShown||b.isDefaultPrevented())return;this.isShown=!1,this.escape(),a(document).off("focusin.bs.modal"),this.$element.removeClass("in").attr("aria-hidden",!0).off("click.dismiss.bs.modal"),a.support.transition&&this.$element.hasClass("fade")?this.$element.one(a.support.transition.end,a.proxy(this.hideModal,this)).emulateTransitionEnd(300):this.hideModal()},b.prototype.enforceFocus=function(){a(document).off("focusin.bs.modal").on("focusin.bs.modal",a.proxy(function(a){this.$element[0]!==a.target&&!this.$element.has(a.target).length&&this.$element.focus()},this))},b.prototype.escape=function(){this.isShown&&this.options.keyboard?this.$element.on("keyup.dismiss.bs.modal",a.proxy(function(a){a.which==27&&this.hide()},this)):this.isShown||this.$element.off("keyup.dismiss.bs.modal")},b.prototype.hideModal=function(){var a=this;this.$element.hide(),this.backdrop(function(){a.removeBackdrop(),a.$element.trigger("hidden.bs.modal")})},b.prototype.removeBackdrop=function(){this.$backdrop&&this.$backdrop.remove(),this.$backdrop=null},b.prototype.backdrop=function(b){var c=this.$element.hasClass("fade")?"fade":"";if(this.isShown&&this.options.backdrop){var d=a.support.transition&&c;this.$backdrop=a('<div class="modal-backdrop '+c+'" />').appendTo(document.body),this.$element.on("click.dismiss.bs.modal",a.proxy(function(a){if(a.target!==a.currentTarget)return;this.options.backdrop=="static"?this.$element[0].focus.call(this.$element[0]):this.hide.call(this)},this)),d&&this.$backdrop[0].offsetWidth,this.$backdrop.addClass("in");if(!b)return;d?this.$backdrop.one(a.support.transition.end,b).emulateTransitionEnd(150):b()}else!this.isShown&&this.$backdrop?(this.$backdrop.removeClass("in"),a.support.transition&&this.$element.hasClass("fade")?this.$backdrop.one(a.support.transition.end,b).emulateTransitionEnd(150):b()):b&&b()};var c=a.fn.modal;a.fn.modal=function(c,d){return this.each(function(){var e=a(this),f=e.data("bs.modal"),g=a.extend({},b.DEFAULTS,e.data(),typeof c=="object"&&c);f||e.data("bs.modal",f=new b(this,g)),typeof c=="string"?f[c](d):g.show&&f.show(d)})},a.fn.modal.Constructor=b,a.fn.modal.noConflict=function(){return a.fn.modal=c,this},a(document).on("click.bs.modal.data-api",'[data-toggle="modal"]',function(b){var c=a(this),d=c.attr("href"),e=a(c.attr("data-target")||d&&d.replace(/.*(?=#[^\s]+$)/,"")),f=e.data("bs.modal")?"toggle":a.extend({remote:!/#/.test(d)&&d},e.data(),c.data());c.is("a")&&b.preventDefault(),e.modal(f,this).one("hide",function(){c.is(":visible")&&c.focus()})}),a(document).on("show.bs.modal",".modal",function(){a(document.body).addClass("modal-open")}).on("hidden.bs.modal",".modal",function(){a(document.body).removeClass("modal-open")})}(jQuery),+function(a){"use strict";var b=function(a,b){this.type=this.options=this.enabled=this.timeout=this.hoverState=this.$element=null,this.init("tooltip",a,b)};b.DEFAULTS={animation:!0,placement:"top",selector:!1,template:'<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',trigger:"hover focus",title:"",delay:0,html:!1,container:!1},b.prototype.init=function(b,c,d){this.enabled=!0,this.type=b,this.$element=a(c),this.options=this.getOptions(d);var e=this.options.trigger.split(" ");for(var f=e.length;f--;){var g=e[f];if(g=="click")this.$element.on("click."+this.type,this.options.selector,a.proxy(this.toggle,this));else if(g!="manual"){var h=g=="hover"?"mouseenter":"focusin",i=g=="hover"?"mouseleave":"focusout";this.$element.on(h+"."+this.type,this.options.selector,a.proxy(this.enter,this)),this.$element.on(i+"."+this.type,this.options.selector,a.proxy(this.leave,this))}}this.options.selector?this._options=a.extend({},this.options,{trigger:"manual",selector:""}):this.fixTitle()},b.prototype.getDefaults=function(){return b.DEFAULTS},b.prototype.getOptions=function(b){return b=a.extend({},this.getDefaults(),this.$element.data(),b),b.delay&&typeof b.delay=="number"&&(b.delay={show:b.delay,hide:b.delay}),b},b.prototype.getDelegateOptions=function(){var b={},c=this.getDefaults();return this._options&&a.each(this._options,function(a,d){c[a]!=d&&(b[a]=d)}),b},b.prototype.enter=function(b){var c=b instanceof this.constructor?b:a(b.currentTarget)[this.type](this.getDelegateOptions()).data("bs."+this.type);clearTimeout(c.timeout),c.hoverState="in";if(!c.options.delay||!c.options.delay.show)return c.show();c.timeout=setTimeout(function(){c.hoverState=="in"&&c.show()},c.options.delay.show)},b.prototype.leave=function(b){var c=b instanceof this.constructor?b:a(b.currentTarget)[this.type](this.getDelegateOptions()).data("bs."+this.type);clearTimeout(c.timeout),c.hoverState="out";if(!c.options.delay||!c.options.delay.hide)return c.hide();c.timeout=setTimeout(function(){c.hoverState=="out"&&c.hide()},c.options.delay.hide)},b.prototype.show=function(){var b=a.Event("show.bs."+this.type);if(this.hasContent()&&this.enabled){this.$element.trigger(b);if(b.isDefaultPrevented())return;var c=this,d=this.tip();this.setContent(),this.options.animation&&d.addClass("fade");var e=typeof this.options.placement=="function"?this.options.placement.call(this,d[0],this.$element[0]):this.options.placement,f=/\s?auto?\s?/i,g=f.test(e);g&&(e=e.replace(f,"")||"top"),d.detach().css({top:0,left:0,display:"block"}).addClass(e),this.options.container?d.appendTo(this.options.container):d.insertAfter(this.$element);var h=this.getPosition(),i=d[0].offsetWidth,j=d[0].offsetHeight;if(g){var k=this.$element.parent(),l=e,m=document.documentElement.scrollTop||document.body.scrollTop,n=this.options.container=="body"?window.innerWidth:k.outerWidth(),o=this.options.container=="body"?window.innerHeight:k.outerHeight(),p=this.options.container=="body"?0:k.offset().left;e=e=="bottom"&&h.top+h.height+j-m>o?"top":e=="top"&&h.top-m-j<0?"bottom":e=="right"&&h.right+i>n?"left":e=="left"&&h.left-i<p?"right":e,d.removeClass(l).addClass(e)}var q=this.getCalculatedOffset(e,h,i,j);this.applyPlacement(q,e),this.hoverState=null;var r=function(){c.$element.trigger("shown.bs."+c.type)};a.support.transition&&this.$tip.hasClass("fade")?d.one(a.support.transition.end,r).emulateTransitionEnd(150):r()}},b.prototype.applyPlacement=function(b,c){var d,e=this.tip(),f=e[0].offsetWidth,g=e[0].offsetHeight,h=parseInt(e.css("margin-top"),10),i=parseInt(e.css("margin-left"),10);isNaN(h)&&(h=0),isNaN(i)&&(i=0),b.top=b.top+h,b.left=b.left+i,a.offset.setOffset(e[0],a.extend({using:function(a){e.css({top:Math.round(a.top),left:Math.round(a.left)})}},b),0),e.addClass("in");var j=e[0].offsetWidth,k=e[0].offsetHeight;c=="top"&&k!=g&&(d=!0,b.top=b.top+g-k);if(/bottom|top/.test(c)){var l=0;b.left<0&&(l=b.left*-2,b.left=0,e.offset(b),j=e[0].offsetWidth,k=e[0].offsetHeight),this.replaceArrow(l-f+j,j,"left")}else this.replaceArrow(k-g,k,"top");d&&e.offset(b)},b.prototype.replaceArrow=function(a,b,c){this.arrow().css(c,a?50*(1-a/b)+"%":"")},b.prototype.setContent=function(){var a=this.tip(),b=this.getTitle();a.find(".tooltip-inner")[this.options.html?"html":"text"](b),a.removeClass("fade in top bottom left right")},b.prototype.hide=function(){function e(){b.hoverState!="in"&&c.detach(),b.$element.trigger("hidden.bs."+b.type)}var b=this,c=this.tip(),d=a.Event("hide.bs."+this.type);this.$element.trigger(d);if(d.isDefaultPrevented())return;return c.removeClass("in"),a.support.transition&&this.$tip.hasClass("fade")?c.one(a.support.transition.end,e).emulateTransitionEnd(150):e(),this.hoverState=null,this},b.prototype.fixTitle=function(){var a=this.$element;(a.attr("title")||typeof a.attr("data-original-title")!="string")&&a.attr("data-original-title",a.attr("title")||"").attr("title","")},b.prototype.hasContent=function(){return this.getTitle()},b.prototype.getPosition=function(){var b=this.$element[0];return a.extend({},typeof b.getBoundingClientRect=="function"?b.getBoundingClientRect():{width:b.offsetWidth,height:b.offsetHeight},this.$element.offset())},b.prototype.getCalculatedOffset=function(a,b,c,d){return a=="bottom"?{top:b.top+b.height,left:b.left+b.width/2-c/2}:a=="top"?{top:b.top-d,left:b.left+b.width/2-c/2}:a=="left"?{top:b.top+b.height/2-d/2,left:b.left-c}:{top:b.top+b.height/2-d/2,left:b.left+b.width}},b.prototype.getTitle=function(){var a,b=this.$element,c=this.options;return a=b.attr("data-original-title")||(typeof c.title=="function"?c.title.call(b[0]):c.title),a},b.prototype.tip=function(){return this.$tip=this.$tip||a(this.options.template)},b.prototype.arrow=function(){return this.$arrow=this.$arrow||this.tip().find(".tooltip-arrow")},b.prototype.validate=function(){this.$element[0].parentNode||(this.hide(),this.$element=null,this.options=null)},b.prototype.enable=function(){this.enabled=!0},b.prototype.disable=function(){this.enabled=!1},b.prototype.toggleEnabled=function(){this.enabled=!this.enabled},b.prototype.toggle=function(b){var c=b?a(b.currentTarget)[this.type](this.getDelegateOptions()).data("bs."+this.type):this;c.tip().hasClass("in")?c.leave(c):c.enter(c)},b.prototype.destroy=function(){clearTimeout(this.timeout),this.hide().$element.off("."+this.type).removeData("bs."+this.type)};var c=a.fn.tooltip;a.fn.tooltip=function(c){return this.each(function(){var d=a(this),e=d.data("bs.tooltip"),f=typeof c=="object"&&c;if(!e&&c=="destroy")return;e||d.data("bs.tooltip",e=new b(this,f)),typeof c=="string"&&e[c]()})},a.fn.tooltip.Constructor=b,a.fn.tooltip.noConflict=function(){return a.fn.tooltip=c,this}}(jQuery),+function(a){"use strict";var b=function(a,b){this.init("popover",a,b)};if(!a.fn.tooltip)throw new Error("Popover requires tooltip.js");b.DEFAULTS=a.extend({},a.fn.tooltip.Constructor.DEFAULTS,{placement:"right",trigger:"click",content:"",template:'<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'}),b.prototype=a.extend({},a.fn.tooltip.Constructor.prototype),b.prototype.constructor=b,b.prototype.getDefaults=function(){return b.DEFAULTS},b.prototype.setContent=function(){var a=this.tip(),b=this.getTitle(),c=this.getContent();a.find(".popover-title")[this.options.html?"html":"text"](b),a.find(".popover-content")[this.options.html?typeof c=="string"?"html":"append":"text"](c),a.removeClass("fade top bottom left right in"),a.find(".popover-title").html()||a.find(".popover-title").hide()},b.prototype.hasContent=function(){return this.getTitle()||this.getContent()},b.prototype.getContent=function(){var a=this.$element,b=this.options;return a.attr("data-content")||(typeof b.content=="function"?b.content.call(a[0]):b.content)},b.prototype.arrow=function(){return this.$arrow=this.$arrow||this.tip().find(".arrow")},b.prototype.tip=function(){return this.$tip||(this.$tip=a(this.options.template)),this.$tip};var c=a.fn.popover;a.fn.popover=function(c){return this.each(function(){var d=a(this),e=d.data("bs.popover"),f=typeof c=="object"&&c;if(!e&&c=="destroy")return;e||d.data("bs.popover",e=new b(this,f)),typeof c=="string"&&e[c]()})},a.fn.popover.Constructor=b,a.fn.popover.noConflict=function(){return a.fn.popover=c,this}}(jQuery),+function(a){"use strict";var b=function(b){this.element=a(b)};b.prototype.show=function(){var b=this.element,c=b.closest("ul:not(.dropdown-menu)"),d=b.data("target");d||(d=b.attr("href"),d=d&&d.replace(/.*(?=#[^\s]*$)/,""));if(b.parent("li").hasClass("active"))return;var e=c.find(".active:last a")[0],f=a.Event("show.bs.tab",{relatedTarget:e});b.trigger(f);if(f.isDefaultPrevented())return;var g=a(d);this.activate(b.parent("li"),c),this.activate(g,g.parent(),function(){b.trigger({type:"shown.bs.tab",relatedTarget:e})})},b.prototype.activate=function(b,c,d){function g(){e.removeClass("active").find("> .dropdown-menu > .active").removeClass("active"),b.addClass("active"),f?(b[0].offsetWidth,b.addClass("in")):b.removeClass("fade"),b.parent(".dropdown-menu")&&b.closest("li.dropdown").addClass("active"),d&&d()}var e=c.find("> .active"),f=d&&a.support.transition&&e.hasClass("fade");f?e.one(a.support.transition.end,g).emulateTransitionEnd(150):g(),e.removeClass("in")};var c=a.fn.tab;a.fn.tab=function(c){return this.each(function(){var d=a(this),e=d.data("bs.tab");e||d.data("bs.tab",e=new b(this)),typeof c=="string"&&e[c]()})},a.fn.tab.Constructor=b,a.fn.tab.noConflict=function(){return a.fn.tab=c,this},a(document).on("click.bs.tab.data-api",'[data-toggle="tab"], [data-toggle="pill"]',function(b){b.preventDefault(),a(this).tab("show")})}(jQuery),+function(a){"use strict";var b=function(c,d){this.options=a.extend({},b.DEFAULTS,d),this.$window=a(window).on("scroll.bs.affix.data-api",a.proxy(this.checkPosition,this)).on("click.bs.affix.data-api",a.proxy(this.checkPositionWithEventLoop,this)),this.$element=a(c),this.affixed=this.unpin=this.pinnedOffset=null,this.checkPosition()};b.RESET="affix affix-top affix-bottom",b.DEFAULTS={offset:0},b.prototype.getPinnedOffset=function(){if(this.pinnedOffset)return this.pinnedOffset;this.$element.removeClass(b.RESET).addClass("affix");var a=this.$window.scrollTop(),c=this.$element.offset();return this.pinnedOffset=c.top-a},b.prototype.checkPositionWithEventLoop=function(){setTimeout(a.proxy(this.checkPosition,this),1)},b.prototype.checkPosition=function(){if(!this.$element.is(":visible"))return;var c=a(document).height(),d=this.$window.scrollTop(),e=this.$element.offset(),f=this.options.offset,g=f.top,h=f.bottom;this.affixed=="top"&&(e.top+=d),typeof f!="object"&&(h=g=f),typeof g=="function"&&(g=f.top(this.$element)),typeof h=="function"&&(h=f.bottom(this.$element));var i=this.unpin!=null&&d+this.unpin<=e.top?!1:h!=null&&e.top+this.$element.height()>=c-h?"bottom":g!=null&&d<=g?"top":!1;if(this.affixed===i)return;this.unpin&&this.$element.css("top","");var j="affix"+(i?"-"+i:""),k=a.Event(j+".bs.affix");this.$element.trigger(k);if(k.isDefaultPrevented())return;this.affixed=i,this.unpin=i=="bottom"?this.getPinnedOffset():null,this.$element.removeClass(b.RESET).addClass(j).trigger(a.Event(j.replace("affix","affixed"))),i=="bottom"&&this.$element.offset({top:c-h-this.$element.height()})};var c=a.fn.affix;a.fn.affix=function(c){return this.each(function(){var d=a(this),e=d.data("bs.affix"),f=typeof c=="object"&&c;e||d.data("bs.affix",e=new b(this,f)),typeof c=="string"&&e[c]()})},a.fn.affix.Constructor=b,a.fn.affix.noConflict=function(){return a.fn.affix=c,this},a(window).on("load",function(){a('[data-spy="affix"]').each(function(){var b=a(this),c=b.data();c.offset=c.offset||{},c.offsetBottom&&(c.offset.bottom=c.offsetBottom),c.offsetTop&&(c.offset.top=c.offsetTop),b.affix(c)})})}(jQuery),+function(a){"use strict";var b=function(c,d){this.$element=a(c),this.options=a.extend({},b.DEFAULTS,d),this.transitioning=null,this.options.parent&&(this.$parent=a(this.options.parent)),this.options.toggle&&this.toggle()};b.DEFAULTS={toggle:!0},b.prototype.dimension=function(){var a=this.$element.hasClass("width");return a?"width":"height"},b.prototype.show=function(){if(this.transitioning||this.$element.hasClass("in"))return;var b=a.Event("show.bs.collapse");this.$element.trigger(b);if(b.isDefaultPrevented())return;var c=this.$parent&&this.$parent.find("> .panel > .in");if(c&&c.length){var d=c.data("bs.collapse");if(d&&d.transitioning)return;c.collapse("hide"),d||c.data("bs.collapse",null)}var e=this.dimension();this.$element.removeClass("collapse").addClass("collapsing")[e](0),this.transitioning=1;var f=function(){this.$element.removeClass("collapsing").addClass("collapse in")[e]("auto"),this.transitioning=0,this.$element.trigger("shown.bs.collapse")};if(!a.support.transition)return f.call(this);var g=a.camelCase(["scroll",e].join("-"));this.$element.one(a.support.transition.end,a.proxy(f,this)).emulateTransitionEnd(350)[e](this.$element[0][g])},b.prototype.hide=function(){if(this.transitioning||!this.$element.hasClass("in"))return;var b=a.Event("hide.bs.collapse");this.$element.trigger(b);if(b.isDefaultPrevented())return;var c=this.dimension();this.$element[c](this.$element[c]())[0].offsetHeight,this.$element.addClass("collapsing").removeClass("collapse").removeClass("in"),this.transitioning=1;var d=function(){this.transitioning=0,this.$element.trigger("hidden.bs.collapse").removeClass("collapsing").addClass("collapse")};if(!a.support.transition)return d.call(this);this.$element[c](0).one(a.support.transition.end,a.proxy(d,this)).emulateTransitionEnd(350)},b.prototype.toggle=function(){this[this.$element.hasClass("in")?"hide":"show"]()};var c=a.fn.collapse;a.fn.collapse=function(c){return this.each(function(){var d=a(this),e=d.data("bs.collapse"),f=a.extend({},b.DEFAULTS,d.data(),typeof c=="object"&&c);!e&&f.toggle&&c=="show"&&(c=!c),e||d.data("bs.collapse",e=new b(this,f)),typeof c=="string"&&e[c]()})},a.fn.collapse.Constructor=b,a.fn.collapse.noConflict=function(){return a.fn.collapse=c,this},a(document).on("click.bs.collapse.data-api","[data-toggle=collapse]",function(b){var c=a(this),d,e=c.attr("data-target")||b.preventDefault()||(d=c.attr("href"))&&d.replace(/.*(?=#[^\s]+$)/,""),f=a(e),g=f.data("bs.collapse"),h=g?"toggle":c.data(),i=c.attr("data-parent"),j=i&&a(i);if(!g||!g.transitioning)j&&j.find('[data-toggle=collapse][data-parent="'+i+'"]').not(c).addClass("collapsed"),c[f.hasClass("in")?"addClass":"removeClass"]("collapsed");f.collapse(h)})}(jQuery),+function(a){function b(c,d){var e,f=a.proxy(this.process,this);this.$element=a(c).is("body")?a(window):a(c),this.$body=a("body"),this.$scrollElement=this.$element.on("scroll.bs.scroll-spy.data-api",f),this.options=a.extend({},b.DEFAULTS,d),this.selector=(this.options.target||(e=a(c).attr("href"))&&e.replace(/.*(?=#[^\s]+$)/,"")||"")+" .nav li > a",this.offsets=a([]),this.targets=a([]),this.activeTarget=null,this.refresh(),this.process()}"use strict",b.DEFAULTS={offset:10},b.prototype.refresh=function(){var b=this.$element[0]==window?"offset":"position";this.offsets=a([]),this.targets=a([]);var c=this,d=this.$body.find(this.selector).map(function(){var d=a(this),e=d.data("target")||d.attr("href"),f=/^#./.test(e)&&a(e);return f&&f.length&&f.is(":visible")&&[[f[b]().top+(!a.isWindow(c.$scrollElement.get(0))&&c.$scrollElement.scrollTop()),e]]||null}).sort(function(a,b){return a[0]-b[0]}).each(function(){c.offsets.push(this[0]),c.targets.push(this[1])})},b.prototype.process=function(){var a=this.$scrollElement.scrollTop()+this.options.offset,b=this.$scrollElement[0].scrollHeight||this.$body[0].scrollHeight,c=b-this.$scrollElement.height(),d=this.offsets,e=this.targets,f=this.activeTarget,g;if(a>=c)return f!=(g=e.last()[0])&&this.activate(g);if(f&&a<=d[0])return f!=(g=e[0])&&this.activate(g);for(g=d.length;g--;)f!=e[g]&&a>=d[g]&&(!d[g+1]||a<=d[g+1])&&this.activate(e[g])},b.prototype.activate=function(b){this.activeTarget=b,a(this.selector).parentsUntil(this.options.target,".active").removeClass("active");var c=this.selector+'[data-target="'+b+'"],'+this.selector+'[href="'+b+'"]',d=a(c).parents("li").addClass("active");d.parent(".dropdown-menu").length&&(d=d.closest("li.dropdown").addClass("active")),d.trigger("activate.bs.scrollspy")};var c=a.fn.scrollspy;a.fn.scrollspy=function(c){return this.each(function(){var d=a(this),e=d.data("bs.scrollspy"),f=typeof c=="object"&&c;e||d.data("bs.scrollspy",e=new b(this,f)),typeof c=="string"&&e[c]()})},a.fn.scrollspy.Constructor=b,a.fn.scrollspy.noConflict=function(){return a.fn.scrollspy=c,this},a(window).on("load",function(){a('[data-spy="scroll"]').each(function(){var b=a(this);b.scrollspy(b.data())})})}(jQuery),+function(a){function b(){var a=document.createElement("bootstrap"),b={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd otransitionend",transition:"transitionend"};for(var c in b)if(a.style[c]!==undefined)return{end:b[c]};return!1}"use strict",a.fn.emulateTransitionEnd=function(b){var c=!1,d=this;a(this).one(a.support.transition.end,function(){c=!0});var e=function(){c||a(d).trigger(a.support.transition.end)};return setTimeout(e,b),this},a(function(){a.support.transition=b()})}(jQuery);/*global $*/
 /*jshint unused:false,forin:false*/
 
 var iosOverlay = function(params) {
@@ -1275,2904 +244,12 @@ var iosOverlay = function(params) {
 	};
 
 };
-;/*!
- * Isotope PACKAGED v2.0.0
- * Filter & sort magical layouts
- * http://isotope.metafizzy.co
- */
-
-(function(t){function e(){}function i(t){function i(e){e.prototype.option||(e.prototype.option=function(e){t.isPlainObject(e)&&(this.options=t.extend(!0,this.options,e))})}function n(e,i){t.fn[e]=function(n){if("string"==typeof n){for(var s=o.call(arguments,1),a=0,u=this.length;u>a;a++){var p=this[a],h=t.data(p,e);if(h)if(t.isFunction(h[n])&&"_"!==n.charAt(0)){var f=h[n].apply(h,s);if(void 0!==f)return f}else r("no such method '"+n+"' for "+e+" instance");else r("cannot call methods on "+e+" prior to initialization; "+"attempted to call '"+n+"'")}return this}return this.each(function(){var o=t.data(this,e);o?(o.option(n),o._init()):(o=new i(this,n),t.data(this,e,o))})}}if(t){var r="undefined"==typeof console?e:function(t){console.error(t)};return t.bridget=function(t,e){i(e),n(t,e)},t.bridget}}var o=Array.prototype.slice;"function"==typeof define&&define.amd?define("jquery-bridget/jquery.bridget",["jquery"],i):i(t.jQuery)})(window),function(t){function e(e){var i=t.event;return i.target=i.target||i.srcElement||e,i}var i=document.documentElement,o=function(){};i.addEventListener?o=function(t,e,i){t.addEventListener(e,i,!1)}:i.attachEvent&&(o=function(t,i,o){t[i+o]=o.handleEvent?function(){var i=e(t);o.handleEvent.call(o,i)}:function(){var i=e(t);o.call(t,i)},t.attachEvent("on"+i,t[i+o])});var n=function(){};i.removeEventListener?n=function(t,e,i){t.removeEventListener(e,i,!1)}:i.detachEvent&&(n=function(t,e,i){t.detachEvent("on"+e,t[e+i]);try{delete t[e+i]}catch(o){t[e+i]=void 0}});var r={bind:o,unbind:n};"function"==typeof define&&define.amd?define("eventie/eventie",r):"object"==typeof exports?module.exports=r:t.eventie=r}(this),function(t){function e(t){"function"==typeof t&&(e.isReady?t():r.push(t))}function i(t){var i="readystatechange"===t.type&&"complete"!==n.readyState;if(!e.isReady&&!i){e.isReady=!0;for(var o=0,s=r.length;s>o;o++){var a=r[o];a()}}}function o(o){return o.bind(n,"DOMContentLoaded",i),o.bind(n,"readystatechange",i),o.bind(t,"load",i),e}var n=t.document,r=[];e.isReady=!1,"function"==typeof define&&define.amd?(e.isReady="function"==typeof requirejs,define("doc-ready/doc-ready",["eventie/eventie"],o)):t.docReady=o(t.eventie)}(this),function(){function t(){}function e(t,e){for(var i=t.length;i--;)if(t[i].listener===e)return i;return-1}function i(t){return function(){return this[t].apply(this,arguments)}}var o=t.prototype,n=this,r=n.EventEmitter;o.getListeners=function(t){var e,i,o=this._getEvents();if(t instanceof RegExp){e={};for(i in o)o.hasOwnProperty(i)&&t.test(i)&&(e[i]=o[i])}else e=o[t]||(o[t]=[]);return e},o.flattenListeners=function(t){var e,i=[];for(e=0;t.length>e;e+=1)i.push(t[e].listener);return i},o.getListenersAsObject=function(t){var e,i=this.getListeners(t);return i instanceof Array&&(e={},e[t]=i),e||i},o.addListener=function(t,i){var o,n=this.getListenersAsObject(t),r="object"==typeof i;for(o in n)n.hasOwnProperty(o)&&-1===e(n[o],i)&&n[o].push(r?i:{listener:i,once:!1});return this},o.on=i("addListener"),o.addOnceListener=function(t,e){return this.addListener(t,{listener:e,once:!0})},o.once=i("addOnceListener"),o.defineEvent=function(t){return this.getListeners(t),this},o.defineEvents=function(t){for(var e=0;t.length>e;e+=1)this.defineEvent(t[e]);return this},o.removeListener=function(t,i){var o,n,r=this.getListenersAsObject(t);for(n in r)r.hasOwnProperty(n)&&(o=e(r[n],i),-1!==o&&r[n].splice(o,1));return this},o.off=i("removeListener"),o.addListeners=function(t,e){return this.manipulateListeners(!1,t,e)},o.removeListeners=function(t,e){return this.manipulateListeners(!0,t,e)},o.manipulateListeners=function(t,e,i){var o,n,r=t?this.removeListener:this.addListener,s=t?this.removeListeners:this.addListeners;if("object"!=typeof e||e instanceof RegExp)for(o=i.length;o--;)r.call(this,e,i[o]);else for(o in e)e.hasOwnProperty(o)&&(n=e[o])&&("function"==typeof n?r.call(this,o,n):s.call(this,o,n));return this},o.removeEvent=function(t){var e,i=typeof t,o=this._getEvents();if("string"===i)delete o[t];else if(t instanceof RegExp)for(e in o)o.hasOwnProperty(e)&&t.test(e)&&delete o[e];else delete this._events;return this},o.removeAllListeners=i("removeEvent"),o.emitEvent=function(t,e){var i,o,n,r,s=this.getListenersAsObject(t);for(n in s)if(s.hasOwnProperty(n))for(o=s[n].length;o--;)i=s[n][o],i.once===!0&&this.removeListener(t,i.listener),r=i.listener.apply(this,e||[]),r===this._getOnceReturnValue()&&this.removeListener(t,i.listener);return this},o.trigger=i("emitEvent"),o.emit=function(t){var e=Array.prototype.slice.call(arguments,1);return this.emitEvent(t,e)},o.setOnceReturnValue=function(t){return this._onceReturnValue=t,this},o._getOnceReturnValue=function(){return this.hasOwnProperty("_onceReturnValue")?this._onceReturnValue:!0},o._getEvents=function(){return this._events||(this._events={})},t.noConflict=function(){return n.EventEmitter=r,t},"function"==typeof define&&define.amd?define("eventEmitter/EventEmitter",[],function(){return t}):"object"==typeof module&&module.exports?module.exports=t:this.EventEmitter=t}.call(this),function(t){function e(t){if(t){if("string"==typeof o[t])return t;t=t.charAt(0).toUpperCase()+t.slice(1);for(var e,n=0,r=i.length;r>n;n++)if(e=i[n]+t,"string"==typeof o[e])return e}}var i="Webkit Moz ms Ms O".split(" "),o=document.documentElement.style;"function"==typeof define&&define.amd?define("get-style-property/get-style-property",[],function(){return e}):"object"==typeof exports?module.exports=e:t.getStyleProperty=e}(window),function(t){function e(t){var e=parseFloat(t),i=-1===t.indexOf("%")&&!isNaN(e);return i&&e}function i(){for(var t={width:0,height:0,innerWidth:0,innerHeight:0,outerWidth:0,outerHeight:0},e=0,i=s.length;i>e;e++){var o=s[e];t[o]=0}return t}function o(t){function o(t){if("string"==typeof t&&(t=document.querySelector(t)),t&&"object"==typeof t&&t.nodeType){var o=r(t);if("none"===o.display)return i();var n={};n.width=t.offsetWidth,n.height=t.offsetHeight;for(var h=n.isBorderBox=!(!p||!o[p]||"border-box"!==o[p]),f=0,c=s.length;c>f;f++){var d=s[f],l=o[d];l=a(t,l);var y=parseFloat(l);n[d]=isNaN(y)?0:y}var m=n.paddingLeft+n.paddingRight,g=n.paddingTop+n.paddingBottom,v=n.marginLeft+n.marginRight,_=n.marginTop+n.marginBottom,I=n.borderLeftWidth+n.borderRightWidth,L=n.borderTopWidth+n.borderBottomWidth,z=h&&u,S=e(o.width);S!==!1&&(n.width=S+(z?0:m+I));var b=e(o.height);return b!==!1&&(n.height=b+(z?0:g+L)),n.innerWidth=n.width-(m+I),n.innerHeight=n.height-(g+L),n.outerWidth=n.width+v,n.outerHeight=n.height+_,n}}function a(t,e){if(n||-1===e.indexOf("%"))return e;var i=t.style,o=i.left,r=t.runtimeStyle,s=r&&r.left;return s&&(r.left=t.currentStyle.left),i.left=e,e=i.pixelLeft,i.left=o,s&&(r.left=s),e}var u,p=t("boxSizing");return function(){if(p){var t=document.createElement("div");t.style.width="200px",t.style.padding="1px 2px 3px 4px",t.style.borderStyle="solid",t.style.borderWidth="1px 2px 3px 4px",t.style[p]="border-box";var i=document.body||document.documentElement;i.appendChild(t);var o=r(t);u=200===e(o.width),i.removeChild(t)}}(),o}var n=t.getComputedStyle,r=n?function(t){return n(t,null)}:function(t){return t.currentStyle},s=["paddingLeft","paddingRight","paddingTop","paddingBottom","marginLeft","marginRight","marginTop","marginBottom","borderLeftWidth","borderRightWidth","borderTopWidth","borderBottomWidth"];"function"==typeof define&&define.amd?define("get-size/get-size",["get-style-property/get-style-property"],o):"object"==typeof exports?module.exports=o(require("get-style-property")):t.getSize=o(t.getStyleProperty)}(window),function(t,e){function i(t,e){return t[a](e)}function o(t){if(!t.parentNode){var e=document.createDocumentFragment();e.appendChild(t)}}function n(t,e){o(t);for(var i=t.parentNode.querySelectorAll(e),n=0,r=i.length;r>n;n++)if(i[n]===t)return!0;return!1}function r(t,e){return o(t),i(t,e)}var s,a=function(){if(e.matchesSelector)return"matchesSelector";for(var t=["webkit","moz","ms","o"],i=0,o=t.length;o>i;i++){var n=t[i],r=n+"MatchesSelector";if(e[r])return r}}();if(a){var u=document.createElement("div"),p=i(u,"div");s=p?i:r}else s=n;"function"==typeof define&&define.amd?define("matches-selector/matches-selector",[],function(){return s}):window.matchesSelector=s}(this,Element.prototype),function(t){function e(t,e){for(var i in e)t[i]=e[i];return t}function i(t){for(var e in t)return!1;return e=null,!0}function o(t){return t.replace(/([A-Z])/g,function(t){return"-"+t.toLowerCase()})}function n(t,n,r){function a(t,e){t&&(this.element=t,this.layout=e,this.position={x:0,y:0},this._create())}var u=r("transition"),p=r("transform"),h=u&&p,f=!!r("perspective"),c={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"otransitionend",transition:"transitionend"}[u],d=["transform","transition","transitionDuration","transitionProperty"],l=function(){for(var t={},e=0,i=d.length;i>e;e++){var o=d[e],n=r(o);n&&n!==o&&(t[o]=n)}return t}();e(a.prototype,t.prototype),a.prototype._create=function(){this._transn={ingProperties:{},clean:{},onEnd:{}},this.css({position:"absolute"})},a.prototype.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},a.prototype.getSize=function(){this.size=n(this.element)},a.prototype.css=function(t){var e=this.element.style;for(var i in t){var o=l[i]||i;e[o]=t[i]}},a.prototype.getPosition=function(){var t=s(this.element),e=this.layout.options,i=e.isOriginLeft,o=e.isOriginTop,n=parseInt(t[i?"left":"right"],10),r=parseInt(t[o?"top":"bottom"],10);n=isNaN(n)?0:n,r=isNaN(r)?0:r;var a=this.layout.size;n-=i?a.paddingLeft:a.paddingRight,r-=o?a.paddingTop:a.paddingBottom,this.position.x=n,this.position.y=r},a.prototype.layoutPosition=function(){var t=this.layout.size,e=this.layout.options,i={};e.isOriginLeft?(i.left=this.position.x+t.paddingLeft+"px",i.right=""):(i.right=this.position.x+t.paddingRight+"px",i.left=""),e.isOriginTop?(i.top=this.position.y+t.paddingTop+"px",i.bottom=""):(i.bottom=this.position.y+t.paddingBottom+"px",i.top=""),this.css(i),this.emitEvent("layout",[this])};var y=f?function(t,e){return"translate3d("+t+"px, "+e+"px, 0)"}:function(t,e){return"translate("+t+"px, "+e+"px)"};a.prototype._transitionTo=function(t,e){this.getPosition();var i=this.position.x,o=this.position.y,n=parseInt(t,10),r=parseInt(e,10),s=n===this.position.x&&r===this.position.y;if(this.setPosition(t,e),s&&!this.isTransitioning)return this.layoutPosition(),void 0;var a=t-i,u=e-o,p={},h=this.layout.options;a=h.isOriginLeft?a:-a,u=h.isOriginTop?u:-u,p.transform=y(a,u),this.transition({to:p,onTransitionEnd:{transform:this.layoutPosition},isCleaning:!0})},a.prototype.goTo=function(t,e){this.setPosition(t,e),this.layoutPosition()},a.prototype.moveTo=h?a.prototype._transitionTo:a.prototype.goTo,a.prototype.setPosition=function(t,e){this.position.x=parseInt(t,10),this.position.y=parseInt(e,10)},a.prototype._nonTransition=function(t){this.css(t.to),t.isCleaning&&this._removeStyles(t.to);for(var e in t.onTransitionEnd)t.onTransitionEnd[e].call(this)},a.prototype._transition=function(t){if(!parseFloat(this.layout.options.transitionDuration))return this._nonTransition(t),void 0;var e=this._transn;for(var i in t.onTransitionEnd)e.onEnd[i]=t.onTransitionEnd[i];for(i in t.to)e.ingProperties[i]=!0,t.isCleaning&&(e.clean[i]=!0);if(t.from){this.css(t.from);var o=this.element.offsetHeight;o=null}this.enableTransition(t.to),this.css(t.to),this.isTransitioning=!0};var m=p&&o(p)+",opacity";a.prototype.enableTransition=function(){this.isTransitioning||(this.css({transitionProperty:m,transitionDuration:this.layout.options.transitionDuration}),this.element.addEventListener(c,this,!1))},a.prototype.transition=a.prototype[u?"_transition":"_nonTransition"],a.prototype.onwebkitTransitionEnd=function(t){this.ontransitionend(t)},a.prototype.onotransitionend=function(t){this.ontransitionend(t)};var g={"-webkit-transform":"transform","-moz-transform":"transform","-o-transform":"transform"};a.prototype.ontransitionend=function(t){if(t.target===this.element){var e=this._transn,o=g[t.propertyName]||t.propertyName;if(delete e.ingProperties[o],i(e.ingProperties)&&this.disableTransition(),o in e.clean&&(this.element.style[t.propertyName]="",delete e.clean[o]),o in e.onEnd){var n=e.onEnd[o];n.call(this),delete e.onEnd[o]}this.emitEvent("transitionEnd",[this])}},a.prototype.disableTransition=function(){this.removeTransitionStyles(),this.element.removeEventListener(c,this,!1),this.isTransitioning=!1},a.prototype._removeStyles=function(t){var e={};for(var i in t)e[i]="";this.css(e)};var v={transitionProperty:"",transitionDuration:""};return a.prototype.removeTransitionStyles=function(){this.css(v)},a.prototype.removeElem=function(){this.element.parentNode.removeChild(this.element),this.emitEvent("remove",[this])},a.prototype.remove=function(){if(!u||!parseFloat(this.layout.options.transitionDuration))return this.removeElem(),void 0;var t=this;this.on("transitionEnd",function(){return t.removeElem(),!0}),this.hide()},a.prototype.reveal=function(){delete this.isHidden,this.css({display:""});var t=this.layout.options;this.transition({from:t.hiddenStyle,to:t.visibleStyle,isCleaning:!0})},a.prototype.hide=function(){this.isHidden=!0,this.css({display:""});var t=this.layout.options;this.transition({from:t.visibleStyle,to:t.hiddenStyle,isCleaning:!0,onTransitionEnd:{opacity:function(){this.isHidden&&this.css({display:"none"})}}})},a.prototype.destroy=function(){this.css({position:"",left:"",right:"",top:"",bottom:"",transition:"",transform:""})},a}var r=t.getComputedStyle,s=r?function(t){return r(t,null)}:function(t){return t.currentStyle};"function"==typeof define&&define.amd?define("outlayer/item",["eventEmitter/EventEmitter","get-size/get-size","get-style-property/get-style-property"],n):(t.Outlayer={},t.Outlayer.Item=n(t.EventEmitter,t.getSize,t.getStyleProperty))}(window),function(t){function e(t,e){for(var i in e)t[i]=e[i];return t}function i(t){return"[object Array]"===f.call(t)}function o(t){var e=[];if(i(t))e=t;else if(t&&"number"==typeof t.length)for(var o=0,n=t.length;n>o;o++)e.push(t[o]);else e.push(t);return e}function n(t,e){var i=d(e,t);-1!==i&&e.splice(i,1)}function r(t){return t.replace(/(.)([A-Z])/g,function(t,e,i){return e+"-"+i}).toLowerCase()}function s(i,s,f,d,l,y){function m(t,i){if("string"==typeof t&&(t=a.querySelector(t)),!t||!c(t))return u&&u.error("Bad "+this.constructor.namespace+" element: "+t),void 0;this.element=t,this.options=e({},this.constructor.defaults),this.option(i);var o=++g;this.element.outlayerGUID=o,v[o]=this,this._create(),this.options.isInitLayout&&this.layout()}var g=0,v={};return m.namespace="outlayer",m.Item=y,m.defaults={containerStyle:{position:"relative"},isInitLayout:!0,isOriginLeft:!0,isOriginTop:!0,isResizeBound:!0,isResizingContainer:!0,transitionDuration:"0.4s",hiddenStyle:{opacity:0,transform:"scale(0.001)"},visibleStyle:{opacity:1,transform:"scale(1)"}},e(m.prototype,f.prototype),m.prototype.option=function(t){e(this.options,t)},m.prototype._create=function(){this.reloadItems(),this.stamps=[],this.stamp(this.options.stamp),e(this.element.style,this.options.containerStyle),this.options.isResizeBound&&this.bindResize()},m.prototype.reloadItems=function(){this.items=this._itemize(this.element.children)},m.prototype._itemize=function(t){for(var e=this._filterFindItemElements(t),i=this.constructor.Item,o=[],n=0,r=e.length;r>n;n++){var s=e[n],a=new i(s,this);o.push(a)}return o},m.prototype._filterFindItemElements=function(t){t=o(t);for(var e=this.options.itemSelector,i=[],n=0,r=t.length;r>n;n++){var s=t[n];if(c(s))if(e){l(s,e)&&i.push(s);for(var a=s.querySelectorAll(e),u=0,p=a.length;p>u;u++)i.push(a[u])}else i.push(s)}return i},m.prototype.getItemElements=function(){for(var t=[],e=0,i=this.items.length;i>e;e++)t.push(this.items[e].element);return t},m.prototype.layout=function(){this._resetLayout(),this._manageStamps();var t=void 0!==this.options.isLayoutInstant?this.options.isLayoutInstant:!this._isLayoutInited;this.layoutItems(this.items,t),this._isLayoutInited=!0},m.prototype._init=m.prototype.layout,m.prototype._resetLayout=function(){this.getSize()},m.prototype.getSize=function(){this.size=d(this.element)},m.prototype._getMeasurement=function(t,e){var i,o=this.options[t];o?("string"==typeof o?i=this.element.querySelector(o):c(o)&&(i=o),this[t]=i?d(i)[e]:o):this[t]=0},m.prototype.layoutItems=function(t,e){t=this._getItemsForLayout(t),this._layoutItems(t,e),this._postLayout()},m.prototype._getItemsForLayout=function(t){for(var e=[],i=0,o=t.length;o>i;i++){var n=t[i];n.isIgnored||e.push(n)}return e},m.prototype._layoutItems=function(t,e){function i(){o.emitEvent("layoutComplete",[o,t])}var o=this;if(!t||!t.length)return i(),void 0;this._itemsOn(t,"layout",i);for(var n=[],r=0,s=t.length;s>r;r++){var a=t[r],u=this._getItemLayoutPosition(a);u.item=a,u.isInstant=e||a.isLayoutInstant,n.push(u)}this._processLayoutQueue(n)},m.prototype._getItemLayoutPosition=function(){return{x:0,y:0}},m.prototype._processLayoutQueue=function(t){for(var e=0,i=t.length;i>e;e++){var o=t[e];this._positionItem(o.item,o.x,o.y,o.isInstant)}},m.prototype._positionItem=function(t,e,i,o){o?t.goTo(e,i):t.moveTo(e,i)},m.prototype._postLayout=function(){this.resizeContainer()},m.prototype.resizeContainer=function(){if(this.options.isResizingContainer){var t=this._getContainerSize();t&&(this._setContainerMeasure(t.width,!0),this._setContainerMeasure(t.height,!1))}},m.prototype._getContainerSize=h,m.prototype._setContainerMeasure=function(t,e){if(void 0!==t){var i=this.size;i.isBorderBox&&(t+=e?i.paddingLeft+i.paddingRight+i.borderLeftWidth+i.borderRightWidth:i.paddingBottom+i.paddingTop+i.borderTopWidth+i.borderBottomWidth),t=Math.max(t,0),this.element.style[e?"width":"height"]=t+"px"}},m.prototype._itemsOn=function(t,e,i){function o(){return n++,n===r&&i.call(s),!0}for(var n=0,r=t.length,s=this,a=0,u=t.length;u>a;a++){var p=t[a];p.on(e,o)}},m.prototype.ignore=function(t){var e=this.getItem(t);e&&(e.isIgnored=!0)},m.prototype.unignore=function(t){var e=this.getItem(t);e&&delete e.isIgnored},m.prototype.stamp=function(t){if(t=this._find(t)){this.stamps=this.stamps.concat(t);for(var e=0,i=t.length;i>e;e++){var o=t[e];this.ignore(o)}}},m.prototype.unstamp=function(t){if(t=this._find(t))for(var e=0,i=t.length;i>e;e++){var o=t[e];n(o,this.stamps),this.unignore(o)}},m.prototype._find=function(t){return t?("string"==typeof t&&(t=this.element.querySelectorAll(t)),t=o(t)):void 0},m.prototype._manageStamps=function(){if(this.stamps&&this.stamps.length){this._getBoundingRect();for(var t=0,e=this.stamps.length;e>t;t++){var i=this.stamps[t];this._manageStamp(i)}}},m.prototype._getBoundingRect=function(){var t=this.element.getBoundingClientRect(),e=this.size;this._boundingRect={left:t.left+e.paddingLeft+e.borderLeftWidth,top:t.top+e.paddingTop+e.borderTopWidth,right:t.right-(e.paddingRight+e.borderRightWidth),bottom:t.bottom-(e.paddingBottom+e.borderBottomWidth)}},m.prototype._manageStamp=h,m.prototype._getElementOffset=function(t){var e=t.getBoundingClientRect(),i=this._boundingRect,o=d(t),n={left:e.left-i.left-o.marginLeft,top:e.top-i.top-o.marginTop,right:i.right-e.right-o.marginRight,bottom:i.bottom-e.bottom-o.marginBottom};return n},m.prototype.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},m.prototype.bindResize=function(){this.isResizeBound||(i.bind(t,"resize",this),this.isResizeBound=!0)},m.prototype.unbindResize=function(){this.isResizeBound&&i.unbind(t,"resize",this),this.isResizeBound=!1},m.prototype.onresize=function(){function t(){e.resize(),delete e.resizeTimeout}this.resizeTimeout&&clearTimeout(this.resizeTimeout);var e=this;this.resizeTimeout=setTimeout(t,100)},m.prototype.resize=function(){this.isResizeBound&&this.needsResizeLayout()&&this.layout()},m.prototype.needsResizeLayout=function(){var t=d(this.element),e=this.size&&t;return e&&t.innerWidth!==this.size.innerWidth},m.prototype.addItems=function(t){var e=this._itemize(t);return e.length&&(this.items=this.items.concat(e)),e},m.prototype.appended=function(t){var e=this.addItems(t);e.length&&(this.layoutItems(e,!0),this.reveal(e))},m.prototype.prepended=function(t){var e=this._itemize(t);if(e.length){var i=this.items.slice(0);this.items=e.concat(i),this._resetLayout(),this._manageStamps(),this.layoutItems(e,!0),this.reveal(e),this.layoutItems(i)}},m.prototype.reveal=function(t){var e=t&&t.length;if(e)for(var i=0;e>i;i++){var o=t[i];o.reveal()}},m.prototype.hide=function(t){var e=t&&t.length;if(e)for(var i=0;e>i;i++){var o=t[i];o.hide()}},m.prototype.getItem=function(t){for(var e=0,i=this.items.length;i>e;e++){var o=this.items[e];if(o.element===t)return o}},m.prototype.getItems=function(t){if(t&&t.length){for(var e=[],i=0,o=t.length;o>i;i++){var n=t[i],r=this.getItem(n);r&&e.push(r)}return e}},m.prototype.remove=function(t){t=o(t);var e=this.getItems(t);if(e&&e.length){this._itemsOn(e,"remove",function(){this.emitEvent("removeComplete",[this,e])});for(var i=0,r=e.length;r>i;i++){var s=e[i];s.remove(),n(s,this.items)}}},m.prototype.destroy=function(){var t=this.element.style;t.height="",t.position="",t.width="";for(var e=0,i=this.items.length;i>e;e++){var o=this.items[e];o.destroy()}this.unbindResize(),delete this.element.outlayerGUID,p&&p.removeData(this.element,this.constructor.namespace)},m.data=function(t){var e=t&&t.outlayerGUID;return e&&v[e]},m.create=function(t,i){function o(){m.apply(this,arguments)}return Object.create?o.prototype=Object.create(m.prototype):e(o.prototype,m.prototype),o.prototype.constructor=o,o.defaults=e({},m.defaults),e(o.defaults,i),o.prototype.settings={},o.namespace=t,o.data=m.data,o.Item=function(){y.apply(this,arguments)},o.Item.prototype=new y,s(function(){for(var e=r(t),i=a.querySelectorAll(".js-"+e),n="data-"+e+"-options",s=0,h=i.length;h>s;s++){var f,c=i[s],d=c.getAttribute(n);try{f=d&&JSON.parse(d)}catch(l){u&&u.error("Error parsing "+n+" on "+c.nodeName.toLowerCase()+(c.id?"#"+c.id:"")+": "+l);continue}var y=new o(c,f);p&&p.data(c,t,y)}}),p&&p.bridget&&p.bridget(t,o),o},m.Item=y,m}var a=t.document,u=t.console,p=t.jQuery,h=function(){},f=Object.prototype.toString,c="object"==typeof HTMLElement?function(t){return t instanceof HTMLElement}:function(t){return t&&"object"==typeof t&&1===t.nodeType&&"string"==typeof t.nodeName},d=Array.prototype.indexOf?function(t,e){return t.indexOf(e)}:function(t,e){for(var i=0,o=t.length;o>i;i++)if(t[i]===e)return i;return-1};"function"==typeof define&&define.amd?define("outlayer/outlayer",["eventie/eventie","doc-ready/doc-ready","eventEmitter/EventEmitter","get-size/get-size","matches-selector/matches-selector","./item"],s):t.Outlayer=s(t.eventie,t.docReady,t.EventEmitter,t.getSize,t.matchesSelector,t.Outlayer.Item)}(window),function(t){function e(t){function e(){t.Item.apply(this,arguments)}return e.prototype=new t.Item,e.prototype._create=function(){this.id=this.layout.itemGUID++,t.Item.prototype._create.call(this),this.sortData={}},e.prototype.updateSortData=function(){if(!this.isIgnored){this.sortData.id=this.id,this.sortData["original-order"]=this.id,this.sortData.random=Math.random();var t=this.layout.options.getSortData,e=this.layout._sorters;for(var i in t){var o=e[i];this.sortData[i]=o(this.element,this)}}},e}"function"==typeof define&&define.amd?define("isotope/js/item",["outlayer/outlayer"],e):(t.Isotope=t.Isotope||{},t.Isotope.Item=e(t.Outlayer))}(window),function(t){function e(t,e){function i(t){this.isotope=t,t&&(this.options=t.options[this.namespace],this.element=t.element,this.items=t.filteredItems,this.size=t.size)}return function(){function t(t){return function(){return e.prototype[t].apply(this.isotope,arguments)}}for(var o=["_resetLayout","_getItemLayoutPosition","_manageStamp","_getContainerSize","_getElementOffset","needsResizeLayout"],n=0,r=o.length;r>n;n++){var s=o[n];i.prototype[s]=t(s)}}(),i.prototype.needsVerticalResizeLayout=function(){var e=t(this.isotope.element),i=this.isotope.size&&e;return i&&e.innerHeight!==this.isotope.size.innerHeight},i.prototype._getMeasurement=function(){this.isotope._getMeasurement.apply(this,arguments)},i.prototype.getColumnWidth=function(){this.getSegmentSize("column","Width")},i.prototype.getRowHeight=function(){this.getSegmentSize("row","Height")},i.prototype.getSegmentSize=function(t,e){var i=t+e,o="outer"+e;if(this._getMeasurement(i,o),!this[i]){var n=this.getFirstItemSize();this[i]=n&&n[o]||this.isotope.size["inner"+e]}},i.prototype.getFirstItemSize=function(){var e=this.isotope.filteredItems[0];return e&&e.element&&t(e.element)},i.prototype.layout=function(){this.isotope.layout.apply(this.isotope,arguments)},i.prototype.getSize=function(){this.isotope.getSize(),this.size=this.isotope.size},i.modes={},i.create=function(t,e){function o(){i.apply(this,arguments)}return o.prototype=new i,e&&(o.options=e),o.prototype.namespace=t,i.modes[t]=o,o},i}"function"==typeof define&&define.amd?define("isotope/js/layout-mode",["get-size/get-size","outlayer/outlayer"],e):(t.Isotope=t.Isotope||{},t.Isotope.LayoutMode=e(t.getSize,t.Outlayer))}(window),function(t){function e(t,e){var o=t.create("masonry");return o.prototype._resetLayout=function(){this.getSize(),this._getMeasurement("columnWidth","outerWidth"),this._getMeasurement("gutter","outerWidth"),this.measureColumns();var t=this.cols;for(this.colYs=[];t--;)this.colYs.push(0);this.maxY=0},o.prototype.measureColumns=function(){if(this.getContainerWidth(),!this.columnWidth){var t=this.items[0],i=t&&t.element;this.columnWidth=i&&e(i).outerWidth||this.containerWidth}this.columnWidth+=this.gutter,this.cols=Math.floor((this.containerWidth+this.gutter)/this.columnWidth),this.cols=Math.max(this.cols,1)},o.prototype.getContainerWidth=function(){var t=this.options.isFitWidth?this.element.parentNode:this.element,i=e(t);this.containerWidth=i&&i.innerWidth},o.prototype._getItemLayoutPosition=function(t){t.getSize();var e=t.size.outerWidth%this.columnWidth,o=e&&1>e?"round":"ceil",n=Math[o](t.size.outerWidth/this.columnWidth);n=Math.min(n,this.cols);for(var r=this._getColGroup(n),s=Math.min.apply(Math,r),a=i(r,s),u={x:this.columnWidth*a,y:s},p=s+t.size.outerHeight,h=this.cols+1-r.length,f=0;h>f;f++)this.colYs[a+f]=p;return u},o.prototype._getColGroup=function(t){if(2>t)return this.colYs;for(var e=[],i=this.cols+1-t,o=0;i>o;o++){var n=this.colYs.slice(o,o+t);e[o]=Math.max.apply(Math,n)}return e},o.prototype._manageStamp=function(t){var i=e(t),o=this._getElementOffset(t),n=this.options.isOriginLeft?o.left:o.right,r=n+i.outerWidth,s=Math.floor(n/this.columnWidth);s=Math.max(0,s);var a=Math.floor(r/this.columnWidth);a-=r%this.columnWidth?0:1,a=Math.min(this.cols-1,a);for(var u=(this.options.isOriginTop?o.top:o.bottom)+i.outerHeight,p=s;a>=p;p++)this.colYs[p]=Math.max(u,this.colYs[p])},o.prototype._getContainerSize=function(){this.maxY=Math.max.apply(Math,this.colYs);var t={height:this.maxY};return this.options.isFitWidth&&(t.width=this._getContainerFitWidth()),t},o.prototype._getContainerFitWidth=function(){for(var t=0,e=this.cols;--e&&0===this.colYs[e];)t++;return(this.cols-t)*this.columnWidth-this.gutter},o.prototype.needsResizeLayout=function(){var t=this.containerWidth;return this.getContainerWidth(),t!==this.containerWidth},o}var i=Array.prototype.indexOf?function(t,e){return t.indexOf(e)}:function(t,e){for(var i=0,o=t.length;o>i;i++){var n=t[i];if(n===e)return i}return-1};"function"==typeof define&&define.amd?define("masonry/masonry",["outlayer/outlayer","get-size/get-size"],e):t.Masonry=e(t.Outlayer,t.getSize)}(window),function(t){function e(t,e){for(var i in e)t[i]=e[i];return t}function i(t,i){var o=t.create("masonry"),n=o.prototype._getElementOffset,r=o.prototype.layout,s=o.prototype._getMeasurement;e(o.prototype,i.prototype),o.prototype._getElementOffset=n,o.prototype.layout=r,o.prototype._getMeasurement=s;var a=o.prototype.measureColumns;o.prototype.measureColumns=function(){this.items=this.isotope.filteredItems,a.call(this)};var u=o.prototype._manageStamp;return o.prototype._manageStamp=function(){this.options.isOriginLeft=this.isotope.options.isOriginLeft,this.options.isOriginTop=this.isotope.options.isOriginTop,u.apply(this,arguments)},o}"function"==typeof define&&define.amd?define("isotope/js/layout-modes/masonry",["../layout-mode","masonry/masonry"],i):i(t.Isotope.LayoutMode,t.Masonry)}(window),function(t){function e(t){var e=t.create("fitRows");return e.prototype._resetLayout=function(){this.x=0,this.y=0,this.maxY=0},e.prototype._getItemLayoutPosition=function(t){t.getSize(),0!==this.x&&t.size.outerWidth+this.x>this.isotope.size.innerWidth&&(this.x=0,this.y=this.maxY);var e={x:this.x,y:this.y};return this.maxY=Math.max(this.maxY,this.y+t.size.outerHeight),this.x+=t.size.outerWidth,e},e.prototype._getContainerSize=function(){return{height:this.maxY}},e}"function"==typeof define&&define.amd?define("isotope/js/layout-modes/fit-rows",["../layout-mode"],e):e(t.Isotope.LayoutMode)}(window),function(t){function e(t){var e=t.create("vertical",{horizontalAlignment:0});return e.prototype._resetLayout=function(){this.y=0},e.prototype._getItemLayoutPosition=function(t){t.getSize();var e=(this.isotope.size.innerWidth-t.size.outerWidth)*this.options.horizontalAlignment,i=this.y;return this.y+=t.size.outerHeight,{x:e,y:i}},e.prototype._getContainerSize=function(){return{height:this.y}},e}"function"==typeof define&&define.amd?define("isotope/js/layout-modes/vertical",["../layout-mode"],e):e(t.Isotope.LayoutMode)}(window),function(t){function e(t,e){for(var i in e)t[i]=e[i];return t}function i(t){return"[object Array]"===h.call(t)}function o(t){var e=[];if(i(t))e=t;else if(t&&"number"==typeof t.length)for(var o=0,n=t.length;n>o;o++)e.push(t[o]);else e.push(t);return e}function n(t,e){var i=f(e,t);-1!==i&&e.splice(i,1)}function r(t,i,r,u,h){function f(t,e){return function(i,o){for(var n=0,r=t.length;r>n;n++){var s=t[n],a=i.sortData[s],u=o.sortData[s];if(a>u||u>a){var p=void 0!==e[s]?e[s]:e,h=p?1:-1;return(a>u?1:-1)*h}}return 0}}var c=t.create("isotope",{layoutMode:"masonry",isJQueryFiltering:!0,sortAscending:!0});c.Item=u,c.LayoutMode=h,c.prototype._create=function(){this.itemGUID=0,this._sorters={},this._getSorters(),t.prototype._create.call(this),this.modes={},this.filteredItems=this.items,this.sortHistory=["original-order"];for(var e in h.modes)this._initLayoutMode(e)},c.prototype.reloadItems=function(){this.itemGUID=0,t.prototype.reloadItems.call(this)},c.prototype._itemize=function(){for(var e=t.prototype._itemize.apply(this,arguments),i=0,o=e.length;o>i;i++){var n=e[i];n.id=this.itemGUID++}return this._updateItemsSortData(e),e},c.prototype._initLayoutMode=function(t){var i=h.modes[t],o=this.options[t]||{};this.options[t]=i.options?e(i.options,o):o,this.modes[t]=new i(this)},c.prototype.layout=function(){return!this._isLayoutInited&&this.options.isInitLayout?(this.arrange(),void 0):(this._layout(),void 0)},c.prototype._layout=function(){var t=this._getIsInstant();this._resetLayout(),this._manageStamps(),this.layoutItems(this.filteredItems,t),this._isLayoutInited=!0},c.prototype.arrange=function(t){this.option(t),this._getIsInstant(),this.filteredItems=this._filter(this.items),this._sort(),this._layout()},c.prototype._init=c.prototype.arrange,c.prototype._getIsInstant=function(){var t=void 0!==this.options.isLayoutInstant?this.options.isLayoutInstant:!this._isLayoutInited;return this._isInstant=t,t},c.prototype._filter=function(t){function e(){f.reveal(n),f.hide(r)}var i=this.options.filter;i=i||"*";for(var o=[],n=[],r=[],s=this._getFilterTest(i),a=0,u=t.length;u>a;a++){var p=t[a];if(!p.isIgnored){var h=s(p);h&&o.push(p),h&&p.isHidden?n.push(p):h||p.isHidden||r.push(p)}}var f=this;return this._isInstant?this._noTransition(e):e(),o},c.prototype._getFilterTest=function(t){return s&&this.options.isJQueryFiltering?function(e){return s(e.element).is(t)}:"function"==typeof t?function(e){return t(e.element)}:function(e){return r(e.element,t)}},c.prototype.updateSortData=function(t){this._getSorters(),t=o(t);var e=this.getItems(t);e=e.length?e:this.items,this._updateItemsSortData(e)
-},c.prototype._getSorters=function(){var t=this.options.getSortData;for(var e in t){var i=t[e];this._sorters[e]=d(i)}},c.prototype._updateItemsSortData=function(t){for(var e=0,i=t.length;i>e;e++){var o=t[e];o.updateSortData()}};var d=function(){function t(t){if("string"!=typeof t)return t;var i=a(t).split(" "),o=i[0],n=o.match(/^\[(.+)\]$/),r=n&&n[1],s=e(r,o),u=c.sortDataParsers[i[1]];return t=u?function(t){return t&&u(s(t))}:function(t){return t&&s(t)}}function e(t,e){var i;return i=t?function(e){return e.getAttribute(t)}:function(t){var i=t.querySelector(e);return i&&p(i)}}return t}();c.sortDataParsers={parseInt:function(t){return parseInt(t,10)},parseFloat:function(t){return parseFloat(t)}},c.prototype._sort=function(){var t=this.options.sortBy;if(t){var e=[].concat.apply(t,this.sortHistory),i=f(e,this.options.sortAscending);this.filteredItems.sort(i),t!==this.sortHistory[0]&&this.sortHistory.unshift(t)}},c.prototype._mode=function(){var t=this.options.layoutMode,e=this.modes[t];if(!e)throw Error("No layout mode: "+t);return e.options=this.options[t],e},c.prototype._resetLayout=function(){t.prototype._resetLayout.call(this),this._mode()._resetLayout()},c.prototype._getItemLayoutPosition=function(t){return this._mode()._getItemLayoutPosition(t)},c.prototype._manageStamp=function(t){this._mode()._manageStamp(t)},c.prototype._getContainerSize=function(){return this._mode()._getContainerSize()},c.prototype.needsResizeLayout=function(){return this._mode().needsResizeLayout()},c.prototype.appended=function(t){var e=this.addItems(t);if(e.length){var i=this._filterRevealAdded(e);this.filteredItems=this.filteredItems.concat(i)}},c.prototype.prepended=function(t){var e=this._itemize(t);if(e.length){var i=this.items.slice(0);this.items=e.concat(i),this._resetLayout(),this._manageStamps();var o=this._filterRevealAdded(e);this.layoutItems(i),this.filteredItems=o.concat(this.filteredItems)}},c.prototype._filterRevealAdded=function(t){var e=this._noTransition(function(){return this._filter(t)});return this.layoutItems(e,!0),this.reveal(e),t},c.prototype.insert=function(t){var e=this.addItems(t);if(e.length){var i,o,n=e.length;for(i=0;n>i;i++)o=e[i],this.element.appendChild(o.element);var r=this._filter(e);for(this._noTransition(function(){this.hide(r)}),i=0;n>i;i++)e[i].isLayoutInstant=!0;for(this.arrange(),i=0;n>i;i++)delete e[i].isLayoutInstant;this.reveal(r)}};var l=c.prototype.remove;return c.prototype.remove=function(t){t=o(t);var e=this.getItems(t);if(l.call(this,t),e&&e.length)for(var i=0,r=e.length;r>i;i++){var s=e[i];n(s,this.filteredItems)}},c.prototype._noTransition=function(t){var e=this.options.transitionDuration;this.options.transitionDuration=0;var i=t.call(this);return this.options.transitionDuration=e,i},c}var s=t.jQuery,a=String.prototype.trim?function(t){return t.trim()}:function(t){return t.replace(/^\s+|\s+$/g,"")},u=document.documentElement,p=u.textContent?function(t){return t.textContent}:function(t){return t.innerText},h=Object.prototype.toString,f=Array.prototype.indexOf?function(t,e){return t.indexOf(e)}:function(t,e){for(var i=0,o=t.length;o>i;i++)if(t[i]===e)return i;return-1};"function"==typeof define&&define.amd?define(["outlayer/outlayer","get-size/get-size","matches-selector/matches-selector","isotope/js/item","isotope/js/layout-mode","isotope/js/layout-modes/masonry","isotope/js/layout-modes/fit-rows","isotope/js/layout-modes/vertical"],r):t.Isotope=r(t.Outlayer,t.getSize,t.matchesSelector,t.Isotope.Item,t.Isotope.LayoutMode)}(window);
-;/*!
- * Masonry PACKAGED v3.1.5
- * Cascading grid layout library
- * http://masonry.desandro.com
- * MIT License
- * by David DeSandro
- */
-
-/**
- * Bridget makes jQuery widgets
- * v1.0.1
- */
-
-( function( window ) {
-
-
-
-// -------------------------- utils -------------------------- //
-
-var slice = Array.prototype.slice;
-
-function noop() {}
-
-// -------------------------- definition -------------------------- //
-
-function defineBridget( $ ) {
-
-// bail if no jQuery
-if ( !$ ) {
-  return;
-}
-
-// -------------------------- addOptionMethod -------------------------- //
-
-/**
- * adds option method -> $().plugin('option', {...})
- * @param {Function} PluginClass - constructor class
- */
-function addOptionMethod( PluginClass ) {
-  // don't overwrite original option method
-  if ( PluginClass.prototype.option ) {
-    return;
-  }
-
-  // option setter
-  PluginClass.prototype.option = function( opts ) {
-    // bail out if not an object
-    if ( !$.isPlainObject( opts ) ){
-      return;
-    }
-    this.options = $.extend( true, this.options, opts );
-  };
-}
-
-
-// -------------------------- plugin bridge -------------------------- //
-
-// helper function for logging errors
-// $.error breaks jQuery chaining
-var logError = typeof console === 'undefined' ? noop :
-  function( message ) {
-    console.error( message );
-  };
-
-/**
- * jQuery plugin bridge, access methods like $elem.plugin('method')
- * @param {String} namespace - plugin name
- * @param {Function} PluginClass - constructor class
- */
-function bridge( namespace, PluginClass ) {
-  // add to jQuery fn namespace
-  $.fn[ namespace ] = function( options ) {
-    if ( typeof options === 'string' ) {
-      // call plugin method when first argument is a string
-      // get arguments for method
-      var args = slice.call( arguments, 1 );
-
-      for ( var i=0, len = this.length; i < len; i++ ) {
-        var elem = this[i];
-        var instance = $.data( elem, namespace );
-        if ( !instance ) {
-          logError( "cannot call methods on " + namespace + " prior to initialization; " +
-            "attempted to call '" + options + "'" );
-          continue;
-        }
-        if ( !$.isFunction( instance[options] ) || options.charAt(0) === '_' ) {
-          logError( "no such method '" + options + "' for " + namespace + " instance" );
-          continue;
-        }
-
-        // trigger method with arguments
-        var returnValue = instance[ options ].apply( instance, args );
-
-        // break look and return first value if provided
-        if ( returnValue !== undefined ) {
-          return returnValue;
-        }
-      }
-      // return this if no return value
-      return this;
-    } else {
-      return this.each( function() {
-        var instance = $.data( this, namespace );
-        if ( instance ) {
-          // apply options & init
-          instance.option( options );
-          instance._init();
-        } else {
-          // initialize new instance
-          instance = new PluginClass( this, options );
-          $.data( this, namespace, instance );
-        }
-      });
-    }
-  };
-
-}
-
-// -------------------------- bridget -------------------------- //
-
-/**
- * converts a Prototypical class into a proper jQuery plugin
- *   the class must have a ._init method
- * @param {String} namespace - plugin name, used in $().pluginName
- * @param {Function} PluginClass - constructor class
- */
-$.bridget = function( namespace, PluginClass ) {
-  addOptionMethod( PluginClass );
-  bridge( namespace, PluginClass );
-};
-
-return $.bridget;
-
-}
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( 'jquery-bridget/jquery.bridget',[ 'jquery' ], defineBridget );
-} else {
-  // get jquery from browser global
-  defineBridget( window.jQuery );
-}
-
-})( window );
-
-/*!
- * eventie v1.0.5
- * event binding helper
- *   eventie.bind( elem, 'click', myFn )
- *   eventie.unbind( elem, 'click', myFn )
- * MIT license
- */
-
-/*jshint browser: true, undef: true, unused: true */
-/*global define: false, module: false */
-
-( function( window ) {
-
-
-
-var docElem = document.documentElement;
-
-var bind = function() {};
-
-function getIEEvent( obj ) {
-  var event = window.event;
-  // add event.target
-  event.target = event.target || event.srcElement || obj;
-  return event;
-}
-
-if ( docElem.addEventListener ) {
-  bind = function( obj, type, fn ) {
-    obj.addEventListener( type, fn, false );
-  };
-} else if ( docElem.attachEvent ) {
-  bind = function( obj, type, fn ) {
-    obj[ type + fn ] = fn.handleEvent ?
-      function() {
-        var event = getIEEvent( obj );
-        fn.handleEvent.call( fn, event );
-      } :
-      function() {
-        var event = getIEEvent( obj );
-        fn.call( obj, event );
-      };
-    obj.attachEvent( "on" + type, obj[ type + fn ] );
-  };
-}
-
-var unbind = function() {};
-
-if ( docElem.removeEventListener ) {
-  unbind = function( obj, type, fn ) {
-    obj.removeEventListener( type, fn, false );
-  };
-} else if ( docElem.detachEvent ) {
-  unbind = function( obj, type, fn ) {
-    obj.detachEvent( "on" + type, obj[ type + fn ] );
-    try {
-      delete obj[ type + fn ];
-    } catch ( err ) {
-      // can't delete window object properties
-      obj[ type + fn ] = undefined;
-    }
-  };
-}
-
-var eventie = {
-  bind: bind,
-  unbind: unbind
-};
-
-// ----- module definition ----- //
-
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( 'eventie/eventie',eventie );
-} else if ( typeof exports === 'object' ) {
-  // CommonJS
-  module.exports = eventie;
-} else {
-  // browser global
-  window.eventie = eventie;
-}
-
-})( this );
-
-/*!
- * docReady
- * Cross browser DOMContentLoaded event emitter
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true*/
-/*global define: false */
-
-( function( window ) {
-
-
-
-var document = window.document;
-// collection of functions to be triggered on ready
-var queue = [];
-
-function docReady( fn ) {
-  // throw out non-functions
-  if ( typeof fn !== 'function' ) {
-    return;
-  }
-
-  if ( docReady.isReady ) {
-    // ready now, hit it
-    fn();
-  } else {
-    // queue function when ready
-    queue.push( fn );
-  }
-}
-
-docReady.isReady = false;
-
-// triggered on various doc ready events
-function init( event ) {
-  // bail if IE8 document is not ready just yet
-  var isIE8NotReady = event.type === 'readystatechange' && document.readyState !== 'complete';
-  if ( docReady.isReady || isIE8NotReady ) {
-    return;
-  }
-  docReady.isReady = true;
-
-  // process queue
-  for ( var i=0, len = queue.length; i < len; i++ ) {
-    var fn = queue[i];
-    fn();
-  }
-}
-
-function defineDocReady( eventie ) {
-  eventie.bind( document, 'DOMContentLoaded', init );
-  eventie.bind( document, 'readystatechange', init );
-  eventie.bind( window, 'load', init );
-
-  return docReady;
-}
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  // if RequireJS, then doc is already ready
-  docReady.isReady = typeof requirejs === 'function';
-  define( 'doc-ready/doc-ready',[ 'eventie/eventie' ], defineDocReady );
-} else {
-  // browser global
-  window.docReady = defineDocReady( window.eventie );
-}
-
-})( this );
-
-/*!
- * EventEmitter v4.2.7 - git.io/ee
- * Oliver Caldwell
- * MIT license
- * @preserve
- */
-
-(function () {
-	
-
-	/**
-	 * Class for managing events.
-	 * Can be extended to provide event functionality in other classes.
-	 *
-	 * @class EventEmitter Manages event registering and emitting.
-	 */
-	function EventEmitter() {}
-
-	// Shortcuts to improve speed and size
-	var proto = EventEmitter.prototype;
-	var exports = this;
-	var originalGlobalValue = exports.EventEmitter;
-
-	/**
-	 * Finds the index of the listener for the event in it's storage array.
-	 *
-	 * @param {Function[]} listeners Array of listeners to search through.
-	 * @param {Function} listener Method to look for.
-	 * @return {Number} Index of the specified listener, -1 if not found
-	 * @api private
-	 */
-	function indexOfListener(listeners, listener) {
-		var i = listeners.length;
-		while (i--) {
-			if (listeners[i].listener === listener) {
-				return i;
-			}
-		}
-
-		return -1;
-	}
-
-	/**
-	 * Alias a method while keeping the context correct, to allow for overwriting of target method.
-	 *
-	 * @param {String} name The name of the target method.
-	 * @return {Function} The aliased method
-	 * @api private
-	 */
-	function alias(name) {
-		return function aliasClosure() {
-			return this[name].apply(this, arguments);
-		};
-	}
-
-	/**
-	 * Returns the listener array for the specified event.
-	 * Will initialise the event object and listener arrays if required.
-	 * Will return an object if you use a regex search. The object contains keys for each matched event. So /ba[rz]/ might return an object containing bar and baz. But only if you have either defined them with defineEvent or added some listeners to them.
-	 * Each property in the object response is an array of listener functions.
-	 *
-	 * @param {String|RegExp} evt Name of the event to return the listeners from.
-	 * @return {Function[]|Object} All listener functions for the event.
-	 */
-	proto.getListeners = function getListeners(evt) {
-		var events = this._getEvents();
-		var response;
-		var key;
-
-		// Return a concatenated array of all matching events if
-		// the selector is a regular expression.
-		if (evt instanceof RegExp) {
-			response = {};
-			for (key in events) {
-				if (events.hasOwnProperty(key) && evt.test(key)) {
-					response[key] = events[key];
-				}
-			}
-		}
-		else {
-			response = events[evt] || (events[evt] = []);
-		}
-
-		return response;
-	};
-
-	/**
-	 * Takes a list of listener objects and flattens it into a list of listener functions.
-	 *
-	 * @param {Object[]} listeners Raw listener objects.
-	 * @return {Function[]} Just the listener functions.
-	 */
-	proto.flattenListeners = function flattenListeners(listeners) {
-		var flatListeners = [];
-		var i;
-
-		for (i = 0; i < listeners.length; i += 1) {
-			flatListeners.push(listeners[i].listener);
-		}
-
-		return flatListeners;
-	};
-
-	/**
-	 * Fetches the requested listeners via getListeners but will always return the results inside an object. This is mainly for internal use but others may find it useful.
-	 *
-	 * @param {String|RegExp} evt Name of the event to return the listeners from.
-	 * @return {Object} All listener functions for an event in an object.
-	 */
-	proto.getListenersAsObject = function getListenersAsObject(evt) {
-		var listeners = this.getListeners(evt);
-		var response;
-
-		if (listeners instanceof Array) {
-			response = {};
-			response[evt] = listeners;
-		}
-
-		return response || listeners;
-	};
-
-	/**
-	 * Adds a listener function to the specified event.
-	 * The listener will not be added if it is a duplicate.
-	 * If the listener returns true then it will be removed after it is called.
-	 * If you pass a regular expression as the event name then the listener will be added to all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to attach the listener to.
-	 * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.addListener = function addListener(evt, listener) {
-		var listeners = this.getListenersAsObject(evt);
-		var listenerIsWrapped = typeof listener === 'object';
-		var key;
-
-		for (key in listeners) {
-			if (listeners.hasOwnProperty(key) && indexOfListener(listeners[key], listener) === -1) {
-				listeners[key].push(listenerIsWrapped ? listener : {
-					listener: listener,
-					once: false
-				});
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of addListener
-	 */
-	proto.on = alias('addListener');
-
-	/**
-	 * Semi-alias of addListener. It will add a listener that will be
-	 * automatically removed after it's first execution.
-	 *
-	 * @param {String|RegExp} evt Name of the event to attach the listener to.
-	 * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.addOnceListener = function addOnceListener(evt, listener) {
-		return this.addListener(evt, {
-			listener: listener,
-			once: true
-		});
-	};
-
-	/**
-	 * Alias of addOnceListener.
-	 */
-	proto.once = alias('addOnceListener');
-
-	/**
-	 * Defines an event name. This is required if you want to use a regex to add a listener to multiple events at once. If you don't do this then how do you expect it to know what event to add to? Should it just add to every possible match for a regex? No. That is scary and bad.
-	 * You need to tell it what event names should be matched by a regex.
-	 *
-	 * @param {String} evt Name of the event to create.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.defineEvent = function defineEvent(evt) {
-		this.getListeners(evt);
-		return this;
-	};
-
-	/**
-	 * Uses defineEvent to define multiple events.
-	 *
-	 * @param {String[]} evts An array of event names to define.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.defineEvents = function defineEvents(evts) {
-		for (var i = 0; i < evts.length; i += 1) {
-			this.defineEvent(evts[i]);
-		}
-		return this;
-	};
-
-	/**
-	 * Removes a listener function from the specified event.
-	 * When passed a regular expression as the event name, it will remove the listener from all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to remove the listener from.
-	 * @param {Function} listener Method to remove from the event.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.removeListener = function removeListener(evt, listener) {
-		var listeners = this.getListenersAsObject(evt);
-		var index;
-		var key;
-
-		for (key in listeners) {
-			if (listeners.hasOwnProperty(key)) {
-				index = indexOfListener(listeners[key], listener);
-
-				if (index !== -1) {
-					listeners[key].splice(index, 1);
-				}
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of removeListener
-	 */
-	proto.off = alias('removeListener');
-
-	/**
-	 * Adds listeners in bulk using the manipulateListeners method.
-	 * If you pass an object as the second argument you can add to multiple events at once. The object should contain key value pairs of events and listeners or listener arrays. You can also pass it an event name and an array of listeners to be added.
-	 * You can also pass it a regular expression to add the array of listeners to all events that match it.
-	 * Yeah, this function does quite a bit. That's probably a bad thing.
-	 *
-	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to add to multiple events at once.
-	 * @param {Function[]} [listeners] An optional array of listener functions to add.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.addListeners = function addListeners(evt, listeners) {
-		// Pass through to manipulateListeners
-		return this.manipulateListeners(false, evt, listeners);
-	};
-
-	/**
-	 * Removes listeners in bulk using the manipulateListeners method.
-	 * If you pass an object as the second argument you can remove from multiple events at once. The object should contain key value pairs of events and listeners or listener arrays.
-	 * You can also pass it an event name and an array of listeners to be removed.
-	 * You can also pass it a regular expression to remove the listeners from all events that match it.
-	 *
-	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to remove from multiple events at once.
-	 * @param {Function[]} [listeners] An optional array of listener functions to remove.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.removeListeners = function removeListeners(evt, listeners) {
-		// Pass through to manipulateListeners
-		return this.manipulateListeners(true, evt, listeners);
-	};
-
-	/**
-	 * Edits listeners in bulk. The addListeners and removeListeners methods both use this to do their job. You should really use those instead, this is a little lower level.
-	 * The first argument will determine if the listeners are removed (true) or added (false).
-	 * If you pass an object as the second argument you can add/remove from multiple events at once. The object should contain key value pairs of events and listeners or listener arrays.
-	 * You can also pass it an event name and an array of listeners to be added/removed.
-	 * You can also pass it a regular expression to manipulate the listeners of all events that match it.
-	 *
-	 * @param {Boolean} remove True if you want to remove listeners, false if you want to add.
-	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to add/remove from multiple events at once.
-	 * @param {Function[]} [listeners] An optional array of listener functions to add/remove.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.manipulateListeners = function manipulateListeners(remove, evt, listeners) {
-		var i;
-		var value;
-		var single = remove ? this.removeListener : this.addListener;
-		var multiple = remove ? this.removeListeners : this.addListeners;
-
-		// If evt is an object then pass each of it's properties to this method
-		if (typeof evt === 'object' && !(evt instanceof RegExp)) {
-			for (i in evt) {
-				if (evt.hasOwnProperty(i) && (value = evt[i])) {
-					// Pass the single listener straight through to the singular method
-					if (typeof value === 'function') {
-						single.call(this, i, value);
-					}
-					else {
-						// Otherwise pass back to the multiple function
-						multiple.call(this, i, value);
-					}
-				}
-			}
-		}
-		else {
-			// So evt must be a string
-			// And listeners must be an array of listeners
-			// Loop over it and pass each one to the multiple method
-			i = listeners.length;
-			while (i--) {
-				single.call(this, evt, listeners[i]);
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Removes all listeners from a specified event.
-	 * If you do not specify an event then all listeners will be removed.
-	 * That means every event will be emptied.
-	 * You can also pass a regex to remove all events that match it.
-	 *
-	 * @param {String|RegExp} [evt] Optional name of the event to remove all listeners for. Will remove from every event if not passed.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.removeEvent = function removeEvent(evt) {
-		var type = typeof evt;
-		var events = this._getEvents();
-		var key;
-
-		// Remove different things depending on the state of evt
-		if (type === 'string') {
-			// Remove all listeners for the specified event
-			delete events[evt];
-		}
-		else if (evt instanceof RegExp) {
-			// Remove all events matching the regex.
-			for (key in events) {
-				if (events.hasOwnProperty(key) && evt.test(key)) {
-					delete events[key];
-				}
-			}
-		}
-		else {
-			// Remove all listeners in all events
-			delete this._events;
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of removeEvent.
-	 *
-	 * Added to mirror the node API.
-	 */
-	proto.removeAllListeners = alias('removeEvent');
-
-	/**
-	 * Emits an event of your choice.
-	 * When emitted, every listener attached to that event will be executed.
-	 * If you pass the optional argument array then those arguments will be passed to every listener upon execution.
-	 * Because it uses `apply`, your array of arguments will be passed as if you wrote them out separately.
-	 * So they will not arrive within the array on the other side, they will be separate.
-	 * You can also pass a regular expression to emit to all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to emit and execute listeners for.
-	 * @param {Array} [args] Optional array of arguments to be passed to each listener.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.emitEvent = function emitEvent(evt, args) {
-		var listeners = this.getListenersAsObject(evt);
-		var listener;
-		var i;
-		var key;
-		var response;
-
-		for (key in listeners) {
-			if (listeners.hasOwnProperty(key)) {
-				i = listeners[key].length;
-
-				while (i--) {
-					// If the listener returns true then it shall be removed from the event
-					// The function is executed either with a basic call or an apply if there is an args array
-					listener = listeners[key][i];
-
-					if (listener.once === true) {
-						this.removeListener(evt, listener.listener);
-					}
-
-					response = listener.listener.apply(this, args || []);
-
-					if (response === this._getOnceReturnValue()) {
-						this.removeListener(evt, listener.listener);
-					}
-				}
-			}
-		}
-
-		return this;
-	};
-
-	/**
-	 * Alias of emitEvent
-	 */
-	proto.trigger = alias('emitEvent');
-
-	/**
-	 * Subtly different from emitEvent in that it will pass its arguments on to the listeners, as opposed to taking a single array of arguments to pass on.
-	 * As with emitEvent, you can pass a regex in place of the event name to emit to all events that match it.
-	 *
-	 * @param {String|RegExp} evt Name of the event to emit and execute listeners for.
-	 * @param {...*} Optional additional arguments to be passed to each listener.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.emit = function emit(evt) {
-		var args = Array.prototype.slice.call(arguments, 1);
-		return this.emitEvent(evt, args);
-	};
-
-	/**
-	 * Sets the current value to check against when executing listeners. If a
-	 * listeners return value matches the one set here then it will be removed
-	 * after execution. This value defaults to true.
-	 *
-	 * @param {*} value The new value to check for when executing listeners.
-	 * @return {Object} Current instance of EventEmitter for chaining.
-	 */
-	proto.setOnceReturnValue = function setOnceReturnValue(value) {
-		this._onceReturnValue = value;
-		return this;
-	};
-
-	/**
-	 * Fetches the current value to check against when executing listeners. If
-	 * the listeners return value matches this one then it should be removed
-	 * automatically. It will return true by default.
-	 *
-	 * @return {*|Boolean} The current value to check for or the default, true.
-	 * @api private
-	 */
-	proto._getOnceReturnValue = function _getOnceReturnValue() {
-		if (this.hasOwnProperty('_onceReturnValue')) {
-			return this._onceReturnValue;
-		}
-		else {
-			return true;
-		}
-	};
-
-	/**
-	 * Fetches the events object and creates one if required.
-	 *
-	 * @return {Object} The events storage object.
-	 * @api private
-	 */
-	proto._getEvents = function _getEvents() {
-		return this._events || (this._events = {});
-	};
-
-	/**
-	 * Reverts the global {@link EventEmitter} to its previous value and returns a reference to this version.
-	 *
-	 * @return {Function} Non conflicting EventEmitter class.
-	 */
-	EventEmitter.noConflict = function noConflict() {
-		exports.EventEmitter = originalGlobalValue;
-		return EventEmitter;
-	};
-
-	// Expose the class either via AMD, CommonJS or the global object
-	if (typeof define === 'function' && define.amd) {
-		define('eventEmitter/EventEmitter',[],function () {
-			return EventEmitter;
-		});
-	}
-	else if (typeof module === 'object' && module.exports){
-		module.exports = EventEmitter;
-	}
-	else {
-		this.EventEmitter = EventEmitter;
-	}
-}.call(this));
-
-/*!
- * getStyleProperty v1.0.3
- * original by kangax
- * http://perfectionkills.com/feature-testing-css-properties/
- */
-
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false, exports: false, module: false */
-
-( function( window ) {
-
-
-
-var prefixes = 'Webkit Moz ms Ms O'.split(' ');
-var docElemStyle = document.documentElement.style;
-
-function getStyleProperty( propName ) {
-  if ( !propName ) {
-    return;
-  }
-
-  // test standard property first
-  if ( typeof docElemStyle[ propName ] === 'string' ) {
-    return propName;
-  }
-
-  // capitalize
-  propName = propName.charAt(0).toUpperCase() + propName.slice(1);
-
-  // test vendor specific properties
-  var prefixed;
-  for ( var i=0, len = prefixes.length; i < len; i++ ) {
-    prefixed = prefixes[i] + propName;
-    if ( typeof docElemStyle[ prefixed ] === 'string' ) {
-      return prefixed;
-    }
-  }
-}
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( 'get-style-property/get-style-property',[],function() {
-    return getStyleProperty;
-  });
-} else if ( typeof exports === 'object' ) {
-  // CommonJS for Component
-  module.exports = getStyleProperty;
-} else {
-  // browser global
-  window.getStyleProperty = getStyleProperty;
-}
-
-})( window );
-
-/**
- * getSize v1.1.7
- * measure size of elements
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
-/*global define: false, exports: false, require: false, module: false */
-
-( function( window, undefined ) {
-
-
-
-// -------------------------- helpers -------------------------- //
-
-var getComputedStyle = window.getComputedStyle;
-var getStyle = getComputedStyle ?
-  function( elem ) {
-    return getComputedStyle( elem, null );
-  } :
-  function( elem ) {
-    return elem.currentStyle;
-  };
-
-// get a number from a string, not a percentage
-function getStyleSize( value ) {
-  var num = parseFloat( value );
-  // not a percent like '100%', and a number
-  var isValid = value.indexOf('%') === -1 && !isNaN( num );
-  return isValid && num;
-}
-
-// -------------------------- measurements -------------------------- //
-
-var measurements = [
-  'paddingLeft',
-  'paddingRight',
-  'paddingTop',
-  'paddingBottom',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'marginBottom',
-  'borderLeftWidth',
-  'borderRightWidth',
-  'borderTopWidth',
-  'borderBottomWidth'
-];
-
-function getZeroSize() {
-  var size = {
-    width: 0,
-    height: 0,
-    innerWidth: 0,
-    innerHeight: 0,
-    outerWidth: 0,
-    outerHeight: 0
-  };
-  for ( var i=0, len = measurements.length; i < len; i++ ) {
-    var measurement = measurements[i];
-    size[ measurement ] = 0;
-  }
-  return size;
-}
-
-
-
-function defineGetSize( getStyleProperty ) {
-
-// -------------------------- box sizing -------------------------- //
-
-var boxSizingProp = getStyleProperty('boxSizing');
-var isBoxSizeOuter;
-
-/**
- * WebKit measures the outer-width on style.width on border-box elems
- * IE & Firefox measures the inner-width
- */
-( function() {
-  if ( !boxSizingProp ) {
-    return;
-  }
-
-  var div = document.createElement('div');
-  div.style.width = '200px';
-  div.style.padding = '1px 2px 3px 4px';
-  div.style.borderStyle = 'solid';
-  div.style.borderWidth = '1px 2px 3px 4px';
-  div.style[ boxSizingProp ] = 'border-box';
-
-  var body = document.body || document.documentElement;
-  body.appendChild( div );
-  var style = getStyle( div );
-
-  isBoxSizeOuter = getStyleSize( style.width ) === 200;
-  body.removeChild( div );
-})();
-
-
-// -------------------------- getSize -------------------------- //
-
-function getSize( elem ) {
-  // use querySeletor if elem is string
-  if ( typeof elem === 'string' ) {
-    elem = document.querySelector( elem );
-  }
-
-  // do not proceed on non-objects
-  if ( !elem || typeof elem !== 'object' || !elem.nodeType ) {
-    return;
-  }
-
-  var style = getStyle( elem );
-
-  // if hidden, everything is 0
-  if ( style.display === 'none' ) {
-    return getZeroSize();
-  }
-
-  var size = {};
-  size.width = elem.offsetWidth;
-  size.height = elem.offsetHeight;
-
-  var isBorderBox = size.isBorderBox = !!( boxSizingProp &&
-    style[ boxSizingProp ] && style[ boxSizingProp ] === 'border-box' );
-
-  // get all measurements
-  for ( var i=0, len = measurements.length; i < len; i++ ) {
-    var measurement = measurements[i];
-    var value = style[ measurement ];
-    value = mungeNonPixel( elem, value );
-    var num = parseFloat( value );
-    // any 'auto', 'medium' value will be 0
-    size[ measurement ] = !isNaN( num ) ? num : 0;
-  }
-
-  var paddingWidth = size.paddingLeft + size.paddingRight;
-  var paddingHeight = size.paddingTop + size.paddingBottom;
-  var marginWidth = size.marginLeft + size.marginRight;
-  var marginHeight = size.marginTop + size.marginBottom;
-  var borderWidth = size.borderLeftWidth + size.borderRightWidth;
-  var borderHeight = size.borderTopWidth + size.borderBottomWidth;
-
-  var isBorderBoxSizeOuter = isBorderBox && isBoxSizeOuter;
-
-  // overwrite width and height if we can get it from style
-  var styleWidth = getStyleSize( style.width );
-  if ( styleWidth !== false ) {
-    size.width = styleWidth +
-      // add padding and border unless it's already including it
-      ( isBorderBoxSizeOuter ? 0 : paddingWidth + borderWidth );
-  }
-
-  var styleHeight = getStyleSize( style.height );
-  if ( styleHeight !== false ) {
-    size.height = styleHeight +
-      // add padding and border unless it's already including it
-      ( isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight );
-  }
-
-  size.innerWidth = size.width - ( paddingWidth + borderWidth );
-  size.innerHeight = size.height - ( paddingHeight + borderHeight );
-
-  size.outerWidth = size.width + marginWidth;
-  size.outerHeight = size.height + marginHeight;
-
-  return size;
-}
-
-// IE8 returns percent values, not pixels
-// taken from jQuery's curCSS
-function mungeNonPixel( elem, value ) {
-  // IE8 and has percent value
-  if ( getComputedStyle || value.indexOf('%') === -1 ) {
-    return value;
-  }
-  var style = elem.style;
-  // Remember the original values
-  var left = style.left;
-  var rs = elem.runtimeStyle;
-  var rsLeft = rs && rs.left;
-
-  // Put in the new values to get a computed value out
-  if ( rsLeft ) {
-    rs.left = elem.currentStyle.left;
-  }
-  style.left = value;
-  value = style.pixelLeft;
-
-  // Revert the changed values
-  style.left = left;
-  if ( rsLeft ) {
-    rs.left = rsLeft;
-  }
-
-  return value;
-}
-
-return getSize;
-
-}
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD for RequireJS
-  define( 'get-size/get-size',[ 'get-style-property/get-style-property' ], defineGetSize );
-} else if ( typeof exports === 'object' ) {
-  // CommonJS for Component
-  module.exports = defineGetSize( require('get-style-property') );
-} else {
-  // browser global
-  window.getSize = defineGetSize( window.getStyleProperty );
-}
-
-})( window );
-
-/**
- * matchesSelector helper v1.0.1
- *
- * @name matchesSelector
- *   @param {Element} elem
- *   @param {String} selector
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
-/*global define: false */
-
-( function( global, ElemProto ) {
-
-  
-
-  var matchesMethod = ( function() {
-    // check un-prefixed
-    if ( ElemProto.matchesSelector ) {
-      return 'matchesSelector';
-    }
-    // check vendor prefixes
-    var prefixes = [ 'webkit', 'moz', 'ms', 'o' ];
-
-    for ( var i=0, len = prefixes.length; i < len; i++ ) {
-      var prefix = prefixes[i];
-      var method = prefix + 'MatchesSelector';
-      if ( ElemProto[ method ] ) {
-        return method;
-      }
-    }
-  })();
-
-  // ----- match ----- //
-
-  function match( elem, selector ) {
-    return elem[ matchesMethod ]( selector );
-  }
-
-  // ----- appendToFragment ----- //
-
-  function checkParent( elem ) {
-    // not needed if already has parent
-    if ( elem.parentNode ) {
-      return;
-    }
-    var fragment = document.createDocumentFragment();
-    fragment.appendChild( elem );
-  }
-
-  // ----- query ----- //
-
-  // fall back to using QSA
-  // thx @jonathantneal https://gist.github.com/3062955
-  function query( elem, selector ) {
-    // append to fragment if no parent
-    checkParent( elem );
-
-    // match elem with all selected elems of parent
-    var elems = elem.parentNode.querySelectorAll( selector );
-    for ( var i=0, len = elems.length; i < len; i++ ) {
-      // return true if match
-      if ( elems[i] === elem ) {
-        return true;
-      }
-    }
-    // otherwise return false
-    return false;
-  }
-
-  // ----- matchChild ----- //
-
-  function matchChild( elem, selector ) {
-    checkParent( elem );
-    return match( elem, selector );
-  }
-
-  // ----- matchesSelector ----- //
-
-  var matchesSelector;
-
-  if ( matchesMethod ) {
-    // IE9 supports matchesSelector, but doesn't work on orphaned elems
-    // check for that
-    var div = document.createElement('div');
-    var supportsOrphans = match( div, 'div' );
-    matchesSelector = supportsOrphans ? match : matchChild;
-  } else {
-    matchesSelector = query;
-  }
-
-  // transport
-  if ( typeof define === 'function' && define.amd ) {
-    // AMD
-    define( 'matches-selector/matches-selector',[],function() {
-      return matchesSelector;
-    });
-  } else {
-    // browser global
-    window.matchesSelector = matchesSelector;
-  }
-
-})( this, Element.prototype );
-
-/**
- * Outlayer Item
- */
-
-( function( window ) {
-
-
-
-// ----- get style ----- //
-
-var getComputedStyle = window.getComputedStyle;
-var getStyle = getComputedStyle ?
-  function( elem ) {
-    return getComputedStyle( elem, null );
-  } :
-  function( elem ) {
-    return elem.currentStyle;
-  };
-
-
-// extend objects
-function extend( a, b ) {
-  for ( var prop in b ) {
-    a[ prop ] = b[ prop ];
-  }
-  return a;
-}
-
-function isEmptyObj( obj ) {
-  for ( var prop in obj ) {
-    return false;
-  }
-  prop = null;
-  return true;
-}
-
-// http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
-function toDash( str ) {
-  return str.replace( /([A-Z])/g, function( $1 ){
-    return '-' + $1.toLowerCase();
-  });
-}
-
-// -------------------------- Outlayer definition -------------------------- //
-
-function outlayerItemDefinition( EventEmitter, getSize, getStyleProperty ) {
-
-// -------------------------- CSS3 support -------------------------- //
-
-var transitionProperty = getStyleProperty('transition');
-var transformProperty = getStyleProperty('transform');
-var supportsCSS3 = transitionProperty && transformProperty;
-var is3d = !!getStyleProperty('perspective');
-
-var transitionEndEvent = {
-  WebkitTransition: 'webkitTransitionEnd',
-  MozTransition: 'transitionend',
-  OTransition: 'otransitionend',
-  transition: 'transitionend'
-}[ transitionProperty ];
-
-// properties that could have vendor prefix
-var prefixableProperties = [
-  'transform',
-  'transition',
-  'transitionDuration',
-  'transitionProperty'
-];
-
-// cache all vendor properties
-var vendorProperties = ( function() {
-  var cache = {};
-  for ( var i=0, len = prefixableProperties.length; i < len; i++ ) {
-    var prop = prefixableProperties[i];
-    var supportedProp = getStyleProperty( prop );
-    if ( supportedProp && supportedProp !== prop ) {
-      cache[ prop ] = supportedProp;
-    }
-  }
-  return cache;
-})();
-
-// -------------------------- Item -------------------------- //
-
-function Item( element, layout ) {
-  if ( !element ) {
-    return;
-  }
-
-  this.element = element;
-  // parent layout class, i.e. Masonry, Isotope, or Packery
-  this.layout = layout;
-  this.position = {
-    x: 0,
-    y: 0
-  };
-
-  this._create();
-}
-
-// inherit EventEmitter
-extend( Item.prototype, EventEmitter.prototype );
-
-Item.prototype._create = function() {
-  // transition objects
-  this._transn = {
-    ingProperties: {},
-    clean: {},
-    onEnd: {}
-  };
-
-  this.css({
-    position: 'absolute'
-  });
-};
-
-// trigger specified handler for event type
-Item.prototype.handleEvent = function( event ) {
-  var method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-Item.prototype.getSize = function() {
-  this.size = getSize( this.element );
-};
-
-/**
- * apply CSS styles to element
- * @param {Object} style
- */
-Item.prototype.css = function( style ) {
-  var elemStyle = this.element.style;
-
-  for ( var prop in style ) {
-    // use vendor property if available
-    var supportedProp = vendorProperties[ prop ] || prop;
-    elemStyle[ supportedProp ] = style[ prop ];
-  }
-};
-
- // measure position, and sets it
-Item.prototype.getPosition = function() {
-  var style = getStyle( this.element );
-  var layoutOptions = this.layout.options;
-  var isOriginLeft = layoutOptions.isOriginLeft;
-  var isOriginTop = layoutOptions.isOriginTop;
-  var x = parseInt( style[ isOriginLeft ? 'left' : 'right' ], 10 );
-  var y = parseInt( style[ isOriginTop ? 'top' : 'bottom' ], 10 );
-
-  // clean up 'auto' or other non-integer values
-  x = isNaN( x ) ? 0 : x;
-  y = isNaN( y ) ? 0 : y;
-  // remove padding from measurement
-  var layoutSize = this.layout.size;
-  x -= isOriginLeft ? layoutSize.paddingLeft : layoutSize.paddingRight;
-  y -= isOriginTop ? layoutSize.paddingTop : layoutSize.paddingBottom;
-
-  this.position.x = x;
-  this.position.y = y;
-};
-
-// set settled position, apply padding
-Item.prototype.layoutPosition = function() {
-  var layoutSize = this.layout.size;
-  var layoutOptions = this.layout.options;
-  var style = {};
-
-  if ( layoutOptions.isOriginLeft ) {
-    style.left = ( this.position.x + layoutSize.paddingLeft ) + 'px';
-    // reset other property
-    style.right = '';
-  } else {
-    style.right = ( this.position.x + layoutSize.paddingRight ) + 'px';
-    style.left = '';
-  }
-
-  if ( layoutOptions.isOriginTop ) {
-    style.top = ( this.position.y + layoutSize.paddingTop ) + 'px';
-    style.bottom = '';
-  } else {
-    style.bottom = ( this.position.y + layoutSize.paddingBottom ) + 'px';
-    style.top = '';
-  }
-
-  this.css( style );
-  this.emitEvent( 'layout', [ this ] );
-};
-
-
-// transform translate function
-var translate = is3d ?
-  function( x, y ) {
-    return 'translate3d(' + x + 'px, ' + y + 'px, 0)';
-  } :
-  function( x, y ) {
-    return 'translate(' + x + 'px, ' + y + 'px)';
-  };
-
-
-Item.prototype._transitionTo = function( x, y ) {
-  this.getPosition();
-  // get current x & y from top/left
-  var curX = this.position.x;
-  var curY = this.position.y;
-
-  var compareX = parseInt( x, 10 );
-  var compareY = parseInt( y, 10 );
-  var didNotMove = compareX === this.position.x && compareY === this.position.y;
-
-  // save end position
-  this.setPosition( x, y );
-
-  // if did not move and not transitioning, just go to layout
-  if ( didNotMove && !this.isTransitioning ) {
-    this.layoutPosition();
-    return;
-  }
-
-  var transX = x - curX;
-  var transY = y - curY;
-  var transitionStyle = {};
-  // flip cooridinates if origin on right or bottom
-  var layoutOptions = this.layout.options;
-  transX = layoutOptions.isOriginLeft ? transX : -transX;
-  transY = layoutOptions.isOriginTop ? transY : -transY;
-  transitionStyle.transform = translate( transX, transY );
-
-  this.transition({
-    to: transitionStyle,
-    onTransitionEnd: {
-      transform: this.layoutPosition
-    },
-    isCleaning: true
-  });
-};
-
-// non transition + transform support
-Item.prototype.goTo = function( x, y ) {
-  this.setPosition( x, y );
-  this.layoutPosition();
-};
-
-// use transition and transforms if supported
-Item.prototype.moveTo = supportsCSS3 ?
-  Item.prototype._transitionTo : Item.prototype.goTo;
-
-Item.prototype.setPosition = function( x, y ) {
-  this.position.x = parseInt( x, 10 );
-  this.position.y = parseInt( y, 10 );
-};
-
-// ----- transition ----- //
-
-/**
- * @param {Object} style - CSS
- * @param {Function} onTransitionEnd
- */
-
-// non transition, just trigger callback
-Item.prototype._nonTransition = function( args ) {
-  this.css( args.to );
-  if ( args.isCleaning ) {
-    this._removeStyles( args.to );
-  }
-  for ( var prop in args.onTransitionEnd ) {
-    args.onTransitionEnd[ prop ].call( this );
-  }
-};
-
-/**
- * proper transition
- * @param {Object} args - arguments
- *   @param {Object} to - style to transition to
- *   @param {Object} from - style to start transition from
- *   @param {Boolean} isCleaning - removes transition styles after transition
- *   @param {Function} onTransitionEnd - callback
- */
-Item.prototype._transition = function( args ) {
-  // redirect to nonTransition if no transition duration
-  if ( !parseFloat( this.layout.options.transitionDuration ) ) {
-    this._nonTransition( args );
-    return;
-  }
-
-  var _transition = this._transn;
-  // keep track of onTransitionEnd callback by css property
-  for ( var prop in args.onTransitionEnd ) {
-    _transition.onEnd[ prop ] = args.onTransitionEnd[ prop ];
-  }
-  // keep track of properties that are transitioning
-  for ( prop in args.to ) {
-    _transition.ingProperties[ prop ] = true;
-    // keep track of properties to clean up when transition is done
-    if ( args.isCleaning ) {
-      _transition.clean[ prop ] = true;
-    }
-  }
-
-  // set from styles
-  if ( args.from ) {
-    this.css( args.from );
-    // force redraw. http://blog.alexmaccaw.com/css-transitions
-    var h = this.element.offsetHeight;
-    // hack for JSHint to hush about unused var
-    h = null;
-  }
-  // enable transition
-  this.enableTransition( args.to );
-  // set styles that are transitioning
-  this.css( args.to );
-
-  this.isTransitioning = true;
-
-};
-
-var itemTransitionProperties = transformProperty && ( toDash( transformProperty ) +
-  ',opacity' );
-
-Item.prototype.enableTransition = function(/* style */) {
-  // only enable if not already transitioning
-  // bug in IE10 were re-setting transition style will prevent
-  // transitionend event from triggering
-  if ( this.isTransitioning ) {
-    return;
-  }
-
-  // make transition: foo, bar, baz from style object
-  // TODO uncomment this bit when IE10 bug is resolved
-  // var transitionValue = [];
-  // for ( var prop in style ) {
-  //   // dash-ify camelCased properties like WebkitTransition
-  //   transitionValue.push( toDash( prop ) );
-  // }
-  // enable transition styles
-  // HACK always enable transform,opacity for IE10
-  this.css({
-    transitionProperty: itemTransitionProperties,
-    transitionDuration: this.layout.options.transitionDuration
-  });
-  // listen for transition end event
-  this.element.addEventListener( transitionEndEvent, this, false );
-};
-
-Item.prototype.transition = Item.prototype[ transitionProperty ? '_transition' : '_nonTransition' ];
-
-// ----- events ----- //
-
-Item.prototype.onwebkitTransitionEnd = function( event ) {
-  this.ontransitionend( event );
-};
-
-Item.prototype.onotransitionend = function( event ) {
-  this.ontransitionend( event );
-};
-
-// properties that I munge to make my life easier
-var dashedVendorProperties = {
-  '-webkit-transform': 'transform',
-  '-moz-transform': 'transform',
-  '-o-transform': 'transform'
-};
-
-Item.prototype.ontransitionend = function( event ) {
-  // disregard bubbled events from children
-  if ( event.target !== this.element ) {
-    return;
-  }
-  var _transition = this._transn;
-  // get property name of transitioned property, convert to prefix-free
-  var propertyName = dashedVendorProperties[ event.propertyName ] || event.propertyName;
-
-  // remove property that has completed transitioning
-  delete _transition.ingProperties[ propertyName ];
-  // check if any properties are still transitioning
-  if ( isEmptyObj( _transition.ingProperties ) ) {
-    // all properties have completed transitioning
-    this.disableTransition();
-  }
-  // clean style
-  if ( propertyName in _transition.clean ) {
-    // clean up style
-    this.element.style[ event.propertyName ] = '';
-    delete _transition.clean[ propertyName ];
-  }
-  // trigger onTransitionEnd callback
-  if ( propertyName in _transition.onEnd ) {
-    var onTransitionEnd = _transition.onEnd[ propertyName ];
-    onTransitionEnd.call( this );
-    delete _transition.onEnd[ propertyName ];
-  }
-
-  this.emitEvent( 'transitionEnd', [ this ] );
-};
-
-Item.prototype.disableTransition = function() {
-  this.removeTransitionStyles();
-  this.element.removeEventListener( transitionEndEvent, this, false );
-  this.isTransitioning = false;
-};
-
-/**
- * removes style property from element
- * @param {Object} style
-**/
-Item.prototype._removeStyles = function( style ) {
-  // clean up transition styles
-  var cleanStyle = {};
-  for ( var prop in style ) {
-    cleanStyle[ prop ] = '';
-  }
-  this.css( cleanStyle );
-};
-
-var cleanTransitionStyle = {
-  transitionProperty: '',
-  transitionDuration: ''
-};
-
-Item.prototype.removeTransitionStyles = function() {
-  // remove transition
-  this.css( cleanTransitionStyle );
-};
-
-// ----- show/hide/remove ----- //
-
-// remove element from DOM
-Item.prototype.removeElem = function() {
-  this.element.parentNode.removeChild( this.element );
-  this.emitEvent( 'remove', [ this ] );
-};
-
-Item.prototype.remove = function() {
-  // just remove element if no transition support or no transition
-  if ( !transitionProperty || !parseFloat( this.layout.options.transitionDuration ) ) {
-    this.removeElem();
-    return;
-  }
-
-  // start transition
-  var _this = this;
-  this.on( 'transitionEnd', function() {
-    _this.removeElem();
-    return true; // bind once
-  });
-  this.hide();
-};
-
-Item.prototype.reveal = function() {
-  delete this.isHidden;
-  // remove display: none
-  this.css({ display: '' });
-
-  var options = this.layout.options;
-  this.transition({
-    from: options.hiddenStyle,
-    to: options.visibleStyle,
-    isCleaning: true
-  });
-};
-
-Item.prototype.hide = function() {
-  // set flag
-  this.isHidden = true;
-  // remove display: none
-  this.css({ display: '' });
-
-  var options = this.layout.options;
-  this.transition({
-    from: options.visibleStyle,
-    to: options.hiddenStyle,
-    // keep hidden stuff hidden
-    isCleaning: true,
-    onTransitionEnd: {
-      opacity: function() {
-        // check if still hidden
-        // during transition, item may have been un-hidden
-        if ( this.isHidden ) {
-          this.css({ display: 'none' });
-        }
-      }
-    }
-  });
-};
-
-Item.prototype.destroy = function() {
-  this.css({
-    position: '',
-    left: '',
-    right: '',
-    top: '',
-    bottom: '',
-    transition: '',
-    transform: ''
-  });
-};
-
-return Item;
-
-}
-
-// -------------------------- transport -------------------------- //
-
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( 'outlayer/item',[
-      'eventEmitter/EventEmitter',
-      'get-size/get-size',
-      'get-style-property/get-style-property'
-    ],
-    outlayerItemDefinition );
-} else {
-  // browser global
-  window.Outlayer = {};
-  window.Outlayer.Item = outlayerItemDefinition(
-    window.EventEmitter,
-    window.getSize,
-    window.getStyleProperty
-  );
-}
-
-})( window );
-
-/*!
- * Outlayer v1.2.0
- * the brains and guts of a layout library
- * MIT license
- */
-
-( function( window ) {
-
-
-
-// ----- vars ----- //
-
-var document = window.document;
-var console = window.console;
-var jQuery = window.jQuery;
-
-var noop = function() {};
-
-// -------------------------- helpers -------------------------- //
-
-// extend objects
-function extend( a, b ) {
-  for ( var prop in b ) {
-    a[ prop ] = b[ prop ];
-  }
-  return a;
-}
-
-
-var objToString = Object.prototype.toString;
-function isArray( obj ) {
-  return objToString.call( obj ) === '[object Array]';
-}
-
-// turn element or nodeList into an array
-function makeArray( obj ) {
-  var ary = [];
-  if ( isArray( obj ) ) {
-    // use object if already an array
-    ary = obj;
-  } else if ( obj && typeof obj.length === 'number' ) {
-    // convert nodeList to array
-    for ( var i=0, len = obj.length; i < len; i++ ) {
-      ary.push( obj[i] );
-    }
-  } else {
-    // array of single index
-    ary.push( obj );
-  }
-  return ary;
-}
-
-// http://stackoverflow.com/a/384380/182183
-var isElement = ( typeof HTMLElement === 'object' ) ?
-  function isElementDOM2( obj ) {
-    return obj instanceof HTMLElement;
-  } :
-  function isElementQuirky( obj ) {
-    return obj && typeof obj === 'object' &&
-      obj.nodeType === 1 && typeof obj.nodeName === 'string';
-  };
-
-// index of helper cause IE8
-var indexOf = Array.prototype.indexOf ? function( ary, obj ) {
-    return ary.indexOf( obj );
-  } : function( ary, obj ) {
-    for ( var i=0, len = ary.length; i < len; i++ ) {
-      if ( ary[i] === obj ) {
-        return i;
-      }
-    }
-    return -1;
-  };
-
-function removeFrom( obj, ary ) {
-  var index = indexOf( ary, obj );
-  if ( index !== -1 ) {
-    ary.splice( index, 1 );
-  }
-}
-
-// http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
-function toDashed( str ) {
-  return str.replace( /(.)([A-Z])/g, function( match, $1, $2 ) {
-    return $1 + '-' + $2;
-  }).toLowerCase();
-}
-
-
-function outlayerDefinition( eventie, docReady, EventEmitter, getSize, matchesSelector, Item ) {
-
-// -------------------------- Outlayer -------------------------- //
-
-// globally unique identifiers
-var GUID = 0;
-// internal store of all Outlayer intances
-var instances = {};
-
-
-/**
- * @param {Element, String} element
- * @param {Object} options
- * @constructor
- */
-function Outlayer( element, options ) {
-  // use element as selector string
-  if ( typeof element === 'string' ) {
-    element = document.querySelector( element );
-  }
-
-  // bail out if not proper element
-  if ( !element || !isElement( element ) ) {
-    if ( console ) {
-      console.error( 'Bad ' + this.constructor.namespace + ' element: ' + element );
-    }
-    return;
-  }
-
-  this.element = element;
-
-  // options
-  this.options = extend( {}, this.constructor.defaults );
-  this.option( options );
-
-  // add id for Outlayer.getFromElement
-  var id = ++GUID;
-  this.element.outlayerGUID = id; // expando
-  instances[ id ] = this; // associate via id
-
-  // kick it off
-  this._create();
-
-  if ( this.options.isInitLayout ) {
-    this.layout();
-  }
-}
-
-// settings are for internal use only
-Outlayer.namespace = 'outlayer';
-Outlayer.Item = Item;
-
-// default options
-Outlayer.defaults = {
-  containerStyle: {
-    position: 'relative'
-  },
-  isInitLayout: true,
-  isOriginLeft: true,
-  isOriginTop: true,
-  isResizeBound: true,
-  isResizingContainer: true,
-  // item options
-  transitionDuration: '0.4s',
-  hiddenStyle: {
-    opacity: 0,
-    transform: 'scale(0.001)'
-  },
-  visibleStyle: {
-    opacity: 1,
-    transform: 'scale(1)'
-  }
-};
-
-// inherit EventEmitter
-extend( Outlayer.prototype, EventEmitter.prototype );
-
-/**
- * set options
- * @param {Object} opts
- */
-Outlayer.prototype.option = function( opts ) {
-  extend( this.options, opts );
-};
-
-Outlayer.prototype._create = function() {
-  // get items from children
-  this.reloadItems();
-  // elements that affect layout, but are not laid out
-  this.stamps = [];
-  this.stamp( this.options.stamp );
-  // set container style
-  extend( this.element.style, this.options.containerStyle );
-
-  // bind resize method
-  if ( this.options.isResizeBound ) {
-    this.bindResize();
-  }
-};
-
-// goes through all children again and gets bricks in proper order
-Outlayer.prototype.reloadItems = function() {
-  // collection of item elements
-  this.items = this._itemize( this.element.children );
-};
-
-
-/**
- * turn elements into Outlayer.Items to be used in layout
- * @param {Array or NodeList or HTMLElement} elems
- * @returns {Array} items - collection of new Outlayer Items
- */
-Outlayer.prototype._itemize = function( elems ) {
-
-  var itemElems = this._filterFindItemElements( elems );
-  var Item = this.constructor.Item;
-
-  // create new Outlayer Items for collection
-  var items = [];
-  for ( var i=0, len = itemElems.length; i < len; i++ ) {
-    var elem = itemElems[i];
-    var item = new Item( elem, this );
-    items.push( item );
-  }
-
-  return items;
-};
-
-/**
- * get item elements to be used in layout
- * @param {Array or NodeList or HTMLElement} elems
- * @returns {Array} items - item elements
- */
-Outlayer.prototype._filterFindItemElements = function( elems ) {
-  // make array of elems
-  elems = makeArray( elems );
-  var itemSelector = this.options.itemSelector;
-  var itemElems = [];
-
-  for ( var i=0, len = elems.length; i < len; i++ ) {
-    var elem = elems[i];
-    // check that elem is an actual element
-    if ( !isElement( elem ) ) {
-      continue;
-    }
-    // filter & find items if we have an item selector
-    if ( itemSelector ) {
-      // filter siblings
-      if ( matchesSelector( elem, itemSelector ) ) {
-        itemElems.push( elem );
-      }
-      // find children
-      var childElems = elem.querySelectorAll( itemSelector );
-      // concat childElems to filterFound array
-      for ( var j=0, jLen = childElems.length; j < jLen; j++ ) {
-        itemElems.push( childElems[j] );
-      }
-    } else {
-      itemElems.push( elem );
-    }
-  }
-
-  return itemElems;
-};
-
-/**
- * getter method for getting item elements
- * @returns {Array} elems - collection of item elements
- */
-Outlayer.prototype.getItemElements = function() {
-  var elems = [];
-  for ( var i=0, len = this.items.length; i < len; i++ ) {
-    elems.push( this.items[i].element );
-  }
-  return elems;
-};
-
-// ----- init & layout ----- //
-
-/**
- * lays out all items
- */
-Outlayer.prototype.layout = function() {
-  this._resetLayout();
-  this._manageStamps();
-
-  // don't animate first layout
-  var isInstant = this.options.isLayoutInstant !== undefined ?
-    this.options.isLayoutInstant : !this._isLayoutInited;
-  this.layoutItems( this.items, isInstant );
-
-  // flag for initalized
-  this._isLayoutInited = true;
-};
-
-// _init is alias for layout
-Outlayer.prototype._init = Outlayer.prototype.layout;
-
-/**
- * logic before any new layout
- */
-Outlayer.prototype._resetLayout = function() {
-  this.getSize();
-};
-
-
-Outlayer.prototype.getSize = function() {
-  this.size = getSize( this.element );
-};
-
-/**
- * get measurement from option, for columnWidth, rowHeight, gutter
- * if option is String -> get element from selector string, & get size of element
- * if option is Element -> get size of element
- * else use option as a number
- *
- * @param {String} measurement
- * @param {String} size - width or height
- * @private
- */
-Outlayer.prototype._getMeasurement = function( measurement, size ) {
-  var option = this.options[ measurement ];
-  var elem;
-  if ( !option ) {
-    // default to 0
-    this[ measurement ] = 0;
-  } else {
-    // use option as an element
-    if ( typeof option === 'string' ) {
-      elem = this.element.querySelector( option );
-    } else if ( isElement( option ) ) {
-      elem = option;
-    }
-    // use size of element, if element
-    this[ measurement ] = elem ? getSize( elem )[ size ] : option;
-  }
-};
-
-/**
- * layout a collection of item elements
- * @api public
- */
-Outlayer.prototype.layoutItems = function( items, isInstant ) {
-  items = this._getItemsForLayout( items );
-
-  this._layoutItems( items, isInstant );
-
-  this._postLayout();
-};
-
-/**
- * get the items to be laid out
- * you may want to skip over some items
- * @param {Array} items
- * @returns {Array} items
- */
-Outlayer.prototype._getItemsForLayout = function( items ) {
-  var layoutItems = [];
-  for ( var i=0, len = items.length; i < len; i++ ) {
-    var item = items[i];
-    if ( !item.isIgnored ) {
-      layoutItems.push( item );
-    }
-  }
-  return layoutItems;
-};
-
-/**
- * layout items
- * @param {Array} items
- * @param {Boolean} isInstant
- */
-Outlayer.prototype._layoutItems = function( items, isInstant ) {
-  var _this = this;
-  function onItemsLayout() {
-    _this.emitEvent( 'layoutComplete', [ _this, items ] );
-  }
-
-  if ( !items || !items.length ) {
-    // no items, emit event with empty array
-    onItemsLayout();
-    return;
-  }
-
-  // emit layoutComplete when done
-  this._itemsOn( items, 'layout', onItemsLayout );
-
-  var queue = [];
-
-  for ( var i=0, len = items.length; i < len; i++ ) {
-    var item = items[i];
-    // get x/y object from method
-    var position = this._getItemLayoutPosition( item );
-    // enqueue
-    position.item = item;
-    position.isInstant = isInstant || item.isLayoutInstant;
-    queue.push( position );
-  }
-
-  this._processLayoutQueue( queue );
-};
-
-/**
- * get item layout position
- * @param {Outlayer.Item} item
- * @returns {Object} x and y position
- */
-Outlayer.prototype._getItemLayoutPosition = function( /* item */ ) {
-  return {
-    x: 0,
-    y: 0
-  };
-};
-
-/**
- * iterate over array and position each item
- * Reason being - separating this logic prevents 'layout invalidation'
- * thx @paul_irish
- * @param {Array} queue
- */
-Outlayer.prototype._processLayoutQueue = function( queue ) {
-  for ( var i=0, len = queue.length; i < len; i++ ) {
-    var obj = queue[i];
-    this._positionItem( obj.item, obj.x, obj.y, obj.isInstant );
-  }
-};
-
-/**
- * Sets position of item in DOM
- * @param {Outlayer.Item} item
- * @param {Number} x - horizontal position
- * @param {Number} y - vertical position
- * @param {Boolean} isInstant - disables transitions
- */
-Outlayer.prototype._positionItem = function( item, x, y, isInstant ) {
-  if ( isInstant ) {
-    // if not transition, just set CSS
-    item.goTo( x, y );
-  } else {
-    item.moveTo( x, y );
-  }
-};
-
-/**
- * Any logic you want to do after each layout,
- * i.e. size the container
- */
-Outlayer.prototype._postLayout = function() {
-  this.resizeContainer();
-};
-
-Outlayer.prototype.resizeContainer = function() {
-  if ( !this.options.isResizingContainer ) {
-    return;
-  }
-  var size = this._getContainerSize();
-  if ( size ) {
-    this._setContainerMeasure( size.width, true );
-    this._setContainerMeasure( size.height, false );
-  }
-};
-
-/**
- * Sets width or height of container if returned
- * @returns {Object} size
- *   @param {Number} width
- *   @param {Number} height
- */
-Outlayer.prototype._getContainerSize = noop;
-
-/**
- * @param {Number} measure - size of width or height
- * @param {Boolean} isWidth
- */
-Outlayer.prototype._setContainerMeasure = function( measure, isWidth ) {
-  if ( measure === undefined ) {
-    return;
-  }
-
-  var elemSize = this.size;
-  // add padding and border width if border box
-  if ( elemSize.isBorderBox ) {
-    measure += isWidth ? elemSize.paddingLeft + elemSize.paddingRight +
-      elemSize.borderLeftWidth + elemSize.borderRightWidth :
-      elemSize.paddingBottom + elemSize.paddingTop +
-      elemSize.borderTopWidth + elemSize.borderBottomWidth;
-  }
-
-  measure = Math.max( measure, 0 );
-  this.element.style[ isWidth ? 'width' : 'height' ] = measure + 'px';
-};
-
-/**
- * trigger a callback for a collection of items events
- * @param {Array} items - Outlayer.Items
- * @param {String} eventName
- * @param {Function} callback
- */
-Outlayer.prototype._itemsOn = function( items, eventName, callback ) {
-  var doneCount = 0;
-  var count = items.length;
-  // event callback
-  var _this = this;
-  function tick() {
-    doneCount++;
-    if ( doneCount === count ) {
-      callback.call( _this );
-    }
-    return true; // bind once
-  }
-  // bind callback
-  for ( var i=0, len = items.length; i < len; i++ ) {
-    var item = items[i];
-    item.on( eventName, tick );
-  }
-};
-
-// -------------------------- ignore & stamps -------------------------- //
-
-
-/**
- * keep item in collection, but do not lay it out
- * ignored items do not get skipped in layout
- * @param {Element} elem
- */
-Outlayer.prototype.ignore = function( elem ) {
-  var item = this.getItem( elem );
-  if ( item ) {
-    item.isIgnored = true;
-  }
-};
-
-/**
- * return item to layout collection
- * @param {Element} elem
- */
-Outlayer.prototype.unignore = function( elem ) {
-  var item = this.getItem( elem );
-  if ( item ) {
-    delete item.isIgnored;
-  }
-};
-
-/**
- * adds elements to stamps
- * @param {NodeList, Array, Element, or String} elems
- */
-Outlayer.prototype.stamp = function( elems ) {
-  elems = this._find( elems );
-  if ( !elems ) {
-    return;
-  }
-
-  this.stamps = this.stamps.concat( elems );
-  // ignore
-  for ( var i=0, len = elems.length; i < len; i++ ) {
-    var elem = elems[i];
-    this.ignore( elem );
-  }
-};
-
-/**
- * removes elements to stamps
- * @param {NodeList, Array, or Element} elems
- */
-Outlayer.prototype.unstamp = function( elems ) {
-  elems = this._find( elems );
-  if ( !elems ){
-    return;
-  }
-
-  for ( var i=0, len = elems.length; i < len; i++ ) {
-    var elem = elems[i];
-    // filter out removed stamp elements
-    removeFrom( elem, this.stamps );
-    this.unignore( elem );
-  }
-
-};
-
-/**
- * finds child elements
- * @param {NodeList, Array, Element, or String} elems
- * @returns {Array} elems
- */
-Outlayer.prototype._find = function( elems ) {
-  if ( !elems ) {
-    return;
-  }
-  // if string, use argument as selector string
-  if ( typeof elems === 'string' ) {
-    elems = this.element.querySelectorAll( elems );
-  }
-  elems = makeArray( elems );
-  return elems;
-};
-
-Outlayer.prototype._manageStamps = function() {
-  if ( !this.stamps || !this.stamps.length ) {
-    return;
-  }
-
-  this._getBoundingRect();
-
-  for ( var i=0, len = this.stamps.length; i < len; i++ ) {
-    var stamp = this.stamps[i];
-    this._manageStamp( stamp );
-  }
-};
-
-// update boundingLeft / Top
-Outlayer.prototype._getBoundingRect = function() {
-  // get bounding rect for container element
-  var boundingRect = this.element.getBoundingClientRect();
-  var size = this.size;
-  this._boundingRect = {
-    left: boundingRect.left + size.paddingLeft + size.borderLeftWidth,
-    top: boundingRect.top + size.paddingTop + size.borderTopWidth,
-    right: boundingRect.right - ( size.paddingRight + size.borderRightWidth ),
-    bottom: boundingRect.bottom - ( size.paddingBottom + size.borderBottomWidth )
-  };
-};
-
-/**
- * @param {Element} stamp
-**/
-Outlayer.prototype._manageStamp = noop;
-
-/**
- * get x/y position of element relative to container element
- * @param {Element} elem
- * @returns {Object} offset - has left, top, right, bottom
- */
-Outlayer.prototype._getElementOffset = function( elem ) {
-  var boundingRect = elem.getBoundingClientRect();
-  var thisRect = this._boundingRect;
-  var size = getSize( elem );
-  var offset = {
-    left: boundingRect.left - thisRect.left - size.marginLeft,
-    top: boundingRect.top - thisRect.top - size.marginTop,
-    right: thisRect.right - boundingRect.right - size.marginRight,
-    bottom: thisRect.bottom - boundingRect.bottom - size.marginBottom
-  };
-  return offset;
-};
-
-// -------------------------- resize -------------------------- //
-
-// enable event handlers for listeners
-// i.e. resize -> onresize
-Outlayer.prototype.handleEvent = function( event ) {
-  var method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-/**
- * Bind layout to window resizing
- */
-Outlayer.prototype.bindResize = function() {
-  // bind just one listener
-  if ( this.isResizeBound ) {
-    return;
-  }
-  eventie.bind( window, 'resize', this );
-  this.isResizeBound = true;
-};
-
-/**
- * Unbind layout to window resizing
- */
-Outlayer.prototype.unbindResize = function() {
-  if ( this.isResizeBound ) {
-    eventie.unbind( window, 'resize', this );
-  }
-  this.isResizeBound = false;
-};
-
-// original debounce by John Hann
-// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-
-// this fires every resize
-Outlayer.prototype.onresize = function() {
-  if ( this.resizeTimeout ) {
-    clearTimeout( this.resizeTimeout );
-  }
-
-  var _this = this;
-  function delayed() {
-    _this.resize();
-    delete _this.resizeTimeout;
-  }
-
-  this.resizeTimeout = setTimeout( delayed, 100 );
-};
-
-// debounced, layout on resize
-Outlayer.prototype.resize = function() {
-  // don't trigger if size did not change
-  // or if resize was unbound. See #9
-
-  if ( !this.isResizeBound || !this.needsResizeLayout() ) {
-    return;
-  }
-
-  this.layout();
-};
-
-/**
- * check if layout is needed post layout
- * @returns Boolean
- */
-Outlayer.prototype.needsResizeLayout = function() {
-  var size = getSize( this.element );
-  // check that this.size and size are there
-  // IE8 triggers resize on body size change, so they might not be
-  var hasSizes = this.size && size;
-  return hasSizes && size.innerWidth !== this.size.innerWidth;
-};
-
-// -------------------------- methods -------------------------- //
-
-/**
- * add items to Outlayer instance
- * @param {Array or NodeList or Element} elems
- * @returns {Array} items - Outlayer.Items
-**/
-Outlayer.prototype.addItems = function( elems ) {
-  var items = this._itemize( elems );
-  // add items to collection
-  if ( items.length ) {
-    this.items = this.items.concat( items );
-  }
-  return items;
-};
-
-/**
- * Layout newly-appended item elements
- * @param {Array or NodeList or Element} elems
- */
-Outlayer.prototype.appended = function( elems ) {
-  var items = this.addItems( elems );
-  if ( !items.length ) {
-    return;
-  }
-  // layout and reveal just the new items
-  this.layoutItems( items, true );
-  this.reveal( items );
-};
-
-/**
- * Layout prepended elements
- * @param {Array or NodeList or Element} elems
- */
-Outlayer.prototype.prepended = function( elems ) {
-  var items = this._itemize( elems );
-  if ( !items.length ) {
-    return;
-  }
-  // add items to beginning of collection
-  var previousItems = this.items.slice(0);
-  this.items = items.concat( previousItems );
-  // start new layout
-  this._resetLayout();
-  this._manageStamps();
-  // layout new stuff without transition
-  this.layoutItems( items, true );
-  this.reveal( items );
-  // layout previous items
-  this.layoutItems( previousItems );
-};
-
-/**
- * reveal a collection of items
- * @param {Array of Outlayer.Items} items
- */
-Outlayer.prototype.reveal = function( items ) {
-  var len = items && items.length;
-  if ( !len ) {
-    return;
-  }
-  for ( var i=0; i < len; i++ ) {
-    var item = items[i];
-    item.reveal();
-  }
-};
-
-/**
- * hide a collection of items
- * @param {Array of Outlayer.Items} items
- */
-Outlayer.prototype.hide = function( items ) {
-  var len = items && items.length;
-  if ( !len ) {
-    return;
-  }
-  for ( var i=0; i < len; i++ ) {
-    var item = items[i];
-    item.hide();
-  }
-};
-
-/**
- * get Outlayer.Item, given an Element
- * @param {Element} elem
- * @param {Function} callback
- * @returns {Outlayer.Item} item
- */
-Outlayer.prototype.getItem = function( elem ) {
-  // loop through items to get the one that matches
-  for ( var i=0, len = this.items.length; i < len; i++ ) {
-    var item = this.items[i];
-    if ( item.element === elem ) {
-      // return item
-      return item;
-    }
-  }
-};
-
-/**
- * get collection of Outlayer.Items, given Elements
- * @param {Array} elems
- * @returns {Array} items - Outlayer.Items
- */
-Outlayer.prototype.getItems = function( elems ) {
-  if ( !elems || !elems.length ) {
-    return;
-  }
-  var items = [];
-  for ( var i=0, len = elems.length; i < len; i++ ) {
-    var elem = elems[i];
-    var item = this.getItem( elem );
-    if ( item ) {
-      items.push( item );
-    }
-  }
-
-  return items;
-};
-
-/**
- * remove element(s) from instance and DOM
- * @param {Array or NodeList or Element} elems
- */
-Outlayer.prototype.remove = function( elems ) {
-  elems = makeArray( elems );
-
-  var removeItems = this.getItems( elems );
-  // bail if no items to remove
-  if ( !removeItems || !removeItems.length ) {
-    return;
-  }
-
-  this._itemsOn( removeItems, 'remove', function() {
-    this.emitEvent( 'removeComplete', [ this, removeItems ] );
-  });
-
-  for ( var i=0, len = removeItems.length; i < len; i++ ) {
-    var item = removeItems[i];
-    item.remove();
-    // remove item from collection
-    removeFrom( item, this.items );
-  }
-};
-
-// ----- destroy ----- //
-
-// remove and disable Outlayer instance
-Outlayer.prototype.destroy = function() {
-  // clean up dynamic styles
-  var style = this.element.style;
-  style.height = '';
-  style.position = '';
-  style.width = '';
-  // destroy items
-  for ( var i=0, len = this.items.length; i < len; i++ ) {
-    var item = this.items[i];
-    item.destroy();
-  }
-
-  this.unbindResize();
-
-  delete this.element.outlayerGUID;
-  // remove data for jQuery
-  if ( jQuery ) {
-    jQuery.removeData( this.element, this.constructor.namespace );
-  }
-
-};
-
-// -------------------------- data -------------------------- //
-
-/**
- * get Outlayer instance from element
- * @param {Element} elem
- * @returns {Outlayer}
- */
-Outlayer.data = function( elem ) {
-  var id = elem && elem.outlayerGUID;
-  return id && instances[ id ];
-};
-
-
-// -------------------------- create Outlayer class -------------------------- //
-
-/**
- * create a layout class
- * @param {String} namespace
- */
-Outlayer.create = function( namespace, options ) {
-  // sub-class Outlayer
-  function Layout() {
-    Outlayer.apply( this, arguments );
-  }
-  // inherit Outlayer prototype, use Object.create if there
-  if ( Object.create ) {
-    Layout.prototype = Object.create( Outlayer.prototype );
-  } else {
-    extend( Layout.prototype, Outlayer.prototype );
-  }
-  // set contructor, used for namespace and Item
-  Layout.prototype.constructor = Layout;
-
-  Layout.defaults = extend( {}, Outlayer.defaults );
-  // apply new options
-  extend( Layout.defaults, options );
-  // keep prototype.settings for backwards compatibility (Packery v1.2.0)
-  Layout.prototype.settings = {};
-
-  Layout.namespace = namespace;
-
-  Layout.data = Outlayer.data;
-
-  // sub-class Item
-  Layout.Item = function LayoutItem() {
-    Item.apply( this, arguments );
-  };
-
-  Layout.Item.prototype = new Item();
-
-  // -------------------------- declarative -------------------------- //
-
-  /**
-   * allow user to initialize Outlayer via .js-namespace class
-   * options are parsed from data-namespace-option attribute
-   */
-  docReady( function() {
-    var dashedNamespace = toDashed( namespace );
-    var elems = document.querySelectorAll( '.js-' + dashedNamespace );
-    var dataAttr = 'data-' + dashedNamespace + '-options';
-
-    for ( var i=0, len = elems.length; i < len; i++ ) {
-      var elem = elems[i];
-      var attr = elem.getAttribute( dataAttr );
-      var options;
-      try {
-        options = attr && JSON.parse( attr );
-      } catch ( error ) {
-        // log error, do not initialize
-        if ( console ) {
-          console.error( 'Error parsing ' + dataAttr + ' on ' +
-            elem.nodeName.toLowerCase() + ( elem.id ? '#' + elem.id : '' ) + ': ' +
-            error );
-        }
-        continue;
-      }
-      // initialize
-      var instance = new Layout( elem, options );
-      // make available via $().data('layoutname')
-      if ( jQuery ) {
-        jQuery.data( elem, namespace, instance );
-      }
-    }
-  });
-
-  // -------------------------- jQuery bridge -------------------------- //
-
-  // make into jQuery plugin
-  if ( jQuery && jQuery.bridget ) {
-    jQuery.bridget( namespace, Layout );
-  }
-
-  return Layout;
-};
-
-// ----- fin ----- //
-
-// back in global
-Outlayer.Item = Item;
-
-return Outlayer;
-
-}
-
-// -------------------------- transport -------------------------- //
-
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( 'outlayer/outlayer',[
-      'eventie/eventie',
-      'doc-ready/doc-ready',
-      'eventEmitter/EventEmitter',
-      'get-size/get-size',
-      'matches-selector/matches-selector',
-      './item'
-    ],
-    outlayerDefinition );
-} else {
-  // browser global
-  window.Outlayer = outlayerDefinition(
-    window.eventie,
-    window.docReady,
-    window.EventEmitter,
-    window.getSize,
-    window.matchesSelector,
-    window.Outlayer.Item
-  );
-}
-
-})( window );
-
-/*!
- * Masonry v3.1.5
- * Cascading grid layout library
- * http://masonry.desandro.com
- * MIT License
- * by David DeSandro
- */
-
-( function( window ) {
-
-
-
-// -------------------------- helpers -------------------------- //
-
-var indexOf = Array.prototype.indexOf ?
-  function( items, value ) {
-    return items.indexOf( value );
-  } :
-  function ( items, value ) {
-    for ( var i=0, len = items.length; i < len; i++ ) {
-      var item = items[i];
-      if ( item === value ) {
-        return i;
-      }
-    }
-    return -1;
-  };
-
-// -------------------------- masonryDefinition -------------------------- //
-
-// used for AMD definition and requires
-function masonryDefinition( Outlayer, getSize ) {
-  // create an Outlayer layout class
-  var Masonry = Outlayer.create('masonry');
-
-  Masonry.prototype._resetLayout = function() {
-    this.getSize();
-    this._getMeasurement( 'columnWidth', 'outerWidth' );
-    this._getMeasurement( 'gutter', 'outerWidth' );
-    this.measureColumns();
-
-    // reset column Y
-    var i = this.cols;
-    this.colYs = [];
-    while (i--) {
-      this.colYs.push( 0 );
-    }
-
-    this.maxY = 0;
-  };
-
-  Masonry.prototype.measureColumns = function() {
-    this.getContainerWidth();
-    // if columnWidth is 0, default to outerWidth of first item
-    if ( !this.columnWidth ) {
-      var firstItem = this.items[0];
-      var firstItemElem = firstItem && firstItem.element;
-      // columnWidth fall back to item of first element
-      this.columnWidth = firstItemElem && getSize( firstItemElem ).outerWidth ||
-        // if first elem has no width, default to size of container
-        this.containerWidth;
-    }
-
-    this.columnWidth += this.gutter;
-
-    this.cols = Math.floor( ( this.containerWidth + this.gutter ) / this.columnWidth );
-    this.cols = Math.max( this.cols, 1 );
-  };
-
-  Masonry.prototype.getContainerWidth = function() {
-    // container is parent if fit width
-    var container = this.options.isFitWidth ? this.element.parentNode : this.element;
-    // check that this.size and size are there
-    // IE8 triggers resize on body size change, so they might not be
-    var size = getSize( container );
-    this.containerWidth = size && size.innerWidth;
-  };
-
-  Masonry.prototype._getItemLayoutPosition = function( item ) {
-    item.getSize();
-    // how many columns does this brick span
-    var remainder = item.size.outerWidth % this.columnWidth;
-    var mathMethod = remainder && remainder < 1 ? 'round' : 'ceil';
-    // round if off by 1 pixel, otherwise use ceil
-    var colSpan = Math[ mathMethod ]( item.size.outerWidth / this.columnWidth );
-    colSpan = Math.min( colSpan, this.cols );
-
-    var colGroup = this._getColGroup( colSpan );
-    // get the minimum Y value from the columns
-    var minimumY = Math.min.apply( Math, colGroup );
-    var shortColIndex = indexOf( colGroup, minimumY );
-
-    // position the brick
-    var position = {
-      x: this.columnWidth * shortColIndex,
-      y: minimumY
-    };
-
-    // apply setHeight to necessary columns
-    var setHeight = minimumY + item.size.outerHeight;
-    var setSpan = this.cols + 1 - colGroup.length;
-    for ( var i = 0; i < setSpan; i++ ) {
-      this.colYs[ shortColIndex + i ] = setHeight;
-    }
-
-    return position;
-  };
-
-  /**
-   * @param {Number} colSpan - number of columns the element spans
-   * @returns {Array} colGroup
-   */
-  Masonry.prototype._getColGroup = function( colSpan ) {
-    if ( colSpan < 2 ) {
-      // if brick spans only one column, use all the column Ys
-      return this.colYs;
-    }
-
-    var colGroup = [];
-    // how many different places could this brick fit horizontally
-    var groupCount = this.cols + 1 - colSpan;
-    // for each group potential horizontal position
-    for ( var i = 0; i < groupCount; i++ ) {
-      // make an array of colY values for that one group
-      var groupColYs = this.colYs.slice( i, i + colSpan );
-      // and get the max value of the array
-      colGroup[i] = Math.max.apply( Math, groupColYs );
-    }
-    return colGroup;
-  };
-
-  Masonry.prototype._manageStamp = function( stamp ) {
-    var stampSize = getSize( stamp );
-    var offset = this._getElementOffset( stamp );
-    // get the columns that this stamp affects
-    var firstX = this.options.isOriginLeft ? offset.left : offset.right;
-    var lastX = firstX + stampSize.outerWidth;
-    var firstCol = Math.floor( firstX / this.columnWidth );
-    firstCol = Math.max( 0, firstCol );
-    var lastCol = Math.floor( lastX / this.columnWidth );
-    // lastCol should not go over if multiple of columnWidth #425
-    lastCol -= lastX % this.columnWidth ? 0 : 1;
-    lastCol = Math.min( this.cols - 1, lastCol );
-    // set colYs to bottom of the stamp
-    var stampMaxY = ( this.options.isOriginTop ? offset.top : offset.bottom ) +
-      stampSize.outerHeight;
-    for ( var i = firstCol; i <= lastCol; i++ ) {
-      this.colYs[i] = Math.max( stampMaxY, this.colYs[i] );
-    }
-  };
-
-  Masonry.prototype._getContainerSize = function() {
-    this.maxY = Math.max.apply( Math, this.colYs );
-    var size = {
-      height: this.maxY
-    };
-
-    if ( this.options.isFitWidth ) {
-      size.width = this._getContainerFitWidth();
-    }
-
-    return size;
-  };
-
-  Masonry.prototype._getContainerFitWidth = function() {
-    var unusedCols = 0;
-    // count unused columns
-    var i = this.cols;
-    while ( --i ) {
-      if ( this.colYs[i] !== 0 ) {
-        break;
-      }
-      unusedCols++;
-    }
-    // fit container to columns that have been used
-    return ( this.cols - unusedCols ) * this.columnWidth - this.gutter;
-  };
-
-  Masonry.prototype.needsResizeLayout = function() {
-    var previousWidth = this.containerWidth;
-    this.getContainerWidth();
-    return previousWidth !== this.containerWidth;
-  };
-
-  return Masonry;
-}
-
-// -------------------------- transport -------------------------- //
-
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( [
-      'outlayer/outlayer',
-      'get-size/get-size'
-    ],
-    masonryDefinition );
-} else {
-  // browser global
-  window.Masonry = masonryDefinition(
-    window.Outlayer,
-    window.getSize
-  );
-}
-
-})( window );
-
-;Reed.controller('Add', function ($scope, $timeout, Api, State, Overlay) {
-
-	$scope.state = State.status;
-	$scope.form = {};
+;//! moment.js
+//! version : 2.6.0
+//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
+//! license : MIT
+//! momentjs.com
+(function(a){function b(){return{empty:!1,unusedTokens:[],unusedInput:[],overflow:-2,charsLeftOver:0,nullInput:!1,invalidMonth:null,invalidFormat:!1,userInvalidated:!1,iso:!1}}function c(a,b){function c(){ib.suppressDeprecationWarnings===!1&&"undefined"!=typeof console&&console.warn&&console.warn("Deprecation warning: "+a)}var d=!0;return i(function(){return d&&(c(),d=!1),b.apply(this,arguments)},b)}function d(a,b){return function(c){return l(a.call(this,c),b)}}function e(a,b){return function(c){return this.lang().ordinal(a.call(this,c),b)}}function f(){}function g(a){y(a),i(this,a)}function h(a){var b=r(a),c=b.year||0,d=b.quarter||0,e=b.month||0,f=b.week||0,g=b.day||0,h=b.hour||0,i=b.minute||0,j=b.second||0,k=b.millisecond||0;this._milliseconds=+k+1e3*j+6e4*i+36e5*h,this._days=+g+7*f,this._months=+e+3*d+12*c,this._data={},this._bubble()}function i(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c]);return b.hasOwnProperty("toString")&&(a.toString=b.toString),b.hasOwnProperty("valueOf")&&(a.valueOf=b.valueOf),a}function j(a){var b,c={};for(b in a)a.hasOwnProperty(b)&&wb.hasOwnProperty(b)&&(c[b]=a[b]);return c}function k(a){return 0>a?Math.ceil(a):Math.floor(a)}function l(a,b,c){for(var d=""+Math.abs(a),e=a>=0;d.length<b;)d="0"+d;return(e?c?"+":"":"-")+d}function m(a,b,c,d){var e=b._milliseconds,f=b._days,g=b._months;d=null==d?!0:d,e&&a._d.setTime(+a._d+e*c),f&&db(a,"Date",cb(a,"Date")+f*c),g&&bb(a,cb(a,"Month")+g*c),d&&ib.updateOffset(a,f||g)}function n(a){return"[object Array]"===Object.prototype.toString.call(a)}function o(a){return"[object Date]"===Object.prototype.toString.call(a)||a instanceof Date}function p(a,b,c){var d,e=Math.min(a.length,b.length),f=Math.abs(a.length-b.length),g=0;for(d=0;e>d;d++)(c&&a[d]!==b[d]||!c&&t(a[d])!==t(b[d]))&&g++;return g+f}function q(a){if(a){var b=a.toLowerCase().replace(/(.)s$/,"$1");a=Zb[a]||$b[b]||b}return a}function r(a){var b,c,d={};for(c in a)a.hasOwnProperty(c)&&(b=q(c),b&&(d[b]=a[c]));return d}function s(b){var c,d;if(0===b.indexOf("week"))c=7,d="day";else{if(0!==b.indexOf("month"))return;c=12,d="month"}ib[b]=function(e,f){var g,h,i=ib.fn._lang[b],j=[];if("number"==typeof e&&(f=e,e=a),h=function(a){var b=ib().utc().set(d,a);return i.call(ib.fn._lang,b,e||"")},null!=f)return h(f);for(g=0;c>g;g++)j.push(h(g));return j}}function t(a){var b=+a,c=0;return 0!==b&&isFinite(b)&&(c=b>=0?Math.floor(b):Math.ceil(b)),c}function u(a,b){return new Date(Date.UTC(a,b+1,0)).getUTCDate()}function v(a,b,c){return $(ib([a,11,31+b-c]),b,c).week}function w(a){return x(a)?366:365}function x(a){return a%4===0&&a%100!==0||a%400===0}function y(a){var b;a._a&&-2===a._pf.overflow&&(b=a._a[pb]<0||a._a[pb]>11?pb:a._a[qb]<1||a._a[qb]>u(a._a[ob],a._a[pb])?qb:a._a[rb]<0||a._a[rb]>23?rb:a._a[sb]<0||a._a[sb]>59?sb:a._a[tb]<0||a._a[tb]>59?tb:a._a[ub]<0||a._a[ub]>999?ub:-1,a._pf._overflowDayOfYear&&(ob>b||b>qb)&&(b=qb),a._pf.overflow=b)}function z(a){return null==a._isValid&&(a._isValid=!isNaN(a._d.getTime())&&a._pf.overflow<0&&!a._pf.empty&&!a._pf.invalidMonth&&!a._pf.nullInput&&!a._pf.invalidFormat&&!a._pf.userInvalidated,a._strict&&(a._isValid=a._isValid&&0===a._pf.charsLeftOver&&0===a._pf.unusedTokens.length)),a._isValid}function A(a){return a?a.toLowerCase().replace("_","-"):a}function B(a,b){return b._isUTC?ib(a).zone(b._offset||0):ib(a).local()}function C(a,b){return b.abbr=a,vb[a]||(vb[a]=new f),vb[a].set(b),vb[a]}function D(a){delete vb[a]}function E(a){var b,c,d,e,f=0,g=function(a){if(!vb[a]&&xb)try{require("./lang/"+a)}catch(b){}return vb[a]};if(!a)return ib.fn._lang;if(!n(a)){if(c=g(a))return c;a=[a]}for(;f<a.length;){for(e=A(a[f]).split("-"),b=e.length,d=A(a[f+1]),d=d?d.split("-"):null;b>0;){if(c=g(e.slice(0,b).join("-")))return c;if(d&&d.length>=b&&p(e,d,!0)>=b-1)break;b--}f++}return ib.fn._lang}function F(a){return a.match(/\[[\s\S]/)?a.replace(/^\[|\]$/g,""):a.replace(/\\/g,"")}function G(a){var b,c,d=a.match(Bb);for(b=0,c=d.length;c>b;b++)d[b]=cc[d[b]]?cc[d[b]]:F(d[b]);return function(e){var f="";for(b=0;c>b;b++)f+=d[b]instanceof Function?d[b].call(e,a):d[b];return f}}function H(a,b){return a.isValid()?(b=I(b,a.lang()),_b[b]||(_b[b]=G(b)),_b[b](a)):a.lang().invalidDate()}function I(a,b){function c(a){return b.longDateFormat(a)||a}var d=5;for(Cb.lastIndex=0;d>=0&&Cb.test(a);)a=a.replace(Cb,c),Cb.lastIndex=0,d-=1;return a}function J(a,b){var c,d=b._strict;switch(a){case"Q":return Nb;case"DDDD":return Pb;case"YYYY":case"GGGG":case"gggg":return d?Qb:Fb;case"Y":case"G":case"g":return Sb;case"YYYYYY":case"YYYYY":case"GGGGG":case"ggggg":return d?Rb:Gb;case"S":if(d)return Nb;case"SS":if(d)return Ob;case"SSS":if(d)return Pb;case"DDD":return Eb;case"MMM":case"MMMM":case"dd":case"ddd":case"dddd":return Ib;case"a":case"A":return E(b._l)._meridiemParse;case"X":return Lb;case"Z":case"ZZ":return Jb;case"T":return Kb;case"SSSS":return Hb;case"MM":case"DD":case"YY":case"GG":case"gg":case"HH":case"hh":case"mm":case"ss":case"ww":case"WW":return d?Ob:Db;case"M":case"D":case"d":case"H":case"h":case"m":case"s":case"w":case"W":case"e":case"E":return Db;case"Do":return Mb;default:return c=new RegExp(R(Q(a.replace("\\","")),"i"))}}function K(a){a=a||"";var b=a.match(Jb)||[],c=b[b.length-1]||[],d=(c+"").match(Xb)||["-",0,0],e=+(60*d[1])+t(d[2]);return"+"===d[0]?-e:e}function L(a,b,c){var d,e=c._a;switch(a){case"Q":null!=b&&(e[pb]=3*(t(b)-1));break;case"M":case"MM":null!=b&&(e[pb]=t(b)-1);break;case"MMM":case"MMMM":d=E(c._l).monthsParse(b),null!=d?e[pb]=d:c._pf.invalidMonth=b;break;case"D":case"DD":null!=b&&(e[qb]=t(b));break;case"Do":null!=b&&(e[qb]=t(parseInt(b,10)));break;case"DDD":case"DDDD":null!=b&&(c._dayOfYear=t(b));break;case"YY":e[ob]=ib.parseTwoDigitYear(b);break;case"YYYY":case"YYYYY":case"YYYYYY":e[ob]=t(b);break;case"a":case"A":c._isPm=E(c._l).isPM(b);break;case"H":case"HH":case"h":case"hh":e[rb]=t(b);break;case"m":case"mm":e[sb]=t(b);break;case"s":case"ss":e[tb]=t(b);break;case"S":case"SS":case"SSS":case"SSSS":e[ub]=t(1e3*("0."+b));break;case"X":c._d=new Date(1e3*parseFloat(b));break;case"Z":case"ZZ":c._useUTC=!0,c._tzm=K(b);break;case"w":case"ww":case"W":case"WW":case"d":case"dd":case"ddd":case"dddd":case"e":case"E":a=a.substr(0,1);case"gg":case"gggg":case"GG":case"GGGG":case"GGGGG":a=a.substr(0,2),b&&(c._w=c._w||{},c._w[a]=b)}}function M(a){var b,c,d,e,f,g,h,i,j,k,l=[];if(!a._d){for(d=O(a),a._w&&null==a._a[qb]&&null==a._a[pb]&&(f=function(b){var c=parseInt(b,10);return b?b.length<3?c>68?1900+c:2e3+c:c:null==a._a[ob]?ib().weekYear():a._a[ob]},g=a._w,null!=g.GG||null!=g.W||null!=g.E?h=_(f(g.GG),g.W||1,g.E,4,1):(i=E(a._l),j=null!=g.d?X(g.d,i):null!=g.e?parseInt(g.e,10)+i._week.dow:0,k=parseInt(g.w,10)||1,null!=g.d&&j<i._week.dow&&k++,h=_(f(g.gg),k,j,i._week.doy,i._week.dow)),a._a[ob]=h.year,a._dayOfYear=h.dayOfYear),a._dayOfYear&&(e=null==a._a[ob]?d[ob]:a._a[ob],a._dayOfYear>w(e)&&(a._pf._overflowDayOfYear=!0),c=W(e,0,a._dayOfYear),a._a[pb]=c.getUTCMonth(),a._a[qb]=c.getUTCDate()),b=0;3>b&&null==a._a[b];++b)a._a[b]=l[b]=d[b];for(;7>b;b++)a._a[b]=l[b]=null==a._a[b]?2===b?1:0:a._a[b];l[rb]+=t((a._tzm||0)/60),l[sb]+=t((a._tzm||0)%60),a._d=(a._useUTC?W:V).apply(null,l)}}function N(a){var b;a._d||(b=r(a._i),a._a=[b.year,b.month,b.day,b.hour,b.minute,b.second,b.millisecond],M(a))}function O(a){var b=new Date;return a._useUTC?[b.getUTCFullYear(),b.getUTCMonth(),b.getUTCDate()]:[b.getFullYear(),b.getMonth(),b.getDate()]}function P(a){a._a=[],a._pf.empty=!0;var b,c,d,e,f,g=E(a._l),h=""+a._i,i=h.length,j=0;for(d=I(a._f,g).match(Bb)||[],b=0;b<d.length;b++)e=d[b],c=(h.match(J(e,a))||[])[0],c&&(f=h.substr(0,h.indexOf(c)),f.length>0&&a._pf.unusedInput.push(f),h=h.slice(h.indexOf(c)+c.length),j+=c.length),cc[e]?(c?a._pf.empty=!1:a._pf.unusedTokens.push(e),L(e,c,a)):a._strict&&!c&&a._pf.unusedTokens.push(e);a._pf.charsLeftOver=i-j,h.length>0&&a._pf.unusedInput.push(h),a._isPm&&a._a[rb]<12&&(a._a[rb]+=12),a._isPm===!1&&12===a._a[rb]&&(a._a[rb]=0),M(a),y(a)}function Q(a){return a.replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,function(a,b,c,d,e){return b||c||d||e})}function R(a){return a.replace(/[-\/\\^$*+?.()|[\]{}]/g,"\\$&")}function S(a){var c,d,e,f,g;if(0===a._f.length)return a._pf.invalidFormat=!0,void(a._d=new Date(0/0));for(f=0;f<a._f.length;f++)g=0,c=i({},a),c._pf=b(),c._f=a._f[f],P(c),z(c)&&(g+=c._pf.charsLeftOver,g+=10*c._pf.unusedTokens.length,c._pf.score=g,(null==e||e>g)&&(e=g,d=c));i(a,d||c)}function T(a){var b,c,d=a._i,e=Tb.exec(d);if(e){for(a._pf.iso=!0,b=0,c=Vb.length;c>b;b++)if(Vb[b][1].exec(d)){a._f=Vb[b][0]+(e[6]||" ");break}for(b=0,c=Wb.length;c>b;b++)if(Wb[b][1].exec(d)){a._f+=Wb[b][0];break}d.match(Jb)&&(a._f+="Z"),P(a)}else ib.createFromInputFallback(a)}function U(b){var c=b._i,d=yb.exec(c);c===a?b._d=new Date:d?b._d=new Date(+d[1]):"string"==typeof c?T(b):n(c)?(b._a=c.slice(0),M(b)):o(c)?b._d=new Date(+c):"object"==typeof c?N(b):"number"==typeof c?b._d=new Date(c):ib.createFromInputFallback(b)}function V(a,b,c,d,e,f,g){var h=new Date(a,b,c,d,e,f,g);return 1970>a&&h.setFullYear(a),h}function W(a){var b=new Date(Date.UTC.apply(null,arguments));return 1970>a&&b.setUTCFullYear(a),b}function X(a,b){if("string"==typeof a)if(isNaN(a)){if(a=b.weekdaysParse(a),"number"!=typeof a)return null}else a=parseInt(a,10);return a}function Y(a,b,c,d,e){return e.relativeTime(b||1,!!c,a,d)}function Z(a,b,c){var d=nb(Math.abs(a)/1e3),e=nb(d/60),f=nb(e/60),g=nb(f/24),h=nb(g/365),i=45>d&&["s",d]||1===e&&["m"]||45>e&&["mm",e]||1===f&&["h"]||22>f&&["hh",f]||1===g&&["d"]||25>=g&&["dd",g]||45>=g&&["M"]||345>g&&["MM",nb(g/30)]||1===h&&["y"]||["yy",h];return i[2]=b,i[3]=a>0,i[4]=c,Y.apply({},i)}function $(a,b,c){var d,e=c-b,f=c-a.day();return f>e&&(f-=7),e-7>f&&(f+=7),d=ib(a).add("d",f),{week:Math.ceil(d.dayOfYear()/7),year:d.year()}}function _(a,b,c,d,e){var f,g,h=W(a,0,1).getUTCDay();return c=null!=c?c:e,f=e-h+(h>d?7:0)-(e>h?7:0),g=7*(b-1)+(c-e)+f+1,{year:g>0?a:a-1,dayOfYear:g>0?g:w(a-1)+g}}function ab(b){var c=b._i,d=b._f;return null===c||d===a&&""===c?ib.invalid({nullInput:!0}):("string"==typeof c&&(b._i=c=E().preparse(c)),ib.isMoment(c)?(b=j(c),b._d=new Date(+c._d)):d?n(d)?S(b):P(b):U(b),new g(b))}function bb(a,b){var c;return"string"==typeof b&&(b=a.lang().monthsParse(b),"number"!=typeof b)?a:(c=Math.min(a.date(),u(a.year(),b)),a._d["set"+(a._isUTC?"UTC":"")+"Month"](b,c),a)}function cb(a,b){return a._d["get"+(a._isUTC?"UTC":"")+b]()}function db(a,b,c){return"Month"===b?bb(a,c):a._d["set"+(a._isUTC?"UTC":"")+b](c)}function eb(a,b){return function(c){return null!=c?(db(this,a,c),ib.updateOffset(this,b),this):cb(this,a)}}function fb(a){ib.duration.fn[a]=function(){return this._data[a]}}function gb(a,b){ib.duration.fn["as"+a]=function(){return+this/b}}function hb(a){"undefined"==typeof ender&&(jb=mb.moment,mb.moment=a?c("Accessing Moment through the global scope is deprecated, and will be removed in an upcoming release.",ib):ib)}for(var ib,jb,kb,lb="2.6.0",mb="undefined"!=typeof global?global:this,nb=Math.round,ob=0,pb=1,qb=2,rb=3,sb=4,tb=5,ub=6,vb={},wb={_isAMomentObject:null,_i:null,_f:null,_l:null,_strict:null,_isUTC:null,_offset:null,_pf:null,_lang:null},xb="undefined"!=typeof module&&module.exports,yb=/^\/?Date\((\-?\d+)/i,zb=/(\-)?(?:(\d*)\.)?(\d+)\:(\d+)(?:\:(\d+)\.?(\d{3})?)?/,Ab=/^(-)?P(?:(?:([0-9,.]*)Y)?(?:([0-9,.]*)M)?(?:([0-9,.]*)D)?(?:T(?:([0-9,.]*)H)?(?:([0-9,.]*)M)?(?:([0-9,.]*)S)?)?|([0-9,.]*)W)$/,Bb=/(\[[^\[]*\])|(\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Q|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|mm?|ss?|S{1,4}|X|zz?|ZZ?|.)/g,Cb=/(\[[^\[]*\])|(\\)?(LT|LL?L?L?|l{1,4})/g,Db=/\d\d?/,Eb=/\d{1,3}/,Fb=/\d{1,4}/,Gb=/[+\-]?\d{1,6}/,Hb=/\d+/,Ib=/[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i,Jb=/Z|[\+\-]\d\d:?\d\d/gi,Kb=/T/i,Lb=/[\+\-]?\d+(\.\d{1,3})?/,Mb=/\d{1,2}/,Nb=/\d/,Ob=/\d\d/,Pb=/\d{3}/,Qb=/\d{4}/,Rb=/[+-]?\d{6}/,Sb=/[+-]?\d+/,Tb=/^\s*(?:[+-]\d{6}|\d{4})-(?:(\d\d-\d\d)|(W\d\d$)|(W\d\d-\d)|(\d\d\d))((T| )(\d\d(:\d\d(:\d\d(\.\d+)?)?)?)?([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/,Ub="YYYY-MM-DDTHH:mm:ssZ",Vb=[["YYYYYY-MM-DD",/[+-]\d{6}-\d{2}-\d{2}/],["YYYY-MM-DD",/\d{4}-\d{2}-\d{2}/],["GGGG-[W]WW-E",/\d{4}-W\d{2}-\d/],["GGGG-[W]WW",/\d{4}-W\d{2}/],["YYYY-DDD",/\d{4}-\d{3}/]],Wb=[["HH:mm:ss.SSSS",/(T| )\d\d:\d\d:\d\d\.\d+/],["HH:mm:ss",/(T| )\d\d:\d\d:\d\d/],["HH:mm",/(T| )\d\d:\d\d/],["HH",/(T| )\d\d/]],Xb=/([\+\-]|\d\d)/gi,Yb=("Date|Hours|Minutes|Seconds|Milliseconds".split("|"),{Milliseconds:1,Seconds:1e3,Minutes:6e4,Hours:36e5,Days:864e5,Months:2592e6,Years:31536e6}),Zb={ms:"millisecond",s:"second",m:"minute",h:"hour",d:"day",D:"date",w:"week",W:"isoWeek",M:"month",Q:"quarter",y:"year",DDD:"dayOfYear",e:"weekday",E:"isoWeekday",gg:"weekYear",GG:"isoWeekYear"},$b={dayofyear:"dayOfYear",isoweekday:"isoWeekday",isoweek:"isoWeek",weekyear:"weekYear",isoweekyear:"isoWeekYear"},_b={},ac="DDD w W M D d".split(" "),bc="M D H h m s w W".split(" "),cc={M:function(){return this.month()+1},MMM:function(a){return this.lang().monthsShort(this,a)},MMMM:function(a){return this.lang().months(this,a)},D:function(){return this.date()},DDD:function(){return this.dayOfYear()},d:function(){return this.day()},dd:function(a){return this.lang().weekdaysMin(this,a)},ddd:function(a){return this.lang().weekdaysShort(this,a)},dddd:function(a){return this.lang().weekdays(this,a)},w:function(){return this.week()},W:function(){return this.isoWeek()},YY:function(){return l(this.year()%100,2)},YYYY:function(){return l(this.year(),4)},YYYYY:function(){return l(this.year(),5)},YYYYYY:function(){var a=this.year(),b=a>=0?"+":"-";return b+l(Math.abs(a),6)},gg:function(){return l(this.weekYear()%100,2)},gggg:function(){return l(this.weekYear(),4)},ggggg:function(){return l(this.weekYear(),5)},GG:function(){return l(this.isoWeekYear()%100,2)},GGGG:function(){return l(this.isoWeekYear(),4)},GGGGG:function(){return l(this.isoWeekYear(),5)},e:function(){return this.weekday()},E:function(){return this.isoWeekday()},a:function(){return this.lang().meridiem(this.hours(),this.minutes(),!0)},A:function(){return this.lang().meridiem(this.hours(),this.minutes(),!1)},H:function(){return this.hours()},h:function(){return this.hours()%12||12},m:function(){return this.minutes()},s:function(){return this.seconds()},S:function(){return t(this.milliseconds()/100)},SS:function(){return l(t(this.milliseconds()/10),2)},SSS:function(){return l(this.milliseconds(),3)},SSSS:function(){return l(this.milliseconds(),3)},Z:function(){var a=-this.zone(),b="+";return 0>a&&(a=-a,b="-"),b+l(t(a/60),2)+":"+l(t(a)%60,2)},ZZ:function(){var a=-this.zone(),b="+";return 0>a&&(a=-a,b="-"),b+l(t(a/60),2)+l(t(a)%60,2)},z:function(){return this.zoneAbbr()},zz:function(){return this.zoneName()},X:function(){return this.unix()},Q:function(){return this.quarter()}},dc=["months","monthsShort","weekdays","weekdaysShort","weekdaysMin"];ac.length;)kb=ac.pop(),cc[kb+"o"]=e(cc[kb],kb);for(;bc.length;)kb=bc.pop(),cc[kb+kb]=d(cc[kb],2);for(cc.DDDD=d(cc.DDD,3),i(f.prototype,{set:function(a){var b,c;for(c in a)b=a[c],"function"==typeof b?this[c]=b:this["_"+c]=b},_months:"January_February_March_April_May_June_July_August_September_October_November_December".split("_"),months:function(a){return this._months[a.month()]},_monthsShort:"Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec".split("_"),monthsShort:function(a){return this._monthsShort[a.month()]},monthsParse:function(a){var b,c,d;for(this._monthsParse||(this._monthsParse=[]),b=0;12>b;b++)if(this._monthsParse[b]||(c=ib.utc([2e3,b]),d="^"+this.months(c,"")+"|^"+this.monthsShort(c,""),this._monthsParse[b]=new RegExp(d.replace(".",""),"i")),this._monthsParse[b].test(a))return b},_weekdays:"Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_"),weekdays:function(a){return this._weekdays[a.day()]},_weekdaysShort:"Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),weekdaysShort:function(a){return this._weekdaysShort[a.day()]},_weekdaysMin:"Su_Mo_Tu_We_Th_Fr_Sa".split("_"),weekdaysMin:function(a){return this._weekdaysMin[a.day()]},weekdaysParse:function(a){var b,c,d;for(this._weekdaysParse||(this._weekdaysParse=[]),b=0;7>b;b++)if(this._weekdaysParse[b]||(c=ib([2e3,1]).day(b),d="^"+this.weekdays(c,"")+"|^"+this.weekdaysShort(c,"")+"|^"+this.weekdaysMin(c,""),this._weekdaysParse[b]=new RegExp(d.replace(".",""),"i")),this._weekdaysParse[b].test(a))return b},_longDateFormat:{LT:"h:mm A",L:"MM/DD/YYYY",LL:"MMMM D YYYY",LLL:"MMMM D YYYY LT",LLLL:"dddd, MMMM D YYYY LT"},longDateFormat:function(a){var b=this._longDateFormat[a];return!b&&this._longDateFormat[a.toUpperCase()]&&(b=this._longDateFormat[a.toUpperCase()].replace(/MMMM|MM|DD|dddd/g,function(a){return a.slice(1)}),this._longDateFormat[a]=b),b},isPM:function(a){return"p"===(a+"").toLowerCase().charAt(0)},_meridiemParse:/[ap]\.?m?\.?/i,meridiem:function(a,b,c){return a>11?c?"pm":"PM":c?"am":"AM"},_calendar:{sameDay:"[Today at] LT",nextDay:"[Tomorrow at] LT",nextWeek:"dddd [at] LT",lastDay:"[Yesterday at] LT",lastWeek:"[Last] dddd [at] LT",sameElse:"L"},calendar:function(a,b){var c=this._calendar[a];return"function"==typeof c?c.apply(b):c},_relativeTime:{future:"in %s",past:"%s ago",s:"a few seconds",m:"a minute",mm:"%d minutes",h:"an hour",hh:"%d hours",d:"a day",dd:"%d days",M:"a month",MM:"%d months",y:"a year",yy:"%d years"},relativeTime:function(a,b,c,d){var e=this._relativeTime[c];return"function"==typeof e?e(a,b,c,d):e.replace(/%d/i,a)},pastFuture:function(a,b){var c=this._relativeTime[a>0?"future":"past"];return"function"==typeof c?c(b):c.replace(/%s/i,b)},ordinal:function(a){return this._ordinal.replace("%d",a)},_ordinal:"%d",preparse:function(a){return a},postformat:function(a){return a},week:function(a){return $(a,this._week.dow,this._week.doy).week},_week:{dow:0,doy:6},_invalidDate:"Invalid date",invalidDate:function(){return this._invalidDate}}),ib=function(c,d,e,f){var g;return"boolean"==typeof e&&(f=e,e=a),g={},g._isAMomentObject=!0,g._i=c,g._f=d,g._l=e,g._strict=f,g._isUTC=!1,g._pf=b(),ab(g)},ib.suppressDeprecationWarnings=!1,ib.createFromInputFallback=c("moment construction falls back to js Date. This is discouraged and will be removed in upcoming major release. Please refer to https://github.com/moment/moment/issues/1407 for more info.",function(a){a._d=new Date(a._i)}),ib.utc=function(c,d,e,f){var g;return"boolean"==typeof e&&(f=e,e=a),g={},g._isAMomentObject=!0,g._useUTC=!0,g._isUTC=!0,g._l=e,g._i=c,g._f=d,g._strict=f,g._pf=b(),ab(g).utc()},ib.unix=function(a){return ib(1e3*a)},ib.duration=function(a,b){var c,d,e,f=a,g=null;return ib.isDuration(a)?f={ms:a._milliseconds,d:a._days,M:a._months}:"number"==typeof a?(f={},b?f[b]=a:f.milliseconds=a):(g=zb.exec(a))?(c="-"===g[1]?-1:1,f={y:0,d:t(g[qb])*c,h:t(g[rb])*c,m:t(g[sb])*c,s:t(g[tb])*c,ms:t(g[ub])*c}):(g=Ab.exec(a))&&(c="-"===g[1]?-1:1,e=function(a){var b=a&&parseFloat(a.replace(",","."));return(isNaN(b)?0:b)*c},f={y:e(g[2]),M:e(g[3]),d:e(g[4]),h:e(g[5]),m:e(g[6]),s:e(g[7]),w:e(g[8])}),d=new h(f),ib.isDuration(a)&&a.hasOwnProperty("_lang")&&(d._lang=a._lang),d},ib.version=lb,ib.defaultFormat=Ub,ib.momentProperties=wb,ib.updateOffset=function(){},ib.lang=function(a,b){var c;return a?(b?C(A(a),b):null===b?(D(a),a="en"):vb[a]||E(a),c=ib.duration.fn._lang=ib.fn._lang=E(a),c._abbr):ib.fn._lang._abbr},ib.langData=function(a){return a&&a._lang&&a._lang._abbr&&(a=a._lang._abbr),E(a)},ib.isMoment=function(a){return a instanceof g||null!=a&&a.hasOwnProperty("_isAMomentObject")},ib.isDuration=function(a){return a instanceof h},kb=dc.length-1;kb>=0;--kb)s(dc[kb]);ib.normalizeUnits=function(a){return q(a)},ib.invalid=function(a){var b=ib.utc(0/0);return null!=a?i(b._pf,a):b._pf.userInvalidated=!0,b},ib.parseZone=function(){return ib.apply(null,arguments).parseZone()},ib.parseTwoDigitYear=function(a){return t(a)+(t(a)>68?1900:2e3)},i(ib.fn=g.prototype,{clone:function(){return ib(this)},valueOf:function(){return+this._d+6e4*(this._offset||0)},unix:function(){return Math.floor(+this/1e3)},toString:function(){return this.clone().lang("en").format("ddd MMM DD YYYY HH:mm:ss [GMT]ZZ")},toDate:function(){return this._offset?new Date(+this):this._d},toISOString:function(){var a=ib(this).utc();return 0<a.year()&&a.year()<=9999?H(a,"YYYY-MM-DD[T]HH:mm:ss.SSS[Z]"):H(a,"YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]")},toArray:function(){var a=this;return[a.year(),a.month(),a.date(),a.hours(),a.minutes(),a.seconds(),a.milliseconds()]},isValid:function(){return z(this)},isDSTShifted:function(){return this._a?this.isValid()&&p(this._a,(this._isUTC?ib.utc(this._a):ib(this._a)).toArray())>0:!1},parsingFlags:function(){return i({},this._pf)},invalidAt:function(){return this._pf.overflow},utc:function(){return this.zone(0)},local:function(){return this.zone(0),this._isUTC=!1,this},format:function(a){var b=H(this,a||ib.defaultFormat);return this.lang().postformat(b)},add:function(a,b){var c;return c="string"==typeof a?ib.duration(+b,a):ib.duration(a,b),m(this,c,1),this},subtract:function(a,b){var c;return c="string"==typeof a?ib.duration(+b,a):ib.duration(a,b),m(this,c,-1),this},diff:function(a,b,c){var d,e,f=B(a,this),g=6e4*(this.zone()-f.zone());return b=q(b),"year"===b||"month"===b?(d=432e5*(this.daysInMonth()+f.daysInMonth()),e=12*(this.year()-f.year())+(this.month()-f.month()),e+=(this-ib(this).startOf("month")-(f-ib(f).startOf("month")))/d,e-=6e4*(this.zone()-ib(this).startOf("month").zone()-(f.zone()-ib(f).startOf("month").zone()))/d,"year"===b&&(e/=12)):(d=this-f,e="second"===b?d/1e3:"minute"===b?d/6e4:"hour"===b?d/36e5:"day"===b?(d-g)/864e5:"week"===b?(d-g)/6048e5:d),c?e:k(e)},from:function(a,b){return ib.duration(this.diff(a)).lang(this.lang()._abbr).humanize(!b)},fromNow:function(a){return this.from(ib(),a)},calendar:function(){var a=B(ib(),this).startOf("day"),b=this.diff(a,"days",!0),c=-6>b?"sameElse":-1>b?"lastWeek":0>b?"lastDay":1>b?"sameDay":2>b?"nextDay":7>b?"nextWeek":"sameElse";return this.format(this.lang().calendar(c,this))},isLeapYear:function(){return x(this.year())},isDST:function(){return this.zone()<this.clone().month(0).zone()||this.zone()<this.clone().month(5).zone()},day:function(a){var b=this._isUTC?this._d.getUTCDay():this._d.getDay();return null!=a?(a=X(a,this.lang()),this.add({d:a-b})):b},month:eb("Month",!0),startOf:function(a){switch(a=q(a)){case"year":this.month(0);case"quarter":case"month":this.date(1);case"week":case"isoWeek":case"day":this.hours(0);case"hour":this.minutes(0);case"minute":this.seconds(0);case"second":this.milliseconds(0)}return"week"===a?this.weekday(0):"isoWeek"===a&&this.isoWeekday(1),"quarter"===a&&this.month(3*Math.floor(this.month()/3)),this},endOf:function(a){return a=q(a),this.startOf(a).add("isoWeek"===a?"week":a,1).subtract("ms",1)},isAfter:function(a,b){return b="undefined"!=typeof b?b:"millisecond",+this.clone().startOf(b)>+ib(a).startOf(b)},isBefore:function(a,b){return b="undefined"!=typeof b?b:"millisecond",+this.clone().startOf(b)<+ib(a).startOf(b)},isSame:function(a,b){return b=b||"ms",+this.clone().startOf(b)===+B(a,this).startOf(b)},min:function(a){return a=ib.apply(null,arguments),this>a?this:a},max:function(a){return a=ib.apply(null,arguments),a>this?this:a},zone:function(a,b){var c=this._offset||0;return null==a?this._isUTC?c:this._d.getTimezoneOffset():("string"==typeof a&&(a=K(a)),Math.abs(a)<16&&(a=60*a),this._offset=a,this._isUTC=!0,c!==a&&(!b||this._changeInProgress?m(this,ib.duration(c-a,"m"),1,!1):this._changeInProgress||(this._changeInProgress=!0,ib.updateOffset(this,!0),this._changeInProgress=null)),this)},zoneAbbr:function(){return this._isUTC?"UTC":""},zoneName:function(){return this._isUTC?"Coordinated Universal Time":""},parseZone:function(){return this._tzm?this.zone(this._tzm):"string"==typeof this._i&&this.zone(this._i),this},hasAlignedHourOffset:function(a){return a=a?ib(a).zone():0,(this.zone()-a)%60===0},daysInMonth:function(){return u(this.year(),this.month())},dayOfYear:function(a){var b=nb((ib(this).startOf("day")-ib(this).startOf("year"))/864e5)+1;return null==a?b:this.add("d",a-b)},quarter:function(a){return null==a?Math.ceil((this.month()+1)/3):this.month(3*(a-1)+this.month()%3)},weekYear:function(a){var b=$(this,this.lang()._week.dow,this.lang()._week.doy).year;return null==a?b:this.add("y",a-b)},isoWeekYear:function(a){var b=$(this,1,4).year;return null==a?b:this.add("y",a-b)},week:function(a){var b=this.lang().week(this);return null==a?b:this.add("d",7*(a-b))},isoWeek:function(a){var b=$(this,1,4).week;return null==a?b:this.add("d",7*(a-b))},weekday:function(a){var b=(this.day()+7-this.lang()._week.dow)%7;return null==a?b:this.add("d",a-b)},isoWeekday:function(a){return null==a?this.day()||7:this.day(this.day()%7?a:a-7)},isoWeeksInYear:function(){return v(this.year(),1,4)},weeksInYear:function(){var a=this._lang._week;return v(this.year(),a.dow,a.doy)},get:function(a){return a=q(a),this[a]()},set:function(a,b){return a=q(a),"function"==typeof this[a]&&this[a](b),this},lang:function(b){return b===a?this._lang:(this._lang=E(b),this)}}),ib.fn.millisecond=ib.fn.milliseconds=eb("Milliseconds",!1),ib.fn.second=ib.fn.seconds=eb("Seconds",!1),ib.fn.minute=ib.fn.minutes=eb("Minutes",!1),ib.fn.hour=ib.fn.hours=eb("Hours",!0),ib.fn.date=eb("Date",!0),ib.fn.dates=c("dates accessor is deprecated. Use date instead.",eb("Date",!0)),ib.fn.year=eb("FullYear",!0),ib.fn.years=c("years accessor is deprecated. Use year instead.",eb("FullYear",!0)),ib.fn.days=ib.fn.day,ib.fn.months=ib.fn.month,ib.fn.weeks=ib.fn.week,ib.fn.isoWeeks=ib.fn.isoWeek,ib.fn.quarters=ib.fn.quarter,ib.fn.toJSON=ib.fn.toISOString,i(ib.duration.fn=h.prototype,{_bubble:function(){var a,b,c,d,e=this._milliseconds,f=this._days,g=this._months,h=this._data;h.milliseconds=e%1e3,a=k(e/1e3),h.seconds=a%60,b=k(a/60),h.minutes=b%60,c=k(b/60),h.hours=c%24,f+=k(c/24),h.days=f%30,g+=k(f/30),h.months=g%12,d=k(g/12),h.years=d},weeks:function(){return k(this.days()/7)},valueOf:function(){return this._milliseconds+864e5*this._days+this._months%12*2592e6+31536e6*t(this._months/12)},humanize:function(a){var b=+this,c=Z(b,!a,this.lang());return a&&(c=this.lang().pastFuture(b,c)),this.lang().postformat(c)},add:function(a,b){var c=ib.duration(a,b);return this._milliseconds+=c._milliseconds,this._days+=c._days,this._months+=c._months,this._bubble(),this},subtract:function(a,b){var c=ib.duration(a,b);return this._milliseconds-=c._milliseconds,this._days-=c._days,this._months-=c._months,this._bubble(),this},get:function(a){return a=q(a),this[a.toLowerCase()+"s"]()},as:function(a){return a=q(a),this["as"+a.charAt(0).toUpperCase()+a.slice(1)+"s"]()},lang:ib.fn.lang,toIsoString:function(){var a=Math.abs(this.years()),b=Math.abs(this.months()),c=Math.abs(this.days()),d=Math.abs(this.hours()),e=Math.abs(this.minutes()),f=Math.abs(this.seconds()+this.milliseconds()/1e3);return this.asSeconds()?(this.asSeconds()<0?"-":"")+"P"+(a?a+"Y":"")+(b?b+"M":"")+(c?c+"D":"")+(d||e||f?"T":"")+(d?d+"H":"")+(e?e+"M":"")+(f?f+"S":""):"P0D"}});for(kb in Yb)Yb.hasOwnProperty(kb)&&(gb(kb,Yb[kb]),fb(kb.toLowerCase()));gb("Weeks",6048e5),ib.duration.fn.asMonths=function(){return(+this-31536e6*this.years())/2592e6+12*this.years()},ib.lang("en",{ordinal:function(a){var b=a%10,c=1===t(a%100/10)?"th":1===b?"st":2===b?"nd":3===b?"rd":"th";return a+c}}),xb?module.exports=ib:"function"==typeof define&&define.amd?(define("moment",function(a,b,c){return c.config&&c.config()&&c.config().noGlobal===!0&&(mb.moment=jb),ib}),hb(!0)):hb()}).call(this);;Reed.controller('Add', function ($scope, $rootScope, $timeout, Api, State, Overlay, Collection) {
 
 	$scope.submit = function(isValid) {
 
@@ -4206,34 +283,46 @@ if ( typeof define === 'function' && define.amd ) {
 				done: true
 			};
 
-
 			response.items.forEach(function (el) {
-				$scope.articles.push(el);
+				Collection.add('articles', el);
 			});
 
-			console.log($scope.articles);
+			$rootScope.state = State.update('articles', response.items.length);
 
-			// console.log(angular.extend($scope.articles, response.items));
+			console.log(Collection.articles);
+
+			// State.set({
+			// 	articles: State.count.articles + response.items.length
+			// });
 
 			$timeout(function () {
-				$scope.discoveryFeeds.splice(index, 1);
+				Collection.discovery.feeds.splice(index, 1);
 			}, 1000);
 
 		});
 
 	};
 
+	Collection.ready([Collection.articles.$promise], function () {
+		$scope.form = {};
+		$scope.view = {
+			section: 'list',
+			content: Collection.discovery.feeds
+		};
+	});
+
 });
-;Reed.controller('Articles', function ($scope, $timeout, $animate, $filter, Api, State) {
+;Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collection) {
 
 	$scope.showArticle = function (el) {
 
+		if(el.unread == 1) State.update('articles', 0);
 		el.unread = '0';
 
 		angular.extend($scope.view, {
 			panel: false,
 			section: 'single',
-			id: el.id,
+			single: el,
 			scrollPosition: $('#thumbs').scrollTop()
 		});
 
@@ -4249,12 +338,13 @@ if ( typeof define === 'function' && define.amd ) {
 
 	$scope.nextArticle = function (el) {
 
+		if(el.unread == 1) State.update('articles', 0);
 		el.unread = '0';
 
 		angular.extend($scope.view, {
 			panel: false,
 			section: 'single',
-			id: el.id
+			single: el
 		});
 
 		Api.UserArticle.update({
@@ -4267,127 +357,185 @@ if ( typeof define === 'function' && define.amd ) {
 
 	};
 
-	$scope.tabUnread = function () {
+	Collection.ready([Collection.articles.$promise], function () {
 
-		var data = $filter('orderBy')($scope.articles, '[-unread, -created]');
+		console.log(Collection.articles);
 
-		angular.extend($scope.view, {
+		$scope.view = {
+			is: 'All',
+			title: 'All',
 			section: 'list',
-			side: data,
-			content: data,
-		});
+			content: Collection.articles
+		};
 
-	};
-
-	$scope.tabFav = function () {
-
-		var data = $filter('filter')($scope.articles, { favourite: '1' });
-			data = $filter('orderBy')(data, '[-unread, -created]');
-
-		angular.extend($scope.view, {
-			section: 'list',
-			side: data,
-			content: data,
-		});
-
-	};
-
-	$scope.tabAll = function () {
-
-		var data = $filter('orderBy')($scope.articles, '[-created]');
-
-		angular.extend($scope.view, {
-			section: 'list',
-			side: data,
-			content: data
-		});
-
-	};
-
-	$scope.loadMore = function() {
-		console.log('sss');
-		// var last = $scope.images[$scope.images.length - 1];
-		// for(var i = 1; i <= 8; i++) {
-		// 	$scope.images.push(last + i);
-		// }
-	};
-
-	$scope.init = function () {
-
-		$scope.articles.$promise.then(function () {
-
-			var articles = $filter('orderBy')($scope.articles, '[-unread, -created]');
-
-			$scope.view = {
-				section: 'list',
-				content: articles,
-				side: articles
-			};
-
-		});
-
-	}
-
-
+	});
 
 });
-;Reed.controller('Discovery', function ($scope, Api, State) {
+;Reed.controller('Discovery', function ($scope, $filter, Api, State, Collection) {
 
 	$scope.showArticle = function (el) {
+
 		angular.extend($scope.view, {
 			section: 'single',
-			id: el.id,
-			scrollPosition: $('#articles').scrollTop()
+			single: el,
+			scrollPosition: $('#thumbs').scrollTop()
 		});
+
 	};
 
 	$scope.nextArticle = function (el) {
+
 		angular.extend($scope.view, {
 			section: 'single',
-			id: el.id
+			single: el
 		});
-	};
-
-	$scope.view = {
-		section: 'list',
-		content: $scope.discoveryArticles
-	};
-
-	$scope.tabs = {
-
-		side: [
-			{
-				title: 'All',
-				content: [
-					{
-						user: {
-							name: 'Zbyszek',
-							avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg'
-						},
-						type: 'stared',
-						title: 'Taming The Unicorn: Easing JavaScript Memory Profiling In Chrome DevTools'
-					},
-					{
-						user: {
-							name: 'Artur',
-							avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg'
-						},
-						type: 'shared',
-						title: 'Taming The Unicorn'
-					}
-				]
-			},
-			{
-				title: 'Stared',
-				content: ''
-			},
-			{
-				title: 'Shared',
-				content: ''
-			}
-		],
 
 	};
+
+	Collection.ready([Collection.articles.$promise], function () {
+
+		$scope.view = {
+			is: 'Discovery',
+			title: 'Discovery',
+			section: 'list',
+			content: Collection.discovery.articles
+		};
+
+	});
+
+});
+;Reed.controller('Favourites', function ($scope, $filter, Api, State, Collection) {
+
+	$scope.showArticle = function (el) {
+
+		angular.extend($scope.view, {
+			section: 'single',
+			single: el,
+			scrollPosition: $('#thumbs').scrollTop()
+		});
+
+	};
+
+	$scope.nextArticle = function (el) {
+
+		angular.extend($scope.view, {
+			section: 'single',
+			single: el
+		});
+
+	};
+
+	Collection.ready([Collection.articles.$promise], function() {
+
+		$scope.view = {
+			is: 'Favourites',
+			title: 'Favourites',
+			section: 'list',
+			content: Collection.filter('articles', {
+				favourite: '1'
+			})
+		};
+
+	});
+
+});
+;Reed.controller('Feeds', function ($scope, $routeParams, Api, State, Collection) {
+
+	$scope.showArticle = function (el) {
+
+		if(el.unread == 1) State.update('articles', 0);
+		el.unread = '0';
+
+		angular.extend($scope.view, {
+			panel: false,
+			section: 'single',
+			single: el,
+			scrollPosition: $('#thumbs').scrollTop()
+		});
+
+		Api.UserArticle.update({
+			articleid: el.id
+		}, {
+			unread: el.unread,
+			favourite: el.favourite,
+			later: el.later
+		});
+
+	};
+
+	$scope.nextArticle = function (el) {
+
+		if(el.unread == 1) State.update('articles', 0);
+		el.unread = '0';
+
+		angular.extend($scope.view, {
+			panel: false,
+			section: 'single',
+			single: el
+		});
+
+		Api.UserArticle.update({
+			articleid: el.id
+		}, {
+			unread: el.unread,
+			favourite: el.favourite,
+			later: el.later
+		});
+
+	};
+
+	Collection.ready([
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function () {
+
+		$scope.view = {
+			is: 'Feeds',
+			title: Collection.filter('feeds', {
+				id: $routeParams.id
+			})[0].title,
+			section: 'list',
+			content: Collection.filter('articles', {
+				feed: $routeParams.id
+			})
+		};
+
+	});
+
+});
+;Reed.controller('Later', function ($scope, $filter, Api, State, Collection) {
+
+	$scope.showArticle = function (el) {
+
+		angular.extend($scope.view, {
+			section: 'single',
+			single: el,
+			scrollPosition: $('#thumbs').scrollTop()
+		});
+
+	};
+
+	$scope.nextArticle = function (el) {
+
+		angular.extend($scope.view, {
+			section: 'single',
+			single: el
+		});
+
+	};
+
+	Collection.ready([Collection.articles.$promise], function () {
+
+		$scope.view = {
+			is: 'Later',
+			title: 'Read later',
+			section: 'list',
+			content: Collection.filter('articles', {
+				later: '1'
+			})
+		};
+
+	});
 
 });
 ;Reed.controller('Login', function ($scope, $resource, $location, $cookieStore, ezfb, AuthService) {
@@ -4445,22 +593,150 @@ if ( typeof define === 'function' && define.amd ) {
 		}
 
 );
-;Reed.controller('Menu', function ($scope, $cookieStore, Api, State) {
+;Reed.controller('Menu', function ($scope, $filter, $rootScope, $cookieStore, Api, State, Collection) {
 
-	$scope.State = State;
-
-	$scope.toggle = function () {
-
+	$scope.toggleSidebar = function () {
 		$scope.view.panel = !$scope.view.panel;
+	};
+
+	$scope.filterByUnread = function () {
+
+		if (State.user.filter == true) {
+
+			var data = $filter('filter')($scope.view.content, { unread: "1" });
+
+			angular.extend($scope.view, {
+				section: 'list',
+				content: data,
+			});
+		} else if(State.user.filter == false) {
+
+			angular.extend($scope.view, {
+				section: 'list',
+				content: State.data.flashback,
+			});
+
+		}
+
 
 	};
 
-    $scope.$watch('State.status', function (newStatus, oldStatus, scope) {
-    	scope.status = newStatus;
-    });
+	$scope.sortByTitle = function () {
+
+		var data = $filter('orderBy')($scope.view.content, '[title]');
+
+		angular.extend($scope.view, {
+			side: data,
+			content: data
+		});
+
+	};
+
+	$scope.sortByDate = function () {
+
+		var data = $filter('orderBy')($scope.view.content, '[-created]');
+
+		angular.extend($scope.view, {
+			side: data,
+			content: data
+		});
+
+	};
+
+	$scope.showFeed = function (el) {
+		angular.extend($scope.view, {
+			section: 'list',
+			content: Collection.filter('articles', {
+				feed: el.id
+			})
+		});
+	};
+
+
+	$scope.countFeed = function (el) {
+		return Collection.filter('articles', {
+			unread: 1,
+			feed: el.id
+		}).length;
+	};
+
+	$scope.countArticles = function (el) {
+		return Collection.filter('articles', {
+			unread: 1,
+		}).length;
+	};
+
+	$scope.countFavourites = function (el) {
+		return Collection.filter('articles', {
+			favourite: 1,
+		}).length;
+	};
+
+	$scope.countLater = function (el) {
+		return Collection.filter('articles', {
+			later: 1,
+		}).length;
+	};
+
+	Collection.ready([
+		Collection.user.$promise,
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function() {
+
+		State.data.flashback = $scope.view.content;
+
+		State.set({
+
+			articles: Collection.filter('articles', {
+				unread: '1'
+			}).length,
+
+			favourite: Collection.filter('articles', {
+				favourite: '1'
+			}).length,
+
+			later: Collection.filter('articles', {
+				later: '1'
+			}).length
+
+		});
+
+		$scope.collection = Collection;
+		$scope.state = State.set({
+
+			articles: $scope.collection.filter('articles', {
+				unread: '1'
+			}).length,
+
+			favourite: $scope.collection.filter('articles', {
+				favourite: '1'
+			}).length,
+
+			later: $scope.collection.filter('articles', {
+				later: '1'
+			}).length
+
+		});
+
+		if ($scope.view.is === 'All' || $scope.view.is === 'Feeds') {
+			$scope.$watch('state.user.filter', function () {
+				$cookieStore.put('reed_userfilter', State.user.filter);
+				$scope.filterByUnread();
+			});
+		}
+
+		$rootScope.$watch('state', function (newV, oldV) {
+			if(oldV === undefined && oldV === newV) return;
+			$scope.state.count.articles = newV;
+   		 });
+
+	});
+
+
 
 });
-;Reed.controller('Navbar', function ($scope, $filter, $location, Api, State, Overlay) {
+;Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Overlay) {
 
 	$scope.saveForLater = function (el) {
 
@@ -4468,7 +744,9 @@ if ( typeof define === 'function' && define.amd ) {
 
 		el.later = '1' - el.later.toString();
 
-		if($scope.articles.indexOf(el) === -1) $scope.articles.push(el);
+		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+
+		State.update('later', el.later);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -4490,7 +768,9 @@ if ( typeof define === 'function' && define.amd ) {
 
 		el.favourite = '1' - el.favourite.toString();
 
-		if($scope.articles.indexOf(el) === -1) $scope.articles.push(el);
+		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+
+		State.update('favourite', el.favourite);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -4510,7 +790,9 @@ if ( typeof define === 'function' && define.amd ) {
 
 		el.unread = '1' - el.unread.toString();
 
-		if($scope.articles.indexOf(el) === -1) $scope.articles.push(el);
+		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+
+		State.update('articles', el.unread);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -4527,30 +809,68 @@ if ( typeof define === 'function' && define.amd ) {
 	};
 
 });
-;Reed.controller('Ui', function ($scope, Api, State) {
+;Reed.controller('Navigation', function ($scope, State, Collection) {
 
-	// $scope.user = Api.User.get();
-	$scope.discoveryArticles = Api.discoveryArticles.get();
-	$scope.discoveryFeeds = Api.discoveryFeeds.get();
-
-	$scope.articles = Api.UserArticles.get();
-
-	// $scope.$watchCollection('articles', function(newNames, oldNames) {
- //         $scope.articles = newNames;
- //    });
-
-	// $scope.feeds = Api.UserFeeds.get();
+	$scope.showFeed = function (el) {
+		angular.extend($scope.view, {
+			section: 'list',
+			content: Collection.filter('articles', {
+				feed: el.id
+			})
+		});
+	};
 
 
-	// $scope.articles = Api.discoveryArticles.get(function(res) {
+	$scope.countFeed = function (el) {
+		return Collection.filter('articles', {
+			unread: 1,
+			feed: el.id
+		}).length;
+	};
 
-	// 	State.status.unread.articles = res.length
-	// 	$scope.state = State.status;
 
-	// });
+	Collection.ready([
+		Collection.user.$promise,
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function() {
+
+		$scope.feeds = Collection.feeds;
+
+	});
+
 
 });
-;Reed.directive('backToList', function($timeout) {
+
+
+;angular.module('toggle-switch', ['ng']).directive('toggleSwitch', function () {
+  return {
+    restrict: 'EA',
+    replace: true,
+    scope: {
+      model: '=',
+      disabled: '@',
+      onLabel: '@',
+      offLabel: '@',
+      knobLabel: '@'
+    },
+    template: '<div class="switch" ng-click="toggle()" ng-class="{ \'disabled\': disabled }"><div class="switch-animate" ng-class="{\'switch-off\': !model, \'switch-on\': model}"><span class="switch-left" ng-bind="onLabel"></span><span class="knob" ng-bind="knobLabel"></span><span class="switch-right" ng-bind="offLabel"></span></div></div>',
+    controller: function($scope) {
+      $scope.toggle = function toggle() {
+        if(!$scope.disabled) {
+          $scope.model = !$scope.model;
+        }
+      };
+    },
+    compile: function(element, attrs) {
+      if (!attrs.onLabel) { attrs.onLabel = 'On'; }
+      if (!attrs.offLabel) { attrs.offLabel = 'Off'; }
+      if (!attrs.knobLabel) { attrs.knobLabel = '\u00a0'; }
+      if (!attrs.disabled) { attrs.disabled = false; }
+    },
+  };
+});
+;Reed.directive('backToList', function() {
 
 	return {
 		restrict: 'AE',
@@ -4561,10 +881,41 @@ if ( typeof define === 'function' && define.amd ) {
 
 				scope.$apply(function() {
 					scope.view.section = 'list';
+					scope.view.panel = false;
 				});
 				$('#thumbs').scrollTop( scope.view.scrollPosition );
 
 			});
+		}
+	};
+
+});
+;Reed.directive('readingTime', function(State) {
+
+	return {
+		restrict: 'AE',
+		scope: {
+			text: '='
+		},
+		template: '{{readingtime}}',
+		link: function(scope, element, attrs) {
+
+			function countWords(s){
+				s = s.replace(/(^\s*)|(\s*$)/gi,"");
+				s = s.replace(/[ ]{2,}/gi," ");
+				s = s.replace(/\n /,"\n");
+				return s.split(' ').length;
+			}
+
+			var words = countWords(scope.text.content.replace(/(<([^>]+)>)/ig,""));
+
+			var minutesCount = Math.floor(words / 200);
+			var secondsCount = Math.floor(words % 200 / (200 / 60));
+
+			var duration = '0:' + minutesCount + ":" + secondsCount;
+
+			scope.readingtime = moment.duration(duration, "minutes").humanize();
+
 		}
 	};
 
@@ -4621,9 +972,13 @@ if ( typeof define === 'function' && define.amd ) {
 
 		};
 
-}).service('feedsProvider', function () {});
+});
 ;Reed.service('AuthService', function ($cookieStore){
 
+	/**
+	 * Get user authentication status
+	 * @return {Bool}
+	 */
 	this.getUserAuthenticated = function() {
 
 		var token = $cookieStore.get('reed_authtoken');
@@ -4631,8 +986,107 @@ if ( typeof define === 'function' && define.amd ) {
 
 	};
 
+
+	/**
+	 * Return object
+	 */
 	return this;
 
+});
+;Reed.factory('Collection', function ($q, $filter, Api) {
+
+	/**
+	 * User collection
+	 * @type {Object}
+	 */
+	this.user = Api.User.get();
+
+
+	/**
+	 * Discovery collection
+	 * @type {Object}
+	 */
+	this.discovery = {
+		articles: Api.discoveryArticles.get(),
+		feeds: Api.discoveryFeeds.get()
+	};
+
+
+	/**
+	 * User articles collection
+	 * @type {Object}
+	 */
+	this.articles = Api.UserArticles.get();
+
+
+	/**
+	 * User feeds collection
+	 * @type {Object}
+	 */
+	this.feeds = Api.UserFeeds.get();
+
+
+	/**
+	 * Filter collection
+	 * @param  {String} collection Collection name
+	 * @param  {Object} params     Filter params
+	 * @return {Object}            Filtered collection
+	 */
+	this.add = function (collection, el) {
+		return this[collection].push(el);
+	};
+
+
+	/**
+	 * Filter collection
+	 * @param  {String} collection Collection name
+	 * @param  {Object} params     Filter params
+	 * @return {Object}            Filtered collection
+	 */
+	this.filter = function (collection, params) {
+
+		var filter = $filter('filter')(this[collection], params);
+		return $filter('orderBy')(filter, '-created');
+	};
+
+
+	/**
+	 * Collections ready state
+	 * @param  {Array}   collection List of collections promises
+	 * @param  {Function} callback   Passed promises callback
+	 * @return {Object}
+	 */
+	this.ready = function (collections, callback) {
+		return $q.all(collections).then(function(data) {
+			callback(data);
+		});
+	};
+
+
+	/**
+	 * Return object
+	 */
+	return this;
+
+});
+;Reed.filter('cut', function () {
+	return function (value, wordwise, max, tail) {
+		if (!value) return '';
+
+		max = parseInt(max, 10);
+		if (!max) return value;
+		if (value.length <= max) return value;
+
+		value = value.substr(0, max);
+		if (wordwise) {
+			var lastspace = value.lastIndexOf(' ');
+			if (lastspace != -1) {
+				value = value.substr(0, lastspace);
+			}
+		}
+
+		return value + (tail || ' …');
+	};
 });
 ;Reed.service('httpResponseInterceptorHandler', ['$q', '$location', '$cookieStore', function ($q, $location, $cookieStore) {
 		return {
@@ -4645,8 +1099,9 @@ if ( typeof define === 'function' && define.amd ) {
 			responseError: function(rejection) {
 
 				if (rejection.status === 401) {
-					$cookieStore.remove('token');
-					$location.path('/login');
+					$cookieStore.remove('reed_authtoken');
+					$cookieStore.remove('reed_userid');
+					$location.path('/');
 
 					return $q.reject(rejection);
 				}
@@ -4659,6 +1114,10 @@ if ( typeof define === 'function' && define.amd ) {
 }]);
 ;Reed.factory('Overlay', function () {
 
+	/**
+	 * Overlay state:icon list
+	 * @type {Object}
+	 */
 	this.icons = {
 		'success': 'check',
 		'fail': 'times',
@@ -4666,6 +1125,13 @@ if ( typeof define === 'function' && define.amd ) {
 		'400': 'times',
 	};
 
+
+	/**
+	 * Update displayed overlay
+	 * @param  {String} status Response status
+	 * @param  {String} text   Response message
+	 * @return {Object}
+	 */
 	this.update = function (status, text) {
 
 		this.overlay.update({
@@ -4675,6 +1141,11 @@ if ( typeof define === 'function' && define.amd ) {
 
 	};
 
+	/**
+	 * Display overlay
+	 * @param  {String} text Response message
+	 * @return {Object}
+	 */
 	this.init = function (text) {
 
 		this.overlay = iosOverlay({
@@ -4684,22 +1155,71 @@ if ( typeof define === 'function' && define.amd ) {
 
 	};
 
+	/**
+	 * Return object
+	 */
 	return this;
 
 });
 ;Reed.factory('State', function ($cookieStore) {
 
-	this.status = {
-		unread: {},
-	};
+	/**
+	 * Aplication collections counts
+	 * @type {Object}
+	 */
+	this.count = {};
 
+
+	/**
+	 * Application data
+	 * @type {Object}
+	 */
+	this.data = {};
+
+
+	/**
+	 * User state data
+	 * @type {Object}
+	 */
 	this.user = {
 		id: $cookieStore.get('reed_userid'),
+		filter: $cookieStore.get('reed_userfilter')
 	};
 
-	return {
-		status: this.status,
-		user: this.user
+
+	/**
+	 * Set new application state
+	 * @param {Object} values
+	 */
+	this.set = function (values) {
+		angular.extend(this.count, values);
+		return this;
 	};
+
+
+	/**
+	 * Update application state
+	 * @param  {String} field Field to update
+	 * @param  {Int} value
+	 * @return {Int}
+	 */
+	this.update = function (field, value) {
+
+		if(this.count[field] >= 0) {
+			if(value == 0)
+				return this.count[field]--;
+			else
+				return this.count[field] += value;
+		}
+
+		return this;
+
+	};
+
+
+	/**
+	 * Return object
+	 */
+	return this;
 
 });

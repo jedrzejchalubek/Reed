@@ -1,4 +1,4 @@
-Reed.directive('backToList', function($timeout) {
+Reed.directive('backToList', function() {
 
 	return {
 		restrict: 'AE',
@@ -9,6 +9,7 @@ Reed.directive('backToList', function($timeout) {
 
 				scope.$apply(function() {
 					scope.view.section = 'list';
+					scope.view.panel = false;
 				});
 				$('#thumbs').scrollTop( scope.view.scrollPosition );
 

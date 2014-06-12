@@ -1,31 +1,75 @@
 
-<div ng-init="init()" class="wrapper container-fluid fill">
-  <div class="row fill">
-    <div ng-include="'app/template/partials/menu.html'"></div>
-    <div id="side" ng-show="view.panel" class="side side-animation">
-      <div ng-include="'app/template/partials/activity.html'"></div>
-    </div>
+<div class="wrapper container-fluid fill">
+  <div ng-init="init()" class="row fill">
+    <section ng-controller="Menu">
+      <nav id="menu" class="menu">
+        <div class="menu__wrapper">
+          <div ng-show="view.section == 'list'">
+            <div class="menu__logotype"><img ng-src="app/images/logotype.jpg"/></div>
+            <ul ng-show="view.is == 'All' || view.is == 'Feeds'" class="menu__sort">
+              <li>
+                <toggle-switch model="state.user.filter" on-label="Unread" off-label="All"></toggle-switch>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="view.section == 'single'">
+            <back-to-list></back-to-list>
+            <ul ng-controller="Navbar" class="menu__sort">
+              <li><a ng-click="saveForLater(view.single)"><span ng-class="{isLater: view.single.later == 1}" class="menu__later"><span class="fa fa-clock-o"></span></span><span>Later</span></a></li>
+              <li><a ng-click="markAsFav(view.single)"><span ng-class="{isFav: view.single.favourite == 1}" class="menu__fav"><span class="fa fa-heart"></span></span><span>Favourite</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav><a href="" ng-click="toggleSidebar()" class="menu__collapse"><i class="fa fa-bars"></i><span ng-show="state.count.articles != 0" class="menu__collapse-badge badge">{{state.count.articles}}</span></a><a href="#add" class="menu__add"><span class="fa fa-plus-circle"></span></a>
+      <div id="side" ng-show="view.panel" class="side side-animation">
+        <section class="list"><a href="#profile" class="list__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="list__profile-img"/><span class="list__profile-name">Hello, {{collection.user.name}}!</span></a>
+          <section ng-controller="Navigation">
+            <div class="navigation list-group"><a ng-click="view.panel = false" href="#discovery" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-network"></div><span class="navigation__title">Discovery</span></a><a ng-click="view.panel = false" href="#later" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-time"></div><span class="navigation__title">Read later</span><span ng-show="state.count.later != 0" class="navigation__badge badge">{{state.count.later}}</span></a><a ng-click="view.panel = false" href="#favourites" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-bookmark"></div><span class="navigation__title">Favourites</span><span ng-show="state.count.favourite != 0" class="navigation__badge badge">{{state.count.favourite}}</span></a><a ng-click="view.panel = false" href="#all" class="navigation__item list-group-item">
+                <div class="navigation__icon iconmonstr iconmonstr-menu"></div><span class="navigation__title">All</span><span ng-show="state.count.articles != 0" class="navigation__badge badge">{{state.count.articles}}</span></a>
+              <ul class="navigation__list">
+                <li ng-repeat="feed in collection.feeds" class="navigation__feed"><a href="#feeds/{{feed.id}}">{{feed.title}}</a><span ng-show="countFeed(feed) != 0" class="navigation__feed-badge badge pull-right">{{ countFeed(feed) }}</span></li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </div>
+    </section>
     <div id="content" class="content fill col-md-12">
       <div ng-switch="view.section" class="bg-animation fill">
         <div ng-switch-default="list" class="thumbs-animation fill">
-          <section id="thumbs" class="thumbs offset-top fill">
+          <section id="thumbs" class="thumbs fill">
             <div class="row">
-              <div class="thumbs__wrapper">
-                <div class="text-center">
+              <div class="thumbs__wrapper clearfix">
+                <section class="offset-top text-center">
                   <h1>Discovery, read, grow.</h1>
-                  <p class="lead">lorem</p>
+                  <p class="lead">Enter only the RSS address of the page you want to track.<br/>We'll do the rest.</p>
+                </section>
+                <div class="search">
+                  <form role="form" class="search__form">
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                          <input type="text" placeholder="What would you like to read?" ng-model="discovery.search" class="search__input input-lg form-control"/><span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                <section masonry="{ transitionDuration: '400ms' }" class="thumbs__cols">
-                  <article ng-repeat="item in view.content track by item.id" id="{{item.id}}" class="thumbs__item masonry-brick col-sm-6 col-md-4 col-lg-3">
-                    <div ng-class="{isRead: item.unread==0}" class="thumbs__content"><a ng-click="showArticle(item)"><img ng-src="{{item.image}}" class="thumbs__img"/>
+                <section>
+                  <article ng-repeat="item in view.content | filter: discovery.search" id="{{item.id}}" class="thumbs__item thumb-animation col-sm-6 col-md-4 col-lg-3">
+                    <div ng-class="{isRead: item.unread==0 &amp;&amp; (view.is === 'All' || view.is == 'Feeds')}" class="thumbs__content"><a ng-click="showArticle(item)">
+                        <div style="background-image: url({{item.image}});" class="thumbs__img"></div>
                         <div class="thumbs__meta">
                           <h3 ng-bind-html="item.title" class="thumbs__heading"></h3>
-                          <p ng-bind-html="item.description" class="thumbs__desc"></p>
+                          <p ng-bind-html="item.description | cut:true:175:' ...'" class="thumbs__desc"></p>
                         </div></a>
                       <div ng-controller="Navbar" class="thumbs__nav"><a ng-click="markAsFav(item)" class="pull-right">
                           <div ng-class="{isFav: item.favourite == 1}" class="thumbs__fav"><span class="fa fa-heart"></span></div></a><a ng-click="saveForLater(item)" class="pull-right">
-                          <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a>
-                      </div>
+                          <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a><a ng-show="view.is === 'All' || view.is == 'Feeds'" ng-click="unread(item)" class="pull-left">
+                          <div ng-class="{isRead: item.unread==0}" class="thumbs__status"></div><span ng-show="item.unread == '0'">Keep unread</span><span ng-show="item.unread == '1'">Mark as read</span></a></div>
                     </div>
                   </article>
                 </section>
@@ -34,54 +78,43 @@
           </section>
         </div>
         <div ng-switch-when="single" class="single-animation fill">
-          <section>
-            <div ng-repeat="item in view.content track by item.id" class="article__wrapper fill">
-              <article ng-show="view.id === item.id" class="article fill article-animation">
-                <div class="row">
-                  <div class="article__nav clearfix">
-                    <div class="col-xs-3 text-left">
-                      <div class="article__nav-left">
-                        <back-to-list></back-to-list>
-                      </div>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                      <div ng-controller="Navbar" class="article__nav-right"><a ng-click="saveForLater(item)"><span class="iconmonstr iconmonstr-time"></span> Save for later</a><a ng-click="markAsFav(item)"><span class="fa fa-heart"></span> Add to favourites</a><a href="#" class="hidden-xs"><span class="fa fa-share"></span> Share</a></div>
-                    </div>
-                  </div>
-                  <div class="article__header">
-                    <div class="col-xs-12 col-md-8 col-md-offset-2">
-                      <div class="article__meta">
-                        <div class="article__data">
-                          <div class="row">
-                            <div class="col-xs-6 text-left">{{item.source}}</div>
-                            <div class="col-xs-6 text-right"><span class="fa fa-book"></span> 3 min read</div>
+          <div ng-repeat="item in view.content track by item.id" ng-class="{isActive: view.single.id === item.id}" class="article fill">
+            <article ng-if="view.single.id === item.id" class="article__wrapper fill article-animation">
+              <div class="row">
+                <div class="article__header">
+                  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="article__meta">
+                      <div class="article__data">
+                        <div class="row">
+                          <div class="col-xs-6 text-left">{{item.source}}</div>
+                          <div class="col-xs-6 text-right"><span class="fa fa-book"></span>
+                            <reading-time text="{ content: item.content }"></reading-time>
                           </div>
                         </div>
-                        <h1 ng-bind-html="item.title" class="article__title"></h1>
-                        <p ng-bind-html="item.description" class="article__desc"></p>
                       </div>
-                    </div>
-                    <div style="background-image: url({{item.image}})" class="article__image clearfix"></div>
-                  </div>
-                  <div class="article__content clearfix">
-                    <div class="col-xs-12 col-md-8 col-md-offset-2">
-                      <div ng-bind-html="item.content" class="article__text"></div>
-                      <div class="article__text"><a href="{{item.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
+                      <h1 ng-bind-html="item.title" class="article__title"></h1>
+                      <p ng-bind-html="item.description" class="article__desc"></p>
                     </div>
                   </div>
-                </div><a ng-click="nextArticle(view.content[$index + 1])" ng-show="view.content[$index + 1] != undefined" class="article__next row">
-                  <div class="col-xs-12 col-md-8 col-md-offset-2">
-                    <div class="article__data">
-                      <div class="row">
-                        <div class="col-xs-6 text-left">Next to read</div>
-                      </div>
+                </div>
+                <div class="article__content clearfix">
+                  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                    <div ng-bind-html="item.content" class="article__text"></div>
+                    <div class="article__text"><a href="{{item.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
+                  </div>
+                </div>
+              </div><a ng-click="nextArticle(view.content[$index + 1])" ng-show="view.content[$index + 1] != undefined" class="article__next row">
+                <div class="article__next-meta col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                  <div class="article__data">
+                    <div class="row">
+                      <div class="col-xs-6 text-left">Next to read</div>
                     </div>
-                    <h1 ng-bind-html="view.content[$index + 1].title" class="article__title"></h1>
-                    <p ng-bind-html="view.content[$index + 1].description"></p>
-                  </div></a>
-              </article>
-            </div>
-          </section>
+                  </div>
+                  <h1 ng-bind-html="view.content[$index + 1].title" class="article__title"></h1>
+                  <p ng-bind-html="view.content[$index + 1].description" class="article__desc"></p>
+                </div><span style="background-image: url({{view.content[$index + 1].image}})" class="article__image clearfix"></span></a>
+            </article>
+          </div>
         </div>
       </div>
     </div>

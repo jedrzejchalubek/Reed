@@ -1,7 +1,7 @@
 section#login.login
 	.login__wrapper(ng-controller="Login")
 		h3.login__header Discover, read and share your next <br> favourite feed.
-		a.btn.btn-lg.btn-primary(ng-model="processing", ng-click="login(); processing = !processing")
-			i.fa.fa-spinner.fa-spin(ng-show="processing")
-			i.fa.fa-facebook-square(ng-hide="processing")
+		a.btn.btn-lg.btn-primary(ng-model="view.processing", ng-click="login(); view.processing = !view.processing")
+			i.fa.fa-spinner.fa-spin(ng-show="view.processing")
+			i.fa.fa-facebook-square(ng-hide="view.processing")
 			|  Login with Facebook

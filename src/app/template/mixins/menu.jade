@@ -1,0 +1,35 @@
+mixin menu()
+	section(ng-controller="Menu")
+		nav#menu.menu
+			.menu__wrapper
+
+				div(ng-show="view.section == 'list'")
+					.menu__logotype
+						img(ng-src="app/images/logotype.jpg")
+					ul.menu__sort(ng-show="view.is == 'All' || view.is == 'Feeds'")
+						li
+							toggle-switch(model="state.user.filter", on-label="Unread", off-label="All")
+
+				div(ng-show="view.section == 'single'")
+					back-to-list
+					ul.menu__sort(ng-controller="Navbar")
+						li
+							a(ng-click="saveForLater(view.single)")
+								span.menu__later(ng-class="{isLater: view.single.later == 1}")
+									span.fa.fa-clock-o
+								span Later
+						li
+							a(ng-click="markAsFav(view.single)")
+								span.menu__fav(ng-class="{isFav: view.single.favourite == 1}")
+									span.fa.fa-heart
+								span Favourite
+
+
+		a.menu__collapse(href="", ng-click="toggleSidebar()")
+			i.fa.fa-bars
+			span.menu__collapse-badge.badge(ng-show="state.count.articles != 0") {{state.count.articles}}
+
+		a.menu__add(href="#add")
+			span.fa.fa-plus-circle
+
+		block

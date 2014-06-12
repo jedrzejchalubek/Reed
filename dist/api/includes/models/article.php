@@ -22,7 +22,7 @@ class Article extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'id, created, modifed, url, title, description, content, image, stars';
+	protected $columns = 'id, feed, created, modifed, url, title, description, content, image, stars';
 
 	/**
 	 * Get popularity rank

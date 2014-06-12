@@ -1,4 +1,4 @@
-Reed.controller('Navbar', function ($scope, $filter, $location, Api, State, Overlay) {
+Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Overlay) {
 
 	$scope.saveForLater = function (el) {
 
@@ -6,7 +6,9 @@ Reed.controller('Navbar', function ($scope, $filter, $location, Api, State, Over
 
 		el.later = '1' - el.later.toString();
 
-		if($scope.articles.indexOf(el) === -1) $scope.articles.push(el);
+		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+
+		State.update('later', el.later);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -28,7 +30,9 @@ Reed.controller('Navbar', function ($scope, $filter, $location, Api, State, Over
 
 		el.favourite = '1' - el.favourite.toString();
 
-		if($scope.articles.indexOf(el) === -1) $scope.articles.push(el);
+		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+
+		State.update('favourite', el.favourite);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -48,7 +52,9 @@ Reed.controller('Navbar', function ($scope, $filter, $location, Api, State, Over
 
 		el.unread = '1' - el.unread.toString();
 
-		if($scope.articles.indexOf(el) === -1) $scope.articles.push(el);
+		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+
+		State.update('articles', el.unread);
 
 		Api.UserArticle.update({
 			articleid: el.id

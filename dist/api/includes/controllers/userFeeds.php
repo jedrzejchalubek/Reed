@@ -9,6 +9,21 @@
 class UserFeeds extends Controller
 {
 
+
+	public function get($id, $query)
+	{
+
+		$data = $this->userFeed->fetch($id[0]);
+
+		if ($data) {
+			Response::json($data);
+		} else {
+			echo "[]";
+		}
+
+	}
+
+
 	/**
 	 * Post
 	 */
@@ -16,7 +31,7 @@ class UserFeeds extends Controller
 	{
 
 		$request = Request::getData();
-		$articles = [];
+		$articles = array();
 
 		if (String::isUrl($request->rssUrl)) {
 
@@ -34,9 +49,9 @@ class UserFeeds extends Controller
 				'link' => $feed->get_permalink(),
 				'title' => String::stripAllTags($feed->get_title()),
 				'description' => String::stripAllTags($feed->get_description()),
-				'updated' => '2014-03-07 23:27:26',
-				'created' => '2014-03-07 23:27:26',
-				'modifed' => '2014-03-07 23:27:26',
+				'updated' => date('Y-m-d H:i:s'),
+				'created' => date('Y-m-d H:i:s'),
+				'modifed' => date('Y-m-d H:i:s'),
 				'image' => $feed->get_image_url(),
 				'subscribers' => '2222',
 				'status' => '1'
@@ -55,17 +70,20 @@ class UserFeeds extends Controller
 				$imagesize = getimagesize($imagesrc);
 				$imagesrc = ($imagesize[0] > 200 && $imagesize[1] > 200) ? $imagesrc : 'app/images/icon-blank.png';
 
-				$this->article->addOverwrite(array(
+				$item = array(
 					'id' => String::md5(String::normalizeUrl($article->get_link())),
-					'created' => '2014-03-07 23:27:26',
-					'modifed' => '2014-03-07 23:27:26',
+					'feed' => String::md5(String::normalizeUrl($feed->get_permalink())),
+					'created' => $article->get_gmdate('Y-m-d H:i:s'),
+					'modifed' => $article->get_updated_gmdate('Y-m-d H:i:s'),
 					'url' => String::normalizeUrl($article->get_link()),
 					'title' => String::stripAllTags($article->get_title()),
-					'description' => String::stripAllTags(substr($article->get_description(), 0, 255)),
+					'description' => String::cut(String::stripAllTags($article->get_description())),
 					'content' => String::stripRiskyTags($article->get_content()),
 					'image' => $imagesrc,
 					'stars' => '222'
-				));
+				);
+
+				$this->article->addOverwrite($item);
 
 				$this->userArticle->addOverwrite(array(
 					'id' => $id[0],
@@ -73,20 +91,10 @@ class UserFeeds extends Controller
 					'unread' => 1,
 					'later' => 0,
 					'favourite' => 0,
-					'created' => '2014-05-27 20:25:50'
+					'created' => date('Y-m-d H:i:s')
 				));
 
-				array_push($articles, array(
-					'id' => String::md5(String::normalizeUrl($article->get_link())),
-					'created' => '2014-03-07 23:27:26',
-					'modifed' => '2014-03-07 23:27:26',
-					'url' => String::normalizeUrl($article->get_link()),
-					'title' => String::stripAllTags($article->get_title()),
-					'description' => String::stripAllTags(substr($article->get_description(), 0, 255)),
-					'content' => String::stripRiskyTags($article->get_content()),
-					'image' => $imagesrc,
-					'stars' => '222'
-				));
+				array_push($articles, $item);
 
 			}
 
