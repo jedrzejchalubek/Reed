@@ -59,7 +59,7 @@
                   </form>
                 </div>
                 <section>
-                  <article ng-repeat="item in view.content | filter: discovery.search" id="{{item.id}}" class="thumbs__item thumb-animation col-sm-6 col-md-4 col-lg-3">
+                  <article ng-repeat="item in view.content" id="{{item.id}}" class="thumbs__item thumb-animation col-sm-6 col-md-4 col-lg-3">
                     <div ng-class="{isRead: item.unread==0 &amp;&amp; (view.is === 'All' || view.is == 'Feeds')}" class="thumbs__content"><a ng-click="showArticle(item)">
                         <div style="background-image: url({{item.image}});" class="thumbs__img"></div>
                         <div class="thumbs__meta">

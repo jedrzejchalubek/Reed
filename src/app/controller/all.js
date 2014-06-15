@@ -45,13 +45,11 @@ Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collecti
 
 	Collection.ready([Collection.articles.$promise], function () {
 
-		console.log(Collection.articles);
-
 		$scope.view = {
 			is: 'All',
 			title: 'All',
 			section: 'list',
-			content: Collection.articles
+			content: Collection.orderBy(Collection.articles, '-created')
 		};
 
 	});

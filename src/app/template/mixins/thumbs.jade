@@ -1,10 +1,10 @@
-mixin thumbs(items, nav, filter)
+mixin thumbs(items, nav)
 	section#thumbs.thumbs.fill
 		.row
 			.thumbs__wrapper.clearfix
 				block
 				section
-					article.thumbs__item.thumb-animation.col-sm-6.col-md-4.col-lg-3(ng-repeat="item in #{items} | filter: #{filter}", id="{{item.id}}")
+					article.thumbs__item.thumb-animation.col-sm-6.col-md-4.col-lg-3(ng-repeat="item in #{items}", id="{{item.id}}")
 						.thumbs__content(ng-class="{isRead: item.unread==0 && (view.is === 'All' || view.is == 'Feeds')}")
 							a(ng-click="showArticle(item)")
 								.thumbs__img(style="background-image: url({{item.image}});")

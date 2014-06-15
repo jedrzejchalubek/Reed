@@ -1,4 +1,4 @@
-Reed.service('httpResponseInterceptorHandler', ['$q', '$location', '$cookieStore', function ($q, $location, $cookieStore) {
+Reed.service('httpResponseInterceptorHandler', function ($q, $location, $cookieStore) {
 		return {
 
 			/**
@@ -11,7 +11,8 @@ Reed.service('httpResponseInterceptorHandler', ['$q', '$location', '$cookieStore
 				if (rejection.status === 401) {
 					$cookieStore.remove('reed_authtoken');
 					$cookieStore.remove('reed_userid');
-					$location.path('/');
+					$location.path('/').replace();
+					$window.location.reload();
 
 					return $q.reject(rejection);
 				}
@@ -21,4 +22,4 @@ Reed.service('httpResponseInterceptorHandler', ['$q', '$location', '$cookieStore
 			}
 
 		};
-}]);
+});

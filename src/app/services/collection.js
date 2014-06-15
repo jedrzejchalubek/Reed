@@ -38,7 +38,13 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.add = function (collection, el) {
-		return this[collection].push(el);
+		this[collection].push(el);
+		return this[collection] = this.orderBy(this[collection], '-created');
+	};
+
+
+	this.orderBy = function (collection, params) {
+		return $filter('orderBy')(collection, params);
 	};
 
 
@@ -51,7 +57,7 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	this.filter = function (collection, params) {
 
 		var filter = $filter('filter')(this[collection], params);
-		return $filter('orderBy')(filter, '-created');
+		return this.orderBy(filter, '-created');
 	};
 
 

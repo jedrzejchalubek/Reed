@@ -97,9 +97,15 @@ class Router
 
 					}
 
+					return true;
+
 				}
 
 			}
+
+			Response::failed(array(
+				'message' => 'Bad route'
+			));
 
 		}
 

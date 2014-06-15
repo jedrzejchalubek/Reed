@@ -31,8 +31,9 @@ class UserArticle extends Model
 	 */
 	public function fetch($id)
 	{
-		return $this->db->request("SELECT *, UA.unread FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}'");
-	}
+		// return $this->db->request("SELECT * FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}'");
+
+		return $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}' AND A.created >= (SELECT UF.created FROM userFeed UF WHERE A.feed = UF.feedid) - INTERVAL 7 DAY UNION SELECT A.*, 1 as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = '{$id}' AND A.created >= UF.created - INTERVAL 7 DAY ) LA ON LA.id = A.id GROUP BY A.id"); }
 
 	/**
 	 * Add or overwrite user articles

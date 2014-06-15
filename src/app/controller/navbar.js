@@ -4,7 +4,7 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 
 		var overlay = Overlay.init('Loading');
 
-		el.later = '1' - el.later.toString();
+		el.later = '1' - el.later;
 
 		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
 
@@ -28,7 +28,7 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 
 		var overlay = Overlay.init('Loading');
 
-		el.favourite = '1' - el.favourite.toString();
+		el.favourite = '1' - el.favourite;
 
 		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
 

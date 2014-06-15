@@ -283,20 +283,17 @@ var iosOverlay = function(params) {
 				done: true
 			};
 
+			Collection.add('feeds', response.source);
+
 			response.items.forEach(function (el) {
 				Collection.add('articles', el);
 			});
 
-			$rootScope.state = State.update('articles', response.items.length);
-
-			console.log(Collection.articles);
-
-			// State.set({
-			// 	articles: State.count.articles + response.items.length
-			// });
-
 			$timeout(function () {
+
+				$rootScope.state = State.update('articles', response.items.length);
 				Collection.discovery.feeds.splice(index, 1);
+
 			}, 1000);
 
 		});
@@ -359,13 +356,11 @@ var iosOverlay = function(params) {
 
 	Collection.ready([Collection.articles.$promise], function () {
 
-		console.log(Collection.articles);
-
 		$scope.view = {
 			is: 'All',
 			title: 'All',
 			section: 'list',
-			content: Collection.articles
+			content: Collection.orderBy(Collection.articles, '-created')
 		};
 
 	});
@@ -742,7 +737,7 @@ var iosOverlay = function(params) {
 
 		var overlay = Overlay.init('Loading');
 
-		el.later = '1' - el.later.toString();
+		el.later = '1' - el.later;
 
 		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
 
@@ -766,7 +761,7 @@ var iosOverlay = function(params) {
 
 		var overlay = Overlay.init('Loading');
 
-		el.favourite = '1' - el.favourite.toString();
+		el.favourite = '1' - el.favourite;
 
 		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
 
@@ -1033,7 +1028,13 @@ var iosOverlay = function(params) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.add = function (collection, el) {
-		return this[collection].push(el);
+		this[collection].push(el);
+		return this[collection] = this.orderBy(this[collection], '-created');
+	};
+
+
+	this.orderBy = function (collection, params) {
+		return $filter('orderBy')(collection, params);
 	};
 
 
@@ -1046,7 +1047,7 @@ var iosOverlay = function(params) {
 	this.filter = function (collection, params) {
 
 		var filter = $filter('filter')(this[collection], params);
-		return $filter('orderBy')(filter, '-created');
+		return this.orderBy(filter, '-created');
 	};
 
 
@@ -1088,7 +1089,7 @@ var iosOverlay = function(params) {
 		return value + (tail || ' …');
 	};
 });
-;Reed.service('httpResponseInterceptorHandler', ['$q', '$location', '$cookieStore', function ($q, $location, $cookieStore) {
+;Reed.service('httpResponseInterceptorHandler', function ($q, $location, $cookieStore) {
 		return {
 
 			/**
@@ -1101,7 +1102,8 @@ var iosOverlay = function(params) {
 				if (rejection.status === 401) {
 					$cookieStore.remove('reed_authtoken');
 					$cookieStore.remove('reed_userid');
-					$location.path('/');
+					$location.path('/').replace();
+					$window.location.reload();
 
 					return $q.reject(rejection);
 				}
@@ -1111,7 +1113,7 @@ var iosOverlay = function(params) {
 			}
 
 		};
-}]);
+});
 ;Reed.factory('Overlay', function () {
 
 	/**

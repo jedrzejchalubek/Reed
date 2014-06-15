@@ -13,7 +13,7 @@ class UserFeeds extends Controller
 	public function get($id, $query)
 	{
 
-		$data = $this->userFeed->fetch($id[0]);
+		$data = $this->userFeed->get($id[0]);
 
 		if ($data) {
 			Response::json($data);
@@ -43,7 +43,7 @@ class UserFeeds extends Controller
 			$feed->init();
 			$feed->handle_content_type();
 
-			$this->feed->addOverwrite(array(
+			$source = array(
 				'id' => String::md5(String::normalizeUrl($feed->get_permalink())),
 				'url' => String::normalizeUrl($feed->subscribe_url()),
 				'link' => $feed->get_permalink(),
@@ -55,52 +55,63 @@ class UserFeeds extends Controller
 				'image' => $feed->get_image_url(),
 				'subscribers' => '2222',
 				'status' => '1'
-			));
+			);
+
+			$this->feed->addOverwrite($source);
 
 			$this->userFeed->addOverwrite(array(
 				'id' => $id[0],
-				'feedid' => String::md5(String::normalizeUrl($feed->get_permalink()))
+				'feedid' => String::md5(String::normalizeUrl($feed->get_permalink())),
+				'created' => date('Y-m-d H:i:s')
 			));
 
 			foreach ($feed->get_items() as $article) {
 
-				preg_match('/(<img[^>]+>)/i', $article->get_content(), $images);
-				$xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
-				$imagesrc = $xpath->evaluate("string(//img/@src)");
-				$imagesize = getimagesize($imagesrc);
-				$imagesrc = ($imagesize[0] > 200 && $imagesize[1] > 200) ? $imagesrc : 'app/images/icon-blank.png';
+				if($article->get_gmdate('Y-m-d H:i:s') >= date('Y-m-d H:i:s', strtotime('-1 week'))) {
 
-				$item = array(
-					'id' => String::md5(String::normalizeUrl($article->get_link())),
-					'feed' => String::md5(String::normalizeUrl($feed->get_permalink())),
-					'created' => $article->get_gmdate('Y-m-d H:i:s'),
-					'modifed' => $article->get_updated_gmdate('Y-m-d H:i:s'),
-					'url' => String::normalizeUrl($article->get_link()),
-					'title' => String::stripAllTags($article->get_title()),
-					'description' => String::cut(String::stripAllTags($article->get_description())),
-					'content' => String::stripRiskyTags($article->get_content()),
-					'image' => $imagesrc,
-					'stars' => '222'
-				);
+					preg_match('/(<img[^>]+>)/i', $article->get_content(), $images);
+					$xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
+					$imagesrc = $xpath->evaluate("string(//img/@src)");
+					$imagesize = getimagesize($imagesrc);
+					$imagesrc = ($imagesize[0] > 200 && $imagesize[1] > 200) ? $imagesrc : 'app/images/icon-blank.png';
 
-				$this->article->addOverwrite($item);
+					$item = array(
+						'id' => String::md5(String::normalizeUrl($article->get_link())),
+						'feed' => String::md5(String::normalizeUrl($feed->get_permalink())),
+						'created' => $article->get_gmdate('Y-m-d H:i:s'),
+						'modifed' => $article->get_updated_gmdate('Y-m-d H:i:s'),
+						'url' => String::normalizeUrl($article->get_link()),
+						'title' => String::stripAllTags($article->get_title()),
+						'description' => String::cut(String::stripAllTags($article->get_description())),
+						'content' => String::stripRiskyTags($article->get_content()),
+						'image' => $imagesrc,
+						'stars' => '222',
+						'unread' => '1',
+						'favourite' => '0',
+						'later' => '0'
+					);
 
-				$this->userArticle->addOverwrite(array(
-					'id' => $id[0],
-					'articleid' => String::md5(String::normalizeUrl($article->get_link())),
-					'unread' => 1,
-					'later' => 0,
-					'favourite' => 0,
-					'created' => date('Y-m-d H:i:s')
-				));
+					$this->article->addOverwrite($item);
 
-				array_push($articles, $item);
+					$this->userArticle->addOverwrite(array(
+						'id' => $id[0],
+						'articleid' => String::md5(String::normalizeUrl($article->get_link())),
+						'unread' => 1,
+						'later' => 0,
+						'favourite' => 0,
+						'created' => date('Y-m-d H:i:s')
+					));
+
+					array_push($articles, $item);
+
+				}
 
 			}
 
 			Response::added(array(
 				'status' => 'success',
 				'message' => 'User feed added',
+				'source' => $source,
 				'items' => $articles
 			));
 

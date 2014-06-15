@@ -37,11 +37,11 @@
 	&__content {
 
 		background: @white;
-		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+		.box-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 		.transition(all 300ms cubic-bezier(0.165, 0.840, 0.440, 1.000));
 
 		a {
-			color: @gray;
+			color: @gray-dark;
 
 			&:hover {
 				color: @gray-darker;
@@ -51,6 +51,15 @@
 		&.isRead {
 			.opacity(.85);
 			.box-shadow(0 0 0 rgba(0, 0, 0, 0.0));
+
+			a {
+				color: @gray;
+
+				&:hover {
+					color: @gray-darker;
+				}
+			}
+
 		}
 	}
 
@@ -111,7 +120,7 @@
 		}
 
 		&.isRead {
-			border-color: @gray;
+			border: 2px solid @gray;
 		}
 	}
 
