@@ -2,7 +2,6 @@ Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collecti
 
 	$scope.showArticle = function (el) {
 
-		if(el.unread == 1) State.update('articles', 0);
 		el.unread = '0';
 
 		angular.extend($scope.view, {
@@ -24,7 +23,6 @@ Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collecti
 
 	$scope.nextArticle = function (el) {
 
-		if(el.unread == 1) State.update('articles', 0);
 		el.unread = '0';
 
 		angular.extend($scope.view, {
@@ -44,6 +42,8 @@ Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collecti
 	};
 
 	Collection.ready([Collection.articles.$promise], function () {
+
+		$scope.collection = Collection;
 
 		$scope.view = {
 			is: 'All',

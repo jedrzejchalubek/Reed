@@ -46,6 +46,7 @@ class Article extends Model
 		return ($request) ? $request : \Response::json(array('status' => 'nothing'));
 	}
 
+
 	/**
 	 * Construct
 	 * Dependency injection

@@ -12,15 +12,7 @@ class UserFeeds extends Controller
 
 	public function get($id, $query)
 	{
-
-		$data = $this->userFeed->get($id[0]);
-
-		if ($data) {
-			Response::json($data);
-		} else {
-			echo "[]";
-		}
-
+		Response::json($this->userFeed->get($id[0]));
 	}
 
 
@@ -43,66 +35,75 @@ class UserFeeds extends Controller
 			$feed->init();
 			$feed->handle_content_type();
 
+			$feedId 	= Handy::makeId($feed->get_permalink());
+			$feedUrl 	= String::normalizeUrl($feed->subscribe_url());
+			$feedLink 	= String::normalizeUrl($feed->get_permalink());
+			$feedTitle 	= String::stripAllTags($feed->get_title());
+			$feedDesc 	= String::stripAllTags($feed->get_description());
+			$feedImg 	= $feed->get_image_url();
+			$feedItems	= $feed->get_items();
+			$date 		= date('Y-m-d H:i:s');
+
 			$source = array(
-				'id' => String::md5(String::normalizeUrl($feed->get_permalink())),
-				'url' => String::normalizeUrl($feed->subscribe_url()),
-				'link' => $feed->get_permalink(),
-				'title' => String::stripAllTags($feed->get_title()),
-				'description' => String::stripAllTags($feed->get_description()),
-				'updated' => date('Y-m-d H:i:s'),
-				'created' => date('Y-m-d H:i:s'),
-				'modifed' => date('Y-m-d H:i:s'),
-				'image' => $feed->get_image_url(),
+				'id' => $feedId,
+				'url' => $feedUrl,
+				'link' => $feedLink,
+				'title' => $feedTitle,
+				'description' => $feedDesc,
 				'subscribers' => '2222',
-				'status' => '1'
+				'status' => '1',
+				'image' => $feedImg,
+				'updated' => $date,
+				'created' => $date,
+				'modifed' => $date
 			);
 
 			$this->feed->addOverwrite($source);
 
 			$this->userFeed->addOverwrite(array(
 				'id' => $id[0],
-				'feedid' => String::md5(String::normalizeUrl($feed->get_permalink())),
-				'created' => date('Y-m-d H:i:s')
+				'feedid' => $feedId,
+				'created' => $date
 			));
 
-			foreach ($feed->get_items() as $article) {
+			foreach ($feedItems as $article) {
 
-				if($article->get_gmdate('Y-m-d H:i:s') >= date('Y-m-d H:i:s', strtotime('-1 week'))) {
+				$articleId 		= Handy::makeId($article->get_link());
+				$articleUrl 	= String::normalizeUrl($article->get_link());
+				$articleTitle 	= String::stripAllTags($article->get_title());
+				$articleDesc 	= String::cut(String::stripAllTags($article->get_description()));
+				$articleContent = String::stripRiskyTags($article->get_content());
+				$articleImg 	= Handy::findImage($article->get_content());
+				$articleCreated = $article->get_gmdate('Y-m-d H:i:s');
+				$articleUpdated = $article->get_updated_gmdate('Y-m-d H:i:s');
 
-					preg_match('/(<img[^>]+>)/i', $article->get_content(), $images);
-					$xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
-					$imagesrc = $xpath->evaluate("string(//img/@src)");
-					$imagesize = getimagesize($imagesrc);
-					$imagesrc = ($imagesize[0] > 200 && $imagesize[1] > 200) ? $imagesrc : 'app/images/icon-blank.png';
+				if( $articleCreated >= date('Y-m-d H:i:s', strtotime('-3 day')) ) {
 
-					$item = array(
-						'id' => String::md5(String::normalizeUrl($article->get_link())),
-						'feed' => String::md5(String::normalizeUrl($feed->get_permalink())),
-						'created' => $article->get_gmdate('Y-m-d H:i:s'),
-						'modifed' => $article->get_updated_gmdate('Y-m-d H:i:s'),
-						'url' => String::normalizeUrl($article->get_link()),
-						'title' => String::stripAllTags($article->get_title()),
-						'description' => String::cut(String::stripAllTags($article->get_description())),
-						'content' => String::stripRiskyTags($article->get_content()),
-						'image' => $imagesrc,
+
+					$this->article->addOverwrite(array(
+						'id' => $articleId,
+						'feed' => $feedId,
+						'url' => $articleUrl,
+						'title' => $articleTitle,
+						'description' => $articleDesc,
+						'content' => $articleContent,
+						'image' => $articleImg,
 						'stars' => '222',
 						'unread' => '1',
 						'favourite' => '0',
-						'later' => '0'
-					);
-
-					$this->article->addOverwrite($item);
+						'later' => '0',
+						'created' => $articleCreated,
+						'modifed' => $articleUpdated
+					));
 
 					$this->userArticle->addOverwrite(array(
 						'id' => $id[0],
-						'articleid' => String::md5(String::normalizeUrl($article->get_link())),
+						'articleid' => Handy::makeId($article->get_link()),
 						'unread' => 1,
 						'later' => 0,
 						'favourite' => 0,
 						'created' => date('Y-m-d H:i:s')
 					));
-
-					array_push($articles, $item);
 
 				}
 
@@ -112,7 +113,7 @@ class UserFeeds extends Controller
 				'status' => 'success',
 				'message' => 'User feed added',
 				'source' => $source,
-				'items' => $articles
+				'items' => $this->userArticle->fetch($id[0])
 			));
 
 		} else {
@@ -137,4 +138,5 @@ class UserFeeds extends Controller
 	{
 		parent::__construct($models);
 	}
+
 }

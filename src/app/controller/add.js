@@ -34,13 +34,21 @@ Reed.controller('Add', function ($scope, $rootScope, $timeout, Api, State, Overl
 
 			Collection.add('feeds', response.source);
 
-			response.items.forEach(function (el) {
-				Collection.add('articles', el);
-			});
+			// response.items.forEach(function (el) {
+			// 	Collection.add('articles', el);
+			// });
+
+			Collection.articles = response.items;
+
+			// console.log(Collection.length('articles'));
 
 			$timeout(function () {
 
-				$rootScope.state = State.update('articles', response.items.length);
+				$rootScope.state = State.set({
+					articles: Collection.filter('articles', {
+						unread: '1'
+					}).length,
+				});
 				Collection.discovery.feeds.splice(index, 1);
 
 			}, 1000);

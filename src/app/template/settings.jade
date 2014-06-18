@@ -1,0 +1,18 @@
+include mixins/mixins
+
++wrapper()
+
+	+menu()
+		+side
+			+list("view.side")
+
+	+content()
+		.fill
+			section.text-center
+				h1 Subscribe even more.
+				p.lead
+					| Enter only the address of the webpage you want to track.
+					br
+					| We'll do the rest.
+			section
+				{{view.content.email}}

@@ -252,49 +252,7 @@ $router->map('/users/:id/articles/:id', 'UserArticle', array(
 	'userArticle' => $userArticle
 ));
 
-$router->map('/csv', function() use($feed, $article, $userFeed) {
 
-	$streams = $userFeed->fetch();
-
-	foreach( $streams as $stream ) {
-
-		$source = $feed->get($stream['feedid']);
-
-		$channel = new SimplePie();
-		$channel->set_feed_url($source['url']);
-		$channel->set_autodiscovery_level(SIMPLEPIE_LOCATOR_ALL);
-		$channel->init();
-		$channel->handle_content_type();
-
-		foreach ($channel->get_items() as $material) {
-
-			preg_match('/(<img[^>]+>)/i', $material->get_content(), $images);
-			$xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
-			$imagesrc = $xpath->evaluate("string(//img/@src)");
-			$imagesize = getimagesize($imagesrc);
-			$imagesrc = ($imagesize[0] > 200 && $imagesize[1] > 200) ? $imagesrc : 'app/images/icon-blank.png';
-
-			$article->addOverwrite(array(
-				'id' => String::md5(String::normalizeUrl($material->get_link())),
-				'feed' => String::md5(String::normalizeUrl($channel->get_permalink())),
-				'created' => $material->get_gmdate('Y-m-d H:i:s'),
-				'modifed' => $material->get_updated_gmdate('Y-m-d H:i:s'),
-				'url' => String::normalizeUrl($material->get_link()),
-				'title' => String::stripAllTags($material->get_title()),
-				'description' => String::cut(String::stripAllTags($material->get_description())),
-				'content' => String::stripRiskyTags($material->get_content()),
-				'image' => $imagesrc,
-				'stars' => '222',
-				'unread' => '1',
-				'favourite' => '0',
-				'later' => '0'
-			));
-
-		}
-
-	}
-
-});
 
 
 /*

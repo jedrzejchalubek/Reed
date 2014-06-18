@@ -12,12 +12,14 @@ class UserArticles extends Controller
 	public function get($id, $query)
 	{
 
-		$data = $this->userArticle->fetch($id[0]);
-
-		if ($data) {
-			Response::json($data);
-		} else {
-			echo "[]";
+		if($query['favourites']) {
+			return Response::json($this->userArticle->favourites($id[0]));
+		}
+		else if($query['later']) {
+			return Response::json($this->userArticle->later($id[0]));
+		}
+		else {
+			return Response::json($this->userArticle->fetch($id[0]));
 		}
 
 

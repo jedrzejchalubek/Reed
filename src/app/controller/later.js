@@ -19,15 +19,13 @@ Reed.controller('Later', function ($scope, $filter, Api, State, Collection) {
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function () {
+	Collection.ready([Collection.later.$promise], function () {
 
 		$scope.view = {
 			is: 'Later',
 			title: 'Read later',
 			section: 'list',
-			content: Collection.filter('articles', {
-				later: '1'
-			})
+			content: Collection.later
 		};
 
 	});

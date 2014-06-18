@@ -6,9 +6,9 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 
 		el.later = '1' - el.later;
 
-		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+		if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
 
-		State.update('later', el.later);
+		// State.update('later', el.later);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -30,9 +30,9 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 
 		el.favourite = '1' - el.favourite;
 
-		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+		if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
 
-		State.update('favourite', el.favourite);
+		// State.update('favourite', el.favourite);
 
 		Api.UserArticle.update({
 			articleid: el.id

@@ -25,6 +25,20 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 
 
 	/**
+	 * User favourite articles
+	 * @type {Object}
+	 */
+	this.favourites = Api.UserFavourites.get();
+
+
+	/**
+	 * User read later articles
+	 * @type {Object}
+	 */
+	this.later = Api.UserLater.get();
+
+
+	/**
 	 * User feeds collection
 	 * @type {Object}
 	 */
@@ -43,6 +57,12 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	};
 
 
+	/**
+	 * Order collection
+	 * @param  {String} collection Collection name
+	 * @param  {Object} params     Order params
+	 * @return {Object}            Ordered collection
+	 */
 	this.orderBy = function (collection, params) {
 		return $filter('orderBy')(collection, params);
 	};
@@ -55,7 +75,6 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.filter = function (collection, params) {
-
 		var filter = $filter('filter')(this[collection], params);
 		return this.orderBy(filter, '-created');
 	};

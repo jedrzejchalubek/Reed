@@ -19,7 +19,7 @@ Reed.controller('Login', function ($scope, $resource, $location, $cookieStore, e
 						$location.path('/discovery').replace();
 					});
 
-				});
+				}, { scope: 'email' });
 
 			};
 

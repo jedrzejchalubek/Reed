@@ -8,17 +8,17 @@ mixin navigation()
 			a(ng-click="view.panel = false", href="#later").navigation__item.list-group-item
 				.navigation__icon.iconmonstr.iconmonstr-time
 				span.navigation__title Read later
-				span.navigation__badge.badge(ng-show="state.count.later != 0") {{state.count.later}}
+				span.navigation__badge.badge(ng-show="state.count.later != 0") {{ collection.filter('later', { favourite: 1 }).length }}
 			a(ng-click="view.panel = false", href="#favourites").navigation__item.list-group-item
 				.navigation__icon.iconmonstr.iconmonstr-bookmark
 				span.navigation__title Favourites
-				span.navigation__badge.badge(ng-show="state.count.favourite != 0") {{state.count.favourite}}
+				span.navigation__badge.badge(ng-show="state.count.favourite != 0") {{ collection.filter('favourites', { favourite: 1 }).length }}
 			a(ng-click="view.panel = false", href="#all").navigation__item.list-group-item
 				.navigation__icon.iconmonstr.iconmonstr-menu
 				span.navigation__title All
-				span.navigation__badge.badge(ng-show="state.count.articles != 0") {{state.count.articles}}
+				span.navigation__badge.badge(ng-show="state.count.articles != 0") {{ collection.filter('articles', { unread: 1 }).length }}
 
 			ul.navigation__list
 				li.navigation__feed(ng-repeat="feed in collection.feeds")
 					a(href="#feeds/{{feed.id}}") {{feed.title}}
-					span.navigation__feed-badge.badge.pull-right(ng-show="countFeed(feed) != 0") {{ countFeed(feed) }}
+					span.navigation__feed-badge.badge.pull-right(ng-show="countFeed(feed) != 0") {{ collection.filter('articles', { feed: feed.id, unread: 1 }).length }}

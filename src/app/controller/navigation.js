@@ -24,7 +24,7 @@ Reed.controller('Navigation', function ($scope, State, Collection) {
 		Collection.feeds.$promise
 	], function() {
 
-		$scope.feeds = Collection.feeds;
+		$scope.collection = Collection;
 
 	});
 

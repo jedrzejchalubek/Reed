@@ -56,7 +56,12 @@ var Reed = angular.module('Reed', [
 			.when('/add', {
 				templateUrl: 'app/template/add.html',
 				controller: 'Add',
-				requireLogin: false
+				requireLogin: true
+			})
+			.when('/settings', {
+				templateUrl: 'app/template/settings.html',
+				controller: 'Settings',
+				requireLogin: true
 			});
 
 		// If the url is unrecognized go to login
@@ -285,13 +290,21 @@ var iosOverlay = function(params) {
 
 			Collection.add('feeds', response.source);
 
-			response.items.forEach(function (el) {
-				Collection.add('articles', el);
-			});
+			// response.items.forEach(function (el) {
+			// 	Collection.add('articles', el);
+			// });
+
+			Collection.articles = response.items;
+
+			// console.log(Collection.length('articles'));
 
 			$timeout(function () {
 
-				$rootScope.state = State.update('articles', response.items.length);
+				$rootScope.state = State.set({
+					articles: Collection.filter('articles', {
+						unread: '1'
+					}).length,
+				});
 				Collection.discovery.feeds.splice(index, 1);
 
 			}, 1000);
@@ -313,7 +326,6 @@ var iosOverlay = function(params) {
 
 	$scope.showArticle = function (el) {
 
-		if(el.unread == 1) State.update('articles', 0);
 		el.unread = '0';
 
 		angular.extend($scope.view, {
@@ -335,7 +347,6 @@ var iosOverlay = function(params) {
 
 	$scope.nextArticle = function (el) {
 
-		if(el.unread == 1) State.update('articles', 0);
 		el.unread = '0';
 
 		angular.extend($scope.view, {
@@ -355,6 +366,8 @@ var iosOverlay = function(params) {
 	};
 
 	Collection.ready([Collection.articles.$promise], function () {
+
+		$scope.collection = Collection;
 
 		$scope.view = {
 			is: 'All',
@@ -420,15 +433,13 @@ var iosOverlay = function(params) {
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function() {
+	Collection.ready([Collection.favourites.$promise], function() {
 
 		$scope.view = {
 			is: 'Favourites',
 			title: 'Favourites',
 			section: 'list',
-			content: Collection.filter('articles', {
-				favourite: '1'
-			})
+			content: Collection.favourites
 		};
 
 	});
@@ -519,15 +530,13 @@ var iosOverlay = function(params) {
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function () {
+	Collection.ready([Collection.later.$promise], function () {
 
 		$scope.view = {
 			is: 'Later',
 			title: 'Read later',
 			section: 'list',
-			content: Collection.filter('articles', {
-				later: '1'
-			})
+			content: Collection.later
 		};
 
 	});
@@ -554,7 +563,7 @@ var iosOverlay = function(params) {
 						$location.path('/discovery').replace();
 					});
 
-				});
+				}, { scope: 'email' });
 
 			};
 
@@ -739,9 +748,9 @@ var iosOverlay = function(params) {
 
 		el.later = '1' - el.later;
 
-		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+		if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
 
-		State.update('later', el.later);
+		// State.update('later', el.later);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -763,9 +772,9 @@ var iosOverlay = function(params) {
 
 		el.favourite = '1' - el.favourite;
 
-		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+		if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
 
-		State.update('favourite', el.favourite);
+		// State.update('favourite', el.favourite);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -830,7 +839,7 @@ var iosOverlay = function(params) {
 		Collection.feeds.$promise
 	], function() {
 
-		$scope.feeds = Collection.feeds;
+		$scope.collection = Collection;
 
 	});
 
@@ -838,6 +847,21 @@ var iosOverlay = function(params) {
 });
 
 
+;Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
+
+
+	Collection.ready([Collection.articles.$promise], function () {
+
+		$scope.view = {
+			is: 'Settings',
+			title: 'Settings',
+			section: 'list',
+			content: Collection.user
+		};
+
+	});
+
+});
 ;angular.module('toggle-switch', ['ng']).directive('toggleSwitch', function () {
   return {
     restrict: 'EA',
@@ -965,6 +989,20 @@ var iosOverlay = function(params) {
 				}
 			}),
 
+			UserFavourites: $resource('api/users/:id/articles?favourites=true', { id: State.user.id }, {
+				get: {
+					method: 'GET',
+					isArray: true
+				}
+			}),
+
+			UserLater: $resource('api/users/:id/articles?later=true', { id: State.user.id }, {
+				get: {
+					method: 'GET',
+					isArray: true
+				}
+			}),
+
 		};
 
 });
@@ -1015,6 +1053,20 @@ var iosOverlay = function(params) {
 
 
 	/**
+	 * User favourite articles
+	 * @type {Object}
+	 */
+	this.favourites = Api.UserFavourites.get();
+
+
+	/**
+	 * User read later articles
+	 * @type {Object}
+	 */
+	this.later = Api.UserLater.get();
+
+
+	/**
 	 * User feeds collection
 	 * @type {Object}
 	 */
@@ -1033,6 +1085,12 @@ var iosOverlay = function(params) {
 	};
 
 
+	/**
+	 * Order collection
+	 * @param  {String} collection Collection name
+	 * @param  {Object} params     Order params
+	 * @return {Object}            Ordered collection
+	 */
 	this.orderBy = function (collection, params) {
 		return $filter('orderBy')(collection, params);
 	};
@@ -1045,7 +1103,6 @@ var iosOverlay = function(params) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.filter = function (collection, params) {
-
 		var filter = $filter('filter')(this[collection], params);
 		return this.orderBy(filter, '-created');
 	};

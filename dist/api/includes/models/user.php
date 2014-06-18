@@ -22,7 +22,7 @@ class User extends Model
 	 * Database table columns
 	 * @var String
 	 */
-	protected $columns = 'id, fbId, name';
+	protected $columns = 'id, fbId, name, last, email';
 
 	/**
 	 * Facebook API

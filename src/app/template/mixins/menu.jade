@@ -27,7 +27,7 @@ mixin menu()
 
 		a.menu__collapse(href="", ng-click="toggleSidebar()")
 			i.fa.fa-bars
-			span.menu__collapse-badge.badge(ng-show="state.count.articles != 0") {{state.count.articles}}
+			span.menu__collapse-badge.badge(ng-show="state.count.articles != 0") {{ collection.filter('articles', { unread: 1 }).length }}
 
 		a.menu__add(href="#add")
 			span.fa.fa-plus-circle

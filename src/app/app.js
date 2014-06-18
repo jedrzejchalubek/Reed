@@ -56,7 +56,12 @@ var Reed = angular.module('Reed', [
 			.when('/add', {
 				templateUrl: 'app/template/add.html',
 				controller: 'Add',
-				requireLogin: false
+				requireLogin: true
+			})
+			.when('/settings', {
+				templateUrl: 'app/template/settings.html',
+				controller: 'Settings',
+				requireLogin: true
 			});
 
 		// If the url is unrecognized go to login

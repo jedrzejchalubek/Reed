@@ -48,6 +48,20 @@ Reed.factory('Api', function ($http, $resource, State) {
 				}
 			}),
 
+			UserFavourites: $resource('api/users/:id/articles?favourites=true', { id: State.user.id }, {
+				get: {
+					method: 'GET',
+					isArray: true
+				}
+			}),
+
+			UserLater: $resource('api/users/:id/articles?later=true', { id: State.user.id }, {
+				get: {
+					method: 'GET',
+					isArray: true
+				}
+			}),
+
 		};
 
 });

@@ -20,7 +20,7 @@ class UserArticle extends Controller
 			'favourite' => $request->favourite,
 			'later' => $request->later,
 			'unread' => $request->unread,
-			'created' => '2014-05-26 20:28:44'
+			'created' => date('Y-m-d H:i:s')
 		));
 
 		Response::updated(array(

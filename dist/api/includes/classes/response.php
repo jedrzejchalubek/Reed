@@ -12,7 +12,11 @@ class Response
 	{
 		Http::setHeaders();
 
-		echo json_encode($data);
+		if ($data)
+			echo json_encode($data);
+		else
+			echo '[]';
+
 	}
 
 	public static function failed($data = null)
