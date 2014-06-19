@@ -7502,12 +7502,14 @@ body a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1025;
   width: 100%;
   height: 60px;
   font-size: 14px;
   line-height: 24px;
   color: #666666;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .menu a {
   color: #999999;
@@ -7522,17 +7524,17 @@ body a {
   left: 0;
   width: 100%;
   height: 60px;
-  padding: 18px 82px 18px 18px;
+  padding-right: 82px;
 }
 .menu__collapse {
   position: fixed;
   top: 0;
-  right: 15px;
+  right: 0;
   z-index: 1050;
   display: block;
   font-size: 28px;
   color: #999999;
-  padding: 9px 21px;
+  padding: 9px 36px 9px 32px;
 }
 .menu__collapse:hover {
   color: #ffd800 !important;
@@ -7543,11 +7545,20 @@ body a {
 .menu__collapse-badge {
   position: absolute;
   top: 9px;
-  right: 9px;
+  right: 22px;
   background: #484d4f;
 }
 .menu__logotype {
   width: 70px;
+  float: left;
+  clear: none;
+  padding: 17px;
+}
+.menu__back {
+  border-right: 2px solid #f6f6f6;
+  padding: 17px;
+  display: block;
+  width: 130px;
   float: left;
   clear: none;
 }
@@ -7557,22 +7568,25 @@ body a {
   top: 3px;
   margin-right: 3px;
 }
-.menu__sort {
+.menu__single {
+  padding: 18px;
+  display: block;
+  overflow: hidden;
+  max-width: 50%;
+  float: left;
+  clear: none;
+  white-space: nowrap;
+}
+.menu__navbar {
   list-style: none;
   float: right;
   clear: none;
-  padding: 3px;
+  padding: 17px;
 }
-.menu__sort > li {
+.menu__navbar > li {
   float: right;
   clear: none;
   margin-left: 9px;
-}
-.menu__sort.isDark {
-  color: #dfdfdf;
-}
-.menu__sort.isDark a {
-  color: #dfdfdf;
 }
 .menu__fav {
   margin-right: 6px;
@@ -7585,6 +7599,12 @@ body a {
 }
 .menu__later.isLater {
   color: #0066ff;
+}
+.menu__unread {
+  margin-right: 6px;
+}
+.menu__unread.isUnread {
+  color: #ffd800;
 }
 .menu__add {
   position: fixed;
@@ -7620,10 +7640,23 @@ body a {
   z-index: 1000;
   overflow: hidden;
   background: #ffffff;
-  border-top: 2px solid #f6f6f6;
-  -webkit-transition: all 250ms ease-in-out;
-  -o-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
+}
+.content__sort {
+  list-style: none;
+  float: right;
+  clear: none;
+  padding-top: 36px;
+}
+.content__sort > li {
+  float: right;
+  clear: none;
+  margin-left: 9px;
+}
+.content__sort.isDark {
+  color: #dfdfdf;
+}
+.content__sort.isDark a {
+  color: #dfdfdf;
 }
 .content__desc {
   padding: 18px;
@@ -8114,7 +8147,7 @@ body a {
 }
 .article__image {
   position: relative;
-  z-index: 50;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   display: block;
@@ -8123,7 +8156,7 @@ body a {
 }
 .article__meta {
   position: relative;
-  z-index: 550;
+  z-index: 1025;
   padding: 126px 0 36px 0;
 }
 @media (max-width: 767px) {
@@ -8205,11 +8238,11 @@ body a {
   color: #ffffff;
 }
 .article__next:hover span {
-  filter: brightness(18%);
-  -webkit-filter: brightness(18%);
-  -moz-filter: brightness(18%);
-  -o-filter: brightness(18%);
-  -ms-filter: brightness(18%);
+  filter: brightness(16%);
+  -webkit-filter: brightness(16%);
+  -moz-filter: brightness(16%);
+  -o-filter: brightness(16%);
+  -ms-filter: brightness(16%);
 }
 .article__next span {
   -webkit-transition: all 150ms linear;
@@ -8223,7 +8256,7 @@ body a {
 }
 .article__next-meta {
   padding: 122px 0 92px 0;
-  z-index: 550;
+  z-index: 1025;
 }
 .thumbs {
   overflow-y: scroll;
@@ -8298,12 +8331,24 @@ body a {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 .thumbs__heading {
   margin-top: 9px;
 }
 .thumbs__desc {
   color: #484d4f;
+}
+.thumbs__source,
+.thumbs__source:hover,
+.thumbs__source:focus {
+  padding: 22px 18px 0 22px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  color: #ffffff;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
 }
 .thumbs__nav {
   width: 100%;
@@ -8491,9 +8536,6 @@ a.navigation__item:hover {
   line-height: 16px;
   font-size: 12px;
   min-width: 115px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
 }
 .switch.disabled > div > span.knob {
   background: #AAA;
@@ -8545,7 +8587,7 @@ a.navigation__item:hover {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #999999;
-  background: #f6f6f6;
+  background: #ffffff;
 }
 .switch-animate {
   transition: left 300ms cubic-bezier(0.165, 0.84, 0.44, 1);

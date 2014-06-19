@@ -1,13 +1,16 @@
-mixin thumbs(items, nav)
+mixin thumbs(items, nav, filter)
 	section#thumbs.thumbs.fill
 		.row
 			.thumbs__wrapper.clearfix
 				block
 				section
-					article.thumbs__item.thumb-animation.col-sm-6.col-md-4.col-lg-3(ng-repeat="item in #{items}", id="{{item.id}}")
-						.thumbs__content(ng-class="{isRead: item.unread==0 && (view.is === 'All' || view.is == 'Feeds')}")
+					article.thumbs__item.thumb-animation.col-sm-6.col-md-4.col-lg-3(ng-repeat="item in #{items} | filter: #{filter}", id="{{item.id}}")
+						.thumbs__content(ng-class="{isRead:(item.unread==0 && (view.is === 'All' || view.is == 'Feeds')) || (item.favourite==0 && view.is === 'Favourites') || (item.later==0 && view.is === 'Later')}")
 							a(ng-click="showArticle(item)")
 								.thumbs__img(style="background-image: url({{item.image}});")
+									p.thumbs__source {{ collection.filter('feeds', { id: item.feed })[0].title }}
+										| &nbsp;~
+										span(am-time-ago="item.created")
 								.thumbs__meta
 									h3.thumbs__heading(ng-bind-html="item.title")
 									p.thumbs__desc(ng-bind-html="item.description | cut:true:175:' ...'")

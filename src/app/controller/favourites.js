@@ -19,7 +19,10 @@ Reed.controller('Favourites', function ($scope, $filter, Api, State, Collection)
 
 	};
 
-	Collection.ready([Collection.favourites.$promise], function() {
+	Collection.ready([
+		Collection.favourites.$promise,
+		Collection.feeds.$promise
+	], function() {
 
 		$scope.view = {
 			is: 'Favourites',

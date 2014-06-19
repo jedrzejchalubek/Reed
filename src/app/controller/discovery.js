@@ -19,7 +19,12 @@ Reed.controller('Discovery', function ($scope, $filter, Api, State, Collection) 
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function () {
+	Collection.ready([
+		Collection.discovery.articles.$promise,
+		Collection.discovery.feeds.$promise,
+	], function () {
+
+		$scope.collection = Collection;
 
 		$scope.view = {
 			is: 'Discovery',

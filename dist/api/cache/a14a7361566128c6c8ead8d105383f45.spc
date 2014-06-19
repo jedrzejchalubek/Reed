@@ -1,0 +1,1 @@
+a:3:{s:3:"url";s:19:"http://dailyjs.com/";s:8:"feed_url";s:35:"http://feeds.feedburner.com/dailyjs";s:5:"build";s:14:"20121030085402";}

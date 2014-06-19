@@ -2,7 +2,7 @@ Reed.directive('backToList', function() {
 
 	return {
 		restrict: 'AE',
-		replace: 'true',
+		replace: true,
 		templateUrl: 'app/template/partials/back.html',
 		link: function(scope, element, attrs) {
 			element.bind('click', function() {

@@ -1,5 +1,7 @@
 Reed.factory('Api', function ($http, $resource, State) {
 
+		var userid = State.user.id;
+
 		return {
 
 			discoveryFeeds: $resource('api/discovery/feeds', {}, {
@@ -16,14 +18,14 @@ Reed.factory('Api', function ($http, $resource, State) {
 				}
 			}),
 
-			User: $resource('api/users/:id', { id: State.user.id }, {
+			User: $resource('api/users/:id', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: false
 				}
 			}),
 
-			UserFeeds: $resource('api/users/:id/feeds', { id: State.user.id }, {
+			UserFeeds: $resource('api/users/:id/feeds', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
@@ -34,28 +36,28 @@ Reed.factory('Api', function ($http, $resource, State) {
 				}
 			}),
 
-			UserArticles: $resource('api/users/:id/articles', { id: State.user.id }, {
+			UserArticles: $resource('api/users/:id/articles', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
 				},
 			}),
 
-			UserArticle: $resource('api/users/:id/articles/:articleid', { id: State.user.id }, {
+			UserArticle: $resource('api/users/:id/articles/:articleid', { id: userid }, {
 				update: {
 					method: 'PUT',
 					isArray: false
 				}
 			}),
 
-			UserFavourites: $resource('api/users/:id/articles?favourites=true', { id: State.user.id }, {
+			UserFavourites: $resource('api/users/:id/articles?favourites=true', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
 				}
 			}),
 
-			UserLater: $resource('api/users/:id/articles?later=true', { id: State.user.id }, {
+			UserLater: $resource('api/users/:id/articles?later=true', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true

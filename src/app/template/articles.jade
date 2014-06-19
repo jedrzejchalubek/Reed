@@ -11,6 +11,11 @@ include mixins/mixins
 			.thumbs-animation.fill(ng-switch-when="list")
 				+thumbs("view.content")
 					section.content__desc
-						h1.content__title {{view.title}}
+						.row
+							.col-xs-6
+								h1.content__title {{view.title}}
+							.col-xs-6
+								.content__sort(ng-controller="Sort")
+									toggle-switch(model="state.user.filter", on-label="Unread", off-label="All", ng-show="view.is == 'All' || view.is == 'Feeds'")
 			.single-animation.fill(ng-switch-when="single")
 				+article("view.content")

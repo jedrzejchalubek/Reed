@@ -36,10 +36,16 @@ class User extends Model
 	 */
 	protected $token;
 
+
+	/**
+	 * Get user id from cookie
+	 * @return String
+	 */
 	public function getId()
 	{
 		return $_COOKIE['reed_userid'];
 	}
+
 
 	/**
 	 * Get user profile
@@ -51,39 +57,56 @@ class User extends Model
 		return \Request::make("https://graph.facebook.com/me?access_token={$token}");
 	}
 
+
+	/**
+	 * Get user authorization token from database
+	 * @return String
+	 */
 	public function getAuthToken()
 	{
 		$tokens = $this->token->get($this->getId());
 		return $tokens['authtoken'];
 	}
 
+
+	/**
+	 * Get user facebook token form database
+	 * @return String
+	 */
 	public function getFbToken()
 	{
 		$tokens = $this->token->get($this->getId());
 		return $tokens['fbtoken'];
 	}
 
+
 	/**
 	 * Is user authorized
-	 * Return error when user id not exsist
-	 * or Access Token expired
+	 * Return error when user not exsist or something went wrong
 	 * @return boolean
 	 */
 	public function isLogin()
 	{
 
-		if ($_SERVER["REQUEST_URI"] == "/reed/dist/api/auth") return true;
+		// Auth route don't need login
+		if(\Route::is('auth')) return true;
 
-		// User logedin to facebook
+		// User loggedin to facebook
 		if ( $this->getFacebookProfile() ) {
+
 			try {
 				return true;
 			} catch (FacebookApiException $e) {
 				// Facebook Access Token expired
 				error_log($e);
+				return false;
 			}
+
 		} else {
+
 			// Not authorized no facebook session
+			return false;
+
 		}
 
 

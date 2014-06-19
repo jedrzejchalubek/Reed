@@ -1,31 +1,47 @@
 Reed.controller('Navigation', function ($scope, State, Collection) {
 
-	$scope.showFeed = function (el) {
-		angular.extend($scope.view, {
-			section: 'list',
-			content: Collection.filter('articles', {
-				feed: el.id
-			})
-		});
-	};
+	$scope.count = function (collection, el) {
 
+		switch(collection) {
 
-	$scope.countFeed = function (el) {
-		return Collection.filter('articles', {
-			unread: 1,
-			feed: el.id
-		}).length;
+			case 'unread':
+				return Collection.filter('articles', {
+					unread: 1
+				}).length;
+				break;
+
+			case 'favourites':
+				return Collection.filter('favourites', {
+					favourite: 1
+				}).length;
+				break;
+
+			case 'later':
+				return Collection.filter('later', {
+					later: 1
+				}).length;
+				break;
+
+			case 'feeds':
+				return Collection.filter('articles', {
+					unread: 1,
+					feed: el.id
+				}).length;
+				break;
+
+		}
+
 	};
 
 
 	Collection.ready([
 		Collection.user.$promise,
 		Collection.articles.$promise,
+		Collection.favourites.$promise,
+		Collection.later.$promise,
 		Collection.feeds.$promise
 	], function() {
-
 		$scope.collection = Collection;
-
 	});
 
 

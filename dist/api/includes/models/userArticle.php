@@ -32,18 +32,26 @@ class UserArticle extends Model
 	 */
 	public function fetch($id)
 	{
-		return $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}' AND A.created >= (SELECT UF.created FROM userFeed UF WHERE A.feed = UF.feedid AND UF.id = '{$id}') - INTERVAL 3 DAY UNION SELECT A.*, 1 as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = '{$id}' AND A.created >= UF.created - INTERVAL 3 DAY ) LA ON LA.id = A.id GROUP BY A.id");
+		return $this->db->request("SELECT A.*, RJ.unread, RJ.later, RJ.favourite FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}'UNION SELECT A.*, 1 as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = '{$id}' AND A.created >= DATE_ADD(UF.created, INTERVAL 5 DAY) ) RJ ON RJ.id = A.id GROUP BY A.id");
 	}
-
+	/**
+	 * Fetch all user favourites articles
+	 * @param  String $id User id
+	 * @return Array
+	 */
 	public function favourites($id)
 	{
-		return $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}' AND A.created >= (SELECT UF.created FROM userFeed UF WHERE A.feed = UF.feedid AND UF.id = '{$id}') - INTERVAL 3 DAY UNION SELECT A.*, 1 as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = '{$id}' AND A.created >= UF.created - INTERVAL 3 DAY ) LA ON LA.id = A.id WHERE favourite = 1 GROUP BY A.id");
+		return $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}') LA ON LA.id = A.id WHERE favourite = 1 GROUP BY A.id");
 	}
 
-
+	/**
+	 * Fetch all user read later articles
+	 * @param  String $id User id
+	 * @return Array
+	 */
 	public function later($id)
 	{
-		return $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}' AND A.created >= (SELECT UF.created FROM userFeed UF WHERE A.feed = UF.feedid AND UF.id = '{$id}') - INTERVAL 3 DAY UNION SELECT A.*, 1 as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = '{$id}' AND A.created >= UF.created - INTERVAL 3 DAY ) LA ON LA.id = A.id WHERE later = 1 GROUP BY A.id");
+		return $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = '{$id}') LA ON LA.id = A.id WHERE later = 1 GROUP BY A.id");
 	}
 
 	/**

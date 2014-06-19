@@ -72,7 +72,9 @@ class Token extends Model
 	public function isValid()
 	{
 
-		if ( \String::removeQuotes($_COOKIE['reed_authtoken']) === $this->getUserToken() || \Route::is('auth') ) {
+		if(\Route::is('auth')) return true;
+
+		if ( \String::removeQuotes($_COOKIE['reed_authtoken']) === $this->getUserToken() ) {
 
 				return true;
 

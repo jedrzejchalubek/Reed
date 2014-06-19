@@ -1,4 +1,4 @@
-Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collection) {
+Reed.controller('All', function ($scope, $filter, $cookieStore, Api, State, Collection) {
 
 	$scope.showArticle = function (el) {
 
@@ -41,7 +41,11 @@ Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collecti
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function () {
+
+	Collection.ready([
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function () {
 
 		$scope.collection = Collection;
 

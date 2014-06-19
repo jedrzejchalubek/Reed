@@ -1,6 +1,5 @@
 Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
 
-
 	Collection.ready([Collection.articles.$promise], function () {
 
 		$scope.view = {

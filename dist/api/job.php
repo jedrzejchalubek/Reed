@@ -4,41 +4,50 @@ require_once 'bootstrap/head.php';
 
 $streams = $feed->fetch();
 
-		foreach( $streams as $stream ) {
+foreach( $streams as $stream ) {
 
-			$channel = new SimplePie();
-			$channel->set_feed_url($stream['url']);
-			$channel->force_feed(true);
-			$channel->set_cache_location('./cache');
-		    $channel->set_cache_duration(3600);
-       		$channel->set_timeout(1);
-			$channel->init();
-			$channel->handle_content_type();
+	$feed = new SimplePie();
+	$feed->set_feed_url($stream['url']);
+	$feed->force_feed(true);
+	$feed->set_cache_location('./cache');
+	$feed->set_cache_duration(3600);
+    $feed->set_timeout(1);
+	$feed->init();
+	$feed->handle_content_type();
 
-			foreach ($channel->get_items() as $source) {
+	$feedId = Handy::makeId($feed->get_link());
 
-				preg_match('/(<img[^>]+>)/i', $source->get_content(), $images);
-				$xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
-				$imagesrc = $xpath->evaluate("string(//img/@src)");
-				$imagesize = getimagesize($imagesrc);
-				$imagesrc = ($imagesize[0] > 200 && $imagesize[1] > 200) ? $imagesrc : 'app/images/icon-blank.png';
+	foreach ($feed->get_items() as $article) {
 
-				$article->addOverwrite(array(
-					'id' => String::md5(String::normalizeUrl($source->get_link())),
-					'feed' => String::md5(String::normalizeUrl($channel->get_permalink())),
-					'created' => $source->get_gmdate('Y-m-d H:i:s'),
-					'modifed' => $source->get_updated_gmdate('Y-m-d H:i:s'),
-					'url' => String::normalizeUrl($source->get_link()),
-					'title' => String::stripAllTags($source->get_title()),
-					'description' => String::cut(String::stripAllTags($source->get_description())),
-					'content' => String::stripRiskyTags($source->get_content()),
-					'image' => $imagesrc,
-					'stars' => '222',
-					'unread' => '1',
-					'favourite' => '0',
-					'later' => '0'
-				));
+		$articleId 		= Handy::makeId($article->get_link());
+		$articleUrl 	= String::normalizeUrl($article->get_link());
+		$articleTitle 	= String::stripAllTags($article->get_title());
+		$articleDesc 	= String::cut(String::stripAllTags($article->get_description()));
+		$articleContent = String::stripRiskyTags($article->get_content());
+		$articleImg 	= Handy::findImage($article->get_content());
+		$articleCreated = $article->get_gmdate('Y-m-d H:i:s');
+		$articleUpdated = $article->get_updated_gmdate('Y-m-d H:i:s');
 
-			}
+		if( $articleCreated >= date('Y-m-d H:i:s', strtotime('-3 day')) ) {
+
+			$this->article->addOverwrite(array(
+				'id' 			=> $articleId,
+				'feed' 			=> $feedId,
+				'url' 			=> $articleUrl,
+				'title' 		=> $articleTitle,
+				'description' 	=> $articleDesc,
+				'content' 		=> $articleContent,
+				'image' 		=> $articleImg,
+				'stars' 		=> '222',
+				'unread' 		=> '1',
+				'favourite' 	=> '0',
+				'later' 		=> '0',
+				'created' 		=> $articleCreated,
+				'modifed' 		=> $articleUpdated
+			));
 
 		}
+
+	}
+
+}

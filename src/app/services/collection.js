@@ -52,7 +52,7 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.add = function (collection, el) {
-		this[collection].push(el);
+		if(this[collection].indexOf(el) === -1) this[collection].push(el);
 		return this[collection] = this.orderBy(this[collection], '-created');
 	};
 

@@ -4,8 +4,27 @@
 	z-index: @zindex-dropdown;
 	overflow: hidden;
 	background: @white;
-	border-top: 2px solid lighten(@gray-lighter, 9%);
-	.transition(all 250ms ease-in-out);
+
+	&__sort {
+		list-style: none;
+		float: right;
+		clear: none;
+		padding-top: 36px;
+
+		& > li {
+			float: right;
+			clear: none;
+			margin-left: 9px;
+		}
+
+		&.isDark {
+			color: @gray-lighter;
+
+			a {
+				color: @gray-lighter;
+			}
+		}
+	}
 
 	&__desc {
 		padding: 18px;

@@ -19,7 +19,10 @@ Reed.controller('Later', function ($scope, $filter, Api, State, Collection) {
 
 	};
 
-	Collection.ready([Collection.later.$promise], function () {
+	Collection.ready([
+		Collection.favourites.$promise,
+		Collection.feeds.$promise
+	], function () {
 
 		$scope.view = {
 			is: 'Later',

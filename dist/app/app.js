@@ -5,7 +5,8 @@ var Reed = angular.module('Reed', [
 	'ngSanitize',
 	'ngAnimate',
 	'ezfb',
-	'toggle-switch'
+	'toggle-switch',
+	'angularMoment'
 ])
 
 	.config([
@@ -322,7 +323,7 @@ var iosOverlay = function(params) {
 	});
 
 });
-;Reed.controller('All', function ($scope, $filter, $timeout, Api, State, Collection) {
+;Reed.controller('All', function ($scope, $filter, $cookieStore, Api, State, Collection) {
 
 	$scope.showArticle = function (el) {
 
@@ -365,7 +366,11 @@ var iosOverlay = function(params) {
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function () {
+
+	Collection.ready([
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function () {
 
 		$scope.collection = Collection;
 
@@ -400,7 +405,12 @@ var iosOverlay = function(params) {
 
 	};
 
-	Collection.ready([Collection.articles.$promise], function () {
+	Collection.ready([
+		Collection.discovery.articles.$promise,
+		Collection.discovery.feeds.$promise,
+	], function () {
+
+		$scope.collection = Collection;
 
 		$scope.view = {
 			is: 'Discovery',
@@ -433,7 +443,10 @@ var iosOverlay = function(params) {
 
 	};
 
-	Collection.ready([Collection.favourites.$promise], function() {
+	Collection.ready([
+		Collection.favourites.$promise,
+		Collection.feeds.$promise
+	], function() {
 
 		$scope.view = {
 			is: 'Favourites',
@@ -530,7 +543,10 @@ var iosOverlay = function(params) {
 
 	};
 
-	Collection.ready([Collection.later.$promise], function () {
+	Collection.ready([
+		Collection.favourites.$promise,
+		Collection.feeds.$promise
+	], function () {
 
 		$scope.view = {
 			is: 'Later',
@@ -603,85 +619,6 @@ var iosOverlay = function(params) {
 		$scope.view.panel = !$scope.view.panel;
 	};
 
-	$scope.filterByUnread = function () {
-
-		if (State.user.filter == true) {
-
-			var data = $filter('filter')($scope.view.content, { unread: "1" });
-
-			angular.extend($scope.view, {
-				section: 'list',
-				content: data,
-			});
-		} else if(State.user.filter == false) {
-
-			angular.extend($scope.view, {
-				section: 'list',
-				content: State.data.flashback,
-			});
-
-		}
-
-
-	};
-
-	$scope.sortByTitle = function () {
-
-		var data = $filter('orderBy')($scope.view.content, '[title]');
-
-		angular.extend($scope.view, {
-			side: data,
-			content: data
-		});
-
-	};
-
-	$scope.sortByDate = function () {
-
-		var data = $filter('orderBy')($scope.view.content, '[-created]');
-
-		angular.extend($scope.view, {
-			side: data,
-			content: data
-		});
-
-	};
-
-	$scope.showFeed = function (el) {
-		angular.extend($scope.view, {
-			section: 'list',
-			content: Collection.filter('articles', {
-				feed: el.id
-			})
-		});
-	};
-
-
-	$scope.countFeed = function (el) {
-		return Collection.filter('articles', {
-			unread: 1,
-			feed: el.id
-		}).length;
-	};
-
-	$scope.countArticles = function (el) {
-		return Collection.filter('articles', {
-			unread: 1,
-		}).length;
-	};
-
-	$scope.countFavourites = function (el) {
-		return Collection.filter('articles', {
-			favourite: 1,
-		}).length;
-	};
-
-	$scope.countLater = function (el) {
-		return Collection.filter('articles', {
-			later: 1,
-		}).length;
-	};
-
 	Collection.ready([
 		Collection.user.$promise,
 		Collection.articles.$promise,
@@ -689,51 +626,7 @@ var iosOverlay = function(params) {
 	], function() {
 
 		State.data.flashback = $scope.view.content;
-
-		State.set({
-
-			articles: Collection.filter('articles', {
-				unread: '1'
-			}).length,
-
-			favourite: Collection.filter('articles', {
-				favourite: '1'
-			}).length,
-
-			later: Collection.filter('articles', {
-				later: '1'
-			}).length
-
-		});
-
 		$scope.collection = Collection;
-		$scope.state = State.set({
-
-			articles: $scope.collection.filter('articles', {
-				unread: '1'
-			}).length,
-
-			favourite: $scope.collection.filter('articles', {
-				favourite: '1'
-			}).length,
-
-			later: $scope.collection.filter('articles', {
-				later: '1'
-			}).length
-
-		});
-
-		if ($scope.view.is === 'All' || $scope.view.is === 'Feeds') {
-			$scope.$watch('state.user.filter', function () {
-				$cookieStore.put('reed_userfilter', State.user.filter);
-				$scope.filterByUnread();
-			});
-		}
-
-		$rootScope.$watch('state', function (newV, oldV) {
-			if(oldV === undefined && oldV === newV) return;
-			$scope.state.count.articles = newV;
-   		 });
 
 	});
 
@@ -748,9 +641,8 @@ var iosOverlay = function(params) {
 
 		el.later = '1' - el.later;
 
-		if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
-
-		// State.update('later', el.later);
+		// if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
+		Collection.add('later', el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -772,9 +664,8 @@ var iosOverlay = function(params) {
 
 		el.favourite = '1' - el.favourite;
 
-		if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
-
-		// State.update('favourite', el.favourite);
+		// if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
+		Collection.add('favourites', el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -794,9 +685,8 @@ var iosOverlay = function(params) {
 
 		el.unread = '1' - el.unread.toString();
 
-		if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
-
-		State.update('articles', el.unread);
+		// if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
+		Collection.add('articles', el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -815,32 +705,48 @@ var iosOverlay = function(params) {
 });
 ;Reed.controller('Navigation', function ($scope, State, Collection) {
 
-	$scope.showFeed = function (el) {
-		angular.extend($scope.view, {
-			section: 'list',
-			content: Collection.filter('articles', {
-				feed: el.id
-			})
-		});
-	};
+	$scope.count = function (collection, el) {
 
+		switch(collection) {
 
-	$scope.countFeed = function (el) {
-		return Collection.filter('articles', {
-			unread: 1,
-			feed: el.id
-		}).length;
+			case 'unread':
+				return Collection.filter('articles', {
+					unread: 1
+				}).length;
+				break;
+
+			case 'favourites':
+				return Collection.filter('favourites', {
+					favourite: 1
+				}).length;
+				break;
+
+			case 'later':
+				return Collection.filter('later', {
+					later: 1
+				}).length;
+				break;
+
+			case 'feeds':
+				return Collection.filter('articles', {
+					unread: 1,
+					feed: el.id
+				}).length;
+				break;
+
+		}
+
 	};
 
 
 	Collection.ready([
 		Collection.user.$promise,
 		Collection.articles.$promise,
+		Collection.favourites.$promise,
+		Collection.later.$promise,
 		Collection.feeds.$promise
 	], function() {
-
 		$scope.collection = Collection;
-
 	});
 
 
@@ -848,7 +754,6 @@ var iosOverlay = function(params) {
 
 
 ;Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
-
 
 	Collection.ready([Collection.articles.$promise], function () {
 
@@ -862,6 +767,440 @@ var iosOverlay = function(params) {
 	});
 
 });
+;Reed.controller('Sort', function ($scope, $filter, $cookieStore, Api, State, Collection) {
+
+
+	$scope.filterByUnread = function () {
+
+		if (State.user.filter == true) {
+
+			var data = $filter('filter')($scope.view.content, { unread: "1" });
+
+			angular.extend($scope.view, {
+				section: 'list',
+				content: data,
+			});
+
+		} else if(State.user.filter == false) {
+
+			angular.extend($scope.view, {
+				section: 'list',
+				content: State.data.flashback,
+			});
+
+		}
+	};
+
+
+	Collection.ready([Collection.articles.$promise], function () {
+
+		$scope.state = State;
+
+		$scope.$watch('state.user.filter', function () {
+			$cookieStore.put('reed_userfilter', State.user.filter);
+			$scope.filterByUnread();
+		});
+
+	});
+
+});
+;/* angular-moment.js / v0.7.1 / (c) 2013, 2014 Uri Shaked / MIT Licence */
+
+/* global define */
+
+(function () {
+	'use strict';
+
+	function angularMoment(angular, moment) {
+
+		/**
+		 * @ngdoc overview
+		 * @name angularMoment
+		 *
+		 * @description
+		 * angularMoment module provides moment.js functionality for angular.js apps.
+		 */
+		return angular.module('angularMoment', [])
+
+		/**
+		 * @ngdoc object
+		 * @name angularMoment.config:angularMomentConfig
+		 *
+		 * @description
+		 * Common configuration of the angularMoment module
+		 */
+			.constant('angularMomentConfig', {
+				/**
+				 * @ngdoc property
+				 * @name angularMoment.config.angularMomentConfig#preprocess
+				 * @propertyOf angularMoment.config:angularMomentConfig
+				 * @returns {string} The default preprocessor to apply
+				 *
+				 * @description
+				 * Defines a default preprocessor to apply (e.g. 'unix', 'etc', ...). The default value is null,
+				 * i.e. no preprocessor will be applied.
+				 */
+				preprocess: null, // e.g. 'unix', 'utc', ...
+
+				/**
+				 * @ngdoc property
+				 * @name angularMoment.config.angularMomentConfig#timezone
+				 * @propertyOf angularMoment.config:angularMomentConfig
+				 * @returns {string} The default timezone
+				 *
+				 * @description
+				 * The default timezone (e.g. 'Europe/London'). Empty string by default (does not apply
+				 * any timezone shift).
+				 */
+				timezone: '',
+
+				/**
+				 * @ngdoc property
+				 * @name angularMoment.config.angularMomentConfig#format
+				 * @propertyOf angularMoment.config:angularMomentConfig
+				 * @returns {string} The pre-conversion format of the date
+				 *
+				 * @description
+				 * Specify the format of the input date. Essentially it's a
+				 * default and saves you from specifying a format in every
+				 * element. Overridden by element attr. Null by default.
+				 */
+				format: null
+			})
+
+		/**
+		 * @ngdoc object
+		 * @name angularMoment.object:moment
+		 *
+		 * @description
+		 * moment global (as provided by the moment.js library)
+		 */
+			.constant('moment', moment)
+
+		/**
+		 * @ngdoc object
+		 * @name angularMoment.config:amTimeAgoConfig
+		 * @module angularMoment
+		 *
+		 * @description
+		 * configuration specific to the amTimeAgo directive
+		 */
+			.constant('amTimeAgoConfig', {
+				/**
+				 * @ngdoc property
+				 * @name angularMoment.config.amTimeAgoConfig#withoutSuffix
+				 * @propertyOf angularMoment.config:amTimeAgoConfig
+				 * @returns {boolean} Whether to include a suffix in am-time-ago directive
+				 *
+				 * @description
+				 * Defaults to false.
+				 */
+				withoutSuffix: false,
+
+				/**
+				 * @ngdoc property
+				 * @name angularMoment.config.amTimeAgoConfig#serverTime
+				 * @propertyOf angularMoment.config:amTimeAgoConfig
+				 * @returns {numeric} Date in milliseconds.
+				 *
+				 * @description
+				 * When you need to use the time of your server.
+				 * Defaults to null. Local time will be used.
+				 */
+				serverTime: null
+			})
+
+		/**
+		 * @ngdoc directive
+		 * @name angularMoment.directive:amTimeAgo
+		 * @module angularMoment
+		 *
+		 * @restrict A
+		 */
+			.directive('amTimeAgo', ['$window', 'moment', 'amMoment', 'amTimeAgoConfig', 'angularMomentConfig', function ($window, moment, amMoment, amTimeAgoConfig, angularMomentConfig) {
+
+				return function (scope, element, attr) {
+					var activeTimeout = null;
+					var currentValue;
+					var currentFormat = angularMomentConfig.format;
+					var withoutSuffix = amTimeAgoConfig.withoutSuffix;
+					var localDate = new Date().getTime();
+					var preprocess = angularMomentConfig.preprocess;
+					var modelName = attr.amTimeAgo.replace(/^::/, '');
+					var isBindOnce = (attr.amTimeAgo.indexOf('::') === 0);
+					var isTimeElement = ('TIME' === element[0].nodeName.toUpperCase());
+					var unwatchChanges;
+
+					function getNow() {
+						var now;
+						if (amTimeAgoConfig.serverTime) {
+							var localNow = new Date().getTime();
+							var nowMillis = localNow - localDate + amTimeAgoConfig.serverTime;
+							now = moment(nowMillis);
+						}
+						else {
+							now = moment();
+						}
+						return now;
+					}
+
+					function cancelTimer() {
+						if (activeTimeout) {
+							$window.clearTimeout(activeTimeout);
+							activeTimeout = null;
+						}
+					}
+
+					function updateTime(momentInstance) {
+						element.text(momentInstance.from(getNow(), withoutSuffix));
+						if (!isBindOnce) {
+
+							var howOld = getNow().diff(momentInstance, 'minute');
+							var secondsUntilUpdate = 3600;
+							if (howOld < 1) {
+								secondsUntilUpdate = 1;
+							} else if (howOld < 60) {
+								secondsUntilUpdate = 30;
+							} else if (howOld < 180) {
+								secondsUntilUpdate = 300;
+							}
+
+							activeTimeout = $window.setTimeout(function () {
+								updateTime(momentInstance);
+							}, secondsUntilUpdate * 1000);
+						}
+					}
+
+					function updateDateTimeAttr(value) {
+						if (isTimeElement) {
+							element.attr('datetime', value);
+						}
+					}
+
+					function updateMoment() {
+						cancelTimer();
+						if (currentValue) {
+							var momentValue = amMoment.preprocessDate(currentValue, preprocess, currentFormat);
+							updateTime(momentValue);
+							updateDateTimeAttr(momentValue.toISOString());
+						}
+					}
+
+					unwatchChanges = scope.$watch(modelName, function (value) {
+						if ((typeof value === 'undefined') || (value === null) || (value === '')) {
+							cancelTimer();
+							if (currentValue) {
+								element.text('');
+								updateDateTimeAttr('');
+								currentValue = null;
+							}
+							return;
+						}
+
+						currentValue = value;
+						updateMoment();
+
+						if (value !== undefined && isBindOnce) {
+							unwatchChanges();
+						}
+					});
+
+					if (angular.isDefined(attr.amWithoutSuffix)) {
+						scope.$watch(attr.amWithoutSuffix, function (value) {
+							if (typeof value === 'boolean') {
+								withoutSuffix = value;
+								updateMoment();
+							} else {
+								withoutSuffix = amTimeAgoConfig.withoutSuffix;
+							}
+						});
+					}
+
+					attr.$observe('amFormat', function (format) {
+						if (typeof format !== 'undefined') {
+							currentFormat = format;
+							updateMoment();
+						}
+					});
+
+					attr.$observe('amPreprocess', function (newValue) {
+						preprocess = newValue;
+						updateMoment();
+					});
+
+					scope.$on('$destroy', function () {
+						cancelTimer();
+					});
+
+					scope.$on('amMoment:languageChange', function () {
+						updateMoment();
+					});
+				};
+			}])
+
+		/**
+		 * @ngdoc service
+		 * @name angularMoment.service.amMoment
+		 * @module angularMoment
+		 */
+			.service('amMoment', ['moment', '$rootScope', '$log', 'angularMomentConfig', function (moment, $rootScope, $log, angularMomentConfig) {
+				/**
+				 * @ngdoc property
+				 * @name angularMoment:amMoment#preprocessors
+				 * @module angularMoment
+				 *
+				 * @description
+				 * Defines the preprocessors for the preprocessDate method. By default, the following preprocessors
+				 * are defined: utc, unix.
+				 */
+				this.preprocessors = {
+					utc: moment.utc,
+					unix: moment.unix
+				};
+
+				/**
+				 * @ngdoc function
+				 * @name angularMoment.service.amMoment#changeLanguage
+				 * @methodOf angularMoment.service.amMoment
+				 *
+				 * @description
+				 * Changes the language for moment.js and updates all the am-time-ago directive instances
+				 * with the new language.
+				 *
+				 * @param {string} lang 2-letter language code (e.g. en, es, ru, etc.)
+				 */
+				this.changeLanguage = function (lang) {
+					var result = moment.lang(lang);
+					if (angular.isDefined(lang)) {
+						$rootScope.$broadcast('amMoment:languageChange');
+					}
+					return result;
+				};
+
+				/**
+				 * @ngdoc function
+				 * @name angularMoment.service.amMoment#preprocessDate
+				 * @methodOf angularMoment.service.amMoment
+				 *
+				 * @description
+				 * Preprocess a given value and convert it into a Moment instance appropriate for use in the
+				 * am-time-ago directive and the filters.
+				 *
+				 * @param {*} value The value to be preprocessed
+				 * @param {string} preprocess The name of the preprocessor the apply (e.g. utc, unix)
+				 * @param {string=} format Specifies how to parse the value (see {@link http://momentjs.com/docs/#/parsing/string-format/})
+				 * @return {Moment} A value that can be parsed by the moment library
+				 */
+				this.preprocessDate = function (value, preprocess, format) {
+					if (angular.isUndefined(preprocess)) {
+						preprocess = angularMomentConfig.preprocess;
+					}
+					if (this.preprocessors[preprocess]) {
+						return this.preprocessors[preprocess](value, format);
+					}
+					if (preprocess) {
+						$log.warn('angular-moment: Ignoring unsupported value for preprocess: ' + preprocess);
+					}
+					if (!isNaN(parseFloat(value)) && isFinite(value)) {
+						// Milliseconds since the epoch
+						return moment(parseInt(value, 10));
+					}
+					// else just returns the value as-is.
+					return moment(value, format);
+				};
+
+				/**
+				 * @ngdoc function
+				 * @name angularMoment.service.amMoment#applyTimezone
+				 * @methodOf angularMoment.service.amMoment
+				 *
+				 * @description
+				 * Apply a timezone onto a given moment object - if moment-timezone.js is included
+				 * Otherwise, it'll not apply any timezone shift.
+				 *
+				 * @param {Moment} aMoment a moment() instance to apply the timezone shift to
+				 * @returns {Moment} The given moment with the timezone shift applied
+				 */
+				this.applyTimezone = function (aMoment) {
+					var timezone = angularMomentConfig.timezone;
+					if (aMoment && timezone) {
+						if (aMoment.tz) {
+							aMoment = aMoment.tz(timezone);
+						} else {
+							$log.warn('angular-moment: timezone specified but moment.tz() is undefined. Did you forget to include moment-timezone.js?');
+						}
+					}
+					return aMoment;
+				};
+			}])
+
+		/**
+		 * @ngdoc filter
+		 * @name angularMoment.filter:amCalendar
+		 * @module angularMoment
+		 */
+			.filter('amCalendar', ['moment', 'amMoment', function (moment, amMoment) {
+				return function (value, preprocess) {
+					if (typeof value === 'undefined' || value === null) {
+						return '';
+					}
+
+					value = amMoment.preprocessDate(value, preprocess);
+					var date = moment(value);
+					if (!date.isValid()) {
+						return '';
+					}
+
+					return amMoment.applyTimezone(date).calendar();
+				};
+			}])
+
+		/**
+		 * @ngdoc filter
+		 * @name angularMoment.filter:amDateFormat
+		 * @module angularMoment
+		 * @function
+		 */
+			.filter('amDateFormat', ['moment', 'amMoment', function (moment, amMoment) {
+				return function (value, format, preprocess) {
+					if (typeof value === 'undefined' || value === null) {
+						return '';
+					}
+
+					value = amMoment.preprocessDate(value, preprocess);
+					var date = moment(value);
+					if (!date.isValid()) {
+						return '';
+					}
+
+					return amMoment.applyTimezone(date).format(format);
+				};
+			}])
+
+		/**
+		 * @ngdoc filter
+		 * @name angularMoment.filter:amDurationFormat
+		 * @module angularMoment
+		 * @function
+		 */
+			.filter('amDurationFormat', ['moment', function (moment) {
+				return function (value, format, suffix) {
+					if (typeof value === 'undefined' || value === null) {
+						return '';
+					}
+
+					return moment.duration(value, format).humanize(suffix);
+				};
+			}]);
+	}
+
+	if (typeof define === 'function' && define.amd) {
+		define('angular-moment', ['angular', 'moment'], angularMoment);
+	} else {
+		angularMoment(angular, window.moment);
+	}
+})();
+
 ;angular.module('toggle-switch', ['ng']).directive('toggleSwitch', function () {
   return {
     restrict: 'EA',
@@ -893,7 +1232,7 @@ var iosOverlay = function(params) {
 
 	return {
 		restrict: 'AE',
-		replace: 'true',
+		replace: true,
 		templateUrl: 'app/template/partials/back.html',
 		link: function(scope, element, attrs) {
 			element.bind('click', function() {
@@ -941,6 +1280,8 @@ var iosOverlay = function(params) {
 });
 ;Reed.factory('Api', function ($http, $resource, State) {
 
+		var userid = State.user.id;
+
 		return {
 
 			discoveryFeeds: $resource('api/discovery/feeds', {}, {
@@ -957,14 +1298,14 @@ var iosOverlay = function(params) {
 				}
 			}),
 
-			User: $resource('api/users/:id', { id: State.user.id }, {
+			User: $resource('api/users/:id', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: false
 				}
 			}),
 
-			UserFeeds: $resource('api/users/:id/feeds', { id: State.user.id }, {
+			UserFeeds: $resource('api/users/:id/feeds', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
@@ -975,28 +1316,28 @@ var iosOverlay = function(params) {
 				}
 			}),
 
-			UserArticles: $resource('api/users/:id/articles', { id: State.user.id }, {
+			UserArticles: $resource('api/users/:id/articles', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
 				},
 			}),
 
-			UserArticle: $resource('api/users/:id/articles/:articleid', { id: State.user.id }, {
+			UserArticle: $resource('api/users/:id/articles/:articleid', { id: userid }, {
 				update: {
 					method: 'PUT',
 					isArray: false
 				}
 			}),
 
-			UserFavourites: $resource('api/users/:id/articles?favourites=true', { id: State.user.id }, {
+			UserFavourites: $resource('api/users/:id/articles?favourites=true', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
 				}
 			}),
 
-			UserLater: $resource('api/users/:id/articles?later=true', { id: State.user.id }, {
+			UserLater: $resource('api/users/:id/articles?later=true', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
@@ -1080,7 +1421,7 @@ var iosOverlay = function(params) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.add = function (collection, el) {
-		this[collection].push(el);
+		if(this[collection].indexOf(el) === -1) this[collection].push(el);
 		return this[collection] = this.orderBy(this[collection], '-created');
 	};
 

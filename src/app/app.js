@@ -5,7 +5,8 @@ var Reed = angular.module('Reed', [
 	'ngSanitize',
 	'ngAnimate',
 	'ezfb',
-	'toggle-switch'
+	'toggle-switch',
+	'angularMoment'
 ])
 
 	.config([
