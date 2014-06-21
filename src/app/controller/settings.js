@@ -49,6 +49,8 @@ Reed.controller('Settings', function ($scope, $filter, Api, State, Collection, O
 
 		}, function (response) {
 
+			Collection.feeds = Collection.remove(Collection.feeds, feed);
+
 			_.each(response.items, function (el) {
 				Collection.articles = Collection.remove(Collection.articles, el);
 			});

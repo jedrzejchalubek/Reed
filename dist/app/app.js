@@ -271,11 +271,16 @@ var iosOverlay = function(params) {
 
 			Api.UserFeeds.post({}, $scope.form, function(response) {
 
-				var exist = Collection.filter(Collection.feeds, {
-					id: response.source.id
+				var exist = false;
+
+				Collection.feeds.forEach(function(el) {
+					console.log(el.id === response.source.id);
+					if (el.id === response.source.id) {
+						exist = true;
+					}
 				});
 
-				if(exist.length = 0) {
+				if(!exist) {
 					Collection.folders.forEach(function(folder) {
 
 						if(folder.title === response.folder) {
@@ -299,7 +304,7 @@ var iosOverlay = function(params) {
 			});
 
 		} else {
-			Overlay.update(response.status, 'Error');
+			Overlay.update('error', 'Error');
 		}
 
 	};
@@ -905,6 +910,8 @@ var iosOverlay = function(params) {
 			feedid: feed.id
 
 		}, function (response) {
+
+			Collection.feeds = Collection.remove(Collection.feeds, feed);
 
 			_.each(response.items, function (el) {
 				Collection.articles = Collection.remove(Collection.articles, el);
