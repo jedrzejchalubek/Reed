@@ -29,13 +29,15 @@ abstract class Model extends Database
 	}
 
 	/**
-	 * Make query to database
-	 * @param  String $query
+	 * Make query
+	 * @param  String  $query
+	 * @param  Array   $params
+	 * @param  Boolean $return Does query returns results?
 	 * @return Array
 	 */
-	public function request($query)
+	public function request($query, $params, $return = true)
 	{
-		return $this->db->request($query);
+		return $this->db->request($query, $params, $return);
 	}
 
 	/**

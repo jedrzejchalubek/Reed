@@ -9,7 +9,7 @@
 
 namespace Reed\Models;
 
-class UserFeed extends Model
+class UserFolder extends Model
 {
 
 	/**
@@ -32,24 +32,31 @@ class UserFeed extends Model
 	public function get($id)
 	{
 
-		return $this->request("SELECT * FROM {$this->table} UF INNER JOIN feed F ON UF.feedid = F.id WHERE UF.id = :id", array(
+		$results = [];
+
+		$folders = $this->request("SELECT folder FROM userFeed UF WHERE UF.id = :id GROUP BY folder", array(
 				'id' => $id
 			));
 
-	}
 
-	/**
-	 * Remove user feed
-	 * @param  String $userid
-	 * @param  String $feedid
-	 */
-	public function delete($userid, $feedid)
-	{
+		foreach ((array)$folders as $folder) {
 
-		$this->request("DELETE FROM {$this->table} WHERE id = :id AND feedid = :feedid", array(
-			'id' => $userid,
-			'feedid' => $feedid
-		), false);
+			$items = $this->request("SELECT * FROM {$this->table} UF INNER JOIN feed F ON UF.feedid = F.id WHERE UF.id = :id AND UF.folder = :folder", array(
+				'id' => $id,
+				'folder' => $folder['folder']
+			));
+
+			if ($folder['folder'] === null) $folder['folder'] = 'Uncategorized';
+			if (empty($items)) $items = array();
+
+			array_push($results, array(
+				'title' => $folder['folder'],
+				'items' => $items
+			));
+
+		}
+
+		return $results;
 
 	}
 

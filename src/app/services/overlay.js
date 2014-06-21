@@ -9,6 +9,7 @@ Reed.factory('Overlay', function () {
 		'fail': 'times',
 		'error': 'times',
 		'400': 'times',
+		'busy': 'spinner fa-spin'
 	};
 
 
@@ -32,10 +33,11 @@ Reed.factory('Overlay', function () {
 	 * @param  {String} text Response message
 	 * @return {Object}
 	 */
-	this.init = function (text) {
+	this.init = function (status, text) {
 
 		this.overlay = iosOverlay({
 			text: text,
+			icon: this.icons[status.toString().toLowerCase()],
 			duration: 2000,
 		});
 

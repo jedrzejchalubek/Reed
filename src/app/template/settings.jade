@@ -7,12 +7,29 @@ include mixins/mixins
 			+list("view.side")
 
 	+content()
-		.fill
-			section.text-center
-				h1 Subscribe even more.
-				p.lead
-					| Enter only the address of the webpage you want to track.
-					br
-					| We'll do the rest.
-			section
-				{{view.content.email}}
+		section.fill
+			.row
+				.thumbs__wrapper.clearfix
+
+					.col-md-12(style="padding: 15px;")
+						h1.content__title {{view.title}}
+						.row
+							.col-xs-3
+								input.form-control(ng-model="newsFolderName", type="text", placeholder="New folder name")
+							.col-xs-2
+								.btn.btn-success(ng-click="addFolder(newsFolderName)")
+									i.fa.fa-plus-circle
+									|  Add
+
+					.settings__panel
+						.col-md-4(ng-repeat="folder in collection.folders")
+							.settings__panel-wrapper
+								.panel.panel-default(data-drop="true", ng-model="folder.items", jqyoui-droppable="{multiple:true}")
+									.panel-heading {{folder.title}}
+									.panel-body
+										.list-group
+											.list-group-item(ng-repeat="feed in folder.items", data-drag="true", data-jqyoui-options="{revert: \'invalid\', onStop: changeFolder(folder, feed) }", ng-model="folder.items", jqyoui-draggable="{ index: {{$index}} }", style="cursor: move") {{feed.title}}
+												a.btn-link.pull-right(ng-click="deleteFeed($index, feed, folder.items)", style="color: black;")
+													i.fa.fa-trash-o
+
+

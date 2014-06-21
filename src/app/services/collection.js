@@ -1,4 +1,4 @@
-Reed.factory('Collection', function ($q, $filter, Api) {
+Reed.factory('Collection', function ($q, $filter, Api, Overlay) {
 
 	/**
 	 * User collection
@@ -15,6 +15,13 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 		articles: Api.discoveryArticles.get(),
 		feeds: Api.discoveryFeeds.get()
 	};
+
+
+	/**
+	 * User folders collection
+	 * @type {Object}
+	 */
+	this.folders = Api.UserFolders.get();
 
 
 	/**
@@ -52,8 +59,23 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.add = function (collection, el) {
-		if(this[collection].indexOf(el) === -1) this[collection].push(el);
-		return this[collection] = this.orderBy(this[collection], '-created');
+
+		var exist = this.filter(collection, {
+			id: el.id
+		});
+
+		if(collection.indexOf(el) === -1 && exist.length === 0) {
+			collection.push(el);
+			return collection = this.orderBy(collection, '-created');
+		}
+
+	};
+
+
+	this.remove = function (collection, item) {
+		return _.reject(collection, function(el){
+			return el.id === item.id;
+		});
 	};
 
 
@@ -68,6 +90,18 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	};
 
 
+	this.groupBy = function (collection, param) {
+		return _.chain(collection)
+				.groupBy(param)
+				.map(function(value, key) {
+					return {
+						title: key,
+						items: value
+					}
+				}).value();
+	}
+
+
 	/**
 	 * Filter collection
 	 * @param  {String} collection Collection name
@@ -75,8 +109,10 @@ Reed.factory('Collection', function ($q, $filter, Api) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.filter = function (collection, params) {
-		var filter = $filter('filter')(this[collection], params);
+
+		var filter = $filter('filter')(collection, params);
 		return this.orderBy(filter, '-created');
+
 	};
 
 

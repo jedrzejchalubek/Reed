@@ -9,13 +9,9 @@ include mixins/mixins
 	+content
 		.bg-animation.fill(ng-switch="view.section")
 			.thumbs-animation.fill(ng-switch-default="list")
-				+thumbs("view.content", "false", "discovery.search")
+				+thumbs("view.content", "false", "discovery.search", "24")
 					section.offset-top.text-center
-						h1 Discovery, read, grow.
-						p.lead
-							| Enter only the RSS address of the page you want to track.
-							br
-							| We'll do the rest.
+						h1 Discover, read, grow.
 					.search
 						form.search__form(role="form")
 							.row

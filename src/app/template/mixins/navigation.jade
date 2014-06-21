@@ -4,7 +4,7 @@ mixin navigation()
 		.navigation.list-group
 			a(ng-click="view.panel = false", href="#discovery").navigation__item.list-group-item
 				.navigation__icon.iconmonstr.iconmonstr-network
-				span.navigation__title Discovery
+				span.navigation__title Discover
 			a(ng-click="view.panel = false", href="#later").navigation__item.list-group-item
 				.navigation__icon.iconmonstr.iconmonstr-time
 				span.navigation__title Read later
@@ -18,7 +18,10 @@ mixin navigation()
 				span.navigation__title All
 				span.navigation__badge.badge(ng-show="count('unread') != 0") {{ count('unread') }}
 
-			ul.navigation__list
-				li.navigation__feed(ng-repeat="feed in collection.feeds")
-					a(href="#feeds/{{feed.id}}") {{feed.title}}
-					span.navigation__feed-badge.badge.pull-right(ng-show="count('feeds', feed) != 0") {{ count('feeds', feed) }}
+			div.navigation__list(ng-repeat="folder in collection.folders")
+				{{folder.title}}
+				ul.list-unstyled
+					li.navigation__feed(ng-repeat="feed in folder.items")
+						a(href="#feeds/{{feed.id}}")
+							span.pull-left {{feed.title}}
+							span.navigation__feed-badge.badge.pull-right(ng-show="count('feeds', feed) != 0") {{ count('feeds', feed) }}

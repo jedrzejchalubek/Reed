@@ -6,7 +6,9 @@ var Reed = angular.module('Reed', [
 	'ngAnimate',
 	'ezfb',
 	'toggle-switch',
-	'angularMoment'
+	'angularMoment',
+	'ngDragDrop',
+	'infinite-scroll'
 ])
 
 	.config([
@@ -259,18 +261,35 @@ var iosOverlay = function(params) {
 
 	$scope.submit = function(isValid) {
 
-		var overlay = Overlay.init('Loading');
+		var overlay = Overlay.init('busy', 'Loading');
 
 		if (isValid) {
 
-			Api.UserFeeds.post({}, $scope.form, function(data) {
-				Overlay.update(data.status, data.message);
-			}, function(data) {
-				Overlay.update(data.status, 'Bad url');
+			Api.UserFeeds.post({}, $scope.form, function(response) {
+
+				Collection.folders.forEach(function(folder) {
+
+					if(folder.title === response.folder) {
+
+						Collection.add(Collection.feeds, response.source);
+						Collection.add(folder.items, response.source);
+
+						response.items.forEach(function (el) {
+							Collection.add(Collection.articles, el);
+						});
+
+					}
+
+				});
+
+				Overlay.init(response.status, response.message);
+
+			}, function(response) {
+				Overlay.update(response.status, 'Bad url');
 			});
 
 		} else {
-			Overlay.update('fail', 'Error');
+			Overlay.update(response.status, 'Error');
 		}
 
 	};
@@ -289,15 +308,21 @@ var iosOverlay = function(params) {
 				done: true
 			};
 
-			Collection.add('feeds', response.source);
+			Collection.folders.forEach(function(folder) {
 
-			// response.items.forEach(function (el) {
-			// 	Collection.add('articles', el);
-			// });
+				if(folder.title === response.folder) {
 
-			Collection.articles = response.items;
+					Collection.add(Collection.feeds, response.source);
+					Collection.add(folder.items, response.source);
 
-			// console.log(Collection.length('articles'));
+					response.items.forEach(function (el) {
+						Collection.add(Collection.articles, el);
+					});
+
+				}
+
+			});
+
 
 			$timeout(function () {
 
@@ -324,6 +349,15 @@ var iosOverlay = function(params) {
 
 });
 ;Reed.controller('All', function ($scope, $filter, $cookieStore, Api, State, Collection) {
+
+	// $scope.loadMore = function () {
+
+	// 	var acc = Api.UserArticles.get({
+	// 		offset: $scope.view.content.length - 1
+	// 	});
+	// 	console.log(acc);
+
+	// };
 
 	$scope.showArticle = function (el) {
 
@@ -460,6 +494,7 @@ var iosOverlay = function(params) {
 });
 ;Reed.controller('Feeds', function ($scope, $routeParams, Api, State, Collection) {
 
+
 	$scope.showArticle = function (el) {
 
 		if(el.unread == 1) State.update('articles', 0);
@@ -510,11 +545,11 @@ var iosOverlay = function(params) {
 
 		$scope.view = {
 			is: 'Feeds',
-			title: Collection.filter('feeds', {
+			title: Collection.filter(Collection.feeds, {
 				id: $routeParams.id
 			})[0].title,
 			section: 'list',
-			content: Collection.filter('articles', {
+			content: Collection.filter(Collection.articles, {
 				feed: $routeParams.id
 			})
 		};
@@ -619,6 +654,51 @@ var iosOverlay = function(params) {
 		$scope.view.panel = !$scope.view.panel;
 	};
 
+	$scope.markAllAsRead = function () {
+		_.each($scope.view.content, function (el) {
+			angular.extend(el, {
+				unread: '0'
+			});
+		});
+
+		Api.UserArticles.update({
+			'items': $scope.view.content
+		});
+	};
+
+	$scope.count = function (collection, el) {
+
+		switch(collection) {
+
+			case 'unread':
+				return Collection.filter(Collection.articles, {
+					unread: '1'
+				}).length;
+				break;
+
+			case 'favourites':
+				return Collection.filter(Collection.favourites, {
+					favourite: '1'
+				}).length;
+				break;
+
+			case 'later':
+				return Collection.filter(Collection.later, {
+					later: '1'
+				}).length;
+				break;
+
+			case 'feeds':
+				return Collection.filter(Collection.articles, {
+					unread: '1',
+					feed: el.id
+				}).length;
+				break;
+
+		}
+
+	};
+
 	Collection.ready([
 		Collection.user.$promise,
 		Collection.articles.$promise,
@@ -626,6 +706,7 @@ var iosOverlay = function(params) {
 	], function() {
 
 		State.data.flashback = $scope.view.content;
+
 		$scope.collection = Collection;
 
 	});
@@ -637,12 +718,12 @@ var iosOverlay = function(params) {
 
 	$scope.saveForLater = function (el) {
 
-		var overlay = Overlay.init('Loading');
+		var overlay = Overlay.init('busy', 'Loading');
 
 		el.later = '1' - el.later;
 
 		// if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
-		Collection.add('later', el);
+		Collection.add(Collection.later, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -660,12 +741,12 @@ var iosOverlay = function(params) {
 
 	$scope.markAsFav = function (el) {
 
-		var overlay = Overlay.init('Loading');
+		var overlay = Overlay.init('busy', 'Loading');
 
 		el.favourite = '1' - el.favourite;
 
 		// if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
-		Collection.add('favourites', el);
+		Collection.add(Collection.favourites, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -686,7 +767,7 @@ var iosOverlay = function(params) {
 		el.unread = '1' - el.unread.toString();
 
 		// if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
-		Collection.add('articles', el);
+		Collection.add(Collection.articles, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -705,49 +786,16 @@ var iosOverlay = function(params) {
 });
 ;Reed.controller('Navigation', function ($scope, State, Collection) {
 
-	$scope.count = function (collection, el) {
-
-		switch(collection) {
-
-			case 'unread':
-				return Collection.filter('articles', {
-					unread: 1
-				}).length;
-				break;
-
-			case 'favourites':
-				return Collection.filter('favourites', {
-					favourite: 1
-				}).length;
-				break;
-
-			case 'later':
-				return Collection.filter('later', {
-					later: 1
-				}).length;
-				break;
-
-			case 'feeds':
-				return Collection.filter('articles', {
-					unread: 1,
-					feed: el.id
-				}).length;
-				break;
-
-		}
-
-	};
-
-
-	Collection.ready([
-		Collection.user.$promise,
-		Collection.articles.$promise,
-		Collection.favourites.$promise,
-		Collection.later.$promise,
-		Collection.feeds.$promise
-	], function() {
-		$scope.collection = Collection;
-	});
+	// Collection.ready([
+	// 	Collection.user.$promise,
+	// 	Collection.articles.$promise,
+	// 	Collection.favourites.$promise,
+	// 	Collection.later.$promise,
+	// 	Collection.feeds.$promise
+	// ], function() {
+	// 	$scope.collection = Collection;
+	// 	$scope.folders = Collection.feeds;
+	// });
 
 
 });
@@ -755,11 +803,52 @@ var iosOverlay = function(params) {
 
 ;Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
 
-	Collection.ready([Collection.articles.$promise], function () {
+	$scope.addFolder = function (name) {
+
+		Collection.add(Collection.folders, {
+			'title': name,
+			'items': []
+		});
+
+	};
+
+
+	$scope.changeFolder = function (folder, el) {
+
+		if(folder.title != el.folder) {
+
+			el.folder = folder.title;
+
+			Api.UserFeed.update({
+				feedid: el.id
+			}, el);
+
+		}
+
+	};
+
+
+	$scope.deleteFeed = function (index, feed, items) {
+
+		items.splice(index, 1);
+
+		Api.UserFeed.delete({
+			feedid: feed.id
+		});
+
+	};
+
+
+	Collection.ready([
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function () {
+
+		$scope.collection = Collection;
 
 		$scope.view = {
 			is: 'Settings',
-			title: 'Settings',
+			title: 'Organise feeds',
 			section: 'list',
 			content: Collection.user
 		};
@@ -804,6 +893,335 @@ var iosOverlay = function(params) {
 	});
 
 });
+;/**
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to
+ * deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ * IN THE SOFTWARE.
+ */
+
+/**
+ * Implementing Drag and Drop functionality in AngularJS is easier than ever.
+ * Demo: http://codef0rmer.github.com/angular-dragdrop/
+ *
+ * @version 1.0.7
+ *
+ * (c) 2013 Amit Gharat a.k.a codef0rmer <amit.2006.it@gmail.com> - amitgharat.wordpress.com
+ */
+
+(function (window, angular, undefined) {
+'use strict';
+
+var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$timeout', '$parse', function($timeout, $parse) {
+    this.callEventCallback = function (scope, callbackName, event, ui) {
+      if (!callbackName) return;
+
+      var objExtract = extract(callbackName),
+          callback = objExtract.callback,
+          constructor = objExtract.constructor,
+          args = [event, ui].concat(objExtract.args);
+      
+      // call either $scoped method i.e. $scope.dropCallback or constructor's method i.e. this.dropCallback
+      scope.$apply((scope[callback] || scope[constructor][callback]).apply(scope, args));
+      
+      function extract(callbackName) {
+        var atStartBracket = callbackName.indexOf('(') !== -1 ? callbackName.indexOf('(') : callbackName.length,
+            atEndBracket = callbackName.lastIndexOf(')') !== -1 ? callbackName.lastIndexOf(')') : callbackName.length,
+            args = callbackName.substring(atStartBracket + 1, atEndBracket), // matching function arguments inside brackets
+            constructor = callbackName.match(/^[^.]+.\s*/)[0].slice(0, -1); // matching a string upto a dot to check ctrl as syntax
+            constructor = scope[constructor] && typeof scope[constructor].constructor === 'function' ? constructor : null;
+
+        return {
+          callback: callbackName.substring(constructor && constructor.length + 1 || 0, atStartBracket),
+          args: (args && args.split(',') || []).map(function(item) { return $parse(item)(scope); }),
+          constructor: constructor
+        }
+      }
+    };
+
+    this.invokeDrop = function ($draggable, $droppable, event, ui) {
+      var dragModel = '',
+        dropModel = '',
+        dragSettings = {},
+        dropSettings = {},
+        jqyoui_pos = null,
+        dragItem = {},
+        dropItem = {},
+        dragModelValue,
+        dropModelValue,
+        $droppableDraggable = null,
+        droppableScope = $droppable.scope(),
+        draggableScope = $draggable.scope();
+
+      dragModel = $draggable.ngattr('ng-model');
+      dropModel = $droppable.ngattr('ng-model');
+      dragModelValue = draggableScope.$eval(dragModel);
+      dropModelValue = droppableScope.$eval(dropModel);
+
+      $droppableDraggable = $droppable.find('[jqyoui-draggable]:last,[data-jqyoui-draggable]:last');
+      dropSettings = droppableScope.$eval($droppable.attr('jqyoui-droppable') || $droppable.attr('data-jqyoui-droppable')) || [];
+      dragSettings = draggableScope.$eval($draggable.attr('jqyoui-draggable') || $draggable.attr('data-jqyoui-draggable')) || [];
+
+      // Helps pick up the right item
+      dragSettings.index = this.fixIndex(draggableScope, dragSettings, dragModelValue);
+      dropSettings.index = this.fixIndex(droppableScope, dropSettings, dropModelValue);
+
+      jqyoui_pos = angular.isArray(dragModelValue) ? dragSettings.index : null;
+      dragItem = angular.copy(angular.isArray(dragModelValue) ? dragModelValue[jqyoui_pos] : dragModelValue);
+
+      if (angular.isArray(dropModelValue) && dropSettings && dropSettings.index !== undefined) {
+        dropItem = dropModelValue[dropSettings.index];
+      } else if (!angular.isArray(dropModelValue)) {
+        dropItem = dropModelValue;
+      } else {
+        dropItem = {};
+      }
+      dropItem = angular.copy(dropItem);
+
+      if (dragSettings.animate === true) {
+        this.move($draggable, $droppableDraggable.length > 0 ? $droppableDraggable : $droppable, null, 'fast', dropSettings, null);
+        this.move($droppableDraggable.length > 0 && !dropSettings.multiple ? $droppableDraggable : [], $draggable.parent('[jqyoui-droppable],[data-jqyoui-droppable]'), jqyoui.startXY, 'fast', dropSettings, angular.bind(this, function() {
+          $timeout(angular.bind(this, function() {
+            // Do not move this into move() to avoid flickering issue
+            $draggable.css({'position': 'relative', 'left': '', 'top': ''});
+            // Angular v1.2 uses ng-hide to hide an element not display property
+            // so we've to manually remove display:none set in this.move()
+            $droppableDraggable.css({'position': 'relative', 'left': '', 'top': '', 'display': ''});
+
+            this.mutateDraggable(draggableScope, dropSettings, dragSettings, dragModel, dropModel, dropItem, $draggable);
+            this.mutateDroppable(droppableScope, dropSettings, dragSettings, dropModel, dragItem, jqyoui_pos);
+            this.callEventCallback(droppableScope, dropSettings.onDrop, event, ui);
+          }));
+        }));
+      } else {
+        $timeout(angular.bind(this, function() {
+          this.mutateDraggable(draggableScope, dropSettings, dragSettings, dragModel, dropModel, dropItem, $draggable);
+          this.mutateDroppable(droppableScope, dropSettings, dragSettings, dropModel, dragItem, jqyoui_pos);
+          this.callEventCallback(droppableScope, dropSettings.onDrop, event, ui);
+        }));
+      }
+    };
+
+    this.move = function($fromEl, $toEl, toPos, duration, dropSettings, callback) {
+      if ($fromEl.length === 0) {
+        if (callback) {
+          window.setTimeout(function() {
+            callback();
+          }, 300);
+        }
+        return false;
+      }
+
+      var zIndex = 9999,
+        fromPos = $fromEl[dropSettings.containment || 'offset'](),
+        wasVisible = $toEl && $toEl.is(':visible'),
+        hadNgHideCls = $toEl.hasClass('ng-hide');
+
+      if (toPos === null && $toEl.length > 0) {
+        if (($toEl.attr('jqyoui-draggable') || $toEl.attr('data-jqyoui-draggable')) !== undefined && $toEl.ngattr('ng-model') !== undefined && $toEl.is(':visible') && dropSettings && dropSettings.multiple) {
+          toPos = $toEl[dropSettings.containment || 'offset']();
+          if (dropSettings.stack === false) {
+            toPos.left+= $toEl.outerWidth(true);
+          } else {
+            toPos.top+= $toEl.outerHeight(true);
+          }
+        } else {
+          // Angular v1.2 uses ng-hide to hide an element 
+          // so we've to remove it in order to grab its position
+          if (hadNgHideCls) $toEl.removeClass('ng-hide');
+          toPos = $toEl.css({'visibility': 'hidden', 'display': 'block'})[dropSettings.containment || 'offset']();
+          $toEl.css({'visibility': '','display': wasVisible ? 'block' : 'none'});
+        }
+      }
+
+      $fromEl.css({'position': 'absolute', 'z-index': zIndex})
+        .css(fromPos)
+        .animate(toPos, duration, function() {
+          // Angular v1.2 uses ng-hide to hide an element
+          // and as we remove it above, we've to put it back to
+          // hide the element (while swapping) if it was hidden already
+          // because we remove the display:none in this.invokeDrop()
+          if (hadNgHideCls) $toEl.addClass('ng-hide');
+          if (callback) callback();
+        });
+    };
+
+    this.mutateDroppable = function(scope, dropSettings, dragSettings, dropModel, dragItem, jqyoui_pos) {
+      var dropModelValue = scope.$eval(dropModel);
+
+      scope.dndDragItem = dragItem;
+
+      if (angular.isArray(dropModelValue)) {
+        if (dropSettings && dropSettings.index >= 0) {
+          dropModelValue[dropSettings.index] = dragItem;
+        } else {
+          dropModelValue.push(dragItem);
+        }
+        if (dragSettings && dragSettings.placeholder === true) {
+          dropModelValue[dropModelValue.length - 1]['jqyoui_pos'] = jqyoui_pos;
+        }
+      } else {
+        $parse(dropModel + ' = dndDragItem')(scope);
+        if (dragSettings && dragSettings.placeholder === true) {
+          dropModelValue['jqyoui_pos'] = jqyoui_pos;
+        }
+      }
+    };
+
+    this.mutateDraggable = function(scope, dropSettings, dragSettings, dragModel, dropModel, dropItem, $draggable) {
+      var isEmpty = angular.equals(dropItem, {}),
+        dragModelValue = scope.$eval(dragModel);
+
+      scope.dndDropItem = dropItem;
+
+      if (dragSettings && dragSettings.placeholder) {
+        if (dragSettings.placeholder != 'keep'){
+          if (angular.isArray(dragModelValue) && dragSettings.index !== undefined) {
+            dragModelValue[dragSettings.index] = dropItem;
+          } else {
+            $parse(dragModel + ' = dndDropItem')(scope);
+          }
+        }
+      } else {
+        if (angular.isArray(dragModelValue)) {
+          if (isEmpty) {
+            if (dragSettings && ( dragSettings.placeholder !== true && dragSettings.placeholder !== 'keep' )) {
+              dragModelValue.splice(dragSettings.index, 1);
+            }
+          } else {
+            dragModelValue[dragSettings.index] = dropItem;
+          }
+        } else {
+          // Fix: LIST(object) to LIST(array) - model does not get updated using just scope[dragModel] = {...}
+          // P.S.: Could not figure out why it happened
+          $parse(dragModel + ' = dndDropItem')(scope);
+          if (scope.$parent) {
+            $parse(dragModel + ' = dndDropItem')(scope.$parent);
+          }
+        }
+      }
+
+      $draggable.css({'z-index': '', 'left': '', 'top': ''});
+    };
+
+    this.fixIndex = function(scope, settings, modelValue) {
+      if (settings.applyFilter && angular.isArray(modelValue) && modelValue.length > 0) {
+        var dragModelValueFiltered = scope[settings.applyFilter](),
+            lookup = dragModelValueFiltered[settings.index],
+            actualIndex = undefined;
+
+        modelValue.forEach(function(item, i) {
+           if (angular.equals(item, lookup)) {
+             actualIndex = i;
+           }
+        });
+
+        return actualIndex;
+      }
+
+      return settings.index;
+    };
+  }]).directive('jqyouiDraggable', ['ngDragDropService', function(ngDragDropService) {
+    return {
+      require: '?jqyouiDroppable',
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+        var dragSettings, jqyouiOptions, zIndex;
+        var updateDraggable = function(newValue, oldValue) {
+          if (newValue) {
+            dragSettings = scope.$eval(element.attr('jqyoui-draggable') || element.attr('data-jqyoui-draggable')) || {};
+            jqyouiOptions = scope.$eval(attrs.jqyouiOptions) || {};
+            element
+              .draggable({disabled: false})
+              .draggable(jqyouiOptions)
+              .draggable({
+                start: function(event, ui) {
+                  zIndex = angular.element(jqyouiOptions.helper ? ui.helper : this).css('z-index');
+                  angular.element(jqyouiOptions.helper ? ui.helper : this).css('z-index', 9999);
+                  jqyoui.startXY = angular.element(this)[dragSettings.containment || 'offset']();
+                  ngDragDropService.callEventCallback(scope, dragSettings.onStart, event, ui);
+                },
+                stop: function(event, ui) {
+                  angular.element(jqyouiOptions.helper ? ui.helper : this).css('z-index', zIndex);
+                  ngDragDropService.callEventCallback(scope, dragSettings.onStop, event, ui);
+                },
+                drag: function(event, ui) {
+                  ngDragDropService.callEventCallback(scope, dragSettings.onDrag, event, ui);
+                }
+              });
+          } else {
+            element.draggable({disabled: true});
+          }
+        };
+        scope.$watch(function() { return scope.$eval(attrs.drag); }, updateDraggable);
+        updateDraggable();
+
+        element.on('$destroy', function() {
+          element.draggable('destroy');
+        });
+      }
+    };
+  }]).directive('jqyouiDroppable', ['ngDragDropService', function(ngDragDropService) {
+    return {
+      restrict: 'A',
+      priority: 1,
+      link: function(scope, element, attrs) {
+        var dropSettings;
+        var updateDroppable = function(newValue, oldValue) {
+          if (newValue) {
+            dropSettings = scope.$eval(angular.element(element).attr('jqyoui-droppable') || angular.element(element).attr('data-jqyoui-droppable')) || {};
+            element
+              .droppable({disabled: false})
+              .droppable(scope.$eval(attrs.jqyouiOptions) || {})
+              .droppable({
+                over: function(event, ui) {
+                  ngDragDropService.callEventCallback(scope, dropSettings.onOver, event, ui);
+                },
+                out: function(event, ui) {
+                  ngDragDropService.callEventCallback(scope, dropSettings.onOut, event, ui);
+                },
+                drop: function(event, ui) {
+                  if (angular.element(ui.draggable).ngattr('ng-model') && attrs.ngModel) {
+                    ngDragDropService.invokeDrop(angular.element(ui.draggable), angular.element(this), event, ui);
+                  } else {
+                    ngDragDropService.callEventCallback(scope, dropSettings.onDrop, event, ui);
+                  }
+                }
+              });
+          } else {
+            element.droppable({disabled: true});
+          }
+        };
+
+        scope.$watch(function() { return scope.$eval(attrs.drop); }, updateDroppable);
+        updateDroppable();
+
+        element.on('$destroy', function() {
+          element.droppable('destroy');
+        });
+      }
+    };
+  }]);
+
+  $.fn.ngattr = function(name, value) {
+    var element = angular.element(this).get(0);
+
+    return element.getAttribute(name) || element.getAttribute('data-' + name);
+  };
+})(window, window.angular);
 ;/* angular-moment.js / v0.7.1 / (c) 2013, 2014 Uri Shaked / MIT Licence */
 
 /* global define */
@@ -1248,6 +1666,216 @@ var iosOverlay = function(params) {
 	};
 
 });
+;/* ng-infinite-scroll - v1.0.0 - 2013-02-23 */
+var mod;
+
+mod = angular.module('infinite-scroll', []);
+
+mod.directive('infiniteScroll', [
+  '$rootScope', '$window', '$timeout', function($rootScope, $window, $timeout) {
+    return {
+      link: function(scope, elem, attrs) {
+        var checkWhenEnabled, handler, scrollDistance, scrollEnabled;
+        $window = angular.element($window);
+        scrollDistance = 0;
+        if (attrs.infiniteScrollDistance != null) {
+          scope.$watch(attrs.infiniteScrollDistance, function(value) {
+            return scrollDistance = parseInt(value, 10);
+          });
+        }
+        scrollEnabled = true;
+        checkWhenEnabled = false;
+        if (attrs.infiniteScrollDisabled != null) {
+          scope.$watch(attrs.infiniteScrollDisabled, function(value) {
+            scrollEnabled = !value;
+            if (scrollEnabled && checkWhenEnabled) {
+              checkWhenEnabled = false;
+              return handler();
+            }
+          });
+        }
+        handler = function() {
+          var elementBottom, remaining, shouldScroll, windowBottom;
+          windowBottom = $window.height() + $window.scrollTop();
+          elementBottom = elem.offset().top + elem.height();
+          remaining = elementBottom - windowBottom;
+          shouldScroll = remaining <= $window.height() * scrollDistance;
+          if (shouldScroll && scrollEnabled) {
+            if ($rootScope.$$phase) {
+              return scope.$eval(attrs.infiniteScroll);
+            } else {
+              return scope.$apply(attrs.infiniteScroll);
+            }
+          } else if (shouldScroll) {
+            return checkWhenEnabled = true;
+          }
+        };
+        $window.on('scroll', handler);
+        scope.$on('$destroy', function() {
+          return $window.off('scroll', handler);
+        });
+        return $timeout((function() {
+          if (attrs.infiniteScrollImmediateCheck) {
+            if (scope.$eval(attrs.infiniteScrollImmediateCheck)) {
+              return handler();
+            }
+          } else {
+            return handler();
+          }
+        }), 0);
+      }
+    };
+  }
+]);
+;/* ng-infinite-scroll - v1.1.2 - 2014-05-21 */
+var mod;
+
+mod = angular.module('infinite-scroll', []);
+
+mod.value('THROTTLE_MILLISECONDS', null);
+
+mod.directive('infiniteScroll', [
+  '$rootScope', '$window', '$timeout', 'THROTTLE_MILLISECONDS', function($rootScope, $window, $timeout, THROTTLE_MILLISECONDS) {
+    return {
+      scope: {
+        infiniteScroll: '&',
+        infiniteScrollContainer: '=',
+        infiniteScrollDistance: '=',
+        infiniteScrollDisabled: '=',
+        infiniteScrollUseDocumentBottom: '='
+      },
+      link: function(scope, elem, attrs) {
+        var changeContainer, checkWhenEnabled, container, handleInfiniteScrollContainer, handleInfiniteScrollDisabled, handleInfiniteScrollDistance, handleInfiniteScrollUseDocumentBottom, handler, immediateCheck, scrollDistance, scrollEnabled, throttle, useDocumentBottom;
+        $window = angular.element($window);
+        scrollDistance = null;
+        scrollEnabled = null;
+        checkWhenEnabled = null;
+        container = null;
+        immediateCheck = true;
+        useDocumentBottom = false;
+        handler = function() {
+          var containerBottom, containerTopOffset, elementBottom, remaining, shouldScroll;
+          if (container === $window) {
+            containerBottom = container.height() + container.scrollTop();
+            elementBottom = elem.offset().top + elem.height();
+          } else {
+            containerBottom = container.height();
+            containerTopOffset = 0;
+            if (container.offset() !== void 0) {
+              containerTopOffset = container.offset().top;
+            }
+            elementBottom = elem.offset().top - containerTopOffset + elem.height();
+          }
+          if (useDocumentBottom) {
+            elementBottom = $(document).height();
+          }
+          remaining = elementBottom - containerBottom;
+          shouldScroll = remaining <= container.height() * scrollDistance + 1;
+          if (shouldScroll) {
+            checkWhenEnabled = true;
+            if (scrollEnabled) {
+              if (scope.$$phase || $rootScope.$$phase) {
+                return scope.infiniteScroll();
+              } else {
+                return scope.$apply(scope.infiniteScroll);
+              }
+            }
+          } else {
+            return checkWhenEnabled = false;
+          }
+        };
+        throttle = function(func, wait) {
+          var later, previous, timeout;
+          timeout = null;
+          previous = 0;
+          later = function() {
+            var context;
+            previous = new Date().getTime();
+            $timeout.cancel(timeout);
+            timeout = null;
+            func.call();
+            return context = null;
+          };
+          return function() {
+            var now, remaining;
+            now = new Date().getTime();
+            remaining = wait - (now - previous);
+            if (remaining <= 0) {
+              clearTimeout(timeout);
+              $timeout.cancel(timeout);
+              timeout = null;
+              previous = now;
+              return func.call();
+            } else {
+              if (!timeout) {
+                return timeout = $timeout(later, remaining);
+              }
+            }
+          };
+        };
+        if (THROTTLE_MILLISECONDS != null) {
+          handler = throttle(handler, THROTTLE_MILLISECONDS);
+        }
+        scope.$on('$destroy', function() {
+          return container.off('scroll', handler);
+        });
+        handleInfiniteScrollDistance = function(v) {
+          return scrollDistance = parseInt(v, 10) || 0;
+        };
+        scope.$watch('infiniteScrollDistance', handleInfiniteScrollDistance);
+        handleInfiniteScrollDistance(scope.infiniteScrollDistance);
+        handleInfiniteScrollDisabled = function(v) {
+          scrollEnabled = !v;
+          if (scrollEnabled && checkWhenEnabled) {
+            checkWhenEnabled = false;
+            return handler();
+          }
+        };
+        scope.$watch('infiniteScrollDisabled', handleInfiniteScrollDisabled);
+        handleInfiniteScrollDisabled(scope.infiniteScrollDisabled);
+        handleInfiniteScrollUseDocumentBottom = function(v) {
+          return useDocumentBottom = v;
+        };
+        scope.$watch('infiniteScrollUseDocumentBottom', handleInfiniteScrollUseDocumentBottom);
+        handleInfiniteScrollUseDocumentBottom(scope.infiniteScrollUseDocumentBottom);
+        changeContainer = function(newContainer) {
+          if (container != null) {
+            container.off('scroll', handler);
+          }
+          container = typeof newContainer.last === 'function' && newContainer !== $window ? newContainer.last() : newContainer;
+          if (newContainer != null) {
+            return container.on('scroll', handler);
+          }
+        };
+        changeContainer($window);
+        handleInfiniteScrollContainer = function(newContainer) {
+          if ((!(newContainer != null)) || newContainer.length === 0) {
+            return;
+          }
+          newContainer = angular.element(newContainer);
+          if (newContainer != null) {
+            return changeContainer(newContainer);
+          } else {
+            throw new Exception("invalid infinite-scroll-container attribute.");
+          }
+        };
+        scope.$watch('infiniteScrollContainer', handleInfiniteScrollContainer);
+        handleInfiniteScrollContainer(scope.infiniteScrollContainer || []);
+        if (attrs.infiniteScrollParent != null) {
+          changeContainer(angular.element(elem.parent()));
+        }
+        if (attrs.infiniteScrollImmediateCheck != null) {
+          immediateCheck = scope.$eval(attrs.infiniteScrollImmediateCheck);
+        }
+        return $timeout((function() {
+          if (immediateCheck) {
+            return handler();
+          }
+        }), 0);
+      }
+    };
+  }
+]);
 ;Reed.directive('readingTime', function(State) {
 
 	return {
@@ -1316,17 +1944,39 @@ var iosOverlay = function(params) {
 				}
 			}),
 
+			UserFeed: $resource('api/users/:id/feeds/:feedid', { id: userid }, {
+				update: {
+					method: 'PUT',
+					isArray: false
+				},
+				delete: {
+					method: 'DELETE',
+					isArray: false
+				}
+			}),
+
 			UserArticles: $resource('api/users/:id/articles', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
 				},
+				update: {
+					method: 'PUT',
+					isArray: false
+				}
 			}),
 
 			UserArticle: $resource('api/users/:id/articles/:articleid', { id: userid }, {
 				update: {
 					method: 'PUT',
 					isArray: false
+				}
+			}),
+
+			UserFolders: $resource('api/users/:id/folders', { id: userid }, {
+				get: {
+					method: 'GET',
+					isArray: true
 				}
 			}),
 
@@ -1367,7 +2017,7 @@ var iosOverlay = function(params) {
 	return this;
 
 });
-;Reed.factory('Collection', function ($q, $filter, Api) {
+;Reed.factory('Collection', function ($q, $filter, Api, Overlay) {
 
 	/**
 	 * User collection
@@ -1384,6 +2034,13 @@ var iosOverlay = function(params) {
 		articles: Api.discoveryArticles.get(),
 		feeds: Api.discoveryFeeds.get()
 	};
+
+
+	/**
+	 * User folders collection
+	 * @type {Object}
+	 */
+	this.folders = Api.UserFolders.get();
 
 
 	/**
@@ -1421,8 +2078,23 @@ var iosOverlay = function(params) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.add = function (collection, el) {
-		if(this[collection].indexOf(el) === -1) this[collection].push(el);
-		return this[collection] = this.orderBy(this[collection], '-created');
+
+		var exist = this.filter(collection, {
+			id: el.id
+		});
+
+		if(collection.indexOf(el) === -1 && exist.length === 0) {
+			collection.push(el);
+			return collection = this.orderBy(collection, '-created');
+		}
+
+	};
+
+
+	this.remove = function (collection, item) {
+		return _.reject(collection, function(el){
+			return el.id === item.id;
+		});
 	};
 
 
@@ -1437,6 +2109,18 @@ var iosOverlay = function(params) {
 	};
 
 
+	this.groupBy = function (collection, param) {
+		return _.chain(collection)
+				.groupBy(param)
+				.map(function(value, key) {
+					return {
+						title: key,
+						items: value
+					}
+				}).value();
+	}
+
+
 	/**
 	 * Filter collection
 	 * @param  {String} collection Collection name
@@ -1444,8 +2128,10 @@ var iosOverlay = function(params) {
 	 * @return {Object}            Filtered collection
 	 */
 	this.filter = function (collection, params) {
-		var filter = $filter('filter')(this[collection], params);
+
+		var filter = $filter('filter')(collection, params);
 		return this.orderBy(filter, '-created');
+
 	};
 
 
@@ -1523,6 +2209,7 @@ var iosOverlay = function(params) {
 		'fail': 'times',
 		'error': 'times',
 		'400': 'times',
+		'busy': 'spinner fa-spin'
 	};
 
 
@@ -1546,10 +2233,11 @@ var iosOverlay = function(params) {
 	 * @param  {String} text Response message
 	 * @return {Object}
 	 */
-	this.init = function (text) {
+	this.init = function (status, text) {
 
 		this.overlay = iosOverlay({
 			text: text,
+			icon: this.icons[status.toString().toLowerCase()],
 			duration: 2000,
 		});
 

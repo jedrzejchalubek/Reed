@@ -52,7 +52,9 @@ class String
 
 	public static function cut($string)
 	{
-		return substr($string, 0, 200);
+		$text = substr($string, 0, 255);
+		preg_match("/.*([.])/", $text, $result);
+		return $result[0];
 	}
 
 }

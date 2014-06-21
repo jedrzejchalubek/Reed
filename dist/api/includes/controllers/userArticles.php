@@ -13,17 +13,53 @@ class UserArticles extends Controller
 	{
 
 		if($query['favourites']) {
-			return Response::json($this->userArticle->favourites($id[0]));
-		}
-		else if($query['later']) {
-			return Response::json($this->userArticle->later($id[0]));
-		}
-		else {
-			return Response::json($this->userArticle->fetch($id[0]));
+			return Response::json(
+				$this->userArticle->favourites($id[0])
+			);
 		}
 
+		if($query['later']) {
+			return Response::json(
+				$this->userArticle->later($id[0])
+			);
+		}
+
+		if($query['unread']) {
+			return Response::json(
+				$this->userArticle->unread($id[0])
+			);
+		}
+
+		return Response::json(
+			$this->userArticle->fetch($id[0])
+		);
 
 	}
+
+
+	public function put($id, $query)
+	{
+
+		$request = Request::getData();
+
+		foreach ($request->items as $item) {
+			$this->userArticle->addOverwrite(array(
+				'id' => $id[0],
+				'articleid' => $item->id,
+				'favourite' => $item->favourite,
+				'later' => $item->later,
+				'unread' => $item->unread,
+				'created' => date('Y-m-d H:i:s')
+			));
+		}
+
+		Response::updated(array(
+			'status' => 'success',
+			'message' => 'Articles saved'
+		));
+
+	}
+
 
 	/**
 	 * Construct

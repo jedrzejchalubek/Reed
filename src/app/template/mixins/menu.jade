@@ -6,10 +6,15 @@ mixin menu()
 				div(ng-show="view.section == 'list'")
 					.menu__logotype
 						img(ng-src="app/images/logotype.jpg")
+					ul.menu__sort
+						li
+							a(ng-click="markAllAsRead()")
+								span.fa.fa-check-square-o
+								span.hidden-xs Mark all as read
 
 				div(ng-show="view.section == 'single'")
 					back-to-list
-					span.menu__single.hidden-xs {{ collection.filter('feeds', { id: view.single.feed })[0].title }}
+					span.menu__single.hidden-xs {{ collection.filter(collection.feeds, { id: view.single.feed })[0].title }}
 						| &nbsp;~
 						span(am-time-ago="view.single.created")
 					ul.menu__navbar(ng-controller="Navbar")
@@ -33,9 +38,6 @@ mixin menu()
 
 		a.menu__collapse(ng-click="toggleSidebar()")
 			i.fa.fa-bars
-			span.menu__collapse-badge.badge(ng-show="state.count.articles != 0") {{ collection.filter('articles', { unread: 1 }).length }}
-
-		a.menu__add(href="#add")
-			span.fa.fa-plus-circle
+			span.menu__collapse-badge.badge(ng-show="count('unread') != 0") {{ count('unread') }}
 
 		block

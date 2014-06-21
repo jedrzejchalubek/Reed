@@ -9,7 +9,7 @@ include mixins/mixins
 	+content
 		.bg-animation.fill(ng-switch="view.section")
 			.thumbs-animation.fill(ng-switch-when="list")
-				+thumbs("view.content")
+				+thumbs("view.content", "true", "undefined", "24")
 					section.content__desc
 						.row
 							.col-xs-6

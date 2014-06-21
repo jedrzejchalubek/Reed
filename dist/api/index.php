@@ -212,7 +212,9 @@ $router->map('/users/:id/feeds', 'UserFeeds', array(
  | PUT => (exist) ? update feed details : throw error
  | DELETE => delete user feed
 */
-$router->map('/users/:id/feeds/:id', function(){});
+$router->map('/users/:id/feeds/:id', 'UserFeed', array(
+	'userFeed' => $userFeed
+));
 
 
 
@@ -250,6 +252,27 @@ $router->map('/users/:id/articles', 'UserArticles', array(
 */
 $router->map('/users/:id/articles/:id', 'UserArticle', array(
 	'userArticle' => $userArticle
+));
+
+
+
+
+/*
+ | ---------------------------------------------------
+ | User folders route
+ | ---------------------------------------------------
+ | User folders collection. Should accept requests:
+ | GET => list user folders collection
+ | POST => add new article to user folders collection
+ | PUT => throw error
+ | DELETE => throw error
+ |
+ | Optional reqest parameters:
+ | ?limit={int}
+ | ?offset={int}
+*/
+$router->map('/users/:id/folders', 'UserFolders', array(
+	'userFolder' => $userFolder
 ));
 
 

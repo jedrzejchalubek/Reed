@@ -36,17 +36,39 @@ Reed.factory('Api', function ($http, $resource, State) {
 				}
 			}),
 
+			UserFeed: $resource('api/users/:id/feeds/:feedid', { id: userid }, {
+				update: {
+					method: 'PUT',
+					isArray: false
+				},
+				delete: {
+					method: 'DELETE',
+					isArray: false
+				}
+			}),
+
 			UserArticles: $resource('api/users/:id/articles', { id: userid }, {
 				get: {
 					method: 'GET',
 					isArray: true
 				},
+				update: {
+					method: 'PUT',
+					isArray: false
+				}
 			}),
 
 			UserArticle: $resource('api/users/:id/articles/:articleid', { id: userid }, {
 				update: {
 					method: 'PUT',
 					isArray: false
+				}
+			}),
+
+			UserFolders: $resource('api/users/:id/folders', { id: userid }, {
+				get: {
+					method: 'GET',
+					isArray: true
 				}
 			}),
 

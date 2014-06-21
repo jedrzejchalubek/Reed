@@ -63,6 +63,7 @@ class UserFeeds extends Controller
 			$this->userFeed->addOverwrite(array(
 				'id' => $id[0],
 				'feedid' => $feedId,
+				'folder' => 'Uncategorized',
 				'created' => $date
 			));
 
@@ -79,8 +80,7 @@ class UserFeeds extends Controller
 
 				if( $articleCreated >= date('Y-m-d H:i:s', strtotime('-3 day')) ) {
 
-
-					$this->article->addOverwrite(array(
+					$item = array(
 						'id' => $articleId,
 						'feed' => $feedId,
 						'url' => $articleUrl,
@@ -94,7 +94,9 @@ class UserFeeds extends Controller
 						'later' => '0',
 						'created' => $articleCreated,
 						'modifed' => $articleUpdated
-					));
+					);
+
+					$this->article->addOverwrite($item);
 
 					$this->userArticle->addOverwrite(array(
 						'id' => $id[0],
@@ -105,6 +107,10 @@ class UserFeeds extends Controller
 						'created' => date('Y-m-d H:i:s')
 					));
 
+					if( $articleCreated >= date('Y-m-d H:i:s', strtotime("$date -7 day")) ) {
+						array_push($articles, $item);
+					}
+
 				}
 
 			}
@@ -113,7 +119,8 @@ class UserFeeds extends Controller
 				'status' => 'success',
 				'message' => 'User feed added',
 				'source' => $source,
-				'items' => $this->userArticle->fetch($id[0])
+				'folder' => 'Uncategorized',
+				'items' => $articles
 			));
 
 		} else {

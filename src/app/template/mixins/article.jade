@@ -7,10 +7,9 @@ mixin article(items)
 						.article__meta
 							.article__data
 								.row
+									//- .col-xs-6.text-left
+									//- 	span {{ collection.filter(collection.feeds, { title: item.folder })[0].items[0].title }}
 									.col-xs-6.text-left
-										img(ng-src="{{ collection.filter('feeds', { id: item.feed })[0].image }}")
-										span {{ collection.filter('feeds', { id: item.feed })[0].title }}
-									.col-xs-6.text-right
 										span.fa.fa-book
 										reading-time(text="{ content: item.content }")
 							h1.article__title(ng-bind-html="item.title")

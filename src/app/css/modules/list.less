@@ -1,24 +1,15 @@
 .list {
 
-	&__tabs {
-		display: block;
+	position: relative;
+	height: 100%;
+
+	&__nav {
+		position: absolute;
+		bottom: 0; right: 0;
+		width: 100%;
+		padding: 16px 18px;
+		border-top: 2px solid @gray;
 		background: @gray-dark;
-		list-style: none;
-		border-bottom: 2px solid @gray;
-		overflow: hidden;
-		padding-right: 9px;
-		padding-left: 9px;
-	}
-
-	&__tab {
-
-		float: left;
-		clear: none;
-
-		a, span {
-			padding: 15px 9px;
-			display: block;
-		}
 	}
 
 	&__profile {

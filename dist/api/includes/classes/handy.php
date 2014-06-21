@@ -10,14 +10,13 @@ class Handy
 	public static function findImage($content)
 	{
 
-		preg_match('/(<img[^>]+>)/i', $content, $images);
-		$xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
-		$imagesrc = $xpath->evaluate("string(//img/@src)");
-		$imagesize = getimagesize($imagesrc);
+		// preg_match('/(<img[^>]+>)/i', $content, $images);
+		// $xpath = new DOMXPath(@DOMDocument::loadHTML($images[0]));
+		// $imagesrc = $xpath->evaluate("string(//img/@src)");
 
-		if($imagesize[0] > 200 && $imagesize[1] > 200)
-			return $imagesrc;
-		else
+		// if($imagesrc)
+		// 	return $imagesrc;
+		// else
 			return 'app/images/icon-blank.png';
 
 	}

@@ -1,5 +1,14 @@
 Reed.controller('All', function ($scope, $filter, $cookieStore, Api, State, Collection) {
 
+	// $scope.loadMore = function () {
+
+	// 	var acc = Api.UserArticles.get({
+	// 		offset: $scope.view.content.length - 1
+	// 	});
+	// 	console.log(acc);
+
+	// };
+
 	$scope.showArticle = function (el) {
 
 		el.unread = '0';

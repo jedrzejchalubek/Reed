@@ -89,6 +89,7 @@ $feed = new Reed\Models\Feed($database);
 $article = new Reed\Models\Article($database);
 $userFeed = new Reed\Models\UserFeed($database);
 $userArticle = new Reed\Models\UserArticle($database);
+$userFolder = new Reed\Models\UserFolder($database);
 
 $user = new Reed\Models\User($facebook, $token, $database);
 $router = new Router($user, $token, $database);

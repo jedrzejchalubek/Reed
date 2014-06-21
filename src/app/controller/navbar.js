@@ -2,12 +2,12 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 
 	$scope.saveForLater = function (el) {
 
-		var overlay = Overlay.init('Loading');
+		var overlay = Overlay.init('busy', 'Loading');
 
 		el.later = '1' - el.later;
 
 		// if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
-		Collection.add('later', el);
+		Collection.add(Collection.later, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -25,12 +25,12 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 
 	$scope.markAsFav = function (el) {
 
-		var overlay = Overlay.init('Loading');
+		var overlay = Overlay.init('busy', 'Loading');
 
 		el.favourite = '1' - el.favourite;
 
 		// if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
-		Collection.add('favourites', el);
+		Collection.add(Collection.favourites, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
@@ -51,7 +51,7 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 		el.unread = '1' - el.unread.toString();
 
 		// if(Collection.articles.indexOf(el) === -1) Collection.articles.push(el);
-		Collection.add('articles', el);
+		Collection.add(Collection.articles, el);
 
 		Api.UserArticle.update({
 			articleid: el.id

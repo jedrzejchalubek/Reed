@@ -6,7 +6,9 @@ var Reed = angular.module('Reed', [
 	'ngAnimate',
 	'ezfb',
 	'toggle-switch',
-	'angularMoment'
+	'angularMoment',
+	'ngDragDrop',
+	'infinite-scroll'
 ])
 
 	.config([

@@ -19,6 +19,7 @@ class Database
 	public $user;
 	public $pass;
 	public $conn;
+	public $stack;
 
 	/**
 	 * Get specifed row by id
@@ -97,13 +98,18 @@ class Database
 
 	/**
 	 * Make query
-	 * @param  String $query
+	 * @param  String  $query
+	 * @param  Array   $params
+	 * @param  Boolean $return Does query returns results?
 	 * @return Array
 	 */
-	public function request($query)
+	public function request($query, $params = array(), $return = true)
 	{
-		$rows = $this->query($query);
-		return ( $rows->rowCount() > 0 ) ? $rows->fetchAll(PDO::FETCH_ASSOC) : false;
+		$rows = $this->query($query, $params);
+
+		if ($return)
+			return ( $rows->rowCount() > 0 ) ? $rows->fetchAll(PDO::FETCH_ASSOC) : false;
+
 	}
 
 	/**
@@ -114,9 +120,9 @@ class Database
 	 */
 	public function query($query, $bindings = null)
 	{
-		$stack = $this->conn ->prepare($query);
-		$stack->execute($bindings);
-		return $stack;
+		$this->stack = $this->conn ->prepare($query);
+		$this->stack ->execute($bindings);
+		return $this->stack;
 	}
 
 	/**
@@ -158,7 +164,7 @@ class Database
 				$this->user,
 				$this->pass
 			);
-			$this->conn ->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+			$this->conn ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$this->conn ->query('SET NAMES UTF8');
 		} catch(PDOException $e) {
 			echo "Error: " . $e->getMessage();

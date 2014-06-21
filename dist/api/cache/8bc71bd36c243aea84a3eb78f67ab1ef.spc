@@ -26,9 +26,93 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
  
  
  
-";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:27:"http://www.w3.org/2005/Atom";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:7:"DailyJS";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:3:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"href";s:18:"http://dailyjs.com";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}i:1;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:35:"http://feeds.feedburner.com/dailyjs";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}i:2;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:2:{s:3:"rel";s:3:"hub";s:4:"href";s:32:"http://pubsubhubbub.appspot.com/";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:25:"2014-06-18T18:46:27+01:00";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:19:"http://dailyjs.com/";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:6:"
+";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:27:"http://www.w3.org/2005/Atom";a:6:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:7:"DailyJS";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:3:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"href";s:18:"http://dailyjs.com";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}i:1;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:35:"http://feeds.feedburner.com/dailyjs";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}i:2;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:2:{s:3:"rel";s:3:"hub";s:4:"href";s:32:"http://pubsubhubbub.appspot.com/";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:25:"2014-06-20T17:08:15+01:00";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:19:"http://dailyjs.com/";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:6:"
    
  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:7:"DailyJS";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}s:5:"entry";a:10:{i:0;a:6:{s:4:"data";s:22:"
+   
+   
+   
+   
+   
+ ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:24:"Google's Web Starter Kit";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"href";s:69:"http://feedproxy.google.com/~r/dailyjs/~3/6G5-Nqa05hE/web-starter-kit";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:25:"2014-06-20T00:00:00+01:00";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:45:"http://dailyjs.com/2014/06/20/web-starter-kit";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:1960:"
+     <div class='image'>
+  <img src='http://dailyjs.com/images/posts/webstarterkit.png' />
+  <small>Web Starter Kit</small>
+</div>
+<p><a href='https://developers.google.com/web/starter-kit/'>Web Starter Kit</a> (GitHub: <a href='https://github.com/google/web-starter-kit'>google / web-starter-kit</a>, License: <em>Apache 2.0</em>) from Google is a boilerplate for developing responsive websites. It supports multiple devices, has a <a href='http://gulpjs.com/'>gulp.js</a> build script, and has support for synchronising pages across devices during testing.</p>
+
+<p>If you&#8217;re a Node developer, then you might like the gulp.js-based environment. Typing <code>gulp</code> will build and optimise the current project, and <code>gulp serve</code> will run a server. There&#8217;s also <code>gulp pagespeed</code> that uses Google&#8217;s <a href='https://developers.google.com/speed/pagespeed/insights/'>PageSpeed insights</a>.</p>
+
+<p>The sync feature for testing is powered by <a href='http://browsersync.io/'>BrowserSync</a>. BrowserSync is a Socket.IO-based Node application that automatically sends changes to pages as you edit files. It also has a <a href='https://github.com/shakyShane/gulp-browser-sync'>gulp.js module</a> that you can use with your own projects.</p>
+
+<p>If you&#8217;re wondering why a Node/Ruby project has come out of Google, then <a href='https://github.com/google/web-starter-kit/graphs/contributors'>take a look at the Web Starter Kit contributors</a>: it seems like it&#8217;s another project by Addy Osmani and Sindre Sorhus, just like <a href='http://yeoman.io/'>Yeoman</a>.</p>
+
+<p>Although this is a boilerplate project, the style guide makes it look more like something like Bootstrap. If you find Bootstrap too heavy for your projects and would prefer something lighter with workflow tools, then give Web Starter Kit a try.</p>
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/6G5-Nqa05hE" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:45:"http://dailyjs.com/2014/06/20/web-starter-kit";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:1;a:6:{s:4:"data";s:22:"
+   
+   
+   
+   
+   
+ ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:38:"Bridge Node and PhantomJS with phridge";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"href";s:61:"http://feedproxy.google.com/~r/dailyjs/~3/EgGvNithsIw/phridge";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:25:"2014-06-19T00:00:00+01:00";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:37:"http://dailyjs.com/2014/06/19/phridge";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:7892:"
+     <p>I use PhantomJS for integration testing and PDF generation, but I find working with its API awkward. That means I often put as much logic as possible into a Node wrapper before handing off the bare minimum to PhantomJS.</p>
+
+<p>Johannes Ewald sent in a module that attempts to improve on this workflow: phridge (GitHub: <a href='https://github.com/peerigon/phridge'>peerigon / phridge</a>, License: <em>Unlicense</em>, npm: <a href='https://www.npmjs.org/package/phridge'>phridge</a>).</p>
+
+<p>For comparison, here is an example of a <strong>standard</strong> PhantomJS script:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>phantom</span><span class='p'>.</span><span class='nx'>addCookie</span><span class='p'>(</span><span class='s1'>&#39;cookie_name&#39;</span><span class='p'>,</span> <span class='s1'>&#39;cookie_value&#39;</span><span class='p'>,</span> <span class='s1'>&#39;localhost&#39;</span><span class='p'>,</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
+  <span class='nx'>phantom</span><span class='p'>.</span><span class='nx'>createPage</span><span class='p'>(</span><span class='kd'>function</span><span class='p'>(</span><span class='nx'>page</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='nx'>page</span><span class='p'>.</span><span class='nx'>set</span><span class='p'>(</span><span class='s1'>&#39;customHeaders.Referer&#39;</span><span class='p'>,</span> <span class='s1'>&#39;http://google.com&#39;</span><span class='p'>,</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
+      <span class='nx'>page</span><span class='p'>.</span><span class='nx'>set</span><span class='p'>(</span>
+        <span class='s1'>&#39;settings.userAgent&#39;</span><span class='p'>,</span>
+        <span class='s1'>&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5)&#39;</span><span class='p'>,</span>
+        <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
+          <span class='nx'>page</span><span class='p'>.</span><span class='nx'>open</span><span class='p'>(</span><span class='s1'>&#39;http://localhost:9901/cookie&#39;</span><span class='p'>,</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>status</span><span class='p'>)</span> <span class='p'>{</span>
+            <span class='nx'>page</span><span class='p'>.</span><span class='nx'>evaluate</span><span class='p'>(</span><span class='kd'>function</span><span class='p'>(</span><span class='nx'>selector</span><span class='p'>)</span> <span class='p'>{</span>
+              <span class='k'>return</span> <span class='nb'>document</span><span class='p'>.</span><span class='nx'>querySelector</span><span class='p'>(</span><span class='nx'>selector</span><span class='p'>).</span><span class='nx'>innerText</span><span class='p'>;</span>
+            <span class='p'>},</span> <span class='kd'>function</span> <span class='p'>(</span><span class='nx'>text</span><span class='p'>)</span> <span class='p'>{</span>
+              <span class='nx'>console</span><span class='p'>.</span><span class='nx'>log</span><span class='p'>(</span><span class='s1'>&#39;The element contains the following text: &#39;</span><span class='p'>,</span> <span class='nx'>text</span><span class='p'>)</span>
+            <span class='p'>},</span> <span class='s1'>&#39;h1&#39;</span><span class='p'>);</span>
+          <span class='p'>});</span>
+        <span class='p'>}</span>
+      <span class='p'>);</span>
+    <span class='p'>});</span>
+  <span class='p'>});</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+<p>With phridge, however, you can do this:</p>
+<div class='highlight'><pre><code class='javascript'><span class='nx'>phantom</span><span class='p'>.</span><span class='nx'>run</span><span class='p'>(</span><span class='s1'>&#39;h1&#39;</span><span class='p'>,</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>selector</span><span class='p'>,</span> <span class='nx'>resolve</span><span class='p'>)</span> <span class='p'>{</span>
+  <span class='kd'>var</span> <span class='nx'>page</span><span class='p'>;</span>
+
+  <span class='c1'>// This code runs inside PhantomJS</span>
+  <span class='nx'>phantom</span><span class='p'>.</span><span class='nx'>addCookie</span><span class='p'>(</span><span class='s1'>&#39;cookie_name&#39;</span><span class='p'>,</span> <span class='s1'>&#39;cookie_value&#39;</span><span class='p'>,</span> <span class='s1'>&#39;localhost&#39;</span><span class='p'>);</span>
+
+  <span class='nx'>page</span> <span class='o'>=</span> <span class='nx'>webpage</span><span class='p'>.</span><span class='nx'>create</span><span class='p'>();</span>
+  <span class='nx'>page</span><span class='p'>.</span><span class='nx'>customHeaders</span> <span class='o'>=</span> <span class='p'>{</span>
+    <span class='nx'>Referer</span><span class='o'>:</span> <span class='s1'>&#39;http://google.com&#39;</span>
+  <span class='p'>};</span>
+  <span class='nx'>page</span><span class='p'>.</span><span class='nx'>settings</span> <span class='o'>=</span> <span class='p'>{</span>
+    <span class='nx'>userAgent</span><span class='o'>:</span> <span class='s1'>&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5)&#39;</span>
+  <span class='p'>};</span>
+  <span class='nx'>page</span><span class='p'>.</span><span class='nx'>open</span><span class='p'>(</span><span class='s1'>&#39;http://www.google.com&#39;</span><span class='p'>,</span> <span class='kd'>function</span><span class='p'>()</span> <span class='p'>{</span>
+    <span class='kd'>var</span> <span class='nx'>text</span> <span class='o'>=</span> <span class='nx'>page</span><span class='p'>.</span><span class='nx'>evaluate</span><span class='p'>(</span><span class='kd'>function</span><span class='p'>(</span><span class='nx'>selector</span><span class='p'>)</span> <span class='p'>{</span>
+      <span class='k'>return</span> <span class='nb'>document</span><span class='p'>.</span><span class='nx'>querySelector</span><span class='p'>(</span><span class='nx'>selector</span><span class='p'>).</span><span class='nx'>innerText</span><span class='p'>;</span>
+    <span class='p'>},</span> <span class='nx'>selector</span><span class='p'>);</span>
+
+    <span class='c1'>// Resolve the promise and pass &#39;text&#39; back to node </span>
+    <span class='nx'>resolve</span><span class='p'>(</span><span class='nx'>text</span><span class='p'>);</span>
+  <span class='p'>});</span>
+<span class='p'>}).</span><span class='nx'>then</span><span class='p'>(</span><span class='kd'>function</span><span class='p'>(</span><span class='nx'>text</span><span class='p'>)</span> <span class='p'>{</span>
+  <span class='c1'>// Inside node again</span>
+  <span class='nx'>console</span><span class='p'>.</span><span class='nx'>log</span><span class='p'>(</span><span class='s1'>&#39;The element contains the following text: &#39;</span><span class='o'>+</span> <span class='nx'>text</span><span class='p'>);</span>
+<span class='p'>});</span>
+</code></pre>
+</div>
+<p>The <code>phantom</code> object has its <a href='https://github.com/peerigon/phridge#api-phantom'>own API</a> that is specific to phridge. Phridge works by starting a small HTTP server from within PhantomJS to act as an API entry point from Node. It uses a shared secret to reduce the potential for abuse &#8211; this is documented in the readme, under <a href='https://github.com/peerigon/phridge#api-phantom'>a note on security</a>.</p>
+
+<p>The approach used by phridge is similar to my own homebrew solutions that have evolved over the last year or two, so I&#8217;m hoping I can replace my ad-hoc code with phridge to make my PhantomJS dependent projects more maintainable.</p>
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/EgGvNithsIw" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:37:"http://dailyjs.com/2014/06/19/phridge";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:2;a:6:{s:4:"data";s:22:"
    
    
    
@@ -66,7 +150,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 </blockquote>
 
 <p>You can create routes using JSON files that map middleware, service handlers, data fixtures, and transform functions to routes. It also supports services, which are callable HTTP endpoints. It comes with an example application that shows weather for a given zip code.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/8a65nIky4Cg" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:42:"http://dailyjs.com/2014/06/18/node-roundup";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:1;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/8a65nIky4Cg" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:42:"http://dailyjs.com/2014/06/18/node-roundup";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:3;a:6:{s:4:"data";s:22:"
    
    
    
@@ -84,7 +168,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <p>Hya supports AMD and ES6 modules. They use a simple JSON object that describes the plugin, and a constructor function. You can bind to the Hya GUI using various events, like <code>handleMouseOver</code> and <code>handleMouseDown</code>. The post <a href='http://blog.hya.io/developing-a-canvas-plugin-for-hyacinth/'>Developing a canvas plugin for Hya.io</a> explains how to create plugins in detail.</p>
 
 <p><a href='http://hya.io/#/docs'>The documentation</a> has details on MIDI interaction and the <code>initPlugin</code> constructor. It&#8217;s amazing to think that you could connect a MIDI control surface or keyboard to a web application.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/_j_wM8bDJyc" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:33:"http://dailyjs.com/2014/06/17/hya";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:2;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/_j_wM8bDJyc" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:33:"http://dailyjs.com/2014/06/17/hya";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:4;a:6:{s:4:"data";s:22:"
    
    
    
@@ -108,7 +192,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <p>It has a <code>noConflict</code> option for browsers, and supports AMD, CommonJS, and browsers.</p>
 
 <p>If you want to use Promises/A+ in your applications, Ralf recommends <a href='https://github.com/petkaantonov/bluebird'>Bluebird</a>, and there&#8217;s a large list of other implementations on the promises spec wiki: <a href='https://github.com/promises-aplus/promises-spec/blob/master/implementations.md'>promises-spec / implementations.md</a>.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/SjL3CvGHMAU" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:38:"http://dailyjs.com/2014/06/16/thenable";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:3;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/SjL3CvGHMAU" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:38:"http://dailyjs.com/2014/06/16/thenable";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:5;a:6:{s:4:"data";s:22:"
    
    
    
@@ -160,7 +244,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <p>The documentation shows how to use it with Grunt, so you can execute your tests against a browser with <code>grunt jasmine:server</code>, or in headless mode using <code>grunt jasmine:server:ci</code>.</p>
 
 <p>Jordi has written a sample app with tests called <a href='https://github.com/jordinl/node-todo'>node-todo</a> which demonstrates how the same specs can be used for browser testing and headless tests on the command-line.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/oswj2RXPy5A" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:59:"http://dailyjs.com/2014/06/13/web-worker-steady-jasmine-int";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:4;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/oswj2RXPy5A" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:59:"http://dailyjs.com/2014/06/13/web-worker-steady-jasmine-int";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:6;a:6:{s:4:"data";s:22:"
    
    
    
@@ -198,7 +282,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <blockquote>
 <p>Something that strikes me about the framework versions is the amount of framework-specific knowledge required to get these examples working. It&#8217;s one thing to say &#8220;here&#8217;s a version in framework X&#8221;, and it&#8217;s quite another to actually write the code (from the standpoint of someone who&#8217;s still considering framework options and who is not familiar with the lingo and caveats for any of them.)</p>
 </blockquote>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/_SbkZ7gKrw4" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:43:"http://dailyjs.com/2014/06/12/ramda-two-way";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:5;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/_SbkZ7gKrw4" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:43:"http://dailyjs.com/2014/06/12/ramda-two-way";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:7;a:6:{s:4:"data";s:22:"
    
    
    
@@ -240,7 +324,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <blockquote>
 <p>If you&#8217;re looking for ways to contribute to Node itself, the website will be soon be going through an overhaul to improve our documentation. We&#8217;re going to be adding a lot more documentation, cleaning up what we already have, as well as designing the pieces to help internationalize the site. Node&#8217;s community is globally diverse, we should be working to enable Node users everywhere they are.</p>
 </blockquote>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/E3dvqvwzX3k" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:42:"http://dailyjs.com/2014/06/11/node-roundup";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:6;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/E3dvqvwzX3k" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:42:"http://dailyjs.com/2014/06/11/node-roundup";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:8;a:6:{s:4:"data";s:22:"
    
    
    
@@ -284,7 +368,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <p>I have an Espruino, but I don&#8217;t have a Tessel yet. I like the idea of using <code>npm install</code> with Tessel, but Espruino is already easy to connect to sensors and other hardware, particularly for those with Arduino experience.</p>
 
 <p>My recommendation is to try Tessel if you&#8217;re perplexed by hardware but good at Node, and have some free time and cash.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/3vJEi0F2CC8" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:36:"http://dailyjs.com/2014/06/10/tessel";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:7;a:6:{s:4:"data";s:22:"
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/3vJEi0F2CC8" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:36:"http://dailyjs.com/2014/06/10/tessel";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:9;a:6:{s:4:"data";s:22:"
    
    
    
@@ -316,72 +400,4 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 <p>Angular-breadcrumb (GitHub: <a href='https://github.com/ncuillery/angular-breadcrumb'>ncuillery / angular-breadcrumb</a>, License: <em>MIT</em>) by Nicolas Cuillery is a module for generating breadcrumb navigation. You can use the <code>ncy-breadcrumb</code> directive to apply it.</p>
 
 <p>It&#8217;s based on the <a href='https://github.com/angular-ui/ui-router'>AngularUI Router</a>, and Nicolas has been writing pretty solid documentation in the <a href='https://github.com/ncuillery/angular-breadcrumb/wiki'>Angular-breadcrumb wiki</a>.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/6d01jDXe1tg" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:53:"http://dailyjs.com/2014/06/09/jseq-angular-breadcrumb";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:8;a:6:{s:4:"data";s:22:"
-   
-   
-   
-   
-   
- ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:46:"MotorCortex.js, Testing AngularJS with Jasmine";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"href";s:81:"http://feedproxy.google.com/~r/dailyjs/~3/FnrsGseIrAQ/motorcortex-angular-testing";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:25:"2014-06-06T00:00:00+01:00";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:57:"http://dailyjs.com/2014/06/06/motorcortex-angular-testing";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:3025:"
-     <h3 id='motorcortexjs'>MotorCortex.js</h3>
-
-<blockquote>
-<p>Think of dancer dancing or a human just walking the street. It is extremely unnatural to think that each part of the body acts independently. A centralized mechanism controls all parts in order to produce a smooth, elastic and natural movement. The &#8220;motor cortex&#8221;, is the specific part of the brain that does exactly this job.</p>
-</blockquote>
-
-<p>The idea of declarative templates seems to be spilling into the world of client-side animation. <a href='http://motorcortexjs.com/'>MotorCortex.js</a> (GitHub: <a href='https://github.com/andreas-trad/motorcortexjs'>andreas-trad / motorcortexjs</a>, License: <em>WTFPL</em>) by Andreas Trantidi is a new library that builds on Velocity.js to provide an animation API that&#8217;s based on CSS syntax.</p>
-
-<p>With MotorCortex.js, external <code>*.mss</code> files determine animation parameters. These are based on the CSS parameters that are supported by Velocity.js:</p>
-<div class='highlight'><pre><code class='css'><span class='nc'>.section</span><span class='nd'>:myEvent</span><span class='p'>{</span>
-  <span class='n'>duration</span><span class='o'>:</span> <span class='m'>400</span><span class='p'>;</span>
-  <span class='k'>top</span><span class='o'>:</span> <span class='m'>300px</span><span class='p'>;</span>
-<span class='p'>}</span>
-</code></pre>
-</div>
-<p>For more examples with the associated CSS and JavaScript, see <a href='http://motorcortexjs.com/#examples'>http://motorcortexjs.com/#examples</a>.</p>
-
-<h3 id='testing_angularjs_with_jasmine'>Testing AngularJS with Jasmine</h3>
-
-<p>David Posin sent in <a href='http://randomjavascript.blogspot.co.uk/2014/06/angular-and-jasmine-injecting-into-test.html'>Angular and Jasmine: Injecting into the test environment</a>. He&#8217;s been using Jasmine for tests in both Node and client-side JavaScript, so he wanted to use it with Angular as well:</p>
-
-<blockquote>
-<p>Angular requires a very specific environment in which to function. The result of that can be a significant amount of boilerplate when creating tests for Angular applications in Jasmine. The good news is that the amount of redundancy can be minimized with careful test organization.</p>
-</blockquote>
-
-<p>The way he does this is by creating embedded suites:</p>
-
-<blockquote>
-<p>The spec file will have one <code>describe</code> that contains that spec&#8217;s entire content. Inner <code>describe</code> clauses will be used to manage and break up the tests. Inside of the main over-arching <code>describe</code> we will add variables to contain the services that all the clauses will need.</p>
-</blockquote>
-
-<p>I too find it frustrating to have to switch my preferred test library because of a framework&#8217;s design, so it&#8217;s interesting that he managed to get Jasmine working in the end. It can be quite hard to think the Angular way for relative newcomers.</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/FnrsGseIrAQ" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:57:"http://dailyjs.com/2014/06/06/motorcortex-angular-testing";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}i:9;a:6:{s:4:"data";s:22:"
-   
-   
-   
-   
-   
- ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";s:5:"child";a:2:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:26:"Receiving Emails with Node";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"href";s:60:"http://feedproxy.google.com/~r/dailyjs/~3/qXFtpcIhnX8/mailin";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:25:"2014-06-05T00:00:00+01:00";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:36:"http://dailyjs.com/2014/06/05/mailin";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:3039:"
-     <p>One of the things I like to evangelise about Node is the fact it&#8217;s good for creating any network servers, not just web stuff. Florent Galland sent in <a href='http://mailin.io/'>Mailin</a> (GitHub: <a href='https://github.com/Flolagale/mailin'>Flolagale / mailin</a>, License: <em>MIT</em>, npm: <a href='http://mailin.io/'>mailin</a>), which allows your web apps to receive inbound emails. What&#8217;s cool about Mailin is it runs as an SMTP server, so rather than having to configure a mail server you can just use Mailin by itself.</p>
-
-<p><a href='http://mailin.io'>Mailin&#8217;s homepage</a> has a cool demo that allows you to send it an email and see it appear on the page. This works using Mailin&#8217;s webhook.</p>
-
-<p><img src='http://dailyjs.com/images/posts/mailin.png' alt='Mailin' /></p>
-
-<p>You can configure the webhook when the server is started:</p>
-<div class='highlight'><pre><code class='javascript'><span class='nx'>mailin</span> <span class='o'>--</span><span class='nx'>webhook</span> <span class='nx'>http</span><span class='o'>:</span><span class='c1'>//example.com/incoming_emails</span>
-</code></pre>
-</div>
-<p>The documentation explains how to install it with <code>authbind</code> for safe binding to port 25, otherwise <code>sudo</code> or a root user would be required.</p>
-
-<p>The documentation also mentions optional spam detection support.</p>
-
-<p>Mailin is built with the <a href='https://www.npmjs.org/package/simplesmtp'>simplesmtp</a> module. This provides a Node API for building SMTP servers. It has an API that should be familiar to anyone who has written HTTP code with Node:</p>
-<div class='highlight'><pre><code class='javascript'><span class='nx'>simplesmtp</span><span class='p'>.</span><span class='nx'>createSimpleServer</span><span class='p'>({</span> <span class='nx'>SMTPBanner</span><span class='o'>:</span> <span class='s1'>&#39;My Server&#39;</span> <span class='p'>},</span> <span class='kd'>function</span><span class='p'>(</span><span class='nx'>req</span><span class='p'>)</span> <span class='p'>{</span>
-  <span class='nx'>req</span><span class='p'>.</span><span class='nx'>pipe</span><span class='p'>(</span><span class='nx'>process</span><span class='p'>.</span><span class='nx'>stdout</span><span class='p'>);</span>
-  <span class='nx'>req</span><span class='p'>.</span><span class='nx'>accept</span><span class='p'>();</span>
-<span class='p'>}).</span><span class='nx'>listen</span><span class='p'>(</span><span class='nx'>port</span><span class='p'>);</span>
-</code></pre>
-</div>
-<p>simplesmtp even supports connection pools, and TLS. I love the idea of using Node for servers that I can customise, but I&#8217;m not a security expert so I don&#8217;t know what the implications of using these modules in production might be. Maybe it&#8217;s time I read <a href='http://www.packtpub.com/secure-your-node-applications-with-node-security/book'>Node Security</a>!</p>
-   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/qXFtpcIhnX8" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:36:"http://dailyjs.com/2014/06/05/mailin";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:3:{s:4:"info";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:3:"uri";s:7:"dailyjs";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:14:"emailServiceId";a:1:{i:0;a:5:{s:4:"data";s:7:"dailyjs";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:18:"feedburnerHostname";a:1:{i:0;a:5:{s:4:"data";s:28:"http://feedburner.google.com";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}}s:4:"type";i:512;s:7:"headers";a:11:{s:12:"content-type";s:23:"text/xml; charset=UTF-8";s:4:"etag";s:27:"IjcSLDWoMgQm08QSDob8dwudRno";s:13:"last-modified";s:29:"Thu, 19 Jun 2014 13:00:04 GMT";s:16:"content-encoding";s:4:"gzip";s:4:"date";s:29:"Thu, 19 Jun 2014 13:14:38 GMT";s:7:"expires";s:29:"Thu, 19 Jun 2014 13:14:38 GMT";s:13:"cache-control";s:18:"private, max-age=0";s:22:"x-content-type-options";s:7:"nosniff";s:16:"x-xss-protection";s:13:"1; mode=block";s:6:"server";s:3:"GSE";s:18:"alternate-protocol";s:7:"80:quic";}s:5:"build";s:14:"20121030085402";}
+   <img src="http://feeds.feedburner.com/~r/dailyjs/~4/6d01jDXe1tg" height="1" width="1"/>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:1:{s:8:"origLink";a:1:{i:0;a:5:{s:4:"data";s:53:"http://dailyjs.com/2014/06/09/jseq-angular-breadcrumb";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}s:42:"http://rssnamespace.org/feedburner/ext/1.0";a:3:{s:4:"info";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:1:{s:3:"uri";s:7:"dailyjs";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:14:"emailServiceId";a:1:{i:0;a:5:{s:4:"data";s:7:"dailyjs";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}s:18:"feedburnerHostname";a:1:{i:0;a:5:{s:4:"data";s:28:"http://feedburner.google.com";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:0:"";}}}}}}}}s:4:"type";i:512;s:7:"headers";a:11:{s:12:"content-type";s:23:"text/xml; charset=UTF-8";s:4:"etag";s:27:"2Z9amf140ITfq9wQfMDVN1xGNWo";s:13:"last-modified";s:29:"Fri, 20 Jun 2014 18:21:10 GMT";s:16:"content-encoding";s:4:"gzip";s:4:"date";s:29:"Fri, 20 Jun 2014 18:47:21 GMT";s:7:"expires";s:29:"Fri, 20 Jun 2014 18:47:21 GMT";s:13:"cache-control";s:18:"private, max-age=0";s:22:"x-content-type-options";s:7:"nosniff";s:16:"x-xss-protection";s:13:"1; mode=block";s:6:"server";s:3:"GSE";s:18:"alternate-protocol";s:7:"80:quic";}s:5:"build";s:14:"20121030085402";}

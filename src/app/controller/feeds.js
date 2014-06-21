@@ -1,5 +1,6 @@
 Reed.controller('Feeds', function ($scope, $routeParams, Api, State, Collection) {
 
+
 	$scope.showArticle = function (el) {
 
 		if(el.unread == 1) State.update('articles', 0);
@@ -50,11 +51,11 @@ Reed.controller('Feeds', function ($scope, $routeParams, Api, State, Collection)
 
 		$scope.view = {
 			is: 'Feeds',
-			title: Collection.filter('feeds', {
+			title: Collection.filter(Collection.feeds, {
 				id: $routeParams.id
 			})[0].title,
 			section: 'list',
-			content: Collection.filter('articles', {
+			content: Collection.filter(Collection.articles, {
 				feed: $routeParams.id
 			})
 		};

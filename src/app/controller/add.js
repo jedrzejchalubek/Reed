@@ -2,18 +2,35 @@ Reed.controller('Add', function ($scope, $rootScope, $timeout, Api, State, Overl
 
 	$scope.submit = function(isValid) {
 
-		var overlay = Overlay.init('Loading');
+		var overlay = Overlay.init('busy', 'Loading');
 
 		if (isValid) {
 
-			Api.UserFeeds.post({}, $scope.form, function(data) {
-				Overlay.update(data.status, data.message);
-			}, function(data) {
-				Overlay.update(data.status, 'Bad url');
+			Api.UserFeeds.post({}, $scope.form, function(response) {
+
+				Collection.folders.forEach(function(folder) {
+
+					if(folder.title === response.folder) {
+
+						Collection.add(Collection.feeds, response.source);
+						Collection.add(folder.items, response.source);
+
+						response.items.forEach(function (el) {
+							Collection.add(Collection.articles, el);
+						});
+
+					}
+
+				});
+
+				Overlay.init(response.status, response.message);
+
+			}, function(response) {
+				Overlay.update(response.status, 'Bad url');
 			});
 
 		} else {
-			Overlay.update('fail', 'Error');
+			Overlay.update(response.status, 'Error');
 		}
 
 	};
@@ -32,15 +49,21 @@ Reed.controller('Add', function ($scope, $rootScope, $timeout, Api, State, Overl
 				done: true
 			};
 
-			Collection.add('feeds', response.source);
+			Collection.folders.forEach(function(folder) {
 
-			// response.items.forEach(function (el) {
-			// 	Collection.add('articles', el);
-			// });
+				if(folder.title === response.folder) {
 
-			Collection.articles = response.items;
+					Collection.add(Collection.feeds, response.source);
+					Collection.add(folder.items, response.source);
 
-			// console.log(Collection.length('articles'));
+					response.items.forEach(function (el) {
+						Collection.add(Collection.articles, el);
+					});
+
+				}
+
+			});
+
 
 			$timeout(function () {
 

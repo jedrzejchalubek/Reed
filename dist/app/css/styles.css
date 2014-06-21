@@ -7558,7 +7558,7 @@ body a {
   border-right: 2px solid #f6f6f6;
   padding: 17px;
   display: block;
-  width: 130px;
+  width: 135px;
   float: left;
   clear: none;
 }
@@ -7667,23 +7667,18 @@ body a {
     width: 100%;
   }
 }
-.list__tabs {
-  display: block;
+.list {
+  position: relative;
+  height: 100%;
+}
+.list__nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 16px 18px;
+  border-top: 2px solid #666666;
   background: #484d4f;
-  list-style: none;
-  border-bottom: 2px solid #666666;
-  overflow: hidden;
-  padding-right: 9px;
-  padding-left: 9px;
-}
-.list__tab {
-  float: left;
-  clear: none;
-}
-.list__tab a,
-.list__tab span {
-  padding: 15px 9px;
-  display: block;
 }
 .list__profile {
   display: block;
@@ -8233,6 +8228,7 @@ body a {
 .article__next {
   color: #ffffff;
   display: block;
+  background-color: #0066ff;
 }
 .article__next:hover {
   color: #ffffff;
@@ -8527,6 +8523,9 @@ a.navigation__item:hover {
 .navigation__feed-badge {
   background: transparent;
 }
+.settings__panel-wrapper {
+  padding: 0 15px;
+}
 .switch {
   border: 0;
   cursor: pointer;
@@ -8536,6 +8535,9 @@ a.navigation__item:hover {
   line-height: 16px;
   font-size: 12px;
   min-width: 115px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 .switch.disabled > div > span.knob {
   background: #AAA;

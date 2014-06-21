@@ -6,3 +6,13 @@ mixin list()
 			span.list__profile-name Hello, {{collection.user.name}}!
 
 		+navigation()
+
+
+		.list__nav
+			.row
+				a.col-xs-6(href="#add")
+					i.fa.fa-plus-circle
+					|  Add new
+				a.col-xs-6(href="#settings")
+					i.fa.fa-folder-open
+					|  Organise
