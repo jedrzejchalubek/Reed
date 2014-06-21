@@ -137,7 +137,6 @@ var iosOverlay = function(params) {
 			if (settings.spinner) {
 				settings.spinner.el.parentNode.removeChild(settings.spinner.el);
 			}
-			overlayDOM.innerHTML += '<i class="fa fa-' + params.icon + '">';
 		}
 	};
 

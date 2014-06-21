@@ -1,8 +1,9 @@
 mixin list()
 	section.list
 
-		a.list__profile(href="#settings")
-			img.list__profile-img(ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg")
+		a.list__profile(href="#profile")
+			//- img.list__profile-img(ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg")
+			i.fa.fa-gear
 			span.list__profile-name Hello, {{collection.user.name}}!
 
 		+navigation()

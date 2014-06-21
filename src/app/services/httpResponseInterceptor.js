@@ -12,7 +12,6 @@ Reed.service('httpResponseInterceptorHandler', function ($q, $location, $cookieS
 					$cookieStore.remove('reed_authtoken');
 					$cookieStore.remove('reed_userid');
 					$location.path('/').replace();
-					$window.location.reload();
 
 					return $q.reject(rejection);
 				}

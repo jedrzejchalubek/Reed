@@ -19,6 +19,19 @@ Reed.factory('Overlay', function () {
 	 * @param  {String} text   Response message
 	 * @return {Object}
 	 */
+	this.destroy = function (status, text) {
+
+		this.overlay.destroy();
+
+	};
+
+
+	/**
+	 * Update displayed overlay
+	 * @param  {String} status Response status
+	 * @param  {String} text   Response message
+	 * @return {Object}
+	 */
 	this.update = function (status, text) {
 
 		this.overlay.update({

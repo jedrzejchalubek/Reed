@@ -1,0 +1,45 @@
+include mixins/mixins
+
++wrapper()
+
+	+menu()
+		+side
+			+list("view.side")
+
+	+content()
+		section.fill.offset-top
+			.container
+				.row
+					.col-md-6.col-md-offset-3
+						.row
+							.col-xs-6
+								h1 {{view.title}}
+							.col-xs-6(style="margin-top: 22px;")
+								a.btn.btn-warning.pull-right(ng-click="logout()")
+									i.fa.fa-power-off
+									|  Logout
+
+						.panel.panel-default
+							//- .panel-heading Info
+							.panel-body
+								.row
+									.col-xs-6
+										dl
+											dt Signed as
+											dd {{collection.user.name}} {{collection.user.last}}
+									.col-xs-6
+										dl
+											dt Email
+											dd {{collection.user.email}}
+
+									//- .col-md-12
+									//- 	.form-group
+									//- 		label Select your home page
+									//- 		select.form-control(ng-model="pages", ng-options="page.name for page in pages")
+
+						.row
+							.col-xs-12
+								h1 Remove profile
+								a.btn.btn-danger(ng-click="removeProfile()")
+									i.fa.fa-exclamation-triangle
+									|  Yes, I want to delete an account.

@@ -43,6 +43,7 @@ class AuthService extends Controller
 				'name' => $profile->first_name,
 				'last' => $profile->last_name,
 				'email' => $profile->email,
+				'homepage' => 'Discover',
 				'created' => date('Y-m-d H:i:s')
 			));
 

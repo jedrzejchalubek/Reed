@@ -7,15 +7,42 @@ include mixins/mixins
 			+list("view.side")
 
 	+content
-		.bg-animation.fill(ng-switch="view.section")
-			.thumbs-animation.fill(ng-switch-when="list")
-				+thumbs("view.content", "true", "undefined", "24")
-					section.content__desc
+		section.fill(ng-show="view.content.length !== 0")
+			.bg-animation.fill(ng-switch="view.section")
+				.thumbs-animation.fill(ng-switch-when="list")
+					+thumbs("view.content", "true", "undefined", "48")
+						section.content__desc
+							.row
+								.col-xs-6
+									h1.content__title {{view.title}}
+								.col-xs-6
+									.content__sort(ng-controller="Sort", ng-hide="view.is == 'Discover'")
+										a.btn.btn-sm.btn-link(ng-click="markAllAsRead()", style="color: #999;")
+											span.fa.fa-check-square-o
+											span.hidden-xs Mark all as read
+										toggle-switch(model="state.user.filter", on-label="Unread", off-label="All")
+				.single-animation.fill(ng-switch-when="single")
+					+article("view.content")
+		section.fill(ng-show="view.content.length === 0")
+			.bg-animation.fill(ng-switch="view.section")
+				.thumbs-animation.fill(ng-switch-when="list")
+					section#thumbs.thumbs.fill
 						.row
-							.col-xs-6
-								h1.content__title {{view.title}}
-							.col-xs-6
-								.content__sort(ng-controller="Sort")
-									toggle-switch(model="state.user.filter", on-label="Unread", off-label="All", ng-show="view.is == 'All' || view.is == 'Feeds'")
-			.single-animation.fill(ng-switch-when="single")
-				+article("view.content")
+							.thumbs__wrapper.clearfix
+								section.content__desc
+									.row
+										.col-xs-6
+											h1.content__title {{view.title}}
+										.col-xs-6
+											.content__sort(ng-controller="Sort", ng-hide="view.is == 'Discover'")
+												a.btn.btn-sm.btn-link(ng-click="markAllAsRead()", style="color: #999;")
+													span.fa.fa-check-square-o
+													span.hidden-xs Mark all as read
+												toggle-switch(model="state.user.filter", on-label="Unread", off-label="All")
+								section.offset-top.text-center
+									h1 Nothing here.
+									p.lead
+										| Oh! Nothing to be read.
+									a(href='#discover').btn.btn-lg.btn-info
+										i.iconmonstr.iconmonstr-network
+										|  Discover something

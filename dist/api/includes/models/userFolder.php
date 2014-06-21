@@ -32,7 +32,7 @@ class UserFolder extends Model
 	public function get($id)
 	{
 
-		$results = [];
+		$results = array();
 
 		$folders = $this->request("SELECT folder FROM userFeed UF WHERE UF.id = :id GROUP BY folder", array(
 				'id' => $id

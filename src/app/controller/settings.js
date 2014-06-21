@@ -1,11 +1,27 @@
-Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
+Reed.controller('Settings', function ($scope, $filter, Api, State, Collection, Overlay) {
 
 	$scope.addFolder = function (name) {
 
-		Collection.add(Collection.folders, {
-			'title': name,
-			'items': []
-		});
+		if(name) {
+
+			var folder = false;
+
+			_.each(Collection.folders, function (el) {
+				if(el.title === name) folder = true;
+			});
+
+			if(!folder) {
+				Collection.add(Collection.folders, {
+					'title': name,
+					'items': []
+				});
+			} else {
+				Overlay.init('error', 'Folder exsist');
+			}
+
+		} else {
+			Overlay.init('error', 'Folder name empty')
+		}
 
 	};
 
@@ -27,10 +43,20 @@ Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
 
 	$scope.deleteFeed = function (index, feed, items) {
 
-		items.splice(index, 1);
-
 		Api.UserFeed.delete({
+
 			feedid: feed.id
+
+		}, function (response) {
+
+			_.each(response.items, function (el) {
+				Collection.articles = Collection.remove(Collection.articles, el);
+			});
+
+			items.splice(index, 1);
+
+			Overlay.init(response.status, response.message);
+
 		});
 
 	};
@@ -47,7 +73,7 @@ Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
 			is: 'Settings',
 			title: 'Organise feeds',
 			section: 'list',
-			content: Collection.user
+			// content: Collection.user
 		};
 
 	});

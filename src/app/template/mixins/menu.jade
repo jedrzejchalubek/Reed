@@ -4,13 +4,8 @@ mixin menu()
 			.menu__wrapper
 
 				div(ng-show="view.section == 'list'")
-					.menu__logotype
+					a(href="#discover").menu__logotype
 						img(ng-src="app/images/logotype.jpg")
-					ul.menu__sort
-						li
-							a(ng-click="markAllAsRead()")
-								span.fa.fa-check-square-o
-								span.hidden-xs Mark all as read
 
 				div(ng-show="view.section == 'single'")
 					back-to-list

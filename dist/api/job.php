@@ -2,52 +2,60 @@
 
 require_once 'bootstrap/head.php';
 
+
 $streams = $feed->fetch();
 
 foreach( $streams as $stream ) {
 
-	$feed = new SimplePie();
-	$feed->set_feed_url($stream['url']);
-	$feed->force_feed(true);
-	$feed->set_cache_location('./cache');
-	$feed->set_cache_duration(3600);
-    $feed->set_timeout(1);
-	$feed->init();
-	$feed->handle_content_type();
 
-	$feedId = Handy::makeId($feed->get_link());
+		$feed = new SimplePie();
+		$feed->set_feed_url($stream['url']);
+		$feed->set_cache_location('./cache');
+		$feed->set_cache_duration(999999);
+		$feed->set_timeout(1);
+		$feed->force_feed(true);
+		$feed->init();
+		$feed->handle_content_type();
 
-	foreach ($feed->get_items() as $article) {
+		if(!$feed->error()) {
 
-		$articleId 		= Handy::makeId($article->get_link());
-		$articleUrl 	= String::normalizeUrl($article->get_link());
-		$articleTitle 	= String::stripAllTags($article->get_title());
-		$articleDesc 	= String::cut(String::stripAllTags($article->get_description()));
-		$articleContent = String::stripRiskyTags($article->get_content());
-		$articleImg 	= Handy::findImage($article->get_content());
-		$articleCreated = $article->get_gmdate('Y-m-d H:i:s');
-		$articleUpdated = $article->get_updated_gmdate('Y-m-d H:i:s');
+			$feedId = Handy::makeId($feed->get_link());
 
-		if( $articleCreated >= date('Y-m-d H:i:s', strtotime('-3 day')) ) {
+			foreach ($feed->get_items() as $source) {
 
-			$this->article->addOverwrite(array(
-				'id' 			=> $articleId,
-				'feed' 			=> $feedId,
-				'url' 			=> $articleUrl,
-				'title' 		=> $articleTitle,
-				'description' 	=> $articleDesc,
-				'content' 		=> $articleContent,
-				'image' 		=> $articleImg,
-				'stars' 		=> '222',
-				'unread' 		=> '1',
-				'favourite' 	=> '0',
-				'later' 		=> '0',
-				'created' 		=> $articleCreated,
-				'modifed' 		=> $articleUpdated
-			));
+				$sourceId 		= Handy::makeId($source->get_link());
+				$sourceUrl 	= String::normalizeUrl($source->get_link());
+				$sourceTitle 	= String::stripAllTags($source->get_title());
+				$sourceDesc 	= String::cut(String::stripAllTags($source->get_description()));
+				$sourceContent = String::stripRiskyTags($source->get_content());
+				$sourceImg 	= Handy::findImage($source->get_content());
+				$sourceCreated = $source->get_gmdate('Y-m-d H:i:s');
+				$sourceUpdated = $source->get_updated_gmdate('Y-m-d H:i:s');
 
+				$article->addOverwrite(array(
+					'id' 			=> $sourceId,
+					'feed' 			=> $feedId,
+					'url' 			=> $sourceUrl,
+					'title' 		=> $sourceTitle,
+					'description' 	=> $sourceDesc,
+					'content' 		=> $sourceContent,
+					'image' 		=> $sourceImg,
+					'stars' 		=> '222',
+					'unread' 		=> '1',
+					'favourite' 	=> '0',
+					'later' 		=> '0',
+					'created' 		=> $sourceCreated,
+					'modifed' 		=> $sourceUpdated
+				));
+
+			}
+
+		} else {
+			// $stream->update(array(
+			// 	'id' => $stream->id,
+			// 	'status' => 0
+			// ));
 		}
 
-	}
 
 }

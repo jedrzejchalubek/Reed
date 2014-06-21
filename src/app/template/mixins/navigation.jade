@@ -2,7 +2,7 @@ mixin navigation()
 
 	section(ng-controller="Navigation")
 		.navigation.list-group
-			a(ng-click="view.panel = false", href="#discovery").navigation__item.list-group-item
+			a(ng-click="view.panel = false", href="#discover").navigation__item.list-group-item
 				.navigation__icon.iconmonstr.iconmonstr-network
 				span.navigation__title Discover
 			a(ng-click="view.panel = false", href="#later").navigation__item.list-group-item
@@ -18,7 +18,7 @@ mixin navigation()
 				span.navigation__title All
 				span.navigation__badge.badge(ng-show="count('unread') != 0") {{ count('unread') }}
 
-			div.navigation__list(ng-repeat="folder in collection.folders")
+			div.navigation__list(ng-repeat="folder in collection.folders", ng-hide="folder.items.length === 0")
 				{{folder.title}}
 				ul.list-unstyled
 					li.navigation__feed(ng-repeat="feed in folder.items")

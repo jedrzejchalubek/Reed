@@ -31,11 +31,12 @@ class UserFeed extends Controller
 	public function delete($id, $query)
 	{
 
-		$this->userFeed->delete($id[0], $id[1]);
+		$articles = $this->userFeed->delete($id[0], $id[1]);
 
 		Response::updated(array(
 			'status' => 'success',
-			'message' => 'Feed deleted'
+			'message' => 'Feed deleted',
+			'items' => $articles
 		));
 
 	}

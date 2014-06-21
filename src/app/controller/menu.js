@@ -4,18 +4,6 @@ Reed.controller('Menu', function ($scope, $filter, $rootScope, $cookieStore, Api
 		$scope.view.panel = !$scope.view.panel;
 	};
 
-	$scope.markAllAsRead = function () {
-		_.each($scope.view.content, function (el) {
-			angular.extend(el, {
-				unread: '0'
-			});
-		});
-
-		Api.UserArticles.update({
-			'items': $scope.view.content
-		});
-	};
-
 	$scope.count = function (collection, el) {
 
 		switch(collection) {
@@ -27,13 +15,13 @@ Reed.controller('Menu', function ($scope, $filter, $rootScope, $cookieStore, Api
 				break;
 
 			case 'favourites':
-				return Collection.filter(Collection.favourites, {
+				return Collection.filter(Collection.articles, {
 					favourite: '1'
 				}).length;
 				break;
 
 			case 'later':
-				return Collection.filter(Collection.later, {
+				return Collection.filter(Collection.articles, {
 					later: '1'
 				}).length;
 				break;

@@ -172,6 +172,7 @@ $router->map('/users', function(){});
 */
 $router->map('/users/:id', 'User', array(
 	'user' => $user,
+	'token' => $token
 ));
 
 

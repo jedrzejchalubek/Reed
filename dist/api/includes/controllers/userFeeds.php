@@ -39,8 +39,8 @@ class UserFeeds extends Controller
 			$feedUrl 	= String::normalizeUrl($feed->subscribe_url());
 			$feedLink 	= String::normalizeUrl($feed->get_permalink());
 			$feedTitle 	= String::stripAllTags($feed->get_title());
-			$feedDesc 	= String::stripAllTags($feed->get_description());
-			$feedImg 	= $feed->get_image_url();
+			$feedDesc 	=String::cut(String::stripAllTags($feed->get_description()));
+			$feedImg 	= Handy::findIcon(file_get_contents($feed->get_permalink()));
 			$feedItems	= $feed->get_items();
 			$date 		= date('Y-m-d H:i:s');
 
@@ -101,15 +101,13 @@ class UserFeeds extends Controller
 					$this->userArticle->addOverwrite(array(
 						'id' => $id[0],
 						'articleid' => Handy::makeId($article->get_link()),
-						'unread' => 1,
+						'unread' => ($articleCreated >= date('Y-m-d H:i:s', strtotime("$date -7 day"))) ? 1 : 0,
 						'later' => 0,
 						'favourite' => 0,
 						'created' => date('Y-m-d H:i:s')
 					));
 
-					if( $articleCreated >= date('Y-m-d H:i:s', strtotime("$date -7 day")) ) {
-						array_push($articles, $item);
-					}
+					array_push($articles, $item);
 
 				}
 

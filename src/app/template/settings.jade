@@ -12,14 +12,16 @@ include mixins/mixins
 				.thumbs__wrapper.clearfix
 
 					.col-md-12(style="padding: 15px;")
-						h1.content__title {{view.title}}
 						.row
-							.col-xs-3
-								input.form-control(ng-model="newsFolderName", type="text", placeholder="New folder name")
-							.col-xs-2
-								.btn.btn-success(ng-click="addFolder(newsFolderName)")
-									i.fa.fa-plus-circle
-									|  Add
+							.col-xs-6
+								h1 {{view.title}}
+							.col-xs-3.pull-right(style="padding-top: 28px;")
+								.input-group
+									input.form-control(ng-model="newsFolderName", type="text", placeholder="New folder name")
+									.input-group-btn
+										.btn.btn-success(ng-click="addFolder(newsFolderName)")
+											i.fa.fa-plus-circle
+											|  Add
 
 					.settings__panel
 						.col-md-4(ng-repeat="folder in collection.folders")

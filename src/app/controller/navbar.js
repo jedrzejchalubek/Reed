@@ -7,18 +7,23 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 		el.later = '1' - el.later;
 
 		// if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
-		Collection.add(Collection.later, el);
+		Collection.add(Collection.articles, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
 		}, {
-			unread: el.unread.toString(),
+			unread: '0',
 			favourite: el.favourite.toString(),
 			later: el.later.toString()
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.destroy();
+			if(el.later) {
+				Overlay.init(data.status, 'Saved for later');
+			} else {
+				Overlay.init(data.status, 'Removed form later');
+			}
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.init(data.status, data.message);
 		});
 
 	};
@@ -30,18 +35,24 @@ Reed.controller('Navbar', function ($scope, $filter, Api, State, Collection, Ove
 		el.favourite = '1' - el.favourite;
 
 		// if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
-		Collection.add(Collection.favourites, el);
+		Collection.add(Collection.articles, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
 		}, {
-			unread: el.unread.toString(),
+			unread: '0',
 			favourite: el.favourite.toString(),
 			later: el.later.toString()
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.destroy();
+			if(el.favourite) {
+				Overlay.init(data.status, 'Marked as fav');
+			} else {
+				Overlay.init(data.status, 'Unmarked as fav');
+			}
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.destroy();
+			Overlay.init(data.status, data.message);
 		});
 
 	};

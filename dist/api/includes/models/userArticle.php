@@ -32,7 +32,7 @@ class UserArticle extends Model
 	 */
 	public function fetch($id)
 	{
-		return $this->request("SELECT A.*, RJ.unread, RJ.later, RJ.favourite FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = :id UNION SELECT A.*, 1 as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = :id AND A.created >= DATE_ADD(UF.created, INTERVAL 7 DAY) ) RJ ON RJ.id = A.id GROUP BY A.id", array(
+		return $this->request("SELECT A.*, RJ.unread, RJ.later, RJ.favourite FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM {$this->table} UA INNER JOIN article A ON UA.articleid = A.id WHERE UA.id = :id UNION SELECT A.*, IF(A.created >= DATE_ADD(UF.created, INTERVAL 7 DAY), 1, 0) as unread, 0 as later, 0 as favourite FROM userFeed UF INNER JOIN article A ON UF.feedid = A.feed WHERE UF.id = :id ) RJ ON RJ.id = A.id GROUP BY A.id", array(
 				'id' => $id
 			));
 	}

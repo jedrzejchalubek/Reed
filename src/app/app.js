@@ -31,9 +31,9 @@ var Reed = angular.module('Reed', [
 				controller: 'Login',
 				requireLogin: false
 			})
-			.when('/discovery', {
-				templateUrl: 'app/template/discovery.html',
-				controller: 'Discovery',
+			.when('/discover', {
+				templateUrl: 'app/template/discover.html',
+				controller: 'Discover',
 				requireLogin: true,
 			})
 			.when('/all', {
@@ -65,11 +65,16 @@ var Reed = angular.module('Reed', [
 				templateUrl: 'app/template/settings.html',
 				controller: 'Settings',
 				requireLogin: true
+			})
+			.when('/profile', {
+				templateUrl: 'app/template/profile.html',
+				controller: 'Profile',
+				requireLogin: true
 			});
 
 		// If the url is unrecognized go to login
 		$routeProvider.otherwise({
-			redirectTo: '/discovery'
+			redirectTo: '/discover'
 		});
 
 	}])

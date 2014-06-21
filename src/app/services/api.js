@@ -22,6 +22,14 @@ Reed.factory('Api', function ($http, $resource, State) {
 				get: {
 					method: 'GET',
 					isArray: false
+				},
+				update: {
+					method: 'PUT',
+					isArray: false
+				},
+				delete: {
+					method: 'DELETE',
+					isArray: false
 				}
 			}),
 

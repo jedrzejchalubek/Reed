@@ -49,6 +49,8 @@ Reed.controller('Feeds', function ($scope, $routeParams, Api, State, Collection)
 		Collection.feeds.$promise
 	], function () {
 
+		$scope.collection = Collection;
+
 		$scope.view = {
 			is: 'Feeds',
 			title: Collection.filter(Collection.feeds, {

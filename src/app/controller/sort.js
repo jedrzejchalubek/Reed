@@ -1,4 +1,4 @@
-Reed.controller('Sort', function ($scope, $filter, $cookieStore, Api, State, Collection) {
+Reed.controller('Sort', function ($scope, $filter, $cookieStore, Api, State, Collection, Overlay) {
 
 
 	$scope.filterByUnread = function () {
@@ -20,6 +20,21 @@ Reed.controller('Sort', function ($scope, $filter, $cookieStore, Api, State, Col
 			});
 
 		}
+	};
+
+
+	$scope.markAllAsRead = function () {
+		_.each($scope.view.content, function (el) {
+			angular.extend(el, {
+				unread: '0'
+			});
+		});
+
+		Api.UserArticles.update({
+			'items': $scope.view.content
+		}, function (response) {
+			Overlay.init(response.status, 'All articles marked as read');
+		});
 	};
 
 

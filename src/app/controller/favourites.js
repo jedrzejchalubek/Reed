@@ -24,11 +24,15 @@ Reed.controller('Favourites', function ($scope, $filter, Api, State, Collection)
 		Collection.feeds.$promise
 	], function() {
 
+		$scope.collection = Collection;
+
 		$scope.view = {
 			is: 'Favourites',
 			title: 'Favourites',
 			section: 'list',
-			content: Collection.favourites
+			content: Collection.filter(Collection.articles, {
+				favourite: '1'
+			})
 		};
 
 	});

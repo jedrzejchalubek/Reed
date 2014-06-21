@@ -1,4 +1,4 @@
-Reed.controller('Discovery', function ($scope, $filter, Api, State, Collection) {
+Reed.controller('Discover', function ($scope, $filter, Api, State, Collection) {
 
 	$scope.showArticle = function (el) {
 
@@ -27,8 +27,8 @@ Reed.controller('Discovery', function ($scope, $filter, Api, State, Collection) 
 		$scope.collection = Collection;
 
 		$scope.view = {
-			is: 'Discovery',
-			title: 'Discovery',
+			is: 'Discover',
+			title: 'Discover',
 			section: 'list',
 			content: Collection.discovery.articles
 		};

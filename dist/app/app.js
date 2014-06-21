@@ -31,9 +31,9 @@ var Reed = angular.module('Reed', [
 				controller: 'Login',
 				requireLogin: false
 			})
-			.when('/discovery', {
-				templateUrl: 'app/template/discovery.html',
-				controller: 'Discovery',
+			.when('/discover', {
+				templateUrl: 'app/template/discover.html',
+				controller: 'Discover',
 				requireLogin: true,
 			})
 			.when('/all', {
@@ -65,11 +65,16 @@ var Reed = angular.module('Reed', [
 				templateUrl: 'app/template/settings.html',
 				controller: 'Settings',
 				requireLogin: true
+			})
+			.when('/profile', {
+				templateUrl: 'app/template/profile.html',
+				controller: 'Profile',
+				requireLogin: true
 			});
 
 		// If the url is unrecognized go to login
 		$routeProvider.otherwise({
-			redirectTo: '/discovery'
+			redirectTo: '/discover'
 		});
 
 	}])
@@ -241,7 +246,6 @@ var iosOverlay = function(params) {
 			if (settings.spinner) {
 				settings.spinner.el.parentNode.removeChild(settings.spinner.el);
 			}
-			overlayDOM.innerHTML += '<i class="fa fa-' + params.icon + '">';
 		}
 	};
 
@@ -418,7 +422,7 @@ var iosOverlay = function(params) {
 	});
 
 });
-;Reed.controller('Discovery', function ($scope, $filter, Api, State, Collection) {
+;Reed.controller('Discover', function ($scope, $filter, Api, State, Collection) {
 
 	$scope.showArticle = function (el) {
 
@@ -447,8 +451,8 @@ var iosOverlay = function(params) {
 		$scope.collection = Collection;
 
 		$scope.view = {
-			is: 'Discovery',
-			title: 'Discovery',
+			is: 'Discover',
+			title: 'Discover',
 			section: 'list',
 			content: Collection.discovery.articles
 		};
@@ -482,11 +486,15 @@ var iosOverlay = function(params) {
 		Collection.feeds.$promise
 	], function() {
 
+		$scope.collection = Collection;
+
 		$scope.view = {
 			is: 'Favourites',
 			title: 'Favourites',
 			section: 'list',
-			content: Collection.favourites
+			content: Collection.filter(Collection.articles, {
+				favourite: '1'
+			})
 		};
 
 	});
@@ -543,6 +551,8 @@ var iosOverlay = function(params) {
 		Collection.feeds.$promise
 	], function () {
 
+		$scope.collection = Collection;
+
 		$scope.view = {
 			is: 'Feeds',
 			title: Collection.filter(Collection.feeds, {
@@ -583,11 +593,15 @@ var iosOverlay = function(params) {
 		Collection.feeds.$promise
 	], function () {
 
+		$scope.collection = Collection;
+
 		$scope.view = {
 			is: 'Later',
 			title: 'Read later',
 			section: 'list',
-			content: Collection.later
+			content: Collection.filter(Collection.articles, {
+				later: '1'
+			})
 		};
 
 	});
@@ -654,18 +668,6 @@ var iosOverlay = function(params) {
 		$scope.view.panel = !$scope.view.panel;
 	};
 
-	$scope.markAllAsRead = function () {
-		_.each($scope.view.content, function (el) {
-			angular.extend(el, {
-				unread: '0'
-			});
-		});
-
-		Api.UserArticles.update({
-			'items': $scope.view.content
-		});
-	};
-
 	$scope.count = function (collection, el) {
 
 		switch(collection) {
@@ -677,13 +679,13 @@ var iosOverlay = function(params) {
 				break;
 
 			case 'favourites':
-				return Collection.filter(Collection.favourites, {
+				return Collection.filter(Collection.articles, {
 					favourite: '1'
 				}).length;
 				break;
 
 			case 'later':
-				return Collection.filter(Collection.later, {
+				return Collection.filter(Collection.articles, {
 					later: '1'
 				}).length;
 				break;
@@ -723,18 +725,23 @@ var iosOverlay = function(params) {
 		el.later = '1' - el.later;
 
 		// if(Collection.later.indexOf(el) === -1) Collection.later.push(el);
-		Collection.add(Collection.later, el);
+		Collection.add(Collection.articles, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
 		}, {
-			unread: el.unread.toString(),
+			unread: '0',
 			favourite: el.favourite.toString(),
 			later: el.later.toString()
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.destroy();
+			if(el.later) {
+				Overlay.init(data.status, 'Saved for later');
+			} else {
+				Overlay.init(data.status, 'Removed form later');
+			}
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.init(data.status, data.message);
 		});
 
 	};
@@ -746,18 +753,24 @@ var iosOverlay = function(params) {
 		el.favourite = '1' - el.favourite;
 
 		// if(Collection.favourites.indexOf(el) === -1) Collection.favourites.push(el);
-		Collection.add(Collection.favourites, el);
+		Collection.add(Collection.articles, el);
 
 		Api.UserArticle.update({
 			articleid: el.id
 		}, {
-			unread: el.unread.toString(),
+			unread: '0',
 			favourite: el.favourite.toString(),
 			later: el.later.toString()
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.destroy();
+			if(el.favourite) {
+				Overlay.init(data.status, 'Marked as fav');
+			} else {
+				Overlay.init(data.status, 'Unmarked as fav');
+			}
 		}, function (data) {
-			Overlay.update(data.status, data.message);
+			Overlay.destroy();
+			Overlay.init(data.status, data.message);
 		});
 
 	};
@@ -801,14 +814,65 @@ var iosOverlay = function(params) {
 });
 
 
-;Reed.controller('Settings', function ($scope, $filter, Api, State, Collection) {
+;Reed.controller('Profile', function ($scope, $cookieStore, $location, $timeout, Api, State, Collection, Overlay) {
+
+	$scope.logout = function () {
+		$cookieStore.remove('reed_authtoken');
+		$cookieStore.remove('reed_userid');
+		$location.path('/').replace();
+	};
+
+	$scope.removeProfile = function () {
+		Api.User.delete({}, function () {
+			Overlay.init('success', 'Account removed');
+			$timeout(function () {
+				$scope.logout();
+				$location.path('/').replace();
+			}, 500);
+		});
+	};
+
+	Collection.ready([
+		Collection.articles.$promise,
+		Collection.feeds.$promise
+	], function () {
+
+		$scope.collection = Collection;
+
+		$scope.view = {
+			is: 'Profile',
+			title: 'Profile',
+			section: 'list',
+			content: Collection.user
+		};
+
+	});
+
+});
+;Reed.controller('Settings', function ($scope, $filter, Api, State, Collection, Overlay) {
 
 	$scope.addFolder = function (name) {
 
-		Collection.add(Collection.folders, {
-			'title': name,
-			'items': []
-		});
+		if(name) {
+
+			var folder = false;
+
+			_.each(Collection.folders, function (el) {
+				if(el.title === name) folder = true;
+			});
+
+			if(!folder) {
+				Collection.add(Collection.folders, {
+					'title': name,
+					'items': []
+				});
+			} else {
+				Overlay.init('error', 'Folder exsist');
+			}
+
+		} else {
+			Overlay.init('error', 'Folder name empty')
+		}
 
 	};
 
@@ -830,10 +894,20 @@ var iosOverlay = function(params) {
 
 	$scope.deleteFeed = function (index, feed, items) {
 
-		items.splice(index, 1);
-
 		Api.UserFeed.delete({
+
 			feedid: feed.id
+
+		}, function (response) {
+
+			_.each(response.items, function (el) {
+				Collection.articles = Collection.remove(Collection.articles, el);
+			});
+
+			items.splice(index, 1);
+
+			Overlay.init(response.status, response.message);
+
 		});
 
 	};
@@ -850,13 +924,13 @@ var iosOverlay = function(params) {
 			is: 'Settings',
 			title: 'Organise feeds',
 			section: 'list',
-			content: Collection.user
+			// content: Collection.user
 		};
 
 	});
 
 });
-;Reed.controller('Sort', function ($scope, $filter, $cookieStore, Api, State, Collection) {
+;Reed.controller('Sort', function ($scope, $filter, $cookieStore, Api, State, Collection, Overlay) {
 
 
 	$scope.filterByUnread = function () {
@@ -878,6 +952,21 @@ var iosOverlay = function(params) {
 			});
 
 		}
+	};
+
+
+	$scope.markAllAsRead = function () {
+		_.each($scope.view.content, function (el) {
+			angular.extend(el, {
+				unread: '0'
+			});
+		});
+
+		Api.UserArticles.update({
+			'items': $scope.view.content
+		}, function (response) {
+			Overlay.init(response.status, 'All articles marked as read');
+		});
 	};
 
 
@@ -1930,6 +2019,14 @@ mod.directive('infiniteScroll', [
 				get: {
 					method: 'GET',
 					isArray: false
+				},
+				update: {
+					method: 'PUT',
+					isArray: false
+				},
+				delete: {
+					method: 'DELETE',
+					isArray: false
 				}
 			}),
 
@@ -2079,11 +2176,7 @@ mod.directive('infiniteScroll', [
 	 */
 	this.add = function (collection, el) {
 
-		var exist = this.filter(collection, {
-			id: el.id
-		});
-
-		if(collection.indexOf(el) === -1 && exist.length === 0) {
+		if(collection.indexOf(el) === -1) {
 			collection.push(el);
 			return collection = this.orderBy(collection, '-created');
 		}
@@ -2092,9 +2185,11 @@ mod.directive('infiniteScroll', [
 
 
 	this.remove = function (collection, item) {
+
 		return _.reject(collection, function(el){
 			return el.id === item.id;
 		});
+
 	};
 
 
@@ -2187,7 +2282,6 @@ mod.directive('infiniteScroll', [
 					$cookieStore.remove('reed_authtoken');
 					$cookieStore.remove('reed_userid');
 					$location.path('/').replace();
-					$window.location.reload();
 
 					return $q.reject(rejection);
 				}
@@ -2210,6 +2304,19 @@ mod.directive('infiniteScroll', [
 		'error': 'times',
 		'400': 'times',
 		'busy': 'spinner fa-spin'
+	};
+
+
+	/**
+	 * Update displayed overlay
+	 * @param  {String} status Response status
+	 * @param  {String} text   Response message
+	 * @return {Object}
+	 */
+	this.destroy = function (status, text) {
+
+		this.overlay.destroy();
+
 	};
 
 

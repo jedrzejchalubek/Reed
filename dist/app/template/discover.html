@@ -4,9 +4,7 @@
     <section ng-controller="Menu">
       <nav id="menu" class="menu">
         <div class="menu__wrapper">
-          <div ng-show="view.section == 'list'">
-            <div class="menu__logotype"><img ng-src="app/images/logotype.jpg"/></div>
-          </div>
+          <div ng-show="view.section == 'list'"><a href="#discover" class="menu__logotype"><img ng-src="app/images/logotype.jpg"/></a></div>
           <div ng-show="view.section == 'single'">
             <back-to-list></back-to-list><span class="menu__single hidden-xs">
               {{ collection.filter(collection.feeds, { id: view.single.feed })[0].title }}
@@ -20,14 +18,14 @@
         </div>
       </nav><a ng-click="toggleSidebar()" class="menu__collapse"><i class="fa fa-bars"></i><span ng-show="count('unread') != 0" class="menu__collapse-badge badge">{{ count('unread') }}</span></a>
       <div id="side" ng-show="view.panel" class="side side-animation">
-        <section class="list"><a href="#settings" class="list__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="list__profile-img"/><span class="list__profile-name">Hello, {{collection.user.name}}!</span></a>
+        <section class="list"><a href="#profile" class="list__profile"><i class="fa fa-gear"></i><span class="list__profile-name">Hello, {{collection.user.name}}!</span></a>
           <section ng-controller="Navigation">
-            <div class="navigation list-group"><a ng-click="view.panel = false" href="#discovery" class="navigation__item list-group-item">
+            <div class="navigation list-group"><a ng-click="view.panel = false" href="#discover" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-network"></div><span class="navigation__title">Discover</span></a><a ng-click="view.panel = false" href="#later" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-time"></div><span class="navigation__title">Read later</span><span ng-show="count('later') != 0" class="navigation__badge badge">{{ count('later') }}</span></a><a ng-click="view.panel = false" href="#favourites" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-bookmark"></div><span class="navigation__title">Favourites</span><span ng-show="count('favourites') != 0" class="navigation__badge badge">{{ count('favourites') }}</span></a><a ng-click="view.panel = false" href="#all" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-menu"></div><span class="navigation__title">All</span><span ng-show="count('unread') != 0" class="navigation__badge badge">{{ count('unread') }}</span></a>
-              <div ng-repeat="folder in collection.folders" class="navigation__list">{{folder.title}}
+              <div ng-repeat="folder in collection.folders" ng-hide="folder.items.length === 0" class="navigation__list">{{folder.title}}
                 <ul class="list-unstyled">
                   <li ng-repeat="feed in folder.items" class="navigation__feed"><a href="#feeds/{{feed.id}}"><span class="pull-left">{{feed.title}}</span><span ng-show="count('feeds', feed) != 0" class="navigation__feed-badge badge pull-right">{{ count('feeds', feed) }}</span></a></li>
                 </ul>
@@ -62,7 +60,7 @@
                 </div>
                 <section>
                   <article ng-repeat="item in view.content | filter: discovery.search | limitTo: 24" id="{{item.id}}" class="thumbs__item thumb-animation col-sm-6 col-md-4 col-lg-3">
-                    <div ng-class="{isRead:(item.unread==0 &amp;&amp; (view.is === 'All' || view.is == 'Feeds')) || (item.favourite==0 &amp;&amp; view.is === 'Favourites') || (item.later==0 &amp;&amp; view.is === 'Later')}" class="thumbs__content"><a ng-click="showArticle(item)">
+                    <div ng-class="{isRead: item.unread==0 }" class="thumbs__content"><a ng-click="showArticle(item)">
                         <div style="background-image: url({{item.image}});" class="thumbs__img">
                           <p class="thumbs__source">
                             {{ collection.filter(collection.feeds, { id: item.feed })[0].title }}
@@ -75,7 +73,7 @@
                         </div></a>
                       <div ng-controller="Navbar" class="thumbs__nav"><a ng-click="markAsFav(item)" class="pull-right">
                           <div ng-class="{isFav: item.favourite == 1}" class="thumbs__fav"><span class="fa fa-heart"></span></div></a><a ng-click="saveForLater(item)" class="pull-right">
-                          <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a><a ng-show="view.is === 'All' || view.is == 'Feeds'" ng-click="unread(item)" class="pull-left">
+                          <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a><a ng-hide="view.is === 'Discover'" ng-click="unread(item)" class="pull-left">
                           <div ng-class="{isRead: item.unread==0}" class="thumbs__status"></div><span ng-show="item.unread == '0'">Keep unread</span><span ng-show="item.unread == '1'">Mark as read</span></a></div>
                     </div>
                   </article>

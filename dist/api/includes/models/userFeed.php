@@ -46,10 +46,24 @@ class UserFeed extends Model
 	public function delete($userid, $feedid)
 	{
 
-		$this->request("DELETE FROM {$this->table} WHERE id = :id AND feedid = :feedid", array(
-			'id' => $userid,
+		$articles = $this->db->request("SELECT * FROM article A RIGHT JOIN (SELECT A.*, UA.unread, UA.later, UA.favourite FROM userArticle UA INNER JOIN article A ON UA.articleid = A.id AND A.feed = :feedid WHERE UA.id = :userid) LA ON LA.id = A.id GROUP BY A.id", array(
+				'userid' => $userid,
+				'feedid' => $feedid
+			));
+
+		foreach ($articles as $article) {
+			$this->request("DELETE FROM userArticle WHERE id = :userid AND articleid = :articleid", array(
+				'userid' => $userid,
+				'articleid' => $article['id']
+			), false);
+		}
+
+		$this->request("DELETE FROM {$this->table} WHERE id = :userid AND feedid = :feedid", array(
+			'userid' => $userid,
 			'feedid' => $feedid
 		), false);
+
+		 return $articles;
 
 	}
 

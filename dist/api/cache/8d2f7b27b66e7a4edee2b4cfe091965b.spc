@@ -16,7 +16,803 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
   
   
   
-";s:7:"attribs";a:1:{s:36:"http://www.w3.org/XML/1998/namespace";a:1:{s:4:"lang";s:5:"en-US";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:38:"tag:tutorials.tutsplus.com,2005:/posts";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:2:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:29:"http://tutorials.tutsplus.com";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}i:1;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:40:"http://tutorials.tutsplus.com/posts.atom";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:9:"Tuts+ All";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:20:"2014-06-20T15:00:00Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"entry";a:12:{i:0;a:6:{s:4:"data";s:38:"
+";s:7:"attribs";a:1:{s:36:"http://www.w3.org/XML/1998/namespace";a:1:{s:4:"lang";s:5:"en-US";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:5:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:38:"tag:tutorials.tutsplus.com,2005:/posts";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:2:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:29:"http://tutorials.tutsplus.com";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}i:1;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:40:"http://tutorials.tutsplus.com/posts.atom";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:9:"Tuts+ All";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:20:"2014-06-20T19:59:21Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"entry";a:12:{i:0;a:6:{s:4:"data";s:38:"
+    
+    
+    
+    
+    
+    
+    
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21478";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:68:"http://code.tutsplus.com/tutorials/google-chrome-hegemony--cms-21478";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:23:"Google Chrome Hegemony
+";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:16231:"<p><a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> is one of the biggest players in the Web today. It's fast, reliable, packed full of features, and is&nbsp;extremely helpful, especially if you are a web developer. &nbsp;Chrome also&nbsp;allows the installation of third party extensions. We build these extensions&nbsp;with pure HTML, CSS and JavaScript.&nbsp;The team at Google does a wonderful job.&nbsp;In this article, we will see several handy tools, in Chrome, that help with our development processes.</p>
+<h2>Developing Responsive Web Applications</h2>
+<p>Nowadays responsiveness is everywhere. With the rise of mobile devices, we have to make our applications run on many different resolutions. The latest versions of Chrome contain wonderful instruments to make our work easier. Let's start by defining a simple page and continuing by making it responsive. Here is the HTML markup:</p>
+<pre class="brush: html">&lt;body&gt;
+    &lt;h1&gt;Responsive Web Design&lt;/h1&gt;
+    &lt;ul class="nav"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Concept&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Examples&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Frameworks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;section class="concept"&gt;
+        &lt;p&gt;Responsive web design (RWD) is a web design approach ...
+    &lt;/section&gt;
+    &lt;section class="elements"&gt;            
+        &lt;/p&gt;The fluid grid concept calls for page element sizing to be in relative units ...
+    &lt;/section&gt;
+&lt;/body&gt;
+</pre>
+<p>There is some basic styling on the page. The CSS rules, float the navigation's links and makes the two sections positioned next to each other. The result looks like this:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21478/image/rwd_01.jpg"></figure>
+<p>Now, having the HTML and the basic CSS in place, we can start experimenting. Let's place our media queries' breakpoints. It's important to choose them based on the content and where that content starts looking bad. Setting resolutions like 1024x768, just because it is popular, is not a good practice.</p><h3>Setting the Viewport</h3>
+<p>Our content breaks and we want to see the exact size of the viewport. So we have to resize the browser's window. Under Chrome, we are able to open the <b>developer tools panel</b> and increase its size in there.</p>
+<p>Notice that while we are changing the viewport's size, we see its size in the <b>upper right corner</b>. This little tooltip eliminates the need of a manual size check. In our case, both sections below the navigation became too squashed, around 500px. So, that's the place for our first media query:</p>
+<pre class="brush: css">section {
+    float: left;
+    width: 50%;
+}
+@media all and (max-width: 550px) {
+    section {
+        float: none;
+        width: 100%;
+    }
+}
+</pre>
+<p>If we go a little bit below 550px, we will see that the navigation causes a horizontal scroll around 540px. A new media query definition solves that problem.</p>
+<pre class="brush: css">.nav {
+    list-style: none;
+    margin: 10px auto;
+    padding: 0;
+    width: 510px;
+}
+.nav li {
+    float: left;
+    margin: 0 20px 0 0;
+}
+@media all and (max-width: 540px) {
+    .nav {
+        width: auto;
+    }
+    .nav li {
+        float: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+</pre>
+<p>The result is a web page that works on a wide range of screens. Yes, our page is a simple one and has only two breakpoints, but the process of choosing them will be the same, even if we have a giant website.&nbsp;</p><h3>Device Simulation</h3>
+<p>Often we receive bug reports that our application is not working properly on some specific device. Chrome can simulate various devices, to help solve this problem. It sets the exact screen resolution and defines the right HTTP headers. So, we are able to get a close view of what the real user sees. The JavaScript browser detection will work too because the browser modifies the request headers.</p>
+<p>Let's say that we need to simulate an iPhone5 device. There is a small button that opens the <b>drawer</b> panel and then there is an <b>Emulation</b> tab.</p>
+<p>We choose the device and Chrome applies all the settings in <b>Screen</b>, <b>User agent</b> and <b>Sensors</b> sections. The browser even emulates touch events.</p><h3>Making Modifications With the&nbsp;Elements Panel</h3>
+<p>Our page is now responsive, but at some point we have to make modifications. Again, we are able to use Chrome as a tool and see what styles are applied to the document. For example, the text in the first section is too big. We want to change that and set a new color.</p>
+<p>The <b>Elements</b> panel is also helpful if we need to see specific CSS rule, but we don't know where the definition of that rule is. There is a section on the right side,&nbsp;that shows the computed styles applied to the currently selected element and then we can modify it.</p><h3>Developers Tools Panel</h3>
+<p>And then lastly, sometimes we need to&nbsp;search for certain CSS styles, but it is difficult to find them because there are a lot of definitions. In the <b>developers tools</b> panel, we have a nice filter field. Let's say that we want to access the rules for our <code>&lt;section&gt;</code> tag that has the&nbsp;<code>concept</code> class applied, here's how we could do that:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21478/image/rwd_06.gif"></figure>
+<h2>Debugging JavaScript</h2>
+<p>Google Chrome is a universal tool. It has instruments for supporting designers like we did in the last section of this tutorial. But it can do the same for the developers, as we will see now.&nbsp;</p><h3>Integrated JS Debugging</h3><p>There is a nice JavaScript debugger, integrated within Chrome. There's also a&nbsp;wonderful console and source viewer. To illustrate how everything works, we will add a little logic to our example. We want to change the label <b>Examples</b> in the main menu to <b>Awesome examples</b> when we <b>click</b> on the link. We will use jQuery as a helper, so we can focus on the example better:</p>
+<pre class="brush: javascript">$('.nav').on('click', function(e) {
+    var clicked = e.currentTarget;
+    if(clicked.innerHTML === 'Examples') {
+        clicked.innerHTML = 'Awesome examples';
+    } else {
+        console.log('do nothing ...');
+    }
+});
+</pre>
+<p>You probably already know the problem, but let's see how the above code works.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21478/image/jsdebugging_01.gif"></figure>
+<p>No matter what we <b>click</b> we get <code>do nothing ...</code> in the console. So, it looks like our <code>if</code> clause is always false. Let's set a breakpoint to see what's going on.</p>
+<p>The debugger stops at our breakpoint and shows us the local defined variables. The variable&nbsp;<code>clicked</code>, points to the navigation element and not to the <code>&lt;a&gt;</code>&nbsp;element. So, its <code>innerHTML</code> property is definitely not <code>Examples</code>. That's why we got <code>do nothing ...</code> every time. To fix the bug, we could simply use <code>.nav a</code> instead of just <code>.nav</code>.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21478/image/jsdebugging_03.gif"></figure>
+<p>Above is the traditional approach that works if we know where exactly to set the breakpoint. But if we work with a large code base and especially if we have to debug the concatenated file, it gets a little bit problematic. We start placing <code>console.log</code> here and there and check the console. It will work, but soon we will have a lot of data, it will be difficult to filter the data and find the needed information. Chrome has a solution for that problem too. We could style the output in the console by adding <code>%c</code> in front of the text, passed to the <code>.log</code> method. After that, attach a second parameter containing our styles. For example:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21478/image/jsdebugging_04.gif"></figure>
+<p>There is something else that we could add. The <code>console</code> object has two, not so popular methods - <code>group</code> and <code>groupEnd</code>. They give us the ability to group our logs.&nbsp;</p><h3>Using Deb.js</h3>
+<p>There is also&nbsp;a library that combines both the&nbsp;styling and grouping of the output, Deb.js.&nbsp;The only thing that we have to do, is to include it in our page before the other scripts and attach <code>.deb()</code> at the end of the function that we want to inspect. There is also <code>.debc()</code> version that sends collapsed groups to the console.<br></p>
+<p>With this library, we can&nbsp;get the arguments passed to the function, its stack trace return value and execution time. As we mentioned above, the messages are nicely grouped and nested into each other, so it is much easier to follow the application's flow.</p>
+<h2>Terminal in the Browser</h2>
+<p>One of the killer features of Google's browser, is the extension's ecosystem. There's a way for us to write installable programs that run in the browser and there are dozens of <a href="https://developer.chrome.com/extensions/api_index">helpful APIs</a> that we can use. The most important thing though, is that&nbsp;we don't have to learn a new language. The technologies that we'll&nbsp;use,&nbsp;are the usual HTML, CSS and JavaScript. Checkout the following&nbsp;<a href="http://code.tutsplus.com/tutorials/developing-google-chrome-extensions--net-33076" target="_self">introduction to Chrome's extension development</a>. </p><h3>Yez!</h3>
+<p>There's even a separate section in the Chrome's web store called <a href="https://chrome.google.com/webstore/category/ext/11-web-development"><em>Web development</em></a>. It contains useful instruments made specifically for us - developers. There is one called <a href="https://chrome.google.com/webstore/detail/yez/acbhddemkmodoahhmnphpcfmcfgpjmap">Yez!</a>. It brings terminal like functionalities into the Developer Tools panel. We are able to execute shell commands and get their output in real time.</p>
+<p>The extension itself is not enough to perform shell commands. That's because we don't have access to the operating system. That's why there is a Node.js module that acts as a proxy. Yez!&nbsp;connects to the running Node.js app via web sockets. We could install the module via the Node.js package manager using&nbsp;<code>npm install -g yez</code>.&nbsp;</p>
+<h3>Yez! Git Integration</h3><p>Yez! also&nbsp;has nice Git integration and it shows us the branch in the current directory. We are able to execute terminal commands and get their output immediately. </p>
+<p>The extension was originally developed as a task runner. So it has an interface for task definitions. In fact, that's just a series of shell commands run after each other. We are achieving the same results by creating shell scripts.</p>
+<p>We can also&nbsp;see the terminal's output in real time. So the extension is suitable for developing Node.js applications. &nbsp;Normally we have to&nbsp;restart the Node.js process, but now, everything is visible inside Chrome.</p>
+<h2>Performing HTTP Requests</h2>
+<p>As web developers, it often happens that we have to perform HTTP request to our applications. Maybe we developed a&nbsp;REST API, or we have a&nbsp;PHP script that accepts POST parameters. There is a command line tool available called <a href="http://code.tutsplus.com/tutorials/techniques-for-mastering-curl--net-8470">cURL</a>. It's probably the most widely used instrument for querying the web.</p><p>With cURL,&nbsp;we don't have to jump to the terminal. There is <a href="https://chrome.google.com/webstore/detail/dhc-rest-http-api-client/aejoelaoggembcahagimdiliamlcdmfm">DHC (REST HTTP API Client)</a> available. It's an extension that gives us full control of the HTTP request. We could change the request method, the headers, or the&nbsp;GET and POST parameters. It also displays the result of the request, with its headers. A very useful instrument.</p>
+<h2>Testing With Chrome's Web Driver</h2>
+<p>We all know the importance of&nbsp;<a href="http://code.tutsplus.com/tutorials/the-newbies-guide-to-test-driven-development--net-13835">testing</a>. It is extremely important for us to know that our programs behave properly. Sometimes, the writing of tests can be challenging. Especially if we need to test the user interface. Thankfully, there is a Node.js module that controls our browser (Chrome) and triggers actions like visiting a page, clicking on a link or filling in a form. It's called <a href="http://dalekjs.com/">DalekJS</a>. It's easily installable by running:</p>
+<pre class="brush: bash">npm install -g dalek-cli
+</pre>
+<p>Let's make a short experiment and see how everything works. In a newly created directory, we need a <code>package.json</code> file with the following content:</p>
+<pre class="brush: javascript">{
+  "name": "project",
+  "description": "description",
+  "version": "0.0.1",
+  "devDependencies": {
+    "dalekjs": "0.0.8",
+    "dalek-browser-chrome": "0.0.10"
+  }
+}
+</pre>
+<p>After running <code>npm install</code> in the same directory, we will get <code>dalekjs</code> and <code>dalek-browser-chrome</code> installed  into a&nbsp;<code>node_modules</code> folder. We will place our test inside a file called <code>test.js</code>. Let's save it in the same folder. Here is a short script that tests the search functionality of GitHub:</p>
+<pre class="brush: javascript">var url = 'https://github.com/';
+module.exports = {
+    'should perform search in GitHub': function (test) {
+        test
+        .open(url)
+        .type('#js-command-bar-field', 'dalek')
+        .submit('#top_search_form')
+        .assert.text('.repolist h3 a', 'dalekjs/dalek', 'There is a link with label dalekjs')
+        .click('[href="/dalekjs/dalek"]')
+        .assert.text('.repository-description p', 'DalekJS Base framework', 'It is the right repository')
+        .done()
+    }
+};
+</pre>
+<p>To run the test, we have to fire <code>dalek ./test.js -b chrome</code> in our console. The result is that DalekJS launches an instance of the Google Chrome browser. It then&nbsp;opens GitHub's site, at which point you can&nbsp;type&nbsp;<code>dalek</code> in the search field and it goes to the correct repository. In the end, Node.js simply closes the opened window. The output in the console looks like this:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/45/posts/21478/image/dalekjs.jpg"></figure>
+<p>DalekJS supports PhantomJS, Firefox, InternetExplorer and Safari. It's a useful tool, and it works on Windows, Linux and Mac. The documentation is available at the official page <a href="http://dalekjs.com/">dalekjs.com</a></p>
+<h2>Summary</h2>
+<p>When we are in front of our computer, we spend most of that time in the browser. It's good to know that Google Chrome is not only a&nbsp;program for browsing the Web, but it's also a&nbsp;powerful instrument for web development.&nbsp;</p><p>Now, there are tons of useful extensions and a constantly growing community, so I urge you to try Google Chrome, if you aren't already using it for your next web app.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21478/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21478/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21478/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21478/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T19:59:21.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T19:59:21.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+      
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:15:"Krasimir Tsonev";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:1;a:6:{s:4:"data";s:38:"
+    
+    
+    
+    
+    
+    
+    
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21345";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:127:"http://gamedevelopment.tutsplus.com/tutorials/using-the-html5-gamepad-api-to-add-controller-support-to-browser-games--cms-21345";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:70:"Using the HTML5 Gamepad API to Add Controller Support to Browser Games";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:23317:"<p>As web-based gaming gets more popular, one of the biggest sticking points for players is input control. While my first FPS games were purely mouse- and&nbsp;keyboard-based, I've now got so much more used to a proper console controller that I'd rather use it for everything, including web-based games.&nbsp;</p><p>Luckily, the <a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html" target="_self">HTML5 Gamepad&nbsp;API</a>&nbsp;exists to allow web developers programmatic access to game controllers. Unluckily, although this API has been around for a long time, it&nbsp;is only now, slowly, moving into the most recent versions of desktop browsers. It languished for a long time in one build of Firefox (not one build higher, no—one <i>nightly</i> build) and was problematic in Chrome. Now it is—well—not perfect, but slightly less problematic and actually pretty easy to use.&nbsp;</p><p>In this article, I'll discuss the various features of the API, how to get it working in both Firefox and Chrome, and show a real (if simple) game and how easy it is to add gamepad support to it.<br></p><h2>The Basics</h2><p>The Gamepad API comprises the following features:</p><ul><li>The ability to listen for <code class="inline">connect</code> and <code class="inline">disconnect</code> events.</li><li>The ability to recognize multiple gamepads. (In theory, you could plug in as many gamepads as you have USB ports.)</li><li>The ability to inspect these gamepads and recognize how many axes they have (joysticks), how many buttons they have (have you played a modern game console lately?), and what state each of these individual items are in.</li></ul><p>Let's begin by discussing how you can detect support for a gamepad at a high level.&nbsp;</p><p>Both Firefox and Chrome support a method on <code class="inline">navigator</code>, <code class="inline">getGamepads()</code>, that returns an array of all connected gamepad devices. We can use this as a simple method of detecting whether the Gamepad API is present. Here is a simple function for that&nbsp;check:</p><pre class="brush: javascript">function canGame() {
+    return "getGamepads" in navigator;
+}</pre><p>So far so good. Now for the funky part. The Gamepad API has support for events that detect when a gamepad is connected and disconnected. But what happens if the user already has a gamepad connected to their laptop when they hit your page? Normally, the web page will wait for the user to do something, anything really, with the actual gamepad. This means we have to provide some type of message to the user that lets them know that they need to "wake up" support for the gamepad if it is connected. You could tell them to hit any button or move a stick.&nbsp;</p><p>To make things even more interesting, this particular check does not seem to be required when you reload the page. You'll find that once you've used the Gamepad API on a page and then reloaded it, the page recognizes this fact and automatically considers it connected.</p><p>But wait—it gets better. Chrome doesn't support the connected (or disconnected) events at this time. The typical work around for this (and the one demonstrated in the good <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Gamepad" target="_self">MDN docs</a> for the API) is to set up a poll and see whether a gamepad "shows up" in the list of connected devices.</p><p>Confusing? Let's start off with an example supporting Firefox only:</p><pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta name="description" content=""&gt;
+		&lt;meta name="viewport" content="width=device-width"&gt;
+		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+	&lt;body&gt;
+
+	&lt;div id="gamepadPrompt"&gt;&lt;/div&gt;
+
+	&lt;script&gt;
+	function canGame() {
+		return "getGamepads" in navigator;
+	}
+
+	$(document).ready(function() {
+
+		if(canGame()) {
+
+			var prompt = "To begin using your gamepad, connect it and press any button!";
+			$("#gamepadPrompt").text(prompt);
+
+			$(window).on("gamepadconnected", function() {
+				$("#gamepadPrompt").html("Gamepad connected!");
+				console.log("connection event");
+			});
+
+			$(window).on("gamepaddisconnected", function() {
+				console.log("disconnection event");
+				$("#gamepadPrompt").text(prompt);
+			});
+
+		}
+
+	});
+	&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre><p>In the example above, we begin by checking to see whether the browser supports the Gamepad API. If it does, we first update a div with instructions for the user, and then begin listening immediately to both the <code class="inline">connect</code> and <code class="inline">disconnect</code> events.&nbsp;</p><p>If you <a href="http://tutsplus.github.io/Using-the-HTML5-Gamepad-API/test1.html" target="_self">run this with Firefox</a> and connect your gamepad, you should then have to also hit a button, at which point the event is fired and you're ready to go.&nbsp;</p><p>Again, though, in my testing, when I reload the page, the&nbsp;<code class="inline">connection</code> event is immediate. This does create a slight "flicker" effect that may be undeseriable. You could actually use an interval to set the directions for something like 250ms after the DOM has loaded and only prompt if a connection didn't occur in the meantime. I decided to keep things simple for this tutorial.</p><p>Our code works for Firefox, but now let's add Chrome support:</p><pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta name="description" content=""&gt;
+		&lt;meta name="viewport" content="width=device-width"&gt;
+		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+	&lt;body&gt;
+
+	&lt;div id="gamepadPrompt"&gt;&lt;/div&gt;
+
+	&lt;script&gt;
+	var hasGP = false;
+
+	function canGame() {
+		return "getGamepads" in navigator;
+	}
+
+	$(document).ready(function() {
+
+		if(canGame()) {
+
+			var prompt = "To begin using your gamepad, connect it and press any button!";
+			$("#gamepadPrompt").text(prompt);
+
+			$(window).on("gamepadconnected", function() {
+				hasGP = true;
+				$("#gamepadPrompt").html("Gamepad connected!");
+				console.log("connection event");
+			});
+
+			$(window).on("gamepaddisconnected", function() {
+				console.log("disconnection event");
+				$("#gamepadPrompt").text(prompt);
+			});
+
+			//setup an interval for Chrome
+			var checkGP = window.setInterval(function() {
+				if(navigator.getGamepads()[0]) {
+					if(!hasGP) $(window).trigger("gamepadconnected");
+					window.clearInterval(checkGP);
+				}
+			}, 500);
+		}
+
+	});
+	&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre><p>The code is&nbsp;a bit more complex now, but not terribly so. <a href="http://tutsplus.github.io/Using-the-HTML5-Gamepad-API/test2.html" target="_self">Load the demo in Chrome</a> and see what happens.</p><p>Note that we've got a new global variable, <code class="inline">hasGP</code>, that we'll use as a general flag for having a gamepad connected. As before, we have two event listeners, but now we've got a new interval set up to check to see whether a gamepad exists. This is the first time you've seen <code class="inline">getGamepads</code> in action, and we'll describe it a bit more in the next section, but for now know that it just returns an array, and if the first item exists, we can use that as a way of knowing that a gamepad is connected.&nbsp;</p><p>We use jQuery to fire off the same event Firefox would have received, and then clear the interval. Notice that this same interval will fire once in Firefox as well, which is slightly wasteful, but honestly I thought it was a waste of time adding in additional support to sniff Chrome versus Firefox. One small call like this wasted in Firefox should not matter at all.</p><p>Now that we've got a connected gamepad, let's work with it!</p><h2>The Gamepad Object</h2><p>To give you an idea of just how old I am - here is the state of the art joystick I used for my first gaming system.<br></p><p><br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/360/posts/21345/image/Atari-2600-Joystick copy.jpg"><figcaption>Image from <a href="http://en.wikipedia.org/wiki/Atari_2600#mediaviewer/File:Atari-2600-Joystick.jpg" target="_self">Wikimedia Commons</a>.</figcaption></figure><p>Nice - simple - and it hurt like hell after an hour of playing. Modern consoles have much more complex gamepads. Consider the PS4 controller:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/360/posts/21345/image/DualShock_4 copy.jpg"><figcaption>Image from <a href="http://en.wikipedia.org/wiki/DualShock#mediaviewer/File:DualShock_4.jpg" target="_self">Wikimedia Commons</a>.</figcaption></figure><p>This controller has two sticks, a directional pad, four main buttons, four more on the back, a <b>Share</b> and <b>Options</b> button, a <b>PS</b> button, some funky touch control thing, a speaker, and a light. It also probably has a flux capaciter and a kitchen sink.&nbsp;</p><p>Luckily, we've got access to this beast via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad" target="_self">Gamepad object</a>. Properties include:<br></p><ul><li><code class="inline">id</code>: This is the name of the controller. Don't expect something friendly from this. My DualShock 4 was reported as <code class="inline">54c-5c4-Wireless Controller</code> in Firefox, whereas Chrome called the same controller <code class="inline">Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 05c4)</code>.</li><li><code class="inline">index</code>: Since the Gamepad API supports multiple controllers, this one lets you determine which numbered controller it is. It could be used to identify player one, two, and so on.</li><li><code class="inline">mapping</code>: Mapping isn't something we're going to cover here, but essentially this is something the browser can do to help map your particular controller to a "standard" controller setup. If you've played multiple consoles you know they have some similarities in terms of control, and the API tries to "mash" your controller into a standard. You don't have to worry about this for now, but if you want more details, check the <a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping" target="_self">mapping</a> section of the API docs.</li><li><code class="inline">connected</code>: A Boolean indicating whether the controller is still connected.</li><li><code class="inline">buttons</code>: An array of button values. Each button is an instance of <a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#gamepadbutton-interface" target="_self">GamepadButton</a>. Note that the <code class="inline">GamepadButton</code> object supports both a simple Boolean property (<code class="inline">pressed</code>) as well as a <code class="inline">value</code> property for analog buttons.</li><li><code class="inline">axes</code>: An array of values representing the different sticks on the gamepad. Given a gamepad with three&nbsp;sticks, you will have an array of six items, where each stick is represented by two&nbsp;array values. The first in the pair represents X, or left/right movement, while the second represents Y, up/down movement. In all cases the value will range from <code class="inline">-1</code> to <code class="inline">1</code>: for left/right values, <code class="inline">-1</code> is left and <code class="inline">1</code> is right; for up/down values, <code class="inline">-1</code> is up and <code class="inline">1</code> is down. According to the API, the array is sorted according to "importance", so in theory, you can focus on <code class="inline">axes[0]</code> and <code class="inline">axes[1]</code> for most gaming needs. To make things more interesting, using my DualShock 4, Firefox reported three axes (which makes sense—see the picture above), but Chrome reported two. It seems as if the d-pad stick is reported in Firefox as an axis, but no data seems to come out of it. In Chrome, the d-pad showed up as additional buttons, and was correctly read.</li><li><code class="inline">timestamp</code>: Finally, this value is a timestamp representing the last time the hardware was checked. In theory, this is probably not something you would use.</li></ul><p>Okay, so that's lot to digest. In the example below, we've simply added a interval to get, and inspect, the first gamepad, and&nbsp;print out the ID and then the buttons and axes:</p><pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+		&lt;meta charset="utf-8"&gt;
+		&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+		&lt;title&gt;&lt;/title&gt;
+		&lt;meta name="description" content=""&gt;
+		&lt;meta name="viewport" content="width=device-width"&gt;
+		&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+	&lt;body&gt;
+
+	&lt;div id="gamepadPrompt"&gt;&lt;/div&gt;
+	&lt;div id="gamepadDisplay"&gt;&lt;/div&gt;
+
+	&lt;script&gt;
+	var hasGP = false;
+	var repGP;
+
+	function canGame() {
+		return "getGamepads" in navigator;
+	}
+
+	function reportOnGamepad() {
+		var gp = navigator.getGamepads()[0];
+		var html = "";
+			html += "id: "+gp.id+"&lt;br/&gt;";
+
+		for(var i=0;i&lt;gp.buttons.length;i++) {
+			html+= "Button "+(i+1)+": ";
+			if(gp.buttons[i].pressed) html+= " pressed";
+			html+= "&lt;br/&gt;";
+		}
+
+		for(var i=0;i&lt;gp.axes.length; i+=2) {
+			html+= "Stick "+(Math.ceil(i/2)+1)+": "+gp.axes[i]+","+gp.axes[i+1]+"&lt;br/&gt;";
+		}
+
+		$("#gamepadDisplay").html(html);
+	}
+
+	$(document).ready(function() {
+
+		if(canGame()) {
+
+			var prompt = "To begin using your gamepad, connect it and press any button!";
+			$("#gamepadPrompt").text(prompt);
+
+			$(window).on("gamepadconnected", function() {
+				hasGP = true;
+				$("#gamepadPrompt").html("Gamepad connected!");
+				console.log("connection event");
+				repGP = window.setInterval(reportOnGamepad,100);
+			});
+
+			$(window).on("gamepaddisconnected", function() {
+				console.log("disconnection event");
+				$("#gamepadPrompt").text(prompt);
+				window.clearInterval(repGP);
+			});
+
+			//setup an interval for Chrome
+			var checkGP = window.setInterval(function() {
+				console.log('checkGP');
+				if(navigator.getGamepads()[0]) {
+					if(!hasGP) $(window).trigger("gamepadconnected");
+					window.clearInterval(checkGP);
+				}
+			}, 500);
+		}
+
+	});
+	&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre><p>You can <a href="http://tutsplus.github.io/Using-the-HTML5-Gamepad-API/test3.html" target="_self">try the demo in either Chrome or Firefox</a>.</p><p>I assume this is all pretty self explanatory; the only real difficult part was handling the axes. I loop over the array and count by twos to represent both the left/right, up/down values at once. If you open this up in Firefox and connect a DualShock, you may see something like this.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/360/posts/21345/image/ff1.png"></figure><p>As you can see, Button 2 was pressed when I took my screenshot. (In case you're curious, that was the <b>X</b> button.) Note the sticks; my gamepad was sitting on my laptop and those values were constantly fluctuating. Not in a way that would imply the values were <i>bad</i>, per se—if I picked up the game pad and pushed all the way in one direction, I saw the right value. But I believe what I was seeing was just how sensitive the controller is to the environment. Or maybe gremlins.</p><p>Here is an example of how Chrome displays it:</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/360/posts/21345/image/chrome1.png"></figure><p>I was, again, holding the <b>X</b> button—but notice how the button index is different here. As you can tell, you're going to need to do a bit of... massaging if you want to use this API for a game. I'd imagine you could check both Buttons 1 and 2 for "fire" and follow up with a good deal of testing.<br></p><h2>Putting It All Together<br></h2><p>So, how about a real demo? Like most coders who started their life playing video games, I dreamed of being a hotshot video game creator when I grew up. It turns out that math gets real hard after calculus, and apparently this "web" stuff has a future, so while that future didn't pan out for me, I'd still like to imagine that one day I could turn these web standards skills into a playable game. Until that day, what I've got today is a pretty lame canvas-based version of pong. Single-player pong. As I said, lame.</p><p>The game simply renders a paddle and&nbsp;a ball, and gives you keyboard control over the ball. Every time you miss the ball, the score goes up. Which makes sense for golf rather than pong, I suppose, but let's not worry too much about it. The code can be found in <a href="https://github.com/tutsplus/Using-the-HTML5-Gamepad-API/blob/master/game1.html" target="_self">game1.html</a> and you can <a href="http://tutsplus.github.io/Using-the-HTML5-Gamepad-API/game1.html" target="_self">play the demo in your browser</a>.&nbsp;</p><p>I won't go through all the code here,&nbsp;but let's look at a few snippets. First, here is the main loop function which handles all animation details:</p><pre class="brush: javascript">function loop() {
+    draw.clear();
+	ball.move();
+	ball.draw();
+	paddle.draw();
+	paddle.move();
+	draw.text("Score: "+score, 10, 20, 20);
+}</pre><p>The paddle is driven by the keyboard using two simple event handlers:</p><pre class="brush: javascript">$(window).keydown(function(e) {
+   switch (e.keyCode) {
+    	case 37: input.left = true; break;                            
+		case 39: input.right = true; break;                            
+   } 
+});
+
+$(window).keyup(function(e) {
+   switch (e.keyCode) {
+		case 37: input.left = false; break;                            
+		case 39: input.right = false; break;                            
+   } 
+});
+</pre><p>The <code class="inline">input</code> variable is a global variable that is picked up by a paddle object <code class="inline">move</code> method:</p><pre class="brush: javascript">this.move = function() {
+    if(input.left) {
+		this.x -= this.speed;
+		if(this.x &lt; 0) this.x=0;
+	}
+	if(input.right) {
+		this.x += this.speed;
+		if((this.x+this.w) &gt; canvas.width) this.x=canvas.width-this.w;
+	}
+}
+</pre><p>Again, nothing too complex here. Here is a screenshot of the game in action. (I know—I shouldn't quit my day job.)</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/360/posts/21345/image/game1opt.jpg"></figure><p>So, how do we add gamepad support? Luckily, we've got the code done for us already. In the previous demo, we did everything required to check for and notice updates to the code. We can take that code and simply append it to the game's existing code.&nbsp;</p><p>Since it is (virtually) the same, I won't repeat it (though <a href="https://github.com/tutsplus/Using-the-HTML5-Gamepad-API/blob/master/game2.html" target="_self">the full listing is available</a> if you want it), but I will share the modified code run every 100ms once a gamepad is detected:</p><pre class="brush: javascript">function checkGamepad() {
+    var gp = navigator.getGamepads()[0];
+	var axeLF = gp.axes[0];
+	if(axeLF &lt; -0.5) {
+		input.left = true;
+		input.right = false;
+	} else if(axeLF &gt; 0.5) {
+		input.left = false;
+		input.right = true;
+	} else {
+		input.left = false;
+		input.right = false;
+	}
+}
+</pre><p>Again, you can <a href="http://tutsplus.github.io/Using-the-HTML5-Gamepad-API/game2.html" target="_self">try the demo in either browser</a>.</p><p>As with the previous example, we've assumed that we only care about one gamepad. Since our game only has a paddle and it only moves horizontally, we can get by by only&nbsp;checking the very first axis. Remember, according to the API this should be the "most important" one, and in my testing it was the left stick, which is pretty standard for games.&nbsp;</p><p>Since our game uses a global variable, <code class="inline">input</code>, to represent left and right movement, all I have to do is modify that value based on the axis value. Now, notice that I didn't simply check for&nbsp;"less than zero" and "greater than zero". Why? If you remember from <a href="http://tutsplus.github.io/Using-the-HTML5-Gamepad-API/test3.html" target="_self">the earlier demo</a>, the gamepad was very sensitive, and would often report values even when I didn't think I had actually moved the stick. Using a boundary value of&nbsp;<code class="inline">.5</code> gives the control a bit more stability. (And obviously this is the type of thing you would need to tweak to see what "feels" right.)&nbsp;</p><p>All in all, I added roughly 25 lines of code to my game to add gamepad support. That rocks.</p><h2>Game On!</h2><p>Hopefully you've seen that, while there are definitely some idiosyncrasies, the Gamepad API now has support in two major browsers, and it's something I think developers really should start considering for their games.<br></p><h2>Resources</h2><p>Here's a few additional resources to help you learn more about the Gamepad API.</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/Gamepad" target="_self">Using the Gamepad API</a></li><li><a href="https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html" target="_self">Gamepad Specification</a></li><li><a href="http://www.gamepadjs.com" target="_self">Gamepad.js</a> - A Javascript library to enable using gamepads and joysticks in the browser.</li><li><a href="http://blog.teamtreehouse.com/gamepad-controls-html5-games" target="_self">Gamepad Controls for HTML5 Games</a></li><li><a href="http://www.nintendo.com/wiiu/built-in-software/browser-specs/extended-functionality/" target="_self">Wii U's Version</a> (totally different from the specification - good job, Nintendo!)</li></ul><h2>References</h2><ul><li>Preview image credit: <a href="http://www.thenounproject.com/term/video-game-controller/17035/" target="_self">Video Game Controller</a> designed by <a href="http://www.thenounproject.com/usosa" target="_self">Uriel Sosa</a> from <a href="http://www.thenounproject.com/" target="_self">the Noun Project</a></li></ul><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21345/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21345/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21345/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21345/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T18:00:13.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T18:00:13.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+      
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:14:"Raymond Camden";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:2;a:6:{s:4:"data";s:38:"
+    
+    
+    
+    
+    
+    
+    
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-20943";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:92:"http://code.tutsplus.com/tutorials/animated-components-with-uikit-dynamics-part-2--cms-20943";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:47:"Animated Components with UIKit Dynamics: Part 2";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:26475:"<h2>Introduction</h2>
+
+<p>In the <a href="https://code.tutsplus.com/tutorials/animated-components-with-uikit-dynamics-part-1--cms-20942" target="_self">first tutorial</a> of this short series on UIKit Dynamics, we learnt the basics of the API by creating an animated menu component. In this tutorial, we'll continue working on our project and implement another animated component, a custom alert view.</p>
+
+<h2><span class="sectionnum">1.</span>&nbsp;Overview</h2>
+
+<p>The default alert view on iOS is great, but it's not very customizable in terms of appearance and behavior. If you need an alert view that is customizable, then you need to create your own solution and that's what we'll do in this tutorial. The focus of this tutorial is on the behavior of the alert view and not so much on its functionality. Let's see what the result is that we're after</p>
+
+<p>The alert view will be a&nbsp;<code class="inline">UIView</code> instance to which we'll add the following subviews:</p>
+
+<ul>
+<li>a&nbsp;<code class="inline">UILabel</code> object for displaying the alert view's title</li>
+<li>a&nbsp;<code class="inline">UILabel</code> object for displaying the alert view's message</li>
+<li>one or more <code class="inline">UIButton</code> instances for letting the user interact with the alert view</li>
+</ul>
+
+<p>We'll use the <code class="inline">UISnapBehavior</code>&nbsp;class to present the alert view. As its name indicates, this&nbsp;<code class="inline">UIDynamicBehavior</code>&nbsp;subclass forces a dynamic item to snap to a point as if it were magnetically drawn to it.</p><p>The <code class="inline">UISnapBehavior</code> class defines one additional property, <code class="inline">damping</code>, that defines the amount of oscillation when the dynamic item has reached the point to which it is attracted.</p><p>We'll use a gravity behavior, in combination with a collision and push behavior, to dismiss the alert view. Remember that we already used these behaviors in the <a href="https://code.tutsplus.com/tutorials/animated-components-with-uikit-dynamics-part-1--cms-20942" target="_self">previous tutorial</a>.</p>
+
+
+
+
+
+
+
+
+
+<p>The alert view will animate in from the top of the screen. When the alert view is about to appear, the snap behavior will make it drop into view and snap to the center of the screen. To dismiss the alert view, a push behavior will briefly push it to the bottom of the screen and a gravity behavior will then pull it to the top of the screen and make it animate off-screen.</p>
+
+<p>We'll create a custom initialization method for the alert view component that accepts the alert's title, message, button titles, and its parent view. We won't be implementing a delegate protocol for the alert view. Instead, we'll make use of blocks, which makes for a more elegant and modern solution. The block or handler will accept two parameters, the index and the title of the button the user tapped.</p><p>We'll also display a semi-transparent view behind the alert view to prevent the user from interacting with its parent view as long as the alert view is visible. Let's start by taking a look at the alert view's properties and the custom initializer.</p>
+
+<h2><span class="sectionnum">2.</span> Properties and Initialization</h2>
+
+<h3>Step 1: Creating the Alert View Class</h3>
+
+<p>Press <b>Command-N</b>&nbsp;on your keyboard to create a new file and select <strong>Objective-C class </strong>from the list of <b>iOS</b> templates. Make it a subclass of&nbsp;<strong>NSObject</strong> and name it <strong>AlertComponent</strong>.</p>
+
+<h3>Step 2: Declaring Properties</h3>
+
+<p>The next step is to declare a few private properties. Open <b>AlertComponent.m</b>, add a class extension at the top, and declare the following properties:</p>
+
+<pre class="brush: objc">@interface AlertComponent ()
+
+@property (nonatomic, strong) UIView *alertView;
+@property (nonatomic, strong) UIView *backgroundView;
+@property (nonatomic, strong) UIView *targetView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *messageLabel;
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSArray *buttonTitles;
+@property (nonatomic) CGRect initialAlertViewFrame;
+
+@end</pre>
+
+<p>The function of each property will become clear as we implement the alert component. It's time to create the component's custom initializer.</p>
+
+<h3>Step 3: Initialization</h3>
+
+<p>As I already mentioned, we're going to use a custom initializer to make working with the alert component as easy as possible. The initializer accepts four parameters, alert's title, its message, the button titles, and the view to which the alert component will be added, its parent view. Open&nbsp;<b>AlertComponent.h</b>&nbsp;and add the following declaration:</p>
+
+<pre class="brush: objc">@interface AlertComponent : NSObject
+
+- (id)initAlertWithTitle:(NSString *)title andMessage:(NSString *)message andButtonTitles:(NSArray *)buttonTitles andTargetView:(UIView *)targetView;
+
+@end</pre>
+
+<h2><span class="sectionnum">3.</span>&nbsp;Setting Up the Alert View</h2>
+
+<h3>Step 1: Declaring Setup Methods</h3>
+
+<p>In this part the alert view is going to be set up, and all its subviews will be added to it. Also, the background view, as well as the dynamic animator will be set up too.</p>
+
+<p>Open <b>AlertComponent.m</b>&nbsp;and declare the following private methods in the private class extension:</p>
+
+<pre class="brush: objc">@interface AlertComponent()
+
+...
+
+- (void)setupBackgroundView;
+- (void)setupAlertView;
+
+@end</pre>
+
+<p>The method names are self-explanatory. Let's start by implementing the <code>setupAlertView</code> method first since most of the alert's setup takes place in this method.</p>
+
+<h3>Step 2: Setting Up the Alert View</h3>
+
+<p>In <code class="inline">setupAlertView</code>, we do three things:</p>
+
+<ul>
+<li>initialize and configure the alert view</li>
+<li>initialize and configure the alert view's labels</li>
+<li>initialize and configure the alert view's buttons</li>
+</ul>
+
+<p>Let's start by calculating the alert view's size and position as shown in the code snippet below.</p>
+
+<pre class="brush: objc">- (void)setupAlertView {
+    // Set the size of the alert view.
+    CGSize alertViewSize = CGSizeMake(250.0, 130.0 + 50.0 * self.buttonTitles.count);
+    
+    // Set the initial origin point depending on the direction of the alert view.
+    CGPoint initialOriginPoint = CGPointMake(self.targetView.center.x, self.targetView.frame.origin.y - alertViewSize.height);
+}</pre>
+
+<p>We start by setting the alert view's size. To make the alert view dynamic, we add <code class="inline">50.0</code> points to its height for every button. Also note that the initial origin of the alert view is off-screen. The next step is initializing and setting up&nbsp;the alert view:</p>
+
+<pre class="brush: objc">self.alertView = [[UIView alloc] initWithFrame:CGRectMake(initialOriginPoint.x, initialOriginPoint.y, alertViewSize.width, alertViewSize.height)];
+
+// Background color.
+[self.alertView setBackgroundColor:[UIColor colorWithRed:0.94 green:0.94 blue:0.94 alpha:1.0]];
+
+// Make the alert view with rounded corners.
+[self.alertView.layer setCornerRadius:10.0];
+
+// Set a border to the alert view.
+[self.alertView.layer setBorderWidth:1.0];
+[self.alertView.layer setBorderColor:[UIColor blackColor].CGColor];
+
+    // Assign the initial alert view frame to the respective property.
+    self.initialAlertViewFrame = self.alertView.frame;
+</pre>
+
+<p>Using <code class="inline">alertViewSize</code> and&nbsp;<code class="inline">initialOriginPoint</code>, we initialize the <code class="inline">alertView</code> object and set its background color. We round the alert view's corners by setting its <code class="inline">layer</code>'s <code class="inline">cornerRadius</code>&nbsp;to <code class="inline">10.0</code>, its&nbsp;<code>borderWidth</code>&nbsp;to <code class="inline">1.0</code>, and its&nbsp;<code>borderColor</code>&nbsp;to black. We also store the alert view's initial frame in its <code>initialAlertViewFrame</code> property as we'll be needing it later.</p>
+
+
+
+
+
+
+
+
+
+<p>If Xcode tells you it doesn't know about the <code class="inline">alertView</code>'s <code class="inline">layer</code> property, then add the following import statement at the top of the implementation file:</p>
+
+<pre class="brush: objc">#import &lt;QuartzCore/QuartzCore.h&gt;
+</pre>
+
+<p>It's time to add the labels. Let's start with the title label.</p>
+
+<pre class="brush: objc">// Setup the title label.
+self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 10.0, self.alertView.frame.size.width, 40.0)];
+[self.titleLabel setText:self.title];
+[self.titleLabel setTextAlignment:NSTextAlignmentCenter];
+[self.titleLabel setFont:[UIFont fontWithName:@"Avenir-Heavy" size:14.0]];
+
+// Add the title label to the alert view.
+[self.alertView addSubview:self.titleLabel];</pre>
+
+<p>Setting up the message label is pretty similar.</p>
+
+<pre class="brush: objc">// Setup the message label.
+self.messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, self.titleLabel.frame.origin.y + self.titleLabel.frame.size.height, self.alertView.frame.size.width, 80.0)];
+[self.messageLabel setText:self.message];
+[self.messageLabel setTextAlignment:NSTextAlignmentCenter];
+[self.messageLabel setFont:[UIFont fontWithName:@"Avenir" size:14.0]];
+[self.messageLabel setNumberOfLines:3];
+[self.messageLabel setLineBreakMode:NSLineBreakByWordWrapping];
+
+// Add the message label to the alert view.
+[self.alertView addSubview:self.messageLabel];</pre>
+
+<p>Note that the <code class="inline">numberOfLines</code> property is set to <code class="inline">3</code> and <code class="inline">lineBreakMode</code> is set to&nbsp;<code class="inline">NSLineBreakByWordWrapping</code>.</p>
+
+
+
+
+
+
+
+
+
+<p>The last thing we need to set up are the alert view's buttons. Even though the number of buttons can vary, setting up and positioning the buttons is pretty simple. We separate the buttons by <code class="inline">5</code> points and use a <code class="inline">for</code> loop to initialize them.</p>
+
+<pre class="brush: objc">CGFloat lastSubviewBottomY = self.messageLabel.frame.origin.y + self.messageLabel.frame.size.height;
+
+for (int i=0; i&lt;[self.buttonTitles count]; i++) {
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10.0, lastSubviewBottomY + 5.0, self.alertView.frame.size.width - 20.0, 40.0)];
+    [button setTitle:[self.buttonTitles objectAtIndex:i] forState:UIControlStateNormal];
+    [button.titleLabel setFont:[UIFont fontWithName:@"Avenir" size:13.0]];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor yellowColor] forState:UIControlStateHighlighted];
+    [button setBackgroundColor:[UIColor colorWithRed:0.0 green:0.47 blue:0.39 alpha:1.0]];
+    [button addTarget:self action:@selector(handleButtonTap:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTag:i + 1];
+    
+    [self.alertView addSubview:button];
+    
+    lastSubviewBottomY = button.frame.origin.y + button.frame.size.height;
+}</pre>
+
+<p>Note that each button invokes the&nbsp;<code>handleButtonTap:</code>&nbsp;method when it's tapped. We can determine which button the user tapped by inspecting the button's <code class="inline">tag</code> property.</p>
+
+<p>Finally, add the alert view to the target or parent view by adding the following line at the bottom of the setupAlertView method:</p>
+
+<pre class="brush: objc">// Add the alert view to the parent view.
+[self.targetView addSubview:self.alertView];</pre>
+
+<h3>Step 3: Setting Up the Background View</h3>
+
+<p>The second method we need to implement is <code>setupBackgroundView</code>. The background view will prevent the user from interacting with the alert view's parent view as long as the alert view is shown. We initially set its <code class="inline">alpha</code>&nbsp;property to <code class="inline">0.0</code>, which means it's transparent.</p>
+
+<pre class="brush: objc">- (void)setupBackgroundView {
+    self.backgroundView = [[UIView alloc] initWithFrame:self.targetView.frame];
+    [self.backgroundView setBackgroundColor:[UIColor grayColor]];
+    [self.backgroundView setAlpha:0.0];
+    [self.targetView addSubview:self.backgroundView];
+}</pre>
+
+<h3>Step 4: Implementing the Initializer</h3>
+
+<p>With&nbsp;<code class="inline">setupAlertView</code> and&nbsp;<code class="inline">setupBackgroundView</code>&nbsp;ready to use, let's implement the custom initializer we declared earlier.</p>
+
+
+
+
+
+
+
+
+
+<pre class="brush: objc">- (id)initAlertWithTitle:(NSString *)title andMessage:(NSString *)message andButtonTitles:(NSArray *)buttonTitles andTargetView:(UIView *)targetView {
+    if (self = [super init]) {
+        // Assign the parameter values to local properties.
+        self.title = title;
+        self.message = message;
+        self.targetView = targetView;
+        self.buttonTitles = buttonTitles;
+        
+        // Setup the background view.
+        [self setupBackgroundView];
+        
+        // Setup the alert view.
+        [self setupAlertView];
+        
+        // Setup the animator.
+        self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.targetView];
+    }
+    
+    return self;
+}</pre>
+
+<p>We set the <code class="inline">title</code>, <code class="inline">message</code>, <code class="inline">targetView</code>, and <code class="inline">buttonTitles</code> properties, invoke <code class="inline">setupBackgroundView</code> and <code class="inline">setupAlertView</code>, and initialize the dynamic animator, passing in <code class="inline">self.targetView</code> as its reference view.</p>
+
+<h2><span class="sectionnum">4.</span> Showing the Alert View</h2>
+
+<p>To show the alert view after it's been initialized, we need to declare and implement a public method that can be called by, for example, the view controller hosting the alert view. Open&nbsp;<b>AlertComponent.h</b>&nbsp;and add the following method declaration:</p>
+
+<pre class="brush: objc">- (void)showAlertView;</pre>
+
+<p>Head back to <b>AlertComponent.m</b> to implement <code class="inline">showAlertView</code>. As I mentioned earlier in this tutorial, we'll be using a new&nbsp;<code class="inline">UIDynamicBehavior</code> subclass to show the alert view,&nbsp;<code class="inline">UISnapBehavior</code>. Let's see how we use this class in <code class="inline">showAlertView</code>.</p>
+
+<pre class="brush: objc">- (void)showAlertView {
+    [self.animator removeAllBehaviors];
+    
+    UISnapBehavior *snapBehavior = [[UISnapBehavior alloc] initWithItem:self.alertView snapToPoint:self.targetView.center];
+    snapBehavior.damping = 0.8;
+    [self.animator addBehavior:snapBehavior];
+    
+    
+    [UIView animateWithDuration:0.75 animations:^{
+        [self.backgroundView setAlpha:0.5];
+    }];
+}</pre>
+
+<p>We start by removing any existing dynamic behaviors from the dynamic animator to ensure that no conflicts pop up. Remember that some dynamic behaviors can only be added once to the dynamic animator, such as a gravity behavior. Also, we'll add other dynamic behaviors to dismiss the alert view.</p><p>As you can see, using a snap behavior isn't difficult. We specify which dynamic item the behavior should be applied to and set the point to which the dynamic item should snap. We also set the behavior's <code class="inline">damping</code> property as we discussed earlier. Also note that we animate the <code class="inline">alpha</code> property of the background view.</p>
+
+<p>To test the alert view, we need to make some changes to the <code class="inline">ViewController</code> class. Let's start by adding&nbsp;a <code class="inline">UIButton</code>&nbsp;instance to the view controller's view to show the alert view. Open&nbsp;<b>Main.storyboard</b>&nbsp;and drag a <code class="inline">UIButton</code> instance from the <strong>Object Library</strong>&nbsp;to the view controller's view. Position the button near the bottom of the view and give it a title of <b>Show Alert View</b>.&nbsp;Add an action to <b>ViewController.h</b>&nbsp;as shown below.</p>
+
+<pre class="brush: objc">@interface ViewController : UIViewController
+
+- (IBAction)showAlertView:(id)sender;
+
+@end</pre>
+
+<p>Head back to the storyboard and connect the view controller's action to the button. Open <b>ViewController.m</b>&nbsp;and import the header file of the <code class="inline">AlertComponent</code> class.</p>
+
+<pre class="brush: objc">#import "AlertComponent.h"</pre>
+
+<p>Next, declare a property in the private class extension of type <code>AlertComponent</code> and name it <code class="inline">alertComponent</code>.</p>
+
+<pre class="brush: objc">@interface ViewController ()
+
+@property (nonatomic, strong) MenuComponent *menuComponent;
+@property (nonatomic, strong) AlertComponent *alertComponent;
+
+- (void)showMenu:(UIGestureRecognizer *)gestureRecognizer;
+
+@end</pre>
+
+<p>We then initialize the alert component in the view controller's <code>viewDidLoad</code> method.</p>
+
+<pre class="brush: objc">- (void)viewDidLoad {
+    ...
+    
+    // Initialize Alert Component
+    self.alertComponent = [[AlertComponent alloc] initAlertWithTitle:@"Custom Alert"
+                                                          andMessage:@"You have a new e-mail message, but I don't know from whom."
+                                                     andButtonTitles:@[@"Show me", @"I don't care", @"For me, really?"]
+                                                       andTargetView:self.view];
+}</pre>
+
+<p>To show the alert component, invoke <code>showAlertView:</code>&nbsp;in the action we just created, <code class="inline">showAlertView:</code>.</p>
+
+<pre class="brush: objc">- (IBAction)showAlertView:(id)sender {
+    [self.alertComponent showAlertView];
+}</pre>
+
+<p>Run your application and tap the button to show the alert view. The result should look similar to the one below.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/205/posts/20943/image/t10_9_alert_show.gif"></figure>
+
+<h2><span class="sectionnum">5.</span> Hiding the Alert View</h2>
+
+<p>As we saw earlier, the <code>handleButtonTap:</code> method is invoked when the user taps a button of the alert view. The alert view should hide when one of the buttons is tapped. Let's see how this works.<br></p>
+
+<p>Revisit&nbsp;<b>AlertComponent.m</b>&nbsp;and, in the private class extension, declare the <code class="inline">handleButtonTap:</code> method.</p>
+
+<pre class="brush: objc">@interface AlertComponent()
+
+...
+
+- (void)handleButtonTap:(UIButton *)sender;
+
+@end</pre>
+
+<p>In this method, we create a number of dynamic behaviors and add them to the dynamic animator object. The dynamic behaviors we need are:</p>
+
+<ul>
+<li>a gravity behavior that pulls&nbsp;the alert view towards the top of the screen</li><li>a collision behavior with an off-screen boundary that stops the alert view</li><li>a push behavior that gives the alert view little nudge towards the bottom of the screen</li>
+</ul>
+
+<p>After removing the existing behaviors from the dynamic animator and initialize the push behavior as shown below.</p>
+
+<pre class="brush: objc">- (void)handleButtonTap:(UIButton *)sender {
+    // Remove all behaviors from animator.
+    [self.animator removeAllBehaviors];
+    
+    UIPushBehavior *pushBehavior = [[UIPushBehavior alloc] initWithItems:@[self.alertView] mode:UIPushBehaviorModeInstantaneous];
+    [pushBehavior setAngle:M_PI_2 magnitude:20.0];
+    [self.animator addBehavior:pushBehavior];
+}</pre>
+
+<p>The <code>angle</code> property of the push behavior defines the direction of the push. By setting the angle to <code class="inline">M_PI_2</code>, the force of the push behavior is directed towards the bottom of the screen.</p>
+
+<p>The next step is adding the gravity behavior. The vector we pass to <code class="inline">setGravityDirection</code>&nbsp;will result in a force towards the top of the screen, pulling the alert view upwards.</p>
+
+<pre class="brush: objc">UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.alertView]];
+[gravityBehavior setGravityDirection:CGVectorMake(0.0, -1.0)];
+[self.animator addBehavior:gravityBehavior];</pre>
+
+<p>What's interesting about the collision behavior is that we define a boundary that is off-screen.<br></p>
+
+<pre class="brush: objc">UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.alertView]];
+[collisionBehavior addBoundaryWithIdentifier:@"alertCollisionBoundary"
+                                   fromPoint:CGPointMake(self.initialAlertViewFrame.origin.x, self.initialAlertViewFrame.origin.y - 10.0)
+                                     toPoint:CGPointMake(self.initialAlertViewFrame.origin.x + self.initialAlertViewFrame.size.width, self.initialAlertViewFrame.origin.y - 10.0)];
+
+[self.animator addBehavior:collisionBehavior];</pre>
+
+<p>We also need a dynamic item behavior for setting the elasticity of the collision. The result is that the alert view will bounce a little when it collides with the off-screen boundary.</p>
+
+<pre class="brush: objc">UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[self.alertView]];
+itemBehavior.elasticity = 0.4;
+[self.animator addBehavior:itemBehavior];</pre>
+
+<p>We also need to make the background view transparent again. We do this by setting the background view's <code class="inline">alpha</code> property to <code class="inline">0.0</code> in an animation block.</p>
+
+<pre class="brush: objc">[UIView animateWithDuration:2.0 animations:^{
+    [self.backgroundView setAlpha:0.0];
+}];</pre>
+
+<p>Run your application once more to see the result.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/205/posts/20943/image/t10_10_alert_show_hide.gif"></figure>
+
+<h2><span class="sectionnum">6.</span> Handling User Interaction</h2>
+
+<p>Even though the alert view responds to user interaction, we currently don't know which button the user has tapped. That's what we'll focus on in this section.<br></p>
+
+<p>As we did with the menu component, we're going to make use of blocks to solve this problem. Blocks make for an elegant solution and can often be easier to use than a delegate protocol.</p><p>We start by updating the public&nbsp;<code>showAlertView</code>&nbsp;method. The method needs to accept a completion handler that the alert view invokes when the user has tapped one of the buttons. In&nbsp;<b>AlertComponent.h</b>, update the declaration of the <code class="inline">showAlertView</code> method from:</p>
+
+<pre class="brush: objc">- (void)showAlertView;</pre>
+
+<p>to:</p>
+
+<pre class="brush: objc">- (void)showAlertViewWithSelectionHandler:(void(^)(NSInteger buttonIndex, NSString *buttonTitle))handler;</pre>
+
+<p>The completion handler accepts two parameters, the index, of type <code class="inline">NSInteger</code>, and the title, of type <code class="inline">NSString</code>, of the button that was tapped by the user. If we want to invoke the completion handler when the user taps a button of the alert view, we need to keep a reference to the completion handler. This means we need to declare a property for the completion handler. We do this in the private class extension in&nbsp;<b>AlertComponent.m</b>.</p>
+<pre class="brush: objc">@interface AlertComponent ()
+
+...
+
+@property (nonatomic, strong) void(^selectionHandler)(NSInteger, NSString *);
+
+...
+
+@end</pre>
+<p>Still in <b>AlertComponent.m</b>, update the method description like we did in the header file a moment ago and store the completion handler in the&nbsp;<code class="inline">selectionHandler</code>&nbsp;property, which just we declared.</p>
+
+<pre class="brush: objc">- (void)showAlertViewWithSelectionHandler:(void (^)(NSInteger, NSString *))handler {
+    self.selectionHandler = handler;
+    
+    ...
+}</pre>
+
+<p>The last piece of the puzzle is invoking the completion handler in <code class="inline">handleButtonTap:</code>, passing in the button's tag and title.</p>
+
+<pre class="brush: objc">- (void)handleButtonTap:(UIButton *)sender {
+    // Call the selection handler.
+    self.selectionHandler(sender.tag, sender.titleLabel.text);
+    
+    ...
+}</pre>
+
+<p>The AlertComponent is complete. It's time to test everything. Head back to&nbsp;<b>ViewController.m</b>&nbsp;and update the showAlertView: action as shown below. As you can see, we invoke the new <code class="inline">showAlertViewWithSelectionHandler:</code> method and pass in a block, which will be called when a button in the alert view is tapped by the user.</p>
+
+<pre class="brush: objc">- (IBAction)showAlertView:(id)sender {
+    [self.alertComponent showAlertViewWithSelectionHandler:^(NSInteger buttonIndex, NSString *buttonTitle) {
+        NSLog(@"%ld, %@", (long)buttonIndex, buttonTitle);
+    }];
+}
+</pre>
+
+<p>That's it. Run your application once more and inspect Xcode's console to see the result of our work.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/41/posts/20943/image/console.jpg"></figure>
+
+<h2>Conclusion</h2>
+
+<p>UIKit Dynamics was first introduced in iOS 7 and can help you create realistic animations quickly. This short series has illustrated that leveraging UIKit Dynamics in your projects isn't difficult and you don't need to be an expert in math or physics.</p><p>Note that UIKit Dynamics is primarily meant for using in view based applications. If you're looking for a similar solution for games, then I recommend taking a look at Apple's <a href="https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html" target="_self">Sprite Kit</a>, which is aimed at game development.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20943/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20943/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20943/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20943/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T16:35:50.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T16:35:50.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+      
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:22:"Gabriel Theodoropoulos";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:3;a:6:{s:4:"data";s:38:"
     
     
     
@@ -29,7 +825,7 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
 
 <br></p><p>No matter how you create your patch file, you should name it after the ticket number it is intended for. If it is the second patch uploaded to the ticket append .2 to the end of the number, or .3 if it is the third and so forth. For example, the fifth patch for ticket #12358 would be called #12358.5</p><h2>Uploading a Patch to Trac</h2><p>Now that your patch is ready to go, you need to upload it to the ticket in core trac. On any existing ticket, under the description is an "Attach File" button that you can use to upload your patch. On the next screen be sure to add a description of what the patch does.</p><h2>Be Patient and Be Understanding</h2><p>WordPress is a massive project, so it is unreasonable to expect a response to your patch immediately. Also, understand that the standards for a patch being committed to WordPress have to be very high in order to best serve all of its users.</p><p>Once you've submitted your patch be patient and be understanding of any feedback you receive. The lead developers are very approachable, if you have questions about your patch or why it was not improved, feel free to ask one of them in the #wordpress-dev IRC channel.</p><p>While waiting for a responses and having to make changes can be frustrating, it's worth it when your patch is committed to WordPress and the changeset description acknowledges you.&nbsp;</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20658/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20658/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20658/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20658/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T15:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T15:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Josh Pollock";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:1;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Josh Pollock";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:4;a:6:{s:4:"data";s:38:"
     
     
     
@@ -37,9 +833,9 @@ a:4:{s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"feed";a:1:{i:
     
     
     
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21475";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:82:"http://code.tutsplus.com/articles/envatos-most-wanted-ecommerce-plugins--cms-21475";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:40:"Envato's Most Wanted:  eCommerce Plugins";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:4593:"<p>Earlier this month, we ran <a href="http://code.tutsplus.com/articles/envatos-most-wanted-directory-listing-themes--cms-21407" rel="external" target="_blank">our first post promoting</a> <i>Envato's Most Wanted</i>. Recall that these are opportunities for which users, developers, and designers are offered significant rewards for delivering high-quality work assuming that it meets the criteria for the contest.</p><p>Today, we're offering up the same thing, except rather working with&nbsp;<i>Directing &amp; Listing Themes,&nbsp;</i>we're looking specifically at eCommerce Plugins (which is great considering we've been branching out - and will be continuing to branch out - into this material in current and future articles).</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/34/posts/21475/image/envato-most-wanted-ecommerce.png"></figure><p>Yup - <b>$9,000</b> offered up for work with PrestaShop, WooCommerce, and OpenCart? Pretty nice! Of course, just as with the previous contest - and with other contests, really - there are some terms and conditions.</p><h2>The Terms of eCommerce Plugins</h2><p>Directly from the event details:</p><blockquote>We’ve put $9,000 bounty on the heads of Envato’s most wanted file types –&nbsp;<a href="http://codecanyon.net/category/wordpress/ecommerce/woocommerce">WooCommerce Plugins</a>,<a href="http://codecanyon.net/category/plugins/opencart">OpenCart Extensions</a>&nbsp;and&nbsp;<a href="http://codecanyon.net/category/plugins/prestashop">PrestaShop Modules</a>.</blockquote><blockquote>How do you collect? Submit a new item between May 7th and July 11th 2014 and fill out an entry form to be in with a chance to win to a cash prize!</blockquote><p>But what does the contest actually entail? That is to say, what are the prizes that are offered for each of the various platforms plugins?</p><p>Great question:</p><h3>BEST WOOCOMMERCE PLUGINS</h3><ol><li><strong>$1,000</strong>: Best Back-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Front-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Marketing/Engagement Plugin</li></ol><h3>BEST OPENCART EXTENSIONS</h3><ol><li><strong>$1,000</strong>: Best Back-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Front-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Marketing/Engagement Plugin</li></ol><h3>BEST PRESTASHOP MODULES</h3><ol><li><strong>$1,000</strong>: Best Back-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Front-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Marketing/Engagement Plugin</li></ol><p>Given the fact that we've been covering eCommerce in several recent posts, and that we've got a queue of posts coming down the pipe for these topics as well, shows that there is a strong interest in the topic.</p><p>And since those of you who actively participate in the community are working to better yourself through the articles, tutorials, and contests, this contest is timed very well.</p><h2>I Want to Participate! What Do I Do?</h2><p>Great! For all of the details, make sure to check out <a href="http://codecanyon.net/forums/thread/envatos-most-wanted-ecommerce-plugins-9000/130835" rel="external" target="_blank">the event page</a> as it covers&nbsp;<i>everything</i> you need to know about how to get involved with the contest.</p><p>As we mentioned in the last article, this is a new cross-promotional effort between the Marketplace Team and the Tuts+ Code Team in order to help bridge the gap that exists between the skills you guys and girls are learning here on the site, and an attempt to help put them to real-world practical use not only in day-to-day work, but in opportunities to win some cash.</p><p>If this particular contest doesn't work out with your schedule, no big deal! There are more <i>Envato's Most Wanted</i> events coming this way in the coming weeks - after all, see how quickly this one came up?</p><p>As usual, all feedback is welcome in the comments so don't hesitate to let us know. Good luck to those of you who enter!</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21475/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21475/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21475/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21475/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T14:59:44.868Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T14:59:44.868Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
+  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21475";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:82:"http://code.tutsplus.com/articles/envatos-most-wanted-ecommerce-plugins--cms-21475";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:40:"Envato's Most Wanted:  eCommerce Plugins";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:4533:"<p>Earlier this month, we ran <a href="http://code.tutsplus.com/articles/envatos-most-wanted-directory-listing-themes--cms-21407" rel="external" target="_blank">our first post promoting</a> <i>Envato's Most Wanted</i>. Recall that these are opportunities for which users, developers, and designers are offered significant rewards for delivering high-quality work assuming that it meets the criteria for the contest.</p><p>Today, we're offering up the same thing, except rather working with&nbsp;<i>Directing &amp; Listing Themes,&nbsp;</i>we're looking specifically at eCommerce Plugins (which is great considering we've been branching out - and will be continuing to branch out - into this material in current and future articles).</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/34/posts/21475/image/envato-most-wanted-ecommerce.png"></figure><p>Yup - <b>$9,000</b> offered up for work with PrestaShop, WooCommerce, and OpenCart? Pretty nice! Of course, just as with the previous contest - and with other contests, really - there are some terms and conditions.</p><h2>The Terms of eCommerce Plugins</h2><p>Directly from the event details:</p><blockquote>We’ve put $9,000 bounty on the heads of Envato’s most wanted file types –&nbsp;<a href="http://codecanyon.net/category/wordpress/ecommerce/woocommerce">WooCommerce Plugins</a>,<a href="http://codecanyon.net/category/plugins/opencart">OpenCart Extensions</a>&nbsp;and&nbsp;<a href="http://codecanyon.net/category/plugins/prestashop">PrestaShop Modules</a>.</blockquote><blockquote>How do you collect? Submit a new item between May 7th and July 11th 2014 and fill out an entry form to be in with a chance to win to a cash prize!</blockquote><p>But what does the contest actually entail? That is to say, what are the prizes that are offered for each of the various platforms plugins?</p><p>Great question:</p><h3>BEST WOOCOMMERCE PLUGINS</h3><ol><li><strong>$1,000</strong>: Best Back-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Front-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Marketing/Engagement Plugin</li></ol><h3>BEST OPENCART EXTENSIONS</h3><ol><li><strong>$1,000</strong>: Best Back-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Front-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Marketing/Engagement Plugin</li></ol><h3>BEST PRESTASHOP MODULES</h3><ol><li><strong>$1,000</strong>: Best Back-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Front-End Enhancement Plugin</li><li><strong>$1,000</strong>: Best Marketing/Engagement Plugin</li></ol><p>Given the fact that we've been covering eCommerce in several recent posts, and that we've got a queue of posts coming down the pipe for these topics as well, shows that there is a strong interest in the topic.</p><p>And since those of you who actively participate in the community are working to better yourself through the articles, tutorials, and contests, this contest is timed very well.</p><h2>I Want to Participate! What Do I Do?</h2><p>Great! For all of the details, make sure to check out <a href="http://enva.to/emwplugins" rel="external" target="_blank">the event page</a> as it covers&nbsp;<i>everything</i> you need to know about how to get involved with the contest.</p><p>As we mentioned in the last article, this is a new cross-promotional effort between the Marketplace Team and the Tuts+ Code Team in order to help bridge the gap that exists between the skills you guys and girls are learning here on the site, and an attempt to help put them to real-world practical use not only in day-to-day work, but in opportunities to win some cash.</p><p>If this particular contest doesn't work out with your schedule, no big deal! There are more <i>Envato's Most Wanted</i> events coming this way in the coming weeks - after all, see how quickly this one came up?</p><p>As usual, all feedback is welcome in the comments so don't hesitate to let us know. Good luck to those of you who enter!</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21475/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21475/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21475/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21475/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T14:59:44.868Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T14:59:44.868Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Tom McFarlin";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:2;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Tom McFarlin";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:5;a:6:{s:4:"data";s:38:"
     
     
     
@@ -76,7 +872,7 @@ assets.tutsplus.com/uploads/users/107/posts/21185/image/10_3D-monsters-grid.jpg"
 <p>I hope you’ve enjoyed using this simple and fun trick that you can use for creating other
 pixel characters and objects. Good luck!</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/107/posts/21185/image/Space_invaders600.jpg"></figure><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21185/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21185/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21185/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21185/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T13:20:40.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T13:20:40.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:14:"Yulia Sokolova";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:3;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:14:"Yulia Sokolova";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:6;a:6:{s:4:"data";s:38:"
     
     
     
@@ -104,7 +900,7 @@ making it a whole rather than a set of objects. It's a common mistake to
  three signals aren't transferred directly—they go through three 
 channels: <b>red/green</b> channel, <b>yellow/blue</b> channel and <b>light/dark</b> channel. That's why there's no bluish yellow—only one of these colors can go through a single channel at a time. <br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20549/image/color-fundamentals-shading-9-1.png"></figure><p>The main conclusion we need to take from this is that our brain doesn't see red because it <i>receives red</i> signal, but only because it <i>doesn't </i>receive <i>green </i>nor<i> blue</i> at the same time. When you see a yellowish (<code class="inline">RG</code>) shadow casted by blue (<code class="inline">B</code>) light source in the presence of white (<code class="inline">RGB</code>) light source, it's because the shadow (<code class="inline">RGB</code>) is a bit less blue than the light area (<code class="inline">RGB+B</code>). And for our brain, if it's not blue, it's yellow! Analogously, when something isn't bright, it's dark. It's the same with the&nbsp;<b>afterimage</b> phenomenon—a white screen becomes less red after long time of looking at something <i>more</i> red, and thus it gets a complementary tint (cyan).<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20679/image/color-shading-advanced-56.png"><figcaption>Look at the dot on the left by 15 seconds, then look at the dot on the right<br></figcaption></figure><p>Of course, it's a very subtle coloring and if you ignore it, no one should notice a thing. I described it only because I hear this rule quite often, and people seem to use it without trying to understand it. Most of the circumstances that seem to confirm this rule are a result of ambient light coloring (yellow sunlight—blue shadow made by sky; orange lantern light—dark blue sky in the night), so when you see an oddly colored shadow, check the ambient light first.<br></p><p>And what about another rule of thumb: "warm light—cold shadows; cold light—warm shadows"? Well, yes, it's kind of correct, but only if you expand it: warm primary light— cold ambient light and vice versa. This kind of contrast is very pleasant to the eye, but it's not some kind of rule that must be obeyed everywhere and at every time. It's you who chooses the color of ambient light. And most certainly you shouldn't try to add cold shadows when your ambient light is actually warm!<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20679/image/color-shading-advanced-49.jpg"></figure><h2>Conclusion</h2><p>So, that would be all the fundamentals you need to know about color. Of course, it was just a concentrated summary and you're encouraged to study all these topics further. If you think there's too much to learn, just remember—painting isn't easy! It may look so when a professional creates a masterpiece in a matter of minutes, but it's only because they have spent <i>years</i> polishing their skills. Painting isn't just about putting colors on paper or screen, it's about knowing how to put them, knowing where they come from, where they should and shouldn't be, and what they should look like. If you really want to be good, don't rely on your talent or feeling only. Take the time to master theory, all this boring stuff hidden behind art. You'll be surprised how many of your unvoiced questions it can answer!</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/108/posts/20679/image/color-shading-advanced-final.jpg"></figure><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/20679/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20679/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20679/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/20679/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T13:00:12.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T13:00:12.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:17:"Monika Zagrobelna";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:4;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:17:"Monika Zagrobelna";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:7;a:6:{s:4:"data";s:38:"
     
     
     
@@ -156,7 +952,7 @@ manipulated it from Photoshop. I'm from Nepal and currently working in a
 manufacturing company of handcrafted goods. Everybody calls me Arjun &amp;
  Graphic Design is my hobby. Check some of my work at <a href="http://adesignerarjun.wordpress.com/work-gallery/">http://adesignerarjun.wordpress.com/work-gallery/</a><br></p><h2>Hey, Where's My Entry?<br></h2><p>Don't worry! This is only part one of our showcase for the Creative Selfie Community Project. We've extended our deadline to allow for more submissions so take advantage of this great opportunity to meet other artists and get featured on Tuts+! Stay tuned for part two in July where you'll see your entry featured and more!<br></p><h2>Get Inspired</h2><p>In the meantime, feel free to check out these tutorials for more creative selfie inspiration!</p><ul><li><a href="http://courses.tutsplus.com/courses/vector-portraits-for-beginners" target="_self">Vector Portraits for Beginners</a></li><li><a href="http://courses.tutsplus.com/courses/advanced-vector-portraits" target="_self">Advanced Vector Portraits</a></li><li><a href="http://design.tutsplus.com/tutorials/illustrate-a-dramatic-feather-infused-portrait-in-adobe-photoshop--cms-20996" target="_self">Illustrate a Dramatic Feather-Infused Portrait in Adobe Photoshop</a><br></li><li><a href="http://design.tutsplus.com/tutorials/how-to-use-pixelmators-liquify-tools-to-make-an-eye-popping-portrait--cms-20585" target="_self">How to Use Pixelmator's Liquify Tools to Make an Eye Popping Portrait</a></li><li><a href="http://design.tutsplus.com/tutorials/how-to-create-a-self-portrait-in-a-geometric-style--vector-5992" target="_self">How to Create a Self-Portrait in a Geometric Style</a></li><li><a href="http://design.tutsplus.com/tutorials/use-retouching-techniques-to-create-a-caricature-from-a-photo--psd-30418" target="_self">Use Retouching Techniques to Create a Caricature From a Photo</a><br></li><li><a href="http://design.tutsplus.com/articles/the-differences-between-male-and-female-portraits--vector-14954" target="_self">The Differences Between Male and Female Portraits</a></li></ul></div></div></div><br><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21455/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21455/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21455/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21455/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T12:21:49.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T12:21:49.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:13:"Melody Nieves";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:5;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:13:"Melody Nieves";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:8;a:6:{s:4:"data";s:38:"
     
     
     
@@ -349,7 +1145,7 @@ end
 
 <p>Now that you have tools to manage tasks on a time table, go and master them.&nbsp;</p><p>Experimenting with different tasks is a lot of fun. For an exercise, make the counting script an Alfred workflow accessed by a timer using the <strong>External Trigger</strong> block. That’s an easy modification that’s easy to maintain.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21183/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21183/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21183/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21183/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T12:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T12:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Richard Guay";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:6;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Richard Guay";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:9;a:6:{s:4:"data";s:38:"
     
     
     
@@ -401,7 +1197,7 @@ end
 <p>However, if you're building a static HTML site <code>&lt;base&gt;</code> can be very helpful. This is the case even more so if you're using a templating language such as Jade or Handlebars that will let you place shortcuts like <code>&lt;a href="{url}#top"&gt;Back to Top&lt;/a&gt;</code>, so if you need to override default settings it's still quick and easy.</p>
 <p>If you have a good idea what your project's content will be, and its use of URLs and links is fully under your control, you might find the <code>&lt;base&gt;</code> tag saves you a lot of time.</p><p>Read more about <code class="inline">&lt;base&gt;</code> at the W3C wiki and HTML5 spec:</p><ul><li><a href="http://www.w3.org/wiki/HTML/Elements/base">http://www.w3.org/wiki/HTML/Elements/base</a></li><li><a href="http://www.w3.org/TR/html5/document-metadata.html#the-base-element">http://www.w3.org/TR/html5/document-metadata.html#the-base-element</a></li></ul><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21399/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21399/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21399/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21399/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T10:06:34.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T10:06:34.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:11:"Kezz Bracey";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:7;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:11:"Kezz Bracey";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:10;a:6:{s:4:"data";s:38:"
     
     
     
@@ -411,7 +1207,7 @@ end
     
   ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21449";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:67:"http://cgi.tutsplus.com/articles/the-art-of-the-showreel--cms-21449";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:23:"The Art of the Showreel";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:18440:"<p>Your showreel is one of the most important things you have as an upcoming artist. It’s often seen before you are, so you need it to give the best representation of you that you can. For a fair few artists little thought is put into their showreel, as it seems simple compared to the art in which it contains.</p><p>This is true, everyone can put together clips and breakdowns in Premiere and add text to a start and end card. However why not tailor every attribute of your showreel to get you the job. Think of your showreel as an advert for you. Every part of an advert is aimed at getting you to buy the product, from the upbeat music to the flow of shots, this is how you need to think. Everything in your showreel needs to have been done to sell yourself. This subtle attention to detail can help differentiate two artists whose level of work is the same.</p><iframe src="//player.vimeo.com/video/66001741" frameborder="0" height="338" width="600"></iframe> <p><a href="http://vimeo.com/66001741">VFX Compositing &amp; Roto/Prep Summer Reel 2013</a> from <a href="http://vimeo.com/joshparks">Josh Parks</a></p><h2>What I've learnt working in the industry</h2><h3>Employers only have your showreel to build up a picture of what you are like as a person.</h3><p>The look of your title card, &nbsp;spelling, music used, what your email address is eg. <i>Coolguy56@hotmail.com </i>(not professional), colours used, order of shots, as the first and last shots are generally your best pieces, why does the artist think these are their best pieces?</p><p>These all contribute to the picture that is built of you, so you need to be aware of this when creating your showreel. As well as being aware of the picture that you are trying to convey of yourself. Something else to bare in mind is that due to the busy nature of the vfx industry there's often no time to watch a showreel more than once.</p><h3>Know where your skills stand compared to other artists and learn from their mistakes</h3><p>It is massively important to know where you stand in the vast talent pool of artists. If you know that you stand near the top end of work that you've seen, then you'll be more confident giving a day rate that is closer to what you want, however get this wrong and you can be undercut by another artist. This also allows you to judge your realistic chances of getting a job.</p><p>Constantly watch showreels at different skill levels of both artists and companies. Really analyse what pieces work well, what doesn't, and whether the editing/timing of shots work? Be aware that other artists will be doing the same to you. Knowing your worth is an important part of being an artist that comes with experience, it can be hard to not be biased towards your own work so you need to really be honest with yourself, as this will help you improve quicker.</p><h3>Music on Showreels</h3><p>My personal preference is to have music on my showreels. My reasoning is that it gives you something to edit to and if done well, gives a nice flow to your showreel. Even with the accompanying sound turned off, the showreel will still flow and have a nice natural pace to it, which will give the showreel a more professional feel.</p><p>Another reason for using music to accompany your work is that you want your showreel to be a completely rounded piece. &nbsp;You wouldn't see an advert without music that has been added to enhance the products appeal, your reel is no different to this. Its an advert that sells you, the product. Music has the potential to enhance the feeling someone gets towards a piece of work, however it can also have the opposite effect. I've seen this first hand at companies before, in which full screamo has been used to accompany an artists work. This results in the showreel instantly being turned off.</p><p>If you choose to accompany your work with music, an easy way of editing to it it is by using beat markers. Here's how to create them in Adobe Premiere<br></p><h2>Beat Markers<br></h2><h3>Step 1</h3><p>First import your music into Premiere, by <b>Right</b> <b>Clicking</b> in the left hand side.<br></p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/36/posts/21449/image/Cgtuts-Showreel-Article-1.jpg" alt=""></figure><h3>Step 2</h3><p>Now to get our audio into our timeline, click and drag it down to the audio section.<br></p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/36/posts/21449/image/Cgtuts-Showreel-Article-2.jpg" alt=""></figure><h3>Step 3</h3><p>To lay down our editing beat markers we can play through our audio and hit the <b>*</b> key on the num pad. So it’s just a case of listening through and tapping the <b>* </b>key to the beat of the song.<br></p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/36/posts/21449/image/Cgtuts-Showreel-Article-3.jpg" alt=""></figure><h3>Step 4</h3><p>Once your beat markers are laid down, your imported video can be snapped to the markers.<br></p><figure class="post_image"><img src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/36/posts/21449/image/Cgtuts-Showreel_Article-4.jpg" alt=""></figure><h2>Be Nosey</h2><p>As suggested above, watching other artists showreels is useful to see how the artists who are getting hired are presenting their work. It is also useful in the fact that it may introduce you to a new technique or way of tackling a problem (breakdowns with brief descriptions are best for this). If you do spot something that you couldn't create, find out how it was done, as this is something that another artist is offering, that you aren’t. &nbsp;</p><p>First do all the Googling you can until you hit a wall, then email the artist. Not only will this introduce you to a new technique improving your skill, but it also doubles up as an excuse to network. You now have a valid reason to email an artist as another artist, which differentiates you from the other upcoming artists who email asking whether they can be given a job. This shows that you are professional in your thinking and working. Again this builds towards the image that people will have of you</p><h2>Q &amp; A with Some of the Industry's Best<br></h2><iframe src="//player.vimeo.com/video/80989764" frameborder="0" height="256" width="600"></iframe> <p><a href="http://vimeo.com/80989764">MPC Film Reel 2014</a> from <a href="http://vimeo.com/mpcvfx">MPC</a></p><p>Showreels are a very subjective entity. In order to give you a rounded view of the area, I put some of the questions that had been put forward to me, to some high up artists at MPC and a lecturer at one of the best VFX/Game Art universities. These are the people within the company who have the final decision on whether you get the job within their department. Below are their answers.</p><p><b>MPC are currently hiring at all their studios. You can find all the info here: </b><b><a href="http://www.moving-picture.com/join-us/">http://www.moving-picture.com/join-us/</a></b></p><h3>Doug Larmour</h3><p><i>MPC Compositing Global HOD</i></p><p class="question">Is a showreel with two pieces in it too short?<br></p><p>Not if you have nothing else you are proud of. Ideally you will show about two mins worth of your best material, but if you only have two pieces which are good, don't flesh it out with bad stuff.<br></p><p class="question">What's too long for a showreel?</p><p>I won't watch for longer than 4 minutes, so don't put your best shot at the end, stick it right at the front.<br></p><p class="question">Do you want to see render passes or is it all about the final outcome?<br></p><p>From a comp point of view, I want to see the final output and ideally the original plate - and a couple of layers in between isn't awful, but if you don't have access to those, then the final output on its own will do. We're fairly good at recognising what you've done.<br></p><p class="question">What's the most common mistake you feel that artists make with showreels?<br></p><p>They don't specialise it enough. At a place like MPC we need people to be 100% focused on one area, so as we can get the best out of it. So when hiring a comper, I have no need to see how well you model, so tailor make the showreel to the job you are going for. Don't send a generalist showreel for a comp specific job. Also - don't show work which you think is bad on your showreel just to show that you are able to do something. Putting something on your showreel is stating that you think it's good or the best you can do, so make sure it is.<br></p><p class="question">Do you watch showreels on mute?<br></p><p>Always - we don't do sound. The visuals have to stand on their own.<br></p><p class="question">When hiring how much is down to the showreel and how much is down to the interview in whether an artist gets the job?<br></p><p>Its the whole combination. If you have a great showreel but then can't back it up in an interview, then I am left asking how much of the showreel was your work. Similarly if you do a great interview but your showreel doesn't show me anything of what you have said, then it looks like you talk a good game but don't necessarily back that up with actions (it might show that you are a little lazy) - so the awful truth is that if you want a job you have to have both, a good showreel and do a good interview too. It isn't easy.</p><h3>David Mayhew</h3><p><i>MPC Groom Global HOD</i></p><p class="question">Is a showreel with two pieces in it too short?<br></p><p>Not at all. I would rather see a nice polished single project done really well than two average pieces.<br></p><p class="question">What's too long for a showreel?<br></p><p>Generally 2 minutes maximum for Mr. Again just focus on the best bits related to the role you are applying for. That way it looks like you are really keen on that particular aspect of vfx.<br></p><p class="question">Do you want to see render passes or is it all about the final outcome?<br></p><p>More important forbade lighting/gesturing compositing role. For a groom role, I like to see turntables as well as final shots. It's important to clearly state which aspects of the shot you have worked on if it was a large group project.<br></p><p class="question">Whats the most common mistake you feel that artists make with showreels?<br></p><p>Adding to much substandard work. Putting on lots of final shots and not stating which parts of the shot they were responsible for.<br></p><p class="question">Do you watch showreels on mute?</p><p>Occasionally, yes.</p><p class="question">When hiring how much is down to the showreel and how much is down to the interview in whether an artist gets the job?</p><p>The showreel is important. Only if I see potential on the reel will I request an interview</p><h3>Benjamin Bratt</h3><p><i>Roto-Prep Lead at MPC</i></p><ul><li><i><b>Author of:&nbsp;</b></i><i><a target="_blank" rel="external" href="http://www.amazon.co.uk/Rotoscoping-Techniques-Tools-Aspiring-Artist/dp/0240817044"><b>Rotoscoping Techniques and Tools for the Aspiring Artist</b></a></i></li><li><i><b>Twitter: </b></i><a target="_blank" rel="external" href="https://twitter.com/bbratt"><i><b>@bbratt</b></i></a></li></ul><p class="question">Is a showreel with two pieces in it too short?</p><p>The number of shots isn't really the focus of a demo reel. If you've only got a couple shots that you're confident enough to put on your reel, make sure those shots are kick ass enough to get you noticed. You don't want to clutter up your reel with filler, just so you've got a couple extra seconds tacked on. Mediocre shots will detract from your stronger shots. Also, if you've only got a couple of shots, it will give you a chance to create an in-depth break down (assuming you've got all the layers/before/after components) to showcase how much work was done to the shot.</p><p class="question">What's too long for a showreel?</p><p>3-4 minutes would be pushing it. Streamline your reel so we see the good stuff right away</p><p class="question">Do you want to see render passes or is it all about the final outcome?</p><p>Breakdowns are a huge plus. Half the things we do are invisible, and even if your included a written breakdown saying "removed thing X", it isn't as impressive as seeing that thing disappear from the plate.</p><p class="question">What's the most common mistake you feel that artists make with showreels?</p><p>I've noticed that artists can sometimes become too attached to particular shots. They've taken it from start to finish, reworked all the major and minor details, and are intimately aware of every half pixel problem. After putting so much of your heart into something, it's hard to separate yourself from an objective viewpoint. I'd say the most common mistake is not getting enough objective, outside feedback. Put your reel in front of knowledgeable people that don't know you and have no idea about what went into the shot. And when these relative strangers give you their feedback, listen to them; take in what they say and try see their point. &nbsp;A fresh set of eyes might hurt, initially, but the end result will be greater.</p><p class="question">Do you watch showreels on mute?</p><p>Yup.</p><p class="question">When hiring how much is down to the showreel and how much is down to the interview in whether an artist gets the job?</p><p>50-50 with a +/- variable of 18. &nbsp;If an artist has a spectacular showreel, but isn't the best when it comes to the social/communication aspects of our job, the viability of that artist in the workplace has dropped a bit. On the other side, if a showreel is average, a positive attitude and willingness to engage during the interview process will absolutely increase the chances of a call back. Also, know the difference between appropriately knowledgeable and obscenely over confident. If you don't know something, express a willingness to learn it.</p><h3>Richard Baillie</h3><p><i>Roto-Prep Global HOD</i></p><p class="question">What's too long for a showreel?</p><p>You want a showreel of about 2-5 minutes (and 5 minutes is probably pushing it) keep it relevant and varied.</p><p class="question">Do you want to see render passes or is it all about the final outcome?</p><p>For roto/prep we don't really have render passes. It's always nice to see the plate before prep and after, and then the comp. If you can put in alpha mattes that's always nice. If you can only put the comp on make sure you know exactly what you did in the shot and make sure you can talk about what you did, and how you did it, if asked in the interview.</p><p class="question">What's the most common mistake you feel that artists make with showreels?</p><p>Rushing through the passes leading up to the comp. If you've included them, allow the viewer to see them. Also as I see a lot of showreels straight out of uni, I see a lot of stock footage used in the same way. Try and make it stand out somehow from your classmates.</p><p class="question">Do you watch showreels on mute?</p><p>Yes.</p><p class="question">When hiring how much is down to the showreel and how much is down to the interview in whether an artist gets the job?</p><p>The showreel gives a good indication of the final products that someone can make. But only the interview gives an indication of their thought processes and them as a person.</p><p>A showreel won't show how long something took to make. It gives a good basis to conduct the interview on, it gives a reference point if I want to talk about the shot. I would consider an interview because a showreel is average or outstanding. A great interview will save a mediocre showreel, but an outstanding showreel will not fix a dreadful interview. The interview will give me some idea of what that person will be like on a day to day basis and with other people.</p><h3>Mark Walman</h3><p><i>Lecturer at the </i><a target="_blank" rel="external" href="http://uhanimation.co.uk/"><i>University of Hertfordshire</i></a></p><p class="question">Is a showreel with two pieces in it too short ?</p><p>If a showreel had just one piece of work in it, but the work was amazing, that would be enough. It is always quality over quantity.</p><p class="question">Do you want to see render passes or is it all about the final outcome?</p><p>Seeing render passes is very useful. &nbsp;As deadlines get smaller and smaller for commercial projects the ability to alter things after render is a must. &nbsp;As well as the usual passes (reflection/spec/occl) it is good to see relighting passes/ lots of layers for dust. If your film has dust in it they are sometimes used.</p><p class="question">Do you watch showreels on mute?</p><p>Yes, unless there is a lip sync in there.</p><p class="question">What's the most common mistake you feel artists make with showreels?</p><p>Adding old/bad pieces of work to show "how much they have progressed". Also make it very clear what parts of the shot you worked on. Adding subtitles can be useful.</p><p class="question">When new students apply how much is down to the showreel and how much is down to the interview in whether and artist gets the job?</p><p>A good showreel is your foot in the door. When I have done interviews, it is to find out a bit more about the person, what their passions are, are they going to play well within the team, etc.</p><h4>Related Links:</h4><ul><li><a target="_blank" rel="external" href="http://www.moving-picture.com/">MPC</a>&nbsp;</li><li><a rel="me" href="http://joshparks.co.uk/">joshparks.co.uk/</a><br></li><li><a target="_blank" rel="external" href="http://www.amazon.co.uk/Rotoscoping-Techniques-Tools-Aspiring-Artist/dp/0240817044">Rotoscoping Techniques and Tools for the Aspiring Artist</a>&nbsp;-&nbsp;<i>Benjamin Bratt&nbsp;</i></li><li><a target="_blank" rel="external" href="http://uhanimation.co.uk/">University of Hertfordshire</a></li></ul><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21449/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21449/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21449/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21449/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T10:05:12.114Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T10:05:12.114Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:10:"Josh Parks";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:8;a:6:{s:4:"data";s:38:"
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:10:"Josh Parks";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:11;a:6:{s:4:"data";s:38:"
     
     
     
@@ -507,251 +1303,4 @@ Click <b>Create Filter</b> when you’re done. All messages addressed to the sec
 <h2>Conclusion</h2>
 <p>While it may seem like you have to abandon old email accounts or schedule time to check various accounts still in use, with a little effort, you can get all of your email in one Gmail inbox. If you have any trouble combining your email accounts in Gmail, be sure to leave a comment below and we'll help you figure out how to get it working.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21305/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21305/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21305/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21305/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T08:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T08:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
       
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Paula DuPont";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:9;a:6:{s:4:"data";s:38:"
-    
-    
-    
-    
-    
-    
-    
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21138";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:65:"http://music.tutsplus.com/tutorials/a-tour-of-altiverb--cms-21138";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:18:"A Tour of Altiverb";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:11720:"<p>If I were (and I am not) a gushing
-computer audio geek, I would probably go all out (on a not-so-very
-long limb) and say Audio Ease's Altiverb plugin is the best and
-possibly only reverb plugin anyone could ever need.  I would use a
-lot of clichéd modifiers like 'lush', 'gorgeous' and the omnipresent
-'powerful' to describe its sound and functionality, and probably speak
-on the 'painstaking' or 'intricately detailed' development process.&nbsp;</p><p>&nbsp;But, I am not a gusher and avoid much of that type of language –
-yet do find extreme difficulty in doing so
-here, as Altiverb is simply just that good.</p><h2>What Is Altiverb?<br></h2><p>Altiverb is an ultra-high quality
-convolution reverb plugin made by the Dutch company Audio Ease.  A
-convolution reverb is a purely digital type of reverb that works by
-imparting a pre-recorded room response (impulse response, or IR) on a
-stream of incoming audio.  In other words, the room reflections of a
-specific space are recorded and then imparted onto a piece of digital
-audio, resulting in the illusion of that audio event occurring in the
-pre-recorded space.<br></p><h2>Main Interface<br></h2><p>Altiverb's interface can be broken down
-into six basic sections.  The library section grants access to the
-extensive and ever growing impulse response library.  The main
-control section contains the more brute force controls, while the
-secondary control section deals with fine tuning.  The visualizer
-menu dictates what is seen in the two visualizer areas below.  This
-can range from pictures of the recorded room all the way to hidden
-sound shaping parameters.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/trans.png"><figcaption>The main areas of the interface.</figcaption></figure><h2>The Library<br></h2><p>The Audio Ease team has spent years
-traveling the world recording the reflections of iconic spaces 
-throughout Europe, Australia and North America (primarily).  Clicking
-on the library area will reveal the fruits of this labor in the form
-of a detailed and well organized stock library of impulse responses. 
-  This library is periodically updated by Audio Ease with free IR
-downloads.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/library.png"><figcaption>The library's main page showing the IR's categorized by application and type.</figcaption></figure><p>Within each of these categories and sub
-categories are hundreds of individual impulse responses of everything
-from stadiums to stairwells to nuclear cooling towers.  The music
-column on the main page consists primarily of spaces where one might
-expect to hear music being played.  The post column  is geared
-towards those working in film and consists of spaces where one would
-have a conversation or expect to hear everyday ambient sounds.  The
-final column is more geared towards sound design and leaves space for
-user created IR's as well.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/teldex.jpg"><figcaption>The default setting is actually just one of a multitude of IR's recorded in Berlin's Teldex studio.</figcaption></figure><h2>The Controls<br></h2><p>Anyone who has used a reverb unit
-before should find the controls pretty straightforward.  The main
-controls to the left deal in the more overarching aspects of the
-effect while the secondary controls along the bottom serve to fine
-tune things.  Below is a brief rundown.</p><ul><li>The <b>reverb time</b> knob adjusts the level
-of the reverb tail, thereby making it shorter or longer.</li><li>The <b>size</b> knob effects the apparent room
-size by adjusting a combination of reverb tail length, early
-reflections, and resonance frequency.<br></li><li>The <b>bright</b> knob glues a synthetic
-higher frequency reverb to the already existing organic IR to create
-the illusion of a brighter tail.</li><li>The <b>Input/Output</b> section to the
-immediate right contains control for <b>input</b> and <b>output</b> level, as well
-as wet/dry <b>mix</b> control.  The disclosure triangle opens up a small
-menu of test sounds which can be activated and modified to sound
-whenever a parameter is changed.</li><li>The <b>EQ</b> is a fairly straightforward two
-band EQ (clicking the disclosure triangle reveals further parameters)
-which effects the wet signal only.  The EQ bands themselves are
-Baxandall EQs, which limit phase shift and all but eradicate frequency
-cancelations when the wet and dry signals are summed.</li><li>The <b>damping</b> controls shorten or
-lengthen the IR time according to specific frequency bands.  The
-width of the affected bands can be adjusted in the disclosure menu.</li><li>To the far right are the <b>Time</b> controls.
- The <b>pre-delay</b> separates the time between the dry and wet signals and
-the <b>attack</b> modifies the onset of the wet signal.  The disclosure
-triangle unveils <b>direct</b>, <b>early</b> and <b>late</b> reflection gain controls as
-well as a <b>reverse</b> button and <b>color</b> and <b>modulation</b> controls.</li></ul><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/controls.png"><figcaption>The interface showing the disclosed parameters.</figcaption></figure><h2>The Visualizer &amp; Menu<br></h2><p>The menu across the top of the
-interface dictates what is made available in the two visualizers
-below.  I've listed the more unique menu options below.<br></p><p>The <b>pictures</b> option displays the
-available images related to the selected IR.  In the case of the
-Teldex Studio, there are a few images of the studio, a diagram of the
-recording setup and a surround picture of the space (similar to what
-you would find in Google Maps).  These different views can be
-scrolled through and expanded with controls located at the bottom of
-the visualizer window.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/recording.png"><figcaption>The recording diagram of the Teldex Studio IR.</figcaption></figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/studio.jpg"><figcaption>An image of the Teldex surround picture.</figcaption></figure><p>The <b>positioner</b> section reveals a 3D
-soundstage in which the user can position the input sound source(s)
-within the virtual room.  The speakers can be moved anywhere on the
-grid and can even be uncoupled to create an asymmetrical stereo
-field.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/stereo-field.png"><figcaption>The positioner option enabled.</figcaption></figure><p>The <b>waveform</b> section is worth noting as
-it illustrates the four recordings (one of the reasons this plugin
-sounds so great) which make up the impulse response.  In this
-instance two speakers were used to create the initial sound and two
-microphones were used to capture the reflections.  Each left to
-right/right to left microphone and speaker combination was recorded
-and combined to create this particular IR.<br></p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/ir.png"><figcaption>The IR waveforms showing the left and right microphone captures of both left and right speakers.</figcaption></figure><p>The <b>waterfall</b>, probably Altiverb's most
-distinguishing visual feature, plots amplitude vs. time vs. frequency of the
-reflection.  This 3D diagram can be moved, rotated and zoomed in on
-from any angle and is constantly updated to reflect all pertinent
-parameter changes.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/image/waterfall.png"><figcaption>The waterfall from the low side.</figcaption></figure><h2>The Sound<br></h2><p>I've just grabbed a few fairly dry
-stock loops to test things out.  They are all mono (dry and mono tend
-to go hand in hand) but will serve as a good indicator of just what
-Altiverb can do.  Each recording consists of a dry pass and then one
-with an Altiverb preset.  The only adjustments I made were to the mix
-ratio.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/guitnashstone.mp3" controls="controls"></audio><p>Playing some guitar in a Nashville studio.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/voxemt.mp3" controls="controls"></audio><p>Altiverb does gear too; a house vocal
-run through the wall sized EMT 140 plate.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/voxspace.mp3" controls="controls"></audio><p>The same loop with a similar plate
-setting in Logic's Space Designer convolution reverb; harsh, digital,
-thin, etc, etc.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/drumsre201.mp3" controls="controls"></audio><p>An old school drum loop run through an
-old school space echo.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/bassforest.mp3" controls="controls"></audio><p>If you were ever curious what an
-upright bass would sound like in an Austrian forest, this is it.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/bassspace.mp3" controls="controls"></audio><p>Another Space Designer comparison.  No
-contest.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/funkclub.mp3" controls="controls"></audio><p>Funky guitar club verb.</p><audio src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/125/posts/21138/audio/babydustbin.mp3" controls="controls"></audio><p>That annoying baby sitting next to you
-on the plane... put in a metal trash can.<br></p><h2>Final Thoughts<br></h2><p>In my experience, this is the best
-reverb out there.  It is a joy to work with and produces great
-results every time with very little tweaking necessary.  It has an IR
-suited for every type of program material and has an extensive
-library of sound design and post production effects that I barely
-have had time to touch on.<br></p><p>The one draw back is that it costs
-$600.  Fairly high for a plugin, but a justifiable expense when taken
-in perspective—cost vs. quality, importance of reverb as an effect,
-the fact that it makes most other units irrelevant, and it's cheap compared to
-hardware.  I tend towards the school of thought which promotes
-using only a few high quality pieces of gear well so the price,
-although still somewhat painful, was one I could live with.&nbsp;</p><p>It may
-not be for everyone, but I highly recommend consideration towards its
-purchase if you are looking for a high quality reverb that will
-remain a prominent and cutting edge tool for years to come.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21138/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21138/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21138/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21138/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T07:51:54.461Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T07:51:54.461Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
-      
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:11:"Will Walker";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:10;a:6:{s:4:"data";s:38:"
-    
-    
-    
-    
-    
-    
-    
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21453";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:99:"http://business.tutsplus.com/tutorials/10-tips-for-running-a-successful-woocommerce-site--cms-21453";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:49:"10 Tips For Running a Successful WooCommerce Site";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:19323:"<p>If you're looking to launch your own online store, <a href="http://www.woothemes.com/woocommerce/" target="_self">WooCommerce</a> is a great choice to build your business with. Coupled with WordPress, WooCommerce is a robust and flexible system that puts a range of powerful tools at your disposal to sell your products and services the way you want. And it certainly doesn't hurt that this full-featured, extendable and widely supported plugin is free to get started with, and that there's tons of great themes for it on <a href="http://themeforest.net" target="_self">ThemeForest</a>, plugins on <a href="http://enva.to/wooplugins" target="_self">CodeCanyon</a>, and&nbsp;more.</p><p>But how do you go from building an online storefront to running a successful business? The key is to focus on improving your users' experience, so that shopping at your site is easy, quick and delightful. Let's go through a few ideas that you can use today to make shopping a pleasure for your customers, keep your site running smoothly and bring shoppers back time and time again.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/10_tips_successful_woocommerce_site.jpg"><figcaption>Jack Rudy Cocktail Co.'s gorgeous and easy-to-use site runs WooCommerce.</figcaption></figure><h2>1) Use Great Photos<br></h2><p>Getting great pictures of your products are an important step towards getting your customers to browse through, and eventually buy from your store. Source good shots, or arrange to have appealing photographs of your products taken so that users can see the details and finish of your products, and if possible, see them in action too.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Aether_apparel_uses_great_product_and_action_photos.jpg"><figcaption>Aether Apparel uses great product and action photos</figcaption></figure><p>If a user visits a product page, they definitely want to see the item, so show it to them. Use large images on product pages, and include shots from multiple angles. Implement a lightbox plugin that allows users to zoom in on individual images and cycle through multiple images so they're in complete control.</p><p>If you're arranging to have your products shot, ensure that they are photographed with a consistent style, setting and lighting conditions. This will allow customers to compare products on your site easily and accurately decide what they like best.<br></p><h2>2) Great Copy Goes a Long Way<br></h2><p>An online store isn't just a collection of products and a checkout page: it's also a showcase for your unique brand, and that's what customers will be able to connect with. Use copy with a consistent tone of voice to tell your brand's story and show off your personality—on your About page, in your product descriptions and in complementary content like your blog and help pages.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Jack_Rudy_Cocktail_Co_tells_a_great_story.jpg"><figcaption>Jack Rudy Cocktail Co. tells a great story on their About page</figcaption></figure><p>When writing about products, be sufficiently descriptive and skip the hyperbole. Focus on helping customers understand whether the product is a good choice for them—mention use cases and address potential questions that buyers may have: <i>is that jacket waterproof? How long do the batteries in this Bluetooth speaker last? Is this preserve good for more than just toast?</i><br></p><h2>3) Create Useful Content<br></h2><p>As an online business catering to your specific market, you and your company have a unique experience to share. From the processes you've set up to ensure the best quality products, to engaging with customers to learn about their needs, everything you go through in setting up and running your store can form the foundation of your brand blog. From there, you can build upon your blog content by talking about what your brand stands for, what your customers are into and how they can get most out of your products.</p><p>Home Depot's <a href="http://ext.homedepot.com/community/blog/" rel="external" target="_blank">The Apron Blog</a>&nbsp;does a terrific job of keeping customers engaged—the home improvement and construction products store regularly posts DIY projects around the home, trends in interior design, and ideas for decorating rooms and gardens. By inspiring homeowners to do more with the space they have through this blog, Home Depot creates a deeper connection with their customers, even when they're not actively making purchases.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Home_Depot_does_a_great_job_of_engaging_customers_with_their_blog.jpg"><figcaption>Home Depot does a great job of engaging customers with their blog</figcaption></figure><h2>4) Reach Out Regularly With a Newsletter<br></h2><p>Email newsletters have been around for ages, and they're still a favorite mode of communication among marketers who want to reach customers with news about products, offers and events.</p><p>Email marketing is a great way to privately share useful information with customers who are interested in your brand, with the added benefit of being able to track the response from your audience—when they choose to unsubscribe, which links they click on, and how often your emails are forwarded.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Create_engaging_and_relevant_email_newsletters_for_best_results.jpg"><figcaption>Create engaging and relevant email newsletters to tell customers about new products and offers</figcaption></figure><p>The more you target and personalize these mailers based on users' habits and purchase history, the higher the returns. <a href="http://webdesign.tutsplus.com/articles/designing-an-email-campaign-think-like-a-marketer--webdesign-6698" rel="external" target="_blank">Follow these practices</a> when sending out newsletters&nbsp;for the best results.<br></p><h2>5) Include And Involve Users<br></h2><p>Today's shoppers are vocal, and want to share their experiences with the products they buy—and that's a wonderful opportunity for your store to capitalize on. Allow users to submit reviews and ratings of your products to let others know what they liked and what they didn't. These reviews will also give you insights into what customers are interested in and what's important to them. Reviews often help increase product conversions; ecommerce experts Bazaarvoice found that <a href="http://www.bazaarvoice.com/industries/Ratings-and-Reviews-increase-conversion-rates-on-figleavescom-UK.html" rel="external" target="_blank">conversions increased by as much as 12.5%</a> in a study they ran on innerwear retailer figleaves.com. And all you have to do to make this happen is enable a setting in WooCommerce.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Amazon_knows_the_power_of_customer_reviews_for_aiding_conversion.jpg"><figcaption>Amazon knows the power of customer reviews to encourage conversion</figcaption></figure><p>You can take things further by offering discounts for reviews. In the same Bazaarvoice research, products with over 20 reviews had a 83.85% higher conversion rate than those that have no reviews. By offering discounts, you create an incentive for customers to shop in the future, and their reviews help lend credibility to your store.&nbsp;</p><p>There's <a href="http://www.woothemes.com/products/review-for-discount/" rel="external" target="_blank">a great WooCommerce extension</a> that lets you do just that.&nbsp;And it certainly doesn't hurt that reviews do wonders for your SEO—each new review serves as fresh content for search engine indexers to find and highlight when people are looking for what you have to sell.</p><p>Don't be afraid of negative product reviews—these offer you a chance to flex your customer support muscle. Address these issues by engaging with customers as best as you can, whether that means a personal phone call, a refund or a replacement.<br></p><p>According to a study, <a href="http://blog.bazaarvoice.com/2006/04/10/63-customers-more-likely-to-buy-on-sites-with-reviews/" rel="external" target="_blank">63% of online shoppers say they are more likely to buy on sites with positive reviews</a>. If you've got customers who love your business and shop with you often, contact them personally and encourage them to write you a testimonial.&nbsp;</p><p>WooThemes offers <a href="http://wordpress.org/plugins/testimonials-by-woothemes/" rel="external" target="_blank">a great free plugin</a> that lets you showcase testimonials from your patrons with custom styling to incorporate easily with your site template.</p><h2>6) Increase Visibility With SEO<br></h2><p>As an online business, it's imperative to ensure that your site and products can be found easily by users on search engines. Taking a few steps towards optimizing your site content for search engines to properly index your store will help improve your ranking on search results and bring in more visitors.&nbsp;<br></p><p>One of the best things you can do is use a comprehensive SEO plugin like <a href="http://wordpress.org/plugins/wordpress-seo/" rel="external" target="_blank">WordPress SEO by Yoast</a>, which allows you to easily add meta descriptions, keywords, optimized permalinks and more to ensure that search engines know where your content is, and what it's about. Oh, and it's free!</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Use_an_SEO_plugin_to_improve_your_site_ranking.jpg"><figcaption>Use an SEO plugin to improve your site ranking in search results</figcaption></figure><h2>7) Offer a Helping Hand<br></h2><p>Customer support is a crucial part of running an online store. It's not only about handling problems with shipping and refund, but also about helping customers find products they want and making them feel comfortable shopping on your site.&nbsp;</p><p>The easiest way to get started is to answer the most common questions shoppers usually have, such as those concerning shipping policies and pricing, returns and guarantees. Write these up on an FAQ page and encourage customers to contact you with any queries they might have, using a contact form.</p><p>You can also assist shoppers with live chat. <a href="http://www.olark.com/" target="_self">Olark's&nbsp;incredible support service</a> adds a discreet tab to the bottom of your site window that lets customers ping you when you're available to ask questions. Plus, it shows you which page a customer is browsing through, allows you to save chat transcripts, and generates detailed analytics and reports to give you a better overview of your customers' support needs. Olark is easy to install on any WooCommerce site, is very reasonably priced and you can even try it out for free.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Engage_customers_with_live_chat_to_help_or_suggest_products.jpg"><figcaption>Engage customers with live chat to help them shop, or suggest suitable products</figcaption></figure><h2>8) Enable Power Shoppers to do More<br></h2><p>So you've got great products and happy shoppers, and business is humming along. The next step is to get customers into the habit of shopping with you regularly, by making it easy and fun to do so. There are a couple of things you can do to get started:</p><h3><b>Wishlists</b></h3><p>Sometimes customers might visit your store just to browse or compare products to purchase later. Or, they might want to create a personal registry for others to easily find the right gifts for them.&nbsp;</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Allow_users_to_create_and_share_wishlists.jpg"><figcaption>Allow users to create and share wishlists so they can easily resume shopping whenever they want</figcaption></figure><p>The nifty <a href="http://www.woothemes.com/products/woocommerce-wishlists/" rel="external" target="_blank">WooCommerce Wishlists extension</a> allows them to do all that and more, and lets you fine-tune the functionality to suit your store and audience best. With Wishlists, you don't have to turn customers away if they don't want to buy something just then—and you'll have a reason for them to come back.</p><h3>Vouchers, Coupons and Store Credit<br></h3><p>Granting users flexibility over how they choose to spend money at your store puts more power in their hands, and more transactions on your balance sheet. Here are a few ways to do that:</p><ul><li>Instead of only allowing purchases, consider offering gift vouchers that customers can present to their loved ones—great for when someone can't decide on the perfect gift.</li><li>Discounts are great for getting both new and existing customers in the door and through to the checkout page. Create offers, market them through social media and newsletters, and watch your sales go through the roof.</li><li>Putting a store credit system in place allows customers to shop at leisure and makes the purchase process even smoother than your existing checkout system. It also allows shoppers to stick to a budget, and by helping them do that, you build trust and win the confidence of your clientele.</li></ul><p>The <a href="http://www.woothemes.com/products/smart-coupons/" rel="external" target="_blank">Smart Coupons extension for WooCommerce </a>enables all this functionality and more, with total control over how you choose to implement it in your store. Whether you want to create special seasonal, holiday and event-based sales, or draw in new customers by marketing your offers on a deals listing site, this plugin makes it easy.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Discounts_are_a_great_way_to_entice_new_and_existing_customers.jpg"><figcaption>Discounts are a great way to entice new and existing customers</figcaption></figure><h2>A word about&nbsp;housekeeping<br></h2><p>Running a tight ship on your site backend is just as important as keeping your accounts in order or properly managing your inventory. While WooCommerce already helps you take care of those essential processes, here are a couple more things you should handle to ensure that your site runs quickly and without issues.</p><h3>9) Use a CDN For Speedy Performance<br></h3><p>CDNs or Content Delivery Networks are services that you can plug your site into, to take on the task of delivering heavy files like images and CSS sheets from a server optimized for speed and geographically closest to your users—and drastically reducing page load times in the process. Quicker sites reduce bounce rates, increase customer satisfaction, and also help sites rank better on Google search results. Choose a well-known and reliable CDN like <a href="http://www.maxcdn.com" rel="external" target="_blank">MaxCDN</a>, who offer quick and simple setup processes and competitive pricing.</p><h3>10) Backup Your Site<br></h3><p>Whether your site faces a hacker attack, needs to be migrated to different server or web host, requires upgrades or even changes to the theme, it's always a good idea to have a recent backup of all your files, content and databases so that you can restore order at a moment's notice.&nbsp;</p><p>Go with a quality backup service like <a href="http://vaultpress.com/" rel="external" target="_blank">VaultPress</a>&nbsp;to make sure your site is safe at all times. This top-of-the-line service from <a href="http://automattic.com/" rel="external" target="_blank">the folks who built Wordpress</a> features real-time backups, automated restorations and a full backup archive and offers an optional security scanning functionality for additional protection.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Backup_your_site_and_databases_regularly.jpg"><figcaption>Backup your site and databases regularly to avoid downtime</figcaption></figure><h2>Conclusion<br></h2><p>Running a successful online store takes a lot of work, right from stocking quality products to bringing in customers and keeping them interested over time. It's not easy, but with these tips and tools, you should be well on your way towards making sales and creating lasting connections.</p><p>If you're looking to get started with WooCommerce, we have a couple of great tutorials right here on Tuts+ to help you with <a href="http://code.tutsplus.com/tutorials/getting-started-with-woocommerce-initial-setup--wp-29011" rel="external" target="_blank">getting WooCommerce set up</a>, <a href="http://code.tutsplus.com/tutorials/getting-started-with-woocommerce-launching-your-store--wp-29099" rel="external" target="_blank">launching your WooCommerce store</a>, and even <a href="http://code.tutsplus.com/articles/an-introduction-to-theming-woocommerce-for-wordpress--wp-31577" rel="external" target="_blank">designing and building your own custom WooCommerce theme</a>.</p><p>Once you've settled on WooCommerce as your platform of choice, be sure to check out our extensive range of <a href="http://themeforest.net/category/wordpress/ecommerce/woocommerce" rel="external" target="_blank">over 210 customizable, high-quality WooCommerce themes on ThemeForest </a>to give your online store a unique look that captures the essence of your brand.</p><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/Neighborhood_Theme.jpg"></figure><figure class="post_image">You can also extend the functionality of your WooCommerce site by adding any of&nbsp;over 350&nbsp;<a href="http://enva.to/wooplugins" target="_self">WooCommerce Plugins&nbsp;and Extensions</a>, available at CodeCanyon. There's tools to&nbsp;attach professional PDF invoices to WooCommerce transaction emails, run a loyalty rewards program and much more.</figure><figure class="post_image"><img alt="" src="https://s3.amazonaws.com/cms-assets.tutsplus.com/uploads/users/284/posts/21453/image/The_retailer.jpg"></figure><p>What are the challenges you face with your ecommerce business, and how are you tackling them? Let us know in the comments below.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21453/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21453/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21453/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21453/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T03:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-20T03:00:00.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
-      
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:17:"Abhimanyu Ghoshal";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}i:11;a:6:{s:4:"data";s:38:"
-    
-    
-    
-    
-    
-    
-    
-  ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:7:{s:2:"id";a:1:{i:0;a:5:{s:4:"data";s:55:"tag:tutorials.tutsplus.com,2005:PostPresenter/cms-21457";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:4:"link";a:1:{i:0;a:5:{s:4:"data";s:0:"";s:7:"attribs";a:1:{s:0:"";a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:100:"http://code.tutsplus.com/articles/object-oriented-programming-in-wordpress-inheritance-ii--cms-21457";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:5:"title";a:1:{i:0;a:5:{s:4:"data";s:57:"Object-Oriented Programming in WordPress - Inheritance II";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"content";a:1:{i:0;a:5:{s:4:"data";s:19788:"<p><a href="https://code.tutsplus.com/articles/object-oriented-programming-in-wordpress-inheritance-i--cms-21379" rel="external" target="_blank">In the previous article</a>, we introduced the concept of object-oriented inheritance, attempted to place it laymen's terms, and then also took a high-level look at the conceptual model of how it works within the context of programming.</p><p>But before we go any further and/or if you're just joining in the series, please review everything we've covered thus far by reading the previous articles:</p><ol><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-an-introduction--cms-19916" rel="external" target="_blank">An Introduction</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-classes--cms-20021" rel="external" target="_blank">Classes</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-types--cms-20299" rel="external" target="_blank">Types</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-control-structures-i--cms-20532" rel="external" target="_blank">Control Structures: Conditional Statements</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-control-structures-ii--cms-20636" rel="external" target="_blank">Control Structures: Loops</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-functions-and-attributes--cms-20741" rel="external" target="_blank">Functions and Attributes</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-scope--cms-20789" rel="external" target="_blank">Scope</a></li><li><a href="http://code.tutsplus.com/articles/object-oriented-programming-in-wordpress-building-the-plugin-i--cms-21083" rel="external" target="_blank">Building the Plugin I</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-building-the-plugin-ii--cms-21105" rel="external" target="_blank">Building the Plugin II</a></li><li><a href="https://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-document-the-plugin-i--cms-21168" rel="external" target="_blank">Document the Plugin I</a></li><li><a href="http://code.tutsplus.com/tutorials/object-oriented-programming-in-wordpress-document-the-plugin-ii--cms-21167" rel="external" target="_blank">Document the Plugin II</a></li><li><a href="https://code.tutsplus.com/articles/object-oriented-programming-in-wordpress-inheritance-i--cms-21379" rel="external" target="_blank">Inheritance I</a></li></ol><p>Yes - we've covered a lot, but in order to lay the foundation for a beginner to have a strong place from which to start writing object-oriented PHP, there's a lot to examine.</p><p>With that said, inheritance is where we begin getting into the intermediate topics of the paradigm, so this will be the final article that provides a look at the beginner concepts after which we'll end the series with a summary post.</p><h2>Inheritance Reviewed</h2><p>Recall that we defined inheritance as the following:</p><blockquote>Inheritance is when one class serves as the parent class for a child class that provides a number of attributes and methods common to both the parent and child; however, the child as the ability to introduce it's own attributes.<br></blockquote><p>It's a bit less formal than what you may find in an academic book, or even on Wikipedia, but it still explains the idea in terms that illustrate the point.</p><p>In this article, we'll review all of the necessary code, functions, and reserved words related to the topic,&nbsp;we're going to take a look at how we can implement it within PHP in a very, very simple platform-agnostic way,&nbsp;&nbsp;and then we'll review an actual implementation of where inheritance is at play within WordPress.</p><p>So with that set as our roadmap for the article, let's go ahead and get started.</p><h2>PHP Facilities</h2><p>In order to implement inheritance in object-oriented PHP, there are a number of reserved words with which we need to familiarize ourselves. Luckily, most of the words we've already covered, and those that we haven't are clear enough such that it's easy to remember them.</p><p>So before we dive into looking at code, let's take a look at all of the reserved words in the language that we need to know so that we can begin to actually get into creating something.</p><ul><li><code class="inline">extends</code> is reserved word that indicates that one class is the child of another class. For example, in our previous article, a <code class="inline">Post</code> extends <code class="inline">Content</code>. We'll see this in play soon.</li><li><code class="inline">private</code> is an attribute that is applied to properties and functions that mean they are accessible&nbsp;<i>only</i> within the context of the class in which they are defined.</li><li><code class="inline">protected</code> is similar to <code class="inline">private</code> with the exception that the properties and methods that are marked as such can be accessed by the given class and any child classes.</li><li><code class="inline">public</code> is the opposite of <code class="inline">private</code> in that it means any class - the given class, a subclass, or a third-party class - can access the property or method in order to change it's information or call the function.</li></ul><p>You also need to be familiar with the <code class="inline">::</code> operator, but we'll cover that a little bit later in the article when we begin looking at code.</p><p>And that's it - nothing terribly daunting, is it? And what's even better is that if you've been following along with us throughout this series, then you're likely familiar with every word save for <code class="inline">extends</code>.</p><p>Anyway, with that said, let's start working on an example.</p><h2>Some Example Code</h2><p>In order to get started writing some example code, we need to lay out exactly what it is that we're going to be trying to model (after all, that's what code does, isn't it?).&nbsp;</p><p>In keeping consistent with the theme used throughout this series - especially in the last article - we'll have a parent class called <code class="inline">Content</code>, and two child classes each of which will be named <code class="inline">Comment</code> and <code class="inline">Post</code>, respectively.</p><p>This will allow us to see how properties and methods exist within a single class, and how children can access attributes of their parents, as well as how parents can protect their properties and functions from their children, as well.</p><p>But implementation will demonstrate far more than talking about it, so let's started writing some code.</p><h3>The Parent Class</h3><p>In our example, the parent class is going to be the <code class="inline">Content</code> because both of the subclasses - that is, the <code class="inline">Post</code> and the <code class="inline">Comment</code> - are types of content that have unique information associated with them that is not specific to the <code class="inline">Content</code> class.</p><p>The key to inheritance is to identify all of the properties and methods that are common across all of the classes and keep them defined in the parent class or, in our class, in <code class="inline">Content</code>.</p><p>Though this can vary based on how you view this, we'll setup <code class="inline">Content</code>&nbsp;such that it includes:</p><ul><li>a date on which the content was published</li><li>an author&nbsp;</li><li>a method for saving the content</li><li>a method for formatting the content</li><li>a method for retrieving the content</li><li>and a method for retrieving the content author&nbsp;</li></ul><p>First, we'll look at the code, then we'll explain everything that's going on with it.</p><pre class="brush: php">&lt;?php
-
-class Content {
-
-    protected $publish_date;
-
-	protected $author;
-
-	private $content;
-
-	public function __construct() {
-
-		date_default_timezone_set( 'GMT' );
-		$date = new DateTime();
-
-		$this-&gt;publish_date = $date-&gt;format( 'Y-m-d H:i:s' );
-		$this-&gt;author = '';
-
-	}
-
-	public function save( $author, $content ) {
-
-		$this-&gt;author = $author;
-		$this-&gt;content = $this-&gt;format_content( $content );
-		$this-&gt;content;
-
-	}
-
-	public function read() {
-		return $this-&gt;content;
-	}
-
-	private function format_content( $content ) {
-		return strip_tags( stripslashes( $content ) );
-	}
-
-	public function get_author() {
-		return $this-&gt;author;
-	}
-
-}</pre><p>As previously mentioned, we have two <code class="inline">protected</code> attributes and a <code class="inline">private</code> attribute. Recall that this means that all of the subclasses can access the <code class="inline">$publish_date</code> and the <code class="inline">$author</code>, but&nbsp;<i>only</i> the <code class="inline">Content</code> can access the <code class="inline">$content</code> attribute.</p><p>Also note that much of the code that you see in the above class is basic object-oriented PHP. There's nothing that stands out that deals directly with inheritance other than some of the access modifiers that we've declared. That is to say that it's relatively common to code we've seen thus far in this tutorial.</p><p>One of the things that's worth noting is that the private function is in place to demonstrate two things:</p><ol><li>How <code class="inline">private</code> functions are only accessible within the context of the class in which its defined.</li><li>Strips any tags and slashes from the content so that markup cannot be saved with the content.</li></ol><p>Of course, this code isn't connected a database or a file system or anything, but the point still remains.</p><p>Note that, in the code above there are a couple of things that we've needed to add in order to satisfy PHP's requirements. They are beyond the scope of this article, but it's worth pointing out here:</p><ul><li>The code to <code class="inline">date_default_time_set</code> is required to set the timezone off of which the time can be retrieved.</li><li>The constructor is responsible for initially setting the publish date of the content, and it initializes the author property to an empty string. This is so that a <code class="inline">Post</code> can have its own author and the <code class="inline">Comment</code> can have its own author, as well. As we'll see later, a <code class="inline">Comment</code> can even override the default publish date.</li></ul><p>Note also that we're able to retrieve the content from the <code class="inline">read</code> method and we're able to get the author from the <code class="inline">get_author</code> function.</p><h3>The First Child</h3><p>Next, let's go ahead and create the <code class="inline">Post</code> subclass. First, we'll take a look at the code and then we'll see how it interacts with the <code class="inline">Content</code> class we just created.</p><pre class="brush: php">&lt;?php
-
-class Post extends Content {
-
-    public function __construct() {
-
-        parent::__construct();
-        $this-&gt;author = 'Tom McFarlin';
-
-    }
-
-    public function post( $content ) {
-        $this-&gt;format_content( $content );
-    }
-
-}</pre><p>The class appears small, right? There are no properties - because it inherits them from the <code class="inline">Content</code> class - and there are only two functions, one of which is unique to the class - <code class="inline">post</code>.<br></p><p>Notice that in the constructor, we first make a call to the parent constructor using the <code class="inline">::</code> operator. You can read much more about this <a href="http://www.php.net//manual/en/language.oop5.paamayim-nekudotayim.php" rel="external" target="_blank">in the manual</a>, but suffice it to say that the operator is reserved to reference a number of difference things outside of the class in which it is defined. In our case, that's the call to the parent's constructor.</p><p>Next, I've opted to set my name as the author of the post. Notice that I'm using the <code class="inline">$this</code> keyword. Because the subclass inherits properties from its parent, it can refer to those properties and if they were defined within itself.</p><p>Note that this is possible not just because <code class="inline">Post extends Content</code> but because the property is marked as <code class="inline">protected</code> in <code class="inline">Content</code>, as well. If it were marked as <code class="inline">private</code>, this would not be possible.</p><h3>The Second Child</h3><p>Now that we've created the <code class="inline">Post</code> class, we also have the <code class="inline">Comment</code> class which, recall, represents someone leaving a a comment on a post. Were this production-level code, there would be far more code: We would need to relate a comment to a post, determine if a comment is a reply to an existing comment, mark a status of a comment, and so on.</p><p>But for the purposes of demonstrating&nbsp;<i>inheritance</i>, we're leaving all of that out and focusing only on the things that can drive the concepts.</p><pre class="brush: php">&lt;?php
-
-class Comment extends Content {
-
-    public function __construct() {
-        parent::__construct();
-    }
-
-    public function add( $comment ) {
-        $this-&gt;save( 'John Doe', $comment );
-    }
-
-}</pre><p>As you can see, the <code class="inline">Comment</code> code isn't much different from the <code class="inline">Post</code> code. To a degree - this is good because it shows that we've abstracted the proper parts into our base class.&nbsp;</p><p>Anyway, notice that after we construct the <code class="inline">Comment</code>, we make our call to the parent constructor.&nbsp;Next, we define the <code class="inline">add</code> method which is responsible for taking the incoming comment and then saving it by passing the comment author and it's content to the <code class="inline">save</code> method.</p><p>The nice thing is that the <code class="inline">save</code> method is already defined within the base class which also handles all of the formatting through the use of a <code class="inline">private</code> function, so we gain that functionality as we create our child class.</p><h2>Working with The Example</h2><p>With that done, let's run a couple of examples to show how the pieces fit together. To make sure this code executes, all you need is a web server, a directory out of which to run PHP scripts, and a text editor.</p><p>First, we'll create an instance of <code class="inline">Content</code> and then we'll call a debug statement so that we can see what constitutes an instance of the class.</p><pre class="brush: php">$content = new Content();
-var_dump( $content );</pre><p>Permitting all works correctly, you should see everything that's above.</p><p>Next up, let's go ahead and create a post. Since we're setting all of the information in the context of the class, all we really need to do is call a function on the class in order to display the information.</p><p>For example:</p><pre class="brush: php">$post = new Post();
-echo 'The post author is: ' . $post-&gt;get_author();</pre><p>Again, since we've set everything up in the code itself, simply calling the method demonstrates the concept.</p><p>Finally, we can create a <code class="inline">Comment</code>, call the <code class="inline">add</code> method on an instance of the class, attempt to pass in malicious code (only to see it stripped out by our code). If everything goes well, you should see the following:</p><pre class="brush: php">$comment = new Comment();
-$comment-&gt;add( '&lt;script type="text/javascript"&gt;alert("This is my comment.");&lt;/script&gt;' );
-echo 'The comment reads: ' . $comment-&gt;read();</pre><p>And that's it: Our simple demonstration of inheritance.</p><h2>Inheritance in WordPress</h2><p>When it comes to looking at inheritance in WordPress, the very first thing that comes to mind for myself - and likely other developers - is the <a href="http://codex.wordpress.org/Widgets_API" rel="external" target="_blank">Widgets API</a>. The reason I say this is because the API is powered by inheritance.</p><p>Sure, widgets can be created without using the API, but I'd argue that's a misstep in development. Why make things more complicated for yourself when there's already a foundation in place to do it? But I digress.</p><p>The nice thing about this particular API is that it showcases all of the high-points of object-oriented programming and inheritance at work. For example, here's a piece of sample code taken directly from the Codex:</p><pre class="brush: php">&lt;?php
-
-class My_Widget extends WP_Widget {
-
-        /**
-         * Sets up the widgets name etc
-         */
-	public function __construct() {
-		// widget actual processes
-	}
-
-	/**
-	 * Outputs the content of the widget
-	 *
-	 * @param array $args
-	 * @param array $instance
-	 */
-	public function widget( $args, $instance ) {
-		// outputs the content of the widget
-	}
-
-	/**
-	 * Outputs the options form on admin
-	 *
-	 * @param array $instance The widget options
-	 */
-	public function form( $instance ) {
-		// outputs the options form on admin
-	}
-
-	/**
-	 * Processing widget options on save
-	 *
-	 * @param array $new_instance The new options
-	 * @param array $old_instance The previous options
-	 */
-	public function update( $new_instance, $old_instance ) {
-		// processes widget options to be saved
-	}
-}</pre><p>Now that we've covered the conceptual model, looked at the keywords and methodology, written our own code, and created our own example, this should be relatively easy to follow.</p><p>But here's the thing: One of the best ways to get better at writing any type of code is to continually practice the concepts. That is, to explore the ideas written by other people who have done more advanced things that you in prior work.</p><p>Case in point, take a look at <a href="http://codex.wordpress.org/Widgets_API#Example" rel="external" target="_blank">the first example</a> provided in the WordPress Codex. And if you're working with a later version of PHP that supports features such as namespaces (a slightly more advanced topic), then check out <a href="http://codex.wordpress.org/Widgets_API#Example_With_Namespaces" rel="external" target="_blank">the second example</a>, as well.</p><p>The more you review the code and tease it apart, the more you are to learn about it. But going any further than that in this article will take us out of scope of the entire series.</p><h2>To The End</h2><p>At this point, we've covered all of the beginner material necessary to lay the foundation for a beginner's guide to writing object-oriented PHP. In the final article, we'll provide a summary of everything we've covered so that we have a single reference for the big ideas that can be bookmarked, saved, or referred to later.</p><p>Additionally, we'll have a short period of discussion on a follow-up series, but we'll save that until then.</p><p>For now, if you have any questions, comments, and/or feedback on the content, code, or examples above, feel free to do so in the comment section below.</p><div class="mediafed_ad"><img border="0" height="1" src="http://audio.tutsplus.com.feedsportal.com/c/35227/f/669438/s/21457/sc/4/mf.gif" width="1" /><a href="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21457/a2.htm"><img border="0" src="http://da.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21457/a2.img" /></a><img border="0" height="1" src="http://pi.feedsportal.com/r/186529796139/u/407/f/669438/c/35227/s/21457/a2t.img" width="1" /></div>";s:7:"attribs";a:1:{s:0:"";a:1:{s:4:"type";s:4:"html";}}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:9:"published";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-19T15:00:53.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:7:"updated";a:1:{i:0;a:5:{s:4:"data";s:24:"2014-06-19T15:00:53.000Z";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}s:6:"author";a:1:{i:0;a:6:{s:4:"data";s:12:"
-      
-    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Tom McFarlin";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}}}}}}}}s:4:"type";i:512;s:7:"headers";a:23:{s:6:"server";s:16:"cloudflare-nginx";s:4:"date";s:29:"Fri, 20 Jun 2014 16:01:43 GMT";s:12:"content-type";s:35:"application/atom+xml; charset=utf-8";s:14:"content-length";s:6:"193400";s:10:"connection";s:10:"keep-alive";s:10:"set-cookie";s:134:"__cfduid=d25ec4a4e11de11605d110b704d95962e1403280102672; expires=Mon, 23-Dec-2019 23:50:00 GMT; path=/; domain=.tutsplus.com; HttpOnly";s:13:"accept-ranges";s:5:"bytes";s:3:"age";s:3:"281";s:13:"cache-control";s:8:"no-cache";s:4:"etag";s:34:""cc22ab2cdf14a6d67666ba539eb72984"";s:6:"status";s:6:"200 OK";s:4:"vary";s:22:"Accept,Accept-Encoding";s:3:"via";s:11:"1.1 varnish";s:22:"x-content-type-options";s:7:"nosniff";s:15:"x-frame-options";s:43:"ALLOW-FROM https://analytics.webtrends.com/";s:12:"x-powered-by";s:24:"Phusion Passenger 4.0.45";s:12:"x-request-id";s:36:"7d4ff090-6e3d-4862-9d94-5e9141a4aa97";s:9:"x-runtime";s:8:"0.041804";s:15:"x-ua-compatible";s:8:"chrome=1";s:9:"x-varnish";s:21:"1135837326 1135828780";s:15:"x-varnish-cache";s:3:"HIT";s:16:"x-xss-protection";s:13:"1; mode=block";s:6:"cf-ray";s:20:"13d92fc1b6a70f57-FRA";}s:5:"build";s:14:"20121030085402";}
+    ";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";s:5:"child";a:1:{s:27:"http://www.w3.org/2005/Atom";a:1:{s:4:"name";a:1:{i:0;a:5:{s:4:"data";s:12:"Paula DuPont";s:7:"attribs";a:0:{}s:8:"xml_base";s:0:"";s:17:"xml_base_explicit";b:0;s:8:"xml_lang";s:5:"en-US";}}}}}}}}}}}}}}}}s:4:"type";i:512;s:7:"headers";a:23:{s:6:"server";s:16:"cloudflare-nginx";s:4:"date";s:29:"Sat, 21 Jun 2014 15:37:11 GMT";s:12:"content-type";s:35:"application/atom+xml; charset=utf-8";s:14:"content-length";s:6:"211467";s:10:"connection";s:10:"keep-alive";s:10:"set-cookie";s:134:"__cfduid=d62d2990c1905050464ae8def5b2fc8091403365030792; expires=Mon, 23-Dec-2019 23:50:00 GMT; path=/; domain=.tutsplus.com; HttpOnly";s:13:"accept-ranges";s:5:"bytes";s:3:"age";s:1:"0";s:13:"cache-control";s:8:"no-cache";s:4:"etag";s:34:""a1c680052cc53ff6d0dff3ddd0cbaf81"";s:6:"status";s:6:"200 OK";s:4:"vary";s:22:"Accept,Accept-Encoding";s:3:"via";s:11:"1.1 varnish";s:22:"x-content-type-options";s:7:"nosniff";s:15:"x-frame-options";s:43:"ALLOW-FROM https://analytics.webtrends.com/";s:12:"x-powered-by";s:24:"Phusion Passenger 4.0.45";s:12:"x-request-id";s:36:"74304272-5d2a-45a4-87d4-be9514467203";s:9:"x-runtime";s:8:"0.041998";s:15:"x-ua-compatible";s:8:"chrome=1";s:9:"x-varnish";s:10:"1177744160";s:15:"x-varnish-cache";s:4:"MISS";s:16:"x-xss-protection";s:13:"1; mode=block";s:6:"cf-ray";s:20:"13e1493272fb01b0-FRA";}s:5:"build";s:14:"20121030085402";}

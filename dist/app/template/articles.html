@@ -4,12 +4,7 @@
     <section ng-controller="Menu">
       <nav id="menu" class="menu">
         <div class="menu__wrapper">
-          <div ng-show="view.section == 'list'">
-            <div class="menu__logotype"><img ng-src="app/images/logotype.jpg"/></div>
-            <ul class="menu__sort">
-              <li><a ng-click="markAllAsRead()"><span class="fa fa-check-square-o"></span><span class="hidden-xs">Mark all as read</span></a></li>
-            </ul>
-          </div>
+          <div ng-show="view.section == 'list'"><a href="#discover" class="menu__logotype"><img ng-src="app/images/logotype.jpg"/></a></div>
           <div ng-show="view.section == 'single'">
             <back-to-list></back-to-list><span class="menu__single hidden-xs">
               {{ collection.filter(collection.feeds, { id: view.single.feed })[0].title }}
@@ -23,14 +18,14 @@
         </div>
       </nav><a ng-click="toggleSidebar()" class="menu__collapse"><i class="fa fa-bars"></i><span ng-show="count('unread') != 0" class="menu__collapse-badge badge">{{ count('unread') }}</span></a>
       <div id="side" ng-show="view.panel" class="side side-animation">
-        <section class="list"><a href="#settings" class="list__profile"><img ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg" class="list__profile-img"/><span class="list__profile-name">Hello, {{collection.user.name}}!</span></a>
+        <section class="list"><a href="#profile" class="list__profile"><i class="fa fa-gear"></i><span class="list__profile-name">Hello, {{collection.user.name}}!</span></a>
           <section ng-controller="Navigation">
-            <div class="navigation list-group"><a ng-click="view.panel = false" href="#discovery" class="navigation__item list-group-item">
+            <div class="navigation list-group"><a ng-click="view.panel = false" href="#discover" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-network"></div><span class="navigation__title">Discover</span></a><a ng-click="view.panel = false" href="#later" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-time"></div><span class="navigation__title">Read later</span><span ng-show="count('later') != 0" class="navigation__badge badge">{{ count('later') }}</span></a><a ng-click="view.panel = false" href="#favourites" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-bookmark"></div><span class="navigation__title">Favourites</span><span ng-show="count('favourites') != 0" class="navigation__badge badge">{{ count('favourites') }}</span></a><a ng-click="view.panel = false" href="#all" class="navigation__item list-group-item">
                 <div class="navigation__icon iconmonstr iconmonstr-menu"></div><span class="navigation__title">All</span><span ng-show="count('unread') != 0" class="navigation__badge badge">{{ count('unread') }}</span></a>
-              <div ng-repeat="folder in collection.folders" class="navigation__list">{{folder.title}}
+              <div ng-repeat="folder in collection.folders" ng-hide="folder.items.length === 0" class="navigation__list">{{folder.title}}
                 <ul class="list-unstyled">
                   <li ng-repeat="feed in folder.items" class="navigation__feed"><a href="#feeds/{{feed.id}}"><span class="pull-left">{{feed.title}}</span><span ng-show="count('feeds', feed) != 0" class="navigation__feed-badge badge pull-right">{{ count('feeds', feed) }}</span></a></li>
                 </ul>
@@ -44,86 +39,116 @@
       </div>
     </section>
     <div id="content" class="content fill col-md-12">
-      <div ng-switch="view.section" class="bg-animation fill">
-        <div ng-switch-when="list" class="thumbs-animation fill">
-          <section id="thumbs" class="thumbs fill">
-            <div class="row">
-              <div class="thumbs__wrapper clearfix">
-                <section class="content__desc">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <h1 class="content__title">{{view.title}}</h1>
-                    </div>
-                    <div class="col-xs-6">
-                      <div ng-controller="Sort" class="content__sort">
-                        <toggle-switch model="state.user.filter" on-label="Unread" off-label="All" ng-show="view.is == 'All' || view.is == 'Feeds'"></toggle-switch>
+      <section ng-show="view.content.length !== 0" class="fill">
+        <div ng-switch="view.section" class="bg-animation fill">
+          <div ng-switch-when="list" class="thumbs-animation fill">
+            <section id="thumbs" class="thumbs fill">
+              <div class="row">
+                <div class="thumbs__wrapper clearfix">
+                  <section class="content__desc">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <h1 class="content__title">{{view.title}}</h1>
+                      </div>
+                      <div class="col-xs-6">
+                        <div ng-controller="Sort" ng-hide="view.is == 'Discover'" class="content__sort"><a ng-click="markAllAsRead()" style="color: #999;" class="btn btn-sm btn-link"><span class="fa fa-check-square-o"></span><span class="hidden-xs">Mark all as read</span></a>
+                          <toggle-switch model="state.user.filter" on-label="Unread" off-label="All"></toggle-switch>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </section>
-                <section>
-                  <article ng-repeat="item in view.content | filter: undefined | limitTo: 24" id="{{item.id}}" class="thumbs__item thumb-animation col-sm-6 col-md-4 col-lg-3">
-                    <div ng-class="{isRead:(item.unread==0 &amp;&amp; (view.is === 'All' || view.is == 'Feeds')) || (item.favourite==0 &amp;&amp; view.is === 'Favourites') || (item.later==0 &amp;&amp; view.is === 'Later')}" class="thumbs__content"><a ng-click="showArticle(item)">
-                        <div style="background-image: url({{item.image}});" class="thumbs__img">
-                          <p class="thumbs__source">
-                            {{ collection.filter(collection.feeds, { id: item.feed })[0].title }}
-                            &nbsp;~<span am-time-ago="item.created"></span>
-                          </p>
-                        </div>
-                        <div class="thumbs__meta">
-                          <h3 ng-bind-html="item.title" class="thumbs__heading"></h3>
-                          <p ng-bind-html="item.description | cut:true:175:' ...'" class="thumbs__desc"></p>
-                        </div></a>
-                      <div ng-controller="Navbar" class="thumbs__nav"><a ng-click="markAsFav(item)" class="pull-right">
-                          <div ng-class="{isFav: item.favourite == 1}" class="thumbs__fav"><span class="fa fa-heart"></span></div></a><a ng-click="saveForLater(item)" class="pull-right">
-                          <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a><a ng-show="view.is === 'All' || view.is == 'Feeds'" ng-click="unread(item)" class="pull-left">
-                          <div ng-class="{isRead: item.unread==0}" class="thumbs__status"></div><span ng-show="item.unread == '0'">Keep unread</span><span ng-show="item.unread == '1'">Mark as read</span></a></div>
-                    </div>
-                  </article>
-                </section>
+                  </section>
+                  <section>
+                    <article ng-repeat="item in view.content | filter: undefined | limitTo: 48" id="{{item.id}}" class="thumbs__item thumb-animation col-sm-6 col-md-4 col-lg-3">
+                      <div ng-class="{isRead: item.unread==0 }" class="thumbs__content"><a ng-click="showArticle(item)">
+                          <div style="background-image: url({{item.image}});" class="thumbs__img">
+                            <p class="thumbs__source">
+                              {{ collection.filter(collection.feeds, { id: item.feed })[0].title }}
+                              &nbsp;~<span am-time-ago="item.created"></span>
+                            </p>
+                          </div>
+                          <div class="thumbs__meta">
+                            <h3 ng-bind-html="item.title" class="thumbs__heading"></h3>
+                            <p ng-bind-html="item.description | cut:true:175:' ...'" class="thumbs__desc"></p>
+                          </div></a>
+                        <div ng-controller="Navbar" class="thumbs__nav"><a ng-click="markAsFav(item)" class="pull-right">
+                            <div ng-class="{isFav: item.favourite == 1}" class="thumbs__fav"><span class="fa fa-heart"></span></div></a><a ng-click="saveForLater(item)" class="pull-right">
+                            <div ng-class="{isLater: item.later == 1}" class="thumbs__later"><span class="fa fa-clock-o"></span></div></a><a ng-hide="view.is === 'Discover'" ng-click="unread(item)" class="pull-left">
+                            <div ng-class="{isRead: item.unread==0}" class="thumbs__status"></div><span ng-show="item.unread == '0'">Keep unread</span><span ng-show="item.unread == '1'">Mark as read</span></a></div>
+                      </div>
+                    </article>
+                  </section>
+                </div>
               </div>
-            </div>
-          </section>
-        </div>
-        <div ng-switch-when="single" class="single-animation fill">
-          <div ng-repeat="item in view.content track by item.id" ng-class="{isActive: view.single.id === item.id}" class="article fill">
-            <article ng-if="view.single.id === item.id" class="article__wrapper fill article-animation">
-              <div class="row">
-                <div class="article__header">
-                  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-                    <div class="article__meta">
-                      <div class="article__data">
-                        <div class="row">
-                          <div class="col-xs-6 text-left"><span class="fa fa-book"></span>
-                            <reading-time text="{ content: item.content }"></reading-time>
+            </section>
+          </div>
+          <div ng-switch-when="single" class="single-animation fill">
+            <div ng-repeat="item in view.content track by item.id" ng-class="{isActive: view.single.id === item.id}" class="article fill">
+              <article ng-if="view.single.id === item.id" class="article__wrapper fill article-animation">
+                <div class="row">
+                  <div class="article__header">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                      <div class="article__meta">
+                        <div class="article__data">
+                          <div class="row">
+                            <div class="col-xs-6 text-left"><span class="fa fa-book"></span>
+                              <reading-time text="{ content: item.content }"></reading-time>
+                            </div>
                           </div>
                         </div>
+                        <h1 ng-bind-html="item.title" class="article__title"></h1>
+                        <p ng-bind-html="item.description" class="article__desc"></p>
                       </div>
-                      <h1 ng-bind-html="item.title" class="article__title"></h1>
-                      <p ng-bind-html="item.description" class="article__desc"></p>
                     </div>
                   </div>
-                </div>
-                <div class="article__content clearfix">
-                  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-                    <div ng-bind-html="item.content" class="article__text"></div>
-                    <div class="article__text"><a href="{{item.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
-                  </div>
-                </div>
-              </div><a ng-click="nextArticle(view.content[$index + 1])" ng-show="view.content[$index + 1] != undefined" class="article__next row">
-                <div class="article__next-meta col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
-                  <div class="article__data">
-                    <div class="row">
-                      <div class="col-xs-6 text-left">Next to read</div>
+                  <div class="article__content clearfix">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                      <div ng-bind-html="item.content" class="article__text"></div>
+                      <div class="article__text"><a href="{{item.url}}" target="_blank" class="article__button btn btn-neutral btn-block btn-lg">Read orginal article</a></div>
                     </div>
                   </div>
-                  <h1 ng-bind-html="view.content[$index + 1].title" class="article__title"></h1>
-                  <p ng-bind-html="view.content[$index + 1].description" class="article__desc"></p>
-                </div><span style="background-image: url({{view.content[$index + 1].image}})" class="article__image clearfix"></span></a>
-            </article>
+                </div><a ng-click="nextArticle(view.content[$index + 1])" ng-show="view.content[$index + 1] != undefined" class="article__next row">
+                  <div class="article__next-meta col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                    <div class="article__data">
+                      <div class="row">
+                        <div class="col-xs-6 text-left">Next to read</div>
+                      </div>
+                    </div>
+                    <h1 ng-bind-html="view.content[$index + 1].title" class="article__title"></h1>
+                    <p ng-bind-html="view.content[$index + 1].description" class="article__desc"></p>
+                  </div><span style="background-image: url({{view.content[$index + 1].image}})" class="article__image clearfix"></span></a>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section ng-show="view.content.length === 0" class="fill">
+        <div ng-switch="view.section" class="bg-animation fill">
+          <div ng-switch-when="list" class="thumbs-animation fill">
+            <section id="thumbs" class="thumbs fill">
+              <div class="row">
+                <div class="thumbs__wrapper clearfix">
+                  <section class="content__desc">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <h1 class="content__title">{{view.title}}</h1>
+                      </div>
+                      <div class="col-xs-6">
+                        <div ng-controller="Sort" ng-hide="view.is == 'Discover'" class="content__sort"><a ng-click="markAllAsRead()" style="color: #999;" class="btn btn-sm btn-link"><span class="fa fa-check-square-o"></span><span class="hidden-xs">Mark all as read</span></a>
+                          <toggle-switch model="state.user.filter" on-label="Unread" off-label="All"></toggle-switch>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="offset-top text-center">
+                    <h1>Nothing here.</h1>
+                    <p class="lead">Oh! Nothing to be read.</p><a href="#discover" class="btn btn-lg btn-info"><i class="iconmonstr iconmonstr-network"></i> Discover something</a>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

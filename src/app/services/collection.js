@@ -60,11 +60,7 @@ Reed.factory('Collection', function ($q, $filter, Api, Overlay) {
 	 */
 	this.add = function (collection, el) {
 
-		var exist = this.filter(collection, {
-			id: el.id
-		});
-
-		if(collection.indexOf(el) === -1 && exist.length === 0) {
+		if(collection.indexOf(el) === -1) {
 			collection.push(el);
 			return collection = this.orderBy(collection, '-created');
 		}
@@ -73,9 +69,11 @@ Reed.factory('Collection', function ($q, $filter, Api, Overlay) {
 
 
 	this.remove = function (collection, item) {
+
 		return _.reject(collection, function(el){
 			return el.id === item.id;
 		});
+
 	};
 
 
