@@ -70,7 +70,7 @@ class UserFeeds extends Controller
 			foreach ($feedItems as $article) {
 
 				$articleId 		= Handy::makeId($article->get_link());
-				$articleUrl 	= String::normalizeUrl($article->get_link());
+				$articleUrl 	= $article->get_link();
 				$articleTitle 	= String::stripAllTags($article->get_title());
 				$articleDesc 	= String::cut(String::stripAllTags($article->get_description()));
 				$articleContent = String::stripRiskyTags($article->get_content());
@@ -78,38 +78,37 @@ class UserFeeds extends Controller
 				$articleCreated = $article->get_gmdate('Y-m-d H:i:s');
 				$articleUpdated = $article->get_updated_gmdate('Y-m-d H:i:s');
 
-				if( $articleCreated >= date('Y-m-d H:i:s', strtotime('-3 day')) ) {
+				$item = array(
+					'id' => $articleId,
+					'feed' => $feedId,
+					'url' => $articleUrl,
+					'title' => $articleTitle,
+					'description' => $articleDesc,
+					'content' => $articleContent,
+					'image' => $articleImg,
+					'stars' => '222',
+					'unread' => '1',
+					'favourite' => '0',
+					'later' => '0',
+					'created' => $articleCreated,
+					'modifed' => $articleUpdated
+				);
 
-					$item = array(
-						'id' => $articleId,
-						'feed' => $feedId,
-						'url' => $articleUrl,
-						'title' => $articleTitle,
-						'description' => $articleDesc,
-						'content' => $articleContent,
-						'image' => $articleImg,
-						'stars' => '222',
-						'unread' => '1',
-						'favourite' => '0',
-						'later' => '0',
-						'created' => $articleCreated,
-						'modifed' => $articleUpdated
-					);
+				$this->article->addOverwrite($item);
 
-					$this->article->addOverwrite($item);
+				$this->userArticle->addOverwrite(array(
+					'id' => $id[0],
+					'articleid' => Handy::makeId($article->get_link()),
+					'unread' => ($articleCreated >= date('Y-m-d H:i:s', strtotime("$date -7 day"))) ? 1 : 0,
+					'later' => 0,
+					'favourite' => 0,
+					'created' => date('Y-m-d H:i:s')
+				));
 
-					$this->userArticle->addOverwrite(array(
-						'id' => $id[0],
-						'articleid' => Handy::makeId($article->get_link()),
-						'unread' => ($articleCreated >= date('Y-m-d H:i:s', strtotime("$date -7 day"))) ? 1 : 0,
-						'later' => 0,
-						'favourite' => 0,
-						'created' => date('Y-m-d H:i:s')
-					));
-
+				if( $articleCreated >= date('Y-m-d H:i:s', strtotime("$date -7 day")) ) {
 					array_push($articles, $item);
-
 				}
+
 
 			}
 

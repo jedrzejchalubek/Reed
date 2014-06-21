@@ -24,7 +24,7 @@ foreach( $streams as $stream ) {
 			foreach ($feed->get_items() as $source) {
 
 				$sourceId 		= Handy::makeId($source->get_link());
-				$sourceUrl 	= String::normalizeUrl($source->get_link());
+				$sourceUrl 		= $source->get_link();
 				$sourceTitle 	= String::stripAllTags($source->get_title());
 				$sourceDesc 	= String::cut(String::stripAllTags($source->get_description()));
 				$sourceContent = String::stripRiskyTags($source->get_content());

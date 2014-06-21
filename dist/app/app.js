@@ -271,20 +271,26 @@ var iosOverlay = function(params) {
 
 			Api.UserFeeds.post({}, $scope.form, function(response) {
 
-				Collection.folders.forEach(function(folder) {
-
-					if(folder.title === response.folder) {
-
-						Collection.add(Collection.feeds, response.source);
-						Collection.add(folder.items, response.source);
-
-						response.items.forEach(function (el) {
-							Collection.add(Collection.articles, el);
-						});
-
-					}
-
+				var exist = Collection.filter(Collection.feeds, {
+					id: response.source.id
 				});
+
+				if(exist.length = 0) {
+					Collection.folders.forEach(function(folder) {
+
+						if(folder.title === response.folder) {
+
+							Collection.add(Collection.feeds, response.source);
+							Collection.add(folder.items, response.source);
+
+							response.items.forEach(function (el) {
+								Collection.add(Collection.articles, el);
+							});
+
+						}
+
+					});
+				}
 
 				Overlay.init(response.status, response.message);
 
