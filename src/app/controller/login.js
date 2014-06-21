@@ -16,7 +16,7 @@ Reed.controller('Login', function ($scope, $resource, $location, $cookieStore, e
 					var user = AuthToken.get({}, function () {
 						$cookieStore.put('reed_userid', user.userid);
 						$cookieStore.put('reed_authtoken', user.authtoken);
-						$location.path('/discovery').replace();
+						$location.path('/all').replace();
 					});
 
 				}, { scope: 'email' });
